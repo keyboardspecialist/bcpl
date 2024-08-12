@@ -1,0 +1,82 @@
+# This specifies a BMP file representing a 10x4 image
+# encoded using 4 bit pixel values each identifying one of 16 colour
+# given by the RGBA table.
+
+42            # 00: 'B'
+4D            # 'M'
+
+00 00 00 00   # 02: Size of the BMP file in bytes, value not needed.
+00 00         # 06: Reserved
+00 00         # 08: Reserved
+4A 00 00 00   # 0A: Offset to the first byte of bitmap image data
+
+# DIB Header
+
+0C 00 00 00   # 0E: Size of DIB header
+              #     12 bytes for the Windows-OS/2 version, bits per pixel 1, 4 or 8
+              #     Other DIB header sizes 64 16 40 52 56 108 124 provide
+              #     various extensions.
+0B 00         # 12: Bitmap width, 11 pixel
+0B 00         # 14: Bitmap height,11 image lines
+01 00         # 16: One bitmap plane
+04 00         # 18: 4 Bits per pixel
+
+# Colour table          The size is 16=2^n where n is the number of bits per pixel
+00 00 00   # 1A  26:     16 colours of form: BB GG RR
+00 00 FF   # 1A  29:
+00 FF 00   # 1A  32:
+00 FF FF   # 1A  35:
+FF 00 00   # 1A  38:
+FF 00 FF   # 1A  41:
+FF FF 00   # 1A  44:
+FF FF FF   # 1A  47:
+
+D0 D0 D0   # 1A  50:
+00 00 80   # 1A  53:
+00 80 00   # 1A  56:
+00 80 80   # 1A  59:
+80 00 00   # 1A  62:
+80 00 80   # 1A  65:
+80 80 00   # 1A  68:
+80 80 80   # 1A  71:
+
+           # 4A  74:
+
+# Pixel values, these are of size 4 bits
+#               Since the image height is positive they are given
+#               as rows from left to right, bottom to top
+#               Each row is padded pixel values to make the row length
+#               a multiple of 4 bytes.
+
+# With K=0=Black W=7=White R=1=Red G=2=Green 4=B=Blue the image is
+
+#       W W W W W W W W W W W  indices  7 7 7 7 7 7 7 7 7 7 7 
+#       W R R R W K W G G G W           7 1 1 1 7 0 7 2 2 2 7
+#       W R R R W K W G G G W           7 1 1 1 7 0 7 2 2 2 7
+#       W R R R W K W G G G W           7 1 1 1 7 0 7 2 2 2 7
+#       W W W W W K W W W W W           7 7 7 7 7 0 7 7 7 7 7
+#       W K K K K K K K K K W           7 0 0 0 0 0 0 0 0 0 7
+#       W W W W W K W W W W W           7 7 7 7 7 0 7 7 7 7 7
+#       W B B B W K W Y Y Y W           7 4 4 4 7 0 7 3 3 3 7
+#       W B B B W K W Y Y Y W           7 4 4 4 7 0 7 3 3 3 7
+#       W B B B W K W Y Y Y W           7 4 4 4 7 0 7 3 3 3 7
+#       W W W W W W W W W W W           7 7 7 7 7 7 7 7 7 7 7
+
+# Raster lines must be padded up to a multiple of 4 bytes.
+# If the image width is n, n pixel values are used and any
+# padded values are ignored.
+
+77 77 77 77   77 70 00 00      # 4A:  Each line contains 11 pixel values
+71 11 70 72   22 70 00 00      #      plus 5 ignored padding values.
+71 11 70 72   22 70 00 00
+71 11 70 72   22 70 00 00
+77 77 70 77   77 70 00 00
+70 00 00 00   00 70 00 00
+77 77 70 77   77 70 00 00
+74 44 70 73   33 70 00 00
+74 44 70 73   33 70 00 00
+74 44 70 73   33 70 00 00
+77 77 77 77   77 70 00 00
+
+
+

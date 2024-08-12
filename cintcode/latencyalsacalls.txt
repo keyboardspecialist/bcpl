@@ -1,0 +1,105 @@
+The order of snd_ calls in alsalatency.c
+
+    err = snd_output_stdio_attach(&output, stdout, 0);
+    buffer = malloc((latency_max * snd_pcm_format_width(format) / 8) * 2);
+    
+    setscheduler();
+    {
+    struct sched_param sched_param;
+ 
+    if (sched_getparam(0, &sched_param) < 0) {
+    sched_param.sched_priority = sched_get_priority_max(SCHED_RR);
+    if (!sched_setscheduler(0, SCHED_RR, &sched_param)) {
+        printf("Scheduler set to Round Robin with priority %i...\n",
+	        sched_param.sched_priority);
+    }
+
+    snd_pcm_format_name(format)
+    if ((err = snd_pcm_open(&phandle, pdevice, SND_PCM_STREAM_PLAYBACK,
+			    block ? 0 : SND_PCM_NONBLOCK)) < 0) {
+    if ((err = snd_pcm_open(&chandle, cdevice, SND_PCM_STREAM_CAPTURE,
+			    block ? 0 : SND_PCM_NONBLOCK)) < 0) {
+			    
+        if (setparams(phandle, chandle, &latency) < 0)
+	{ //int setparams(snd_pcm_t *phandle, snd_pcm_t *chandle, int *bufsize)
+    snd_pcm_hw_params_alloca(&p_params);
+    snd_pcm_hw_params_alloca(&c_params);
+    snd_pcm_hw_params_alloca(&pt_params);
+    snd_pcm_hw_params_alloca(&ct_params);
+    snd_pcm_sw_params_alloca(&p_swparams);
+    snd_pcm_sw_params_alloca(&c_swparams);
+    
+    if ((err = setparams_stream(phandle, pt_params, "playback")) < 0) {
+    if ((err = setparams_stream(chandle, ct_params, "capture")) < 0) {
+int setparams_stream(snd_pcm_t *handle,
+             snd_pcm_hw_params_t *params,
+             const char *id)
+{
+    err = snd_pcm_hw_params_any(handle, params);
+    err = snd_pcm_hw_params_set_rate_resample(handle, params, resample);
+    err = snd_pcm_hw_params_set_access(handle, params,
+                                       SND_PCM_ACCESS_RW_INTERLEAVED);
+    err = snd_pcm_hw_params_set_format(handle, params, format);
+    err = snd_pcm_hw_params_set_channels(handle, params, channels);
+    err = snd_pcm_hw_params_set_rate_near(handle, params, &rrate, 0);
+
+}
+
+    if ((err = setparams_bufsize(phandle, p_params, pt_params,
+         *bufsize, "playback")) < 0) {
+    if ((err = setparams_bufsize(chandle, c_params, ct_params,
+         *bufsize, "capture")) < 0) {
+int setparams_bufsize(snd_pcm_t *handle,
+              snd_pcm_hw_params_t *params,
+              snd_pcm_hw_params_t *tparams,
+              snd_pcm_uframes_t bufsize,
+              const char *id)
+{
+???
+}
+
+    snd_pcm_hw_params_get_period_size(p_params, &p_psize, NULL);
+    snd_pcm_hw_params_get_period_size(c_params, &c_psize, NULL);
+    snd_pcm_hw_params_get_period_time(p_params, &p_time, NULL);
+    snd_pcm_hw_params_get_period_time(c_params, &c_time, NULL);
+    snd_pcm_hw_params_get_buffer_size(p_params, &p_size);
+                snd_pcm_hw_params_get_periods_min(p_params, &val, NULL);
+    snd_pcm_hw_params_get_buffer_size(c_params, &c_size);
+                snd_pcm_hw_params_get_periods_min(c_params, &val, NULL);
+    if ((err = setparams_set(phandle, p_params, p_swparams, "playback")) < 0) {
+    if ((err = setparams_set(chandle, c_params, c_swparams, "capture")) < 0) {
+    if ((err = snd_pcm_prepare(phandle)) < 0) {
+    snd_pcm_dump(phandle, output);
+    snd_pcm_dump(chandle, output);
+        }
+
+        if ((err = snd_pcm_link(chandle, phandle)) < 0) {
+        if (snd_pcm_format_set_silence(format, buffer, latency*channels) < 0) {
+        if (writebuf(phandle, buffer, latency, &frames_out) < 0) {
+        if ((err = snd_pcm_start(chandle)) < 0) {
+        gettimestamp(phandle, &p_tstamp);
+        gettimestamp(chandle, &c_tstamp);
+                snd_pcm_wait(chandle, 1000);
+            if ((r = readbuf(chandle, buffer, latency, &frames_in, &in_max))<0)
+                if (effect)
+                    applyeffect(buffer,r);
+                if (writebuf(phandle, buffer, r, &frames_out) < 0)
+        snd_pcm_drop(chandle);
+        snd_pcm_nonblock(phandle, 0);
+        snd_pcm_drain(phandle);
+        snd_pcm_nonblock(phandle, !block ? 1 : 0);
+        snd_pcm_unlink(chandle);
+        snd_pcm_hw_free(phandle);
+        snd_pcm_hw_free(chandle);
+    }
+    snd_pcm_close(phandle);
+    snd_pcm_close(chandle);
+
+
+
+
+
+
+
+
+

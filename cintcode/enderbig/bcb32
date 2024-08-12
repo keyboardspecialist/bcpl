@@ -1,0 +1,3 @@
+.k file/a,opt
+echo "bcpl com/<file>.b to enderbig/<file> <opt>"
+bcpl com/<file>.b to enderbig/<file> <opt>

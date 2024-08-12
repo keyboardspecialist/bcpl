@@ -1,0 +1,1704 @@
+Ass_dev M:4 DEF libhdr.h[709] Ass_dev=4
+Ass_dir M:2 DEF libhdr.h[707] Ass_dir=2
+Ass_link M:0 DEF libhdr.h[705] Ass_link=0
+Ass_name M:5 DEF libhdr.h[710] Ass_name=5
+Ass_task M:1 DEF libhdr.h[706] Ass_task=1
+Ass_type M:3 DEF libhdr.h[708] Ass_type=3
+B2Wsh M:2 DEF libhdr.h[23] B2Wsh=1+32/32
+B2Wsh M:2 MAN libhdr.h[237] bytesperword=1<<B2Wsh
+CloseObj M:1 DEF libhdr.h[286] CloseObj=1
+Dcb_arg M:4 DEF libhdr.h[649] Dcb_arg=4
+Dcb_cvp M:16 DEF libhdr.h[663] Dcb_cvp=16
+Dcb_devid M:1 DEF libhdr.h[646] Dcb_devid=1
+Dcb_flag M:7 DEF libhdr.h[652] Dcb_flag=7
+Dcb_intson M:6 DEF libhdr.h[651] Dcb_intson=6
+Dcb_irq M:5 DEF libhdr.h[650] Dcb_irq=5
+Dcb_op M:3 DEF libhdr.h[648] Dcb_op=3
+Dcb_threadp M:14 DEF libhdr.h[662] Dcb_threadp=14
+Dcb_type M:0 DEF libhdr.h[645] Dcb_type=0
+Dcb_upb M:17 DEF libhdr.h[667] Dcb_upb=17
+Dcb_var0 M:8 DEF libhdr.h[656] Dcb_var0=8
+Dcb_var1 M:9 DEF libhdr.h[657] Dcb_var1=9
+Dcb_var2 M:10 DEF libhdr.h[658] Dcb_var2=10
+Dcb_var3 M:11 DEF libhdr.h[659] Dcb_var3=11
+Dcb_var4 M:12 DEF libhdr.h[660] Dcb_var4=12
+Dcb_wkq M:2 DEF libhdr.h[647] Dcb_wkq=2
+Devc_create M:1 DEF libhdr.h[677] Devc_create=1
+Devc_destroy M:2 DEF libhdr.h[678] Devc_destroy=2
+Devc_setintson M:5 DEF libhdr.h[681] Devc_setintson=5
+Devc_start M:3 DEF libhdr.h[679] Devc_start=3
+Devc_stop M:4 DEF libhdr.h[680] Devc_stop=4
+Devt_clk M:1 DEF libhdr.h[670] Devt_clk=1
+Devt_fileop M:4 DEF libhdr.h[673] Devt_fileop=4
+Devt_tcpdev M:5 DEF libhdr.h[674] Devt_tcpdev=5
+Devt_ttyin M:2 DEF libhdr.h[671] Devt_ttyin=2
+Devt_ttyout M:3 DEF libhdr.h[672] Devt_ttyout=3
+GB2312 M:-2 DEF libhdr.h[578] GB2312=-2
+InitObj M:0 DEF libhdr.h[285] InitObj=0
+ON64 M:0 DEF libhdr.h[25] ON64=32=64
+State_dead M:12 DEF libhdr.h[696] State_dead=12
+State_hold M:2 DEF libhdr.h[693] State_hold=2
+State_int M:8 DEF libhdr.h[695] State_int=8
+State_pkt M:1 DEF libhdr.h[692] State_pkt=1
+State_wait M:4 DEF libhdr.h[694] State_wait=4
+Sys_buttons M:56 DEF libhdr.h[457] Sys_buttons=56
+Sys_callc M:59 DEF libhdr.h[460] Sys_callc=59
+Sys_callnative M:53 DEF libhdr.h[454] Sys_callnative=53
+Sys_close M:16 DEF libhdr.h[420] Sys_close=16
+Sys_cputime M:30 DEF libhdr.h[433] Sys_cputime=30
+Sys_datstamp M:44 DEF libhdr.h[445] Sys_datstamp=44
+Sys_delay M:57 DEF libhdr.h[458] Sys_delay=57
+Sys_deletefile M:17 DEF libhdr.h[421] Sys_deletefile=17
+Sys_devcom M:43 DEF libhdr.h[444] Sys_devcom=43
+Sys_dumpmem M:52 DEF libhdr.h[453] Sys_dumpmem=52
+Sys_ext M:68 DEF libhdr.h[471] Sys_ext=68
+Sys_filemodtime M:31 DEF libhdr.h[434] Sys_filemodtime=31
+Sys_filesize M:46 DEF libhdr.h[447] Sys_filesize=46
+Sys_flt M:63 DEF libhdr.h[465] Sys_flt=63
+Sys_freevec M:22 DEF libhdr.h[426] Sys_freevec=22
+Sys_getpid M:51 DEF libhdr.h[452] Sys_getpid=51
+Sys_getprefix M:33 DEF libhdr.h[436] Sys_getprefix=33
+Sys_getsysval M:48 DEF libhdr.h[449] Sys_getsysval=48
+Sys_gettrval M:62 DEF libhdr.h[464] Sys_gettrval=62
+Sys_getvec M:21 DEF libhdr.h[425] Sys_getvec=21
+Sys_gl M:67 DEF libhdr.h[470] Sys_gl=67
+Sys_globin M:24 DEF libhdr.h[428] Sys_globin=24
+Sys_graphics M:34 DEF libhdr.h[437] Sys_graphics=34
+Sys_inc M:55 DEF libhdr.h[456] Sys_inc=55
+Sys_incdcount M:65 DEF libhdr.h[467] Sys_incdcount=65
+Sys_interpret M:7 DEF libhdr.h[412] Sys_interpret=7
+Sys_intflag M:28 DEF libhdr.h[431] Sys_intflag=28
+Sys_joy M:69 DEF libhdr.h[472] Sys_joy=69
+Sys_loadseg M:23 DEF libhdr.h[427] Sys_loadseg=23
+Sys_lockirq M:41 DEF libhdr.h[442] Sys_lockirq=41
+Sys_muldiv M:26 DEF libhdr.h[430] Sys_muldiv=26
+Sys_openappend M:19 DEF libhdr.h[423] Sys_openappend=19
+Sys_openread M:14 DEF libhdr.h[418] Sys_openread=14
+Sys_openreadwrite M:47 DEF libhdr.h[448] Sys_openreadwrite=47
+Sys_openwrite M:15 DEF libhdr.h[419] Sys_openwrite=15
+Sys_platform M:54 DEF libhdr.h[455] Sys_platform=54
+Sys_pollsardch M:64 DEF libhdr.h[466] Sys_pollsardch=64
+Sys_putsysval M:49 DEF libhdr.h[450] Sys_putsysval=49
+Sys_quit M:0 DEF libhdr.h[405] Sys_quit=0
+Sys_read M:12 DEF libhdr.h[416] Sys_read=12
+Sys_renamefile M:18 DEF libhdr.h[422] Sys_renamefile=18
+Sys_rti M:1 DEF libhdr.h[406] Sys_rti=1
+Sys_sardch M:10 DEF libhdr.h[414] Sys_sardch=10
+Sys_saveregs M:2 DEF libhdr.h[407] Sys_saveregs=2
+Sys_sawrch M:11 DEF libhdr.h[415] Sys_sawrch=11
+Sys_sdl M:66 DEF libhdr.h[469] Sys_sdl=66
+Sys_seek M:38 DEF libhdr.h[439] Sys_seek=38
+Sys_setcount M:-1 DEF libhdr.h[404] Sys_setcount=-1
+Sys_setcount M:-1 MAN com/stats.b[165] sys(Sys_setcount,maxint)
+Sys_setprefix M:32 DEF libhdr.h[435] Sys_setprefix=32
+Sys_setraster M:29 DEF libhdr.h[432] Sys_setraster=29
+Sys_setst M:3 DEF libhdr.h[408] Sys_setst=3
+Sys_settrcount M:61 DEF libhdr.h[463] Sys_settrcount=61
+Sys_shellcom M:50 DEF libhdr.h[451] Sys_shellcom=50
+Sys_sound M:58 DEF libhdr.h[459] Sys_sound=58
+Sys_tally M:6 DEF libhdr.h[411] Sys_tally=6
+Sys_tell M:39 DEF libhdr.h[440] Sys_tell=39
+Sys_tracing M:4 DEF libhdr.h[409] Sys_tracing=4
+Sys_trpush M:60 DEF libhdr.h[462] Sys_trpush=60
+Sys_unloadseg M:25 DEF libhdr.h[429] Sys_unloadseg=25
+Sys_unlockirq M:42 DEF libhdr.h[443] Sys_unlockirq=42
+Sys_waitirq M:40 DEF libhdr.h[441] Sys_waitirq=40
+Sys_watch M:5 DEF libhdr.h[410] Sys_watch=5
+Sys_write M:13 DEF libhdr.h[417] Sys_write=13
+Task_cli M:1 DEF libhdr.h[684] Task_cli=1
+Task_consolehandler M:3 DEF libhdr.h[686] Task_consolehandler=3
+Task_debug M:2 DEF libhdr.h[685] Task_debug=2
+Task_filehandler M:4 DEF libhdr.h[687] Task_filehandler=4
+Task_mbxhandler M:5 DEF libhdr.h[688] Task_mbxhandler=5
+Task_tcphandler M:6 DEF libhdr.h[689] Task_tcphandler=6
+UTF8 M:-1 DEF libhdr.h[577] UTF8=-1
+abort G:28 DEF libhdr.h[61] abort=28
+abort G:28 LG com/stats.b[302] abort(999)
+add F:24 LF com/stats.b[651] add()
+add F:24 LF com/stats.b[659] add()
+add F:24 LF com/stats.b[696] add()
+add F:24 LF com/stats.b[704] add()
+add F:24 LF com/stats.b[706] add()
+add F:24 LF com/stats.b[745] add()
+add F:24 LF com/stats.b[753] add()
+add F:24 LF com/stats.b[762] add()
+add F:24 LF com/stats.b[806] add()
+add F:24 LF com/stats.b[810] add()
+add F:24 LF com/stats.b[866] add()
+add F:24 LF com/stats.b[868] add()
+add F:24 LF com/stats.b[870] add()
+add F:24 LF com/stats.b[881] add()
+add F:24 LF com/stats.b[896] add()
+add F:24 LF com/stats.b[902] add()
+add F:24 LF com/stats.b[908] add()
+add F:24 LF com/stats.b[912] add()
+add F:24 LF com/stats.b[914] add()
+add F:24 LF com/stats.b[916] add()
+add F:24 LF com/stats.b[942] add()
+add F:24 LF com/stats.b[946] add()
+add F:24 LF com/stats.b[949] add()
+add F:24 LF com/stats.b[952] add()
+add F:24 RT com/stats.b[981] LET add()BE..
+analyse_instr F:16 LF com/stats.b[229] analyse_instr()
+analyse_instr F:16 RT com/stats.b[550] LET analyse_instr()BE..
+analysis G:256 DEF com/stats.b[91] analysis=
+analysis G:256 LG com/stats.b[176] IF analysis DO ..
+analysis G:256 LG com/stats.b[237] IF analysis DO ..
+analysis G:256 SG com/stats.b[172] analysis:=argv!4
+appendstream G:66 DEF libhdr.h[99] appendstream=66
+bigender G:222 DEF bcplfecg.h[149] bigender=
+bining G:228 DEF bcplfecg.h[155] bining=
+binrdch G:39 DEF libhdr.h[72] binrdch=39
+binwrch G:42 DEF libhdr.h[75] binwrch=42
+bitsperbyte M:8 DEF libhdr.h[238] bitsperbyte=8
+bitsperbyte M:8 MAN libhdr.h[239] bitsperword=bitsperbyte*bytesperword
+bitsperword M:32 DEF libhdr.h[239] bitsperword=bitsperbyte*bytesperword
+bitsperword M:32 MAN libhdr.h[241] minint=1<<bitsperword-1
+bootregs M:11 DEF libhdr.h[475] bootregs=11
+bytesperword M:4 DEF libhdr.h[237] bytesperword=1<<B2Wsh
+bytesperword M:4 MAN libhdr.h[239] bitsperword=bitsperbyte*bytesperword
+bytesperword M:4 MAN libhdr.h[240] mcaddrinc=bytesperword
+bytesperword M:4 MAN libhdr.h[527]
+    scb_nameeend=scb_name+scb_maxnamelen/bytesperword
+bytesperword M:4 MAN libhdr.h[642]
+    tcb_upb=tcb_namebase+15/bytesperword+1
+c64 M:0 DEF bcplfecg.h[14] c64=32=64
+call F:29 LF com/stats.b[601] call(fcode)
+call F:29 LF com/stats.b[630] call(gb(pc+1))
+call F:29 LF com/stats.b[632] call(gh(pc+1))
+call F:29 LF com/stats.b[634] call(gw(pc+1))
+call F:29 LF com/stats.b[644] call(fcode-32)
+call F:29 LF com/stats.b[689] call(fcode-64)
+call F:29 LF com/stats.b[738] call(fcode-96)
+call F:29 RT com/stats.b[996] LET call(k)BE..
+callco G:19 DEF libhdr.h[52] callco=19
+callseg G:107 DEF libhdr.h[141] callseg=107
+capitalch G:96 DEF libhdr.h[130] capitalch=96
+cgg M:380 DEF bcplfecg.h[22] cgg=trng+60
+changeco G:6 DEF libhdr.h[38] changeco=6
+changepri G:155 DEF libhdr.h[203] changepri=155
+cis G:12 DEF libhdr.h[45] cis=12
+cjump F:27 LF com/stats.b[624] cjump()
+cjump F:27 LF com/stats.b[672] cjump()
+cjump F:27 LF com/stats.b[719] cjump()
+cjump F:27 LF com/stats.b[768] cjump()
+cjump F:27 LF com/stats.b[815] cjump()
+cjump F:27 LF com/stats.b[861] cjump()
+cjump F:27 RT com/stats.b[990] LET cjump()BE..
+cjump0 F:28 LF com/stats.b[627] cjump0()
+cjump0 F:28 LF com/stats.b[675] cjump0()
+cjump0 F:28 LF com/stats.b[722] cjump0()
+cjump0 F:28 LF com/stats.b[771] cjump0()
+cjump0 F:28 LF com/stats.b[818] cjump0()
+cjump0 F:28 LF com/stats.b[864] cjump0()
+cjump0 F:28 RT com/stats.b[993] LET cjump0()BE..
+clear_words G:115 DEF libhdr.h[149] clear_words=115
+cli_commanddir G:136 DEF libhdr.h[173] cli_commanddir=136
+cli_commandfile G:143 DEF libhdr.h[184] cli_commandfile=143
+cli_commandname G:138 DEF libhdr.h[179] cli_commandname=138
+cli_currentinput G:142 DEF libhdr.h[183] cli_currentinput=142
+cli_currentoutput G:146 DEF libhdr.h[190] cli_currentoutput=146
+cli_data G:135 DEF libhdr.h[172] cli_data=135
+cli_defaultstack G:147 DEF libhdr.h[191] cli_defaultstack=147
+cli_faillevel G:139 DEF libhdr.h[180] cli_faillevel=139
+cli_init G:133 DEF libhdr.h[170] cli_init=133
+cli_initialfaillevel M:10 DEF libhdr.h[586]
+    cli_initialfaillevel=return_hard
+cli_initialstack M:50000 DEF libhdr.h[585] cli_initialstack=50000
+cli_module G:149 DEF libhdr.h[193] cli_module=149
+cli_module_gn M:149 DEF libhdr.h[584] cli_module_gn=149
+cli_preloadlist G:145 DEF libhdr.h[189] cli_preloadlist=145
+cli_prompt G:140 DEF libhdr.h[181] cli_prompt=140
+cli_result2 G:134 DEF libhdr.h[171] cli_result2=134
+cli_returncode G:137 DEF libhdr.h[174] cli_returncode=137
+cli_standardinput G:141 DEF libhdr.h[182] cli_standardinput=141
+cli_standardoutput G:148 DEF libhdr.h[192] cli_standardoutput=148
+cli_status G:144 DEF libhdr.h[186] cli_status=144
+cli_tallyflag G:132 DEF libhdr.h[169] cli_tallyflag=132
+cli_tallyflag G:132 SG com/stats.b[163] cli_tallyflag:=TRUE
+clibit_comcom M:4 DEF libhdr.h[591] clibit_comcom=4
+clibit_endcli M:256 DEF libhdr.h[597] clibit_endcli=256
+clibit_eofdel M:2 DEF libhdr.h[590] clibit_eofdel=2
+clibit_maincli M:8 DEF libhdr.h[592] clibit_maincli=8
+clibit_mbxcli M:64 DEF libhdr.h[595] clibit_mbxcli=64
+clibit_newcli M:16 DEF libhdr.h[593] clibit_newcli=16
+clibit_noprompt M:1 DEF libhdr.h[589] clibit_noprompt=1
+clibit_runcli M:32 DEF libhdr.h[594] clibit_runcli=32
+clibit_tcpcli M:128 DEF libhdr.h[596] clibit_tcpcli=128
+clihook G:4 DEF libhdr.h[36] clihook=4
+cliregs M:21 DEF libhdr.h[476] cliregs=21
+co_c M:5 DEF libhdr.h[283] co_c=
+co_fn M:3 DEF libhdr.h[281] co_fn=
+co_list M:2 DEF libhdr.h[280] co_list=
+co_parent M:1 DEF libhdr.h[279] co_parent=
+co_pptr M:0 DEF libhdr.h[278] co_pptr=0
+co_size M:4 DEF libhdr.h[282] co_size=
+codegenerate G:221 DEF bcplfecg.h[147] codegenerate=
+codewrch G:126 DEF libhdr.h[160] codewrch=126
+colist G:8 DEF libhdr.h[40] colist=8
+compch G:97 DEF libhdr.h[131] compch=97
+compstring G:98 DEF libhdr.h[132] compstring=98
+consoletask G:171 DEF libhdr.h[216] consoletask=171
+copy_bytes G:116 DEF libhdr.h[150] copy_bytes=116
+copy_words G:114 DEF libhdr.h[148] copy_words=114
+copydir G:79 DEF libhdr.h[112] copydir=79
+copyobj G:75 DEF libhdr.h[108] copyobj=75
+copystring G:99 DEF libhdr.h[133] copystring=99
+cos G:13 DEF libhdr.h[46] cos=13
+cowait G:20 DEF libhdr.h[53] cowait=20
+createco G:17 DEF libhdr.h[50] createco=17
+createdev G:172 DEF libhdr.h[217] createdev=172
+createdir G:82 DEF libhdr.h[115] createdir=82
+createtask G:153 DEF libhdr.h[201] createtask=153
+currco G:7 DEF libhdr.h[39] currco=7
+current_language G:190 DEF libhdr.h[228] current_language=190
+currentdir G:14 DEF libhdr.h[47] currentdir=14
+cv2flt G:210 DEF bcplfecg.h[138] cv2flt=
+d_adds G:229 DEF com/stats.b[72] d_adds=
+d_adds G:229 LG com/stats.b[503] writef("%i7(%i4) ",d_adds,s_adds)
+d_adds G:229 LG com/stats.b[981] d_adds:=d_adds+freq
+d_adds G:229 SG com/stats.b[445] d_adds:=0
+d_adds G:229 SG com/stats.b[981] d_adds:=d_adds+freq
+d_cj G:239 DEF com/stats.b[77] d_cj=
+d_cj G:239 LG com/stats.b[512] writef("%i7(%i4) ",d_cj,s_cj)
+d_cj G:239 LG com/stats.b[990] d_cj:=d_cj+freq
+d_cj G:239 SG com/stats.b[453] d_cj:=0
+d_cj G:239 SG com/stats.b[990] d_cj:=d_cj+freq
+d_cj0 G:241 DEF com/stats.b[78] d_cj0=
+d_cj0 G:241 LG com/stats.b[513] writef("%i7(%i4) ",d_cj0,s_cj0)
+d_cj0 G:241 LG com/stats.b[993] d_cj0:=d_cj0+freq
+d_cj0 G:241 SG com/stats.b[454] d_cj0:=0
+d_cj0 G:241 SG com/stats.b[993] d_cj0:=d_cj0+freq
+d_eops G:233 DEF com/stats.b[74] d_eops=
+d_eops G:233 LG com/stats.b[505] writef("%i7(%i4) ",d_eops,s_eops)
+d_eops G:233 LG com/stats.b[987] d_eops:=d_eops+freq
+d_eops G:233 SG com/stats.b[447] d_eops:=0
+d_eops G:233 SG com/stats.b[987] d_eops:=d_eops+freq
+d_fcount G:237 DEF com/stats.b[76] d_fcount=
+d_fcount G:237 LG com/stats.b[241] writef("*nInst'ted %n)*n",d_fcount)
+d_fcount G:237 LG com/stats.b[479]
+    writef("*n*nIns'i7(%i5)*n",d_fcount,s_fcount)
+d_fcount G:237 LG com/stats.b[553] d_fcount:=d_fcount+freq
+d_fcount G:237 SG com/stats.b[452] d_fcount:=0
+d_fcount G:237 SG com/stats.b[553] d_fcount:=d_fcount+freq
+d_ftype G:247 DEF com/stats.b[81] d_ftype=
+d_ftype G:247 LG com/stats.b[459] d_ftype!i:=0
+d_ftype G:247 LG com/stats.b[475] freevec(d_ftype)
+d_ftype G:247 LG com/stats.b[544]
+    writef(" %c  '4)  %i4*n","?0124RIBL"%(i+1),d_ftype!i,s_ftype!i,(...-48)*s_ftype!i)
+d_ftype G:247 LG com/stats.b[557] d_ftype!0:=d_ftype!0+freq
+d_ftype G:247 LG com/stats.b[559] d_ftype!1:=d_ftype!1+freq
+d_ftype G:247 LG com/stats.b[561] d_ftype!2:=d_ftype!2+freq
+d_ftype G:247 LG com/stats.b[563] d_ftype!3:=d_ftype!3+freq
+d_ftype G:247 LG com/stats.b[565] d_ftype!4:=d_ftype!4+freq
+d_ftype G:247 LG com/stats.b[567] d_ftype!5:=d_ftype!5+freq
+d_ftype G:247 LG com/stats.b[572] d_ftype!6:=d_ftype!6+freq
+d_ftype G:247 LG com/stats.b[580] d_ftype!7:=d_ftype!7+freq
+d_ftype G:247 LG com/stats.b[582] d_ftype!8:=d_ftype!8+freq
+d_ftype G:247 SG com/stats.b[458] d_ftype:=getvec(typeupb)
+d_fv G:235 DEF com/stats.b[75] d_fv=
+d_fv G:235 LG com/stats.b[252] writef(" %i7   ",d_fv!f)
+d_fv G:235 LG com/stats.b[450] d_fv!i:=0
+d_fv G:235 LG com/stats.b[474] freevec(d_fv)
+d_fv G:235 LG com/stats.b[493] writef(" %i7(%i4)",d_fv!f,s_fv!f)
+d_fv G:235 LG com/stats.b[552] d_fv!fcode:=d_fv!fcode+freq
+d_fv G:235 SG com/stats.b[449] d_fv:=getvec(255)
+d_gbyt G:225 DEF com/stats.b[70] d_gbyt=
+d_gbyt G:225 LG com/stats.b[499] writef("%i7(%i4) ",d_gbyt,s_gbyt)
+d_gbyt G:225 LG com/stats.b[848] d_gbyt:=d_gbyt+freq
+d_gbyt G:225 SG com/stats.b[443] d_gbyt:=0
+d_gbyt G:225 SG com/stats.b[848] d_gbyt:=d_gbyt+freq
+d_grds G:205 DEF com/stats.b[59] d_grds=
+d_grds G:205 LG com/stats.b[527] writef("%i7(%i4) ",d_grds,s_grds)
+d_grds G:205 LG com/stats.b[969] d_grds:=d_grds+freq
+d_grds G:205 SG com/stats.b[421] d_grds:=0
+d_grds G:205 SG com/stats.b[969] d_grds:=d_grds+freq
+d_gvecap G:221 DEF com/stats.b[68] d_gvecap=
+d_gvecap G:221 LG com/stats.b[497] writef("%i7(%i4) ",d_gvecap,s_gvecap)
+d_gvecap G:221 LG com/stats.b[975] d_gvecap:=d_gvecap+freq
+d_gvecap G:221 SG com/stats.b[441] d_gvecap:=0
+d_gvecap G:221 SG com/stats.b[975] d_gvecap:=d_gvecap+freq
+d_gwrs G:207 DEF com/stats.b[60] d_gwrs=
+d_gwrs G:207 LG com/stats.b[528] writef("%i7(%i4) ",d_gwrs,s_gwrs)
+d_gwrs G:207 LG com/stats.b[972] d_gwrs:=d_gwrs+freq
+d_gwrs G:207 SG com/stats.b[422] d_gwrs:=0
+d_gwrs G:207 SG com/stats.b[972] d_gwrs:=d_gwrs+freq
+d_idis G:215 DEF com/stats.b[64] d_idis=
+d_idis G:215 LG com/stats.b[436] d_idis!i:=0
+d_idis G:215 LG com/stats.b[470] freevec(d_idis)
+d_idis G:215 LG com/stats.b[538] writef("%i7(%i4) ",d_idis!i,s_idis!i)
+d_idis G:215 LG com/stats.b[574] updis(s_idis,d_idis,255-a)
+d_idis G:215 SG com/stats.b[426] d_idis:=getvec(disupb)
+d_kdis G:209 DEF com/stats.b[61] d_kdis=
+d_kdis G:209 LG com/stats.b[433] d_kdis!i:=0
+d_kdis G:209 LG com/stats.b[467] freevec(d_kdis)
+d_kdis G:209 LG com/stats.b[521] writef("%i7(%i4) ",d_kdis!i,s_kdis!i)
+d_kdis G:209 LG com/stats.b[996] updis(s_kdis,d_kdis,k)
+d_kdis G:209 SG com/stats.b[423] d_kdis:=getvec(disupb)
+d_lmdis G:219 DEF com/stats.b[66] d_lmdis=
+d_lmdis G:219 LG com/stats.b[438] d_lmdis!i:=0
+d_lmdis G:219 LG com/stats.b[472] freevec(d_lmdis)
+d_lmdis G:219 LG com/stats.b[535]
+    writef("%i7(%i4) ",d_lmdis!i,s_lmdis!i)
+d_lmdis G:219 LG com/stats.b[960] updis(s_lmdis,d_lmdis,-n)
+d_lmdis G:219 SG com/stats.b[428] d_lmdis:=getvec(disupb)
+d_lndis G:217 DEF com/stats.b[65] d_lndis=
+d_lndis G:217 LG com/stats.b[437] d_lndis!i:=0
+d_lndis G:217 LG com/stats.b[471] freevec(d_lndis)
+d_lndis G:217 LG com/stats.b[534]
+    writef("%i7(%i4) ",d_lndis!i,s_lndis!i)
+d_lndis G:217 LG com/stats.b[961] updis(s_lndis,d_lndis,n)
+d_lndis G:217 SG com/stats.b[427] d_lndis:=getvec(disupb)
+d_lpdis G:201 DEF com/stats.b[57] d_lpdis=
+d_lpdis G:201 LG com/stats.b[431] d_lpdis!i:=0
+d_lpdis G:201 LG com/stats.b[465] freevec(d_lpdis)
+d_lpdis G:201 LG com/stats.b[519]
+    writef("%i7(%i4) ",d_lpdis!i,s_lpdis!i)
+d_lpdis G:201 LG com/stats.b[963] updis(s_lpdis,d_lpdis,n)
+d_lpdis G:201 SG com/stats.b[419] d_lpdis:=getvec(disupb)
+d_pbyt G:227 DEF com/stats.b[71] d_pbyt=
+d_pbyt G:227 LG com/stats.b[500] writef("%i7(%i4) ",d_pbyt,s_pbyt)
+d_pbyt G:227 LG com/stats.b[851] d_pbyt:=d_pbyt+freq
+d_pbyt G:227 LG com/stats.b[883] d_pbyt:=d_pbyt+freq
+d_pbyt G:227 SG com/stats.b[444] d_pbyt:=0
+d_pbyt G:227 SG com/stats.b[851] d_pbyt:=d_pbyt+freq
+d_pbyt G:227 SG com/stats.b[883] d_pbyt:=d_pbyt+freq
+d_pvecap G:223 DEF com/stats.b[69] d_pvecap=
+d_pvecap G:223 LG com/stats.b[498] writef("%i7(%i4) ",d_pvecap,s_pvecap)
+d_pvecap G:223 LG com/stats.b[978] d_pvecap:=d_pvecap+freq
+d_pvecap G:223 SG com/stats.b[442] d_pvecap:=0
+d_pvecap G:223 SG com/stats.b[978] d_pvecap:=d_pvecap+freq
+d_rbdis G:213 DEF com/stats.b[63] d_rbdis=
+d_rbdis G:213 LG com/stats.b[435] d_rbdis!i:=0
+d_rbdis G:213 LG com/stats.b[469] freevec(d_rbdis)
+d_rbdis G:213 LG com/stats.b[537]
+    writef("%i7(%i4) ",d_rbdis!i,s_rbdis!i)
+d_rbdis G:213 LG com/stats.b[570] updis(s_rbdis,d_rbdis,pc-a)
+d_rbdis G:213 LG com/stats.b[578] updis(s_rbdis,d_rbdis,pc-a)
+d_rbdis G:213 SG com/stats.b[425] d_rbdis:=getvec(disupb)
+d_rfdis G:211 DEF com/stats.b[62] d_rfdis=
+d_rfdis G:211 LG com/stats.b[434] d_rfdis!i:=0
+d_rfdis G:211 LG com/stats.b[468] freevec(d_rfdis)
+d_rfdis G:211 LG com/stats.b[536]
+    writef("%i7(%i4) ",d_rfdis!i,s_rfdis!i)
+d_rfdis G:211 LG com/stats.b[569] updis(s_rfdis,d_rfdis,a-pc)
+d_rfdis G:211 LG com/stats.b[577] updis(s_rfdis,d_rfdis,a-pc)
+d_rfdis G:211 SG com/stats.b[424] d_rfdis:=getvec(disupb)
+d_rtn G:249 DEF com/stats.b[82] d_rtn=
+d_rtn G:249 LG com/stats.b[529] writef("%i7(%i4) ",d_rtn,s_rtn)
+d_rtn G:249 LG com/stats.b[764] d_rtn:=d_rtn+freq
+d_rtn G:249 SG com/stats.b[461] d_rtn:=0
+d_rtn G:249 SG com/stats.b[764] d_rtn:=d_rtn+freq
+d_spdis G:203 DEF com/stats.b[58] d_spdis=
+d_spdis G:203 LG com/stats.b[432] d_spdis!i:=0
+d_spdis G:203 LG com/stats.b[466] freevec(d_spdis)
+d_spdis G:203 LG com/stats.b[520]
+    writef("%i7(%i4) ",d_spdis!i,s_spdis!i)
+d_spdis G:203 LG com/stats.b[966] updis(s_spdis,d_spdis,n)
+d_spdis G:203 SG com/stats.b[420] d_spdis:=getvec(disupb)
+d_subs G:231 DEF com/stats.b[73] d_subs=
+d_subs G:231 LG com/stats.b[504] writef("%i7(%i4) ",d_subs,s_subs)
+d_subs G:231 LG com/stats.b[984] d_subs:=d_subs+freq
+d_subs G:231 SG com/stats.b[446] d_subs:=0
+d_subs G:231 SG com/stats.b[984] d_subs:=d_subs+freq
+d_swb G:243 DEF com/stats.b[79] d_swb=
+d_swb G:243 LG com/stats.b[508] writef("%i7(%i4) ",d_swb,s_swb)
+d_swb G:243 LG com/stats.b[796] d_swb:=d_swb+freq
+d_swb G:243 SG com/stats.b[455] d_swb:=0
+d_swb G:243 SG com/stats.b[796] d_swb:=d_swb+freq
+d_swl G:245 DEF com/stats.b[80] d_swl=
+d_swl G:245 LG com/stats.b[509] writef("%i7(%i4) ",d_swl,s_swl)
+d_swl G:245 LG com/stats.b[799] d_swl:=d_swl+freq
+d_swl G:245 SG com/stats.b[456] d_swl:=0
+d_swl G:245 SG com/stats.b[799] d_swl:=d_swl+freq
+dat_to_strings G:110 DEF libhdr.h[144] dat_to_strings=110
+datstamp G:109 DEF libhdr.h[143] datstamp=109
+datstring G:108 DEF libhdr.h[142] datstring=108
+deadcode M:#xDEADC0DE DEF libhdr.h[261] deadcode=-#x21523F22
+debug G:224 DEF bcplfecg.h[151] debug=
+defaultencoding G:240 DEF bcplfecg.h[169] defaultencoding=
+delay G:128 DEF libhdr.h[162] delay=128
+delayuntil G:129 DEF libhdr.h[163] delayuntil=129
+deleteco G:18 DEF libhdr.h[51] deleteco=18
+deletedev G:173 DEF libhdr.h[218] deletedev=173
+deletefile G:76 DEF libhdr.h[109] deletefile=76
+deleteself G:125 DEF libhdr.h[159] deleteself=125
+deletetask G:154 DEF libhdr.h[202] deletetask=154
+deplete G:43 DEF libhdr.h[76] deplete=43
+disupb M:26 DEF com/stats.b[54] disupb=26
+disupb M:26 MAN com/stats.b[1000] d_v!disupb:=d_v!disupb+freq
+disupb M:26 MAN com/stats.b[1000] s_v!disupb:=s_v!disupb+1
+disupb M:26 MAN com/stats.b[419] d_lpdis:=getvec(disupb)
+disupb M:26 MAN com/stats.b[419] s_lpdis:=getvec(disupb)
+disupb M:26 MAN com/stats.b[420] d_spdis:=getvec(disupb)
+disupb M:26 MAN com/stats.b[420] s_spdis:=getvec(disupb)
+disupb M:26 MAN com/stats.b[423] d_kdis:=getvec(disupb)
+disupb M:26 MAN com/stats.b[423] s_kdis:=getvec(disupb)
+disupb M:26 MAN com/stats.b[424] d_rfdis:=getvec(disupb)
+disupb M:26 MAN com/stats.b[424] s_rfdis:=getvec(disupb)
+disupb M:26 MAN com/stats.b[425] d_rbdis:=getvec(disupb)
+disupb M:26 MAN com/stats.b[425] s_rbdis:=getvec(disupb)
+disupb M:26 MAN com/stats.b[426] d_idis:=getvec(disupb)
+disupb M:26 MAN com/stats.b[426] s_idis:=getvec(disupb)
+disupb M:26 MAN com/stats.b[427] d_lndis:=getvec(disupb)
+disupb M:26 MAN com/stats.b[427] s_lndis:=getvec(disupb)
+disupb M:26 MAN com/stats.b[428] d_lmdis:=getvec(disupb)
+disupb M:26 MAN com/stats.b[428] s_lmdis:=getvec(disupb)
+disupb M:26 MAN com/stats.b[430] FOR i=0 TO disupb DO..
+disupb M:26 MAN com/stats.b[518] FOR i=0 TO disupb DO..
+disupb M:26 MAN com/stats.b[533] FOR i=0 TO disupb DO..
+encoding G:239 DEF bcplfecg.h[168] encoding=
+endread G:60 DEF libhdr.h[93] endread=60
+endstream G:62 DEF libhdr.h[95] endstream=62
+endstreamch M:-1 DEF libhdr.h[244] endstreamch=-1
+endtask G:162 DEF libhdr.h[210] endtask=162
+endwrite G:61 DEF libhdr.h[94] endwrite=61
+endwrite G:61 LG com/stats.b[190] endwrite()
+entryword M:57311 DEF libhdr.h[263] entryword=57311
+entryword M:57311 MAN com/stats.b[212] IF word=entryword&name%0=11 DO ..
+eop F:26 LF com/stats.b[664] eop()
+eop F:26 LF com/stats.b[713] eop()
+eop F:26 LF com/stats.b[937] eop()
+eop F:26 RT com/stats.b[987] LET eop()BE..
+eqcases G:225 DEF bcplfecg.h[152] eqcases=
+errcount G:241 DEF bcplfecg.h[171] errcount=
+errmax G:242 DEF bcplfecg.h[171] errmax=
+fault G:174 DEF libhdr.h[219] fault=174
+fcode G:251 DEF com/stats.b[85] fcode=
+fcode G:251 LG com/stats.b[552] d_fv!fcode:=d_fv!fcode+freq
+fcode G:251 LG com/stats.b[552] s_fv!fcode:=s_fv!fcode+1
+fcode G:251 LG com/stats.b[555] SWITCHON instrtype(fcode) INTO..
+fcode G:251 LG com/stats.b[586] SWITCHON fcode INTO..
+fcode G:251 LG com/stats.b[601] call(fcode)
+fcode G:251 LG com/stats.b[619] numb(fcode-16)
+fcode G:251 LG com/stats.b[644] call(fcode-32)
+fcode G:251 LG com/stats.b[651] numb(fcode-45)
+fcode G:251 LG com/stats.b[689] call(fcode-64)
+fcode G:251 LG com/stats.b[696] numb(fcode-77)
+fcode G:251 LG com/stats.b[738] call(fcode-96)
+fcode G:251 LG com/stats.b[745] numb(fcode-109)
+fcode G:251 LG com/stats.b[762] numb(fcode-116)
+fcode G:251 LG com/stats.b[792] locrd(fcode-128)
+fcode G:251 LG com/stats.b[806] numb(fcode-148)
+fcode G:251 LG com/stats.b[810] locrd(fcode-149)
+fcode G:251 LG com/stats.b[839] locwr(fcode-160)
+fcode G:251 LG com/stats.b[844] numb(fcode-176)
+fcode G:251 LG com/stats.b[881] locrd(fcode-192)
+fcode G:251 LG com/stats.b[896] numb(fcode-208)
+fcode G:251 LG com/stats.b[902] locrd(fcode-211)
+fcode G:251 LG com/stats.b[905] locrd(fcode-216)
+fcode G:251 LG com/stats.b[908] locrd(fcode-218)
+fcode G:251 LG com/stats.b[927] locrd(fcode-224)
+fcode G:251 LG com/stats.b[942] locrd(fcode-240)
+fcode G:251 LG com/stats.b[946] locrd(fcode-244)
+fcode G:251 LG com/stats.b[949] locrd(fcode-247)
+fcode G:251 LG com/stats.b[952] locrd(fcode-249)
+fcode G:251 SG com/stats.b[220] fcode:=0%pc
+feg M:260 DEF bcplfecg.h[20] feg=intg+60
+feg M:260 MAN bcplfecg.h[21] trng=feg+60
+fin_l G:203 DEF bcplfecg.h[132] fin_l=
+fin_p G:202 DEF bcplfecg.h[132] fin_p=
+findappend G:130 DEF libhdr.h[164] findappend=130
+findarg G:104 DEF libhdr.h[138] findarg=104
+findinoutput G:50 DEF libhdr.h[83] findinoutput=50
+findinput G:48 DEF libhdr.h[81] findinput=48
+findoutput G:49 DEF libhdr.h[82] findoutput=49
+findoutput G:49 LG com/stats.b[180] outstream:=findoutput(tofile)
+findstream G:52 DEF libhdr.h[85] findstream=52
+findupdate G:51 DEF libhdr.h[84] findupdate=51
+fl_64to32 M:45 DEF libhdr.h[573] fl_64to32=
+fl_F2N M:42 DEF libhdr.h[570] fl_F2N=
+fl_N2F M:41 DEF libhdr.h[569] fl_N2F=
+fl_abs M:5 DEF libhdr.h[540] fl_abs=
+fl_abs M:5 MAN com/stats.b[309] CASE fl_abs:.. 
+fl_acos M:20 DEF libhdr.h[545] fl_acos=20
+fl_add M:9 DEF libhdr.h[542] fl_add=
+fl_add M:9 MAN com/stats.b[313] CASE fl_add:.. 
+fl_asin M:21 DEF libhdr.h[546] fl_asin=
+fl_atan M:22 DEF libhdr.h[547] fl_atan=
+fl_atan2 M:23 DEF libhdr.h[548] fl_atan2=
+fl_avail M:0 DEF libhdr.h[538] fl_avail=0
+fl_ceil M:38 DEF libhdr.h[563] fl_ceil=
+fl_cos M:24 DEF libhdr.h[549] fl_cos=
+fl_cosh M:27 DEF libhdr.h[552] fl_cosh=
+fl_div M:7 DEF libhdr.h[541] fl_div=
+fl_div M:7 MAN com/stats.b[312] CASE fl_div:.. 
+fl_eq M:13 DEF libhdr.h[543] fl_eq=
+fl_eq M:13 MAN com/stats.b[315] CASE fl_eq:.. 
+fl_exp M:30 DEF libhdr.h[555] fl_exp=
+fl_fix M:4 DEF libhdr.h[540] fl_fix=
+fl_fix M:4 MAN com/stats.b[307] CASE fl_fix:.. 
+fl_float M:3 DEF libhdr.h[540] fl_float=
+fl_float M:3 MAN com/stats.b[306] CASE fl_float:.. 
+fl_floor M:39 DEF libhdr.h[564] fl_floor=
+fl_frexp M:31 DEF libhdr.h[556] fl_frexp=
+fl_ge M:18 DEF libhdr.h[543] fl_ge=
+fl_ge M:18 MAN com/stats.b[320] CASE fl_ge:.. 
+fl_gr M:16 DEF libhdr.h[543] fl_gr=
+fl_gr M:16 MAN com/stats.b[318] CASE fl_gr:.. 
+fl_ldexp M:32 DEF libhdr.h[557] fl_ldexp=
+fl_le M:17 DEF libhdr.h[543] fl_le=
+fl_le M:17 MAN com/stats.b[319] CASE fl_le:.. 
+fl_log M:33 DEF libhdr.h[558] fl_log=
+fl_log10 M:34 DEF libhdr.h[559] fl_log10=
+fl_ls M:15 DEF libhdr.h[543] fl_ls=
+fl_ls M:15 MAN com/stats.b[317] CASE fl_ls:.. 
+fl_mk M:1 DEF libhdr.h[539] fl_mk=
+fl_mk M:1 MAN com/stats.b[305] CASE fl_mk:.. 
+fl_mod M:8 DEF libhdr.h[541] fl_mod=
+fl_mod M:8 MAN com/stats.b[311] CASE fl_mod:.. 
+fl_modf M:40 DEF libhdr.h[565] fl_modf=
+fl_mul M:6 DEF libhdr.h[541] fl_mul=
+fl_mul M:6 MAN com/stats.b[310] CASE fl_mul:.. 
+fl_ne M:14 DEF libhdr.h[543] fl_ne=
+fl_ne M:14 MAN com/stats.b[316] CASE fl_ne:.. 
+fl_neg M:12 DEF libhdr.h[542] fl_neg=
+fl_neg M:12 MAN com/stats.b[308] CASE fl_neg:.. 
+fl_pos M:11 DEF libhdr.h[542] fl_pos=
+fl_pow M:36 DEF libhdr.h[561] fl_pow=36
+fl_radius2 M:43 DEF libhdr.h[571] fl_radius2=
+fl_radius3 M:44 DEF libhdr.h[572] fl_radius3=
+fl_sin M:25 DEF libhdr.h[550] fl_sin=
+fl_sinh M:28 DEF libhdr.h[553] fl_sinh=
+fl_sqrt M:37 DEF libhdr.h[562] fl_sqrt=
+fl_sub M:10 DEF libhdr.h[542] fl_sub=
+fl_sub M:10 MAN com/stats.b[314] CASE fl_sub:.. 
+fl_tan M:26 DEF libhdr.h[551] fl_tan=
+fl_tanh M:29 DEF libhdr.h[554] fl_tanh=
+fl_unmk M:2 DEF libhdr.h[539] fl_unmk=
+flag_a M:1 DEF libhdr.h[698] flag_a=1<<0
+flag_b M:2 DEF libhdr.h[699] flag_b=1<<1
+flag_c M:4 DEF libhdr.h[700] flag_c=1<<2
+flag_d M:8 DEF libhdr.h[701] flag_d=1<<3
+flag_e M:16 DEF libhdr.h[702] flag_e=1<<4
+flopname G:208 DEF bcplfecg.h[136] flopname=
+flopname G:208 FN com/stats.b[300] LET flopname(flop)=..
+flopname G:208 LG com/stats.b[360] writef(" %s",flopname(gb(pc+1)))
+flt0 G:247 DEF bcplfecg.h[179] flt0=
+flt1 G:248 DEF bcplfecg.h[180] flt1=
+flt10 G:249 DEF bcplfecg.h[181] flt10=
+free_storage F:14 LF com/stats.b[188] free_storage()
+free_storage F:14 RT com/stats.b[464] LET free_storage()BE..
+freeobj G:78 DEF libhdr.h[111] freeobj=78
+freevec G:27 DEF libhdr.h[60] freevec=27
+freevec G:27 LG com/stats.b[465] freevec(d_lpdis)
+freevec G:27 LG com/stats.b[465] freevec(s_lpdis)
+freevec G:27 LG com/stats.b[466] freevec(d_spdis)
+freevec G:27 LG com/stats.b[466] freevec(s_spdis)
+freevec G:27 LG com/stats.b[467] freevec(d_kdis)
+freevec G:27 LG com/stats.b[467] freevec(s_kdis)
+freevec G:27 LG com/stats.b[468] freevec(d_rfdis)
+freevec G:27 LG com/stats.b[468] freevec(s_rfdis)
+freevec G:27 LG com/stats.b[469] freevec(d_rbdis)
+freevec G:27 LG com/stats.b[469] freevec(s_rbdis)
+freevec G:27 LG com/stats.b[470] freevec(d_idis)
+freevec G:27 LG com/stats.b[470] freevec(s_idis)
+freevec G:27 LG com/stats.b[471] freevec(d_lndis)
+freevec G:27 LG com/stats.b[471] freevec(s_lndis)
+freevec G:27 LG com/stats.b[472] freevec(d_lmdis)
+freevec G:27 LG com/stats.b[472] freevec(s_lmdis)
+freevec G:27 LG com/stats.b[474] freevec(d_fv)
+freevec G:27 LG com/stats.b[474] freevec(s_fv)
+freevec G:27 LG com/stats.b[475] freevec(d_ftype)
+freevec G:27 LG com/stats.b[475] freevec(s_ftype)
+freq G:252 DEF com/stats.b[86] freq=
+freq G:252 LG com/stats.b[1000] d_v!disupb:=d_v!disupb+freq
+freq G:252 LG com/stats.b[1002] d_v!val:=d_v!val+freq
+freq G:252 LG com/stats.b[1005] d_v!17:=d_v!17+freq
+freq G:252 LG com/stats.b[1008] d_v!18:=d_v!18+freq
+freq G:252 LG com/stats.b[1011] d_v!19:=d_v!19+freq
+freq G:252 LG com/stats.b[1014] d_v!20:=d_v!20+freq
+freq G:252 LG com/stats.b[1017] d_v!21:=d_v!21+freq
+freq G:252 LG com/stats.b[1020] d_v!22:=d_v!22+freq
+freq G:252 LG com/stats.b[1023] d_v!23:=d_v!23+freq
+freq G:252 LG com/stats.b[1026] d_v!24:=d_v!24+freq
+freq G:252 LG com/stats.b[1029] d_v!25:=d_v!25+freq
+freq G:252 LG com/stats.b[552] d_fv!fcode:=d_fv!fcode+freq
+freq G:252 LG com/stats.b[553] d_fcount:=d_fcount+freq
+freq G:252 LG com/stats.b[557] d_ftype!0:=d_ftype!0+freq
+freq G:252 LG com/stats.b[559] d_ftype!1:=d_ftype!1+freq
+freq G:252 LG com/stats.b[561] d_ftype!2:=d_ftype!2+freq
+freq G:252 LG com/stats.b[563] d_ftype!3:=d_ftype!3+freq
+freq G:252 LG com/stats.b[565] d_ftype!4:=d_ftype!4+freq
+freq G:252 LG com/stats.b[567] d_ftype!5:=d_ftype!5+freq
+freq G:252 LG com/stats.b[572] d_ftype!6:=d_ftype!6+freq
+freq G:252 LG com/stats.b[580] d_ftype!7:=d_ftype!7+freq
+freq G:252 LG com/stats.b[582] d_ftype!8:=d_ftype!8+freq
+freq G:252 LG com/stats.b[764] d_rtn:=d_rtn+freq
+freq G:252 LG com/stats.b[796] d_swb:=d_swb+freq
+freq G:252 LG com/stats.b[799] d_swl:=d_swl+freq
+freq G:252 LG com/stats.b[848] d_gbyt:=d_gbyt+freq
+freq G:252 LG com/stats.b[851] d_pbyt:=d_pbyt+freq
+freq G:252 LG com/stats.b[883] d_pbyt:=d_pbyt+freq
+freq G:252 LG com/stats.b[969] d_grds:=d_grds+freq
+freq G:252 LG com/stats.b[972] d_gwrs:=d_gwrs+freq
+freq G:252 LG com/stats.b[975] d_gvecap:=d_gvecap+freq
+freq G:252 LG com/stats.b[978] d_pvecap:=d_pvecap+freq
+freq G:252 LG com/stats.b[981] d_adds:=d_adds+freq
+freq G:252 LG com/stats.b[984] d_subs:=d_subs+freq
+freq G:252 LG com/stats.b[987] d_eops:=d_eops+freq
+freq G:252 LG com/stats.b[990] d_cj:=d_cj+freq
+freq G:252 LG com/stats.b[993] d_cj0:=d_cj0+freq
+freq G:252 SG com/stats.b[221] freq:=tallyv!i
+g_colist M:8 DEF libhdr.h[269] g_colist=8
+g_currco M:7 DEF libhdr.h[268] g_currco=7
+g_extbase M:950 DEF libhdr.h[716] g_extbase=950
+g_glbase M:450 DEF libhdr.h[715] g_glbase=450
+g_globsize M:0 DEF libhdr.h[266] g_globsize=0
+g_grfbase M:400 DEF libhdr.h[712] g_grfbase=400
+g_keyboard M:20 DEF libhdr.h[273] g_keyboard=20
+g_memsize M:14 DEF libhdr.h[272] g_memsize=14
+g_rootnode M:9 DEF libhdr.h[270] g_rootnode=9
+g_screen M:21 DEF libhdr.h[274] g_screen=21
+g_sdlbase M:450 DEF libhdr.h[714] g_sdlbase=450
+g_sndbase M:400 DEF libhdr.h[713] g_sndbase=400
+g_sys M:3 DEF libhdr.h[267] g_sys=3
+gb F:7 FN com/stats.b[372] LET gb(pc)=..
+gb F:7 LF com/stats.b[353] a:=gb(pc+1)
+gb F:7 LF com/stats.b[357] pc:=pc+1+2*gb(...)&-2
+gb F:7 LF com/stats.b[360] writef(" %s",flopname(gb(pc+1)))
+gb F:7 LF com/stats.b[363] writef(" %n %n",gb(pc+1),gb(pc+2))
+gb F:7 LF com/stats.b[366]
+    writef(" %s %n %n",sfname(gb(pc+1)),gb(pc+2),gb(pc+3))
+gb F:7 LF com/stats.b[573] a:=gb(pc+1)
+gb F:7 LF com/stats.b[606] numb(-gb(pc+1))
+gb F:7 LF com/stats.b[630] call(gb(pc+1))
+gb F:7 LF com/stats.b[724] numb(gb(pc+1))
+gb F:7 LF com/stats.b[773] locrd(gb(pc+1))
+gb F:7 LF com/stats.b[820] locwr(gb(pc+1))
+gb F:7 LF com/stats.b[866] locrd(gb(pc+1))
+gb F:7 LF com/stats.b[912] numb(gb(pc+1))
+gb F:7 LF com/stats.b[929] numb(gb(pc+1))
+gdefsing G:230 DEF bcplfecg.h[157] gdefsing=
+get_record G:71 DEF libhdr.h[104] get_record=71
+get_text G:93 DEF libhdr.h[127] get_text=93
+get_textblib G:93 DEF libhdr.h[126] get_textblib=93
+getlogname G:118 DEF libhdr.h[152] getlogname=118
+getremipaddr G:54 DEF libhdr.h[87] getremipaddr=54
+getvec G:25 DEF libhdr.h[58] getvec=25
+getvec G:25 LG com/stats.b[419] d_lpdis:=getvec(disupb)
+getvec G:25 LG com/stats.b[419] s_lpdis:=getvec(disupb)
+getvec G:25 LG com/stats.b[420] d_spdis:=getvec(disupb)
+getvec G:25 LG com/stats.b[420] s_spdis:=getvec(disupb)
+getvec G:25 LG com/stats.b[423] d_kdis:=getvec(disupb)
+getvec G:25 LG com/stats.b[423] s_kdis:=getvec(disupb)
+getvec G:25 LG com/stats.b[424] d_rfdis:=getvec(disupb)
+getvec G:25 LG com/stats.b[424] s_rfdis:=getvec(disupb)
+getvec G:25 LG com/stats.b[425] d_rbdis:=getvec(disupb)
+getvec G:25 LG com/stats.b[425] s_rbdis:=getvec(disupb)
+getvec G:25 LG com/stats.b[426] d_idis:=getvec(disupb)
+getvec G:25 LG com/stats.b[426] s_idis:=getvec(disupb)
+getvec G:25 LG com/stats.b[427] d_lndis:=getvec(disupb)
+getvec G:25 LG com/stats.b[427] s_lndis:=getvec(disupb)
+getvec G:25 LG com/stats.b[428] d_lmdis:=getvec(disupb)
+getvec G:25 LG com/stats.b[428] s_lmdis:=getvec(disupb)
+getvec G:25 LG com/stats.b[449] d_fv:=getvec(255)
+getvec G:25 LG com/stats.b[449] s_fv:=getvec(255)
+getvec G:25 LG com/stats.b[458] d_ftype:=getvec(typeupb)
+getvec G:25 LG com/stats.b[458] s_ftype:=getvec(typeupb)
+getword G:32 DEF libhdr.h[65] getword=32
+gh F:10 FN com/stats.b[381] LET gh(pc)=..
+gh F:10 LF com/stats.b[354] a:=gh(pc+1)
+gh F:10 LF com/stats.b[377] gh(pc)
+gh F:10 LF com/stats.b[632] call(gh(pc+1))
+gh F:10 LF com/stats.b[726] numb(gh(pc+1))
+gh F:10 LF com/stats.b[775] locrd(gh(pc+1))
+gh F:10 LF com/stats.b[822] locwr(gh(pc+1))
+gh F:10 LF com/stats.b[868] locrd(gh(pc+1))
+gh F:10 LF com/stats.b[886] numb(-gh(pc+1))
+gh F:10 LF com/stats.b[914] numb(gh(pc+1))
+gh F:10 LF com/stats.b[931] numb(gh(pc+1))
+globin G:24 DEF libhdr.h[57] globin=24
+globsize G:0 DEF libhdr.h[32] globsize=0
+globword M:#x8F8F0000 DEF libhdr.h[259] globword=-#x70710000
+gostream G:246 DEF bcplfecg.h[173] gostream=
+grd F:20 LF com/stats.b[644] grd()
+grd F:20 LF com/stats.b[646] grd()
+grd F:20 LF com/stats.b[648] grd()
+grd F:20 LF com/stats.b[651] grd()
+grd F:20 LF com/stats.b[653] grd()
+grd F:20 LF com/stats.b[659] grd()
+grd F:20 LF com/stats.b[689] grd()
+grd F:20 LF com/stats.b[691] grd()
+grd F:20 LF com/stats.b[693] grd()
+grd F:20 LF com/stats.b[696] grd()
+grd F:20 LF com/stats.b[698] grd()
+grd F:20 LF com/stats.b[704] grd()
+grd F:20 LF com/stats.b[738] grd()
+grd F:20 LF com/stats.b[740] grd()
+grd F:20 LF com/stats.b[742] grd()
+grd F:20 LF com/stats.b[745] grd()
+grd F:20 LF com/stats.b[747] grd()
+grd F:20 LF com/stats.b[753] grd()
+grd F:20 RT com/stats.b[969] LET grd()BE..
+gsb F:8 FN com/stats.b[374] LET gsb(pc)=..
+gsb F:8 LF com/stats.b[356] a:=pc+1+gsb(pc+1)-cursect
+gsb F:8 LF com/stats.b[568] a:=pc+1+gsb(pc+1)
+gsh F:9 FN com/stats.b[376] LET gsh(pc)=..
+gsh F:9 LF com/stats.b[358] a:=pc+gsh(pc)-cursect
+gsh F:9 LF com/stats.b[576] a:=a+gsh(a)
+gw F:11 FN com/stats.b[388] LET gw(pc)=..
+gw F:11 LF com/stats.b[355] a:=gw(pc+1)
+gw F:11 LF com/stats.b[634] call(gw(pc+1))
+gw F:11 LF com/stats.b[728] numb(gw(pc+1))
+gw F:11 LF com/stats.b[777] locrd(gw(pc+1))
+gw F:11 LF com/stats.b[824] locwr(gw(pc+1))
+gw F:11 LF com/stats.b[870] locrd(gw(pc+1))
+gw F:11 LF com/stats.b[916] numb(gw(pc+1))
+gwr F:21 LF com/stats.b[655] gwr()
+gwr F:21 LF com/stats.b[700] gwr()
+gwr F:21 LF com/stats.b[749] gwr()
+gwr F:21 RT com/stats.b[972] LET gwr()BE..
+h1 M:0 DEF bcplfecg.h[25] h1=0
+h2 M:1 DEF bcplfecg.h[25] h2=
+h3 M:2 DEF bcplfecg.h[25] h3=
+h4 M:3 DEF bcplfecg.h[25] h4=
+h5 M:4 DEF bcplfecg.h[25] h5=
+h6 M:5 DEF bcplfecg.h[25] h6=
+h7 M:6 DEF bcplfecg.h[25] h7=
+hard G:231 DEF bcplfecg.h[158] hard=
+hold G:158 DEF libhdr.h[206] hold=158
+id_appendscb M:132 DEF libhdr.h[487] id_appendscb=132
+id_inoutscb M:131 DEF libhdr.h[486] id_inoutscb=131
+id_inscb M:129 DEF libhdr.h[484] id_inscb=129
+id_outscb M:130 DEF libhdr.h[485] id_outscb=130
+init_analysis F:13 LF com/stats.b[186] init_analysis()
+init_analysis F:13 RT com/stats.b[418] LET init_analysis()BE..
+initco G:22 DEF libhdr.h[55] initco=22
+initio G:46 DEF libhdr.h[79] initio=46
+input G:58 DEF libhdr.h[91] input=58
+instrcount G:121 DEF libhdr.h[155] instrcount=121
+instrtype F:12 FN com/stats.b[395] LET instrtype(f)=..
+instrtype F:12 LF com/stats.b[350] SWITCHON instrtype(0%pc) INTO..
+instrtype F:12 LF com/stats.b[555] SWITCHON instrtype(fcode) INTO..
+intflag G:119 DEF libhdr.h[153] intflag=119
+intflag G:119 LG com/stats.b[232] IF intflag() DO ..
+intflag G:119 LG com/stats.b[245] IF intflag() DO ..
+intg M:200 DEF bcplfecg.h[18] intg=ug
+intg M:200 MAN bcplfecg.h[131] nametable=intg
+intg M:200 MAN bcplfecg.h[20] feg=intg+60
+isrregs M:41 DEF libhdr.h[482] isrregs=41
+klibregs M:21 DEF libhdr.h[477] klibregs=21
+level G:15 DEF libhdr.h[48] level=15
+loadseg G:105 DEF libhdr.h[139] loadseg=105
+locatedir G:80 DEF libhdr.h[113] locatedir=80
+locateobj G:81 DEF libhdr.h[114] locateobj=81
+locrd F:18 LF com/stats.b[773] locrd(gb(pc+1))
+locrd F:18 LF com/stats.b[775] locrd(gh(pc+1))
+locrd F:18 LF com/stats.b[777] locrd(gw(pc+1))
+locrd F:18 LF com/stats.b[792] locrd(fcode-128)
+locrd F:18 LF com/stats.b[810] locrd(fcode-149)
+locrd F:18 LF com/stats.b[866] locrd(gb(pc+1))
+locrd F:18 LF com/stats.b[868] locrd(gh(pc+1))
+locrd F:18 LF com/stats.b[870] locrd(gw(pc+1))
+locrd F:18 LF com/stats.b[881] locrd(fcode-192)
+locrd F:18 LF com/stats.b[902] locrd(fcode-211)
+locrd F:18 LF com/stats.b[905] locrd(fcode-216)
+locrd F:18 LF com/stats.b[908] locrd(fcode-218)
+locrd F:18 LF com/stats.b[927] locrd(fcode-224)
+locrd F:18 LF com/stats.b[942] locrd(fcode-240)
+locrd F:18 LF com/stats.b[946] locrd(fcode-244)
+locrd F:18 LF com/stats.b[949] locrd(fcode-247)
+locrd F:18 LF com/stats.b[952] locrd(fcode-249)
+locrd F:18 RT com/stats.b[963] LET locrd(n)BE..
+locwr F:19 LF com/stats.b[820] locwr(gb(pc+1))
+locwr F:19 LF com/stats.b[822] locwr(gh(pc+1))
+locwr F:19 LF com/stats.b[824] locwr(gw(pc+1))
+locwr F:19 LF com/stats.b[839] locwr(fcode-160)
+locwr F:19 RT com/stats.b[966] LET locwr(n)BE..
+longjump G:16 DEF libhdr.h[49] longjump=16
+maxint M:#x7FFFFFFF DEF libhdr.h[242] maxint=minint-1
+maxint M:#x7FFFFFFF MAN com/stats.b[165] sys(Sys_setcount,maxint)
+mcaddrinc M:4 DEF libhdr.h[240] mcaddrinc=bytesperword
+memoryfree G:131 DEF libhdr.h[165] memoryfree=131
+minint M:#x80000000 DEF libhdr.h[241] minint=1<<bitsperword-1
+minint M:#x80000000 MAN libhdr.h[242] maxint=minint-1
+muldiv G:5 DEF libhdr.h[37] muldiv=5
+nametable G:200 DEF bcplfecg.h[131] nametable=intg
+nametablesize G:201 DEF bcplfecg.h[131] nametablesize=
+naming G:223 DEF bcplfecg.h[150] naming=
+newline G:84 DEF libhdr.h[117] newline=84
+newline G:84 LG com/stats.b[226] newline()
+newline G:84 LG com/stats.b[244] newline()
+newline G:84 LG com/stats.b[250] newline()
+newline G:84 LG com/stats.b[257] newline()
+newline G:84 LG com/stats.b[482] newline()
+newline G:84 LG com/stats.b[485] newline()
+newline G:84 LG com/stats.b[490] newline()
+newline G:84 LG com/stats.b[523] newline()
+newline G:84 LG com/stats.b[540] newline()
+newpage G:120 DEF libhdr.h[154] newpage=120
+noselst G:232 DEF bcplfecg.h[159] noselst=
+note G:63 DEF libhdr.h[96] note=63
+notinuse M:-1 DEF libhdr.h[600] notinuse=-1
+numb F:17 LF com/stats.b[606] numb(-gb(pc+1))
+numb F:17 LF com/stats.b[619] numb(fcode-16)
+numb F:17 LF com/stats.b[651] numb(fcode-45)
+numb F:17 LF com/stats.b[696] numb(fcode-77)
+numb F:17 LF com/stats.b[724] numb(gb(pc+1))
+numb F:17 LF com/stats.b[726] numb(gh(pc+1))
+numb F:17 LF com/stats.b[728] numb(gw(pc+1))
+numb F:17 LF com/stats.b[745] numb(fcode-109)
+numb F:17 LF com/stats.b[762] numb(fcode-116)
+numb F:17 LF com/stats.b[806] numb(fcode-148)
+numb F:17 LF com/stats.b[844] numb(fcode-176)
+numb F:17 LF com/stats.b[886] numb(-gh(pc+1))
+numb F:17 LF com/stats.b[896] numb(fcode-208)
+numb F:17 LF com/stats.b[908] numb(1)
+numb F:17 LF com/stats.b[912] numb(gb(pc+1))
+numb F:17 LF com/stats.b[914] numb(gh(pc+1))
+numb F:17 LF com/stats.b[916] numb(gw(pc+1))
+numb F:17 LF com/stats.b[929] numb(gb(pc+1))
+numb F:17 LF com/stats.b[931] numb(gh(pc+1))
+numb F:17 LF com/stats.b[942] numb(1)
+numb F:17 LF com/stats.b[946] numb(2)
+numb F:17 LF com/stats.b[949] numb(3)
+numb F:17 LF com/stats.b[952] numb(4)
+numb F:17 RT com/stats.b[960] LET numb(n)BE..
+objline1 G:233 DEF bcplfecg.h[161] objline1=
+objline1written G:234 DEF bcplfecg.h[162] objline1written=
+obuf G:211 DEF bcplfecg.h[141] obuf=
+obufp G:212 DEF bcplfecg.h[141] obufp=
+obufq G:213 DEF bcplfecg.h[141] obufq=
+obufsize G:215 DEF bcplfecg.h[141] obufsize=
+obuft G:214 DEF bcplfecg.h[141] obuft=
+ocodeout G:245 DEF bcplfecg.h[172] ocodeout=
+opname G:207 DEF bcplfecg.h[134] opname=
+optstring G:235 DEF bcplfecg.h[163] optstring=
+output G:59 DEF libhdr.h[92] output=59
+output G:59 LG com/stats.b[99] output()
+packstring G:30 DEF libhdr.h[63] packstring=30
+pathfindinput G:53 DEF libhdr.h[86] pathfindinput=53
+pc G:253 DEF com/stats.b[87] pc=
+pc G:253 LG com/stats.b[220] fcode:=0%pc
+pc G:253 LG com/stats.b[225] prinstr(pc,basebyte+cursect)
+pc G:253 LG com/stats.b[568] a:=pc+1+gsb(pc+1)
+pc G:253 LG com/stats.b[569] TEST a>=pc THEN .. ELSE ..
+pc G:253 LG com/stats.b[569] updis(s_rfdis,d_rfdis,a-pc)
+pc G:253 LG com/stats.b[570] updis(s_rbdis,d_rbdis,pc-a)
+pc G:253 LG com/stats.b[573] a:=gb(pc+1)
+pc G:253 LG com/stats.b[575] a:=pc+1+2*a&-2
+pc G:253 LG com/stats.b[577] TEST a>=pc THEN .. ELSE ..
+pc G:253 LG com/stats.b[577] updis(s_rfdis,d_rfdis,a-pc)
+pc G:253 LG com/stats.b[578] updis(s_rbdis,d_rbdis,pc-a)
+pc G:253 LG com/stats.b[606] numb(-gb(pc+1))
+pc G:253 LG com/stats.b[630] call(gb(pc+1))
+pc G:253 LG com/stats.b[632] call(gh(pc+1))
+pc G:253 LG com/stats.b[634] call(gw(pc+1))
+pc G:253 LG com/stats.b[724] numb(gb(pc+1))
+pc G:253 LG com/stats.b[726] numb(gh(pc+1))
+pc G:253 LG com/stats.b[728] numb(gw(pc+1))
+pc G:253 LG com/stats.b[773] locrd(gb(pc+1))
+pc G:253 LG com/stats.b[775] locrd(gh(pc+1))
+pc G:253 LG com/stats.b[777] locrd(gw(pc+1))
+pc G:253 LG com/stats.b[820] locwr(gb(pc+1))
+pc G:253 LG com/stats.b[822] locwr(gh(pc+1))
+pc G:253 LG com/stats.b[824] locwr(gw(pc+1))
+pc G:253 LG com/stats.b[866] locrd(gb(pc+1))
+pc G:253 LG com/stats.b[868] locrd(gh(pc+1))
+pc G:253 LG com/stats.b[870] locrd(gw(pc+1))
+pc G:253 LG com/stats.b[886] numb(-gh(pc+1))
+pc G:253 LG com/stats.b[912] numb(gb(pc+1))
+pc G:253 LG com/stats.b[914] numb(gh(pc+1))
+pc G:253 LG com/stats.b[916] numb(gw(pc+1))
+pc G:253 LG com/stats.b[929] numb(gb(pc+1))
+pc G:253 LG com/stats.b[931] numb(gh(pc+1))
+pc G:253 SG com/stats.b[219] pc:=basebyte+i
+peercom G:179 DEF libhdr.h[222] peercom=179
+pkt_a1 M:5 DEF libhdr.h[609] pkt_a1=5
+pkt_a2 M:6 DEF libhdr.h[610] pkt_a2=6
+pkt_a3 M:7 DEF libhdr.h[611] pkt_a3=7
+pkt_a4 M:8 DEF libhdr.h[612] pkt_a4=8
+pkt_a5 M:9 DEF libhdr.h[613] pkt_a5=9
+pkt_a6 M:10 DEF libhdr.h[614] pkt_a6=10
+pkt_arg1 M:5 DEF libhdr.h[609] pkt_arg1=5
+pkt_arg2 M:6 DEF libhdr.h[610] pkt_arg2=6
+pkt_arg3 M:7 DEF libhdr.h[611] pkt_arg3=7
+pkt_arg4 M:8 DEF libhdr.h[612] pkt_arg4=8
+pkt_arg5 M:9 DEF libhdr.h[613] pkt_arg5=9
+pkt_arg6 M:10 DEF libhdr.h[614] pkt_arg6=10
+pkt_devid M:1 DEF libhdr.h[605] pkt_devid=1
+pkt_devtaskid M:1 DEF libhdr.h[605] pkt_devtaskid=1
+pkt_id M:1 DEF libhdr.h[605] pkt_id=1
+pkt_link M:0 DEF libhdr.h[604] pkt_link=0
+pkt_op M:2 DEF libhdr.h[606] pkt_op=2
+pkt_r1 M:3 DEF libhdr.h[607] pkt_r1=3
+pkt_r2 M:4 DEF libhdr.h[608] pkt_r2=4
+pkt_res1 M:3 DEF libhdr.h[607] pkt_res1=3
+pkt_res2 M:4 DEF libhdr.h[608] pkt_res2=4
+pkt_taskid M:1 DEF libhdr.h[605] pkt_taskid=1
+pkt_type M:2 DEF libhdr.h[606] pkt_type=2
+plist G:204 DEF bcplfecg.h[132] plist=
+point G:64 DEF libhdr.h[97] point=64
+pollingch M:-3 DEF libhdr.h[246] pollingch=-3
+pr_analysis F:15 LF com/stats.b[237] pr_analysis()
+pr_analysis F:15 RT com/stats.b[478] LET pr_analysis()BE..
+prinstr F:6 LF com/stats.b[225] prinstr(pc,basebyte+cursect)
+prinstr F:6 RT com/stats.b[347] LET prinstr(pc,cursect)BE..
+profile G:255 DEF com/stats.b[90] profile=
+profile G:255 LG com/stats.b[175] IF profile DO ..
+profile G:255 LG com/stats.b[203] IF profile&(i&3)=0 DO ..
+profile G:255 LG com/stats.b[223] IF profile DO ..
+profile G:255 SG com/stats.b[171] profile:=argv!3
+prtree G:226 DEF bcplfecg.h[153] prtree=
+prtree2 G:227 DEF bcplfecg.h[154] prtree2=
+put_record G:72 DEF libhdr.h[105] put_record=72
+putword G:33 DEF libhdr.h[66] putword=33
+qpkt G:161 DEF libhdr.h[209] qpkt=161
+randno G:34 DEF libhdr.h[67] randno=34
+randseed G:127 DEF libhdr.h[161] randseed=127
+rdargs G:102 DEF libhdr.h[136] rdargs=102
+rdargs G:102 LG com/stats.b[106]
+    UNLESS rdargs("TO/K,'S,HELP/S",argv,20) DO ..
+rdargs2 G:26 DEF libhdr.h[59] rdargs2=26
+rdch G:38 DEF libhdr.h[71] rdch=38
+rditem G:103 DEF libhdr.h[137] rditem=103
+rdn G:216 DEF bcplfecg.h[142] rdn=
+readflt G:74 DEF libhdr.h[107] readflt=74
+readn G:83 DEF libhdr.h[116] readn=83
+readwords G:44 DEF libhdr.h[77] readwords=44
+recordnote G:70 DEF libhdr.h[103] recordnote=70
+recordpoint G:69 DEF libhdr.h[102] recordpoint=69
+release G:159 DEF libhdr.h[207] release=159
+renamefile G:77 DEF libhdr.h[110] renamefile=77
+result2 G:10 DEF libhdr.h[42] result2=10
+resumeco G:21 DEF libhdr.h[54] resumeco=21
+return_hard M:10 DEF libhdr.h[581] return_hard=10
+return_hard M:10 MAN libhdr.h[586] cli_initialfaillevel=return_hard
+return_ok M:0 DEF libhdr.h[583] return_ok=0
+return_severe M:20 DEF libhdr.h[580] return_severe=20
+return_soft M:5 DEF libhdr.h[582] return_soft=5
+returnpkt G:169 DEF libhdr.h[214] returnpkt=169
+rewindstream G:65 DEF libhdr.h[98] rewindstream=65
+rootnode G:9 DEF libhdr.h[41] rootnode=9
+rootnode G:9 LG com/stats.b[187]
+    statsout(rootnode!rtn_blklist,tallyv,tallyv!0)
+rootnode G:9 LG com/stats.b[98] rootnode!rtn_tallyv
+rootnodeaddr M:100 DEF libhdr.h[290] rootnodeaddr=100
+rtn_abortcode M:27 DEF libhdr.h[326] rtn_abortcode=
+rtn_adjclock M:33 DEF libhdr.h[344] rtn_adjclock=
+rtn_blib M:19 DEF libhdr.h[315] rtn_blib=
+rtn_blklist M:4 DEF libhdr.h[297] rtn_blklist=
+rtn_blklist M:4 MAN com/stats.b[187]
+    statsout(rootnode!rtn_blklist,tallyv,tallyv!0)
+rtn_boot M:17 DEF libhdr.h[313] rtn_boot=
+rtn_boottrace M:39 DEF libhdr.h[359] rtn_boottrace=
+rtn_bptaddr M:9 DEF libhdr.h[304] rtn_bptaddr=
+rtn_bptinstr M:10 DEF libhdr.h[305] rtn_bptinstr=
+rtn_clkintson M:6 DEF libhdr.h[300] rtn_clkintson=
+rtn_clwkq M:12 DEF libhdr.h[308] rtn_clwkq=
+rtn_context M:28 DEF libhdr.h[327] rtn_context=
+rtn_crntask M:3 DEF libhdr.h[296] rtn_crntask=
+rtn_days M:40 DEF libhdr.h[362] rtn_days=
+rtn_dbgvars M:11 DEF libhdr.h[306] rtn_dbgvars=
+rtn_dcountv M:34 DEF libhdr.h[346] rtn_dcountv=
+rtn_devtab M:1 DEF libhdr.h[294] rtn_devtab=
+rtn_dumpflag M:25 DEF libhdr.h[323] rtn_dumpflag=
+rtn_envlist M:26 DEF libhdr.h[324] rtn_envlist=
+rtn_gvecsize M:63 DEF libhdr.h[395] rtn_gvecsize=
+rtn_hdrsvar M:37 DEF libhdr.h[355] rtn_hdrsvar=
+rtn_hostaddsize M:62 DEF libhdr.h[392] rtn_hostaddsize=
+rtn_icount M:48 DEF libhdr.h[375] rtn_icount=
+rtn_idletcb M:32 DEF libhdr.h[343] rtn_idletcb=
+rtn_info M:15 DEF libhdr.h[311] rtn_info=
+rtn_insadebug M:8 DEF libhdr.h[302] rtn_insadebug=
+rtn_intflag M:24 DEF libhdr.h[322] rtn_intflag=
+rtn_joyaxis0 M:55 DEF libhdr.h[384] rtn_joyaxis0=
+rtn_joyaxis1 M:56 DEF libhdr.h[385] rtn_joyaxis1=
+rtn_joyaxis2 M:57 DEF libhdr.h[386] rtn_joyaxis2=
+rtn_joyaxis3 M:58 DEF libhdr.h[387] rtn_joyaxis3=
+rtn_joyaxis4 M:59 DEF libhdr.h[388] rtn_joyaxis4=
+rtn_joyaxis5 M:60 DEF libhdr.h[389] rtn_joyaxis5=
+rtn_joyaxis6 M:61 DEF libhdr.h[390] rtn_joyaxis6=
+rtn_joyaxiscount M:52 DEF libhdr.h[381] rtn_joyaxiscount=
+rtn_joybuttoncount M:51 DEF libhdr.h[380] rtn_joybuttoncount=
+rtn_joybuttons M:54 DEF libhdr.h[383] rtn_joybuttons=
+rtn_joycurrbuttons M:53 DEF libhdr.h[382] rtn_joycurrbuttons=
+rtn_joystickfd M:49 DEF libhdr.h[378] rtn_joystickfd=
+rtn_joystickfd1 M:50 DEF libhdr.h[379] rtn_joystickfd1=
+rtn_keyboard M:20 DEF libhdr.h[316] rtn_keyboard=
+rtn_klib M:18 DEF libhdr.h[314] rtn_klib=
+rtn_lastch M:7 DEF libhdr.h[301] rtn_lastch=
+rtn_mc0 M:43 DEF libhdr.h[367] rtn_mc0=
+rtn_mc1 M:44 DEF libhdr.h[369] rtn_mc1=
+rtn_mc2 M:45 DEF libhdr.h[370] rtn_mc2=
+rtn_mc3 M:46 DEF libhdr.h[371] rtn_mc3=
+rtn_membase M:13 DEF libhdr.h[309] rtn_membase=
+rtn_memsize M:14 DEF libhdr.h[310] rtn_memsize=
+rtn_mins M:41 DEF libhdr.h[364] rtn_mins=rtn_msecs
+rtn_msecs M:41 DEF libhdr.h[363] rtn_msecs=
+rtn_msecs M:41 MAN libhdr.h[364] rtn_mins=rtn_msecs
+rtn_pathvar M:36 DEF libhdr.h[353] rtn_pathvar=
+rtn_rootvar M:35 DEF libhdr.h[351] rtn_rootvar=
+rtn_screen M:21 DEF libhdr.h[317] rtn_screen=
+rtn_scriptsvar M:38 DEF libhdr.h[357] rtn_scriptsvar=
+rtn_sys M:16 DEF libhdr.h[312] rtn_sys=
+rtn_sysg M:30 DEF libhdr.h[336] rtn_sysg=
+rtn_sysp M:29 DEF libhdr.h[335] rtn_sysp=
+rtn_sysst M:31 DEF libhdr.h[337] rtn_sysst=
+rtn_system M:47 DEF libhdr.h[373] rtn_system=
+rtn_tallyv M:5 DEF libhdr.h[298] rtn_tallyv=
+rtn_tallyv M:5 MAN com/stats.b[98] rootnode!rtn_tallyv
+rtn_tasktab M:0 DEF libhdr.h[293] rtn_tasktab=0
+rtn_tcblist M:2 DEF libhdr.h[295] rtn_tcblist=
+rtn_ticks M:42 DEF libhdr.h[365] rtn_ticks=
+rtn_upb M:80 DEF libhdr.h[401] rtn_upb=80
+rtn_vecstatsv M:22 DEF libhdr.h[319] rtn_vecstatsv=
+rtn_vecstatsvupb M:23 DEF libhdr.h[320] rtn_vecstatsvupb=
+s_abs M:13 DEF bcplfecg.h[33] s_abs=
+s_add M:17 DEF bcplfecg.h[35] s_add=
+s_adds G:228 DEF com/stats.b[72] s_adds=
+s_adds G:228 LG com/stats.b[503] writef("%i7(%i4) ",d_adds,s_adds)
+s_adds G:228 LG com/stats.b[981] s_adds:=s_adds+1
+s_adds G:228 SG com/stats.b[445] s_adds:=0
+s_adds G:228 SG com/stats.b[981] s_adds:=s_adds+1
+s_and M:66 DEF bcplfecg.h[49] s_and=
+s_ass M:41 DEF bcplfecg.h[42] s_ass=
+s_assadd M:151 DEF bcplfecg.h[84] s_assadd=
+s_assdiv M:149 DEF bcplfecg.h[84] s_assdiv=
+s_asseqv M:162 DEF bcplfecg.h[87] s_asseqv=
+s_assfadd M:156 DEF bcplfecg.h[85] s_assfadd=
+s_assfdiv M:154 DEF bcplfecg.h[85] s_assfdiv=
+s_assfmod M:155 DEF bcplfecg.h[85] s_assfmod=
+s_assfmul M:153 DEF bcplfecg.h[85] s_assfmul=
+s_assfsub M:157 DEF bcplfecg.h[85] s_assfsub=
+s_asslogand M:160 DEF bcplfecg.h[87] s_asslogand=
+s_asslogor M:161 DEF bcplfecg.h[87] s_asslogor=
+s_asslshift M:158 DEF bcplfecg.h[86] s_asslshift=
+s_assmod M:150 DEF bcplfecg.h[84] s_assmod=
+s_assmul M:148 DEF bcplfecg.h[84] s_assmul=
+s_assrshift M:159 DEF bcplfecg.h[86] s_assrshift=
+s_asssub M:152 DEF bcplfecg.h[84] s_asssub=
+s_assvecap M:147 DEF bcplfecg.h[83] s_assvecap=
+s_assxor M:163 DEF bcplfecg.h[87] s_assxor=
+s_be M:78 DEF bcplfecg.h[54] s_be=
+s_bitsperbcplword M:95 DEF bcplfecg.h[57] s_bitsperbcplword=
+s_break M:57 DEF bcplfecg.h[47] s_break=
+s_by M:85 DEF bcplfecg.h[55] s_by=
+s_byteap M:27 DEF bcplfecg.h[38] s_byteap=
+s_case M:62 DEF bcplfecg.h[48] s_case=
+s_cj G:238 DEF com/stats.b[77] s_cj=
+s_cj G:238 LG com/stats.b[512] writef("%i7(%i4) ",d_cj,s_cj)
+s_cj G:238 LG com/stats.b[990] s_cj:=s_cj+1
+s_cj G:238 SG com/stats.b[453] s_cj:=0
+s_cj G:238 SG com/stats.b[990] s_cj:=s_cj+1
+s_cj0 G:240 DEF com/stats.b[78] s_cj0=
+s_cj0 G:240 LG com/stats.b[513] writef("%i7(%i4) ",d_cj0,s_cj0)
+s_cj0 G:240 LG com/stats.b[993] s_cj0:=s_cj0+1
+s_cj0 G:240 SG com/stats.b[454] s_cj0:=0
+s_cj0 G:240 SG com/stats.b[993] s_cj0:=s_cj0+1
+s_colon M:45 DEF bcplfecg.h[43] s_colon=
+s_comma M:37 DEF bcplfecg.h[40] s_comma=
+s_cond M:36 DEF bcplfecg.h[40] s_cond=
+s_const M:73 DEF bcplfecg.h[50] s_const=
+s_constdef M:72 DEF bcplfecg.h[50] s_constdef=
+s_datalab M:123 DEF bcplfecg.h[69] s_datalab=
+s_default M:63 DEF bcplfecg.h[48] s_default=
+s_div M:15 DEF bcplfecg.h[34] s_div=
+s_do M:86 DEF bcplfecg.h[55] s_do=
+s_dot M:93 DEF bcplfecg.h[56] s_dot=
+s_else M:87 DEF bcplfecg.h[55] s_else=
+s_endcase M:60 DEF bcplfecg.h[48] s_endcase=
+s_endfor M:113 DEF bcplfecg.h[67] s_endfor=
+s_endproc M:125 DEF bcplfecg.h[70] s_endproc=
+s_entry M:118 DEF bcplfecg.h[68] s_entry=
+s_eof M:94 DEF bcplfecg.h[56] s_eof=
+s_eops G:232 DEF com/stats.b[74] s_eops=
+s_eops G:232 LG com/stats.b[505] writef("%i7(%i4) ",d_eops,s_eops)
+s_eops G:232 LG com/stats.b[987] s_eops:=s_eops+1
+s_eops G:232 SG com/stats.b[447] s_eops:=0
+s_eops G:232 SG com/stats.b[987] s_eops:=s_eops+1
+s_eq M:19 DEF bcplfecg.h[36] s_eq=
+s_eqv M:34 DEF bcplfecg.h[40] s_eqv=
+s_fabs M:131 DEF bcplfecg.h[75] s_fabs=
+s_fadd M:135 DEF bcplfecg.h[76] s_fadd=
+s_false M:5 DEF bcplfecg.h[30] s_false=
+s_fass M:146 DEF bcplfecg.h[79] s_fass=
+s_fcond M:145 DEF bcplfecg.h[78] s_fcond=
+s_fcount G:236 DEF com/stats.b[76] s_fcount=
+s_fcount G:236 LG com/stats.b[479]
+    writef("*n*nIns'i7(%i5)*n",d_fcount,s_fcount)
+s_fcount G:236 LG com/stats.b[553] s_fcount:=s_fcount+1
+s_fcount G:236 SG com/stats.b[452] s_fcount:=0
+s_fcount G:236 SG com/stats.b[553] s_fcount:=s_fcount+1
+s_fdiv M:133 DEF bcplfecg.h[76] s_fdiv=
+s_feq M:139 DEF bcplfecg.h[77] s_feq=
+s_fge M:144 DEF bcplfecg.h[77] s_fge=
+s_fglobal M:196 DEF bcplfecg.h[103] s_fglobal=s_global+s_fltbit
+s_fgr M:142 DEF bcplfecg.h[77] s_fgr=
+s_finish M:59 DEF bcplfecg.h[47] s_finish=
+s_fix M:130 DEF bcplfecg.h[75] s_fix=
+s_fle M:143 DEF bcplfecg.h[77] s_fle=
+s_float M:129 DEF bcplfecg.h[75] s_float=
+s_flocal M:204 DEF bcplfecg.h[104] s_flocal=s_local+s_fltbit
+s_fls M:141 DEF bcplfecg.h[77] s_fls=
+s_flt M:167 DEF bcplfecg.h[97] s_flt=
+s_fltbit M:128 DEF bcplfecg.h[99] s_fltbit=128
+s_fltbit M:128 MAN bcplfecg.h[103] s_fglobal=s_global+s_fltbit
+s_fltbit M:128 MAN bcplfecg.h[104] s_flocal=s_local+s_fltbit
+s_fltbit M:128 MAN bcplfecg.h[105] s_fstatic=s_static+s_fltbit
+s_fltbit M:128 MAN bcplfecg.h[106] s_fmanifest=s_manifest+s_fltbit
+s_fltmask M:127 DEF bcplfecg.h[100] s_fltmask=127
+s_fltop M:166 DEF bcplfecg.h[92] s_fltop=
+s_fmanifest M:195 DEF bcplfecg.h[106] s_fmanifest=s_manifest+s_fltbit
+s_fmod M:134 DEF bcplfecg.h[76] s_fmod=
+s_fmul M:132 DEF bcplfecg.h[76] s_fmul=
+s_fnap M:10 DEF bcplfecg.h[31] s_fnap=
+s_fndef M:74 DEF bcplfecg.h[51] s_fndef=
+s_fne M:140 DEF bcplfecg.h[77] s_fne=
+s_fneg M:138 DEF bcplfecg.h[76] s_fneg=
+s_fnrn M:120 DEF bcplfecg.h[69] s_fnrn=
+s_fnum M:128 DEF bcplfecg.h[74] s_fnum=
+s_for M:47 DEF bcplfecg.h[44] s_for=
+s_fpos M:137 DEF bcplfecg.h[76] s_fpos=
+s_fstatic M:197 DEF bcplfecg.h[105] s_fstatic=s_static+s_fltbit
+s_fsub M:136 DEF bcplfecg.h[76] s_fsub=
+s_ftype G:246 DEF com/stats.b[81] s_ftype=
+s_ftype G:246 LG com/stats.b[459] s_ftype!i:=0
+s_ftype G:246 LG com/stats.b[475] freevec(s_ftype)
+s_ftype G:246 LG com/stats.b[544]
+    writef(" %c  '4)  %i4*n","?0124RIBL"%(i+1),d_ftype!i,s_ftype!i,(...-48)*s_ftype!i)
+s_ftype G:246 LG com/stats.b[557] s_ftype!0:=s_ftype!0+1
+s_ftype G:246 LG com/stats.b[559] s_ftype!1:=s_ftype!1+1
+s_ftype G:246 LG com/stats.b[561] s_ftype!2:=s_ftype!2+1
+s_ftype G:246 LG com/stats.b[563] s_ftype!3:=s_ftype!3+1
+s_ftype G:246 LG com/stats.b[565] s_ftype!4:=s_ftype!4+1
+s_ftype G:246 LG com/stats.b[567] s_ftype!5:=s_ftype!5+1
+s_ftype G:246 LG com/stats.b[572] s_ftype!6:=s_ftype!6+1
+s_ftype G:246 LG com/stats.b[580] s_ftype!7:=s_ftype!7+1
+s_ftype G:246 LG com/stats.b[582] s_ftype!8:=s_ftype!8+1
+s_ftype G:246 SG com/stats.b[458] s_ftype:=getvec(typeupb)
+s_fv G:234 DEF com/stats.b[75] s_fv=
+s_fv G:234 LG com/stats.b[450] s_fv!i:=0
+s_fv G:234 LG com/stats.b[474] freevec(s_fv)
+s_fv G:234 LG com/stats.b[493] writef(" %i7(%i4)",d_fv!f,s_fv!f)
+s_fv G:234 LG com/stats.b[552] s_fv!fcode:=s_fv!fcode+1
+s_fv G:234 SG com/stats.b[449] s_fv:=getvec(255)
+s_gbyt G:224 DEF com/stats.b[70] s_gbyt=
+s_gbyt G:224 LG com/stats.b[499] writef("%i7(%i4) ",d_gbyt,s_gbyt)
+s_gbyt G:224 LG com/stats.b[848] s_gbyt:=s_gbyt+1
+s_gbyt G:224 SG com/stats.b[443] s_gbyt:=0
+s_gbyt G:224 SG com/stats.b[848] s_gbyt:=s_gbyt+1
+s_ge M:24 DEF bcplfecg.h[36] s_ge=
+s_get M:81 DEF bcplfecg.h[54] s_get=
+s_getbyte M:126 DEF bcplfecg.h[70] s_getbyte=
+s_global M:68 DEF bcplfecg.h[49] s_global=
+s_global M:68 MAN bcplfecg.h[103] s_fglobal=s_global+s_fltbit
+s_goto M:43 DEF bcplfecg.h[43] s_goto=
+s_gr M:22 DEF bcplfecg.h[36] s_gr=
+s_grds G:204 DEF com/stats.b[59] s_grds=
+s_grds G:204 LG com/stats.b[527] writef("%i7(%i4) ",d_grds,s_grds)
+s_grds G:204 LG com/stats.b[969] s_grds:=s_grds+1
+s_grds G:204 SG com/stats.b[421] s_grds:=0
+s_grds G:204 SG com/stats.b[969] s_grds:=s_grds+1
+s_gvecap G:220 DEF com/stats.b[68] s_gvecap=
+s_gvecap G:220 LG com/stats.b[497] writef("%i7(%i4) ",d_gvecap,s_gvecap)
+s_gvecap G:220 LG com/stats.b[975] s_gvecap:=s_gvecap+1
+s_gvecap G:220 SG com/stats.b[441] s_gvecap:=0
+s_gvecap G:220 SG com/stats.b[975] s_gvecap:=s_gvecap+1
+s_gwrs G:206 DEF com/stats.b[60] s_gwrs=
+s_gwrs G:206 LG com/stats.b[528] writef("%i7(%i4) ",d_gwrs,s_gwrs)
+s_gwrs G:206 LG com/stats.b[972] s_gwrs:=s_gwrs+1
+s_gwrs G:206 SG com/stats.b[422] s_gwrs:=0
+s_gwrs G:206 SG com/stats.b[972] s_gwrs:=s_gwrs+1
+s_idis G:214 DEF com/stats.b[64] s_idis=
+s_idis G:214 LG com/stats.b[436] s_idis!i:=0
+s_idis G:214 LG com/stats.b[470] freevec(s_idis)
+s_idis G:214 LG com/stats.b[538] writef("%i7(%i4) ",d_idis!i,s_idis!i)
+s_idis G:214 LG com/stats.b[574] updis(s_idis,d_idis,255-a)
+s_idis G:214 SG com/stats.b[426] s_idis:=getvec(disupb)
+s_if M:48 DEF bcplfecg.h[44] s_if=
+s_into M:83 DEF bcplfecg.h[55] s_into=
+s_itemn M:124 DEF bcplfecg.h[69] s_itemn=
+s_jf M:112 DEF bcplfecg.h[67] s_jf=
+s_jt M:111 DEF bcplfecg.h[67] s_jt=
+s_jump M:110 DEF bcplfecg.h[67] s_jump=
+s_kdis G:208 DEF com/stats.b[61] s_kdis=
+s_kdis G:208 LG com/stats.b[433] s_kdis!i:=0
+s_kdis G:208 LG com/stats.b[467] freevec(s_kdis)
+s_kdis G:208 LG com/stats.b[521] writef("%i7(%i4) ",d_kdis!i,s_kdis!i)
+s_kdis G:208 LG com/stats.b[996] updis(s_kdis,d_kdis,k)
+s_kdis G:208 SG com/stats.b[423] s_kdis:=getvec(disupb)
+s_lab M:114 DEF bcplfecg.h[68] s_lab=
+s_label M:77 DEF bcplfecg.h[51] s_label=
+s_le M:23 DEF bcplfecg.h[36] s_le=
+s_let M:65 DEF bcplfecg.h[49] s_let=
+s_lf M:97 DEF bcplfecg.h[64] s_lf=
+s_lg M:99 DEF bcplfecg.h[64] s_lg=
+s_ll M:102 DEF bcplfecg.h[66] s_ll=
+s_llg M:104 DEF bcplfecg.h[66] s_llg=
+s_lll M:105 DEF bcplfecg.h[66] s_lll=
+s_llp M:103 DEF bcplfecg.h[66] s_llp=
+s_lmdis G:218 DEF com/stats.b[66] s_lmdis=
+s_lmdis G:218 LG com/stats.b[438] s_lmdis!i:=0
+s_lmdis G:218 LG com/stats.b[472] freevec(s_lmdis)
+s_lmdis G:218 LG com/stats.b[535]
+    writef("%i7(%i4) ",d_lmdis!i,s_lmdis!i)
+s_lmdis G:218 LG com/stats.b[960] updis(s_lmdis,d_lmdis,-n)
+s_lmdis G:218 SG com/stats.b[428] s_lmdis:=getvec(disupb)
+s_ln M:100 DEF bcplfecg.h[65] s_ln=
+s_lndis G:216 DEF com/stats.b[65] s_lndis=
+s_lndis G:216 LG com/stats.b[437] s_lndis!i:=0
+s_lndis G:216 LG com/stats.b[471] freevec(s_lndis)
+s_lndis G:216 LG com/stats.b[534]
+    writef("%i7(%i4) ",d_lndis!i,s_lndis!i)
+s_lndis G:216 LG com/stats.b[961] updis(s_lndis,d_lndis,n)
+s_lndis G:216 SG com/stats.b[427] s_lndis:=getvec(disupb)
+s_local M:76 DEF bcplfecg.h[51] s_local=
+s_local M:76 MAN bcplfecg.h[104] s_flocal=s_local+s_fltbit
+s_logand M:32 DEF bcplfecg.h[39] s_logand=
+s_logor M:33 DEF bcplfecg.h[39] s_logor=
+s_loop M:56 DEF bcplfecg.h[47] s_loop=
+s_lp M:98 DEF bcplfecg.h[64] s_lp=
+s_lparen M:89 DEF bcplfecg.h[56] s_lparen=
+s_lpdis G:200 DEF com/stats.b[57] s_lpdis=ug
+s_lpdis G:200 LG com/stats.b[431] s_lpdis!i:=0
+s_lpdis G:200 LG com/stats.b[465] freevec(s_lpdis)
+s_lpdis G:200 LG com/stats.b[519]
+    writef("%i7(%i4) ",d_lpdis!i,s_lpdis!i)
+s_lpdis G:200 LG com/stats.b[963] updis(s_lpdis,d_lpdis,n)
+s_lpdis G:200 SG com/stats.b[419] s_lpdis:=getvec(disupb)
+s_ls M:21 DEF bcplfecg.h[36] s_ls=
+s_lsect M:79 DEF bcplfecg.h[54] s_lsect=
+s_lshift M:30 DEF bcplfecg.h[39] s_lshift=
+s_lstr M:101 DEF bcplfecg.h[66] s_lstr=
+s_lv M:7 DEF bcplfecg.h[31] s_lv=
+s_manifest M:67 DEF bcplfecg.h[49] s_manifest=
+s_manifest M:67 MAN bcplfecg.h[106] s_fmanifest=s_manifest+s_fltbit
+s_mod M:16 DEF bcplfecg.h[34] s_mod=
+s_mthap M:28 DEF bcplfecg.h[38] s_mthap=
+s_mul M:14 DEF bcplfecg.h[34] s_mul=
+s_name M:2 DEF bcplfecg.h[30] s_name=
+s_ne M:20 DEF bcplfecg.h[36] s_ne=
+s_needs M:39 DEF bcplfecg.h[41] s_needs=
+s_neg M:12 DEF bcplfecg.h[33] s_neg=
+s_none M:96 DEF bcplfecg.h[61] s_none=
+s_not M:29 DEF bcplfecg.h[39] s_not=
+s_notflt M:168 DEF bcplfecg.h[98] s_notflt=
+s_number M:1 DEF bcplfecg.h[29] s_number=1
+s_of M:26 DEF bcplfecg.h[37] s_of=
+s_pbyt G:226 DEF com/stats.b[71] s_pbyt=
+s_pbyt G:226 LG com/stats.b[500] writef("%i7(%i4) ",d_pbyt,s_pbyt)
+s_pbyt G:226 LG com/stats.b[851] s_pbyt:=s_pbyt+1
+s_pbyt G:226 LG com/stats.b[883] s_pbyt:=s_pbyt+1
+s_pbyt G:226 SG com/stats.b[444] s_pbyt:=0
+s_pbyt G:226 SG com/stats.b[851] s_pbyt:=s_pbyt+1
+s_pbyt G:226 SG com/stats.b[883] s_pbyt:=s_pbyt+1
+s_putbyte M:127 DEF bcplfecg.h[70] s_putbyte=
+s_pvecap G:222 DEF com/stats.b[69] s_pvecap=
+s_pvecap G:222 LG com/stats.b[498] writef("%i7(%i4) ",d_pvecap,s_pvecap)
+s_pvecap G:222 LG com/stats.b[978] s_pvecap:=s_pvecap+1
+s_pvecap G:222 SG com/stats.b[442] s_pvecap:=0
+s_pvecap G:222 SG com/stats.b[978] s_pvecap:=s_pvecap+1
+s_query M:11 DEF bcplfecg.h[32] s_query=
+s_rbdis G:212 DEF com/stats.b[63] s_rbdis=
+s_rbdis G:212 LG com/stats.b[435] s_rbdis!i:=0
+s_rbdis G:212 LG com/stats.b[469] freevec(s_rbdis)
+s_rbdis G:212 LG com/stats.b[537]
+    writef("%i7(%i4) ",d_rbdis!i,s_rbdis!i)
+s_rbdis G:212 LG com/stats.b[570] updis(s_rbdis,d_rbdis,pc-a)
+s_rbdis G:212 LG com/stats.b[578] updis(s_rbdis,d_rbdis,pc-a)
+s_rbdis G:212 SG com/stats.b[425] s_rbdis:=getvec(disupb)
+s_repeat M:52 DEF bcplfecg.h[45] s_repeat=
+s_repeatuntil M:54 DEF bcplfecg.h[45] s_repeatuntil=
+s_repeatwhile M:53 DEF bcplfecg.h[45] s_repeatwhile=
+s_res M:122 DEF bcplfecg.h[69] s_res=
+s_resultis M:44 DEF bcplfecg.h[43] s_resultis=
+s_return M:58 DEF bcplfecg.h[47] s_return=
+s_rfdis G:210 DEF com/stats.b[62] s_rfdis=
+s_rfdis G:210 LG com/stats.b[434] s_rfdis!i:=0
+s_rfdis G:210 LG com/stats.b[468] freevec(s_rfdis)
+s_rfdis G:210 LG com/stats.b[536]
+    writef("%i7(%i4) ",d_rfdis!i,s_rfdis!i)
+s_rfdis G:210 LG com/stats.b[569] updis(s_rfdis,d_rfdis,a-pc)
+s_rfdis G:210 LG com/stats.b[577] updis(s_rfdis,d_rfdis,a-pc)
+s_rfdis G:210 SG com/stats.b[424] s_rfdis:=getvec(disupb)
+s_rparen M:90 DEF bcplfecg.h[56] s_rparen=
+s_rsect M:80 DEF bcplfecg.h[54] s_rsect=
+s_rshift M:31 DEF bcplfecg.h[39] s_rshift=
+s_rstack M:117 DEF bcplfecg.h[68] s_rstack=
+s_rtap M:42 DEF bcplfecg.h[43] s_rtap=
+s_rtdef M:75 DEF bcplfecg.h[51] s_rtdef=
+s_rtn G:248 DEF com/stats.b[82] s_rtn=
+s_rtn G:248 LG com/stats.b[529] writef("%i7(%i4) ",d_rtn,s_rtn)
+s_rtn G:248 LG com/stats.b[764] s_rtn:=s_rtn+1
+s_rtn G:248 SG com/stats.b[461] s_rtn:=0
+s_rtn G:248 SG com/stats.b[764] s_rtn:=s_rtn+1
+s_rtrn M:121 DEF bcplfecg.h[69] s_rtrn=
+s_rv M:8 DEF bcplfecg.h[31] s_rv=
+s_save M:119 DEF bcplfecg.h[69] s_save=
+s_sbra M:91 DEF bcplfecg.h[56] s_sbra=
+s_section M:40 DEF bcplfecg.h[41] s_section=
+s_selld M:164 DEF bcplfecg.h[90] s_selld=
+s_selst M:165 DEF bcplfecg.h[90] s_selst=
+s_semicolon M:82 DEF bcplfecg.h[55] s_semicolon=
+s_seq M:64 DEF bcplfecg.h[49] s_seq=
+s_sg M:107 DEF bcplfecg.h[67] s_sg=
+s_sket M:92 DEF bcplfecg.h[56] s_sket=
+s_skip M:55 DEF bcplfecg.h[46] s_skip=
+s_sl M:108 DEF bcplfecg.h[67] s_sl=
+s_slct M:25 DEF bcplfecg.h[37] s_slct=
+s_sp M:106 DEF bcplfecg.h[67] s_sp=
+s_spdis G:202 DEF com/stats.b[58] s_spdis=
+s_spdis G:202 LG com/stats.b[432] s_spdis!i:=0
+s_spdis G:202 LG com/stats.b[466] freevec(s_spdis)
+s_spdis G:202 LG com/stats.b[520]
+    writef("%i7(%i4) ",d_spdis!i,s_spdis!i)
+s_spdis G:202 LG com/stats.b[966] updis(s_spdis,d_spdis,n)
+s_spdis G:202 SG com/stats.b[420] s_spdis:=getvec(disupb)
+s_stack M:115 DEF bcplfecg.h[68] s_stack=
+s_static M:69 DEF bcplfecg.h[49] s_static=
+s_static M:69 MAN bcplfecg.h[105] s_fstatic=s_static+s_fltbit
+s_stind M:109 DEF bcplfecg.h[67] s_stind=
+s_store M:116 DEF bcplfecg.h[68] s_store=
+s_string M:3 DEF bcplfecg.h[30] s_string=
+s_sub M:18 DEF bcplfecg.h[35] s_sub=
+s_subs G:230 DEF com/stats.b[73] s_subs=
+s_subs G:230 LG com/stats.b[504] writef("%i7(%i4) ",d_subs,s_subs)
+s_subs G:230 LG com/stats.b[984] s_subs:=s_subs+1
+s_subs G:230 SG com/stats.b[446] s_subs:=0
+s_subs G:230 SG com/stats.b[984] s_subs:=s_subs+1
+s_swb G:242 DEF com/stats.b[79] s_swb=
+s_swb G:242 LG com/stats.b[508] writef("%i7(%i4) ",d_swb,s_swb)
+s_swb G:242 LG com/stats.b[796] s_swb:=s_swb+1
+s_swb G:242 SG com/stats.b[455] s_swb:=0
+s_swb G:242 SG com/stats.b[796] s_swb:=s_swb+1
+s_switchon M:61 DEF bcplfecg.h[48] s_switchon=
+s_swl G:244 DEF com/stats.b[80] s_swl=
+s_swl G:244 LG com/stats.b[509] writef("%i7(%i4) ",d_swl,s_swl)
+s_swl G:244 LG com/stats.b[799] s_swl:=s_swl+1
+s_swl G:244 SG com/stats.b[456] s_swl:=0
+s_swl G:244 SG com/stats.b[799] s_swl:=s_swl+1
+s_table M:38 DEF bcplfecg.h[40] s_table=
+s_test M:46 DEF bcplfecg.h[44] s_test=
+s_to M:84 DEF bcplfecg.h[55] s_to=
+s_true M:4 DEF bcplfecg.h[30] s_true=
+s_unless M:49 DEF bcplfecg.h[44] s_unless=
+s_until M:51 DEF bcplfecg.h[45] s_until=
+s_valdef M:70 DEF bcplfecg.h[50] s_valdef=
+s_valof M:6 DEF bcplfecg.h[31] s_valof=
+s_vec M:88 DEF bcplfecg.h[56] s_vec=
+s_vecap M:9 DEF bcplfecg.h[31] s_vecap=
+s_vecdef M:71 DEF bcplfecg.h[50] s_vecdef=
+s_while M:50 DEF bcplfecg.h[45] s_while=
+s_xor M:35 DEF bcplfecg.h[40] s_xor=
+sardch G:36 DEF libhdr.h[69] sardch=36
+saveregs M:31 DEF libhdr.h[478] saveregs=31
+savespacesize G:220 DEF bcplfecg.h[146] savespacesize=
+sawrch G:37 DEF libhdr.h[70] sawrch=37
+sawritef G:95 DEF libhdr.h[129] sawritef=95
+scb_blength M:14 DEF libhdr.h[512] scb_blength=
+scb_block M:9 DEF libhdr.h[507] scb_block=
+scb_buf M:3 DEF libhdr.h[501] scb_buf=
+scb_bufend M:11 DEF libhdr.h[509] scb_bufend=
+scb_encoding M:20 DEF libhdr.h[523] scb_encoding=
+scb_end M:5 DEF libhdr.h[503] scb_end=
+scb_endfn M:8 DEF libhdr.h[506] scb_endfn=
+scb_fd M:16 DEF libhdr.h[514] scb_fd=
+scb_fd1 M:17 DEF libhdr.h[515] scb_fd1=
+scb_id M:0 DEF libhdr.h[498] scb_id=0
+scb_lblock M:12 DEF libhdr.h[510] scb_lblock=
+scb_ldata M:13 DEF libhdr.h[511] scb_ldata=
+scb_maxnamelen M:31 DEF libhdr.h[496] scb_maxnamelen=31
+scb_maxnamelen M:31 MAN libhdr.h[527]
+    scb_nameeend=scb_name+scb_maxnamelen/bytesperword
+scb_name M:21 DEF libhdr.h[525] scb_name=
+scb_name M:21 MAN libhdr.h[527]
+    scb_nameeend=scb_name+scb_maxnamelen/bytesperword
+scb_nameeend M:28 DEF libhdr.h[527]
+    scb_nameeend=scb_name+scb_maxnamelen/bytesperword
+scb_pos M:4 DEF libhdr.h[502] scb_pos=
+scb_rdfn M:6 DEF libhdr.h[504] scb_rdfn=
+scb_reclen M:15 DEF libhdr.h[513] scb_reclen=
+scb_size M:29 DEF libhdr.h[530] scb_size=
+scb_size M:29 MAN libhdr.h[531] scb_upb=scb_size-1
+scb_task M:2 DEF libhdr.h[500] scb_task=
+scb_timeout M:18 DEF libhdr.h[516] scb_timeout=
+scb_timeoutact M:19 DEF libhdr.h[519] scb_timeoutact=
+scb_type M:1 DEF libhdr.h[499] scb_type=
+scb_upb M:28 DEF libhdr.h[531] scb_upb=scb_size-1
+scb_wrfn M:7 DEF libhdr.h[505] scb_wrfn=
+scb_write M:10 DEF libhdr.h[508] scb_write=
+scbt_console M:-1 DEF libhdr.h[492] scbt_console=-1
+scbt_file M:1 DEF libhdr.h[490] scbt_file=1
+scbt_mbx M:-2 DEF libhdr.h[493] scbt_mbx=-2
+scbt_net M:2 DEF libhdr.h[489] scbt_net=2
+scbt_ram M:0 DEF libhdr.h[491] scbt_ram=0
+scbt_tcp M:-3 DEF libhdr.h[494] scbt_tcp=-3
+sectword M:64991 DEF libhdr.h[262] sectword=64991
+sectword M:64991 MAN com/stats.b[207] IF word=sectword&name%0=11 DO ..
+selectinput G:56 DEF libhdr.h[89] selectinput=56
+selectoutput G:57 DEF libhdr.h[90] selectoutput=57
+selectoutput G:57 LG com/stats.b[184] selectoutput(outstream)
+selectoutput G:57 LG com/stats.b[191] selectoutput(oldout)
+sendpkt G:165 DEF libhdr.h[212] sendpkt=165
+set_process_name G:175 DEF libhdr.h[220] set_process_name=175
+setbit G:112 DEF libhdr.h[146] setbit=112
+setbulk G:122 DEF libhdr.h[156] setbulk=122
+setflags G:156 DEF libhdr.h[204] setflags=156
+setlogname G:117 DEF libhdr.h[151] setlogname=117
+setrecordlength G:68 DEF libhdr.h[101] setrecordlength=68
+setseed G:35 DEF libhdr.h[68] setseed=35
+settimeout G:55 DEF libhdr.h[88] settimeout=55
+settimeoutact G:124 DEF libhdr.h[158] settimeoutact=124
+setvec G:181 DEF libhdr.h[225] setvec=181
+sf_add M:10 DEF bcplfecg.h[118] sf_add=
+sf_add M:10 MAN com/stats.b[337] CASE sf_add:.. 
+sf_div M:8 DEF bcplfecg.h[116] sf_div=
+sf_div M:8 MAN com/stats.b[335] CASE sf_div:.. 
+sf_eqv M:16 DEF bcplfecg.h[124] sf_eqv=
+sf_eqv M:16 MAN com/stats.b[343] CASE sf_eqv:.. 
+sf_fadd M:5 DEF bcplfecg.h[113] sf_fadd=
+sf_fadd M:5 MAN com/stats.b[332] CASE sf_fadd:.. 
+sf_fdiv M:3 DEF bcplfecg.h[111] sf_fdiv=
+sf_fdiv M:3 MAN com/stats.b[330] CASE sf_fdiv:.. 
+sf_fmod M:4 DEF bcplfecg.h[112] sf_fmod=
+sf_fmod M:4 MAN com/stats.b[331] CASE sf_fmod:.. 
+sf_fmul M:2 DEF bcplfecg.h[110] sf_fmul=
+sf_fmul M:2 MAN com/stats.b[329] CASE sf_fmul:.. 
+sf_fsub M:6 DEF bcplfecg.h[114] sf_fsub=
+sf_fsub M:6 MAN com/stats.b[333] CASE sf_fsub:.. 
+sf_logand M:14 DEF bcplfecg.h[122] sf_logand=
+sf_logand M:14 MAN com/stats.b[341] CASE sf_logand:.. 
+sf_logor M:15 DEF bcplfecg.h[123] sf_logor=
+sf_logor M:15 MAN com/stats.b[342] CASE sf_logor:.. 
+sf_lshift M:12 DEF bcplfecg.h[120] sf_lshift=
+sf_lshift M:12 MAN com/stats.b[339] CASE sf_lshift:.. 
+sf_mod M:9 DEF bcplfecg.h[117] sf_mod=
+sf_mod M:9 MAN com/stats.b[336] CASE sf_mod:.. 
+sf_mul M:7 DEF bcplfecg.h[115] sf_mul=
+sf_mul M:7 MAN com/stats.b[334] CASE sf_mul:.. 
+sf_none M:0 DEF bcplfecg.h[108] sf_none=0
+sf_none M:0 MAN com/stats.b[327] CASE sf_none:.. 
+sf_rshift M:13 DEF bcplfecg.h[121] sf_rshift=
+sf_rshift M:13 MAN com/stats.b[340] CASE sf_rshift:.. 
+sf_sub M:11 DEF bcplfecg.h[119] sf_sub=
+sf_sub M:11 MAN com/stats.b[338] CASE sf_sub:.. 
+sf_vecap M:1 DEF bcplfecg.h[109] sf_vecap=
+sf_vecap M:1 MAN com/stats.b[328] CASE sf_vecap:.. 
+sf_xor M:17 DEF bcplfecg.h[125] sf_xor=
+sf_xor M:17 MAN com/stats.b[344] CASE sf_xor:.. 
+sfname G:209 DEF bcplfecg.h[137] sfname=
+sfname G:209 FN com/stats.b[323] LET sfname(sfop)=..
+sfname G:209 LG com/stats.b[366]
+    writef(" %s %n %n",sfname(gb(pc+1)),gb(pc+2),gb(pc+3))
+sourcestream G:243 DEF bcplfecg.h[172] sourcestream=
+splitname G:47 DEF libhdr.h[80] splitname=47
+srchwk G:150 DEF libhdr.h[198] srchwk=150
+stackfree G:123 DEF libhdr.h[157] stackfree=123
+stackword M:#xABCD1234 DEF libhdr.h[260] stackword=-#x5432EDCC
+start G:1 DEF libhdr.h[33] start=1
+start G:1 FN com/stats.b[94] LET start()=..
+startco G:23 DEF libhdr.h[56] startco=23
+stats G:254 DEF com/stats.b[89] stats=
+stats G:254 LG com/stats.b[174] IF stats DO ..
+stats G:254 LG com/stats.b[240] IF stats DO ..
+stats G:254 SG com/stats.b[170] stats:=argv!2
+statsout F:2 LF com/stats.b[187]
+    statsout(rootnode!rtn_blklist,tallyv,tallyv!0)
+statsout F:2 RT com/stats.b[195] LET statsout(base,tallyv,upb)BE..
+stepstream G:67 DEF libhdr.h[100] stepstream=67
+stop G:2 DEF libhdr.h[34] stop=2
+str2numb G:101 DEF libhdr.h[135] str2numb=101
+string_to_dat G:111 DEF libhdr.h[145] string_to_dat=111
+string_to_number G:100 DEF libhdr.h[134] string_to_number=100
+sub F:25 LF com/stats.b[708] sub()
+sub F:25 LF com/stats.b[844] sub()
+sub F:25 LF com/stats.b[929] sub()
+sub F:25 LF com/stats.b[931] sub()
+sub F:25 RT com/stats.b[984] LET sub()BE..
+sys G:3 DEF libhdr.h[35] sys=3
+sys G:3 LG com/stats.b[165] sys(Sys_setcount,maxint)
+sysabort G:29 DEF libhdr.h[62] sysabort=29
+sysprint G:244 DEF bcplfecg.h[172] sysprint=
+t64 G:236 DEF bcplfecg.h[165] t64=
+t_bhunk M:3000 DEF libhdr.h[256] t_bhunk=3000
+t_bhunk64 M:4000 DEF libhdr.h[257] t_bhunk64=4000
+t_end M:1002 DEF libhdr.h[252] t_end=1002
+t_end64 M:2002 DEF libhdr.h[255] t_end64=2002
+t_hunk M:1000 DEF libhdr.h[250] t_hunk=1000
+t_hunk64 M:2000 DEF libhdr.h[253] t_hunk64=2000
+t_reloc M:1001 DEF libhdr.h[251] t_reloc=1001
+t_reloc64 M:2001 DEF libhdr.h[254] t_reloc64=2001
+taskid G:152 DEF libhdr.h[200] taskid=152
+taskwait G:160 DEF libhdr.h[208] taskwait=160
+tcb G:151 DEF libhdr.h[199] tcb=151
+tcb_a M:11 DEF libhdr.h[631] tcb_a=tcb_regs
+tcb_active M:10 DEF libhdr.h[628] tcb_active=10
+tcb_b M:12 DEF libhdr.h[632] tcb_b=12
+tcb_c M:13 DEF libhdr.h[633] tcb_c=13
+tcb_count M:18 DEF libhdr.h[638] tcb_count=18
+tcb_flags M:5 DEF libhdr.h[623] tcb_flags=5
+tcb_g M:15 DEF libhdr.h[635] tcb_g=15
+tcb_gbase M:8 DEF libhdr.h[626] tcb_gbase=8
+tcb_link M:0 DEF libhdr.h[618] tcb_link=0
+tcb_namebase M:19 DEF libhdr.h[640] tcb_namebase=19
+tcb_namebase M:19 MAN libhdr.h[642]
+    tcb_upb=tcb_namebase+15/bytesperword+1
+tcb_p M:14 DEF libhdr.h[634] tcb_p=14
+tcb_pc M:17 DEF libhdr.h[637] tcb_pc=17
+tcb_pri M:2 DEF libhdr.h[620] tcb_pri=2
+tcb_regs M:11 DEF libhdr.h[630] tcb_regs=11
+tcb_regs M:11 MAN libhdr.h[631] tcb_a=tcb_regs
+tcb_sbase M:9 DEF libhdr.h[627] tcb_sbase=9
+tcb_seglist M:7 DEF libhdr.h[625] tcb_seglist=7
+tcb_st M:16 DEF libhdr.h[636] tcb_st=16
+tcb_state M:4 DEF libhdr.h[622] tcb_state=4
+tcb_stsiz M:6 DEF libhdr.h[624] tcb_stsiz=6
+tcb_taskid M:1 DEF libhdr.h[619] tcb_taskid=1
+tcb_upb M:23 DEF libhdr.h[642] tcb_upb=tcb_namebase+15/bytesperword+1
+tcb_wkq M:3 DEF libhdr.h[621] tcb_wkq=3
+tempval G:11 DEF libhdr.h[43] tempval=11
+testbit G:113 DEF libhdr.h[147] testbit=113
+testflags G:157 DEF libhdr.h[205] testflags=157
+tg M:190 DEF libhdr.h[234] tg=190
+timeoutch M:-2 DEF libhdr.h[245] timeoutch=-2
+tostream G:250 DEF com/stats.b[84] tostream=
+translate G:219 DEF bcplfecg.h[145] translate=
+treep G:205 DEF bcplfecg.h[132] treep=
+treevec G:206 DEF bcplfecg.h[132] treevec=
+trnerr G:218 DEF bcplfecg.h[144] trnerr=
+trng M:320 DEF bcplfecg.h[21] trng=feg+60
+trng M:320 MAN bcplfecg.h[22] cgg=trng+60
+typeupb M:8 DEF com/stats.b[54] typeupb=8
+typeupb M:8 MAN com/stats.b[458] d_ftype:=getvec(typeupb)
+typeupb M:8 MAN com/stats.b[458] s_ftype:=getvec(typeupb)
+typeupb M:8 MAN com/stats.b[459] FOR i=0 TO typeupb DO..
+ug M:200 DEF libhdr.h[235] ug=200
+ug M:200 MAN bcplfecg.h[18] intg=ug
+ug M:200 MAN com/stats.b[57] s_lpdis=ug
+unhold G:159 DEF libhdr.h[207] unhold=159
+unloadseg G:106 DEF libhdr.h[140] unloadseg=106
+unpackstring G:31 DEF libhdr.h[64] unpackstring=31
+unrdch G:40 DEF libhdr.h[73] unrdch=40
+updis F:30 LF com/stats.b[569] updis(s_rfdis,d_rfdis,a-pc)
+updis F:30 LF com/stats.b[570] updis(s_rbdis,d_rbdis,pc-a)
+updis F:30 LF com/stats.b[574] updis(s_idis,d_idis,255-a)
+updis F:30 LF com/stats.b[577] updis(s_rfdis,d_rfdis,a-pc)
+updis F:30 LF com/stats.b[578] updis(s_rbdis,d_rbdis,pc-a)
+updis F:30 LF com/stats.b[960] updis(s_lmdis,d_lmdis,-n)
+updis F:30 LF com/stats.b[961] updis(s_lndis,d_lndis,n)
+updis F:30 LF com/stats.b[963] updis(s_lpdis,d_lpdis,n)
+updis F:30 LF com/stats.b[966] updis(s_spdis,d_spdis,n)
+updis F:30 LF com/stats.b[996] updis(s_kdis,d_kdis,k)
+updis F:30 RT com/stats.b[999] LET updis(s_v,d_v,val)BE..
+vecrd F:22 LF com/stats.b[648] vecrd()
+vecrd F:22 LF com/stats.b[651] vecrd()
+vecrd F:22 LF com/stats.b[693] vecrd()
+vecrd F:22 LF com/stats.b[696] vecrd()
+vecrd F:22 LF com/stats.b[742] vecrd()
+vecrd F:22 LF com/stats.b[745] vecrd()
+vecrd F:22 LF com/stats.b[755] vecrd()
+vecrd F:22 LF com/stats.b[762] vecrd()
+vecrd F:22 LF com/stats.b[902] vecrd()
+vecrd F:22 LF com/stats.b[927] vecrd()
+vecrd F:22 LF com/stats.b[942] vecrd()
+vecrd F:22 LF com/stats.b[946] vecrd()
+vecrd F:22 LF com/stats.b[949] vecrd()
+vecrd F:22 LF com/stats.b[952] vecrd()
+vecrd F:22 RT com/stats.b[975] LET vecrd()BE..
+vecwr F:23 LF com/stats.b[646] vecwr()
+vecwr F:23 LF com/stats.b[691] vecwr()
+vecwr F:23 LF com/stats.b[740] vecwr()
+vecwr F:23 LF com/stats.b[802] vecwr()
+vecwr F:23 LF com/stats.b[806] vecwr()
+vecwr F:23 LF com/stats.b[810] vecwr()
+vecwr F:23 LF com/stats.b[905] vecwr()
+vecwr F:23 LF com/stats.b[908] vecwr()
+vecwr F:23 RT com/stats.b[978] LET vecwr()BE..
+wordbitlen G:238 DEF bcplfecg.h[167] wordbitlen=
+wordbytelen G:237 DEF bcplfecg.h[166] wordbytelen=
+wrch G:41 DEF libhdr.h[74] wrch=41
+wrch G:41 LG com/stats.b[297] wrch(s%i)
+wrdisrange F:31 LF com/stats.b[522] wrdisrange(i)
+wrdisrange F:31 LF com/stats.b[539] wrdisrange(i)
+wrdisrange F:31 RT com/stats.b[1032] LET wrdisrange(i)BE..
+wrfcode F:3 LF com/stats.b[251] wrfcode(f)
+wrfcode F:3 LF com/stats.b[349] wrfcode(0%pc)
+wrfcode F:3 LF com/stats.b[487] wrfcode(f)
+wrfcode F:3 RT com/stats.b[260] LET wrfcode(f)BE..
+writed G:85 DEF libhdr.h[118] writed=85
+writee G:180 DEF libhdr.h[224] writee=180
+writef G:94 DEF libhdr.h[128] writef=94
+writef G:94 LG com/stats.b[1033] writef("%n",i)
+writef G:94 LG com/stats.b[157] writef("Only 'ecified*n")
+writef G:94 LG com/stats.b[209]
+    writef("*n%i6:'ize: %n*n",cursect,name,name!-2)
+writef G:94 LG com/stats.b[213]
+    writef("*n%i6:'on:  %s*n",i-cursect,name)
+writef G:94 LG com/stats.b[224] writef("+%i5:%i6 ",i-cursect,tallyv!i)
+writef G:94 LG com/stats.b[232] writef("*n++++ BREAK*n")
+writef G:94 LG com/stats.b[241] writef("*nInst'ted %n)*n",d_fcount)
+writef G:94 LG com/stats.b[245] writef("*n++++ BREAK*n")
+writef G:94 LG com/stats.b[252] writef(" %i7   ",d_fv!f)
+writef G:94 LG com/stats.b[301] writef("*nUnkn'me = %n*n",flop)
+writef G:94 LG com/stats.b[324] writef("sfnam'op = %n*n",sfop)
+writef G:94 LG com/stats.b[360] writef(" %s",flopname(gb(pc+1)))
+writef G:94 LG com/stats.b[363] writef(" %n %n",gb(pc+1),gb(pc+2))
+writef G:94 LG com/stats.b[366]
+    writef(" %s %n %n",sfname(gb(pc+1)),gb(pc+2),gb(pc+3))
+writef G:94 LG com/stats.b[369] writef(" %n",a)
+writef G:94 LG com/stats.b[479]
+    writef("*n*nIns'i7(%i5)*n",d_fcount,s_fcount)
+writef G:94 LG com/stats.b[486] writef("    ")
+writef G:94 LG com/stats.b[488] writef("    ")
+writef G:94 LG com/stats.b[493] writef(" %i7(%i4)",d_fv!f,s_fv!f)
+writef G:94 LG com/stats.b[497] writef("%i7(%i4) ",d_gvecap,s_gvecap)
+writef G:94 LG com/stats.b[498] writef("%i7(%i4) ",d_pvecap,s_pvecap)
+writef G:94 LG com/stats.b[499] writef("%i7(%i4) ",d_gbyt,s_gbyt)
+writef G:94 LG com/stats.b[500] writef("%i7(%i4) ",d_pbyt,s_pbyt)
+writef G:94 LG com/stats.b[503] writef("%i7(%i4) ",d_adds,s_adds)
+writef G:94 LG com/stats.b[504] writef("%i7(%i4) ",d_subs,s_subs)
+writef G:94 LG com/stats.b[505] writef("%i7(%i4) ",d_eops,s_eops)
+writef G:94 LG com/stats.b[508] writef("%i7(%i4) ",d_swb,s_swb)
+writef G:94 LG com/stats.b[509] writef("%i7(%i4) ",d_swl,s_swl)
+writef G:94 LG com/stats.b[512] writef("%i7(%i4) ",d_cj,s_cj)
+writef G:94 LG com/stats.b[513] writef("%i7(%i4) ",d_cj0,s_cj0)
+writef G:94 LG com/stats.b[519] writef("%i7(%i4) ",d_lpdis!i,s_lpdis!i)
+writef G:94 LG com/stats.b[520] writef("%i7(%i4) ",d_spdis!i,s_spdis!i)
+writef G:94 LG com/stats.b[521] writef("%i7(%i4) ",d_kdis!i,s_kdis!i)
+writef G:94 LG com/stats.b[527] writef("%i7(%i4) ",d_grds,s_grds)
+writef G:94 LG com/stats.b[528] writef("%i7(%i4) ",d_gwrs,s_gwrs)
+writef G:94 LG com/stats.b[529] writef("%i7(%i4) ",d_rtn,s_rtn)
+writef G:94 LG com/stats.b[534] writef("%i7(%i4) ",d_lndis!i,s_lndis!i)
+writef G:94 LG com/stats.b[535] writef("%i7(%i4) ",d_lmdis!i,s_lmdis!i)
+writef G:94 LG com/stats.b[536] writef("%i7(%i4) ",d_rfdis!i,s_rfdis!i)
+writef G:94 LG com/stats.b[537] writef("%i7(%i4) ",d_rbdis!i,s_rbdis!i)
+writef G:94 LG com/stats.b[538] writef("%i7(%i4) ",d_idis!i,s_idis!i)
+writef G:94 LG com/stats.b[544]
+    writef(" %c  '4)  %i4*n","?0124RIBL"%(i+1),d_ftype!i,s_ftype!i,(...-48)*s_ftype!i)
+writeflt G:73 DEF libhdr.h[106] writeflt=73
+writehex G:87 DEF libhdr.h[120] writehex=87
+writen G:86 DEF libhdr.h[119] writen=86
+writeoct G:88 DEF libhdr.h[121] writeoct=88
+writes G:89 DEF libhdr.h[122] writes=89
+writes G:89 LG com/stats.b[102] writes("Stati'ailable*n")
+writes G:89 LG com/stats.b[1034] writes("17-31")
+writes G:89 LG com/stats.b[1035] writes("32-63")
+writes G:89 LG com/stats.b[1036] writes("64-127")
+writes G:89 LG com/stats.b[1037] writes("128-255")
+writes G:89 LG com/stats.b[1038] writes("256-511")
+writes G:89 LG com/stats.b[1039] writes("512-1023")
+writes G:89 LG com/stats.b[1040] writes("1024-2047")
+writes G:89 LG com/stats.b[1041] writes("2048-4095")
+writes G:89 LG com/stats.b[1042] writes("4096-")
+writes G:89 LG com/stats.b[1043] writes("Total")
+writes G:89 LG com/stats.b[108] writes("Bad a'r STATS*n")
+writes G:89 LG com/stats.b[119] writes
+writes G:89 LG com/stats.b[166] writes("Stati'enabled*n")
+writes G:89 LG com/stats.b[181] writes("Troub'file %s*n",tofile)
+writes G:89 LG com/stats.b[496] writes("*n*n   '   PBYT*n")
+writes G:89 LG com/stats.b[502] writes("*n*n   '   EOPS*n")
+writes G:89 LG com/stats.b[507] writes("*n*n   '    SWL*n")
+writes G:89 LG com/stats.b[511] writes("*n*n   '    CJ0*n")
+writes G:89 LG com/stats.b[515] writes("*n*nOpe'ibutions")
+writes G:89 LG com/stats.b[517] writes("*n*n   '      K*n")
+writes G:89 LG com/stats.b[526] writes("*n*n   '    RTN*n")
+writes G:89 LG com/stats.b[531] writes("*n*n   '      I*n")
+writes G:89 LG com/stats.b[542] writes("*nInst' types*n*n")
+writet G:90 DEF libhdr.h[123] writet=90
+writeu G:91 DEF libhdr.h[124] writeu=91
+writewords G:45 DEF libhdr.h[78] writewords=45
+writez G:92 DEF libhdr.h[125] writez=92
+wrn G:217 DEF bcplfecg.h[142] wrn=
+xrefing G:229 DEF bcplfecg.h[156] xrefing=

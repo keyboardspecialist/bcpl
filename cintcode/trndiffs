@@ -1,0 +1,376 @@
+9,20d8
+< 03/03/2023
+< Modified bcpltrn.b to allow functions, routine and pattern functions
+< and routines to have the FLT tag. Calls of functions with the FLT tag
+< are assumed to return floating point results. If a function is 
+< declared having the FLT tag is in the scope of a global variable of
+< the same name, the global must also have been declared with the FLT
+< tag. If the function did not have the FLT tag, the global should also
+< no hav the tag. If a match expression is evaluated in FLT mode, all
+< its result expressions are evaluated in FLT mode. Likewise, if an
+< every expression is evaluated in FLT mode the result is the floating
+< point sum of its successful result expressions.
+< 
+346c334,335
+<     { LET prevdvece = dvece
+---
+>     { LET prevcasecount = casecount
+>       LET prevdvece = dvece
+351,352c340
+<       LET prevcasecount = casecount
+<    
+---
+>          
+358c346
+<       { LET name = h3!y // name is a Name or Flt node.
+---
+>       { LET name = h3!y
+363,364d350
+<  			// For global declarations the value is an
+<  			// integer global number.
+392,423c378,402
+<                ELSE n := VALOF SWITCHON fop INTO
+< 	            { DEFAULT:
+< 		        trnerr("System error in trans")
+< 			RESULTIS 0
+< 
+<                       CASE s_static:
+< 		        // For s_static    the value is 0
+<                         RESULTIS 0
+< 
+<                       CASE s_fstatic:
+< 		        // For s_fstatic    the value is 0.0
+<                         RESULTIS flt0
+< 
+<                       CASE s_manifest:
+<                         // for s_manifest  the next value is one larger
+<                         //                 than the previous value
+<                         //                 converted to integer, if necessary.
+<                         IF prevt=s_flt DO n := sys(Sys_flt, fl_fix, n)
+<                         RESULTIS n+1
+< 
+<                       CASE s_fmanifest:
+<                         // for s_fmanifest the value is 1.0 larger than the
+<                         //                 previous value is converted to
+<                         //                 floating point, if necessary.
+<                         IF prevt=s_notflt DO n := sys(Sys_flt, fl_float, n)
+<                         RESULTIS sys(Sys_flt, fl_add, n, flt1)
+< 
+<                       CASE s_global:
+<                       CASE s_fglobal:
+<                         // For s_global and s_fglobal the next value is a
+<                         // global number one larger than the previous one.
+<                         RESULTIS n+1
+---
+>                ELSE { IF fop=s_static  DO n := 0
+>                       IF fop=s_fstatic DO n := flt0
+> 
+>                       // for s_manifest  the value is one larger than the
+>                       //                 previous value is converted to
+>                       //                 integer, if necessary.
+> 
+>                       IF fop=s_manifest DO
+>                       { IF prevt=s_flt DO n := sys(Sys_flt, fl_fix, n)
+>                         n := n+1
+>                       }
+> 
+>                       // for s_fmanifest the value is 1.0 larger than the
+>                       //                 previous value is converted to
+>                       //                 floating point, if necessary.
+> 
+>                       IF fop=s_fmanifest DO
+>                       { IF prevt=s_notflt DO n := sys(Sys_flt, fl_float, n)
+>                         n := sys(Sys_flt, fl_add, n, flt1)
+>                       }
+> 
+>                       // For s_global and s_fglobal the value is a
+>                       // global number one larger than the previous one.
+> 
+>                       IF fop=s_global | fop=s_fglobal DO n := n + 1
+492,493c471
+<       transmatchlist(FALSE,
+<                      op,     // The match context s_matchc or s_everyc
+---
+>       transmatchlist(op,     // The match context s_matchc or s_everyc
+850c828
+< { // x is the definition(s) following LET, so the leading operator is
+---
+>   // x is the definition(s) following LET, so the leading operator is
+852,853c830,831
+<   // or s_and. This function adds names to the declaration vector dvec.
+<   DEFAULT:
+---
+>   // or s_and. This function adds names to the declaration vector.
+> { DEFAULT:
+873,876d850
+<   { // Add the name of a function or routine to dvec. The name may
+<     //have the FLT tag.
+<     LET name = h2!x
+<     LET ff = FALSE // =TRUE if the name has the FLT tag
+878,882c852,857
+<     // 28feb2023  Functions declarations my now use the FLT prefix
+<     // to indicate the result of a call has the FLT tag.
+<     IF h1!name=s_flt DO ff, name := TRUE, h2!name
+<     h5!x := genlab()         // The entry label.
+<     declstat(ff, name, h5!x) // Declare the procedure name.
+---
+>     IF h1!(h2!x)=s_flt DO
+>     { trnerr("Procdure names must not have the FLT tag")
+>       h2!x := h2!(h2!x) // Remove the FLT tag
+>     }
+>     h5!x := genlab()     // The entry label.
+>     declstat(h2!x, h5!x) // Declare the procedure name.
+884,885c859
+<   }
+<   
+---
+>  
+888,889d861
+<   { LET name = h2!x
+<     LET ff = FALSE // =TRUE if the name has the FLT tag
+891,895c863,868
+<     // 28feb2023  Functions declarations my now use the FLT prefix
+<     // to indicate the result of a call has the FLT tag.
+<     IF h1!name=s_flt DO ff, name := TRUE, h2!name
+<     h4!x := genlab()         // The entry label.
+<     declstat(ff, name, h4!x) // Declare the procedure name.
+---
+>     IF h1!(h2!x)=s_flt DO
+>     { trnerr("Function name must not have the FLT tag")
+>       h2!x := h2!(h2!x) // Remove the FLT tag
+>     }
+>     h4!x := genlab()     // Choose the entry point label number
+>     declstat(h2!x, h4!x) // Declare the patfn or patrt name.
+897,898c870
+<   }
+<   
+---
+>  
+911,912c883
+<   { // x -> [s_flt, [s_name, chain, <characters>]]
+<     k := s_flocal
+---
+>   { k := s_flocal     // x -> [s_flt, [s_name.chain,<caracters>]
+933c904
+<   trnerr("Compiler error in decldyn")
+---
+>   trnerr("Compiler error in Decldyn")
+936,948c907,910
+< AND declstat(ff, x, lab) BE
+< { // ff is TRUE if the name had the FLT tag.
+<   // x  is the name of a function, routine or a
+<   // pattern function or routine, or a label.
+<   // If it is a label name ff will be FALSE.
+<   LET c = cellwithname(x)
+<   LET fk = h2!c          // fk is one of s_global, s_static,
+<                          // s_manifest, s_label
+< 		         // s_fglobal, s_fstatic, s_fmanifest,
+< 			 // s_flabel
+<   LET k = fk & s_fltmask // k is one of s_global, s_static,
+<                          // s_manifest, s_label
+< 
+---
+> AND declstat(x, lab) BE
+> { LET c = cellwithname(x)
+>   LET fk = h2!c
+>   LET k = fk & s_fltmask 
+950,962c912
+<   THEN { // x is being declared in the scope of a global
+<          // declaration of the same name. So the global
+< 	 // must be initialised with the entry point.
+< 	 // If either x or the global declaration has
+< 	 // the FLT tag they must both have this tag.
+<  	 LET gn = h3!c
+< 	 TEST ff
+< 	 THEN IF fk=s_global DO
+< 	   trnerr("An FLT function definition in the*n*
+<                   *scope of a non FLT global with the same name.")
+< 	 ELSE IF fk=s_fglobal DO
+< 	   trnerr("An non FLT function definition in the*n*
+<                   *scope of an FLT global with the same name.")
+---
+>   THEN { LET gn = h3!c
+965c915
+<          addname(x, fk, gn, 0)      // Modified 28feb2023
+---
+>          addname(x, s_global, gn, 0)
+970,984c920,930
+<          IF gdefsing DO
+<          { writef("G%i3 = %s*n", gn, @h3!x)
+<            //abort(1000)
+<          }
+<        }
+<   ELSE { // x is not being declared in the scope of a global
+<          // declaration of the same name. It is the name of
+< 	 // a function, routine or pattern function or routine,
+< 	 // or an ordinary label.
+<          addname(x, (ff->s_flabel,s_label), lab, 0)
+<          IF xrefing DO
+<            xref(x,
+<                 (ff -> "FF:", "F:"),
+<                 lab, h1!context)
+<        }
+---
+>                 IF gdefsing DO
+>                 { writef("G%i3 = %s*n", gn, @h3!x)
+>                   //abort(1000)
+>                 }
+>       }
+>  ELSE { addname(x, s_label, lab, 0)
+>         IF xrefing DO
+>           xref(x,
+>                (fk=s_flocal -> "FF:", "F:"),
+>                lab, h1!context)
+>       }
+1006,1010c952
+< { // k is one of
+<   //  s_global,  s_static,  s_manifest,  s_local,  s_label,
+<   //  s_fglobal, s_fstatic, s_fmanifest, s_flocal, s_flabel
+< 
+<   LET p = dvece + 4
+---
+> { LET p = dvece + 4
+1028c970
+< { // n is a name node ie not prefixed by FLT.
+---
+> { // n is a name node not prefixed by FLT.
+1039,1044c981
+< { CASE s_colon: { LET name = h2!x
+<                   IF h1!name=s_flt DO
+< 		  { trnerr("A label may not have the FLT tag")
+< 		    name := h2!name
+< 		  }
+<                   context, comline := x, h5!x
+---
+> { CASE s_colon:   context, comline := x, h5!x
+1046,1050c983,984
+<                   declstat(FALSE, name, h4!x)
+<                   scanlabels(h3!x)
+<                   RETURN
+<                 }
+< 		
+---
+>                   declstat(h2!x, h4!x)
+>  
+1077c1011
+< 		      { // We are not compiling outer level declarations
+---
+> 		      { // e are not compiling outer level declarations
+1111,1114c1045
+<   // Ignore the other declarations. Ie compile the code
+<   // for all the fuctions in the current LET construct.
+<   // variables in this construct have already been declared
+<   // in dvec.
+---
+>   // Ignore the other declarations.
+1147c1078
+<     LET ff = FALSE
+---
+> 
+1154,1155c1085,1088
+<     procname := h2!x
+<     IF h1!procname=s_flt DO ff, procname := TRUE, h2!procname
+---
+>     procname := h2!x // The FLT tag if any will have been 
+>                      // removed by declstat.
+> 	  	     // Note procname points to a name node
+> 		     // when compiling a procedure.
+1191,1192c1124,1125
+<            fnbody(body, ff) // Compile the body expression in
+<          }                  // FLT or non FLT mode followed by FNRN.
+---
+>            fnbody(body, FALSE) // Compile the body expression in
+>          }                     // non FLT mode followed by FNRN.
+1220a1154
+>   LET xxx = 123
+1225d1158
+<     LET ff = FALSE
+1227,1228c1160,1161
+<     procname := h2!x
+<     IF h1!procname=s_flt DO ff, procname := TRUE, h2!procname
+---
+>     procname := h2!x // The FLT tag. if any. will have been 
+>                      // removed by declstat.
+1235c1168
+<     dvecp := dvece           // To disallow dynamic free variables.
+---
+>     dvecp := dvece           // To diasallow dynamic free variables.
+1244,1245c1177
+<     transmatchlist(ff,
+<                    h1!x,   // The context is s_patfndef or s_patrtdef
+---
+>     transmatchlist(h1!x,   // The context is s_patfndef or s_patrtdef
+1593c1525
+< AND transmatchlist(ff, mcontext, mlist, argpos, next) BE
+---
+> AND transmatchlist(mcontext, mlist, argpos, next) BE
+1600,1601d1531
+<   // ff = TRUE if evaluating the match list in FLT mode
+<   
+1734c1664
+<         THEN { fnbody(body, ff)    // Compile body in ff mode
+---
+>         THEN { fnbody(body, FALSE) // Compile body in non FLT mode
+1772c1702
+<       out2(s_ln, (ff->flt0,0)) // Return 0.0 or 0 depending on ff
+---
+>       out2(s_ln, 0)
+1920c1850
+<             load(body, ff) // Load the body expression in ff mode.
+---
+>             load(body, FALSE) // Load the body expression in non FLT mode.
+1947c1877
+<             load(body, ff)
+---
+>             load(body, FALSE)
+1949c1879
+< 	    out1(ff -> s_fadd, s_add)
+---
+> 	    out1(s_add)
+1989c1919
+< 		    ELSE out3(s_ln, (ff->flt0,0), s_fnrn)
+---
+> 		    ELSE out3(s_ln, 0, s_fnrn)
+1997c1927
+<           out2(s_ln, (ff->flt0,0))        // All match items failed.
+---
+>           out2(s_ln, 0)        // All match items failed.
+2633d2562
+<     CASE s_fnap:             // Added 28 Feb 2023
+2913,2914c2842
+<       transmatchlist(ff,
+<                      s_matche,
+---
+>       transmatchlist(s_matche,
+2931c2859
+<       out2(s_ln, (ff->flt0,0))       // Initialise the result location
+---
+>       out2(s_ln, 0)       // Initialise the result location
+2938,2939c2866
+<       transmatchlist(ff,
+<                      s_everye,
+---
+>       transmatchlist(s_everye,
+3028,3029c2955
+<     transmatchlist(ff,
+<                    h1!x,   // The match context: s_matche or s_everye
+---
+>     transmatchlist(h1!x,   // The match context: s_matche or s_everye
+3043c2969
+<     out2(s_ln, (ff->flt0,0))
+---
+>     out2(s_ln, 0)
+3051,3052c2977
+<     transmatchlist(ff,
+<                    s_everye, // The match context
+---
+>     transmatchlist(s_everye, // The match context
+3797d3721
+<     CASE s_flabel:
+3803,3806c3727
+<                     IF xrefing DO
+< 		      xref(x,
+< 		           ((k & s_fltbit)=0 -> "F:", "FF:"),
+< 		           a, f)
+---
+>                     IF xrefing DO xref(x, "F:", a, f)

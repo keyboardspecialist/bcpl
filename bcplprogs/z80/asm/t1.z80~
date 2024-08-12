@@ -1,0 +1,6 @@
+     REL
+     LD A,#x1
+     LD B,A
+     ADD B,10
+     END
+

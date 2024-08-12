@@ -1,0 +1,511 @@
+
+  3376: Function:  sys        
+
+ 13428: Section:   BOOT          Size: 2856
+
+    32: Function:  start      
+
+   104: Function:  boot       
+
+  1464: Function:  startroot  
+
+  1532: Function:  rootcode   
+
+  1984: Function:  nsize      
+
+  2032: Function:  wrd        
+
+  2080: Function:  wrn        
+
+  2116: Function:  wrpn       
+
+  2152: Function:  sadebug    
+
+  6016: Function:  prprompt   
+
+  6044: Function:  wrcortn    
+
+  6192: Function:  wrframe    
+
+  6424: Function:  writearg   
+
+  6444: Function:  writearg1  
+
+  6792: Function:  fname      
+
+  6852: Function:  rdn        
+
+  6904: Function:  rdvaraddr  
+
+  7032: Function:  rdval      
+
+  7312: Function:  praddr     
+
+  7424: Function:  print      
+
+  7444: Function:  print1     
+
+  7880: Function:  checkaddr  
+
+  7916: Function:  cont       
+
+  7936: Function:  error      
+
+  7984: Function:  wrfcode    
+
+  9996: Function:  prinstr    
+
+ 10316: Function:  gb         
+
+ 10336: Function:  gsb        
+
+ 10372: Function:  gsh        
+
+ 10408: Function:  gh         
+
+ 10472: Function:  gw         
+
+ 10556: Function:  instrtype  
+
+ 10836: Function:  nextpc     
+
+ 10968: Function:  rch        
+
+ 10996: Function:  sfname     
+
+ 24900: Section:   BLIB          Size: 2903
+
+    32: Function:  stop       
+
+    56: Function:  fault      
+
+   104: Function:  clihook    
+  25004  +  104:     1    K4G 1
+  25006  +  106:     1    RTN
+
+   124: Function:  intflag    
+
+   148: Function:  abort      
+
+   172: Function:  level      
+
+   196: Function:  longjump   
+
+   224: Function:  sardch     
+
+   244: Function:  sawrch     
+
+   268: Function:  settimeout 
+
+   296: Function:  setti'utact
+
+   320: Function:  setvec     
+
+   368: Function:  rdch       
+
+   468: Function:  binrdch    
+
+   564: Function:  unrdch     
+
+   608: Function:  wrch       
+
+   720: Function:  binwrch    
+
+   744: Function:  codewrch   
+
+   788: Function:  gb2312wrch 
+
+   836: Function:  utf8wrch   
+
+  1104: Function:  readwords  
+
+  1196: Function:  writewords 
+
+  1320: Function:  get_record 
+
+  1404: Function:  put_record 
+
+  1568: Function:  replenish  
+
+  1608: Function:  deplete    
+
+  1648: Function:  findinput  
+
+  1676: Function:  pathf'input
+
+  1704: Function:  findoutput 
+
+  1732: Function:  findi'utput
+
+  1760: Function:  findupdate 
+
+  1788: Function:  findappend 
+
+  1816: Function:  selectinput
+
+  1852: Function:  selec'utput
+
+  1896: Function:  endread    
+
+  1920: Function:  endwrite   
+
+  1944: Function:  endstream  
+
+  2060: Function:  input      
+
+  2080: Function:  output     
+
+  2100: Function:  readn      
+
+  2228: Function:  newline    
+
+  2248: Function:  newpage    
+
+  2272: Function:  writed     
+
+  2304: Function:  writez     
+
+  2336: Function:  writedz    
+
+  2476: Function:  writen     
+
+  2500: Function:  writehex   
+
+  2608: Function:  writeoct   
+
+  2648: Function:  writebin   
+
+  2688: Function:  writes     
+
+  2752: Function:  writet     
+
+  2792: Function:  writeu     
+
+  2836: Function:  get_t'tblib
+
+  2904: Function:  writef     
+
+  2936: Function:  sawritef   
+
+  2992: Function:  write'ormat
+
+  3672: Function:  checkpos   
+
+  3748: Function:  readflt    
+
+  4156: Function:  writeflt   
+
+  4508: Function:  writee     
+
+  4888: Function:  randno     
+
+  4928: Function:  setseed    
+
+  4952: Function:  muldiv     
+
+  4980: Function:  unpac'tring
+
+  5012: Function:  packstring 
+
+  5080: Function:  capitalch  
+
+  5116: Function:  compch     
+
+  5144: Function:  compstring 
+
+  5220: Function:  str2numb   
+
+  5280: Function:  getkeylen  
+
+  5372: Function:  rdargs     
+
+  5400: Function:  rdargs2    
+
+  5500: Function:  rdargslen  
+
+  6504: Function:  rditem     
+
+  6776: Function:  findarg    
+
+  6804: Function:  findarglen 
+
+  6916: Function:  createco   
+  31874  + 6974:     1    LP5
+  31875  + 6975:     1    K9G 20
+  31877  + 6977:     1    LP3
+  31878  + 6978:     1     K6
+  31879  + 6979:     1    SP5
+  31880  + 6980:     1      J 6974
+
+  7000: Function:  deleteco   
+
+  7168: Function:  callco     
+  32068  + 7168:     1   L1P3
+  32069  + 7169:     1   JEQ0 7175
+  32075  + 7175:     1     LG 7
+  32077  + 7177:     1  ST1P3
+  32078  + 7178:     1    LP3
+  32079  + 7179:     1    SP9
+  32080  + 7180:     1    LP4
+  32081  + 7181:     1    K5G 6
+  32083  + 7183:     1    RTN
+
+  7200: Function:  resumeco   
+
+  7240: Function:  cowait     
+  32140  + 7240:     1    L1G 7
+  32142  + 7242:     1    SP4
+  32143  + 7243:     1     L0
+  32144  + 7244:     1     LG 7
+  32146  + 7246:     1    ST1
+  32147  + 7247:     1    LP4
+  32148  + 7248:     1    SP9
+  32149  + 7249:     1    LP3
+  32150  + 7250:     1    K5G 6
+  32152  + 7252:     1    RTN
+
+  7272: Function:  initco     
+
+  7316: Function:  startco    
+
+  7348: Function:  mkobj      
+
+  7392: Function:  instrcount 
+
+  7480: Function:  datstring  
+
+  7508: Function:  dat_t'rings
+
+  8272: Function:  isleap     
+
+  8316: Function:  testbit    
+
+  8352: Function:  setbit     
+
+  8420: Function:  strin'umber
+
+  8664: Function:  strin'o_dat
+
+  8736: Function:  getword    
+
+  8768: Function:  putword    
+
+  8804: Function:  copystring 
+
+  8844: Function:  copy_words 
+
+  8880: Function:  clear_words
+
+  8916: Function:  copy_bytes 
+
+  8988: Function:  getvec     
+
+  9052: Function:  freevec    
+
+  9136: Function:  loadseg    
+
+  9160: Function:  globin     
+
+  9184: Function:  unloadseg  
+
+  9208: Function:  callseg    
+
+  9316: Function:  deletefile 
+
+  9340: Function:  renamefile 
+
+  9364: Function:  setlogname 
+
+  9500: Function:  getlogname 
+
+  9540: Function:  splitname  
+
+  9604: Function:  open_'utput
+
+  9684: Function:  open_'input
+
+  9712: Function:  open_'pdate
+
+  9740: Function:  setre'ength
+
+  9768: Function:  recordnote 
+
+  9852: Function:  recordpoint
+
+ 10012: Function:  appen'tream
+
+ 10068: Function:  rewin'tream
+
+ 10096: Function:  stepstream 
+
+ 10180: Function:  freeobj    
+
+ 10200: Function:  copydir    
+
+ 10248: Function:  setbulk    
+
+ 10388: Function:  datstamp   
+
+ 10412: Function:  stackfree  
+
+ 10488: Function:  memoryfree 
+
+ 36556: Section:   syslib        Size: 28
+
+    32: Function:  sys        
+  36588  +   32:     1    SYS
+  36589  +   33:     1    RTN
+
+    52: Function:  changeco   
+  36608  +   52:     2  CHGCO
+
+    72: Function:  muldiv     
+
+ 36716: Section:   DLIB          Size: 758
+
+    32: Function:  findstream 
+
+   552: Function:  nilwrfn    
+
+   576: Function:  ramwrfn    
+
+   644: Function:  cnslrdfn   
+
+   792: Function:  cnslwrfn   
+
+   844: Function:  cnslendfn  
+
+   864: Function:  flush      
+
+   904: Function:  getre'paddr
+
+   972: Function:  relfilename
+
+  1036: Function:  trfilename 
+
+  1148: Function:  fh0fi'input
+
+  1308: Function:  fh0fi'utput
+
+  1464: Function:  fh0fi'utput
+
+  1668: Function:  fh0falsefn 
+
+  1692: Function:  fh0rdfn    
+
+  1892: Function:  fh0wrfn    
+
+  2060: Function:  fh0endfn   
+
+  2100: Function:  note       
+
+  2136: Function:  point      
+
+  2728: Function:  fh0putbuf  
+
+  2820: Function:  fh0getbuf  
+
+  2888: Function:  delay      
+
+  2912: Function:  delayuntil 
+
+  2960: Function:  testflags  
+
+ 58508: Section:   CLI           Size: 254
+
+    32: Function:  start      
+  59027  +  519:     1     L0
+  59028  +  520:     1     SP 83
+  59030  +  522:     1     LP 78
+  59032  +  524:     1     LG 19
+  59034  +  526:     1      K 79
+  59036  +  528:     1     SG 137
+  59038  +  530:     1     LG 10
+  59040  +  532:     1     SG 134
+  59042  +  534:     1     L0
+  59043  +  535:     1     SP 83
+  59045  +  537:     1     L6
+  59046  +  538:     1     LG 3
+  59048  +  540:     1      K 79
+
+ 59572: Section:   STATS         Size: 2449
+
+    32: Function:  start      
+
+  1692: Function:  statsout   
+
+  2112: Function:  wrfcode    
+
+  4140: Function:  flopname   
+
+  4364: Function:  sfname     
+
+  4668: Function:  prinstr    
+
+  4968: Function:  gb         
+
+  4988: Function:  gsb        
+
+  5024: Function:  gsh        
+
+  5060: Function:  gh         
+
+  5120: Function:  gw         
+
+  5180: Function:  instrtype  
+
+  5468: Function:  init_'lysis
+
+  5784: Function:  free_'orage
+
+  5884: Function:  pr_analysis
+
+  7156: Function:  analy'instr
+
+  8892: Function:  numb       
+
+  8932: Function:  locrd      
+
+  8960: Function:  locwr      
+
+  8988: Function:  grd        
+
+  9016: Function:  gwr        
+
+  9044: Function:  vecrd      
+
+  9072: Function:  vecwr      
+
+  9100: Function:  add        
+
+  9128: Function:  sub        
+
+  9156: Function:  eop        
+
+  9184: Function:  cjump      
+
+  9212: Function:  cjump0     
+
+  9240: Function:  call       
+
+  9268: Function:  updis      
+
+  9492: Function:  wrdisrange 
+
+200560: Function:  start      
+ 260132  +200560:     1     LH 500
+ 260135  +200563:     1    SP3
+ 260136  +200564:     1    LLP 5
+ 260138  +200566:     1    SP4
+ 260139  +200567:     1    XCH
+ 260140  +200568:     1   JEQ0 200578
+ 260142  +200570:   500     L0
+ 260143  +200571:   500    LP4
+ 260144  +200572:   500   STP3
+ 260145  +200573:   500    LM1
+ 260146  +200574:   500    AP3
+ 260147  +200575:   500    SP3
+ 260148  +200576:   500   JNE0 200570
+ 260150  +200578:     1     L0
+ 260151  +200579:     1    RTN
+

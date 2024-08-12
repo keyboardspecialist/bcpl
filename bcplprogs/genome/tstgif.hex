@@ -1,0 +1,203 @@
+
+# This is a hand coded GIF video to display 3 10x4 images, one second
+# apart. With W=white R=red G=green b=blue k=black, the three image
+# frames are as follows:
+
+#        K W W K K K K W W K          Image frame 1
+#        W R R G G B B R R W
+#        W R R G G B B R R W
+#        K W W K K K K W W K
+
+#        K W W K K K K W W K          Image frame 2
+#        W G G B B R R G G W
+#        W G G B B R R G G W
+#        K W W K K K K W W K
+
+#        K W W K K K K W W K          Image frame 3
+#        W B B R R G G B B W
+#        W B B R R G G B B W
+#        K W W K K K K W W K
+
+# Header
+
+47 49 46 38 39 61 # GIF89a      GIF Header version 89a
+
+# Logical Screen Descriptor
+
+0A 00             #             Logical screen width  = 10
+04 00             #             Logical screen height =  4
+F2                # 1 111 0 010
+                  # 1           Global colour table follows immediately
+		  #   111       Colour resolution 0 to 255 each colour component
+                  #       0     Colour table nor sorted
+                  #         010 Size of colour table 2^(2+1)= 8 entries
+			
+01                #             Background colour index
+00                #             Default pixel aspect ratio 0:0
+
+# Colour Table with 8 colours
+
+00 FF FF          #             0  White
+00 00 FF          #             1  Blue
+00 FF 00          #             2  Green
+00 FF FF          #             3  Green-Blue
+FF 00 00          #             4  Red
+FF 00 FF          #             5  Red-Blue
+FF FF 00          #             6  Red-Green
+FF FF FF          #             7  Red-Green-Blue
+
+# Graphics Control Extension
+
+21 F9
+04       # 4 bytes of Graphics control data
+00       # No transparent colour
+C8 00    # Delay time of 100 centi secs between image frames
+         # ie one frame per second
+00       # Colour index of transparent colour -- not used	 
+00       # End of Grapics Control Extension
+
+# First image frame
+
+# Image Descriptor
+
+2C                #                   Image separator
+00 00             #                   Left position      0
+00 00             #                   Top position       0
+0A 00             #                   Width             10
+04 00             #                   Height             4
+00 04             #  Minumum LZW code size of 4 bits
+
+# Image 1 pixels  0=K  1=B  2=G  4=R  7=W
+
+#        K W W K K K K W W K   index values  0 7 7 0 0 0 0 7 7 0
+#        W R R G G B B R R W                 7 4 4 2 2 1 1 4 4 7
+#        W R R G G B B R R W                 7 4 4 2 2 1 1 4 4 7
+#        K W W K K K K W W K                 0 7 7 0 0 0 0 7 7 0
+
+# The LZW minimum code length of 4 so the codes are 0 - 9, A - F
+# These codes have values looked up in the LZW table which is initially
+
+#           0  1  2  3  4  5  6  7    8     9    A   B   C   D   E   F
+#           0  1  2  3  4  5  6  7  CLEAR  STOP  -   -   -   -   -   -
+
+# There is also a variable p holding the previous code. This is initially
+# unset and represented by '-'
+
+# The first raster line of pixels 0 7 7 0 0 0 0 7 7 0 is encoded by the following
+# two sub-blocks
+
+03         # Data bytes in the first sub-block
+70 07 80   # ie:  0  7  7  0  0  8        Note that 8 clears the LZW table
+
+03         # Data bytes in the second sub-block
+00 77 80   # ie:  0  0  7  7  0  8        Note that 8 clears the LZW table
+
+# The GIF decoded processes the two sub-blocks as follows
+
+#  code => pixel  p    0  1  2  3  4  5  6  7    8     9    A   B   C   D   E   F
+#                 -    0  1  2  3  4  5  6  7  CLEAR  STOP  -   -   -   -   -   -
+#    0  =>   0
+#                 0    0  1  2  3  4  5  6  7  CLEAR  STOP  -   -   -   -   -   -
+#    7  =>   7
+#                 7    0  1  2  3  4  5  6  7  CLEAR  STOP  07  -   -   -   -   -
+#    7  =>   7
+#                 7    0  1  2  3  4  5  6  7  CLEAR  STOP  07  77   -   -   -   -
+#    0  =>   0
+#                 0    0  1  2  3  4  5  6  7  CLEAR  STOP  07  77   70   -   -   -
+#    0  =>   0
+#                 0    0  1  2  3  4  5  6  7  CLEAR  STOP  07  77   70   00  -   -
+#    8  CLEAR
+#                 -    0  1  2  3  4  5  6  7  CLEAR  STOP  -   -   -   -   -   -
+#    0  =>   0
+#                 0    0  1  2  3  4  5  6  7  CLEAR  STOP  -   -   -   -   -   -
+#    0  =>   0
+#                 0    0  1  2  3  4  5  6  7  CLEAR  STOP  00  -   -   -   -   -
+#    7  =>   7
+#                 7    0  1  2  3  4  5  6  7  CLEAR  STOP  00  07   -   -   -   -
+#    7  =>   7
+#                 7    0  1  2  3  4  5  6  7  CLEAR  STOP  07  07   77   -   -   -
+#    0  =>   0
+#                 0    0  1  2  3  4  5  6  7  CLEAR  STOP  07  77   77   70  -   -
+#    8  CLEAR
+#                 -    0  1  2  3  4  5  6  7  CLEAR  STOP  -   -   -   -   -   -
+
+# Although the LZW algorithm sets up multi pixel value for some of the codes in
+# the range none of these are used in this uncompressed use of GIF.
+
+#        K W W K K K K W W K   index values  0 7 7 0 0 0 0 7 7 0
+#        W R R G G B B R R W                 7 4 4 2 2 1 1 4 4 7
+#        W R R G G B B R R W                 7 4 4 2 2 1 1 4 4 7
+#        K W W K K K K W W K                 0 7 7 0 0 0 0 7 7 0
+
+# The last three raster lines are encoded by the following six sub-blocks.
+
+03 47 24 82    03 11 44 87
+03 47 24 82    03 11 44 87
+03 70 07 80    03 00 77 90
+
+# Note that the final 8 for CLEAR is replaced by 9 for STOP to mark the
+# end of data for this video this image data.
+
+
+
+
+
+
+
+
+
+
+# Second image frame
+
+2C                #                   Image separator
+00 00             #                   Left position      0
+00 00             #                   Top position       0
+0A 00             #                   Width             10
+04 00             #                   Height             4
+00 04             #  Minumum LZW code size of 4 bits
+
+# Image 2 pixels  0=K  1=B  2=G  4=R  7=W
+
+#        K W W K K K K W W K   index values  0 7 7 0 0 0 0 7 7 0
+#        W G G B B R R G G W                 7 2 2 1 1 4 4 2 2 7
+#        W G G B B R R G G W                 7 2 2 1 1 4 4 2 2 7
+#        K W W K K K K W W K                 0 7 7 0 0 0 0 7 7 0
+
+03 70 07 80    03 00 77 80
+03 27 12 81    03 44 22 87
+03 27 12 81    03 44 22 87
+03 70 07 80    03 00 77 90
+
+
+
+
+# Third image frame
+
+#2C                #                   Image separator
+#00 00             #                   Left position      0
+#00 00             #                   Top position       0
+#0A 00             #                   Width             10
+#04 00             #                   Height             4
+#00 04             #  Minumum LZW code size of 4 bits
+
+# Image 3 pixels  0=K  1=B  2=G  4=R  7=W
+
+#        K W W K K K K W W K   index values  0 7 7 0 0 0 0 7 7 0
+#        W B B R R G G B B W                 7 1 1 4 4 2 2 1 1 7
+#        W B B R R G G B B W                 7 1 1 4 4 2 2 1 1 7
+#        K W W K K K K W W K                 0 7 7 0 0 0 0 7 7 0
+
+#03 70 07 80    03 00 77 80
+#03 17 41 84    03 22 11 87
+#03 17 41 84    03 22 11 87
+#03 70 07 80    03 00 77 90
+
+
+
+
+
+
+00       # Null block marking the end of pixel data sub-blocks 
+
+3B       # End of GIF file 
+

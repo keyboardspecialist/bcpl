@@ -1,0 +1,17 @@
+SECTION 4  'T' 'S' 'T' '1'
+STACK 3
+JUMP L2
+ENTRY L1 5  's' 't' 'a' 'r' 't'
+SAVE 3
+LN 455
+RES L3
+LAB L3
+RSTACK 3
+FNRN
+ENDPROC 0
+STACK 3
+LAB L2
+STORE
+GLOBAL 1
+       1   L1
+

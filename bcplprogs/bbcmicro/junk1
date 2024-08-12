@@ -1,0 +1,811 @@
+
+BCPL - RCP V2.2
+syn space used 1655
+trn space used 4400
+Opened file OCODE01 successfully
+Section "SYN1"
+Section "SYN2"
+Section "SYN3"
+Section "SYN4"
+Section "SYN5"
+Section "SYN6"
+Section "SYN7"
+32-bit BCPL generating 32-bit little ender Cintcode
+   0:  DATAW #x00000000
+   4:  DATAW #x0000FDDF
+   8:  DATAW #x4E59530B
+  12:  DATAW #x20202031
+  16:  DATAW #x20202020
+op=stack 91 PND=none  A=() B=()  STK: P1 P2 
+op=jump  85 PND=none  A=() B=()  STK: P1 P2 
+op=entry 94 PND=none  A=() B=()  STK: P1 P2 
+  20:  DATAW #x0000DFDF
+  24:  DATAW #x78656E0B
+  28:  DATAW #x6D797374
+  32:  DATAW #x20202062
+// Entry to:   nextsymb   
+  36: L1:
+op=save  95 PND=none  A=() B=()  STK: P1 P2 
+op=false 5 PND=none  A=() B=()  STK: P1 P2 
+op=sg    81 PND=none  A=() B=()  STK: P1 P2 N0 
+A=() B=()  STK: P1 P2 N0 
+  36:     L0  
+A=(N0) B=()  STK: P1 P2 A 
+  37:    SG1  200
+op=lab   90 PND=none  A=(G456 N0) B=()  STK: P1 P2 
+  39: L6:
+op=jump  85 PND=none  A=() B=()  STK: P1 P2 
+A=() B=()  STK: P1 P2 
+  39:      J  L7
+  41: L9:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  41: L10:
+op=true  4 PND=none  A=() B=()  STK: P1 P2 
+op=sg    81 PND=none  A=() B=()  STK: P1 P2 N-1 
+A=() B=()  STK: P1 P2 N-1 
+  41:    LM1  
+A=(N-1) B=()  STK: P1 P2 A 
+  42:    SG1  200
+op=lab   90 PND=none  A=(G456 N-1) B=()  STK: P1 P2 
+  44: L11:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  44: L12:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  44: L13:
+op=stack 91 PND=none  A=() B=()  STK: P1 P2 
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 
+op=rtap  51 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 G403 
+A=() B=()  STK: P1 P2 P3 P4 P5 G403 
+  44:   K3G1  147
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 N32 
+op=eq    20 PND=none  A=() B=()  STK: P1 P2 N32 G287 
+op=jt    86 PND=eq    A=() B=()  STK: P1 P2 N32 G287 
+A=() B=()  STK: P1 P2 N32 G287 
+  46:      L   32
+A=(N32) B=()  STK: P1 P2 A G287 
+  48:    LG1   31
+A=(G287) B=(N32)  STK: P1 P2 B A 
+  50:    JEQ  L11
+op=jump  85 PND=none  A=(G287) B=(N32)  STK: P1 P2 
+A=(G287) B=(N32)  STK: P1 P2 
+  52:      J  L6
+  54: L14:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  54: L15:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  54: L16:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  54: L17:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  54: L18:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  54: L19:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  54: L20:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  54: L21:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  54: L22:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  54: L23:
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 
+op=sg    81 PND=none  A=() B=()  STK: P1 P2 N1 
+A=() B=()  STK: P1 P2 N1 
+  54:     L1  
+A=(N1) B=()  STK: P1 P2 A 
+  55:    SG1  194
+op=stack 91 PND=none  A=(G450 N1) B=()  STK: P1 P2 
+op=ln    42 PND=none  A=(G450 N1) B=()  STK: P1 P2 P3 P4 P5 
+op=lg    41 PND=none  A=(G450 N1) B=()  STK: P1 P2 P3 P4 P5 N10 
+op=rtap  51 PND=none  A=(G450 N1) B=()  STK: P1 P2 P3 P4 P5 N10 G407 
+A=(G450 N1) B=()  STK: P1 P2 P3 P4 P5 N10 G407 
+  57:    L10  
+A=(N10) B=(G450 N1)  STK: P1 P2 P3 P4 P5 A G407 
+  58:   K3G1  151
+op=rtrn  97 PND=none  A=() B=()  STK: P1 P2 
+A=() B=()  STK: P1 P2 
+  60:    RTN  
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L24:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L25:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L26:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L27:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L28:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L29:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L30:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L31:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L32:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L33:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L34:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L35:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L36:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L37:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L38:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L39:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L40:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L41:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L42:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L43:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L44:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L45:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L46:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L47:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L48:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L49:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L50:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L51:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L52:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L53:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L54:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L55:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L56:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L57:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L58:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L59:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L60:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L61:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L62:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L63:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L64:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L65:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L66:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L67:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L68:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L69:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L70:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L71:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L72:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L73:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L74:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  61: L75:
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 
+op=store 92 PND=none  A=() B=()  STK: P1 P2 G287 
+A=() B=()  STK: P1 P2 G287 
+  61:    LG1   31
+A=(G287) B=()  STK: P1 P2 A 
+  63:    SP3  
+op=stack 91 PND=none  A=(P3 G287) B=()  STK: P1 P2 P3 
+op=lg    41 PND=none  A=(P3 G287) B=()  STK: P1 P2 P3 P4 P5 P6 
+op=rtap  51 PND=none  A=(P3 G287) B=()  STK: P1 P2 P3 P4 P5 P6 G403 
+A=(P3 G287) B=()  STK: P1 P2 P3 P4 P5 P6 G403 
+  64:   K4G1  147
+op=stack 91 PND=none  A=() B=()  STK: P1 P2 P3 
+op=lp    40 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 P6 
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 P6 P3 
+op=rtap  51 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 P6 P3 G405 
+A=() B=()  STK: P1 P2 P3 P4 P5 P6 P3 G405 
+  66:    LP3  
+A=(P3) B=()  STK: P1 P2 P3 P4 P5 P6 A G405 
+  67:   K4G1  149
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 P3 
+op=jf    87 PND=none  A=() B=()  STK: P1 P2 P3 G463 
+A=() B=()  STK: P1 P2 P3 G463 N0 
+  69:    LG1  207
+A=(G463) B=()  STK: P1 P2 P3 A N0 
+  71:   JEQ0  L76
+op=jump  85 PND=none  A=(G463) B=()  STK: P1 P2 P3 
+A=(G463) B=()  STK: P1 P2 P3 
+  73:      J  L6
+  75: L76:
+op=stack 91 PND=none  A=() B=()  STK: P1 P2 P3 
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 P6 
+op=fnap  10 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 P6 G401 
+A=() B=()  STK: P1 P2 P3 P4 P5 P6 G401 
+  75:   K4G1  145
+op=sg    81 PND=none  A=() B=()  STK: P1 P2 P3 A 
+A=() B=()  STK: P1 P2 P3 A 
+  77:    SG1  194
+op=ln    42 PND=none  A=(G450) B=()  STK: P1 P2 P3 
+op=lg    41 PND=none  A=(G450) B=()  STK: P1 P2 P3 N93 
+op=eq    20 PND=none  A=(G450) B=()  STK: P1 P2 P3 N93 G450 
+op=jf    87 PND=eq    A=(G450) B=()  STK: P1 P2 P3 N93 G450 
+A=(G450) B=()  STK: P1 P2 P3 N93 G450 
+  79:      L   93
+A=(N93) B=(G450)  STK: P1 P2 P3 A B 
+  81:    JNE  L77
+op=stack 91 PND=none  A=(N93) B=(G450)  STK: P1 P2 P3 
+op=lg    41 PND=none  A=(N93) B=(G450)  STK: P1 P2 P3 P4 P5 P6 
+op=rtap  51 PND=none  A=(N93) B=(G450)  STK: P1 P2 P3 P4 P5 P6 G406 
+A=(N93) B=(G450)  STK: P1 P2 P3 P4 P5 P6 G406 
+  83:   K4G1  150
+op=jump  85 PND=none  A=() B=()  STK: P1 P2 P3 
+A=() B=()  STK: P1 P2 P3 
+  85:      J  L6
+  87: L77:
+op=rtrn  97 PND=none  A=() B=()  STK: P1 P2 P3 
+A=() B=()  STK: P1 P2 P3 
+  87:    RTN  
+op=stack 91 PND=none  A=() B=()  STK: P1 P2 P3 
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  88: L78:
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 
+op=sg    81 PND=none  A=() B=()  STK: P1 P2 N91 
+A=() B=()  STK: P1 P2 N91 
+  88:      L   91
+A=(N91) B=()  STK: P1 P2 A 
+  90:    SG1  194
+op=stack 91 PND=none  A=(G450 N91) B=()  STK: P1 P2 
+op=lg    41 PND=none  A=(G450 N91) B=()  STK: P1 P2 P3 P4 P5 
+op=rtap  51 PND=none  A=(G450 N91) B=()  STK: P1 P2 P3 P4 P5 G403 
+A=(G450 N91) B=()  STK: P1 P2 P3 P4 P5 G403 
+  92:   K3G1  147
+op=lf    39 PND=none  A=() B=()  STK: P1 P2 
+op=goto  52 PND=none  A=() B=()  STK: P1 P2 F4 
+A=() B=()  STK: P1 P2 F4 
+  94:      J  L4
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+  96: L79:
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 
+op=sg    81 PND=none  A=() B=()  STK: P1 P2 N92 
+A=() B=()  STK: P1 P2 N92 
+  96:      L   92
+A=(N92) B=()  STK: P1 P2 A 
+  98:    SG1  194
+op=stack 91 PND=none  A=(G450 N92) B=()  STK: P1 P2 
+op=lg    41 PND=none  A=(G450 N92) B=()  STK: P1 P2 P3 P4 P5 
+op=rtap  51 PND=none  A=(G450 N92) B=()  STK: P1 P2 P3 P4 P5 G403 
+A=(G450 N92) B=()  STK: P1 P2 P3 P4 P5 G403 
+ 100:   K3G1  147
+op=lf    39 PND=none  A=() B=()  STK: P1 P2 
+op=goto  52 PND=none  A=() B=()  STK: P1 P2 F4 
+A=() B=()  STK: P1 P2 F4 
+ 102:      J  L4
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+ 104: L80:
+op=stack 91 PND=none  A=() B=()  STK: P1 P2 
+op=lstr  43 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 @L420 
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 @L420 N91 
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 @L420 N91 N92 
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 @L420 N91 N92 N107 
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 @L420 N91 N92 N107 N108 
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 @L420 N91 N92 N107 N108 N109 
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 @L420 N91 N92 N107 N108 N109 N91 
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 @L420 N91 N92 N107 N108 N109 N91 N92 
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 @L420 N91 N92 N107 N108 N109 N91 N92 N91 
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 @L420 N91 N92 N107 N108 N109 N91 N92 N91 N92 
+op=lf    39 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 @L420 N91 N92 N107 N108 N109 N91 N92 N91 N92 N0 
+op=rtap  51 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 @L420 N91 N92 N107 N108 N109 N91 N92 N91 N92 N0 F2 
+A=() B=()  STK: P1 P2 P3 P4 P5 @L420 N91 N92 N107 N108 N109 N91 N92 N91 N92 N0 F2 
+ 104:      L   91
+A=(N91) B=()  STK: P1 P2 P3 P4 P5 @L420 A N92 N107 N108 N109 N91 N92 N91 N92 N0 F2 
+ 106:    SP7  
+A=(P7 N91) B=()  STK: P1 P2 P3 P4 P5 @L420 P7 N92 N107 N108 N109 N91 N92 N91 N92 N0 F2 
+ 107:      L   92
+A=(N92) B=(P7 N91)  STK: P1 P2 P3 P4 P5 @L420 P7 A N107 N108 N109 N91 N92 N91 N92 N0 F2 
+ 109:    SP8  
+A=(P8 N92) B=(P7 N91)  STK: P1 P2 P3 P4 P5 @L420 P7 P8 N107 N108 N109 N91 N92 N91 N92 N0 F2 
+ 110:      L  107
+A=(N107) B=(P8 N92)  STK: P1 P2 P3 P4 P5 @L420 P7 P8 A N108 N109 N91 N92 N91 N92 N0 F2 
+ 112:    SP9  
+A=(P9 N107) B=(P8 N92)  STK: P1 P2 P3 P4 P5 @L420 P7 P8 P9 N108 N109 N91 N92 N91 N92 N0 F2 
+ 113:      L  108
+A=(N108) B=(P9 N107)  STK: P1 P2 P3 P4 P5 @L420 P7 P8 P9 A N109 N91 N92 N91 N92 N0 F2 
+ 115:   SP10  
+A=(P10 N108) B=(P9 N107)  STK: P1 P2 P3 P4 P5 @L420 P7 P8 P9 P10 N109 N91 N92 N91 N92 N0 F2 
+ 116:      L  109
+A=(N109) B=(P10 N108)  STK: P1 P2 P3 P4 P5 @L420 P7 P8 P9 P10 A N91 N92 N91 N92 N0 F2 
+ 118:   SP11  
+A=(P11 N109) B=(P10 N108)  STK: P1 P2 P3 P4 P5 @L420 P7 P8 P9 P10 P11 N91 N92 N91 N92 N0 F2 
+ 119:      L   91
+A=(N91) B=(P11 N109)  STK: P1 P2 P3 P4 P5 @L420 P7 P8 P9 P10 P11 A N92 N91 N92 N0 F2 
+ 121:   SP12  
+A=(P12 N91) B=(P11 N109)  STK: P1 P2 P3 P4 P5 @L420 P7 P8 P9 P10 P11 P12 N92 N91 N92 N0 F2 
+ 122:      L   92
+A=(N92) B=(P12 N91)  STK: P1 P2 P3 P4 P5 @L420 P7 P8 P9 P10 P11 P12 A N91 N92 N0 F2 
+ 124:   SP13  
+A=(P13 N92) B=(P12 N91)  STK: P1 P2 P3 P4 P5 @L420 P7 P8 P9 P10 P11 P12 P13 N91 N92 N0 F2 
+ 125:    XCH  
+A=(P12 N91) B=(P13 N92)  STK: P1 P2 P3 P4 P5 @L420 P7 P8 P9 P10 P11 P12 P13 A N92 N0 F2 
+ 126:   SP14  
+A=(P14 P12 N91) B=(P13 N92)  STK: P1 P2 P3 P4 P5 @L420 P7 P8 P9 P10 P11 P12 P13 P14 N92 N0 F2 
+ 127:    XCH  
+A=(P13 N92) B=(P14 P12 N91)  STK: P1 P2 P3 P4 P5 @L420 P7 P8 P9 P10 P11 P12 P13 P14 A N0 F2 
+ 128:   SP15  
+A=(P15 P13 N92) B=(P14 P12 N91)  STK: P1 P2 P3 P4 P5 @L420 P7 P8 P9 P10 P11 P12 P13 P14 P15 N0 F2 
+ 129:     L0  
+A=(N0) B=(P15 P13 N92)  STK: P1 P2 P3 P4 P5 @L420 P7 P8 P9 P10 P11 P12 P13 P14 P15 A F2 
+ 130:   SP16  
+A=(P16 N0) B=(P15 P13 N92)  STK: P1 P2 P3 P4 P5 @L420 P7 P8 P9 P10 P11 P12 P13 P14 P15 P16 F2 
+ 131:    LLL  L420
+A=(@L420) B=(P16 N0)  STK: P1 P2 P3 P4 P5 A P7 P8 P9 P10 P11 P12 P13 P14 P15 P16 F2 
+ 133:     LF  L2
+A=(F2) B=(@L420)  STK: P1 P2 P3 P4 P5 B P7 P8 P9 P10 P11 P12 P13 P14 P15 P16 A 
+ 135:     K3  
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 N0 
+op=eq    20 PND=none  A=() B=()  STK: P1 P2 N0 G450 
+op=jf    87 PND=eq    A=() B=()  STK: P1 P2 N0 G450 
+A=() B=()  STK: P1 P2 G450 N0 
+ 136:    LG1  194
+A=(G450) B=()  STK: P1 P2 A N0 
+ 138:   JNE0  L81
+op=stack 91 PND=none  A=(G450) B=()  STK: P1 P2 
+op=ln    42 PND=none  A=(G450) B=()  STK: P1 P2 P3 P4 P5 
+op=lg    41 PND=none  A=(G450) B=()  STK: P1 P2 P3 P4 P5 N91 
+op=rtap  51 PND=none  A=(G450) B=()  STK: P1 P2 P3 P4 P5 N91 G416 
+A=(G450) B=()  STK: P1 P2 P3 P4 P5 N91 G416 
+ 140:      L   91
+A=(N91) B=(G450)  STK: P1 P2 P3 P4 P5 A G416 
+ 142:   K3G1  160
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+ 144: L81:
+op=xlab  89 PND=none  A=() B=()  STK: P1 P2 
+
+Error: Bad OCODE op 89 xlab
+op=true  4 PND=none  A=() B=()  STK: P1 P2 
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 N-1 
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 N-1 N91 
+op=eq    20 PND=none  A=() B=()  STK: P1 P2 N-1 N91 G450 
+op=jt    86 PND=eq    A=() B=()  STK: P1 P2 N-1 N91 G450 
+A=() B=()  STK: P1 P2 N-1 N91 G450 
+ 144:    LM1  
+A=(N-1) B=()  STK: P1 P2 A N91 G450 
+ 145:    SP3  
+A=(P3 N-1) B=()  STK: P1 P2 P3 N91 G450 
+ 146:      L   91
+A=(N91) B=(P3 N-1)  STK: P1 P2 P3 A G450 
+ 148:    LG1  194
+A=(G450) B=(N91)  STK: P1 P2 P3 B A 
+ 150:    JEQ  L83
+op=ln    42 PND=none  A=(G450) B=(N91)  STK: P1 P2 P3 
+op=lg    41 PND=none  A=(G450) B=(N91)  STK: P1 P2 P3 N92 
+op=eq    20 PND=none  A=(G450) B=(N91)  STK: P1 P2 P3 N92 G450 
+op=jf    87 PND=eq    A=(G450) B=(N91)  STK: P1 P2 P3 N92 G450 
+A=(G450) B=(N91)  STK: P1 P2 P3 N92 G450 
+ 152:      L   92
+A=(N92) B=(G450)  STK: P1 P2 P3 A B 
+ 154:    JNE  L82
+op=lab   90 PND=none  A=(N92) B=(G450)  STK: P1 P2 P3 
+ 156: L83:
+op=stack 91 PND=none  A=() B=()  STK: P1 P2 P3 
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 N36 
+op=rtap  51 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 N36 G405 
+A=() B=()  STK: P1 P2 P3 P4 P5 N36 G405 
+ 156:      L   36
+A=(N36) B=()  STK: P1 P2 P3 P4 P5 A G405 
+ 158:   K3G1  149
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 
+op=jf    87 PND=none  A=() B=()  STK: P1 P2 G463 
+A=() B=()  STK: P1 P2 G463 N0 
+ 160:    LG1  207
+A=(G463) B=()  STK: P1 P2 A N0 
+ 162:   JEQ0  L84
+op=jump  85 PND=none  A=(G463) B=()  STK: P1 P2 
+A=(G463) B=()  STK: P1 P2 
+ 164:      J  L6
+ 166: L84:
+op=stack 91 PND=none  A=() B=()  STK: P1 P2 
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 
+op=rtap  51 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 G401 
+A=() B=()  STK: P1 P2 P3 P4 P5 G401 
+ 166:   K3G1  145
+op=rtrn  97 PND=none  A=() B=()  STK: P1 P2 
+A=() B=()  STK: P1 P2 
+ 168:    RTN  
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+ 169: L82:
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 
+op=store 92 PND=none  A=() B=()  STK: P1 P2 G450 
+A=() B=()  STK: P1 P2 G450 
+ 169:    LG1  194
+A=(G450) B=()  STK: P1 P2 A 
+ 171:    SP3  
+op=stack 91 PND=none  A=(P3 G450) B=()  STK: P1 P2 P3 
+op=ln    42 PND=none  A=(P3 G450) B=()  STK: P1 P2 P3 P4 P5 P6 
+op=lg    41 PND=none  A=(P3 G450) B=()  STK: P1 P2 P3 P4 P5 P6 N60 
+op=rtap  51 PND=none  A=(P3 G450) B=()  STK: P1 P2 P3 P4 P5 P6 N60 G405 
+A=(P3 G450) B=()  STK: P1 P2 P3 P4 P5 P6 N60 G405 
+ 172:      L   60
+A=(N60) B=(P3 G450)  STK: P1 P2 P3 P4 P5 P6 A G405 
+ 174:   K4G1  149
+op=stack 91 PND=none  A=() B=()  STK: P1 P2 P3 
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 P6 
+op=fnap  10 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 P6 G401 
+A=() B=()  STK: P1 P2 P3 P4 P5 P6 G401 
+ 176:   K4G1  145
+op=sg    81 PND=none  A=() B=()  STK: P1 P2 P3 A 
+A=() B=()  STK: P1 P2 P3 A 
+ 178:    SG1  194
+op=ln    42 PND=none  A=(G450) B=()  STK: P1 P2 P3 
+op=lp    40 PND=none  A=(G450) B=()  STK: P1 P2 P3 N109 
+op=eq    20 PND=none  A=(G450) B=()  STK: P1 P2 P3 N109 P3 
+op=jf    87 PND=eq    A=(G450) B=()  STK: P1 P2 P3 N109 P3 
+A=(G450) B=()  STK: P1 P2 P3 N109 P3 
+ 180:      L  109
+A=(N109) B=(G450)  STK: P1 P2 P3 A P3 
+ 182:    LP3  
+A=(P3) B=(N109)  STK: P1 P2 P3 B A 
+ 183:    JNE  L85
+op=lg    41 PND=none  A=(P3) B=(N109)  STK: P1 P2 P3 
+op=lg    41 PND=none  A=(P3) B=(N109)  STK: P1 P2 P3 G452 
+op=eq    20 PND=none  A=(P3) B=(N109)  STK: P1 P2 P3 G452 G463 
+op=jf    87 PND=eq    A=(P3) B=(N109)  STK: P1 P2 P3 G452 G463 
+A=(P3) B=(N109)  STK: P1 P2 P3 G452 G463 
+ 185:    LG1  196
+A=(G452) B=(P3)  STK: P1 P2 P3 A G463 
+ 187:    LG1  207
+A=(G463) B=(G452)  STK: P1 P2 P3 B A 
+ 189:    JNE  L86
+op=ln    42 PND=none  A=(G463) B=(G452)  STK: P1 P2 P3 
+op=sg    81 PND=none  A=(G463) B=(G452)  STK: P1 P2 P3 N0 
+A=(G463) B=(G452)  STK: P1 P2 P3 N0 
+ 191:     L0  
+A=(N0) B=(G463)  STK: P1 P2 P3 A 
+ 192:    SG1  207
+op=lab   90 PND=none  A=(G463 N0) B=(-)  STK: P1 P2 P3 
+ 194: L86:
+op=jump  85 PND=none  A=() B=()  STK: P1 P2 P3 
+A=() B=()  STK: P1 P2 P3 
+ 194:      J  L6
+ 196: L85:
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 P3 
+op=jf    87 PND=none  A=() B=()  STK: P1 P2 P3 G463 
+A=() B=()  STK: P1 P2 P3 G463 N0 
+ 196:    LG1  207
+A=(G463) B=()  STK: P1 P2 P3 A N0 
+ 198:   JEQ0  L87
+op=jump  85 PND=none  A=(G463) B=()  STK: P1 P2 P3 
+A=(G463) B=()  STK: P1 P2 P3 
+ 200:      J  L6
+ 202: L87:
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 P3 
+op=lp    40 PND=none  A=() B=()  STK: P1 P2 P3 N107 
+op=eq    20 PND=none  A=() B=()  STK: P1 P2 P3 N107 P3 
+op=jf    87 PND=eq    A=() B=()  STK: P1 P2 P3 N107 P3 
+A=() B=()  STK: P1 P2 P3 N107 P3 
+ 202:      L  107
+A=(N107) B=()  STK: P1 P2 P3 A P3 
+ 204:    LP3  
+A=(P3) B=(N107)  STK: P1 P2 P3 B A 
+ 205:    JNE  L88
+op=ln    42 PND=none  A=(P3) B=(N107)  STK: P1 P2 P3 
+op=lg    41 PND=none  A=(P3) B=(N107)  STK: P1 P2 P3 N4 
+op=eq    20 PND=none  A=(P3) B=(N107)  STK: P1 P2 P3 N4 G450 
+op=jf    87 PND=eq    A=(P3) B=(N107)  STK: P1 P2 P3 N4 G450 
+A=(P3) B=(N107)  STK: P1 P2 P3 N4 G450 
+ 207:     L4  
+A=(N4) B=(P3)  STK: P1 P2 P3 A G450 
+ 208:    LG1  194
+A=(G450) B=(N4)  STK: P1 P2 P3 B A 
+ 210:    JNE  L90
+op=ln    42 PND=none  A=(G450) B=(N4)  STK: P1 P2 P3 
+op=res   98 PND=none  A=(G450) B=(N4)  STK: P1 P2 P3 N5 
+A=(G450) B=(N4)  STK: P1 P2 P3 N5 
+ 212:     L5  
+A=(N5) B=(G450)  STK: P1 P2 P3 
+ 213:      J  L89
+ 215: L90:
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 P3 
+op=res   98 PND=none  A=() B=()  STK: P1 P2 P3 N4 
+A=() B=()  STK: P1 P2 P3 N4 
+ 215:     L4  
+ 216: L89:
+op=rstack 93 PND=none  A=() B=()  STK: P1 P2 P3 
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 P3 A 
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 P3 A G452 
+op=plus  14 PND=none  A=() B=()  STK: P1 P2 P3 A G452 N0 
+op=stind 83 PND=plus  A=() B=()  STK: P1 P2 P3 A G452 N0 
+A=() B=()  STK: P1 P2 P3 A G452 
+ 216:   S0G1  196
+op=jump  85 PND=none  A=() B=()  STK: P1 P2 P3 
+A=() B=()  STK: P1 P2 P3 
+ 218:      J  L6
+ 220: L88:
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 P3 
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 P3 N4 
+op=eq    20 PND=none  A=() B=()  STK: P1 P2 P3 N4 G450 
+op=jf    87 PND=eq    A=() B=()  STK: P1 P2 P3 N4 G450 
+A=() B=()  STK: P1 P2 P3 N4 G450 
+ 220:     L4  
+A=(N4) B=()  STK: P1 P2 P3 A G450 
+ 221:    LG1  194
+A=(G450) B=(N4)  STK: P1 P2 P3 B A 
+ 223:    JNE  L91
+op=jump  85 PND=none  A=(G450) B=(N4)  STK: P1 P2 P3 
+A=(G450) B=(N4)  STK: P1 P2 P3 
+ 225:      J  L6
+ 227: L91:
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 P3 
+op=sg    81 PND=none  A=() B=()  STK: P1 P2 P3 G452 
+A=() B=()  STK: P1 P2 P3 G452 
+ 227:    LG1  196
+A=(G452) B=()  STK: P1 P2 P3 A 
+ 229:    SG1  207
+op=jump  85 PND=none  A=(G463 G452) B=()  STK: P1 P2 P3 
+A=(G463 G452) B=()  STK: P1 P2 P3 
+ 231:      J  L93
+ 233: L92:
+op=stack 91 PND=none  A=() B=()  STK: P1 P2 P3 
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 P6 
+op=rtap  51 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 P6 G400 
+A=() B=()  STK: P1 P2 P3 P4 P5 P6 G400 
+ 233:   K4G1  144
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 P3 
+ 235: L93:
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 P3 
+op=jt    86 PND=none  A=() B=()  STK: P1 P2 P3 G463 
+A=() B=()  STK: P1 P2 P3 G463 N0 
+ 235:    LG1  207
+A=(G463) B=()  STK: P1 P2 P3 A N0 
+ 237:   JNE0  L92
+op=rtrn  97 PND=none  A=(G463) B=()  STK: P1 P2 P3 
+A=(G463) B=()  STK: P1 P2 P3 
+ 239:    RTN  
+op=stack 91 PND=none  A=(G463) B=()  STK: P1 P2 P3 
+op=lab   90 PND=none  A=(G463) B=()  STK: P1 P2 
+ 240: L94:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+ 240: L95:
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 
+op=sg    81 PND=none  A=() B=()  STK: P1 P2 N105 
+A=() B=()  STK: P1 P2 N105 
+ 240:      L  105
+A=(N105) B=()  STK: P1 P2 A 
+ 242:    SG1  194
+op=jump  85 PND=none  A=(G450 N105) B=()  STK: P1 P2 
+A=(G450 N105) B=()  STK: P1 P2 
+ 244:      J  L96
+ 246: L97:
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 
+ 246: L98:
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 
+op=sg    81 PND=none  A=() B=()  STK: P1 P2 N106 
+A=() B=()  STK: P1 P2 N106 
+ 246:      L  106
+A=(N106) B=()  STK: P1 P2 A 
+ 248:    SG1  194
+op=jump  85 PND=none  A=(G450 N106) B=()  STK: P1 P2 
+A=(G450 N106) B=()  STK: P1 P2 
+ 250:      J  L96
+ 252: L99:
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 
+op=store 92 PND=none  A=() B=()  STK: P1 P2 N8 
+A=() B=()  STK: P1 P2 N8 
+ 252:     L8  
+A=(N8) B=()  STK: P1 P2 A 
+ 253:    SP3  
+op=stack 91 PND=none  A=(P3 N8) B=()  STK: P1 P2 P3 
+op=lg    41 PND=none  A=(P3 N8) B=()  STK: P1 P2 P3 P4 P5 P6 
+op=rtap  51 PND=none  A=(P3 N8) B=()  STK: P1 P2 P3 P4 P5 P6 G403 
+A=(P3 N8) B=()  STK: P1 P2 P3 P4 P5 P6 G403 
+ 254:   K4G1  147
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 P3 
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 P3 N48 
+op=le    24 PND=none  A=() B=()  STK: P1 P2 P3 N48 G287 
+op=jf    87 PND=le    A=() B=()  STK: P1 P2 P3 N48 G287 
+A=() B=()  STK: P1 P2 P3 N48 G287 
+ 256:      L   48
+A=(N48) B=()  STK: P1 P2 P3 A G287 
+ 258:    LG1   31
+A=(G287) B=(N48)  STK: P1 P2 P3 B A 
+ 260:    JGR  L101
+op=lg    41 PND=none  A=(G287) B=(N48)  STK: P1 P2 P3 
+op=ln    42 PND=none  A=(G287) B=(N48)  STK: P1 P2 P3 G287 
+op=le    24 PND=none  A=(G287) B=(N48)  STK: P1 P2 P3 G287 N55 
+op=jt    86 PND=le    A=(G287) B=(N48)  STK: P1 P2 P3 G287 N55 
+A=(G287) B=(N48)  STK: P1 P2 P3 G287 N55 
+ 262:      L   55
+A=(N55) B=(G287)  STK: P1 P2 P3 B A 
+ 264:    JLE  L100
+op=lab   90 PND=none  A=(N55) B=(G287)  STK: P1 P2 P3 
+ 266: L101:
+op=jump  85 PND=none  A=() B=()  STK: P1 P2 P3 
+A=() B=()  STK: P1 P2 P3 
+ 266:      J  L102
+ 268: L104:
+op=stack 91 PND=none  A=() B=()  STK: P1 P2 P3 
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 P6 
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 P6 N33 
+op=rtap  51 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 P6 N33 G416 
+A=() B=()  STK: P1 P2 P3 P4 P5 P6 N33 G416 
+ 268:      L   33
+A=(N33) B=()  STK: P1 P2 P3 P4 P5 P6 A G416 
+ 270:   K4G1  160
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 P3 
+ 272: L105:
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 P3 
+op=sp    80 PND=none  A=() B=()  STK: P1 P2 P3 N2 
+A=() B=()  STK: P1 P2 P3 N2 
+ 272:     L2  
+A=(N2) B=()  STK: P1 P2 P3 A 
+ 273:    SP3  
+op=jump  85 PND=none  A=(P3 N2) B=()  STK: P1 P2 P3 
+A=(P3 N2) B=()  STK: P1 P2 P3 
+ 274:      J  L103
+ 276: L106:
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 P3 
+op=sp    80 PND=none  A=() B=()  STK: P1 P2 P3 N8 
+A=() B=()  STK: P1 P2 P3 N8 
+ 276:     L8  
+A=(N8) B=()  STK: P1 P2 P3 A 
+ 277:    SP3  
+op=jump  85 PND=none  A=(P3 N8) B=()  STK: P1 P2 P3 
+A=(P3 N8) B=()  STK: P1 P2 P3 
+ 278:      J  L103
+ 280: L107:
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 P3 
+op=sp    80 PND=none  A=() B=()  STK: P1 P2 P3 N16 
+A=() B=()  STK: P1 P2 P3 N16 
+ 280:      L   16
+A=(N16) B=()  STK: P1 P2 P3 A 
+ 282:    SP3  
+op=jump  85 PND=none  A=(P3 N16) B=()  STK: P1 P2 P3 
+A=(P3 N16) B=()  STK: P1 P2 P3 
+ 283:      J  L103
+ 285: L102:
+op=stack 91 PND=none  A=() B=()  STK: P1 P2 P3 
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 P6 
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 P6 G287 
+op=fnap  10 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 P6 G287 G59 
+A=() B=()  STK: P1 P2 P3 P4 P5 P6 G287 G59 
+ 285:    LG1   31
+A=(G287) B=()  STK: P1 P2 P3 P4 P5 P6 A G59 
+ 287:    K4G   59
+op=switchon 70 PND=none  A=() B=()  STK: P1 P2 P3 A 
+A=() B=()  STK: P1 P2 P3 
+ 289:    SWB  
+ 290:  DATAH 3
+ 292:  DATAH L104-$
+ 294:  DATAH 79
+ 296:  DATAH L106-$
+ 298:  DATAH 88
+ 300:  DATAH L107-$
+ 302:  DATAH 66
+ 304:  DATAH L105-$
+ 306:  DATAH 0
+ 308:  DATAH L104-$
+ 310:  DATAH 0
+ 312:  DATAH L104-$
+ 314:  DATAH 0
+ 316:  DATAH L104-$
+ 318:  DATAH 0
+ 320:  DATAH L104-$
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 P3 
+ 322: L103:
+op=stack 91 PND=none  A=() B=()  STK: P1 P2 P3 
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 P6 
+op=rtap  51 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 P6 G403 
+A=() B=()  STK: P1 P2 P3 P4 P5 P6 G403 
+ 322:   K4G1  147
+op=lab   90 PND=none  A=() B=()  STK: P1 P2 P3 
+ 324: L100:
+op=stack 91 PND=none  A=() B=()  STK: P1 P2 P3 
+op=lp    40 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 P6 
+op=lg    41 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 P6 P3 
+op=rtap  51 PND=none  A=() B=()  STK: P1 P2 P3 P4 P5 P6 P3 G407 
+A=() B=()  STK: P1 P2 P3 P4 P5 P6 P3 G407 
+ 324:    LP3  
+A=(P3) B=()  STK: P1 P2 P3 P4 P5 P6 A G407 
+ 325:   K4G1  151
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 P3 
+op=sg    81 PND=none  A=() B=()  STK: P1 P2 P3 N1 
+A=() B=()  STK: P1 P2 P3 N1 
+ 327:     L1  
+A=(N1) B=()  STK: P1 P2 P3 A 
+ 328:    SG1  194
+op=rtrn  97 PND=none  A=(G450 N1) B=()  STK: P1 P2 P3 
+A=(G450 N1) B=()  STK: P1 P2 P3 
+ 330:    RTN  
+op=stack 91 PND=none  A=(G450 N1) B=()  STK: P1 P2 P3 
+op=lab   90 PND=none  A=(G450 N1) B=()  STK: P1 P2 
+ 331: L108:
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 
+op=sg    81 PND=none  A=() B=()  STK: P1 P2 N16 
+A=() B=()  STK: P1 P2 N16 
+ 331:      L   16
+A=(N16) B=()  STK: P1 P2 A 
+ 333:    SG1  194
+op=jump  85 PND=none  A=(G450 N16) B=()  STK: P1 P2 
+A=(G450 N16) B=()  STK: P1 P2 
+ 335:      J  L96
+ 337: L109:
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 
+op=sg    81 PND=none  A=() B=()  STK: P1 P2 N14 
+A=() B=()  STK: P1 P2 N14 
+ 337:      L   14
+A=(N14) B=()  STK: P1 P2 A 
+ 339:    SG1  194
+op=jump  85 PND=none  A=(G450 N14) B=()  STK: P1 P2 
+A=(G450 N14) B=()  STK: P1 P2 
+ 341:      J  L96
+ 343: L110:
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 
+op=sg    81 PND=none  A=() B=()  STK: P1 P2 N38 
+A=() B=()  STK: P1 P2 N38 
+ 343:      L   38
+A=(N38) B=()  STK: P1 P2 A 
+ 345:    SG1  194
+op=jump  85 PND=none  A=(G450 N38) B=()  STK: P1 P2 
+A=(G450 N38) B=()  STK: P1 P2 
+ 347:      J  L96
+ 349: L111:
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 
+op=sg    81 PND=none  A=() B=()  STK: P1 P2 N97 
+A=() B=()  STK: P1 P2 N97 
+ 349:      L   97
+A=(N97) B=()  STK: P1 P2 A 
+ 351:    SG1  194
+op=jump  85 PND=none  A=(G450 N97) B=()  STK: P1 P2 
+A=(G450 N97) B=()  STK: P1 P2 
+ 353:      J  L96
+ 355: L112:
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 
+op=sg    81 PND=none  A=() B=()  STK: P1 P2 N7 
+A=() B=()  STK: P1 P2 N7 
+ 355:     L7  
+A=(N7) B=()  STK: P1 P2 A 
+ 356:    SG1  194
+op=jump  85 PND=none  A=(G450 N7) B=()  STK: P1 P2 
+A=(G450 N7) B=()  STK: P1 P2 
+ 358:      J  L96
+ 360: L113:
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 
+op=sg    81 PND=none  A=() B=()  STK: P1 P2 N33 
+A=() B=()  STK: P1 P2 N33 
+ 360:      L   33
+A=(N33) B=()  STK: P1 P2 A 
+ 362:    SG1  194
+op=jump  85 PND=none  A=(G450 N33) B=()  STK: P1 P2 
+A=(G450 N33) B=()  STK: P1 P2 
+ 364:      J  L96
+ 366: L114:
+op=ln    42 PND=none  A=() B=()  STK: P1 P2 
+op=sg    81 PND=none  A=() B=()  STK: P1 P2 N20 
+A=() B=()  STK: P1 P2 N20 
+ 366:      L   20
+A=(N20) B=()  STK: P1 P2 A 
+ 368:    SG1 

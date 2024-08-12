@@ -1,0 +1,3637 @@
+lasttrngn=409   cgg=420
+   0:  DATAW #x00000000
+   4:  DATAW #x0000FDDF
+   8:  DATAW #x6D636D0B
+  12:  DATAW #x65746C70
+  16:  DATAW #x20207473
+  20:  DATAW #x0000DFDF
+  24:  DATAW #x2020740B
+  28:  DATAW #x20202020
+  32:  DATAW #x20202020
+// Entry to:   t          
+  36: L10:
+  36:     LG  205
+  38:     A1  
+  39:     SG  205
+  41:     LG  211
+  43:   JEQ0  L11
+  45:    LLL  L19920
+  47:    SP8  
+  48:     LG  203
+  50:    SP9  
+  51:    LP3  
+  52:   SP10  
+  53:   SP11  
+  54:    LP4  
+  55:   SP12  
+  56:   SP13  
+  57:    JNE  L14
+  59:    LLL  L19919
+  61:      J  L13
+  63: L14:
+  63:    LLL  L19918
+  65: L13:
+  65:   SP14  
+  66:    LP8  
+  67:    K5G   94
+  69:      J  L12
+  71: L11:
+  71:    LLL  L19917
+  73:    SP8  
+  74:     LG  203
+  76:    SP9  
+  77:    LP3  
+  78:   SP10  
+  79:   SP11  
+  80:    LP4  
+  81:   SP12  
+  82:   SP13  
+  83:    JNE  L16
+  85:    LLL  L19916
+  87:      J  L15
+  89: L16:
+  89:    LLL  L19915
+  91: L15:
+  91:   SP14  
+  92:    LP8  
+  93:    K5G   94
+  95: L12:
+  95:    LP4  
+  96:    LP3  
+  97:    JEQ  L17
+  99:     LG  204
+ 101:     A1  
+ 102:     SG  204
+ 104: L17:
+ 104:     LG  203
+ 106:     A1  
+ 107:     SG  203
+ 109:    LM1  
+ 110:    JNE  L18
+ 112:     LH  1002
+ 115:    K5G   28
+ 117: L18:
+ 117:    LP4  
+ 118:    RTN  
+ 120: L19920:
+ 120:  DATAW #x34692520
+ 124:  DATAW #x31322520
+ 128:  DATAW #x31252869
+ 132:  DATAW #x20297836
+ 136:  DATAW #x25202020
+ 140:  DATAW #x28693132
+ 144:  DATAW #x78363125
+ 148:  DATAW #x73252029
+ 152:  DATAW #x0000000A
+ 156: L19919:
+ 156:  DATAW #x004B4F02
+ 160: L19918:
+ 160:  DATAW #x49414606
+ 164:  DATAW #x0044454C
+ 168: L19917:
+ 168:  DATAW #x34692520
+ 172:  DATAW #x33312520
+ 176:  DATAW #x30252869
+ 180:  DATAW #x20297838
+ 184:  DATAW #x25202020
+ 188:  DATAW #x28693331
+ 192:  DATAW #x78383025
+ 196:  DATAW #x73252029
+ 200:  DATAW #x0000000A
+ 204: L19916:
+ 204:  DATAW #x004B4F02
+ 208: L19915:
+ 208:  DATAW #x49414606
+ 212:  DATAW #x0044454C
+ 216:  DATAW #x0000DFDF
+ 220:  DATAW #x2031740B
+ 224:  DATAW #x20202020
+ 228:  DATAW #x20202020
+// Entry to:   t1         
+ 232: L19:
+ 232:    AP4  
+ 233:    AP5  
+ 234:    AP6  
+ 235:    AP7  
+ 236:    AP8  
+ 237:    LP9  
+ 238:   SP14  
+ 239:    XCH  
+ 240:   K10G  207
+ 242:    RTN  
+ 244:  DATAW #x0000DFDF
+ 248:  DATAW #x6174730B
+ 252:  DATAW #x20207472
+ 256:  DATAW #x20202020
+// Entry to:   start      
+ 260: L20:
+ 260:      L   65
+ 262:    SP4  
+ 263:     L1  
+ 264:     SG  208
+ 266:     SG  209
+ 268:     SG  210
+ 270:    ATB  
+ 271:    LSH  
+ 272:   JEQ0  L24
+ 274: L23:
+ 274:     LG  208
+ 276:     A1  
+ 277:     SG  208
+ 279:     LG  209
+ 281:     L1  
+ 282:    LSH  
+ 283:     SG  209
+ 285:     LG  210
+ 287:     L1  
+ 288:    LSH  
+ 289:     L1  
+ 290:     OR  
+ 291:     SG  210
+ 293:     LG  209
+ 295:     L1  
+ 296:    LSH  
+ 297:   JNE0  L23
+ 299: L24:
+ 299:      L   64
+ 301:     LG  208
+ 303:    JEQ    2
+ 305:   FHOP  
+ 306:    LM1  
+ 307:     SG  211
+ 309:    LLL  L19914
+ 311:    K5G   89
+ 313:    LLP    4
+ 315:     L0  
+ 316:   GBYT  
+ 317:   SP10  
+ 318:    LLL  L19913
+ 320:    SP8  
+ 321:     LG  208
+ 323:    SP9  
+ 324:   LP10  
+ 325:      L   65
+ 327:    JNE  L26
+ 329:    LLL  L19912
+ 331:      J  L25
+ 333: L26:
+ 333:    LLL  L19911
+ 335: L25:
+ 335:   SP10  
+ 336:    LP8  
+ 337:    K5G   94
+ 339:     L1  
+ 340:    SP9  
+ 341:     L2  
+ 342:   SP10  
+ 343:     L0  
+ 344:     LF  L21
+ 346:     K5  
+ 347:     L0  
+ 348:    RTN  
+ 352: L19914:
+ 352:  DATAW #x43420A36
+ 356:  DATAW #x63204C50
+ 360:  DATAW #x69706D6F
+ 364:  DATAW #x2072656C
+ 368:  DATAW #x74736574
+ 372:  DATAW #x66207265
+ 376:  DATAW #x7420726F
+ 380:  DATAW #x4D206568
+ 384:  DATAW #x204C5043
+ 388:  DATAW #x65747865
+ 392:  DATAW #x6F69736E
+ 396:  DATAW #x6520736E
+ 400:  DATAW #x7265746E
+ 404:  DATAW #x000A6465
+ 408: L19913:
+ 408:  DATAW #x75520A25
+ 412:  DATAW #x6E696E6E
+ 416:  DATAW #x6E6F2067
+ 420:  DATAW #x25206120
+ 424:  DATAW #x6962206E
+ 428:  DATAW #x73252074
+ 432:  DATAW #x646E6520
+ 436:  DATAW #x73207265
+ 440:  DATAW #x65747379
+ 444:  DATAW #x00000A6D
+ 448: L19912:
+ 448:  DATAW #x74696C06
+ 452:  DATAW #x00656C74
+ 456: L19911:
+ 456:  DATAW #x67696203
+ 460:  DATAW #x0000DFDF
+ 464:  DATAW #x7365740B
+ 468:  DATAW #x20726574
+ 472:  DATAW #x20202020
+// Entry to:   tester     
+ 476: L21:
+ 476:      L  100
+ 478:     SG  200
+ 480:      L  101
+ 482:     SG  201
+ 484:      L  102
+ 486:     SG  202
+ 488:     L1  
+ 489:     SG  203
+ 491:     L0  
+ 492:     SG  205
+ 494:     SG  204
+ 496:     SG  206
+ 498:    XCH  
+ 499:    SP6  
+ 500: L27:
+ 500:    LP6  
+ 501:      L  100
+ 503:    MUL  
+ 504:     SG  203
+ 506:    XCH  
+ 507:     LF  L22
+ 509:     K7  
+ 510: L30:
+ 510:     L1  
+ 511:    AP6  
+ 512:    SP6  
+ 513:      L   50
+ 515:    JLE  L27
+ 517: L29:
+ 517: L28:
+ 517:     LG  205
+ 519:   SP10  
+ 520:     LG  204
+ 522:   SP11  
+ 523:    LLL  L19910
+ 525:    K6G   94
+ 527:    RTN  
+ 528: L19910:
+ 528:  DATAW #x6E250A25
+ 532:  DATAW #x53455420
+ 536:  DATAW #x43205354
+ 540:  DATAW #x4C504D4F
+ 544:  DATAW #x44455445
+ 548:  DATAW #x6E25202C
+ 552:  DATAW #x49414620
+ 556:  DATAW #x4552554C
+ 560:  DATAW #x70252D25
+ 564:  DATAW #x00000A53
+ 568:  DATAW #x0000DFDF
+ 572:  DATAW #x7365740B
+ 576:  DATAW #x74277074
+ 580:  DATAW #x736E7265
+// Entry to:   testp'terns
+ 584: L22:
+ 584:      J  L31
+ 586: L34:
+ 586:    RTN  
+ 587: L35:
+ 587:      J  L37
+ 592:  DATAW #x0000DFDF
+ 596:  DATAW #x7473740B
+ 600:  DATAW #x20202020
+ 604:  DATAW #x20202020
+// Entry to:   tst        
+ 608: L36:
+ 608:      L   11
+ 610:   SP12  
+ 611:    XCH  
+ 612:    K8G  207
+ 614:      L   22
+ 616:   SP12  
+ 617:    LP4  
+ 618:    K8G  207
+ 620:      L   33
+ 622:   SP12  
+ 623:    LP5  
+ 624:    K8G  207
+ 626:      L   44
+ 628:   SP12  
+ 629:    LP6  
+ 630:    K8G  207
+ 632:      L   55
+ 634:   SP12  
+ 635:    LP7  
+ 636:    K8G  207
+ 638:    RTN  
+ 639: L38:
+ 639:     L0  
+ 640:    RTN  
+ 641: L37:
+ 641:    LP3  
+ 642:    SP8  
+ 643:    LLL  L19909
+ 645:    K4G   94
+ 647:      L   22
+ 649:    SP8  
+ 650:      L   33
+ 652:    SP9  
+ 653:      L   44
+ 655:   SP10  
+ 656:      L   55
+ 658:   SP11  
+ 659:      L   11
+ 661:     LF  L36
+ 663:     K4  
+ 664:     L0  
+ 665:    SP4  
+ 666: L39:
+ 666:    LP4  
+ 667:    SP8  
+ 668:   JNE0  L43
+# Code for body of a MATCHE, nextlab=43 exitlab=0 next=0
+ 670:      L  100
+ 672:      J  L45
+# Code for nextlab after body in a MATCHE, nextlab=43 exitlab=45 next=0
+ 674: L43:
+ 674:    LP8  
+ 675:     L1  
+ 676:    JNE  L46
+# Code for body of a MATCHE, nextlab=46 exitlab=45 next=0
+ 678:      L  200
+ 680:      J  L45
+# Code for nextlab after body in a MATCHE, nextlab=46 exitlab=45 next=0
+ 682: L46:
+ 682:    LP8  
+ 683:     L2  
+ 684:    JNE  L48
+# Code for body of a MATCHE, nextlab=48 exitlab=45 next=0
+ 686:     LH  300
+ 689:      J  L45
+# Code for nextlab after body in a MATCHE, nextlab=48 exitlab=45 next=0
+ 691: L48:
+# Code at end of MATCHE, nextlab=0 exitlab=45 next=0
+ 691:     L0  
+ 692: L45:
+ 692:    SP8  
+ 693:    LLL  L50
+ 695:   RVP4  
+ 696:    SP9  
+ 697:    XCH  
+ 698:    K5G  207
+ 700: L42:
+ 700:     L1  
+ 701:    AP4  
+ 702:    SP4  
+ 703:     L4  
+ 704:    JLE  L39
+ 706: L41:
+ 706: L40:
+ 706:    RTN  
+ 707: L51:
+ 707:     LH  301
+ 710:    SP4  
+ 711:     LH  302
+ 714:    SP5  
+ 715:     LH  303
+ 718:    SP6  
+ 719:      L  201
+ 721:    SP7  
+ 722:    LLP    4
+ 724:    SP8  
+ 725:      L  203
+ 727:    SP9  
+ 728:      L  101
+ 730:   SP10  
+ 731:      L  102
+ 733:   SP11  
+ 734:      L  103
+ 736:   SP12  
+ 737:    LLP    7
+ 739:   SP13  
+ 740:      L  105
+ 742:   SP14  
+ 743:      L  106
+ 745:   SP15  
+ 746:    LLP   10
+ 748:   SP16  
+ 749:      J  L53
+ 752:  DATAW #x0000DFDF
+ 756:  DATAW #x7473740B
+ 760:  DATAW #x20202020
+ 764:  DATAW #x20202020
+// Entry to:   tst        
+ 768: L52:
+ 768:      L  101
+ 770:    SP8  
+ 771:   L0P3  
+ 772:    K4G  207
+ 774:      L  102
+ 776:    SP8  
+ 777:   L1P3  
+ 778:    K4G  207
+ 780:      L  103
+ 782:    SP8  
+ 783:   L2P3  
+ 784:    K4G  207
+ 786:   L3P3  
+ 787:     RV  
+ 788:      L  201
+ 790:    SP8  
+ 791:    XCH  
+ 792:    K4G  207
+ 794:   L3P3  
+ 795:    RV1  
+ 796:     RV  
+ 797:     LH  301
+ 800:    SP8  
+ 801:    XCH  
+ 802:    K4G  207
+ 804:   L3P3  
+ 805:    RV1  
+ 806:    RV1  
+ 807:     LH  302
+ 810:    SP8  
+ 811:    XCH  
+ 812:    K4G  207
+ 814:   L3P3  
+ 815:    RV1  
+ 816:    RV2  
+ 817:     LH  303
+ 820:    SP8  
+ 821:    XCH  
+ 822:    K4G  207
+ 824:   L3P3  
+ 825:    RV2  
+ 826:      L  203
+ 828:    SP8  
+ 829:    XCH  
+ 830:    K4G  207
+ 832:      L  105
+ 834:    SP8  
+ 835:   L4P3  
+ 836:    K4G  207
+ 838:    LP3  
+ 839:    RV5  
+ 840:      L  106
+ 842:    SP8  
+ 843:    XCH  
+ 844:    K4G  207
+ 846:    RTN  
+ 848:  DATAH L21-$
+ 850: L54:
+ 850:     L0  
+ 851:    RTN  
+ 852: L19909:
+ 852:  DATAW #x3469251E
+ 856:  DATAW #x6953203A
+ 860:  DATAW #x656C706D
+ 864:  DATAW #x74617020
+ 868:  DATAW #x6E726574
+ 872:  DATAW #x72617620
+ 876:  DATAW #x6C626169
+ 880:  DATAW #x000A7365
+ 884: L50:
+ 884:  DATAW #x00000064
+ 888:  DATAW #x000000C8
+ 892:  DATAW #x0000012C
+ 896:  DATAW #x00000000
+ 900:  DATAW #x00000000
+ 904: L53:
+ 904:      J  L56
+ 908:  DATAW #x0000DFDF
+ 912:  DATAW #x7473740B
+ 916:  DATAW #x20202031
+ 920:  DATAW #x20202020
+// Entry to:   tst1       
+ 924: L55:
+ 924:     LH  801
+ 927:    SP8  
+ 928:   L0P3  
+ 929:    K4G  207
+ 931:     LH  802
+ 934:    SP8  
+ 935:   L1P3  
+ 936:    K4G  207
+ 938:     LH  803
+ 941:    SP8  
+ 942:   L2P3  
+ 943:    K4G  207
+ 945:   L3P3  
+ 946:     RV  
+ 947:     LH  804
+ 950:    SP8  
+ 951:    XCH  
+ 952:    K4G  207
+ 954:   L3P3  
+ 955:    RV1  
+ 956:     RV  
+ 957:     LH  805
+ 960:    SP8  
+ 961:    XCH  
+ 962:    K4G  207
+ 964:   L3P3  
+ 965:    RV1  
+ 966:    RV1  
+ 967:     LH  806
+ 970:    SP8  
+ 971:    XCH  
+ 972:    K4G  207
+ 974:   L3P3  
+ 975:    RV1  
+ 976:    RV2  
+ 977:     LH  807
+ 980:    SP8  
+ 981:    XCH  
+ 982:    K4G  207
+ 984:   L3P3  
+ 985:    RV2  
+ 986:     LH  808
+ 989:    SP8  
+ 990:    XCH  
+ 991:    K4G  207
+ 993:     LH  809
+ 996:    SP8  
+ 997:   L4P3  
+ 998:    K4G  207
+1000:    LP3  
+1001:    RV5  
+1002:     LH  810
+1005:    SP8  
+1006:    XCH  
+1007:    K4G  207
+1009:    RTN  
+1010: L57:
+1010:     L0  
+1011:    RTN  
+1012: L56:
+1012:      J  L59
+1014:  DATAH L31-$
+1016:  DATAW #x0000DFDF
+1020:  DATAW #x6470750B
+1024:  DATAW #x20202020
+1028:  DATAW #x20202020
+// Entry to:   upd        
+1032: L58:
+1032:     LH  801
+1035:  ST0P3  
+1036:     LH  802
+1039:  ST1P3  
+1040:     LH  803
+1043:    LP3  
+1044:    ST2  
+1045:     LH  804
+1048:   L3P3  
+1049:     ST  
+1050:   L3P3  
+1051:    RV1  
+1052:     LH  805
+1055:    XCH  
+1056:     ST  
+1057:   L3P3  
+1058:    RV1  
+1059:     LH  806
+1062:    XCH  
+1063:    ST1  
+1064:   L3P3  
+1065:    RV1  
+1066:     LH  807
+1069:    XCH  
+1070:    ST2  
+1071:     LH  808
+1074:   L3P3  
+1075:    ST2  
+1076:     LH  809
+1079:     L4  
+1080:   STP3  
+1081:     LH  810
+1084:     L5  
+1085:   STP3  
+1086:    RTN  
+1087: L60:
+1087:     L0  
+1088:    RTN  
+1089: L59:
+1089:    LP3  
+1090:     SP   21
+1092:    LLL  L19908
+1094:     LG   94
+1096:      K   17
+1098:   LP16  
+1099:     LF  L52
+1101:      K   17
+1103:   LP16  
+1104:     LF  L58
+1106:      K   17
+1108:   LP16  
+1109:     LF  L55
+1111:      K   17
+1113:    RTN  
+1114: L61:
+1114:      J  L63
+1116:  DATAH L19909-$
+1120:  DATAW #x0000DFDF
+1124:  DATAW #x7473740B
+1128:  DATAW #x20202020
+1132:  DATAW #x20202020
+// Entry to:   tst        
+1136: L62:
+1136:    SP4  
+1137:     L1  
+1138:    JNE  L64
+# Code for body of a MATCHE, nextlab=64 exitlab=0 next=-1
+1140:      L  100
+1142:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=64 exitlab=0 next=-1
+1143: L64:
+1143:    LP4  
+1144:     L2  
+1145:    JNE  L66
+# Code for body of a MATCHE, nextlab=66 exitlab=0 next=-1
+1147:      L  200
+1149:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=66 exitlab=0 next=-1
+1150: L66:
+1150:    LP4  
+1151:     L3  
+1152:    JNE  L68
+# Code for body of a MATCHE, nextlab=68 exitlab=0 next=-1
+1154:     LH  300
+1157:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=68 exitlab=0 next=-1
+1158: L68:
+1158:    LP4  
+1159:     L4  
+1160:    JNE  L70
+# Code for body of a MATCHE, nextlab=70 exitlab=0 next=-1
+1162:     LH  400
+1165:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=70 exitlab=0 next=-1
+1166: L70:
+1166:    LP4  
+1167:     L5  
+1168:    JNE  L72
+# Code for body of a MATCHE, nextlab=72 exitlab=0 next=-1
+1170:     LH  500
+1173:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=72 exitlab=0 next=-1
+1174:  DATAH L50-$
+1176: L72:
+# Code for body of a MATCHE, nextlab=74 exitlab=0 next=-1
+1176:     LH  600
+1179:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=74 exitlab=0 next=-1
+1180: L74:
+# Code at end of MATCHE, nextlab=0 exitlab=0 next=-1
+1180:     L0  
+1181: L75:
+1181:    RTN  
+1184: L19908:
+1184:  DATAW #x34692520
+1188:  DATAW #x6150203A
+1192:  DATAW #x72657474
+1196:  DATAW #x6E69206E
+1200:  DATAW #x65726964
+1204:  DATAW #x76207463
+1208:  DATAW #x61697261
+1212:  DATAW #x73656C62
+1216:  DATAW #x0000000A
+1220: L63:
+1220:    LP3  
+1221:    SP8  
+1222:    LLL  L19907
+1224:    K4G   94
+1226:     L0  
+1227:     LF  L62
+1229:     K7  
+1230:     LH  600
+1233:    SP8  
+1234:    XCH  
+1235:    K4G  207
+1237:     L1  
+1238:     LF  L62
+1240:     K7  
+1241:      L  100
+1243:    SP8  
+1244:    XCH  
+1245:    K4G  207
+1247:     L2  
+1248:     LF  L62
+1250:     K7  
+1251:      L  200
+1253:    SP8  
+1254:    XCH  
+1255:    K4G  207
+1257:      J  L19906
+1260:  DATAH L53-$
+1262: L19906:
+1262:     L3  
+1263:     LF  L62
+1265:     K7  
+1266:     LH  300
+1269:    SP8  
+1270:    XCH  
+1271:    K4G  207
+1273:     L4  
+1274:     LF  L62
+1276:     K7  
+1277:     LH  400
+1280:    SP8  
+1281:    XCH  
+1282:    K4G  207
+1284:     L5  
+1285:     LF  L62
+1287:     K7  
+1288:     LH  500
+1291:    SP8  
+1292:    XCH  
+1293:    K4G  207
+1295:     L6  
+1296:     LF  L62
+1298:     K7  
+1299:     LH  600
+1302:    SP8  
+1303:    XCH  
+1304:    K4G  207
+1306:     L7  
+1307:     LF  L62
+1309:     K7  
+1310:     LH  600
+1313:    SP8  
+1314:    XCH  
+1315:    K4G  207
+1317:    RTN  
+1318: L76:
+1318:      J  L78
+1320:  DATAW #x0000DFDF
+1324:  DATAW #x7473740B
+1328:  DATAW #x20202020
+1332:  DATAW #x20202020
+// Entry to:   tst        
+1336: L77:
+1336:    SP6  
+1337:    LP4  
+1338:    SP7  
+1339:    LP5  
+1340:    SP8  
+1341:      L  123
+1343:    SP9  
+1344:    LP6  
+1345:     L1  
+1346:    JNE  L79
+# Code for body of a MATCHE, nextlab=79 exitlab=0 next=-1
+1348:      L  100
+1350:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=79 exitlab=0 next=-1
+1351: L79:
+1351:    LP6  
+1352:     L2  
+1353:    JNE  L81
+# Code for body of a MATCHE, nextlab=81 exitlab=0 next=-1
+1355:      L  200
+1357:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=81 exitlab=0 next=-1
+1358: L81:
+1358:    LP6  
+1359:     L3  
+1360:    JNE  L83
+# Code for body of a MATCHE, nextlab=83 exitlab=0 next=-1
+1362:     LH  300
+1365:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=83 exitlab=0 next=-1
+1366: L83:
+1366:    LP6  
+1367:     L4  
+1368:    JNE  L85
+# Code for body of a MATCHE, nextlab=85 exitlab=0 next=-1
+1370:     LH  400
+1373:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=85 exitlab=0 next=-1
+1374: L85:
+1374:    LP6  
+1375:     L5  
+1376:    JNE  L87
+# Code for body of a MATCHE, nextlab=87 exitlab=0 next=-1
+1378:     LH  500
+1381:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=87 exitlab=0 next=-1
+1382: L87:
+1382:    LP6  
+1383:     L6  
+1384:    JNE  L89
+# Code for body of a MATCHE, nextlab=89 exitlab=0 next=-1
+1386:     LH  600
+1389:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=89 exitlab=0 next=-1
+1390: L89:
+# Code at end of MATCHE, nextlab=0 exitlab=0 next=-1
+1390:     L0  
+1391: L91:
+1391:    RTN  
+1392: L19907:
+1392:  DATAW #x3469251B
+1396:  DATAW #x6953203A
+1400:  DATAW #x656C706D
+1404:  DATAW #x54414D20
+1408:  DATAW #x63204843
+1412:  DATAW #x616D6D6F
+1416:  DATAW #x0A73646E
+1420: L78:
+1420:    LP3  
+1421:    SP8  
+1422:    LLL  L19905
+1424:    K4G   94
+1426:     L0  
+1427:     LF  L77
+1429:     K7  
+1430:     L0  
+1431:    SP8  
+1432:    XCH  
+1433:    K4G  207
+1435:     L1  
+1436:     LF  L77
+1438:     K7  
+1439:      L  100
+1441:    SP8  
+1442:    XCH  
+1443:    K4G  207
+1445:     L2  
+1446:     LF  L77
+1448:     K7  
+1449:      L  200
+1451:    SP8  
+1452:    XCH  
+1453:    K4G  207
+1455:     L3  
+1456:     LF  L77
+1458:     K7  
+1459:     LH  300
+1462:    SP8  
+1463:    XCH  
+1464:    K4G  207
+1466:     L4  
+1467:     LF  L77
+1469:     K7  
+1470:     LH  400
+1473:    SP8  
+1474:    XCH  
+1475:    K4G  207
+1477:     L5  
+1478:     LF  L77
+1480:     K7  
+1481:     LH  500
+1484:    SP8  
+1485:    XCH  
+1486:    K4G  207
+1488:     L6  
+1489:     LF  L77
+1491:     K7  
+1492:     LH  600
+1495:    SP8  
+1496:    XCH  
+1497:    K4G  207
+1499:     L7  
+1500:     LF  L77
+1502:     K7  
+1503:     L0  
+1504:    SP8  
+1505:    XCH  
+1506:    K4G  207
+1508:    RTN  
+1509: L92:
+1509:      J  L94
+1512:  DATAW #x0000DFDF
+1516:  DATAW #x7473740B
+1520:  DATAW #x20202020
+1524:  DATAW #x20202020
+// Entry to:   tst        
+1528: L93:
+1528:     L0  
+1529:    SP6  
+1530:    XCH  
+1531:    SP7  
+1532:    LP4  
+1533:    SP8  
+1534:    LP5  
+1535:    SP9  
+1536:      L  123
+1538:   SP10  
+1539:    LP7  
+1540:     L1  
+1541:    JGE  L95
+# Code for body of a EVERYE, nextlab=95 exitlab=0 next=-1
+1543:      L  100
+1545:    AP6  
+1546:    SP6  
+# Code for nextlab after body in a EVERYE, nextlab=95 exitlab=0 next=-1
+1547: L95:
+1547:    LP7  
+1548:     L2  
+1549:    JGE  L96
+# Code for body of a EVERYE, nextlab=96 exitlab=0 next=-1
+1551:      L  200
+1553:    AP6  
+1554:    SP6  
+# Code for nextlab after body in a EVERYE, nextlab=96 exitlab=0 next=-1
+1555: L96:
+1555:    LP7  
+1556:     L3  
+1557:    JGE  L97
+# Code for body of a EVERYE, nextlab=97 exitlab=0 next=-1
+1559:     LH  300
+1562:    AP6  
+1563:    SP6  
+# Code for nextlab after body in a EVERYE, nextlab=97 exitlab=0 next=-1
+1564: L97:
+1564:    LP7  
+1565:     L4  
+1566:    JGE  L98
+# Code for body of a EVERYE, nextlab=98 exitlab=0 next=-1
+1568:     LH  400
+1571:    AP6  
+1572:    SP6  
+# Code for nextlab after body in a EVERYE, nextlab=98 exitlab=0 next=-1
+1573: L98:
+1573:    LP7  
+1574:     L5  
+1575:    JGE  L99
+# Code for body of a EVERYE, nextlab=99 exitlab=0 next=-1
+1577:     LH  500
+1580:    AP6  
+1581:    SP6  
+# Code for nextlab after body in a EVERYE, nextlab=99 exitlab=0 next=-1
+1582: L99:
+# Code for body of a EVERYE, nextlab=100 exitlab=0 next=-1
+1582:     LH  600
+1585:    AP6  
+1586:    SP6  
+# Code for nextlab after body in a EVERYE, nextlab=100 exitlab=0 next=-1
+1587: L100:
+# Code at end of EVERYE, nextlab=0 exitlab=0 next=-1
+# EVERYe final code, patresultpos=6
+
+1587:    LP6  
+1588:    RTN  
+1590:  DATAH L52-$
+1592:  DATAH L55-$
+1596: L19905:
+1596:  DATAW #x3469251E
+1600:  DATAW #x6953203A
+1604:  DATAW #x656C706D
+1608:  DATAW #x54414D20
+1612:  DATAW #x65204843
+1616:  DATAW #x65727078
+1620:  DATAW #x6F697373
+1624:  DATAW #x000A736E
+1628: L94:
+1628:    LP3  
+1629:    SP8  
+1630:    LLL  L19904
+1632:    K4G   94
+1634:     L0  
+1635:     LF  L93
+1637:     K7  
+1638:     LH  2100
+1641:    SP8  
+1642:    XCH  
+1643:    K4G  207
+1645:     L1  
+1646:     LF  L93
+1648:     K7  
+1649:     LH  2000
+1652:    SP8  
+1653:    XCH  
+1654:    K4G  207
+1656:     L2  
+1657:     LF  L93
+1659:     K7  
+1660:     LH  1800
+1663:    SP8  
+1664:    XCH  
+1665:    K4G  207
+1667:     L3  
+1668:     LF  L93
+1670:     K7  
+1671:     LH  1500
+1674:    SP8  
+1675:    XCH  
+1676:    K4G  207
+1678:     L4  
+1679:     LF  L93
+1681:     K7  
+1682:     LH  1100
+1685:    SP8  
+1686:    XCH  
+1687:    K4G  207
+1689:     L5  
+1690:     LF  L93
+1692:     K7  
+1693:     LH  600
+1696:    SP8  
+1697:    XCH  
+1698:    K4G  207
+1700:     L6  
+1701:     LF  L93
+1703:     K7  
+1704:     LH  600
+1707:    SP8  
+1708:    XCH  
+1709:    K4G  207
+1711:     L7  
+1712:     LF  L93
+1714:     K7  
+1715:     LH  600
+1718:    SP8  
+1719:    XCH  
+1720:    K4G  207
+1722:    RTN  
+1724:  DATAH L19907-$
+1726: L101:
+1726:      J  L103
+1728:  DATAH L62-$
+1732:  DATAW #x0000DFDF
+1736:  DATAW #x7473740B
+1740:  DATAW #x20202020
+1744:  DATAW #x20202020
+// Entry to:   tst        
+1748: L102:
+1748:     L0  
+1749:    SP6  
+1750:    XCH  
+1751:    SP7  
+1752:    LP4  
+1753:    SP8  
+1754:    LP5  
+1755:    SP9  
+1756:      L  123
+1758:   SP10  
+1759:    LP7  
+1760:     L1  
+1761:    JGE  L104
+# Code for body of a EVERYE, nextlab=104 exitlab=0 next=-1
+1763:      L  100
+1765:    AP6  
+1766:    SP6  
+# Code for nextlab after body in a EVERYE, nextlab=104 exitlab=0 next=-1
+1767: L104:
+1767:    LP7  
+1768:     L2  
+1769:    JGE  L105
+# Code for body of a EVERYE, nextlab=105 exitlab=0 next=-1
+1771:      L  200
+1773:    AP6  
+1774:    SP6  
+# Code for nextlab after body in a EVERYE, nextlab=105 exitlab=0 next=-1
+1775: L105:
+1775:    LP7  
+1776:     L3  
+1777:    JGE  L106
+# Code for body of a EVERYE, nextlab=106 exitlab=0 next=-1
+1779:     LH  300
+1782:    AP6  
+1783:    SP6  
+# Code for nextlab after body in a EVERYE, nextlab=106 exitlab=0 next=-1
+1784: L106:
+1784:    LP7  
+1785:     L4  
+1786:    JGE  L107
+# Code for body of a EVERYE, nextlab=107 exitlab=0 next=-1
+1788:     LH  400
+1791:    AP6  
+1792:    SP6  
+# Code for nextlab after body in a EVERYE, nextlab=107 exitlab=0 next=-1
+1793: L107:
+1793:    LP7  
+1794:     L5  
+1795:    JGE  L108
+# Code for body of a EVERYE, nextlab=108 exitlab=0 next=-1
+1797:     LH  500
+1800:    AP6  
+1801:    SP6  
+# Code for nextlab after body in a EVERYE, nextlab=108 exitlab=0 next=-1
+1802: L108:
+1802:    LP7  
+1803:     L6  
+1804:    JGE  L109
+# Code for body of a EVERYE, nextlab=109 exitlab=0 next=-1
+1806:     LH  600
+1809:    AP6  
+1810:    SP6  
+# Code for nextlab after body in a EVERYE, nextlab=109 exitlab=0 next=-1
+1811: L109:
+# Code at end of EVERYE, nextlab=0 exitlab=0 next=-1
+# EVERYe final code, patresultpos=6
+
+1811:    LP6  
+1812:    RTN  
+1816: L19904:
+1816:  DATAW #x3469251E
+1820:  DATAW #x6953203A
+1824:  DATAW #x656C706D
+1828:  DATAW #x45564520
+1832:  DATAW #x65205952
+1836:  DATAW #x65727078
+1840:  DATAW #x6F697373
+1844:  DATAW #x000A736E
+1848: L103:
+1848:    LP3  
+1849:    SP8  
+1850:    LLL  L19903
+1852:    K4G   94
+1854:     L0  
+1855:     LF  L102
+1857:     K7  
+1858:     LH  2100
+1861:    SP8  
+1862:    XCH  
+1863:    K4G  207
+1865:     L1  
+1866:     LF  L102
+1868:     K7  
+1869:     LH  2000
+1872:    SP8  
+1873:    XCH  
+1874:    K4G  207
+1876:     L2  
+1877:     LF  L102
+1879:     K7  
+1880:     LH  1800
+1883:    SP8  
+1884:    XCH  
+1885:    K4G  207
+1887:     L3  
+1888:     LF  L102
+1890:     K7  
+1891:     LH  1500
+1894:    SP8  
+1895:    XCH  
+1896:    K4G  207
+1898:     L4  
+1899:     LF  L102
+1901:     K7  
+1902:     LH  1100
+1905:    SP8  
+1906:    XCH  
+1907:    K4G  207
+1909:     L5  
+1910:     LF  L102
+1912:     K7  
+1913:     LH  600
+1916:    SP8  
+1917:    XCH  
+1918:    K4G  207
+1920:     L6  
+1921:     LF  L102
+1923:     K7  
+1924:     L0  
+1925:    SP8  
+1926:    XCH  
+1927:    K4G  207
+1929:     L7  
+1930:      J  L19902
+1932:  DATAH L19905-$
+1934: L19902:
+1934:     LF  L102
+1936:     K7  
+1937:     L0  
+1938:    SP8  
+1939:    XCH  
+1940:    K4G  207
+1942:    RTN  
+1943: L110:
+1943:      J  L112
+1946:  DATAH L77-$
+1948:  DATAW #x0000DFDF
+1952:  DATAW #x7473740B
+1956:  DATAW #x20202020
+1960:  DATAW #x20202020
+// Entry to:   tst        
+1964: L111:
+1964:    SP6  
+1965:    LP4  
+1966:    SP7  
+1967:    LP5  
+1968:    SP8  
+1969:      L  123
+1971:    SP9  
+1972:    LP6  
+1973:     L1  
+1974:    JNE  L113
+# Code for body of a MATCHE, nextlab=113 exitlab=0 next=-1
+1976:    L10  
+1977:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=113 exitlab=0 next=-1
+1978: L113:
+1978:    LP6  
+1979:      L   65
+1981:    JNE  L115
+# Code for body of a MATCHE, nextlab=115 exitlab=0 next=-1
+1983:      L   20
+1985:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=115 exitlab=0 next=-1
+1986: L115:
+1986:    LP6  
+1987:    LM1  
+1988:    JNE  L117
+# Code for body of a MATCHE, nextlab=117 exitlab=0 next=-1
+1990:      L   30
+1992:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=117 exitlab=0 next=-1
+1993: L117:
+1993:    LP6  
+1994:   JNE0  L119
+# Code for body of a MATCHE, nextlab=119 exitlab=0 next=-1
+1996:      L   40
+1998:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=119 exitlab=0 next=-1
+1999: L119:
+1999:    LP6  
+2000:     LM    5
+2002:    JNE  L121
+# Code for body of a MATCHE, nextlab=121 exitlab=0 next=-1
+2004:      L   50
+2006:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=121 exitlab=0 next=-1
+2007: L121:
+2007:    LP6  
+2008:     L6  
+2009:    JNE  L123
+# Code for body of a MATCHE, nextlab=123 exitlab=0 next=-1
+2011:      L   60
+2013:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=123 exitlab=0 next=-1
+2014: L123:
+2014:    LP6  
+2015:     L7  
+2016:    JNE  L125
+# Code for body of a MATCHE, nextlab=125 exitlab=0 next=-1
+2018:     L0  
+2019:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=125 exitlab=0 next=-1
+2020: L125:
+# Code at end of MATCHE, nextlab=0 exitlab=0 next=-1
+2020:     L0  
+2021: L127:
+2021:    RTN  
+2024: L19903:
+2024:  DATAW #x3469251C
+2028:  DATAW #x6F4D203A
+2032:  DATAW #x45206572
+2036:  DATAW #x59524556
+2040:  DATAW #x70786520
+2044:  DATAW #x73736572
+2048:  DATAW #x736E6F69
+2052:  DATAW #x0000000A
+2056: L112:
+2056:    LP3  
+2057:    SP8  
+2058:    LLL  L19901
+2060:    K4G   94
+2062:     L0  
+2063:     LF  L111
+2065:     K7  
+2066:      L   40
+2068:    SP8  
+2069:    XCH  
+2070:    K4G  207
+2072:     L1  
+2073:     LF  L111
+2075:     K7  
+2076:    L10  
+2077:    SP8  
+2078:    XCH  
+2079:    K4G  207
+2081:      L   65
+2083:     LF  L111
+2085:     K7  
+2086:      L   20
+2088:    SP8  
+2089:    XCH  
+2090:    K4G  207
+2092:    LM1  
+2093:     LF  L111
+2095:     K7  
+2096:      L   30
+2098:    SP8  
+2099:    XCH  
+2100:    K4G  207
+2102:     L0  
+2103:     LF  L111
+2105:     K7  
+2106:      L   40
+2108:    SP8  
+2109:    XCH  
+2110:    K4G  207
+2112:     LM    5
+2114:     LF  L111
+2116:     K7  
+2117:      L   50
+2119:    SP8  
+2120:    XCH  
+2121:    K4G  207
+2123:     L6  
+2124:     LF  L111
+2126:     K7  
+2127:      L   60
+2129:    SP8  
+2130:    XCH  
+2131:    K4G  207
+2133:     L7  
+2134:     LF  L111
+2136:     K7  
+2137:     L0  
+2138:      J  L19900
+2140:  DATAH L19904-$
+2142: L19900:
+2142:    SP8  
+2143:    XCH  
+2144:    K4G  207
+2146:    RTN  
+2148:  DATAH L93-$
+2150: L128:
+2150:      J  L130
+2152:  DATAW #x0000DFDF
+2156:  DATAW #x7473740B
+2160:  DATAW #x20202020
+2164:  DATAW #x20202020
+// Entry to:   tst        
+2168: L129:
+2168:    SP6  
+2169:    LP4  
+2170:    SP7  
+2171:    LP5  
+2172:    SP8  
+2173:      L  123
+2175:    SP9  
+2176:    LP6  
+2177:     LW  #x3FA00000
+2182:    JNE  L131
+# Code for body of a MATCHE, nextlab=131 exitlab=0 next=-1
+2184:    L10  
+2185:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=131 exitlab=0 next=-1
+2186: L131:
+2186:    LP6  
+2187:     LW  #xBFA00000
+2192:    JNE  L133
+# Code for body of a MATCHE, nextlab=133 exitlab=0 next=-1
+2194:      L   20
+2196:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=133 exitlab=0 next=-1
+2197: L133:
+2197:    LP6  
+2198:     LW  #x3FA00000
+2203:    JNE  L135
+# Code for body of a MATCHE, nextlab=135 exitlab=0 next=-1
+2205:      L   30
+2207:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=135 exitlab=0 next=-1
+2208: L135:
+2208:    LP6  
+2209:     LW  #x3F8E147B
+2214:  FLTOP  EQ
+2216:   JEQ0  L137
+# Code for body of a MATCHE, nextlab=137 exitlab=0 next=-1
+2218:      L   40
+2220:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=137 exitlab=0 next=-1
+2221: L137:
+# Code at end of MATCHE, nextlab=0 exitlab=0 next=-1
+2221:     L0  
+2222: L138:
+2222:    RTN  
+2224: L19901:
+2224:  DATAW #x34692516
+2228:  DATAW #x6953203A
+2232:  DATAW #x656C706D
+2236:  DATAW #x6E6F6320
+2240:  DATAW #x6E617473
+2244:  DATAW #x000A7374
+2248: L130:
+2248:    LP3  
+2249:    SP8  
+2250:    LLL  L19899
+2252:    K4G   94
+2254:     L0  
+2255:     LF  L129
+2257:     K7  
+2258:     L0  
+2259:    SP8  
+2260:    XCH  
+2261:    K4G  207
+2263:     LW  #x3FA00000
+2268:     LF  L129
+2270:     K7  
+2271:    L10  
+2272:    SP8  
+2273:    XCH  
+2274:    K4G  207
+2276:     LW  #xBFA00000
+2281:     LF  L129
+2283:     K7  
+2284:      L   20
+2286:    SP8  
+2287:    XCH  
+2288:    K4G  207
+2290:     LW  #x3FA00000
+2295:     LF  L129
+2297:     K7  
+2298:    L10  
+2299:    SP8  
+2300:    XCH  
+2301:    K4G  207
+2303:     LW  #x3F8E147B
+2308:     LF  L129
+2310:     K7  
+2311:      L   40
+2313:    SP8  
+2314:    XCH  
+2315:    K4G  207
+2317:    RTN  
+2318: L139:
+2318:      J  L141
+2320:  DATAH L19903-$
+2322:  DATAH L102-$
+2324:  DATAW #x0000DFDF
+2328:  DATAW #x7473740B
+2332:  DATAW #x20202020
+2336:  DATAW #x20202020
+// Entry to:   tst        
+2340: L140:
+2340:      L  110
+2342:    SP6  
+2343:      L  120
+2345:    SP7  
+2346:    LP3  
+2347:    SP8  
+2348:    LP4  
+2349:    SP9  
+2350:    LP5  
+2351:   SP10  
+2352:      L  123
+2354:   SP11  
+2355:    LP8  
+2356:     L1  
+2357:    JLS  L142
+2359:    XCH  
+2360:    L10  
+2361:    JGR  L142
+# Code for body of a MATCHE, nextlab=142 exitlab=0 next=-1
+2363:     L1  
+2364:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=142 exitlab=0 next=-1
+2365: L142:
+2365:    LP8  
+2366:     LW  #x42480000
+2371:  FLTOP  LS
+2373:   JNE0  L143
+2375:    LP8  
+2376:     LW  #x42960000
+2381:  FLTOP  GR
+2383:   JNE0  L143
+# Code for body of a MATCHE, nextlab=143 exitlab=0 next=-1
+2385:     L2  
+2386:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=143 exitlab=0 next=-1
+2387: L143:
+2387:    LP8  
+2388:      L   76
+2390:    JLS  L144
+2392:    XCH  
+2393:      L  100
+2395:    JGR  L144
+# Code for body of a MATCHE, nextlab=144 exitlab=0 next=-1
+2397:     L3  
+2398:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=144 exitlab=0 next=-1
+2399: L144:
+2399:    LP8  
+2400:    LP6  
+2401:    JLS  L145
+2403:    XCH  
+2404:    LP7  
+2405:    JGR  L145
+# Code for body of a MATCHE, nextlab=145 exitlab=0 next=-1
+2407:     L4  
+2408:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=145 exitlab=0 next=-1
+2409: L145:
+# Code at end of MATCHE, nextlab=0 exitlab=0 next=-1
+2409:     L0  
+2410: L146:
+2410:    RTN  
+2412: L19899:
+2412:  DATAW #x3469251F
+2416:  DATAW #x6C46203A
+2420:  DATAW #x6974616F
+2424:  DATAW #x7020676E
+2428:  DATAW #x746E696F
+2432:  DATAW #x61706220
+2436:  DATAW #x65742074
+2440:  DATAW #x0A736D72
+2444: L141:
+2444:    LP3  
+2445:    SP8  
+2446:    LLL  L19898
+2448:    K4G   94
+2450:     L0  
+2451:     LF  L140
+2453:     K7  
+2454:     L0  
+2455:    SP8  
+2456:    XCH  
+2457:    K4G  207
+2459:     L1  
+2460:     LF  L140
+2462:     K7  
+2463:     L1  
+2464:    SP8  
+2465:    XCH  
+2466:    K4G  207
+2468:     L2  
+2469:     LF  L140
+2471:     K7  
+2472:     L1  
+2473:    SP8  
+2474:    XCH  
+2475:    K4G  207
+2477:     L9  
+2478:     LF  L140
+2480:     K7  
+2481:     L1  
+2482:    SP8  
+2483:    XCH  
+2484:    K4G  207
+2486:    L10  
+2487:     LF  L140
+2489:     K7  
+2490:     L1  
+2491:    SP8  
+2492:    XCH  
+2493:    K4G  207
+2495:      L   11
+2497:     LF  L140
+2499:     K7  
+2500:     L0  
+2501:    SP8  
+2502:    XCH  
+2503:    K4G  207
+2505:     LW  #x42820000
+2510:     LF  L140
+2512:     K7  
+2513:     L2  
+2514:    SP8  
+2515:    XCH  
+2516:    K4G  207
+2518:      L  100
+2520:     LF  L140
+2522:     K7  
+2523:     L3  
+2524:    SP8  
+2525:    XCH  
+2526:    K4G  207
+2528:      L  101
+2530:     LF  L140
+2532:     K7  
+2533:     L0  
+2534:    SP8  
+2535:    XCH  
+2536:    K4G  207
+2538:    RTN  
+2540:  DATAH L19901-$
+2542: L147:
+2542:      J  L149
+2544:  DATAH L111-$
+2548:  DATAW #x0000DFDF
+2552:  DATAW #x7473740B
+2556:  DATAW #x20202020
+2560:  DATAW #x20202020
+// Entry to:   tst        
+2564: L148:
+2564:      L  110
+2566:    SP6  
+2567:      L  120
+2569:    SP7  
+2570:    LP3  
+2571:    SP8  
+2572:    LP4  
+2573:    SP9  
+2574:    LP5  
+2575:   SP10  
+2576:      L  123
+2578:   SP11  
+2579:    LP8  
+2580:     L1  
+2581:    JLS  L150
+2583:    XCH  
+2584:    L10  
+2585:    JGR  L150
+# Code for body of a MATCHE, nextlab=150 exitlab=0 next=-1
+2587:     L1  
+2588:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=150 exitlab=0 next=-1
+2589: L150:
+2589:    LP8  
+2590:     LW  #x42480000
+2595:  FLTOP  LS
+2597:   JNE0  L151
+2599:    LP8  
+2600:     LW  #x42960000
+2605:  FLTOP  GR
+2607:   JNE0  L151
+# Code for body of a MATCHE, nextlab=151 exitlab=0 next=-1
+2609:     L2  
+2610:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=151 exitlab=0 next=-1
+2611: L151:
+2611:    LP8  
+2612:      L   76
+2614:    JLS  L152
+2616:    XCH  
+2617:      L  100
+2619:    JGR  L152
+# Code for body of a MATCHE, nextlab=152 exitlab=0 next=-1
+2621:     L3  
+2622:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=152 exitlab=0 next=-1
+2623: L152:
+2623:    LP8  
+2624:    LP6  
+2625:    JLS  L153
+2627:    XCH  
+2628:    LP7  
+2629:    JGR  L153
+# Code for body of a MATCHE, nextlab=153 exitlab=0 next=-1
+2631:     L4  
+2632:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=153 exitlab=0 next=-1
+2633: L153:
+# Code at end of MATCHE, nextlab=0 exitlab=0 next=-1
+2633:     L0  
+2634: L154:
+2634:    RTN  
+2636: L19898:
+2636:  DATAW #x34692527
+2640:  DATAW #x6E49203A
+2644:  DATAW #x65676574
+2648:  DATAW #x6E612072
+2652:  DATAW #x6C662064
+2656:  DATAW #x6974616F
+2660:  DATAW #x7020676E
+2664:  DATAW #x746E696F
+2668:  DATAW #x6E617220
+2672:  DATAW #x0A736567
+2676: L149:
+2676:    LP3  
+2677:    SP8  
+2678:    LLL  L19897
+2680:    K4G   94
+2682:     L0  
+2683:     LF  L148
+2685:     K7  
+2686:     L0  
+2687:    SP8  
+2688:    XCH  
+2689:    K4G  207
+2691:     L1  
+2692:     LF  L148
+2694:     K7  
+2695:     L1  
+2696:    SP8  
+2697:    XCH  
+2698:    K4G  207
+2700:     L2  
+2701:     LF  L148
+2703:     K7  
+2704:     L1  
+2705:    SP8  
+2706:    XCH  
+2707:    K4G  207
+2709:     L9  
+2710:     LF  L148
+2712:     K7  
+2713:     L1  
+2714:    SP8  
+2715:    XCH  
+2716:    K4G  207
+2718:    L10  
+2719:     LF  L148
+2721:     K7  
+2722:     L1  
+2723:    SP8  
+2724:    XCH  
+2725:    K4G  207
+2727:      L   11
+2729:     LF  L148
+2731:     K7  
+2732:     L0  
+2733:    SP8  
+2734:    XCH  
+2735:    K4G  207
+2737:     LW  #x42820000
+2742:     LF  L148
+2744:     K7  
+2745:     L2  
+2746:    SP8  
+2747:    XCH  
+2748:    K4G  207
+2750:      L  100
+2752:     LF  L148
+2754:     K7  
+2755:     L3  
+2756:    SP8  
+2757:    XCH  
+2758:      J  L19896
+2760:  DATAH L19899-$
+2762: L19896:
+2762:    K4G  207
+2764:      L  101
+2766:     LF  L148
+2768:     K7  
+2769:     L0  
+2770:    SP8  
+2771:    XCH  
+2772:    K4G  207
+2774:      L  109
+2776:     LF  L148
+2778:     K7  
+2779:     L0  
+2780:    SP8  
+2781:    XCH  
+2782:    K4G  207
+2784:      L  110
+2786:     LF  L148
+2788:     K7  
+2789:     L4  
+2790:    SP8  
+2791:    XCH  
+2792:    K4G  207
+2794:      L  115
+2796:     LF  L148
+2798:     K7  
+2799:     L4  
+2800:    SP8  
+2801:    XCH  
+2802:    K4G  207
+2804:      L  120
+2806:     LF  L148
+2808:     K7  
+2809:     L4  
+2810:    SP8  
+2811:    XCH  
+2812:    K4G  207
+2814:      L  121
+2816:      J  L19895
+2818:  DATAH L129-$
+2820: L19895:
+2820:     LF  L148
+2822:     K7  
+2823:     L0  
+2824:    SP8  
+2825:    XCH  
+2826:    K4G  207
+2828:    RTN  
+2829: L155:
+2829:      J  L157
+2832:  DATAW #x0000DFDF
+2836:  DATAW #x7473740B
+2840:  DATAW #x20202020
+2844:  DATAW #x20202020
+// Entry to:   tst        
+2848: L156:
+2848:    SP4  
+2849:     L1  
+2850:    JEQ  L159
+2852:    XCH  
+2853:     L2  
+2854:    JEQ  L161
+2856:    XCH  
+2857:     L5  
+2858:    JEQ  L163
+2860:    XCH  
+2861:     L6  
+2862:    JEQ  L165
+2864:    XCH  
+2865:      L   20
+2867:    JLS  L168
+2869:    XCH  
+2870:      L   30
+2872:    JLE  L167
+2874: L168:
+2874:    LP4  
+2875:      L   45
+2877:    JNE  L158
+2879: L167:
+2879: L165:
+2879: L163:
+2879: L161:
+2879: L159:
+# Code for body of a MATCHE, nextlab=158 exitlab=0 next=-1
+2879:     L1  
+2880:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=158 exitlab=0 next=-1
+2881: L158:
+2881:    LP4  
+2882:     LW  #x42C80000
+2887:    JEQ  L171
+2889:    XCH  
+2890:     LW  #x43480000
+2895:    JNE  L170
+2897: L171:
+# Code for body of a MATCHE, nextlab=170 exitlab=0 next=-1
+2897:     L2  
+2898:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=170 exitlab=0 next=-1
+2899: L170:
+# Code at end of MATCHE, nextlab=0 exitlab=0 next=-1
+2899:     L0  
+2900: L174:
+2900:    RTN  
+2904: L19897:
+2904:  DATAW #x34692527
+2908:  DATAW #x6E49203A
+2912:  DATAW #x65676574
+2916:  DATAW #x6E612072
+2920:  DATAW #x6C662064
+2924:  DATAW #x6974616F
+2928:  DATAW #x7020676E
+2932:  DATAW #x746E696F
+2936:  DATAW #x6E617220
+2940:  DATAW #x0A736567
+2944:  DATAH L19898-$
+2946: L157:
+2946:    LP3  
+2947:    SP8  
+2948:    LLL  L19894
+2950:    K4G   94
+2952:     L0  
+2953:     LF  L156
+2955:     K7  
+2956:     L0  
+2957:    SP8  
+2958:    XCH  
+2959:    K4G  207
+2961:     L1  
+2962:     LF  L156
+2964:     K7  
+2965:     L1  
+2966:    SP8  
+2967:    XCH  
+2968:    K4G  207
+2970:     L2  
+2971:     LF  L156
+2973:     K7  
+2974:     L1  
+2975:    SP8  
+2976:    XCH  
+2977:      J  L19893
+2980:  DATAH L140-$
+2982: L19893:
+2982:    K4G  207
+2984:     L3  
+2985:     LF  L156
+2987:     K7  
+2988:     L0  
+2989:    SP8  
+2990:    XCH  
+2991:    K4G  207
+2993:     L4  
+2994:     LF  L156
+2996:     K7  
+2997:     L0  
+2998:    SP8  
+2999:    XCH  
+3000:    K4G  207
+3002:     L5  
+3003:     LF  L156
+3005:     K7  
+3006:     L1  
+3007:    SP8  
+3008:    XCH  
+3009:    K4G  207
+3011:     L6  
+3012:     LF  L156
+3014:     K7  
+3015:     L1  
+3016:    SP8  
+3017:    XCH  
+3018:    K4G  207
+3020:     L7  
+3021:     LF  L156
+3023:     K7  
+3024:     L0  
+3025:    SP8  
+3026:    XCH  
+3027:    K4G  207
+3029:     L8  
+3030:     LF  L156
+3032:     K7  
+3033:     L0  
+3034:    SP8  
+3035:    XCH  
+3036:    K4G  207
+3038:     L9  
+3039:     LF  L156
+3041:     K7  
+3042:     L0  
+3043:    SP8  
+3044:    XCH  
+3045:    K4G  207
+3047:      L   20
+3049:      J  L19892
+3052:  DATAH L149-$
+3054: L19892:
+3054:     LF  L156
+3056:     K7  
+3057:     L1  
+3058:    SP8  
+3059:    XCH  
+3060:    K4G  207
+3062:      L   30
+3064:     LF  L156
+3066:     K7  
+3067:     L1  
+3068:    SP8  
+3069:    XCH  
+3070:    K4G  207
+3072:      L   45
+3074:     LF  L156
+3076:     K7  
+3077:     L1  
+3078:    SP8  
+3079:    XCH  
+3080:    K4G  207
+3082:     LW  #x42C80000
+3087:     LF  L156
+3089:     K7  
+3090:     L2  
+3091:    SP8  
+3092:    XCH  
+3093:    K4G  207
+3095:     LW  #x43480000
+3100:     LF  L156
+3102:     K7  
+3103:     L2  
+3104:    SP8  
+3105:    XCH  
+3106:    K4G  207
+3108:    RTN  
+3109: L175:
+3109:      J  L182
+3112:  DATAH L19897-$
+3116:  DATAW #x0000DFDF
+3120:  DATAW #x7473740B
+3124:  DATAW #x20207165
+3128:  DATAW #x20202020
+// Entry to:   tsteq      
+3132: L176:
+3132:    SP5  
+3133:    LP4  
+3134:    SP6  
+3135:    JNE  L183
+# Code for body of a MATCHE, nextlab=183 exitlab=0 next=-1
+3137:    LM1  
+3138:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=183 exitlab=0 next=-1
+3139: L183:
+# Code at end of MATCHE, nextlab=0 exitlab=0 next=-1
+3139:     L0  
+3140: L184:
+3140:    RTN  
+3144: L19894:
+3144:  DATAW #x34692527
+3148:  DATAW #x6E49203A
+3152:  DATAW #x65676574
+3156:  DATAW #x6E612072
+3160:  DATAW #x6C462064
+3164:  DATAW #x6974616F
+3168:  DATAW #x6120676E
+3172:  DATAW #x7265746C
+3176:  DATAW #x6974616E
+3180:  DATAW #x0A736E6F
+3184:  DATAH L148-$
+3188:  DATAW #x0000DFDF
+3192:  DATAW #x7473740B
+3196:  DATAW #x2020656E
+3200:  DATAW #x20202020
+// Entry to:   tstne      
+3204: L177:
+3204:    SP5  
+3205:    LP4  
+3206:    SP6  
+3207:    JEQ  L185
+# Code for body of a MATCHE, nextlab=185 exitlab=0 next=-1
+3209:    LM1  
+3210:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=185 exitlab=0 next=-1
+3211: L185:
+# Code at end of MATCHE, nextlab=0 exitlab=0 next=-1
+3211:     L0  
+3212: L186:
+3212:    RTN  
+3216:  DATAW #x0000DFDF
+3220:  DATAW #x7473740B
+3224:  DATAW #x2020736C
+3228:  DATAW #x20202020
+// Entry to:   tstls      
+3232: L178:
+3232:    SP5  
+3233:    LP4  
+3234:    SP6  
+3235:    JGE  L187
+# Code for body of a MATCHE, nextlab=187 exitlab=0 next=-1
+3237:    LM1  
+3238:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=187 exitlab=0 next=-1
+3239: L187:
+# Code at end of MATCHE, nextlab=0 exitlab=0 next=-1
+3239:     L0  
+3240: L188:
+3240:    RTN  
+3244:  DATAW #x0000DFDF
+3248:  DATAW #x7473740B
+3252:  DATAW #x20207267
+3256:  DATAW #x20202020
+// Entry to:   tstgr      
+3260: L179:
+3260:    SP5  
+3261:    LP4  
+3262:    SP6  
+3263:    JLE  L189
+# Code for body of a MATCHE, nextlab=189 exitlab=0 next=-1
+3265:    LM1  
+3266:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=189 exitlab=0 next=-1
+3267: L189:
+# Code at end of MATCHE, nextlab=0 exitlab=0 next=-1
+3267:     L0  
+3268: L190:
+3268:    RTN  
+3272:  DATAW #x0000DFDF
+3276:  DATAW #x7473740B
+3280:  DATAW #x2020656C
+3284:  DATAW #x20202020
+// Entry to:   tstle      
+3288: L180:
+3288:    SP5  
+3289:    LP4  
+3290:    SP6  
+3291:    JGR  L191
+# Code for body of a MATCHE, nextlab=191 exitlab=0 next=-1
+3293:    LM1  
+3294:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=191 exitlab=0 next=-1
+3295: L191:
+# Code at end of MATCHE, nextlab=0 exitlab=0 next=-1
+3295:     L0  
+3296: L192:
+3296:    RTN  
+3300:  DATAW #x0000DFDF
+3304:  DATAW #x7473740B
+3308:  DATAW #x20206567
+3312:  DATAW #x20202020
+// Entry to:   tstge      
+3316: L181:
+3316:    SP5  
+3317:    LP4  
+3318:    SP6  
+3319:    JLS  L193
+# Code for body of a MATCHE, nextlab=193 exitlab=0 next=-1
+3321:    LM1  
+3322:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=193 exitlab=0 next=-1
+3323: L193:
+# Code at end of MATCHE, nextlab=0 exitlab=0 next=-1
+3323:     L0  
+3324: L194:
+3324:    RTN  
+3325: L182:
+3325:    LP3  
+3326:    SP8  
+3327:    LLL  L19891
+3329:    K4G   94
+3331:      L   13
+3333:   SP11  
+3334:     LF  L176
+3336:     K7  
+3337:    LM1  
+3338:    SP8  
+3339:    XCH  
+3340:    K4G  207
+3342:      L   13
+3344:   SP11  
+3345:      L   12
+3347:     LF  L176
+3349:     K7  
+3350:     L0  
+3351:    SP8  
+3352:    XCH  
+3353:    K4G  207
+3355:      L   13
+3357:   SP11  
+3358:      L   14
+3360:     LF  L176
+3362:     K7  
+3363:     L0  
+3364:    SP8  
+3365:    XCH  
+3366:    K4G  207
+3368:      L   13
+3370:   SP11  
+3371:     LF  L177
+3373:     K7  
+3374:     L0  
+3375:    SP8  
+3376:    XCH  
+3377:    K4G  207
+3379:      L   13
+3381:   SP11  
+3382:      L   12
+3384:     LF  L177
+3386:     K7  
+3387:    LM1  
+3388:    SP8  
+3389:    XCH  
+3390:    K4G  207
+3392:      L   13
+3394:   SP11  
+3395:      L   14
+3397:     LF  L177
+3399:     K7  
+3400:    LM1  
+3401:    SP8  
+3402:    XCH  
+3403:    K4G  207
+3405:      L   13
+3407:   SP11  
+3408:     LF  L178
+3410:     K7  
+3411:     L0  
+3412:    SP8  
+3413:    XCH  
+3414:    K4G  207
+3416:      L   13
+3418:   SP11  
+3419:      L   12
+3421:     LF  L178
+3423:     K7  
+3424:    LM1  
+3425:    SP8  
+3426:    XCH  
+3427:    K4G  207
+3429:      L   13
+3431:   SP11  
+3432:      L   14
+3434:     LF  L178
+3436:     K7  
+3437:     L0  
+3438:    SP8  
+3439:    XCH  
+3440:    K4G  207
+3442:      L   13
+3444:   SP11  
+3445:     LF  L179
+3447:     K7  
+3448:     L0  
+3449:    SP8  
+3450:    XCH  
+3451:    K4G  207
+3453:      L   13
+3455:   SP11  
+3456:      J  L19890
+3458:  DATAH L19894-$
+3460: L19890:
+3460:      L   12
+3462:     LF  L179
+3464:     K7  
+3465:     L0  
+3466:    SP8  
+3467:    XCH  
+3468:    K4G  207
+3470:      L   13
+3472:   SP11  
+3473:      L   14
+3475:     LF  L179
+3477:     K7  
+3478:    LM1  
+3479:    SP8  
+3480:    XCH  
+3481:    K4G  207
+3483:      L   13
+3485:   SP11  
+3486:     LF  L180
+3488:     K7  
+3489:    LM1  
+3490:    SP8  
+3491:    XCH  
+3492:      J  L19889
+3494:  DATAH L156-$
+3496: L19889:
+3496:    K4G  207
+3498:      L   13
+3500:   SP11  
+3501:      L   12
+3503:     LF  L180
+3505:     K7  
+3506:    LM1  
+3507:    SP8  
+3508:    XCH  
+3509:    K4G  207
+3511:      L   13
+3513:   SP11  
+3514:      L   14
+3516:     LF  L180
+3518:     K7  
+3519:     L0  
+3520:    SP8  
+3521:    XCH  
+3522:    K4G  207
+3524:      L   13
+3526:   SP11  
+3527:     LF  L181
+3529:     K7  
+3530:    LM1  
+3531:    SP8  
+3532:    XCH  
+3533:    K4G  207
+3535:      L   13
+3537:   SP11  
+3538:      L   12
+3540:     LF  L181
+3542:     K7  
+3543:     L0  
+3544:    SP8  
+3545:    XCH  
+3546:    K4G  207
+3548:      L   13
+3550:   SP11  
+3551:      L   14
+3553:     LF  L181
+3555:     K7  
+3556:    LM1  
+3557:    SP8  
+3558:    XCH  
+3559:    K4G  207
+3561:    RTN  
+3562: L195:
+3562:      J  L202
+3564:  DATAH L182-$
+3568:  DATAW #x0000DFDF
+3572:  DATAW #x7473740B
+3576:  DATAW #x20716566
+3580:  DATAW #x20202020
+// Entry to:   tstfeq     
+3584: L196:
+3584:  FLTOP  FLOAT
+3586:     LW  #x3F000000
+3591:  FLTOP  MUL
+3593:    SP5  
+3594:    LP4  
+3595:  FLTOP  FLOAT
+3597:     LW  #x3F000000
+3602:  FLTOP  MUL
+3604:    SP6  
+3605:    LP5  
+3606:    XCH  
+3607:  FLTOP  EQ
+3609:   JEQ0  L203
+# Code for body of a MATCHE, nextlab=203 exitlab=0 next=-1
+3611:    LM1  
+3612:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=203 exitlab=0 next=-1
+3613: L203:
+# Code at end of MATCHE, nextlab=0 exitlab=0 next=-1
+3613:     L0  
+3614: L204:
+3614:    RTN  
+3616: L19891:
+3616:  DATAW #x34692517
+3620:  DATAW #x6E49203A
+3624:  DATAW #x65676574
+3628:  DATAW #x65722072
+3632:  DATAW #x6974616C
+3636:  DATAW #x0A736E6F
+3640:  DATAW #x0000DFDF
+3644:  DATAW #x7473740B
+3648:  DATAW #x20656E66
+3652:  DATAW #x20202020
+// Entry to:   tstfne     
+3656: L197:
+3656:  FLTOP  FLOAT
+3658:     LW  #x3F000000
+3663:  FLTOP  MUL
+3665:    SP5  
+3666:    LP4  
+3667:  FLTOP  FLOAT
+3669:     LW  #x3F000000
+3674:  FLTOP  MUL
+3676:    SP6  
+3677:    LP5  
+3678:    XCH  
+3679:  FLTOP  NE
+3681:   JEQ0  L205
+# Code for body of a MATCHE, nextlab=205 exitlab=0 next=-1
+3683:    LM1  
+3684:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=205 exitlab=0 next=-1
+3685: L205:
+# Code at end of MATCHE, nextlab=0 exitlab=0 next=-1
+3685:     L0  
+3686: L206:
+3686:    RTN  
+3688:  DATAW #x0000DFDF
+3692:  DATAW #x7473740B
+3696:  DATAW #x20736C66
+3700:  DATAW #x20202020
+// Entry to:   tstfls     
+3704: L198:
+3704:  FLTOP  FLOAT
+3706:     LW  #x3F000000
+3711:  FLTOP  MUL
+3713:    SP5  
+3714:    LP4  
+3715:  FLTOP  FLOAT
+3717:     LW  #x3F000000
+3722:  FLTOP  MUL
+3724:    SP6  
+3725:    LP5  
+3726:    XCH  
+3727:  FLTOP  LS
+3729:   JEQ0  L207
+# Code for body of a MATCHE, nextlab=207 exitlab=0 next=-1
+3731:    LM1  
+3732:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=207 exitlab=0 next=-1
+3733: L207:
+# Code at end of MATCHE, nextlab=0 exitlab=0 next=-1
+3733:     L0  
+3734: L208:
+3734:    RTN  
+3736:  DATAW #x0000DFDF
+3740:  DATAW #x7473740B
+3744:  DATAW #x20726766
+3748:  DATAW #x20202020
+// Entry to:   tstfgr     
+3752: L199:
+3752:  FLTOP  FLOAT
+3754:     LW  #x3F000000
+3759:  FLTOP  MUL
+3761:    SP5  
+3762:    LP4  
+3763:  FLTOP  FLOAT
+3765:     LW  #x3F000000
+3770:  FLTOP  MUL
+3772:    SP6  
+3773:    LP5  
+3774:    XCH  
+3775:  FLTOP  GR
+3777:   JEQ0  L209
+# Code for body of a MATCHE, nextlab=209 exitlab=0 next=-1
+3779:    LM1  
+3780:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=209 exitlab=0 next=-1
+3781: L209:
+# Code at end of MATCHE, nextlab=0 exitlab=0 next=-1
+3781:     L0  
+3782: L210:
+3782:    RTN  
+3784:  DATAH L19891-$
+3786:  DATAH L176-$
+3788:  DATAW #x0000DFDF
+3792:  DATAW #x7473740B
+3796:  DATAW #x20656C66
+3800:  DATAW #x20202020
+// Entry to:   tstfle     
+3804: L200:
+3804:  FLTOP  FLOAT
+3806:     LW  #x3F000000
+3811:  FLTOP  MUL
+3813:    SP5  
+3814:    LP4  
+3815:  FLTOP  FLOAT
+3817:     LW  #x3F000000
+3822:  FLTOP  MUL
+3824:    SP6  
+3825:    LP5  
+3826:    XCH  
+3827:  FLTOP  LE
+3829:   JEQ0  L211
+# Code for body of a MATCHE, nextlab=211 exitlab=0 next=-1
+3831:    LM1  
+3832:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=211 exitlab=0 next=-1
+3833: L211:
+# Code at end of MATCHE, nextlab=0 exitlab=0 next=-1
+3833:     L0  
+3834: L212:
+3834:    RTN  
+3836:  DATAH L177-$
+3838:  DATAH L178-$
+3840:  DATAW #x0000DFDF
+3844:  DATAW #x7473740B
+3848:  DATAW #x20656766
+3852:  DATAW #x20202020
+// Entry to:   tstfge     
+3856: L201:
+3856:  FLTOP  FLOAT
+3858:     LW  #x3F000000
+3863:  FLTOP  MUL
+3865:    SP5  
+3866:    LP4  
+3867:  FLTOP  FLOAT
+3869:     LW  #x3F000000
+3874:  FLTOP  MUL
+3876:    SP6  
+3877:    LP5  
+3878:    XCH  
+3879:  FLTOP  GE
+3881:   JEQ0  L213
+# Code for body of a MATCHE, nextlab=213 exitlab=0 next=-1
+3883:    LM1  
+3884:    RTN  
+# Code for nextlab after body in a MATCHE, nextlab=213 exitlab=0 next=-1
+3885: L213:
+# Code at end of MATCHE, nextlab=0 exitlab=0 next=-1
+3885:     L0  
+3886: L214:
+3886:    RTN  
+3887: L202:
+3887:    LP3  
+3888:    SP8  
+3889:    LLL  L19888
+3891:    K4G   94
+3893:      L   13
+3895:   SP11  
+3896:     LF  L196
+3898:     K7  
+3899:    LM1  
+3900:    SP8  
+3901:    XCH  
+3902:    K4G  207
+3904:      L   13
+3906:   SP11  
+3907:      L   12
+3909:     LF  L196
+3911:     K7  
+3912:     L0  
+3913:    SP8  
+3914:    XCH  
+3915:    K4G  207
+3917:      L   13
+3919:   SP11  
+3920:      L   14
+3922:     LF  L196
+3924:     K7  
+3925:     L0  
+3926:    SP8  
+3927:    XCH  
+3928:    K4G  207
+3930:      L   13
+3932:   SP11  
+3933:     LF  L197
+3935:     K7  
+3936:     L0  
+3937:    SP8  
+3938:    XCH  
+3939:    K4G  207
+3941:      L   13
+3943:   SP11  
+3944:      L   12
+3946:     LF  L197
+3948:     K7  
+3949:    LM1  
+3950:    SP8  
+3951:    XCH  
+3952:      J  L19887
+3954:  DATAH L179-$
+3956: L19887:
+3956:    K4G  207
+3958:      L   13
+3960:   SP11  
+3961:      L   14
+3963:     LF  L197
+3965:     K7  
+3966:    LM1  
+3967:    SP8  
+3968:    XCH  
+3969:    K4G  207
+3971:      L   13
+3973:   SP11  
+3974:     LF  L198
+3976:     K7  
+3977:     L0  
+3978:    SP8  
+3979:    XCH  
+3980:    K4G  207
+3982:      L   13
+3984:   SP11  
+3985:      L   12
+3987:     LF  L198
+3989:     K7  
+3990:    LM1  
+3991:    SP8  
+3992:    XCH  
+3993:      J  L19886
+3996:  DATAH L180-$
+3998: L19886:
+3998:    K4G  207
+4000:      L   13
+4002:   SP11  
+4003:      L   14
+4005:     LF  L198
+4007:     K7  
+4008:     L0  
+4009:    SP8  
+4010:    XCH  
+4011:    K4G  207
+4013:      L   13
+4015:   SP11  
+4016:     LF  L199
+4018:     K7  
+4019:     L0  
+4020:    SP8  
+4021:    XCH  
+4022:    K4G  207
+4024:      L   13
+4026:   SP11  
+4027:      L   12
+4029:     LF  L199
+4031:     K7  
+4032:     L0  
+4033:    SP8  
+4034:    XCH  
+4035:      J  L19885
+4038:  DATAH L181-$
+4040: L19885:
+4040:    K4G  207
+4042:      L   13
+4044:   SP11  
+4045:      L   14
+4047:     LF  L199
+4049:     K7  
+4050:    LM1  
+4051:    SP8  
+4052:    XCH  
+4053:    K4G  207
+4055:      L   13
+4057:   SP11  
+4058:     LF  L200
+4060:     K7  
+4061:    LM1  
+4062:    SP8  
+4063:    XCH  
+4064:    K4G  207
+4066:      L   13
+4068:   SP11  
+4069:      J  L19884
+4072:  DATAH L202-$
+4074: L19884:
+4074:      L   12
+4076:     LF  L200
+4078:     K7  
+4079:    LM1  
+4080:    SP8  
+4081:    XCH  
+4082:    K4G  207
+4084:      L   13
+4086:   SP11  
+4087:      L   14
+4089:     LF  L200
+4091:     K7  
+4092:     L0  
+4093:    SP8  
+4094:    XCH  
+4095:    K4G  207
+4097:      L   13
+4099:   SP11  
+4100:     LF  L201
+4102:     K7  
+4103:    LM1  
+4104:    SP8  
+4105:    XCH  
+4106:    K4G  207
+4108:      L   13
+4110:   SP11  
+4111:      L   12
+4113:     LF  L201
+4115:     K7  
+4116:     L0  
+4117:    SP8  
+4118:    XCH  
+4119:    K4G  207
+4121:      L   13
+4123:   SP11  
+4124:      L   14
+4126:     LF  L201
+4128:     K7  
+4129:    LM1  
+4130:    SP8  
+4131:    XCH  
+4132:    K4G  207
+4134:    RTN  
+4135: L215:
+4135:    LP3  
+4136:    SP8  
+4137:    LLL  L19883
+4139:    K4G   94
+4141:     L0  
+4142:    SP7  
+4143:   JNE0  L216
+# Code for body of a MATCHE, nextlab=216 exitlab=0 next=0
+4145:      L  100
+4147:      J  L218
+# Code for nextlab after body in a MATCHE, nextlab=216 exitlab=218 next=0
+4149: L216:
+4149:    LP7  
+4150:     L1  
+4151:    JNE  L219
+# Code for body of a MATCHE, nextlab=219 exitlab=218 next=0
+4153:      L  200
+4155:      J  L218
+# Code for nextlab after body in a MATCHE, nextlab=219 exitlab=218 next=0
+4157: L219:
+4157:    LP7  
+4158:     L2  
+4159:    JNE  L221
+# Code for body of a MATCHE, nextlab=221 exitlab=218 next=0
+4161:     LH  300
+4164:      J  L218
+# Code for nextlab after body in a MATCHE, nextlab=221 exitlab=218 next=0
+4166: L221:
+# Code at end of MATCHE, nextlab=0 exitlab=218 next=0
+4166:     L0  
+4167: L218:
+4167:      L  100
+4169:    SP8  
+4170:    XCH  
+4171:    K4G  207
+4173:     L1  
+4174:    SP7  
+4175:   JNE0  L223
+# Code for body of a MATCHE, nextlab=223 exitlab=0 next=0
+4177:      L  100
+4179:      J  L225
+# Code for nextlab after body in a MATCHE, nextlab=223 exitlab=225 next=0
+4181: L223:
+4181:    LP7  
+4182:     L1  
+4183:    JNE  L226
+# Code for body of a MATCHE, nextlab=226 exitlab=225 next=0
+4185:      L  200
+4187:      J  L225
+# Code for nextlab after body in a MATCHE, nextlab=226 exitlab=225 next=0
+4189: L226:
+4189:    LP7  
+4190:     L2  
+4191:    JNE  L228
+# Code for body of a MATCHE, nextlab=228 exitlab=225 next=0
+4193:     LH  300
+4196:      J  L225
+# Code for nextlab after body in a MATCHE, nextlab=228 exitlab=225 next=0
+4198: L228:
+# Code at end of MATCHE, nextlab=0 exitlab=225 next=0
+4198:     L0  
+4199: L225:
+4199:      L  200
+4201:    SP8  
+4202:    XCH  
+4203:    K4G  207
+4205:     L2  
+4206:    SP7  
+4207:   JNE0  L230
+# Code for body of a MATCHE, nextlab=230 exitlab=0 next=0
+4209:      L  100
+4211:      J  L232
+# Code for nextlab after body in a MATCHE, nextlab=230 exitlab=232 next=0
+4213: L230:
+4213:    LP7  
+4214:     L1  
+4215:    JNE  L233
+# Code for body of a MATCHE, nextlab=233 exitlab=232 next=0
+4217:      L  200
+4219:      J  L232
+# Code for nextlab after body in a MATCHE, nextlab=233 exitlab=232 next=0
+4221: L233:
+4221:    LP7  
+4222:     L2  
+4223:    JNE  L235
+# Code for body of a MATCHE, nextlab=235 exitlab=232 next=0
+4225:     LH  300
+4228:      J  L232
+# Code for nextlab after body in a MATCHE, nextlab=235 exitlab=232 next=0
+4230: L235:
+# Code at end of MATCHE, nextlab=0 exitlab=232 next=0
+4230:     L0  
+4231: L232:
+4231:     LH  300
+4234:    SP8  
+4235:    XCH  
+4236:    K4G  207
+4238:     L3  
+4239:    SP7  
+4240:   JNE0  L237
+# Code for body of a MATCHE, nextlab=237 exitlab=0 next=0
+4242:      L  100
+4244:      J  L239
+# Code for nextlab after body in a MATCHE, nextlab=237 exitlab=239 next=0
+4246: L237:
+4246:    LP7  
+4247:     L1  
+4248:    JNE  L240
+# Code for body of a MATCHE, nextlab=240 exitlab=239 next=0
+4250:      L  200
+4252:      J  L239
+# Code for nextlab after body in a MATCHE, nextlab=240 exitlab=239 next=0
+4254: L240:
+4254:    LP7  
+4255:     L2  
+4256:    JNE  L242
+# Code for body of a MATCHE, nextlab=242 exitlab=239 next=0
+4258:     LH  300
+4261:      J  L239
+# Code for nextlab after body in a MATCHE, nextlab=242 exitlab=239 next=0
+4263: L242:
+# Code at end of MATCHE, nextlab=0 exitlab=239 next=0
+4263:     L0  
+4264: L239:
+4264:     L0  
+4265:    SP8  
+4266:    XCH  
+4267:    K4G  207
+4269:    RTN  
+4270: L244:
+4270:    LP3  
+4271:    SP8  
+4272:    LLL  L19882
+4274:    K4G   94
+4276:     L1  
+4277:    SP7  
+4278:   JNE0  L245
+# Code for body of a MATCHE, nextlab=245 exitlab=0 next=0
+4280:      L  100
+4282:      J  L247
+# Code for nextlab after body in a MATCHE, nextlab=245 exitlab=247 next=0
+4284: L245:
+4284:    LP7  
+4285:     L1  
+4286:    JNE  L248
+4288:      J  L248
+# Code for body of a MATCHE, nextlab=248 exitlab=247 next=0
+# Code for nextlab after body in a MATCHE, nextlab=248 exitlab=247 next=0
+4290: L248:
+4290:    LP7  
+4291:     L1  
+4292:    JNE  L250
+# Code for body of a MATCHE, nextlab=250 exitlab=247 next=0
+4294:     LH  300
+4297:      J  L247
+# Code for nextlab after body in a MATCHE, nextlab=250 exitlab=247 next=0
+4299: L250:
+# Code at end of MATCHE, nextlab=0 exitlab=247 next=0
+4299:     L0  
+4300: L247:
+4300:     LH  300
+4303:    SP8  
+4304:    XCH  
+4305:    K4G  207
+4307:     L1  
+4308:    SP7  
+4309:   JNE0  L252
+# Code for body of a MATCHE, nextlab=252 exitlab=0 next=0
+4311:      L  100
+4313:      J  L254
+# Code for nextlab after body in a MATCHE, nextlab=252 exitlab=254 next=0
+4315: L252:
+4315:    LP7  
+4316:     L1  
+4317:    JNE  L255
+# Code for body of a MATCHE, nextlab=255 exitlab=254 next=0
+4319:      J  L255
+# Code for nextlab after body in a MATCHE, nextlab=255 exitlab=254 next=0
+4321: L255:
+# Code for body of a MATCHE, nextlab=257 exitlab=254 next=0
+4321:     LH  300
+4324:      J  L254
+# Code for nextlab after body in a MATCHE, nextlab=257 exitlab=254 next=0
+4326: L257:
+# Code at end of MATCHE, nextlab=0 exitlab=254 next=0
+4326:     L0  
+4327: L254:
+4327:     LH  300
+4330:    SP8  
+4331:    XCH  
+4332:    K4G  207
+4334:     L1  
+4335:    SP7  
+4336:   JNE0  L258
+# Code for body of a MATCHE, nextlab=258 exitlab=0 next=0
+4338:      L  100
+4340:      J  L260
+# Code for nextlab after body in a MATCHE, nextlab=258 exitlab=260 next=0
+4342: L258:
+# Code for body of a MATCHE, nextlab=261 exitlab=260 next=0
+4342:    LP7  
+4343:      L  100
+4345:    JGE  L264
+4347: L263:
+4347:    LP7  
+4348:    L10  
+4349:    JLE  L265
+4351:      J  L261
+4353: L265:
+4353:    LP7  
+4354:    AP7  
+4355:    SP7  
+4356: L266:
+4356:    LP7  
+4357:      L  100
+4359:    JLS  L263
+4361: L264:
+4361:    LP7  
+4362: L262:
+4362:      J  L260
+4364:  DATAH L19888-$
+4366:  DATAH L196-$
+# Code for nextlab after body in a MATCHE, nextlab=261 exitlab=260 next=0
+4368: L261:
+# Code for body of a MATCHE, nextlab=267 exitlab=260 next=0
+4368:    LP7  
+4369:      J  L260
+# Code for nextlab after body in a MATCHE, nextlab=267 exitlab=260 next=0
+4371: L267:
+# Code at end of MATCHE, nextlab=0 exitlab=260 next=0
+4371:     L0  
+4372: L260:
+4372:      L   16
+4374:    SP8  
+4375:    XCH  
+4376:    K4G  207
+4378:     L1  
+4379:    SP7  
+4380:   JNE0  L268
+# Code for body of a MATCHE, nextlab=268 exitlab=0 next=0
+4382:      L  100
+4384:      J  L270
+# Code for nextlab after body in a MATCHE, nextlab=268 exitlab=270 next=0
+4386: L268:
+4386:    LP7  
+4387:     L1  
+4388:    JNE  L271
+# Code for body of a MATCHE, nextlab=271 exitlab=270 next=0
+4390:      J  L271
+4392:  DATAH L197-$
+# Code for nextlab after body in a MATCHE, nextlab=271 exitlab=270 next=0
+4394: L271:
+# Code for body of a MATCHE, nextlab=273 exitlab=270 next=0
+4394:     LH  300
+4397:      J  L270
+# Code for nextlab after body in a MATCHE, nextlab=273 exitlab=270 next=0
+4399: L273:
+# Code at end of MATCHE, nextlab=0 exitlab=270 next=0
+4399:     L0  
+4400: L270:
+4400:     LH  300
+4403:    SP8  
+4404:    XCH  
+4405:    K4G  207
+4407:     L0  
+4408:    SP4  
+4409: L274:
+4409:    LP4  
+4410:    SP8  
+4411:   JNE0  L278
+# Code for body of a MATCHE, nextlab=278 exitlab=0 next=0
+4413:      L  100
+4415:      J  L280
+# Code for nextlab after body in a MATCHE, nextlab=278 exitlab=280 next=0
+4417: L278:
+4417:    LP8  
+4418:     L1  
+4419:    JNE  L281
+# Code for body of a MATCHE, nextlab=281 exitlab=280 next=0
+4421:      J  L281
+# Code for nextlab after body in a MATCHE, nextlab=281 exitlab=280 next=0
+4423: L281:
+4423:    LP8  
+4424:     L2  
+4425:    JNE  L283
+# Code for body of a MATCHE, nextlab=283 exitlab=280 next=0
+4427:     LH  300
+4430:      J  L280
+# Code for nextlab after body in a MATCHE, nextlab=283 exitlab=280 next=0
+4432: L283:
+# Code for body of a MATCHE, nextlab=285 exitlab=280 next=0
+4432:    LP8  
+4433:      J  L280
+4436:  DATAH L198-$
+# Code for nextlab after body in a MATCHE, nextlab=285 exitlab=280 next=0
+4438: L285:
+# Code at end of MATCHE, nextlab=0 exitlab=280 next=0
+4438:     L0  
+4439: L280:
+4439:    SP8  
+4440:    LLL  L286
+4442:   RVP4  
+4443:    SP9  
+4444:    XCH  
+4445:    K5G  207
+4447: L277:
+4447:     L1  
+4448:    AP4  
+4449:    SP4  
+4450:     L4  
+4451:    JLE  L274
+4453: L276:
+4453: L275:
+4453:    RTN  
+4454: L287:
+4454:    LP3  
+4455:    SP8  
+4456:    LLL  L19881
+4458:    K4G   94
+4460:     L0  
+4461:    SP7  
+4462:   JNE0  L288
+# Code for body of a MATCHE, nextlab=288 exitlab=0 next=0
+4464:      L  100
+4466:      J  L290
+# Code for nextlab after body in a MATCHE, nextlab=288 exitlab=290 next=0
+4468: L288:
+4468:    LP7  
+4469:     L1  
+4470:    JNE  L291
+# Code for body of a MATCHE, nextlab=291 exitlab=290 next=0
+4472:     L0  
+4473:    SP8  
+4474:      J  L290
+4476:  DATAH L199-$
+# Code for nextlab after body in a MATCHE, nextlab=291 exitlab=290 next=0
+4478: L291:
+# Code for body of a MATCHE, nextlab=293 exitlab=290 next=0
+4478:     LH  300
+4481:      J  L290
+# Code for nextlab after body in a MATCHE, nextlab=293 exitlab=290 next=0
+4483: L293:
+# Code at end of MATCHE, nextlab=0 exitlab=290 next=0
+4483:     L0  
+4484: L290:
+4484:      L  100
+4486:    SP8  
+4487:    XCH  
+4488:    K4G  207
+4490:     L0  
+4491:    SP7  
+4492:   JNE0  L294
+# Code for body of a MATCHE, nextlab=294 exitlab=0 next=0
+4494:      L  100
+4496:      J  L296
+# Code for nextlab after body in a MATCHE, nextlab=294 exitlab=296 next=0
+4498: L294:
+4498:    LP7  
+4499:     L1  
+4500:    JNE  L297
+# Code for body of a MATCHE, nextlab=297 exitlab=296 next=0
+4502:    XCH  
+4503:   JEQ0  L300
+4505:     L0  
+4506:    SP8  
+4507:      J  L296
+4509: L300:
+4509:      L  200
+4511: L299:
+4511:      J  L296
+# Code for nextlab after body in a MATCHE, nextlab=297 exitlab=296 next=0
+4513: L297:
+# Code for body of a MATCHE, nextlab=301 exitlab=296 next=0
+4513:     LH  300
+4516:      J  L296
+4518:  DATAH L200-$
+# Code for nextlab after body in a MATCHE, nextlab=301 exitlab=296 next=0
+4520: L301:
+# Code at end of MATCHE, nextlab=0 exitlab=296 next=0
+4520:     L0  
+4521: L296:
+4521:      L  100
+4523:    SP8  
+4524:    XCH  
+4525:    K4G  207
+4527:     L0  
+4528:    SP7  
+4529:   JNE0  L302
+# Code for body of a MATCHE, nextlab=302 exitlab=0 next=0
+4531:      L  100
+4533:      J  L304
+# Code for nextlab after body in a MATCHE, nextlab=302 exitlab=304 next=0
+4535: L302:
+4535:    LP7  
+4536:     L1  
+4537:    JNE  L305
+# Code for body of a MATCHE, nextlab=305 exitlab=304 next=0
+4539:    XCH  
+4540:   JEQ0  L308
+4542:      L  200
+4544:      J  L307
+4546: L308:
+4546:     L0  
+4547:    SP8  
+4548:      J  L304
+4550: L307:
+4550:      J  L304
+# Code for nextlab after body in a MATCHE, nextlab=305 exitlab=304 next=0
+4552: L305:
+# Code for body of a MATCHE, nextlab=309 exitlab=304 next=0
+4552:     LH  300
+4555:      J  L304
+# Code for nextlab after body in a MATCHE, nextlab=309 exitlab=304 next=0
+4557: L309:
+# Code at end of MATCHE, nextlab=0 exitlab=304 next=0
+4557:     L0  
+4558: L304:
+4558:      L  100
+4560:    SP8  
+4561:    XCH  
+4562:    K4G  207
+4564:     L1  
+4565:    SP7  
+4566:   JNE0  L310
+# Code for body of a MATCHE, nextlab=310 exitlab=0 next=0
+4568:      L  100
+4570:      J  L312
+4572:  DATAH L201-$
+# Code for nextlab after body in a MATCHE, nextlab=310 exitlab=312 next=0
+4574: L310:
+4574:    LP7  
+4575:     L1  
+4576:    JNE  L313
+# Code for body of a MATCHE, nextlab=313 exitlab=312 next=0
+4578:     L0  
+4579:    SP8  
+4580:      J  L312
+# Code for nextlab after body in a MATCHE, nextlab=313 exitlab=312 next=0
+4582: L313:
+# Code for body of a MATCHE, nextlab=315 exitlab=312 next=0
+4582:     LH  300
+4585:      J  L312
+# Code for nextlab after body in a MATCHE, nextlab=315 exitlab=312 next=0
+4587: L315:
+# Code at end of MATCHE, nextlab=0 exitlab=312 next=0
+4587:     L0  
+4588: L312:
+4588:     L0  
+4589:    SP8  
+4590:    XCH  
+4591:    K4G  207
+4593:     L1  
+4594:    SP7  
+4595:   JNE0  L316
+# Code for body of a MATCHE, nextlab=316 exitlab=0 next=0
+4597:      L  100
+4599:      J  L318
+4602:  DATAH L19883-$
+# Code for nextlab after body in a MATCHE, nextlab=316 exitlab=318 next=0
+4604: L316:
+4604:    LP7  
+4605:     L1  
+4606:    JNE  L319
+# Code for body of a MATCHE, nextlab=319 exitlab=318 next=0
+4608:    XCH  
+4609:   JEQ0  L322
+4611:     L0  
+4612:    SP8  
+4613:      J  L318
+4615: L322:
+4615:      L  200
+4617: L321:
+4617:      J  L318
+# Code for nextlab after body in a MATCHE, nextlab=319 exitlab=318 next=0
+4619: L319:
+# Code for body of a MATCHE, nextlab=323 exitlab=318 next=0
+4619:     LH  300
+4622:      J  L318
+# Code for nextlab after body in a MATCHE, nextlab=323 exitlab=318 next=0
+4624: L323:
+# Code at end of MATCHE, nextlab=0 exitlab=318 next=0
+4624:     L0  
+4625: L318:
+4625:     L0  
+4626:    SP8  
+4627:    XCH  
+4628:    K4G  207
+4630:     L1  
+4631:    SP7  
+4632:   JNE0  L324
+# Code for body of a MATCHE, nextlab=324 exitlab=0 next=0
+4634:      L  100
+4636:      J  L326
+# Code for nextlab after body in a MATCHE, nextlab=324 exitlab=326 next=0
+4638: L324:
+4638:    LP7  
+4639:     L1  
+4640:    JNE  L327
+# Code for body of a MATCHE, nextlab=327 exitlab=326 next=0
+4642:    XCH  
+4643:   JEQ0  L330
+4645:      L  200
+4647:      J  L329
+4649: L330:
+4649:     L0  
+4650:    SP8  
+4651:      J  L326
+4653: L329:
+4653:      J  L326
+# Code for nextlab after body in a MATCHE, nextlab=327 exitlab=326 next=0
+4655: L327:
+# Code for body of a MATCHE, nextlab=331 exitlab=326 next=0
+4655:     LH  300
+4658:      J  L326
+# Code for nextlab after body in a MATCHE, nextlab=331 exitlab=326 next=0
+4660: L331:
+# Code at end of MATCHE, nextlab=0 exitlab=326 next=0
+4660:     L0  
+4661: L326:
+4661:      L  200
+4663:    SP8  
+4664:    XCH  
+4665:    K4G  207
+4667:     L2  
+4668:    SP7  
+4669:   JNE0  L332
+# Code for body of a MATCHE, nextlab=332 exitlab=0 next=0
+4671:      L  100
+4673:      J  L334
+# Code for nextlab after body in a MATCHE, nextlab=332 exitlab=334 next=0
+4675: L332:
+4675:    LP7  
+4676:     L1  
+4677:    JNE  L335
+# Code for body of a MATCHE, nextlab=335 exitlab=334 next=0
+4679:     L0  
+4680:    SP8  
+4681:      J  L334
+# Code for nextlab after body in a MATCHE, nextlab=335 exitlab=334 next=0
+4683: L335:
+# Code for body of a MATCHE, nextlab=337 exitlab=334 next=0
+4683:     LH  300
+4686:      J  L334
+# Code for nextlab after body in a MATCHE, nextlab=337 exitlab=334 next=0
+4688: L337:
+# Code at end of MATCHE, nextlab=0 exitlab=334 next=0
+4688:     L0  
+4689: L334:
+4689:     LH  300
+4692:    SP8  
+4693:    XCH  
+4694:    K4G  207
+4696:     L2  
+4697:    SP7  
+4698:   JNE0  L338
+# Code for body of a MATCHE, nextlab=338 exitlab=0 next=0
+4700:      L  100
+4702:      J  L340
+# Code for nextlab after body in a MATCHE, nextlab=338 exitlab=340 next=0
+4704: L338:
+4704:    LP7  
+4705:     L1  
+4706:    JNE  L341
+# Code for body of a MATCHE, nextlab=341 exitlab=340 next=0
+4708:    XCH  
+4709:   JEQ0  L344
+4711:     L0  
+4712:    SP8  
+4713:      J  L340
+4715: L344:
+4715:      L  200
+4717: L343:
+4717:      J  L340
+# Code for nextlab after body in a MATCHE, nextlab=341 exitlab=340 next=0
+4719: L341:
+# Code for body of a MATCHE, nextlab=345 exitlab=340 next=0
+4719:     LH  300
+4722:      J  L340
+# Code for nextlab after body in a MATCHE, nextlab=345 exitlab=340 next=0
+4724: L345:
+# Code at end of MATCHE, nextlab=0 exitlab=340 next=0
+4724:     L0  
+4725: L340:
+4725:     LH  300
+4728:    SP8  
+4729:    XCH  
+4730:    K4G  207
+4732:     L2  
+4733:    SP7  
+4734:   JNE0  L346
+# Code for body of a MATCHE, nextlab=346 exitlab=0 next=0
+4736:      L  100
+4738:      J  L348
+4740:  DATAH L19882-$
+# Code for nextlab after body in a MATCHE, nextlab=346 exitlab=348 next=0
+4742: L346:
+4742:    LP7  
+4743:     L1  
+4744:    JNE  L349
+# Code for body of a MATCHE, nextlab=349 exitlab=348 next=0
+4746:    XCH  
+4747:   JEQ0  L352
+4749:      L  200
+4751:      J  L351
+4753: L352:
+4753:     L0  
+4754:    SP8  
+4755:      J  L348
+4757: L351:
+4757:      J  L348
+# Code for nextlab after body in a MATCHE, nextlab=349 exitlab=348 next=0
+4759: L349:
+# Code for body of a MATCHE, nextlab=353 exitlab=348 next=0
+4759:     LH  300
+4762:      J  L348
+# Code for nextlab after body in a MATCHE, nextlab=353 exitlab=348 next=0
+4764: L353:
+# Code at end of MATCHE, nextlab=0 exitlab=348 next=0
+4764:     L0  
+4765: L348:
+4765:     LH  300
+4768:    SP8  
+4769:    XCH  
+4770:    K4G  207
+4772:    RTN  
+4773: L354:
+4773:    LP3  
+4774:    SP8  
+4775:    LLL  L19880
+4777:    K4G   94
+4779:     L1  
+4780:    SP4  
+4781: L355:
+4781:     L0  
+4782:    SP8  
+4783:    LP4  
+4784:    SP9  
+4785:   JLE0  L359
+# Code for body of a EVERYE, nextlab=359 exitlab=0 next=0
+4787:    L10  
+4788:    AP8  
+4789:    SP8  
+# Code for nextlab after body in a EVERYE, nextlab=359 exitlab=0 next=0
+4790: L359:
+4790:    LP9  
+4791:     L1  
+4792:    JLE  L360
+# Code for body of a EVERYE, nextlab=360 exitlab=0 next=0
+4794:      L   20
+4796:    AP8  
+4797:    SP8  
+# Code for nextlab after body in a EVERYE, nextlab=360 exitlab=0 next=0
+4798: L360:
+4798:    LP9  
+4799:     L2  
+4800:    JLE  L361
+# Code for body of a EVERYE, nextlab=361 exitlab=0 next=0
+4802:      L   30
+4804:    AP8  
+4805:    SP8  
+# Code for nextlab after body in a EVERYE, nextlab=361 exitlab=0 next=0
+4806: L361:
+# Code at end of EVERYE, nextlab=0 exitlab=0 next=0
+# EVERYe final code, patresultpos=8
+
+4806:    LLL  L362
+4808:   RVP4  
+4809:    SP9  
+4810:    LP8  
+4811:    K5G  207
+4813: L358:
+4813:     L1  
+4814:    AP4  
+4815:    SP4  
+4816:     L4  
+4817:    JLE  L355
+4819: L357:
+4819: L356:
+4819:     L0  
+4820:    SP4  
+4821: L363:
+4821:     L0  
+4822:    SP8  
+4823:    LP4  
+4824:    SP9  
+4825:   JLE0  L367
+# Code for body of a EVERYE, nextlab=367 exitlab=0 next=0
+4827:    L10  
+4828:    AP8  
+4829:    SP8  
+# Code for nextlab after body in a EVERYE, nextlab=367 exitlab=0 next=0
+4830: L367:
+4830:    LP9  
+4831:     L1  
+4832:    JLE  L368
+# Code for body of a EVERYE, nextlab=368 exitlab=0 next=0
+4834:      J  L368
+# Code for nextlab after body in a EVERYE, nextlab=368 exitlab=0 next=0
+4836: L368:
+4836:    LP9  
+4837:     L2  
+4838:    JLE  L369
+# Code for body of a EVERYE, nextlab=369 exitlab=0 next=0
+4840:      L   30
+4842:    AP8  
+4843:    SP8  
+# Code for nextlab after body in a EVERYE, nextlab=369 exitlab=0 next=0
+4844: L369:
+# Code at end of EVERYE, nextlab=0 exitlab=0 next=0
+# EVERYe final code, patresultpos=8
+
+4844:    LLL  L370
+4846:   RVP4  
+4847:    SP9  
+4848:    LP8  
+4849:    K5G  207
+4851: L366:
+4851:     L1  
+4852:    AP4  
+4853:    SP4  
+4854:     L4  
+4855:    JLE  L363
+4857: L365:
+4857: L364:
+4857:     L0  
+4858:    SP4  
+4859: L371:
+4859:     L0  
+4860:    SP8  
+4861:    LP4  
+4862:    SP9  
+4863:   JLE0  L375
+# Code for body of a EVERYE, nextlab=375 exitlab=0 next=0
+4865:    L10  
+4866:    AP8  
+4867:    SP8  
+# Code for nextlab after body in a EVERYE, nextlab=375 exitlab=0 next=0
+4868: L375:
+4868:    LP9  
+4869:     L1  
+4870:    JLE  L376
+# Code for body of a EVERYE, nextlab=376 exitlab=0 next=0
+4872:    LP8  
+4873:   SP10  
+4874:      J  L377
+# Code for nextlab after body in a EVERYE, nextlab=376 exitlab=377 next=0
+4876: L376:
+4876:    LP9  
+4877:     L2  
+4878:    JLE  L378
+# Code for body of a EVERYE, nextlab=378 exitlab=377 next=0
+4880:      L   30
+4882:    AP8  
+4883:    SP8  
+# Code for nextlab after body in a EVERYE, nextlab=378 exitlab=377 next=0
+4884: L378:
+# Code at end of EVERYE, nextlab=0 exitlab=377 next=0
+# EVERYe final code, patresultpos=8
+
+4884: L377:
+4884:    LLL  L379
+4886:   RVP4  
+4887:    SP9  
+4888:    LP8  
+4889:    K5G  207
+4891: L374:
+4891:     L1  
+4892:    AP4  
+4893:    SP4  
+4894:     L4  
+4895:    JLE  L371
+4897: L373:
+4897: L372:
+4897:    RTN  
+4898: L380:
+4898:     L0  
+4899:    SP4  
+4900:    LP3  
+4901:    SP9  
+4902:    LLL  L19879
+4904:    K5G   94
+4906:     L0  
+4907:    SP4  
+4908:    SP5  
+4909: L381:
+4909:     L0  
+4910:    SP6  
+4911:    LP5  
+4912:    SP4  
+4913:    XCH  
+4914:     L8  
+4915:    JGE  L386
+4917: L385:
+4917:     L1  
+4918:    AP4  
+4919:    SP7  
+4920:    LP5  
+4921:    SP8  
+4922:   JNE0  L387
+# Code for body of a MATCHE, nextlab=387 exitlab=0 next=0
+4924:    L10  
+4925:      J  L389
+4928:  DATAH L286-$
+4930:  DATAH L19881-$
+# Code for nextlab after body in a MATCHE, nextlab=387 exitlab=389 next=0
+4932: L387:
+4932:    LP8  
+4933:     L1  
+4934:    JNE  L390
+# Code for body of a MATCHE, nextlab=390 exitlab=389 next=0
+4936:      L   20
+4938:      J  L389
+# Code for nextlab after body in a MATCHE, nextlab=390 exitlab=389 next=0
+4940: L390:
+4940:    LP8  
+4941:     L2  
+4942:    JNE  L392
+# Code for body of a MATCHE, nextlab=392 exitlab=389 next=0
+4944:      L   30
+4946:      J  L389
+# Code for nextlab after body in a MATCHE, nextlab=392 exitlab=389 next=0
+4948: L392:
+4948:    LP8  
+4949:     L3  
+4950:    JNE  L394
+# Code for body of a MATCHE, nextlab=394 exitlab=389 next=0
+4952:      L   40
+4954:      J  L389
+# Code for nextlab after body in a MATCHE, nextlab=394 exitlab=389 next=0
+4956: L394:
+4956:    LP8  
+4957:     L4  
+4958:    JNE  L396
+# Code for body of a MATCHE, nextlab=396 exitlab=389 next=0
+4960:      J  L386
+# Code for nextlab after body in a MATCHE, nextlab=396 exitlab=389 next=0
+4962: L396:
+4962:    LP8  
+4963:     L5  
+4964:    JNE  L398
+# Code for body of a MATCHE, nextlab=398 exitlab=389 next=0
+4966:      L   60
+4968:      J  L389
+# Code for nextlab after body in a MATCHE, nextlab=398 exitlab=389 next=0
+4970: L398:
+# Code at end of MATCHE, nextlab=0 exitlab=389 next=0
+4970:     L0  
+4971: L389:
+4971:    AP7  
+4972:    SP4  
+4973:     L1  
+4974:    AP6  
+4975:    SP6  
+4976:     L8  
+4977:    JLS  L385
+4979: L386:
+4979:    LLL  L400
+4981:   RVP5  
+4982:   SP11  
+4983:    LP4  
+4984:    K7G  207
+4986: L384:
+4986:     L1  
+4987:    AP5  
+4988:    SP5  
+4989:    L10  
+4990:    JLE  L381
+4992: L383:
+4992: L382:
+4992:    RTN  
+4993: L31:
+4993:    SWL  
+4994:  DATAH 19
+4996:  DATAH L34-$
+4998:  DATAH L34-$
+5000:  DATAH L35-$
+5002:  DATAH L51-$
+5004:  DATAH L61-$
+5006:  DATAH L76-$
+5008:  DATAH L92-$
+5010:  DATAH L101-$
+5012:  DATAH L110-$
+5014:  DATAH L128-$
+5016:  DATAH L139-$
+5018:  DATAH L147-$
+5020:  DATAH L155-$
+5022:  DATAH L175-$
+5024:  DATAH L195-$
+5026:  DATAH L215-$
+5028:  DATAH L244-$
+5030:  DATAH L287-$
+5032:  DATAH L354-$
+5034:  DATAH L380-$
+5036: L33:
+5036: L32:
+5036:    RTN  
+5040: L19888:
+5040:  DATAW #x3469251E
+5044:  DATAW #x6C46203A
+5048:  DATAW #x6974616F
+5052:  DATAW #x7020676E
+5056:  DATAW #x746E696F
+5060:  DATAW #x6C657220
+5064:  DATAW #x6F697461
+5068:  DATAW #x000A736E
+5072: L19883:
+5072:  DATAW #x3469251E
+5076:  DATAW #x6953203A
+5080:  DATAW #x656C706D
+5084:  DATAW #x74616D20
+5088:  DATAW #x65206863
+5092:  DATAW #x65727078
+5096:  DATAW #x6F697373
+5100:  DATAW #x000A736E
+5104: L19882:
+5104:  DATAW #x34692526
+5108:  DATAW #x614D203A
+5112:  DATAW #x20686374
+5116:  DATAW #x72707865
+5120:  DATAW #x69737365
+5124:  DATAW #x20736E6F
+5128:  DATAW #x6F766E69
+5132:  DATAW #x6E69766C
+5136:  DATAW #x454E2067
+5140:  DATAW #x000A5458
+5144: L286:
+5144:  DATAW #x00000064
+5148:  DATAW #x00000001
+5152:  DATAW #x0000012C
+5156:  DATAW #x00000003
+5160:  DATAW #x00000004
+5164: L19881:
+5164:  DATAW #x34692526
+5168:  DATAW #x614D203A
+5172:  DATAW #x20686374
+5176:  DATAW #x72707865
+5180:  DATAW #x69737365
+5184:  DATAW #x20736E6F
+5188:  DATAW #x6F766E69
+5192:  DATAW #x6E69766C
+5196:  DATAW #x58452067
+5200:  DATAW #x000A5449
+5204: L19880:
+5204:  DATAW #x3469252F
+5208:  DATAW #x614D203A
+5212:  DATAW #x20686374
+5216:  DATAW #x72707865
+5220:  DATAW #x69737365
+5224:  DATAW #x20736E6F
+5228:  DATAW #x6F766E69
+5232:  DATAW #x6E69766C
+5236:  DATAW #x454E2067
+5240:  DATAW #x61205458
+5244:  DATAW #x4520646E
+5248:  DATAW #x0A544958
+5252: L362:
+5252:  DATAW #x00000000
+5256:  DATAW #x0000000A
+5260:  DATAW #x0000001E
+5264:  DATAW #x0000003C
+5268:  DATAW #x0000003C
+5272:  DATAH L19880-$
+5276: L370:
+5276:  DATAW #x00000000
+5280:  DATAW #x0000000A
+5284:  DATAW #x0000000A
+5288:  DATAW #x00000028
+5292:  DATAW #x00000028
+5296:  DATAH L362-$
+5300: L379:
+5300:  DATAW #x00000000
+5304:  DATAW #x0000000A
+5308:  DATAW #x0000000A
+5312:  DATAW #x0000000A
+5316:  DATAW #x0000000A
+5320:  DATAH L370-$
+5324: L19879:
+5324:  DATAW #x34692530
+5328:  DATAW #x614D203A
+5332:  DATAW #x20686374
+5336:  DATAW #x72707865
+5340:  DATAW #x69737365
+5344:  DATAW #x20736E6F
+5348:  DATAW #x6F766E69
+5352:  DATAW #x6E69766C
+5356:  DATAW #x4F4C2067
+5360:  DATAW #x6120504F
+5364:  DATAW #x4220646E
+5368:  DATAW #x4B414552
+5372:  DATAW #x0000000A
+5376:  DATAH L379-$
+5378:  DATAH L19879-$
+5380: L400:
+5380:  DATAW #x00000058
+5384:  DATAW #x000000A9
+5388:  DATAW #x000000FA
+5392:  DATAW #x0000014B
+5396:  DATAW #x00000004
+5400:  DATAW #x000001ED
+5404:  DATAW #x0000000E
+5408:  DATAW #x0000000F
+5412:  DATAW #x00000010
+5416:  DATAW #x00000011
+5420:  DATAW #x00000012
+5424: L19878:
+5424:  DATAW #x646E450D
+5428:  DATAW #x20666F20
+5432:  DATAW #x74736574
+5436:  DATAW #x00000A73
+5440:  DATAH L400-$
+5444:  DATAW #x00000000
+5448:  DATAW #x00000001
+5452:  DATAW #x00000104
+5456:  DATAW #x000000CF
+5460:  DATAW #x00000024
+5464:  DATAW #x000000D3
+Code size =  5468 bytes of 32-bit little ender Cintcode

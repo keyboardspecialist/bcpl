@@ -1,0 +1,10 @@
+GET "libhdr"
+
+STATIC { Stat = #x12345678AABBCCDD; One = 1.1 }
+
+LET start() = VALOF
+{ LET a, b, c, d = #xAABB, #xAABBCCDD, #x12345678AABBCCDD, 1.1
+  LET t = TABLE    #xAABB, #xAABBCCDD, #x12345678AABBCCDD, 1.1
+  LET s = "0123456789ABC"
+  RESULTIS 0
+}

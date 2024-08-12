@@ -1,0 +1,1449 @@
+A2 M:9 DEF com/rast2wav.b[1008] A2=
+A2 M:9 MAN com/rast2wav.b[1032] CASE A2:.. 
+A3 M:21 DEF com/rast2wav.b[1009] A3=
+A3 M:21 MAN com/rast2wav.b[1045] CASE A3:.. 
+A4 M:33 DEF com/rast2wav.b[1010] A4=
+A4 M:33 MAN com/rast2wav.b[1058] CASE A4:.. 
+A5 M:45 DEF com/rast2wav.b[1011] A5=
+A5 M:45 MAN com/rast2wav.b[1071] CASE A5:.. 
+A6 M:57 DEF com/rast2wav.b[1012] A6=
+A6 M:57 MAN com/rast2wav.b[1084] CASE A6:.. 
+Ais2 M:10 DEF com/rast2wav.b[1008] Ais2=
+Ais2 M:10 MAN com/rast2wav.b[1033] CASE Ais2:.. 
+Ais3 M:22 DEF com/rast2wav.b[1009] Ais3=
+Ais3 M:22 MAN com/rast2wav.b[1046] CASE Ais3:.. 
+Ais4 M:34 DEF com/rast2wav.b[1010] Ais4=
+Ais4 M:34 MAN com/rast2wav.b[1059] CASE Ais4:.. 
+Ais5 M:46 DEF com/rast2wav.b[1011] Ais5=
+Ais5 M:46 MAN com/rast2wav.b[1072] CASE Ais5:.. 
+Ais6 M:58 DEF com/rast2wav.b[1012] Ais6=
+Ais6 M:58 MAN com/rast2wav.b[1085] CASE Ais6:.. 
+Ass_dev M:4 DEF libhdr.h[710] Ass_dev=4
+Ass_dir M:2 DEF libhdr.h[708] Ass_dir=2
+Ass_link M:0 DEF libhdr.h[706] Ass_link=0
+Ass_name M:5 DEF libhdr.h[711] Ass_name=5
+Ass_task M:1 DEF libhdr.h[707] Ass_task=1
+Ass_type M:3 DEF libhdr.h[709] Ass_type=3
+B2 M:11 DEF com/rast2wav.b[1008] B2=
+B2 M:11 MAN com/rast2wav.b[1034] CASE B2:.. 
+B2Wsh M:2 DEF libhdr.h[23] B2Wsh=1+32/32
+B2Wsh M:2 MAN libhdr.h[237] bytesperword=1<<B2Wsh
+B3 M:23 DEF com/rast2wav.b[1009] B3=
+B3 M:23 MAN com/rast2wav.b[1047] CASE B3:.. 
+B4 M:35 DEF com/rast2wav.b[1010] B4=
+B4 M:35 MAN com/rast2wav.b[1060] CASE B4:.. 
+B5 M:47 DEF com/rast2wav.b[1011] B5=
+B5 M:47 MAN com/rast2wav.b[1073] CASE B5:.. 
+B6 M:59 DEF com/rast2wav.b[1012] B6=
+B6 M:59 MAN com/rast2wav.b[1086] CASE B6:.. 
+C2 G:256 DEF com/rast2wav.b[143] C2=
+C2 G:256 LG com/rast2wav.b[292] C3:=C2+1*notes_per_octave
+C2 G:256 LG com/rast2wav.b[293] C4:=C2+2*notes_per_octave
+C2 G:256 LG com/rast2wav.b[294] C5:=C2+3*notes_per_octave
+C2 G:256 LG com/rast2wav.b[295] C6:=C2+4*notes_per_octave
+C2 G:256 LG com/rast2wav.b[296] C7:=C2+5*notes_per_octave
+C2 G:256 LG com/rast2wav.b[298]
+    writef("c2=%n'n C7=%n*n",C2,C2,C4,C5,C6,C7)
+C2 G:256 LG com/rast2wav.b[380] FOR noteno=C2 TO C7 DO..
+C2 G:256 LG com/rast2wav.b[398] FOR n=C2 TO C7 DO..
+C2 G:256 LG com/rast2wav.b[456] FOR noteno=C2 TO C7 DO..
+C2 G:256 LG com/rast2wav.b[468] FOR noteno=C2 TO C7 DO..
+C2 G:256 LG com/rast2wav.b[469] IF C2<=debugnote&debugnote<=C7 DO ..
+C2 G:256 LG com/rast2wav.b[505] FOR noteno=C2 TO C7 DO..
+C2 G:256 LG com/rast2wav.b[633] FOR n=C2 TO C7 DO..
+C2 G:256 LG com/rast2wav.b[694] FOR n=C2 TO C7 DO..
+C2 G:256 LG com/rast2wav.b[696] q:=memvupb*(n+1)/(C7-C2+1)
+C2 G:256 LG com/rast2wav.b[724] FOR noteno=C2 TO C7 DO..
+C2 G:256 LG com/rast2wav.b[735] FOR noteno=C2 TO C7 DO..
+C2 G:256 LG com/rast2wav.b[749] IF C2<=debugnote&debugnote<=C7 DO ..
+C2 G:256 LG com/rast2wav.b[752] FOR noteno=C2 TO C7 DO..
+C2 G:256 LG com/rast2wav.b[816] FLOAT (C7-noteno)#/FLOAT (C7-C2)
+C2 G:256 LG com/rast2wav.b[817] FLOAT (noteno-C2)#/FLOAT (C7-C2)
+C2 G:256 SG com/rast2wav.b[291] C2:=0
+C2 M:0 DEF com/rast2wav.b[1008] C2=0
+C2 M:0 MAN com/rast2wav.b[1023] CASE C2:.. 
+C3 G:257 DEF com/rast2wav.b[144] C3=
+C3 G:257 SG com/rast2wav.b[292] C3:=C2+1*notes_per_octave
+C3 M:12 DEF com/rast2wav.b[1009] C3=
+C3 M:12 MAN com/rast2wav.b[1036] CASE C3:.. 
+C4 G:258 DEF com/rast2wav.b[145] C4=
+C4 G:258 LG com/rast2wav.b[298]
+    writef("c2=%n'n C7=%n*n",C2,C2,C4,C5,C6,C7)
+C4 G:258 SG com/rast2wav.b[293] C4:=C2+2*notes_per_octave
+C4 M:24 DEF com/rast2wav.b[1010] C4=
+C4 M:24 MAN com/rast2wav.b[1049] CASE C4:.. 
+C5 G:259 DEF com/rast2wav.b[146] C5=
+C5 G:259 LG com/rast2wav.b[298]
+    writef("c2=%n'n C7=%n*n",C2,C2,C4,C5,C6,C7)
+C5 G:259 SG com/rast2wav.b[294] C5:=C2+3*notes_per_octave
+C5 M:36 DEF com/rast2wav.b[1011] C5=
+C5 M:36 MAN com/rast2wav.b[1062] CASE C5:.. 
+C6 G:260 DEF com/rast2wav.b[147] C6=
+C6 G:260 LG com/rast2wav.b[298]
+    writef("c2=%n'n C7=%n*n",C2,C2,C4,C5,C6,C7)
+C6 G:260 SG com/rast2wav.b[295] C6:=C2+4*notes_per_octave
+C6 M:48 DEF com/rast2wav.b[1012] C6=
+C6 M:48 MAN com/rast2wav.b[1075] CASE C6:.. 
+C7 G:261 DEF com/rast2wav.b[148] C7=
+C7 G:261 LG com/rast2wav.b[298]
+    writef("c2=%n'n C7=%n*n",C2,C2,C4,C5,C6,C7)
+C7 G:261 LG com/rast2wav.b[373] notecovupb:=C7
+C7 G:261 LG com/rast2wav.b[380] FOR noteno=C2 TO C7 DO..
+C7 G:261 LG com/rast2wav.b[390] notevupb:=C7
+C7 G:261 LG com/rast2wav.b[398] FOR n=C2 TO C7 DO..
+C7 G:261 LG com/rast2wav.b[456] FOR noteno=C2 TO C7 DO..
+C7 G:261 LG com/rast2wav.b[468] FOR noteno=C2 TO C7 DO..
+C7 G:261 LG com/rast2wav.b[469] IF C2<=debugnote&debugnote<=C7 DO ..
+C7 G:261 LG com/rast2wav.b[505] FOR noteno=C2 TO C7 DO..
+C7 G:261 LG com/rast2wav.b[575] (C7+1)*i/(memvupb+1)
+C7 G:261 LG com/rast2wav.b[633] FOR n=C2 TO C7 DO..
+C7 G:261 LG com/rast2wav.b[694] FOR n=C2 TO C7 DO..
+C7 G:261 LG com/rast2wav.b[696] q:=memvupb*(n+1)/(C7-C2+1)
+C7 G:261 LG com/rast2wav.b[724] FOR noteno=C2 TO C7 DO..
+C7 G:261 LG com/rast2wav.b[732] filter(notev,C7)
+C7 G:261 LG com/rast2wav.b[735] FOR noteno=C2 TO C7 DO..
+C7 G:261 LG com/rast2wav.b[749] IF C2<=debugnote&debugnote<=C7 DO ..
+C7 G:261 LG com/rast2wav.b[752] FOR noteno=C2 TO C7 DO..
+C7 G:261 LG com/rast2wav.b[816] FLOAT (C7-noteno)#/FLOAT (C7-C2)
+C7 G:261 LG com/rast2wav.b[817] FLOAT (noteno-C2)#/FLOAT (C7-C2)
+C7 G:261 SG com/rast2wav.b[296] C7:=C2+5*notes_per_octave
+C7 M:60 DEF com/rast2wav.b[1013] C7=
+C7 M:60 MAN com/rast2wav.b[1088] CASE C7:.. 
+Cis2 M:1 DEF com/rast2wav.b[1008] Cis2=
+Cis2 M:1 MAN com/rast2wav.b[1024] CASE Cis2:.. 
+Cis3 M:13 DEF com/rast2wav.b[1009] Cis3=
+Cis3 M:13 MAN com/rast2wav.b[1037] CASE Cis3:.. 
+Cis4 M:25 DEF com/rast2wav.b[1010] Cis4=
+Cis4 M:25 MAN com/rast2wav.b[1050] CASE Cis4:.. 
+Cis5 M:37 DEF com/rast2wav.b[1011] Cis5=
+Cis5 M:37 MAN com/rast2wav.b[1063] CASE Cis5:.. 
+Cis6 M:49 DEF com/rast2wav.b[1012] Cis6=
+Cis6 M:49 MAN com/rast2wav.b[1076] CASE Cis6:.. 
+CloseObj M:1 DEF libhdr.h[286] CloseObj=1
+D2 M:2 DEF com/rast2wav.b[1008] D2=
+D2 M:2 MAN com/rast2wav.b[1025] CASE D2:.. 
+D3 M:14 DEF com/rast2wav.b[1009] D3=
+D3 M:14 MAN com/rast2wav.b[1038] CASE D3:.. 
+D4 M:26 DEF com/rast2wav.b[1010] D4=
+D4 M:26 MAN com/rast2wav.b[1051] CASE D4:.. 
+D5 M:38 DEF com/rast2wav.b[1011] D5=
+D5 M:38 MAN com/rast2wav.b[1064] CASE D5:.. 
+D6 M:50 DEF com/rast2wav.b[1012] D6=
+D6 M:50 MAN com/rast2wav.b[1077] CASE D6:.. 
+Dcb_arg M:4 DEF libhdr.h[650] Dcb_arg=4
+Dcb_cvp M:16 DEF libhdr.h[664] Dcb_cvp=16
+Dcb_devid M:1 DEF libhdr.h[647] Dcb_devid=1
+Dcb_flag M:7 DEF libhdr.h[653] Dcb_flag=7
+Dcb_intson M:6 DEF libhdr.h[652] Dcb_intson=6
+Dcb_irq M:5 DEF libhdr.h[651] Dcb_irq=5
+Dcb_op M:3 DEF libhdr.h[649] Dcb_op=3
+Dcb_threadp M:14 DEF libhdr.h[663] Dcb_threadp=14
+Dcb_type M:0 DEF libhdr.h[646] Dcb_type=0
+Dcb_upb M:17 DEF libhdr.h[668] Dcb_upb=17
+Dcb_var0 M:8 DEF libhdr.h[657] Dcb_var0=8
+Dcb_var1 M:9 DEF libhdr.h[658] Dcb_var1=9
+Dcb_var2 M:10 DEF libhdr.h[659] Dcb_var2=10
+Dcb_var3 M:11 DEF libhdr.h[660] Dcb_var3=11
+Dcb_var4 M:12 DEF libhdr.h[661] Dcb_var4=12
+Dcb_wkq M:2 DEF libhdr.h[648] Dcb_wkq=2
+Devc_create M:1 DEF libhdr.h[678] Devc_create=1
+Devc_destroy M:2 DEF libhdr.h[679] Devc_destroy=2
+Devc_setintson M:5 DEF libhdr.h[682] Devc_setintson=5
+Devc_start M:3 DEF libhdr.h[680] Devc_start=3
+Devc_stop M:4 DEF libhdr.h[681] Devc_stop=4
+Devt_clk M:1 DEF libhdr.h[671] Devt_clk=1
+Devt_fileop M:4 DEF libhdr.h[674] Devt_fileop=4
+Devt_tcpdev M:5 DEF libhdr.h[675] Devt_tcpdev=5
+Devt_ttyin M:2 DEF libhdr.h[672] Devt_ttyin=2
+Devt_ttyout M:3 DEF libhdr.h[673] Devt_ttyout=3
+Dis2 M:3 DEF com/rast2wav.b[1008] Dis2=
+Dis2 M:3 MAN com/rast2wav.b[1026] CASE Dis2:.. 
+Dis3 M:15 DEF com/rast2wav.b[1009] Dis3=
+Dis3 M:15 MAN com/rast2wav.b[1039] CASE Dis3:.. 
+Dis4 M:27 DEF com/rast2wav.b[1010] Dis4=
+Dis4 M:27 MAN com/rast2wav.b[1052] CASE Dis4:.. 
+Dis5 M:39 DEF com/rast2wav.b[1011] Dis5=
+Dis5 M:39 MAN com/rast2wav.b[1065] CASE Dis5:.. 
+Dis6 M:51 DEF com/rast2wav.b[1012] Dis6=
+Dis6 M:51 MAN com/rast2wav.b[1078] CASE Dis6:.. 
+E2 M:4 DEF com/rast2wav.b[1008] E2=
+E2 M:4 MAN com/rast2wav.b[1027] CASE E2:.. 
+E3 M:16 DEF com/rast2wav.b[1009] E3=
+E3 M:16 MAN com/rast2wav.b[1040] CASE E3:.. 
+E4 M:28 DEF com/rast2wav.b[1010] E4=
+E4 M:28 MAN com/rast2wav.b[1053] CASE E4:.. 
+E5 M:40 DEF com/rast2wav.b[1011] E5=
+E5 M:40 MAN com/rast2wav.b[1066] CASE E5:.. 
+E6 M:52 DEF com/rast2wav.b[1012] E6=
+E6 M:52 MAN com/rast2wav.b[1079] CASE E6:.. 
+F2 M:5 DEF com/rast2wav.b[1008] F2=
+F2 M:5 MAN com/rast2wav.b[1028] CASE F2:.. 
+F3 M:17 DEF com/rast2wav.b[1009] F3=
+F3 M:17 MAN com/rast2wav.b[1041] CASE F3:.. 
+F4 M:29 DEF com/rast2wav.b[1010] F4=
+F4 M:29 MAN com/rast2wav.b[1054] CASE F4:.. 
+F5 M:41 DEF com/rast2wav.b[1011] F5=
+F5 M:41 MAN com/rast2wav.b[1067] CASE F5:.. 
+F6 M:53 DEF com/rast2wav.b[1012] F6=
+F6 M:53 MAN com/rast2wav.b[1080] CASE F6:.. 
+Fis2 M:6 DEF com/rast2wav.b[1008] Fis2=
+Fis2 M:6 MAN com/rast2wav.b[1029] CASE Fis2:.. 
+Fis3 M:18 DEF com/rast2wav.b[1009] Fis3=
+Fis3 M:18 MAN com/rast2wav.b[1042] CASE Fis3:.. 
+Fis4 M:30 DEF com/rast2wav.b[1010] Fis4=
+Fis4 M:30 MAN com/rast2wav.b[1055] CASE Fis4:.. 
+Fis5 M:42 DEF com/rast2wav.b[1011] Fis5=
+Fis5 M:42 MAN com/rast2wav.b[1068] CASE Fis5:.. 
+Fis6 M:54 DEF com/rast2wav.b[1012] Fis6=
+Fis6 M:54 MAN com/rast2wav.b[1081] CASE Fis6:.. 
+G2 M:7 DEF com/rast2wav.b[1008] G2=
+G2 M:7 MAN com/rast2wav.b[1030] CASE G2:.. 
+G3 M:19 DEF com/rast2wav.b[1009] G3=
+G3 M:19 MAN com/rast2wav.b[1043] CASE G3:.. 
+G4 M:31 DEF com/rast2wav.b[1010] G4=
+G4 M:31 MAN com/rast2wav.b[1056] CASE G4:.. 
+G5 M:43 DEF com/rast2wav.b[1011] G5=
+G5 M:43 MAN com/rast2wav.b[1069] CASE G5:.. 
+G6 M:55 DEF com/rast2wav.b[1012] G6=
+G6 M:55 MAN com/rast2wav.b[1082] CASE G6:.. 
+GB2312 M:-2 DEF libhdr.h[579] GB2312=-2
+Gis2 M:8 DEF com/rast2wav.b[1008] Gis2=
+Gis2 M:8 MAN com/rast2wav.b[1031] CASE Gis2:.. 
+Gis3 M:20 DEF com/rast2wav.b[1009] Gis3=
+Gis3 M:20 MAN com/rast2wav.b[1044] CASE Gis3:.. 
+Gis4 M:32 DEF com/rast2wav.b[1010] Gis4=
+Gis4 M:32 MAN com/rast2wav.b[1057] CASE Gis4:.. 
+Gis5 M:44 DEF com/rast2wav.b[1011] Gis5=
+Gis5 M:44 MAN com/rast2wav.b[1070] CASE Gis5:.. 
+Gis6 M:56 DEF com/rast2wav.b[1012] Gis6=
+Gis6 M:56 MAN com/rast2wav.b[1083] CASE Gis6:.. 
+InitObj M:0 DEF libhdr.h[285] InitObj=0
+Lsamplev G:251 DEF com/rast2wav.b[134] Lsamplev=
+Lsamplev G:251 LG com/rast2wav.b[401] UNLESS Lsamplev DO ..
+Lsamplev G:251 LG com/rast2wav.b[421] Lsamplev!i#:= 0.000
+Lsamplev G:251 LG com/rast2wav.b[471] smoothsamples(Lsamplev,samplevupb)
+Lsamplev G:251 LG com/rast2wav.b[477] Lsamplev!i
+Lsamplev G:251 LG com/rast2wav.b[490]
+    wrsample(FIX (30000#*Lsamplev!i#/maxsamplevalue),FIX (30000*Rsamplev!i/maxsamplevalue))
+Lsamplev G:251 LG com/rast2wav.b[493]
+    wrsample(FIX (30000#*Lsamplev!i#/maxsamplevalue),0)
+Lsamplev G:251 LG com/rast2wav.b[500] IF Lsamplev DO ..
+Lsamplev G:251 LG com/rast2wav.b[500] freevec(Lsamplev)
+Lsamplev G:251 LG com/rast2wav.b[982]
+    Lsamplev!s#:=Lsamplev!s#+sample#*Lfac
+Lsamplev G:251 LG com/rast2wav.b[982]
+    Lsamplev!s#:=Lsamplev!s#+sample*Lfac
+Lsamplev G:251 LG com/rast2wav.b[985] Lsamplev!s#:=Lsamplev!s#+sample
+Lsamplev G:251 SG com/rast2wav.b[249] Lsamplev:=0
+Lsamplev G:251 SG com/rast2wav.b[400] Lsamplev:=getvec(samplevupb)
+ON64 M:0 DEF libhdr.h[25] ON64=32=64
+Rsamplev G:252 DEF com/rast2wav.b[135] Rsamplev=
+Rsamplev G:252 LG com/rast2wav.b[408] UNLESS Rsamplev DO ..
+Rsamplev G:252 LG com/rast2wav.b[422] Rsamplev!i#:= 0.000
+Rsamplev G:252 LG com/rast2wav.b[472] smoothsamples(Rsamplev,samplevupb)
+Rsamplev G:252 LG com/rast2wav.b[480] sample#:=Rsamplev!i
+Rsamplev G:252 LG com/rast2wav.b[490]
+    wrsample(FIX ( 30000.000#*Lsamplev!i#/maxsamplevalue),FIX (30000#*Rsamplev!i#/maxsamplevalue))
+Rsamplev G:252 LG com/rast2wav.b[501] IF Rsamplev DO ..
+Rsamplev G:252 LG com/rast2wav.b[501] freevec(Rsamplev)
+Rsamplev G:252 LG com/rast2wav.b[983]
+    Rsamplev!s#:=Rsamplev!s#+sample#*Rfac
+Rsamplev G:252 LG com/rast2wav.b[983]
+    Rsamplev!s#:=Rsamplev!s#+sample*Rfac
+Rsamplev G:252 SG com/rast2wav.b[250] Rsamplev:=0
+Rsamplev G:252 SG com/rast2wav.b[407] Rsamplev:=getvec(samplevupb)
+State_dead M:12 DEF libhdr.h[697] State_dead=12
+State_hold M:2 DEF libhdr.h[694] State_hold=2
+State_int M:8 DEF libhdr.h[696] State_int=8
+State_pkt M:1 DEF libhdr.h[693] State_pkt=1
+State_wait M:4 DEF libhdr.h[695] State_wait=4
+Sys_buttons M:56 DEF libhdr.h[457] Sys_buttons=56
+Sys_callc M:59 DEF libhdr.h[460] Sys_callc=59
+Sys_callnative M:53 DEF libhdr.h[454] Sys_callnative=53
+Sys_close M:16 DEF libhdr.h[420] Sys_close=16
+Sys_cputime M:30 DEF libhdr.h[433] Sys_cputime=30
+Sys_datstamp M:44 DEF libhdr.h[445] Sys_datstamp=44
+Sys_delay M:57 DEF libhdr.h[458] Sys_delay=57
+Sys_deletefile M:17 DEF libhdr.h[421] Sys_deletefile=17
+Sys_devcom M:43 DEF libhdr.h[444] Sys_devcom=43
+Sys_dumpmem M:52 DEF libhdr.h[453] Sys_dumpmem=52
+Sys_ext M:68 DEF libhdr.h[471] Sys_ext=68
+Sys_filemodtime M:31 DEF libhdr.h[434] Sys_filemodtime=31
+Sys_filesize M:46 DEF libhdr.h[447] Sys_filesize=46
+Sys_flt M:63 DEF libhdr.h[465] Sys_flt=63
+Sys_flt M:63 MAN com/rast2wav.b[653]
+    line_secs:=sys(Sys_flt,fl_floor,line_fsecs)
+Sys_flt M:63 MAN com/rast2wav.b[714]
+    line_secs:=FIX sys(Sys_flt,fl_floor,line_fsecs)
+Sys_flt M:63 MAN com/rast2wav.b[805]
+    freqA4#*sys(Sys_flt,fl_pow, 2.000,FLOAT 3/FLOAT 12)
+Sys_flt M:63 MAN com/rast2wav.b[807]
+    freqC2#*sys(Sys_flt,fl_pow, 2.000,FLOAT noteno/FLOAT notes_per_octave)
+Sys_freevec M:22 DEF libhdr.h[426] Sys_freevec=22
+Sys_getpid M:51 DEF libhdr.h[452] Sys_getpid=51
+Sys_getprefix M:33 DEF libhdr.h[436] Sys_getprefix=33
+Sys_getsysval M:48 DEF libhdr.h[449] Sys_getsysval=48
+Sys_gettrval M:62 DEF libhdr.h[464] Sys_gettrval=62
+Sys_getvec M:21 DEF libhdr.h[425] Sys_getvec=21
+Sys_gl M:67 DEF libhdr.h[470] Sys_gl=67
+Sys_globin M:24 DEF libhdr.h[428] Sys_globin=24
+Sys_graphics M:34 DEF libhdr.h[437] Sys_graphics=34
+Sys_inc M:55 DEF libhdr.h[456] Sys_inc=55
+Sys_incdcount M:65 DEF libhdr.h[467] Sys_incdcount=65
+Sys_interpret M:7 DEF libhdr.h[412] Sys_interpret=7
+Sys_intflag M:28 DEF libhdr.h[431] Sys_intflag=28
+Sys_joy M:69 DEF libhdr.h[472] Sys_joy=69
+Sys_loadseg M:23 DEF libhdr.h[427] Sys_loadseg=23
+Sys_lockirq M:41 DEF libhdr.h[442] Sys_lockirq=41
+Sys_muldiv M:26 DEF libhdr.h[430] Sys_muldiv=26
+Sys_openappend M:19 DEF libhdr.h[423] Sys_openappend=19
+Sys_openread M:14 DEF libhdr.h[418] Sys_openread=14
+Sys_openreadwrite M:47 DEF libhdr.h[448] Sys_openreadwrite=47
+Sys_openwrite M:15 DEF libhdr.h[419] Sys_openwrite=15
+Sys_platform M:54 DEF libhdr.h[455] Sys_platform=54
+Sys_pollsardch M:64 DEF libhdr.h[466] Sys_pollsardch=64
+Sys_putsysval M:49 DEF libhdr.h[450] Sys_putsysval=49
+Sys_quit M:0 DEF libhdr.h[405] Sys_quit=0
+Sys_read M:12 DEF libhdr.h[416] Sys_read=12
+Sys_renamefile M:18 DEF libhdr.h[422] Sys_renamefile=18
+Sys_rti M:1 DEF libhdr.h[406] Sys_rti=1
+Sys_sardch M:10 DEF libhdr.h[414] Sys_sardch=10
+Sys_saveregs M:2 DEF libhdr.h[407] Sys_saveregs=2
+Sys_sawrch M:11 DEF libhdr.h[415] Sys_sawrch=11
+Sys_sdl M:66 DEF libhdr.h[469] Sys_sdl=66
+Sys_seek M:38 DEF libhdr.h[439] Sys_seek=38
+Sys_setcount M:-1 DEF libhdr.h[404] Sys_setcount=-1
+Sys_setprefix M:32 DEF libhdr.h[435] Sys_setprefix=32
+Sys_setraster M:29 DEF libhdr.h[432] Sys_setraster=29
+Sys_setst M:3 DEF libhdr.h[408] Sys_setst=3
+Sys_settracing M:70 DEF libhdr.h[473] Sys_settracing=70
+Sys_settrcount M:61 DEF libhdr.h[463] Sys_settrcount=61
+Sys_shellcom M:50 DEF libhdr.h[451] Sys_shellcom=50
+Sys_sound M:58 DEF libhdr.h[459] Sys_sound=58
+Sys_tally M:6 DEF libhdr.h[411] Sys_tally=6
+Sys_tell M:39 DEF libhdr.h[440] Sys_tell=39
+Sys_tracing M:4 DEF libhdr.h[409] Sys_tracing=4
+Sys_trpush M:60 DEF libhdr.h[462] Sys_trpush=60
+Sys_unloadseg M:25 DEF libhdr.h[429] Sys_unloadseg=25
+Sys_unlockirq M:42 DEF libhdr.h[443] Sys_unlockirq=42
+Sys_waitirq M:40 DEF libhdr.h[441] Sys_waitirq=40
+Sys_watch M:5 DEF libhdr.h[410] Sys_watch=5
+Sys_write M:13 DEF libhdr.h[417] Sys_write=13
+Task_cli M:1 DEF libhdr.h[685] Task_cli=1
+Task_consolehandler M:3 DEF libhdr.h[687] Task_consolehandler=3
+Task_debug M:2 DEF libhdr.h[686] Task_debug=2
+Task_filehandler M:4 DEF libhdr.h[688] Task_filehandler=4
+Task_mbxhandler M:5 DEF libhdr.h[689] Task_mbxhandler=5
+Task_tcphandler M:6 DEF libhdr.h[690] Task_tcphandler=6
+UTF8 M:-1 DEF libhdr.h[578] UTF8=-1
+abort G:28 DEF libhdr.h[61] abort=28
+abort G:28 LG com/rast2wav.b[377] abort(999)
+abort G:28 LG com/rast2wav.b[386] abort(999)
+abort G:28 LG com/rast2wav.b[395] abort(999)
+abort G:28 LG com/rast2wav.b[403] abort(999)
+abort G:28 LG com/rast2wav.b[410] abort(999)
+abort G:28 LG com/rast2wav.b[588] abort(999)
+abort G:28 LG com/rast2wav.b[640] abort(1111)
+abort G:28 LG com/rast2wav.b[691] abort(8271)
+abort G:28 LG com/rast2wav.b[729] abort(4999)
+abort G:28 LG com/rast2wav.b[767] abort(999)
+abort G:28 LG com/rast2wav.b[976] abort(999)
+addnote G:210 DEF com/rast2wav.b[72] addnote=
+addnote G:210 LG com/rast2wav.b[901] addnote(noteno,spc,p0,a0,p1,a1,...)
+addnote G:210 LG com/rast2wav.b[902] addnote(noteno,spc,p1,a1,p2,a2,...)
+addnote G:210 LG com/rast2wav.b[903] addnote(noteno,spc,p2,a2,p3,a3,...)
+addnote G:210 LG com/rast2wav.b[904] addnote(noteno,spc,p3,a3,p4,a4,...)
+addnote G:210 LG com/rast2wav.b[915] addnote(noteno,spc,p0,a0,p1,a1,...)
+addnote G:210 LG com/rast2wav.b[916] addnote(noteno,spc,p1,a1,p2,a2,...)
+addnote G:210 LG com/rast2wav.b[917] addnote(noteno,spc,p2,a2,p3,a3,...)
+addnote G:210 LG com/rast2wav.b[918] addnote(noteno,spc,p3,a3,p4,a4,...)
+addnote G:210 RT com/rast2wav.b[959]
+    LET addnote(note,spc,p,FLT ap,q,FLT aq,FLT Lfac,FLT Rfac)BE..
+appendstream G:66 DEF libhdr.h[99] appendstream=66
+binrdch G:39 DEF libhdr.h[72] binrdch=39
+binwrch G:42 DEF libhdr.h[75] binwrch=42
+binwrch G:42 LG com/rast2wav.b[357] binwrch(riffhdr%i)
+binwrch G:42 LG com/rast2wav.b[546] binwrch(left)
+binwrch G:42 LG com/rast2wav.b[546] binwrch(left>>8)
+binwrch G:42 LG com/rast2wav.b[547] binwrch(right)
+binwrch G:42 LG com/rast2wav.b[547] binwrch(right>>8)
+bits_per_sample G:232 DEF com/rast2wav.b[107] bits_per_sample=
+bits_per_sample G:232 LG com/rast2wav.b[271]
+    writef("%s %n'samples*n",stereo->"stereo","mono",bits_per_sample)
+bits_per_sample G:232 LG com/rast2wav.b[325]
+    bytes_per_sample:=bits_per_sample/8
+bits_per_sample G:232 LG com/rast2wav.b[346] riffhdr!4:=bits_per_sample
+bits_per_sample G:232 LG com/rast2wav.b[351]
+    riffhdr!8:=bits_per_sample<<16|bytes_per_sample
+bits_per_sample G:232 SG com/rast2wav.b[267] bits_per_sample:=16
+bitsperbyte M:8 DEF libhdr.h[238] bitsperbyte=8
+bitsperbyte M:8 MAN libhdr.h[239] bitsperword=bitsperbyte*bytesperword
+bitsperword M:32 DEF libhdr.h[239] bitsperword=bitsperbyte*bytesperword
+bitsperword M:32 MAN libhdr.h[241] minint=1<<bitsperword-1
+bootregs M:11 DEF libhdr.h[476] bootregs=11
+bytes_per_sample G:233 DEF com/rast2wav.b[108] bytes_per_sample=
+bytes_per_sample G:233 LG com/rast2wav.b[326]
+    bytes_per_sample:=bytes_per_sample*2
+bytes_per_sample G:233 LG com/rast2wav.b[327]
+    bytes_per_second:=sample_rate*bytes_per_sample
+bytes_per_sample G:233 LG com/rast2wav.b[328]
+    data_bytes:=samplevupb*bytes_per_sample
+bytes_per_sample G:233 LG com/rast2wav.b[351]
+    riffhdr!8:=bits_per_sample<<16|bytes_per_sample
+bytes_per_sample G:233 SG com/rast2wav.b[325]
+    bytes_per_sample:=bits_per_sample/8
+bytes_per_sample G:233 SG com/rast2wav.b[326]
+    bytes_per_sample:=bytes_per_sample*2
+bytes_per_second G:243 DEF com/rast2wav.b[120] bytes_per_second=
+bytes_per_second G:243 LG com/rast2wav.b[350]
+    riffhdr!7:=bytes_per_second
+bytes_per_second G:243 SG com/rast2wav.b[327]
+    bytes_per_second:=sample_rate*bytes_per_sample
+bytesperword M:4 DEF libhdr.h[237] bytesperword=1<<B2Wsh
+bytesperword M:4 MAN libhdr.h[239] bitsperword=bitsperbyte*bytesperword
+bytesperword M:4 MAN libhdr.h[240] mcaddrinc=bytesperword
+bytesperword M:4 MAN libhdr.h[528]
+    scb_nameeend=scb_name+scb_maxnamelen/bytesperword
+bytesperword M:4 MAN libhdr.h[643]
+    tcb_upb=tcb_namebase+15/bytesperword+1
+callco G:19 DEF libhdr.h[52] callco=19
+callco G:19 LG com/rast2wav.b[468] callco(notecov!noteno,0)
+callco G:19 LG com/rast2wav.b[469] callco(notecov!debugnote,0)
+callco G:19 LG com/rast2wav.b[508] callco(cptr,2)
+callco G:19 LG com/rast2wav.b[750]
+    callco(notecov!debugnote,notev!debugnote-1,0)
+callco G:19 LG com/rast2wav.b[753]
+    callco(notecov!noteno,notev!noteno->1,0)
+callseg G:107 DEF libhdr.h[141] callseg=107
+capitalch G:96 DEF libhdr.h[130] capitalch=96
+ch G:250 DEF com/rast2wav.b[132] ch=
+ch G:250 LG com/rast2wav.b[584] WHILE ch=32|ch=10 DO ..
+ch G:250 LG com/rast2wav.b[585] IF ch=endstreamch DO ..
+ch G:250 LG com/rast2wav.b[586] UNLESS 48<=ch&ch<=57 DO ..
+ch G:250 LG com/rast2wav.b[590] res:=ch-48
+ch G:250 LG com/rast2wav.b[592] WHILE 48<=ch&ch<=57 DO ..
+ch G:250 LG com/rast2wav.b[593] res:=10*res+ch-48
+ch G:250 LG com/rast2wav.b[612] .. REPEATWHILE ch=32
+ch G:250 LG com/rast2wav.b[613] IF ch=70 DO ..
+ch G:250 LG com/rast2wav.b[614] WHILE ch=32 DO ..
+ch G:250 LG com/rast2wav.b[615] IF ch=77 DO ..
+ch G:250 LG com/rast2wav.b[616] WHILE ch=32 DO ..
+ch G:250 LG com/rast2wav.b[617] IF ch=75 DO ..
+ch G:250 LG com/rast2wav.b[618] WHILE ch=32 DO ..
+ch G:250 LG com/rast2wav.b[619] IF ch=83 DO ..
+ch G:250 LG com/rast2wav.b[637] SWITCHON ch INTO..
+ch G:250 LG com/rast2wav.b[639] sawritef("Bad ch '%c'*n",ch)
+ch G:250 SG com/rast2wav.b[584] ch:=rdch()
+ch G:250 SG com/rast2wav.b[591] ch:=rdch()
+ch G:250 SG com/rast2wav.b[594] ch:=rdch()
+ch G:250 SG com/rast2wav.b[612] ch:=rdch()
+ch G:250 SG com/rast2wav.b[613] ch:=rdch()
+ch G:250 SG com/rast2wav.b[614] ch:=rdch()
+ch G:250 SG com/rast2wav.b[615] ch:=rdch()
+ch G:250 SG com/rast2wav.b[616] ch:=rdch()
+ch G:250 SG com/rast2wav.b[617] ch:=rdch()
+ch G:250 SG com/rast2wav.b[618] ch:=rdch()
+ch G:250 SG com/rast2wav.b[619] ch:=rdch()
+ch G:250 SG com/rast2wav.b[645] ch:=rdch()
+ch G:250 SG com/rast2wav.b[649] ch:=rdch()
+ch G:250 SG com/rast2wav.b[661] ch:=rdch()
+ch G:250 SG com/rast2wav.b[670] ch:=rdch()
+ch G:250 SG com/rast2wav.b[683] ch:=rdch()
+changeco G:6 DEF libhdr.h[38] changeco=6
+changepri G:155 DEF libhdr.h[203] changepri=155
+cis G:12 DEF libhdr.h[45] cis=12
+clear_words G:115 DEF libhdr.h[149] clear_words=115
+cli_commanddir G:136 DEF libhdr.h[173] cli_commanddir=136
+cli_commandfile G:143 DEF libhdr.h[184] cli_commandfile=143
+cli_commandname G:138 DEF libhdr.h[179] cli_commandname=138
+cli_currentinput G:142 DEF libhdr.h[183] cli_currentinput=142
+cli_currentoutput G:146 DEF libhdr.h[190] cli_currentoutput=146
+cli_data G:135 DEF libhdr.h[172] cli_data=135
+cli_defaultstack G:147 DEF libhdr.h[191] cli_defaultstack=147
+cli_faillevel G:139 DEF libhdr.h[180] cli_faillevel=139
+cli_init G:133 DEF libhdr.h[170] cli_init=133
+cli_initialfaillevel M:10 DEF libhdr.h[587]
+    cli_initialfaillevel=return_hard
+cli_initialstack M:50000 DEF libhdr.h[586] cli_initialstack=50000
+cli_module G:149 DEF libhdr.h[193] cli_module=149
+cli_module_gn M:149 DEF libhdr.h[585] cli_module_gn=149
+cli_preloadlist G:145 DEF libhdr.h[189] cli_preloadlist=145
+cli_prompt G:140 DEF libhdr.h[181] cli_prompt=140
+cli_result2 G:134 DEF libhdr.h[171] cli_result2=134
+cli_returncode G:137 DEF libhdr.h[174] cli_returncode=137
+cli_standardinput G:141 DEF libhdr.h[182] cli_standardinput=141
+cli_standardoutput G:148 DEF libhdr.h[192] cli_standardoutput=148
+cli_status G:144 DEF libhdr.h[186] cli_status=144
+cli_tallyflag G:132 DEF libhdr.h[169] cli_tallyflag=132
+clibit_comcom M:4 DEF libhdr.h[592] clibit_comcom=4
+clibit_endcli M:256 DEF libhdr.h[598] clibit_endcli=256
+clibit_eofdel M:2 DEF libhdr.h[591] clibit_eofdel=2
+clibit_maincli M:8 DEF libhdr.h[593] clibit_maincli=8
+clibit_mbxcli M:64 DEF libhdr.h[596] clibit_mbxcli=64
+clibit_newcli M:16 DEF libhdr.h[594] clibit_newcli=16
+clibit_noprompt M:1 DEF libhdr.h[590] clibit_noprompt=1
+clibit_runcli M:32 DEF libhdr.h[595] clibit_runcli=32
+clibit_tcpcli M:128 DEF libhdr.h[597] clibit_tcpcli=128
+clihook G:4 DEF libhdr.h[36] clihook=4
+cliregs M:21 DEF libhdr.h[477] cliregs=21
+co_c M:5 DEF libhdr.h[283] co_c=
+co_fn M:3 DEF libhdr.h[281] co_fn=
+co_list M:2 DEF libhdr.h[280] co_list=
+co_parent M:1 DEF libhdr.h[279] co_parent=
+co_pptr M:0 DEF libhdr.h[278] co_pptr=0
+co_size M:4 DEF libhdr.h[282] co_size=
+codewrch G:126 DEF libhdr.h[160] codewrch=126
+colist G:8 DEF libhdr.h[40] colist=8
+compch G:97 DEF libhdr.h[131] compch=97
+compstring G:98 DEF libhdr.h[132] compstring=98
+consoletask G:171 DEF libhdr.h[216] consoletask=171
+copy_bytes G:116 DEF libhdr.h[150] copy_bytes=116
+copy_words G:114 DEF libhdr.h[148] copy_words=114
+copydir G:79 DEF libhdr.h[112] copydir=79
+copyobj G:75 DEF libhdr.h[108] copyobj=75
+copystring G:99 DEF libhdr.h[133] copystring=99
+cos G:13 DEF libhdr.h[46] cos=13
+cowait G:20 DEF libhdr.h[53] cowait=20
+cowait G:20 LG com/rast2wav.b[837] cowait(0)
+createco G:17 DEF libhdr.h[50] createco=17
+createdev G:172 DEF libhdr.h[217] createdev=172
+createdir G:82 DEF libhdr.h[115] createdir=82
+createtask G:153 DEF libhdr.h[201] createtask=153
+currco G:7 DEF libhdr.h[39] currco=7
+current_language G:190 DEF libhdr.h[228] current_language=190
+currentdir G:14 DEF libhdr.h[47] currentdir=14
+dat_to_strings G:110 DEF libhdr.h[144] dat_to_strings=110
+data_bytes G:249 DEF com/rast2wav.b[130] data_bytes=
+data_bytes G:249 LG com/rast2wav.b[330]
+    writef("Data 'es = %n*n",data_bytes)
+data_bytes G:249 LG com/rast2wav.b[342] riffhdr!1:=data_bytes+36
+data_bytes G:249 LG com/rast2wav.b[353] riffhdr!10:=data_bytes
+data_bytes G:249 SG com/rast2wav.b[328]
+    data_bytes:=samplevupb*bytes_per_sample
+datstamp G:109 DEF libhdr.h[143] datstamp=109
+datstring G:108 DEF libhdr.h[142] datstring=108
+deadcode M:#xDEADC0DE DEF libhdr.h[261] deadcode=-#x21523F22
+debugnote G:219 DEF com/rast2wav.b[85] debugnote=
+debugnote G:219 LG com/rast2wav.b[439]
+    writef("debug'te=%n *n*n",debugnote,note2str(debugnote))
+debugnote G:219 LG com/rast2wav.b[467] TEST debugnote<0 THEN .. ELSE ..
+debugnote G:219 LG com/rast2wav.b[469]
+    IF C2<=debugnote&debugnote<=C7 DO ..
+debugnote G:219 LG com/rast2wav.b[469] callco(notecov!debugnote,0)
+debugnote G:219 LG com/rast2wav.b[747] TEST debugnote>=0 THEN .. ELSE ..
+debugnote G:219 LG com/rast2wav.b[749]
+    IF C2<=debugnote&debugnote<=C7 DO ..
+debugnote G:219 LG com/rast2wav.b[750]
+    callco(notecov!debugnote,notev!debugnote-1,0)
+debugnote G:219 LG com/rast2wav.b[874] IF noteno=debugnote DO ..
+debugnote G:219 SG com/rast2wav.b[231] debugnote:=-1
+debugnote G:219 SG com/rast2wav.b[244] debugnote:=!argv!5
+delay G:128 DEF libhdr.h[162] delay=128
+delayuntil G:129 DEF libhdr.h[163] delayuntil=129
+deleteco G:18 DEF libhdr.h[51] deleteco=18
+deleteco G:18 LG com/rast2wav.b[509] deleteco(cptr)
+deletedev G:173 DEF libhdr.h[218] deletedev=173
+deletefile G:76 DEF libhdr.h[109] deletefile=76
+deleteself G:125 DEF libhdr.h[159] deleteself=125
+deletetask G:154 DEF libhdr.h[202] deletetask=154
+deplete G:43 DEF libhdr.h[76] deplete=43
+endread G:60 DEF libhdr.h[93] endread=60
+endstream G:62 DEF libhdr.h[95] endstream=62
+endstream G:62 LG com/rast2wav.b[518] endstream(fromstream)
+endstream G:62 LG com/rast2wav.b[521] endstream(wavstream)
+endstreamch M:-1 DEF libhdr.h[244] endstreamch=-1
+endstreamch M:-1 MAN com/rast2wav.b[585] IF ch=endstreamch DO ..
+endstreamch M:-1 MAN com/rast2wav.b[650] CASE endstreamch:.. 
+endtask G:162 DEF libhdr.h[210] endtask=162
+endwrite G:61 DEF libhdr.h[94] endwrite=61
+entryword M:57311 DEF libhdr.h[263] entryword=57311
+fault G:174 DEF libhdr.h[219] fault=174
+fcount G:226 DEF com/rast2wav.b[97] fcount=
+fcount G:226 LG com/rast2wav.b[651]
+    line_fsecs#:=ftotalsecs#*FLOAT fcount#/fmaxfcount
+fcount G:226 LG com/rast2wav.b[712] fcount:=fcount+kval
+fcount G:226 LG com/rast2wav.b[713] line_fsecs#:=pos2secs(fcount)
+fcount G:226 SG com/rast2wav.b[363] fcount:=0
+fcount G:226 SG com/rast2wav.b[446] fcount:=maxfcount
+fcount G:226 SG com/rast2wav.b[712] fcount:=fcount+kval
+filter G:209 DEF com/rast2wav.b[71] filter=
+filter G:209 LG com/rast2wav.b[732] filter(notev,C7)
+filter G:209 RT com/rast2wav.b[933] LET filter(v,upb)BE..
+fin F:16 LAB com/rast2wav.b[496] fin:selectoutput(stdout)
+fin F:16 LF com/rast2wav.b[260] GOTO fin
+fin F:16 LF com/rast2wav.b[265] GOTO fin
+fin F:16 LF com/rast2wav.b[337] GOTO fin
+findappend G:130 DEF libhdr.h[164] findappend=130
+findarg G:104 DEF libhdr.h[138] findarg=104
+findinoutput G:50 DEF libhdr.h[83] findinoutput=50
+findinput G:48 DEF libhdr.h[81] findinput=48
+findinput G:48 LG com/rast2wav.b[257]
+    fromstream:=findinput(fromfilename)
+findoutput G:49 DEF libhdr.h[82] findoutput=49
+findoutput G:49 LG com/rast2wav.b[334]
+    wavstream:=findoutput(wavfilename)
+findstream G:52 DEF libhdr.h[85] findstream=52
+findupdate G:51 DEF libhdr.h[84] findupdate=51
+fkval G:224 DEF com/rast2wav.b[94] fkval=
+fkval G:224 LG com/rast2wav.b[625] fkval#:=FLOAT fkval
+fkval G:224 SG com/rast2wav.b[283] fkval#:=FLOAT kval
+fkval G:224 SG com/rast2wav.b[625] fkval#:=FLOAT fkval
+fl_64to32 M:45 DEF libhdr.h[574] fl_64to32=
+fl_F2N M:42 DEF libhdr.h[571] fl_F2N=
+fl_N2F M:41 DEF libhdr.h[570] fl_N2F=
+fl_abs M:5 DEF libhdr.h[541] fl_abs=
+fl_acos M:20 DEF libhdr.h[546] fl_acos=20
+fl_add M:9 DEF libhdr.h[543] fl_add=
+fl_asin M:21 DEF libhdr.h[547] fl_asin=
+fl_atan M:22 DEF libhdr.h[548] fl_atan=
+fl_atan2 M:23 DEF libhdr.h[549] fl_atan2=
+fl_avail M:0 DEF libhdr.h[539] fl_avail=0
+fl_ceil M:38 DEF libhdr.h[564] fl_ceil=
+fl_cos M:24 DEF libhdr.h[550] fl_cos=
+fl_cosh M:27 DEF libhdr.h[553] fl_cosh=
+fl_div M:7 DEF libhdr.h[542] fl_div=
+fl_eq M:13 DEF libhdr.h[544] fl_eq=
+fl_exp M:30 DEF libhdr.h[556] fl_exp=
+fl_fix M:4 DEF libhdr.h[541] fl_fix=
+fl_float M:3 DEF libhdr.h[541] fl_float=
+fl_floor M:39 DEF libhdr.h[565] fl_floor=
+fl_floor M:39 MAN com/rast2wav.b[653]
+    line_secs:=sys(Sys_flt,fl_floor,line_fsecs)
+fl_floor M:39 MAN com/rast2wav.b[714]
+    line_secs:=FIX sys(Sys_flt,fl_floor,line_fsecs)
+fl_frexp M:31 DEF libhdr.h[557] fl_frexp=
+fl_ge M:18 DEF libhdr.h[544] fl_ge=
+fl_gr M:16 DEF libhdr.h[544] fl_gr=
+fl_ldexp M:32 DEF libhdr.h[558] fl_ldexp=
+fl_le M:17 DEF libhdr.h[544] fl_le=
+fl_log M:33 DEF libhdr.h[559] fl_log=
+fl_log10 M:34 DEF libhdr.h[560] fl_log10=
+fl_ls M:15 DEF libhdr.h[544] fl_ls=
+fl_mk M:1 DEF libhdr.h[540] fl_mk=
+fl_mod M:8 DEF libhdr.h[542] fl_mod=
+fl_modf M:40 DEF libhdr.h[566] fl_modf=
+fl_mul M:6 DEF libhdr.h[542] fl_mul=
+fl_ne M:14 DEF libhdr.h[544] fl_ne=
+fl_neg M:12 DEF libhdr.h[543] fl_neg=
+fl_pos M:11 DEF libhdr.h[543] fl_pos=
+fl_pow M:36 DEF libhdr.h[562] fl_pow=36
+fl_pow M:36 MAN com/rast2wav.b[805]
+    freqA4#*sys(Sys_flt,fl_pow, 2.000,FLOAT 3/FLOAT 12)
+fl_pow M:36 MAN com/rast2wav.b[807]
+    freqC2#*sys(Sys_flt,fl_pow, 2.000,FLOAT noteno/FLOAT notes_per_octave)
+fl_radius2 M:43 DEF libhdr.h[572] fl_radius2=
+fl_radius3 M:44 DEF libhdr.h[573] fl_radius3=
+fl_sin M:25 DEF libhdr.h[551] fl_sin=
+fl_sinh M:28 DEF libhdr.h[554] fl_sinh=
+fl_sqrt M:37 DEF libhdr.h[563] fl_sqrt=
+fl_sub M:10 DEF libhdr.h[543] fl_sub=
+fl_tan M:26 DEF libhdr.h[552] fl_tan=
+fl_tanh M:29 DEF libhdr.h[555] fl_tanh=
+fl_unmk M:2 DEF libhdr.h[540] fl_unmk=
+flag_a M:1 DEF libhdr.h[699] flag_a=1<<0
+flag_b M:2 DEF libhdr.h[700] flag_b=1<<1
+flag_c M:4 DEF libhdr.h[701] flag_c=1<<2
+flag_d M:8 DEF libhdr.h[702] flag_d=1<<3
+flag_e M:16 DEF libhdr.h[703] flag_e=1<<4
+fmaxfcount FG:221 DEF com/rast2wav.b[89] FLT fmaxfcount=
+fmaxfcount FG:221 LG com/rast2wav.b[285]
+    fsecs_per_fcount#:=ftotalsecs#/fmaxfcount
+fmaxfcount FG:221 LG com/rast2wav.b[651]
+    line_fsecs#:=ftotalsecs#*FLOAT fcount#/fmaxfcount
+fmaxfcount FG:221 SG com/rast2wav.b[282] fmaxfcount#:=FLOAT maxfcount
+fmaxfcount FG:221 SG com/rast2wav.b[624] fmaxfcount#:=FLOAT maxfcount
+freeobj G:78 DEF libhdr.h[111] freeobj=78
+freevec G:27 DEF libhdr.h[60] freevec=27
+freevec G:27 LG com/rast2wav.b[500] freevec(Lsamplev)
+freevec G:27 LG com/rast2wav.b[501] freevec(Rsamplev)
+freevec G:27 LG com/rast2wav.b[511] freevec(notecov)
+freevec G:27 LG com/rast2wav.b[514] freevec(memv)
+freevec G:27 LG com/rast2wav.b[515] freevec(notev)
+freevec G:27 LG com/rast2wav.b[516] freevec(noteposv)
+freevec G:27 LG com/rast2wav.b[769] freevec(v)
+fromfilename G:214 DEF com/rast2wav.b[79] fromfilename=
+fromfilename G:214 LG com/rast2wav.b[257]
+    fromstream:=findinput(fromfilename)
+fromfilename G:214 LG com/rast2wav.b[259]
+    sawritef("Unabl'file %s*n",fromfilename)
+fromfilename G:214 LG com/rast2wav.b[269]
+    writef("Conve's to %s*n",fromfilename,wavfilename)
+fromfilename G:214 SG com/rast2wav.b[220] fromfilename:="RASTER"
+fromfilename G:214 SG com/rast2wav.b[239] fromfilename:=argv!0
+fromstream G:215 DEF com/rast2wav.b[80] fromstream=
+fromstream G:215 LG com/rast2wav.b[258] UNLESS fromstream DO ..
+fromstream G:215 LG com/rast2wav.b[263] selectinput(fromstream)
+fromstream G:215 LG com/rast2wav.b[518] IF fromstream DO ..
+fromstream G:215 LG com/rast2wav.b[518] endstream(fromstream)
+fromstream G:215 SG com/rast2wav.b[221] fromstream:=0
+fromstream G:215 SG com/rast2wav.b[257]
+    fromstream:=findinput(fromfilename)
+fromstream G:215 SG com/rast2wav.b[519] fromstream:=0
+fsample_rate FG:235 DEF com/rast2wav.b[110] FLT fsample_rate=
+fsample_rate FG:235 LG com/rast2wav.b[721]
+    line_pos:=FIX (line_fsecs#*fsample_rate)
+fsample_rate FG:235 LG com/rast2wav.b[812] FIX (fsample_rate#/freq)
+fsample_rate FG:235 SG com/rast2wav.b[304]
+    fsample_rate#:=FLOAT sample_rate
+fsamples FG:248 DEF com/rast2wav.b[128] FLT fsamples=
+fsamples FG:248 SG com/rast2wav.b[315] fsamples#:=FLOAT samples
+fsamplevupb G:254 DEF com/rast2wav.b[137] fsamplevupb=
+fsamplevupb G:254 SG com/rast2wav.b[323] fsamplevupb#:=FLOAT samplevupb
+fsecs_per_fcount FG:246 DEF com/rast2wav.b[124] FLT fsecs_per_fcount=
+fsecs_per_fcount FG:246 SG com/rast2wav.b[285]
+    fsecs_per_fcount#:=ftotalsecs#/fmaxfcount
+ftotalsecs FG:245 DEF com/rast2wav.b[123] FLT ftotalsecs=
+ftotalsecs FG:245 LG com/rast2wav.b[285]
+    fsecs_per_fcount#:=ftotalsecs#/fmaxfcount
+ftotalsecs FG:245 LG com/rast2wav.b[651]
+    line_fsecs#:=ftotalsecs#*FLOAT fcount#/fmaxfcount
+ftotalsecs FG:245 LG com/rast2wav.b[998]
+    ftotalsecs#*FLOAT p#/FLOAT samplevupb
+ftotalsecs FG:245 SG com/rast2wav.b[284] ftotalsecs#:=FLOAT totalsecs
+g_colist M:8 DEF libhdr.h[269] g_colist=8
+g_currco M:7 DEF libhdr.h[268] g_currco=7
+g_extbase M:950 DEF libhdr.h[717] g_extbase=950
+g_glbase M:450 DEF libhdr.h[716] g_glbase=450
+g_globsize M:0 DEF libhdr.h[266] g_globsize=0
+g_grfbase M:400 DEF libhdr.h[713] g_grfbase=400
+g_keyboard M:20 DEF libhdr.h[273] g_keyboard=20
+g_memsize M:14 DEF libhdr.h[272] g_memsize=14
+g_rootnode M:9 DEF libhdr.h[270] g_rootnode=9
+g_screen M:21 DEF libhdr.h[274] g_screen=21
+g_sdlbase M:450 DEF libhdr.h[715] g_sdlbase=450
+g_sndbase M:400 DEF libhdr.h[714] g_sndbase=400
+g_sys M:3 DEF libhdr.h[267] g_sys=3
+get_record G:71 DEF libhdr.h[104] get_record=71
+get_text G:93 DEF libhdr.h[127] get_text=93
+get_textblib G:93 DEF libhdr.h[126] get_textblib=93
+getlogname G:118 DEF libhdr.h[152] getlogname=118
+getremipaddr G:54 DEF libhdr.h[87] getremipaddr=54
+getvec G:25 DEF libhdr.h[58] getvec=25
+getvec G:25 LG com/rast2wav.b[374] notecov:=getvec(notecovupb)
+getvec G:25 LG com/rast2wav.b[383] memv:=getvec(memvupb)
+getvec G:25 LG com/rast2wav.b[391] notev:=getvec(notevupb)
+getvec G:25 LG com/rast2wav.b[392] noteposv:=getvec(notevupb)
+getvec G:25 LG com/rast2wav.b[400] Lsamplev:=getvec(samplevupb)
+getvec G:25 LG com/rast2wav.b[407] Rsamplev:=getvec(samplevupb)
+getvec G:25 LG com/rast2wav.b[764] getvec(#x1E8480)
+getword G:32 DEF libhdr.h[65] getword=32
+globin G:24 DEF libhdr.h[57] globin=24
+globsize G:0 DEF libhdr.h[32] globsize=0
+globword M:#x8F8F0000 DEF libhdr.h[259] globword=-#x70710000
+hold G:158 DEF libhdr.h[206] hold=158
+id_appendscb M:132 DEF libhdr.h[488] id_appendscb=132
+id_inoutscb M:131 DEF libhdr.h[487] id_inoutscb=131
+id_inscb M:129 DEF libhdr.h[485] id_inscb=129
+id_outscb M:130 DEF libhdr.h[486] id_outscb=130
+initco G:22 DEF libhdr.h[55] initco=22
+initco G:22 LG com/rast2wav.b[380]
+    notecov!noteno:=initco(notecofn,300,noteno)
+initio G:46 DEF libhdr.h[79] initio=46
+input G:58 DEF libhdr.h[91] input=58
+input G:58 LG com/rast2wav.b[212] stdin:=input()
+instrcount G:121 DEF libhdr.h[155] instrcount=121
+intflag G:119 DEF libhdr.h[153] intflag=119
+isrregs M:41 DEF libhdr.h[483] isrregs=41
+klibregs M:21 DEF libhdr.h[478] klibregs=21
+kval G:223 DEF com/rast2wav.b[92] kval=
+kval G:223 LG com/rast2wav.b[278] writef("kval='sval=%n*n",kval,sval)
+kval G:223 LG com/rast2wav.b[283] fkval#:=FLOAT kval
+kval G:223 LG com/rast2wav.b[712] fcount:=fcount+kval
+kval G:223 SG com/rast2wav.b[237] kval:=0
+kval G:223 SG com/rast2wav.b[617] kval:=rdn()
+level G:15 DEF libhdr.h[48] level=15
+line_fsecs FG:229 DEF com/rast2wav.b[103] FLT line_fsecs=
+line_fsecs FG:229 LG com/rast2wav.b[460] writef(" %12.6f*n",line_fsecs)
+line_fsecs FG:229 LG com/rast2wav.b[653]
+    line_secs:=sys(Sys_flt,fl_floor,line_fsecs)
+line_fsecs FG:229 LG com/rast2wav.b[654]
+    writef("Time 'nd%-%ps*n",FIX (line_fsecs#+ 0.500))
+line_fsecs FG:229 LG com/rast2wav.b[714]
+    line_secs:=FIX sys(Sys_flt,fl_floor,line_fsecs)
+line_fsecs FG:229 LG com/rast2wav.b[716]
+    writef("fsecs'nd%-%ps*n",line_fsecs,line_secs)
+line_fsecs FG:229 LG com/rast2wav.b[721]
+    line_pos:=FIX (line_fsecs#*fsample_rate)
+line_fsecs FG:229 SG com/rast2wav.b[367] line_fsecs#:= 0.000
+line_fsecs FG:229 SG com/rast2wav.b[447]
+    line_fsecs#:=FLOAT (totalsecs+1)
+line_fsecs FG:229 SG com/rast2wav.b[651]
+    line_fsecs#:=ftotalsecs#*FLOAT fcount#/fmaxfcount
+line_fsecs FG:229 SG com/rast2wav.b[713] line_fsecs#:=pos2secs(fcount)
+line_pos G:230 DEF com/rast2wav.b[104] line_pos=
+line_pos G:230 LG com/rast2wav.b[728] writef(" line_pos=%n*n",line_pos)
+line_pos G:230 LG com/rast2wav.b[729] IF line_pos=433931 DO ..
+line_pos G:230 LG com/rast2wav.b[739] writef(" line_pos=%n*n",line_pos)
+line_pos G:230 LG com/rast2wav.b[885]
+    IF prevn=0&noteposv!noteno<line_pos DO ..
+line_pos G:230 LG com/rast2wav.b[894] line_pos
+line_pos G:230 LG com/rast2wav.b[908] line_pos
+line_pos G:230 SG com/rast2wav.b[368] line_pos:=0
+line_pos G:230 SG com/rast2wav.b[448] line_pos:=samplevupb
+line_pos G:230 SG com/rast2wav.b[721]
+    line_pos:=FIX (line_fsecs#*fsample_rate)
+line_secs G:227 DEF com/rast2wav.b[101] line_secs=
+line_secs G:227 LG com/rast2wav.b[652] prevline_secs:=line_secs
+line_secs G:227 LG com/rast2wav.b[715]
+    UNLESS line_secs=prevline_secs DO ..
+line_secs G:227 LG com/rast2wav.b[716]
+    writef("fsecs'nd%-%ps*n",line_fsecs,line_secs)
+line_secs G:227 LG com/rast2wav.b[717] prevline_secs:=line_secs
+line_secs G:227 SG com/rast2wav.b[365] line_secs:=0
+line_secs G:227 SG com/rast2wav.b[653]
+    line_secs:=sys(Sys_flt,fl_floor,line_fsecs)
+line_secs G:227 SG com/rast2wav.b[714]
+    line_secs:=FIX sys(Sys_flt,fl_floor,line_fsecs)
+loadseg G:105 DEF libhdr.h[139] loadseg=105
+locatedir G:80 DEF libhdr.h[113] locatedir=80
+locateobj G:81 DEF libhdr.h[114] locateobj=81
+longjump G:16 DEF libhdr.h[49] longjump=16
+mark0 G:202 DEF com/rast2wav.b[64] mark0=
+mark0 G:202 RT com/rast2wav.b[551] LET mark0(a,b)BE..
+mark1 G:203 DEF com/rast2wav.b[65] mark1=
+mark1 G:203 RT com/rast2wav.b[560] LET mark1(a,b)BE..
+maxaddress G:222 DEF com/rast2wav.b[91] maxaddress=
+maxaddress G:222 LG com/rast2wav.b[276]
+    writef("maxad's = %9i*n",maxaddress)
+maxaddress G:222 LG com/rast2wav.b[382] memvupb:=maxaddress/sval+1
+maxaddress G:222 LG com/rast2wav.b[620]
+    UNLESS maxfcount&maxaddress DO ..
+maxaddress G:222 SG com/rast2wav.b[236] maxaddress:=0
+maxaddress G:222 SG com/rast2wav.b[610] maxaddress:=0
+maxaddress G:222 SG com/rast2wav.b[615] maxaddress:=rdn()
+maxfcount G:220 DEF com/rast2wav.b[87] maxfcount=
+maxfcount G:220 LG com/rast2wav.b[277]
+    writef("maxfc'  = %9i*n",maxfcount)
+maxfcount G:220 LG com/rast2wav.b[282] fmaxfcount#:=FLOAT maxfcount
+maxfcount G:220 LG com/rast2wav.b[446] fcount:=maxfcount
+maxfcount G:220 LG com/rast2wav.b[620] UNLESS maxfcount&maxaddress DO ..
+maxfcount G:220 LG com/rast2wav.b[624] fmaxfcount#:=FLOAT maxfcount
+maxfcount G:220 SG com/rast2wav.b[236] maxfcount:=0
+maxfcount G:220 SG com/rast2wav.b[609] maxfcount:=0
+maxfcount G:220 SG com/rast2wav.b[613] maxfcount:=rdn()
+maxint M:#x7FFFFFFF DEF libhdr.h[242] maxint=minint-1
+mcaddrinc M:4 DEF libhdr.h[240] mcaddrinc=bytesperword
+memoryfree G:131 DEF libhdr.h[165] memoryfree=131
+memv G:265 DEF com/rast2wav.b[173] memv=
+memv G:265 LG com/rast2wav.b[384] UNLESS memv DO ..
+memv G:265 LG com/rast2wav.b[388] memv!a:=0
+memv G:265 LG com/rast2wav.b[514] IF memv DO ..
+memv G:265 LG com/rast2wav.b[514] freevec(memv)
+memv G:265 LG com/rast2wav.b[557] memv!i:=memv!i<<1
+memv G:265 LG com/rast2wav.b[570] memv!i
+memv G:265 LG com/rast2wav.b[571] memv!i:=(bits<<1)+1
+memv G:265 LG com/rast2wav.b[665] memv!i:=memv!i<<1
+memv G:265 LG com/rast2wav.b[674] memv!i:=memv!i<<1|1
+memv G:265 LG com/rast2wav.b[685] memv!i:=memv!i<<1
+memv G:265 LG com/rast2wav.b[690] IF memv!i DO ..
+memv G:265 LG com/rast2wav.b[690] writef("%6i: %32b*n",i,memv!i)
+memv G:265 LG com/rast2wav.b[700] IF (memv!i&mask)=1 DO ..
+memv G:265 SG com/rast2wav.b[251] memv:=0
+memv G:265 SG com/rast2wav.b[383] memv:=getvec(memvupb)
+memvupb G:264 DEF com/rast2wav.b[171] memvupb=
+memvupb G:264 LG com/rast2wav.b[383] memv:=getvec(memvupb)
+memvupb G:264 LG com/rast2wav.b[388] FOR a=0 TO memvupb DO..
+memvupb G:264 LG com/rast2wav.b[575] (C7+1)*i/(memvupb+1)
+memvupb G:264 LG com/rast2wav.b[685] FOR i=a TO memvupb DO..
+memvupb G:264 LG com/rast2wav.b[690] FOR i=0 TO memvupb DO..
+memvupb G:264 LG com/rast2wav.b[696] q:=memvupb*(n+1)/(C7-C2+1)
+memvupb G:264 SG com/rast2wav.b[382] memvupb:=maxaddress/sval+1
+minint M:#x80000000 DEF libhdr.h[241] minint=1<<bitsperword-1
+minint M:#x80000000 MAN libhdr.h[242] maxint=minint-1
+muldiv G:5 DEF libhdr.h[37] muldiv=5
+newline G:84 DEF libhdr.h[117] newline=84
+newpage G:120 DEF libhdr.h[154] newpage=120
+note G:63 DEF libhdr.h[96] note=63
+note2str G:211 DEF com/rast2wav.b[73] note2str=
+note2str G:211 FN com/rast2wav.b[1000] LET note2str(note)=..
+note2str G:211 LG com/rast2wav.b[439]
+    writef("debug'te=%n *n*n",debugnote,note2str(debugnote))
+note2str G:211 LG com/rast2wav.b[900]
+    writef("%i6: Loud %s*n",p0,note2str(noteno))
+note2str G:211 LG com/rast2wav.b[914]
+    writef("%i6: Soft %s*n",p0,note2str(noteno))
+notecofn G:208 DEF com/rast2wav.b[70] notecofn=
+notecofn G:208 FN com/rast2wav.b[772] LET notecofn(args)=..
+notecofn G:208 LG com/rast2wav.b[380]
+    notecov!noteno:=initco(notecofn,300,noteno)
+notecov G:262 DEF com/rast2wav.b[168] notecov=
+notecov G:262 LG com/rast2wav.b[375] UNLESS notecov DO ..
+notecov G:262 LG com/rast2wav.b[380]
+    notecov!noteno:=initco(notecofn,300,noteno)
+notecov G:262 LG com/rast2wav.b[468] callco(notecov!noteno,0)
+notecov G:262 LG com/rast2wav.b[469] callco(notecov!debugnote,0)
+notecov G:262 LG com/rast2wav.b[503] IF notecov DO ..
+notecov G:262 LG com/rast2wav.b[506] notecov!noteno
+notecov G:262 LG com/rast2wav.b[511] freevec(notecov)
+notecov G:262 LG com/rast2wav.b[750]
+    callco(notecov!debugnote,notev!debugnote-1,0)
+notecov G:262 LG com/rast2wav.b[753]
+    callco(notecov!noteno,notev!noteno->1,0)
+notecov G:262 SG com/rast2wav.b[255] notecov:=0
+notecov G:262 SG com/rast2wav.b[374] notecov:=getvec(notecovupb)
+notecovupb G:263 DEF com/rast2wav.b[169] notecovupb=
+notecovupb G:263 LG com/rast2wav.b[374] notecov:=getvec(notecovupb)
+notecovupb G:263 SG com/rast2wav.b[373] notecovupb:=C7
+noteposv G:267 DEF com/rast2wav.b[201] noteposv=
+noteposv G:267 LG com/rast2wav.b[393] UNLESS notev&noteposv DO ..
+noteposv G:267 LG com/rast2wav.b[398] noteposv!n:=0
+noteposv G:267 LG com/rast2wav.b[516] IF noteposv DO ..
+noteposv G:267 LG com/rast2wav.b[516] freevec(noteposv)
+noteposv G:267 LG com/rast2wav.b[885]
+    IF prevn=0&noteposv!noteno<line_pos DO ..
+noteposv G:267 LG com/rast2wav.b[905] noteposv!noteno:=p4
+noteposv G:267 LG com/rast2wav.b[919] noteposv!noteno:=p4
+noteposv G:267 SG com/rast2wav.b[253] noteposv:=0
+noteposv G:267 SG com/rast2wav.b[392] noteposv:=getvec(notevupb)
+notes_per_octave G:255 DEF com/rast2wav.b[139] notes_per_octave=
+notes_per_octave G:255 LG com/rast2wav.b[1018]
+    note:=note*12/notes_per_octave
+notes_per_octave G:255 LG com/rast2wav.b[292] C3:=C2+1*notes_per_octave
+notes_per_octave G:255 LG com/rast2wav.b[293] C4:=C2+2*notes_per_octave
+notes_per_octave G:255 LG com/rast2wav.b[294] C5:=C2+3*notes_per_octave
+notes_per_octave G:255 LG com/rast2wav.b[295] C6:=C2+4*notes_per_octave
+notes_per_octave G:255 LG com/rast2wav.b[296] C7:=C2+5*notes_per_octave
+notes_per_octave G:255 LG com/rast2wav.b[807]
+    freqC2#*sys(Sys_flt,fl_pow, 2.000,FLOAT noteno#/FLOAT notes_per_octave)
+notes_per_octave G:255 SG com/rast2wav.b[225] notes_per_octave:=12
+notes_per_octave G:255 SG com/rast2wav.b[241] notes_per_octave:=!argv!2
+notev G:266 DEF com/rast2wav.b[184] notev=
+notev G:266 LG com/rast2wav.b[393] UNLESS notev&noteposv DO ..
+notev G:266 LG com/rast2wav.b[398] notev!n:=FALSE
+notev G:266 LG com/rast2wav.b[515] IF notev DO ..
+notev G:266 LG com/rast2wav.b[515] freevec(notev)
+notev G:266 LG com/rast2wav.b[577] notev!note:=TRUE
+notev G:266 LG com/rast2wav.b[633] notev!n:=0
+notev G:266 LG com/rast2wav.b[701] notev!n:=TRUE
+notev G:266 LG com/rast2wav.b[726] writef("%c",notev!noteno->88,46)
+notev G:266 LG com/rast2wav.b[732] filter(notev,C7)
+notev G:266 LG com/rast2wav.b[737] writef("%c",notev!noteno->88,46)
+notev G:266 LG com/rast2wav.b[750]
+    callco(notecov!debugnote,notev!debugnote-1,0)
+notev G:266 LG com/rast2wav.b[753]
+    callco(notecov!noteno,notev!noteno->1,0)
+notev G:266 SG com/rast2wav.b[252] notev:=0
+notev G:266 SG com/rast2wav.b[391] notev:=getvec(notevupb)
+notevupb G:268 DEF com/rast2wav.b[202] notevupb=
+notevupb G:268 LG com/rast2wav.b[391] notev:=getvec(notevupb)
+notevupb G:268 LG com/rast2wav.b[392] noteposv:=getvec(notevupb)
+notevupb G:268 SG com/rast2wav.b[390] notevupb:=C7
+notinuse M:-1 DEF libhdr.h[601] notinuse=-1
+output G:59 DEF libhdr.h[92] output=59
+output G:59 LG com/rast2wav.b[211] stdout:=output()
+packstring G:30 DEF libhdr.h[63] packstring=30
+pathfindinput G:53 DEF libhdr.h[86] pathfindinput=53
+peercom G:179 DEF libhdr.h[222] peercom=179
+pkt_a1 M:5 DEF libhdr.h[610] pkt_a1=5
+pkt_a2 M:6 DEF libhdr.h[611] pkt_a2=6
+pkt_a3 M:7 DEF libhdr.h[612] pkt_a3=7
+pkt_a4 M:8 DEF libhdr.h[613] pkt_a4=8
+pkt_a5 M:9 DEF libhdr.h[614] pkt_a5=9
+pkt_a6 M:10 DEF libhdr.h[615] pkt_a6=10
+pkt_arg1 M:5 DEF libhdr.h[610] pkt_arg1=5
+pkt_arg2 M:6 DEF libhdr.h[611] pkt_arg2=6
+pkt_arg3 M:7 DEF libhdr.h[612] pkt_arg3=7
+pkt_arg4 M:8 DEF libhdr.h[613] pkt_arg4=8
+pkt_arg5 M:9 DEF libhdr.h[614] pkt_arg5=9
+pkt_arg6 M:10 DEF libhdr.h[615] pkt_arg6=10
+pkt_devid M:1 DEF libhdr.h[606] pkt_devid=1
+pkt_devtaskid M:1 DEF libhdr.h[606] pkt_devtaskid=1
+pkt_id M:1 DEF libhdr.h[606] pkt_id=1
+pkt_link M:0 DEF libhdr.h[605] pkt_link=0
+pkt_op M:2 DEF libhdr.h[607] pkt_op=2
+pkt_r1 M:3 DEF libhdr.h[608] pkt_r1=3
+pkt_r2 M:4 DEF libhdr.h[609] pkt_r2=4
+pkt_res1 M:3 DEF libhdr.h[608] pkt_res1=3
+pkt_res2 M:4 DEF libhdr.h[609] pkt_res2=4
+pkt_taskid M:1 DEF libhdr.h[606] pkt_taskid=1
+pkt_type M:2 DEF libhdr.h[607] pkt_type=2
+point G:64 DEF libhdr.h[97] point=64
+pollingch M:-3 DEF libhdr.h[246] pollingch=-3
+pos2secs F:13 FN com/rast2wav.b[998] LET pos2secs(p)=..
+pos2secs F:13 LF com/rast2wav.b[713] line_fsecs#:=pos2secs(fcount)
+pos2secs F:13 LF com/rast2wav.b[899] writef("time=%8.3f ",pos2secs(p0))
+pos2secs F:13 LF com/rast2wav.b[913] writef("time=%8.3f ",pos2secs(p0))
+prevline_secs G:228 DEF com/rast2wav.b[102] prevline_secs=
+prevline_secs G:228 LG com/rast2wav.b[715]
+    UNLESS line_secs=prevline_secs DO ..
+prevline_secs G:228 SG com/rast2wav.b[366] prevline_secs:=0
+prevline_secs G:228 SG com/rast2wav.b[652] prevline_secs:=line_secs
+prevline_secs G:228 SG com/rast2wav.b[717] prevline_secs:=line_secs
+put_record G:72 DEF libhdr.h[105] put_record=72
+putword G:33 DEF libhdr.h[66] putword=33
+qpkt G:161 DEF libhdr.h[209] qpkt=161
+randno G:34 DEF libhdr.h[67] randno=34
+randseed G:127 DEF libhdr.h[161] randseed=127
+rdargs G:102 DEF libhdr.h[136] rdargs=102
+rdargs G:102 LG com/rast2wav.b[214]
+    IF rdargs("from,'eo/S,t/S",argv,50)=0 DO ..
+rdargs2 G:26 DEF libhdr.h[59] rdargs2=26
+rdch G:38 DEF libhdr.h[71] rdch=38
+rdch G:38 LG com/rast2wav.b[584] ch:=rdch()
+rdch G:38 LG com/rast2wav.b[591] ch:=rdch()
+rdch G:38 LG com/rast2wav.b[594] ch:=rdch()
+rdch G:38 LG com/rast2wav.b[612] ch:=rdch()
+rdch G:38 LG com/rast2wav.b[613] ch:=rdch()
+rdch G:38 LG com/rast2wav.b[614] ch:=rdch()
+rdch G:38 LG com/rast2wav.b[615] ch:=rdch()
+rdch G:38 LG com/rast2wav.b[616] ch:=rdch()
+rdch G:38 LG com/rast2wav.b[617] ch:=rdch()
+rdch G:38 LG com/rast2wav.b[618] ch:=rdch()
+rdch G:38 LG com/rast2wav.b[619] ch:=rdch()
+rdch G:38 LG com/rast2wav.b[645] ch:=rdch()
+rdch G:38 LG com/rast2wav.b[649] ch:=rdch()
+rdch G:38 LG com/rast2wav.b[661] ch:=rdch()
+rdch G:38 LG com/rast2wav.b[670] ch:=rdch()
+rdch G:38 LG com/rast2wav.b[683] ch:=rdch()
+rditem G:103 DEF libhdr.h[137] rditem=103
+rdn G:204 DEF com/rast2wav.b[66] rdn=
+rdn G:204 FN com/rast2wav.b[582] LET rdn()=..
+rdn G:204 LG com/rast2wav.b[613] maxfcount:=rdn()
+rdn G:204 LG com/rast2wav.b[615] maxaddress:=rdn()
+rdn G:204 LG com/rast2wav.b[617] kval:=rdn()
+rdn G:204 LG com/rast2wav.b[619] sval:=rdn()
+rdn G:204 LG com/rast2wav.b[662] b:=a+rdn()
+rdn G:204 LG com/rast2wav.b[671] b:=a+rdn()
+read_raster_lines G:206 DEF com/rast2wav.b[68] read_raster_lines=
+read_raster_lines G:206 LG com/rast2wav.b[440] read_raster_lines()
+read_raster_lines G:206 RT com/rast2wav.b[629]
+    LET read_raster_lines()BE..
+read_raster_params G:205 DEF com/rast2wav.b[67] read_raster_params=
+read_raster_params G:205 FN com/rast2wav.b[599]
+    LET read_raster_params()=..
+read_raster_params G:205 LG com/rast2wav.b[265]
+    UNLESS read_raster_params() DO ..
+readflt G:74 DEF libhdr.h[107] readflt=74
+readn G:83 DEF libhdr.h[116] readn=83
+readwords G:44 DEF libhdr.h[77] readwords=44
+recordnote G:70 DEF libhdr.h[103] recordnote=70
+recordpoint G:69 DEF libhdr.h[102] recordpoint=69
+release G:159 DEF libhdr.h[207] release=159
+renamefile G:77 DEF libhdr.h[110] renamefile=77
+result2 G:10 DEF libhdr.h[42] result2=10
+resumeco G:21 DEF libhdr.h[54] resumeco=21
+return_hard M:10 DEF libhdr.h[582] return_hard=10
+return_hard M:10 MAN libhdr.h[587] cli_initialfaillevel=return_hard
+return_ok M:0 DEF libhdr.h[584] return_ok=0
+return_severe M:20 DEF libhdr.h[581] return_severe=20
+return_soft M:5 DEF libhdr.h[583] return_soft=5
+returnpkt G:169 DEF libhdr.h[214] returnpkt=169
+rewindstream G:65 DEF libhdr.h[98] rewindstream=65
+rootnode G:9 DEF libhdr.h[41] rootnode=9
+rootnodeaddr M:100 DEF libhdr.h[290] rootnodeaddr=100
+rtn_abortcode M:27 DEF libhdr.h[326] rtn_abortcode=
+rtn_adjclock M:33 DEF libhdr.h[344] rtn_adjclock=
+rtn_blib M:19 DEF libhdr.h[315] rtn_blib=
+rtn_blklist M:4 DEF libhdr.h[297] rtn_blklist=
+rtn_boot M:17 DEF libhdr.h[313] rtn_boot=
+rtn_boottrace M:39 DEF libhdr.h[359] rtn_boottrace=
+rtn_bptaddr M:9 DEF libhdr.h[304] rtn_bptaddr=
+rtn_bptinstr M:10 DEF libhdr.h[305] rtn_bptinstr=
+rtn_clkintson M:6 DEF libhdr.h[300] rtn_clkintson=
+rtn_clwkq M:12 DEF libhdr.h[308] rtn_clwkq=
+rtn_context M:28 DEF libhdr.h[327] rtn_context=
+rtn_crntask M:3 DEF libhdr.h[296] rtn_crntask=
+rtn_days M:40 DEF libhdr.h[362] rtn_days=
+rtn_dbgvars M:11 DEF libhdr.h[306] rtn_dbgvars=
+rtn_dcountv M:34 DEF libhdr.h[346] rtn_dcountv=
+rtn_devtab M:1 DEF libhdr.h[294] rtn_devtab=
+rtn_dumpflag M:25 DEF libhdr.h[323] rtn_dumpflag=
+rtn_envlist M:26 DEF libhdr.h[324] rtn_envlist=
+rtn_gvecsize M:63 DEF libhdr.h[395] rtn_gvecsize=
+rtn_hdrsvar M:37 DEF libhdr.h[355] rtn_hdrsvar=
+rtn_hostaddsize M:62 DEF libhdr.h[392] rtn_hostaddsize=
+rtn_icount M:48 DEF libhdr.h[375] rtn_icount=
+rtn_idletcb M:32 DEF libhdr.h[343] rtn_idletcb=
+rtn_info M:15 DEF libhdr.h[311] rtn_info=
+rtn_insadebug M:8 DEF libhdr.h[302] rtn_insadebug=
+rtn_intflag M:24 DEF libhdr.h[322] rtn_intflag=
+rtn_joyaxis0 M:55 DEF libhdr.h[384] rtn_joyaxis0=
+rtn_joyaxis1 M:56 DEF libhdr.h[385] rtn_joyaxis1=
+rtn_joyaxis2 M:57 DEF libhdr.h[386] rtn_joyaxis2=
+rtn_joyaxis3 M:58 DEF libhdr.h[387] rtn_joyaxis3=
+rtn_joyaxis4 M:59 DEF libhdr.h[388] rtn_joyaxis4=
+rtn_joyaxis5 M:60 DEF libhdr.h[389] rtn_joyaxis5=
+rtn_joyaxis6 M:61 DEF libhdr.h[390] rtn_joyaxis6=
+rtn_joyaxiscount M:52 DEF libhdr.h[381] rtn_joyaxiscount=
+rtn_joybuttoncount M:51 DEF libhdr.h[380] rtn_joybuttoncount=
+rtn_joybuttons M:54 DEF libhdr.h[383] rtn_joybuttons=
+rtn_joycurrbuttons M:53 DEF libhdr.h[382] rtn_joycurrbuttons=
+rtn_joystickfd M:49 DEF libhdr.h[378] rtn_joystickfd=
+rtn_joystickfd1 M:50 DEF libhdr.h[379] rtn_joystickfd1=
+rtn_keyboard M:20 DEF libhdr.h[316] rtn_keyboard=
+rtn_klib M:18 DEF libhdr.h[314] rtn_klib=
+rtn_lastch M:7 DEF libhdr.h[301] rtn_lastch=
+rtn_mc0 M:43 DEF libhdr.h[367] rtn_mc0=
+rtn_mc1 M:44 DEF libhdr.h[369] rtn_mc1=
+rtn_mc2 M:45 DEF libhdr.h[370] rtn_mc2=
+rtn_mc3 M:46 DEF libhdr.h[371] rtn_mc3=
+rtn_membase M:13 DEF libhdr.h[309] rtn_membase=
+rtn_memsize M:14 DEF libhdr.h[310] rtn_memsize=
+rtn_mins M:41 DEF libhdr.h[364] rtn_mins=rtn_msecs
+rtn_msecs M:41 DEF libhdr.h[363] rtn_msecs=
+rtn_msecs M:41 MAN libhdr.h[364] rtn_mins=rtn_msecs
+rtn_pathvar M:36 DEF libhdr.h[353] rtn_pathvar=
+rtn_rootvar M:35 DEF libhdr.h[351] rtn_rootvar=
+rtn_screen M:21 DEF libhdr.h[317] rtn_screen=
+rtn_scriptsvar M:38 DEF libhdr.h[357] rtn_scriptsvar=
+rtn_sys M:16 DEF libhdr.h[312] rtn_sys=
+rtn_sysg M:30 DEF libhdr.h[336] rtn_sysg=
+rtn_sysp M:29 DEF libhdr.h[335] rtn_sysp=
+rtn_sysst M:31 DEF libhdr.h[337] rtn_sysst=
+rtn_system M:47 DEF libhdr.h[373] rtn_system=
+rtn_tallyv M:5 DEF libhdr.h[298] rtn_tallyv=
+rtn_tasktab M:0 DEF libhdr.h[293] rtn_tasktab=0
+rtn_tcblist M:2 DEF libhdr.h[295] rtn_tcblist=
+rtn_ticks M:42 DEF libhdr.h[365] rtn_ticks=
+rtn_upb M:80 DEF libhdr.h[401] rtn_upb=80
+rtn_vecstatsv M:22 DEF libhdr.h[319] rtn_vecstatsv=
+rtn_vecstatsvupb M:23 DEF libhdr.h[320] rtn_vecstatsvupb=
+s020 G:236 DEF com/rast2wav.b[112] s020=
+s020 G:236 LG com/rast2wav.b[895] p0+s020
+s020 G:236 LG com/rast2wav.b[909] p0+s020
+s020 G:236 SG com/rast2wav.b[306] s020:=sample_rate/50
+s025 G:237 DEF com/rast2wav.b[113] s025=
+s025 G:237 LG com/rast2wav.b[896] p1+s025
+s025 G:237 LG com/rast2wav.b[910] p1+s025
+s025 G:237 SG com/rast2wav.b[307] s025:=sample_rate/40
+s050 G:238 DEF com/rast2wav.b[114] s050=
+s050 G:238 LG com/rast2wav.b[898] p3+s050
+s050 G:238 LG com/rast2wav.b[912] p3+s050
+s050 G:238 SG com/rast2wav.b[308] s050:=sample_rate/20
+s100 G:239 DEF com/rast2wav.b[115] s100=
+s100 G:239 SG com/rast2wav.b[309] s100:=sample_rate/10
+s200 G:240 DEF com/rast2wav.b[116] s200=
+s200 G:240 SG com/rast2wav.b[310] s200:=sample_rate/5
+s250 G:241 DEF com/rast2wav.b[117] s250=
+s250 G:241 LG com/rast2wav.b[897] p2+s250
+s250 G:241 LG com/rast2wav.b[911] p2+s250
+s250 G:241 SG com/rast2wav.b[311] s250:=sample_rate/4
+s500 G:242 DEF com/rast2wav.b[118] s500=
+s500 G:242 SG com/rast2wav.b[312] s500:=sample_rate/2
+sample_rate G:234 DEF com/rast2wav.b[109] sample_rate=
+sample_rate G:234 LG com/rast2wav.b[270]
+    writef("sampl'te = %n*n",sample_rate)
+sample_rate G:234 LG com/rast2wav.b[301]
+    sample_rate:=sample_rate>44000->44100,sample_rate>22000->22050,11025
+sample_rate G:234 LG com/rast2wav.b[304]
+    fsample_rate#:=FLOAT sample_rate
+sample_rate G:234 LG com/rast2wav.b[306] s020:=sample_rate/50
+sample_rate G:234 LG com/rast2wav.b[307] s025:=sample_rate/40
+sample_rate G:234 LG com/rast2wav.b[308] s050:=sample_rate/20
+sample_rate G:234 LG com/rast2wav.b[309] s100:=sample_rate/10
+sample_rate G:234 LG com/rast2wav.b[310] s200:=sample_rate/5
+sample_rate G:234 LG com/rast2wav.b[311] s250:=sample_rate/4
+sample_rate G:234 LG com/rast2wav.b[312] s500:=sample_rate/2
+sample_rate G:234 LG com/rast2wav.b[314]
+    samples:=sample_rate*totalsecs&-16
+sample_rate G:234 LG com/rast2wav.b[322] samplevupb:=samples+sample_rate
+sample_rate G:234 LG com/rast2wav.b[327]
+    bytes_per_second:=sample_rate*bytes_per_sample
+sample_rate G:234 LG com/rast2wav.b[349] riffhdr!6:=sample_rate
+sample_rate G:234 SG com/rast2wav.b[228] sample_rate:=44100
+sample_rate G:234 SG com/rast2wav.b[243] sample_rate:=!argv!4
+sample_rate G:234 SG com/rast2wav.b[301]
+    sample_rate:=sample_rate>44000->44100,sample_rate>22000->22050,11025
+samples G:247 DEF com/rast2wav.b[126] samples=
+samples G:247 LG com/rast2wav.b[315] fsamples#:=FLOAT samples
+samples G:247 LG com/rast2wav.b[322] samplevupb:=samples+sample_rate
+samples G:247 LG com/rast2wav.b[331] writef("Total'es: %n*n*n",samples)
+samples G:247 SG com/rast2wav.b[314] samples:=sample_rate*totalsecs&-16
+samplevupb G:253 DEF com/rast2wav.b[136] samplevupb=
+samplevupb G:253 LG com/rast2wav.b[323] fsamplevupb#:=FLOAT samplevupb
+samplevupb G:253 LG com/rast2wav.b[328]
+    data_bytes:=samplevupb*bytes_per_sample
+samplevupb G:253 LG com/rast2wav.b[400] Lsamplev:=getvec(samplevupb)
+samplevupb G:253 LG com/rast2wav.b[407] Rsamplev:=getvec(samplevupb)
+samplevupb G:253 LG com/rast2wav.b[420] FOR i=0 TO samplevupb DO..
+samplevupb G:253 LG com/rast2wav.b[448] line_pos:=samplevupb
+samplevupb G:253 LG com/rast2wav.b[471]
+    smoothsamples(Lsamplev,samplevupb)
+samplevupb G:253 LG com/rast2wav.b[472]
+    smoothsamples(Rsamplev,samplevupb)
+samplevupb G:253 LG com/rast2wav.b[476] FOR i=0 TO samplevupb DO..
+samplevupb G:253 LG com/rast2wav.b[489] FOR i=0 TO samplevupb DO..
+samplevupb G:253 LG com/rast2wav.b[492] FOR i=0 TO samplevupb DO..
+samplevupb G:253 LG com/rast2wav.b[974] IF s>samplevupb DO ..
+samplevupb G:253 LG com/rast2wav.b[998]
+    ftotalsecs#*FLOAT p#/FLOAT samplevupb
+samplevupb G:253 SG com/rast2wav.b[322] samplevupb:=samples+sample_rate
+sardch G:36 DEF libhdr.h[69] sardch=36
+saveregs M:31 DEF libhdr.h[479] saveregs=31
+sawrch G:37 DEF libhdr.h[70] sawrch=37
+sawritef G:95 DEF libhdr.h[129] sawritef=95
+sawritef G:95 LG com/rast2wav.b[259]
+    sawritef("Unabl'file %s*n",fromfilename)
+sawritef G:95 LG com/rast2wav.b[336]
+    sawritef("Unabl'file %s*n",wavfilename)
+sawritef G:95 LG com/rast2wav.b[639] sawritef("Bad ch '%c'*n",ch)
+scb_blength M:14 DEF libhdr.h[513] scb_blength=
+scb_block M:9 DEF libhdr.h[508] scb_block=
+scb_buf M:3 DEF libhdr.h[502] scb_buf=
+scb_bufend M:11 DEF libhdr.h[510] scb_bufend=
+scb_encoding M:20 DEF libhdr.h[524] scb_encoding=
+scb_end M:5 DEF libhdr.h[504] scb_end=
+scb_endfn M:8 DEF libhdr.h[507] scb_endfn=
+scb_fd M:16 DEF libhdr.h[515] scb_fd=
+scb_fd1 M:17 DEF libhdr.h[516] scb_fd1=
+scb_id M:0 DEF libhdr.h[499] scb_id=0
+scb_lblock M:12 DEF libhdr.h[511] scb_lblock=
+scb_ldata M:13 DEF libhdr.h[512] scb_ldata=
+scb_maxnamelen M:31 DEF libhdr.h[497] scb_maxnamelen=31
+scb_maxnamelen M:31 MAN libhdr.h[528]
+    scb_nameeend=scb_name+scb_maxnamelen/bytesperword
+scb_name M:21 DEF libhdr.h[526] scb_name=
+scb_name M:21 MAN libhdr.h[528]
+    scb_nameeend=scb_name+scb_maxnamelen/bytesperword
+scb_nameeend M:28 DEF libhdr.h[528]
+    scb_nameeend=scb_name+scb_maxnamelen/bytesperword
+scb_pos M:4 DEF libhdr.h[503] scb_pos=
+scb_rdfn M:6 DEF libhdr.h[505] scb_rdfn=
+scb_reclen M:15 DEF libhdr.h[514] scb_reclen=
+scb_size M:29 DEF libhdr.h[531] scb_size=
+scb_size M:29 MAN libhdr.h[532] scb_upb=scb_size-1
+scb_task M:2 DEF libhdr.h[501] scb_task=
+scb_timeout M:18 DEF libhdr.h[517] scb_timeout=
+scb_timeoutact M:19 DEF libhdr.h[520] scb_timeoutact=
+scb_type M:1 DEF libhdr.h[500] scb_type=
+scb_upb M:28 DEF libhdr.h[532] scb_upb=scb_size-1
+scb_wrfn M:7 DEF libhdr.h[506] scb_wrfn=
+scb_write M:10 DEF libhdr.h[509] scb_write=
+scbt_console M:-1 DEF libhdr.h[493] scbt_console=-1
+scbt_file M:1 DEF libhdr.h[491] scbt_file=1
+scbt_mbx M:-2 DEF libhdr.h[494] scbt_mbx=-2
+scbt_net M:2 DEF libhdr.h[490] scbt_net=2
+scbt_ram M:0 DEF libhdr.h[492] scbt_ram=0
+scbt_tcp M:-3 DEF libhdr.h[495] scbt_tcp=-3
+sectword M:64991 DEF libhdr.h[262] sectword=64991
+selectinput G:56 DEF libhdr.h[89] selectinput=56
+selectinput G:56 LG com/rast2wav.b[263] selectinput(fromstream)
+selectinput G:56 LG com/rast2wav.b[498] selectinput(stdin)
+selectoutput G:57 DEF libhdr.h[90] selectoutput=57
+selectoutput G:57 LG com/rast2wav.b[356] selectoutput(wavstream)
+selectoutput G:57 LG com/rast2wav.b[358] selectoutput(stdout)
+selectoutput G:57 LG com/rast2wav.b[497] selectoutput(stdout)
+selectoutput G:57 LG com/rast2wav.b[545] selectoutput(wavstream)
+selectoutput G:57 LG com/rast2wav.b[548] selectoutput(stdout)
+sendpkt G:165 DEF libhdr.h[212] sendpkt=165
+set_process_name G:175 DEF libhdr.h[220] set_process_name=175
+setbit G:112 DEF libhdr.h[146] setbit=112
+setbulk G:122 DEF libhdr.h[156] setbulk=122
+setflags G:156 DEF libhdr.h[204] setflags=156
+setlogname G:117 DEF libhdr.h[151] setlogname=117
+setrecordlength G:68 DEF libhdr.h[101] setrecordlength=68
+setseed G:35 DEF libhdr.h[68] setseed=35
+settimeout G:55 DEF libhdr.h[88] settimeout=55
+settimeoutact G:124 DEF libhdr.h[158] settimeoutact=124
+setvec G:181 DEF libhdr.h[225] setvec=181
+smoothsamples G:200 DEF com/rast2wav.b[62] smoothsamples=ug
+smoothsamples G:200 LG com/rast2wav.b[471]
+    smoothsamples(Lsamplev,samplevupb)
+smoothsamples G:200 LG com/rast2wav.b[472]
+    smoothsamples(Rsamplev,samplevupb)
+smoothsamples G:200 RT com/rast2wav.b[528] LET smoothsamples(v,upb)BE..
+splitname G:47 DEF libhdr.h[80] splitname=47
+srchwk G:150 DEF libhdr.h[198] srchwk=150
+stackfree G:123 DEF libhdr.h[157] stackfree=123
+stackword M:#xABCD1234 DEF libhdr.h[260] stackword=-#x5432EDCC
+start G:1 DEF libhdr.h[33] start=1
+start G:1 FN com/rast2wav.b[205] LET start()=..
+startco G:23 DEF libhdr.h[56] startco=23
+stdin G:213 DEF com/rast2wav.b[77] stdin=
+stdin G:213 LG com/rast2wav.b[498] selectinput(stdin)
+stdin G:213 SG com/rast2wav.b[212] stdin:=input()
+stdout G:212 DEF com/rast2wav.b[76] stdout=
+stdout G:212 LG com/rast2wav.b[358] selectoutput(stdout)
+stdout G:212 LG com/rast2wav.b[497] selectoutput(stdout)
+stdout G:212 LG com/rast2wav.b[548] selectoutput(stdout)
+stdout G:212 SG com/rast2wav.b[211] stdout:=output()
+stepstream G:67 DEF libhdr.h[100] stepstream=67
+stereo G:231 DEF com/rast2wav.b[106] stereo=
+stereo G:231 LG com/rast2wav.b[245] stereo:=~stereo
+stereo G:231 LG com/rast2wav.b[271]
+    writef("%s %n'samples*n",stereo->"stereo","mono",bits_per_sample)
+stereo G:231 LG com/rast2wav.b[326] IF stereo DO ..
+stereo G:231 LG com/rast2wav.b[347] riffhdr!5:=stereo->2<<16|1,1<<16|1
+stereo G:231 LG com/rast2wav.b[406] IF stereo DO ..
+stereo G:231 LG com/rast2wav.b[422] IF stereo DO ..
+stereo G:231 LG com/rast2wav.b[472] IF stereo DO ..
+stereo G:231 LG com/rast2wav.b[479] IF stereo DO ..
+stereo G:231 LG com/rast2wav.b[488] TEST stereo THEN .. ELSE ..
+stereo G:231 LG com/rast2wav.b[547] IF stereo DO ..
+stereo G:231 LG com/rast2wav.b[981] TEST stereo THEN .. ELSE ..
+stereo G:231 SG com/rast2wav.b[234] stereo:=FALSE
+stereo G:231 SG com/rast2wav.b[245] stereo:=~stereo
+stop G:2 DEF libhdr.h[34] stop=2
+str2numb G:101 DEF libhdr.h[135] str2numb=101
+string_to_dat G:111 DEF libhdr.h[145] string_to_dat=111
+string_to_number G:100 DEF libhdr.h[134] string_to_number=100
+sval G:225 DEF com/rast2wav.b[95] sval=
+sval G:225 LG com/rast2wav.b[278] writef("kval='sval=%n*n",kval,sval)
+sval G:225 LG com/rast2wav.b[382] memvupb:=maxaddress/sval+1
+sval G:225 SG com/rast2wav.b[237] sval:=0
+sval G:225 SG com/rast2wav.b[619] sval:=rdn()
+sys G:3 DEF libhdr.h[35] sys=3
+sys G:3 LG com/rast2wav.b[653]
+    line_secs:=sys(Sys_flt,fl_floor,line_fsecs)
+sys G:3 LG com/rast2wav.b[714]
+    line_secs:=FIX sys(Sys_flt,fl_floor,line_fsecs)
+sys G:3 LG com/rast2wav.b[805]
+    freqA4#*sys(Sys_flt,fl_pow, 2.000,FLOAT 3#/FLOAT 12)
+sys G:3 LG com/rast2wav.b[807]
+    freqC2#*sys(Sys_flt,fl_pow, 2.000,FLOAT noteno#/FLOAT notes_per_octave)
+sysabort G:29 DEF libhdr.h[62] sysabort=29
+t_bhunk M:3000 DEF libhdr.h[256] t_bhunk=3000
+t_bhunk64 M:4000 DEF libhdr.h[257] t_bhunk64=4000
+t_end M:1002 DEF libhdr.h[252] t_end=1002
+t_end64 M:2002 DEF libhdr.h[255] t_end64=2002
+t_hunk M:1000 DEF libhdr.h[250] t_hunk=1000
+t_hunk64 M:2000 DEF libhdr.h[253] t_hunk64=2000
+t_reloc M:1001 DEF libhdr.h[251] t_reloc=1001
+t_reloc64 M:2001 DEF libhdr.h[254] t_reloc64=2001
+taskid G:152 DEF libhdr.h[200] taskid=152
+taskwait G:160 DEF libhdr.h[208] taskwait=160
+tcb G:151 DEF libhdr.h[199] tcb=151
+tcb_a M:11 DEF libhdr.h[632] tcb_a=tcb_regs
+tcb_active M:10 DEF libhdr.h[629] tcb_active=10
+tcb_b M:12 DEF libhdr.h[633] tcb_b=12
+tcb_c M:13 DEF libhdr.h[634] tcb_c=13
+tcb_count M:18 DEF libhdr.h[639] tcb_count=18
+tcb_flags M:5 DEF libhdr.h[624] tcb_flags=5
+tcb_g M:15 DEF libhdr.h[636] tcb_g=15
+tcb_gbase M:8 DEF libhdr.h[627] tcb_gbase=8
+tcb_link M:0 DEF libhdr.h[619] tcb_link=0
+tcb_namebase M:19 DEF libhdr.h[641] tcb_namebase=19
+tcb_namebase M:19 MAN libhdr.h[643]
+    tcb_upb=tcb_namebase+15/bytesperword+1
+tcb_p M:14 DEF libhdr.h[635] tcb_p=14
+tcb_pc M:17 DEF libhdr.h[638] tcb_pc=17
+tcb_pri M:2 DEF libhdr.h[621] tcb_pri=2
+tcb_regs M:11 DEF libhdr.h[631] tcb_regs=11
+tcb_regs M:11 MAN libhdr.h[632] tcb_a=tcb_regs
+tcb_sbase M:9 DEF libhdr.h[628] tcb_sbase=9
+tcb_seglist M:7 DEF libhdr.h[626] tcb_seglist=7
+tcb_st M:16 DEF libhdr.h[637] tcb_st=16
+tcb_state M:4 DEF libhdr.h[623] tcb_state=4
+tcb_stsiz M:6 DEF libhdr.h[625] tcb_stsiz=6
+tcb_taskid M:1 DEF libhdr.h[620] tcb_taskid=1
+tcb_upb M:23 DEF libhdr.h[643] tcb_upb=tcb_namebase+15/bytesperword+1
+tcb_wkq M:3 DEF libhdr.h[622] tcb_wkq=3
+tempval G:11 DEF libhdr.h[43] tempval=11
+testbit G:113 DEF libhdr.h[147] testbit=113
+testflags G:157 DEF libhdr.h[205] testflags=157
+testmem G:207 DEF com/rast2wav.b[69] testmem=
+testmem G:207 LG com/rast2wav.b[656] testmem()
+testmem G:207 RT com/rast2wav.b[763] LET testmem()BE..
+tg M:190 DEF libhdr.h[234] tg=190
+timeoutch M:-2 DEF libhdr.h[245] timeoutch=-2
+totalsecs G:244 DEF com/rast2wav.b[122] totalsecs=
+totalsecs G:244 LG com/rast2wav.b[273]
+    writef("Total'econds*n*n",totalsecs+1)
+totalsecs G:244 LG com/rast2wav.b[284] ftotalsecs#:=FLOAT totalsecs
+totalsecs G:244 LG com/rast2wav.b[314]
+    samples:=sample_rate*totalsecs&-16
+totalsecs G:244 LG com/rast2wav.b[447] line_fsecs#:=FLOAT (totalsecs+1)
+totalsecs G:244 SG com/rast2wav.b[226] totalsecs:=10
+totalsecs G:244 SG com/rast2wav.b[242] totalsecs:=!argv!3
+tracing G:218 DEF com/rast2wav.b[84] tracing=
+tracing G:218 LG com/rast2wav.b[723] IF tracing DO ..
+tracing G:218 LG com/rast2wav.b[734] IF tracing&FALSE DO ..
+tracing G:218 SG com/rast2wav.b[246] tracing:=argv!7
+ug M:200 DEF libhdr.h[235] ug=200
+ug M:200 MAN com/rast2wav.b[62] smoothsamples=ug
+unhold G:159 DEF libhdr.h[207] unhold=159
+unloadseg G:106 DEF libhdr.h[140] unloadseg=106
+unpackstring G:31 DEF libhdr.h[64] unpackstring=31
+unrdch G:40 DEF libhdr.h[73] unrdch=40
+wavfilename G:216 DEF com/rast2wav.b[81] wavfilename=
+wavfilename G:216 LG com/rast2wav.b[269]
+    writef("Conve's to %s*n",fromfilename,wavfilename)
+wavfilename G:216 LG com/rast2wav.b[334]
+    wavstream:=findoutput(wavfilename)
+wavfilename G:216 LG com/rast2wav.b[336]
+    sawritef("Unabl'file %s*n",wavfilename)
+wavfilename G:216 LG com/rast2wav.b[523]
+    writef("File 'written*n",wavfilename)
+wavfilename G:216 SG com/rast2wav.b[222] wavfilename:="RASTER.wav"
+wavfilename G:216 SG com/rast2wav.b[240] wavfilename:=argv!1
+wavstream G:217 DEF com/rast2wav.b[82] wavstream=
+wavstream G:217 LG com/rast2wav.b[335] UNLESS wavstream DO ..
+wavstream G:217 LG com/rast2wav.b[356] selectoutput(wavstream)
+wavstream G:217 LG com/rast2wav.b[521] IF wavstream DO ..
+wavstream G:217 LG com/rast2wav.b[521] endstream(wavstream)
+wavstream G:217 LG com/rast2wav.b[545] selectoutput(wavstream)
+wavstream G:217 SG com/rast2wav.b[223] wavstream:=0
+wavstream G:217 SG com/rast2wav.b[334]
+    wavstream:=findoutput(wavfilename)
+wavstream G:217 SG com/rast2wav.b[522] wavstream:=0
+wrch G:41 DEF libhdr.h[74] wrch=41
+wrch G:41 LG com/rast2wav.b[457] wrch(32)
+wrch G:41 LG com/rast2wav.b[458] wrch(46)
+wrch G:41 LG com/rast2wav.b[725] wrch(32)
+wrch G:41 LG com/rast2wav.b[736] wrch(32)
+writed G:85 DEF libhdr.h[118] writed=85
+writee G:180 DEF libhdr.h[224] writee=180
+writef G:94 DEF libhdr.h[128] writef=94
+writef G:94 LG com/rast2wav.b[269]
+    writef("Conve's to %s*n",fromfilename,wavfilename)
+writef G:94 LG com/rast2wav.b[270] writef("sampl'te = %n*n",sample_rate)
+writef G:94 LG com/rast2wav.b[271]
+    writef("%s %n'samples*n",stereo->"stereo","mono",bits_per_sample)
+writef G:94 LG com/rast2wav.b[273]
+    writef("Total'econds*n*n",totalsecs+1)
+writef G:94 LG com/rast2wav.b[276] writef("maxad's = %9i*n",maxaddress)
+writef G:94 LG com/rast2wav.b[277] writef("maxfc'  = %9i*n",maxfcount)
+writef G:94 LG com/rast2wav.b[278] writef("kval='sval=%n*n",kval,sval)
+writef G:94 LG com/rast2wav.b[298]
+    writef("c2=%n'n C7=%n*n",C2,C2,C4,C5,C6,C7)
+writef G:94 LG com/rast2wav.b[330] writef("Data 'es = %n*n",data_bytes)
+writef G:94 LG com/rast2wav.b[331] writef("Total'es: %n*n*n",samples)
+writef G:94 LG com/rast2wav.b[376] writef("More ' needed*n")
+writef G:94 LG com/rast2wav.b[385] writef("More ' needed*n")
+writef G:94 LG com/rast2wav.b[394] writef("More ' needed*n")
+writef G:94 LG com/rast2wav.b[402] writef("More ' needed*n")
+writef G:94 LG com/rast2wav.b[409] writef("More ' needed*n")
+writef G:94 LG com/rast2wav.b[439]
+    writef("debug'te=%n *n*n",debugnote,note2str(debugnote))
+writef G:94 LG com/rast2wav.b[460] writef(" %12.6f*n",line_fsecs)
+writef G:94 LG com/rast2wav.b[485]
+    writef("Maxim'= %8.6f*n",maxsamplevalue)
+writef G:94 LG com/rast2wav.b[523] writef("File 'written*n",wavfilename)
+writef G:94 LG com/rast2wav.b[587] writef("Bad n'ch='%c'*n")
+writef G:94 LG com/rast2wav.b[621] writef("Bad R'ER file*n")
+writef G:94 LG com/rast2wav.b[654]
+    writef("Time 'nd%-%ps*n",FIX (line_fsecs#+ 0.500))
+writef G:94 LG com/rast2wav.b[655] writef("endstreamch*n")
+writef G:94 LG com/rast2wav.b[690] writef("%6i: %32b*n",i,memv!i)
+writef G:94 LG com/rast2wav.b[716]
+    writef("fsecs'nd%-%ps*n",line_fsecs,line_secs)
+writef G:94 LG com/rast2wav.b[726] writef("%c",notev!noteno->88,46)
+writef G:94 LG com/rast2wav.b[728] writef(" line_pos=%n*n",line_pos)
+writef G:94 LG com/rast2wav.b[737] writef("%c",notev!noteno->88,46)
+writef G:94 LG com/rast2wav.b[739] writef(" line_pos=%n*n",line_pos)
+writef G:94 LG com/rast2wav.b[766] writef("*ntest'tvec(2)*n")
+writef G:94 LG com/rast2wav.b[875]
+    writef("%i2: 'lim2=%n*n",noteno,n,count0,count1,lim1,lim2)
+writef G:94 LG com/rast2wav.b[899] writef("time=%8.3f ",pos2secs(p0))
+writef G:94 LG com/rast2wav.b[900]
+    writef("%i6: Loud %s*n",p0,note2str(noteno))
+writef G:94 LG com/rast2wav.b[913] writef("time=%8.3f ",pos2secs(p0))
+writef G:94 LG com/rast2wav.b[914]
+    writef("%i6: Soft %s*n",p0,note2str(noteno))
+writef G:94 LG com/rast2wav.b[975] writef("Syste'samplev*n")
+writeflt G:73 DEF libhdr.h[106] writeflt=73
+writehex G:87 DEF libhdr.h[120] writehex=87
+writen G:86 DEF libhdr.h[119] writen=86
+writeoct G:88 DEF libhdr.h[121] writeoct=88
+writes G:89 DEF libhdr.h[122] writes=89
+writes G:89 LG com/rast2wav.b[215] writes("Bad a'AST2WAV*n")
+writet G:90 DEF libhdr.h[123] writet=90
+writeu G:91 DEF libhdr.h[124] writeu=91
+writewords G:45 DEF libhdr.h[78] writewords=45
+writez G:92 DEF libhdr.h[125] writez=92
+wrsample G:201 DEF com/rast2wav.b[63] wrsample=
+wrsample G:201 LG com/rast2wav.b[490]
+    wrsample(FIX ( 30000.000#*Lsamplev!i#/maxsamplevalue),FIX ( 30000.000#*Rsamplev!i#/maxsamplevalue))
+wrsample G:201 LG com/rast2wav.b[493]
+    wrsample(FIX ( 30000.000#*Lsamplev!i#/maxsamplevalue),0)
+wrsample G:201 RT com/rast2wav.b[544] LET wrsample(left,right)BE..

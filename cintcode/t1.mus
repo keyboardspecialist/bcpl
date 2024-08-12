@@ -1,0 +1,20 @@
+%$get!mushdr;
+
+\score "Opus 1" [
+
+\conductor
+ ( \name "conductor"
+   //s4 |
+   s1\t(30 30)\l(100 100)\v(60 60)
+   ||
+ )
+
+\part
+ ( \name "Piano part"
+   //6c4 |
+   4c2
+   {(d4 z)\tup s4}
+   a4 z
+   ||
+ )
+]

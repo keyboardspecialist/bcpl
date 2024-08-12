@@ -1,0 +1,11 @@
+.k opt
+c bc mbcpl
+type t1.b
+mbcpl t1.b tree
+procode
+##echo "mbcpl t1.b to t1 tree d1 <opt>"
+#mbcpl t1.b to t1 tree d1 <opt>
+c mb t1
+t1
+
+

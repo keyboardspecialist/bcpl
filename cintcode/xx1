@@ -1,0 +1,8 @@
+L F:19 LAB x1.b[12] L:RESULTIS 0
+M F:18 LAB x1.b[14] M:
+f FG:200 DEF x1.b[4] FLT f=200
+f FG:200 FN x1.b[18] LET FLT f()=..
+f FG:200 LG x1.b[11] f()#+3
+start F:10 FN x1.b[8] LET start()=..
+x FG:201 DEF x1.b[5] FLT x=
+x FG:201 op92 x1.b[9] Op92

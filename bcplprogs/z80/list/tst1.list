@@ -1,0 +1,53 @@
+    REL
+    DEFB  #X42
+    DEFB  #X43
+    DEFB  #X50
+    DEFB  #X4C
+    DEFW  L1000
+;  Entry to "start"
+L1:
+    RST   #X38  ; M_DEFAULT
+    DEFB  #X12  ; M_SETLINK0
+    LD    HL,#X000F
+    LD    (IX-120),L
+    LD    (IX-119),H
+    LD    HL,#X0001
+    LD    (IX-122),L
+    LD    (IX-121),H
+    LD    HL,#X0000
+    LD    (IX-124),L
+    LD    (IX-123),H
+    LD    L,(IX-122)
+    LD    H,(IX-121)
+    LD    E,(IX-124)
+    LD    D,(IX-123)
+    ADD   HL,DE
+    LD    (IX-124),L
+    LD    (IX-123),H
+    LD    L,(IX-122)
+    LD    H,(IX-121)
+    LD    E,(IX-120)
+    LD    D,(IX-119)
+    OR    A
+    SBC   HL,DE
+    LD    (IX-122),L
+    LD    (IX-121),H
+    LD    E,(IX-124)
+    LD    D,(IX-123)
+    ADD   HL,DE
+    RST   #X38  ; M_DEFAULT
+    DEFB  #X1E  ; M_RETURN
+;  End of procedure
+L2:
+    DEFW  #X0000
+    DEFW  #X0002
+    DEFW  L1
+    DEFW  #X0002
+L1000:  EQU  92
+    END
+    REL
+    DEFB  #X42
+    DEFB  #X43
+    DEFB  #X50
+    DEFB  #X4C
+    DEFW  L1000

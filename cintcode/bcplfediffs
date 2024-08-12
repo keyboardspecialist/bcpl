@@ -1,0 +1,158 @@
+2854a2855,2856
+> 	  // Note: A name declared as a label cannot have a
+> 	  // FLT prefix.
+3654,3656c3656,3658
+<     { LET cc = casecount
+<       LET e, s = dvece, ssp
+<       AND y, n = h2!x, 0
+---
+>     { LET e, s = dvece, ssp
+>       AND y = h2!x
+>       AND n = 0
+3659c3661,3662
+<          
+---
+>       LET cc = casecount
+>    
+3665c3668
+<       { LET name = h3!y
+---
+>       { LET name = h3!y // name is a Name or Flt node.
+3669a3673,3674
+> 			// For glbal declarations the value is an
+> 			// integer global number.
+3707,3736c3712,3743
+<                ELSE { // For s_static    the value is 0
+< 
+<                       IF fop=s_static DO n := 0
+< 
+<                       // for s_fstatic   the value is 0.0
+< 
+<                       IF fop=s_fstatic DO n := flt0
+< 
+<                       // for s_manifest  the value is one larger than the
+<                       //                 previous value is converted to
+<                       //                 integer, if necessary.
+< 
+<                       IF fop=s_manifest DO
+<                       { IF prevt=s_flt DO n := sys(Sys_flt, fl_fix, n)
+<                         n := n+1
+<                       }
+< 
+<                       // for s_fmanifest the value is 1.0 larger than the
+<                       //                 previous value is converted to
+<                       //                 floating point, if necessary.
+< 
+<                       IF fop=s_fmanifest DO
+<                       { IF prevt=s_notflt DO n := sys(Sys_flt, fl_float, n)
+<                         n := sys(Sys_flt, fl_add, n, flt1)
+<                       }
+< 
+<                       // For s_global and s_fglobal the value is a
+<                       // global number one larger than the previous one.
+< 
+<                       IF fop=s_global | fop=s_fglobal DO n := n + 1
+---
+>                ELSE n := VALOF SWITCHON fop INTO
+> 	            { DEFAULT:
+> 		        trnerr("System xxxxxxxxxxxxerror in trans")
+> 			RESULTIS 0
+> 
+>                       CASE s_static:
+> 		        // For s_static    the value is 0
+>                         RESULTIS 0
+> 
+>                       CASE s_fstatic:
+> 		        // For s_fstatic    the value is 0.0
+>                         RESULTIS flt0
+> 
+>                       CASE s_manifest:
+>                         // for s_manifest  the next value is one larger
+>                         //                 than the previous value
+>                         //                 converted to integer, if necessary.
+>                         IF prevt=s_flt DO n := sys(Sys_flt, fl_fix, n)
+>                         RESULTIS n+1
+> 
+>                       CASE s_fmanifest:
+>                         // for s_fmanifest the value is 1.0 larger than the
+>                         //                 previous value is converted to
+>                         //                 floating point, if necessary.
+>                         IF prevt=s_notflt DO n := sys(Sys_flt, fl_float, n)
+>                         RESULTIS sys(Sys_flt, fl_add, n, flt1)
+> 
+>                       CASE s_global:
+>                       CASE s_fglobal:
+>                         // For s_global and s_fglobal the next value is a
+>                         // global number one larger than the previous one.
+>                         RESULTIS n+1
+3763c3770
+<         // static variable.
+---
+>         // static variable or entry point.
+4181,4184c4188,4193
+<     IF h1!(h2!x)=s_flt DO
+<     { trnerr("Function name must not have the FLT tag")
+<       h2!x := h2!(h2!x) // Remove the FLT tag
+<     }
+---
+>     // 28feb2023  Functions declarations my now use the FLT prefix
+>     // to indicate the result of a call has the FLT tag.
+>     //IF h1!(h2!x)=s_flt DO
+>     //{ trnerr("Function name must not have the FLT tag")
+>     //  h2!x := h2!(h2!x) // Remove the FLT tag
+>     //}
+4192,4195c4201,4206
+<     IF h1!(h2!x)=s_flt DO
+<     { trnerr("Function name must not have the FLT tag")
+<       h2!x := h2!(h2!x) // Remove the FLT tag
+<     }
+---
+>     // 28feb2023  Functions declarations my now use the FLT prefix
+>     // to indicate the result of a call has the FLT tag.
+>     //IF h1!(h2!x)=s_flt DO
+>     //{ trnerr("Function name must not have the FLT tag")
+>     //  h2!x := h2!(h2!x) // Remove the FLT tag
+>     //}
+4236c4247,4249
+< { LET c = cellwithname(x)
+---
+> { // x is the name of a function, routine or a
+>   // pattern function or routine, or a label.
+>   LET c = cellwithname(x)
+4240c4253,4259
+<   THEN { LET gn = h3!c
+---
+>   THEN { // x is being declared in the scope of a global
+>          // declaration of the same name. So the global
+> 	 // must be initialised with the entry point.
+> 	 // If either x or the global declaration has
+> 	 // the FLT prefix they must both have this
+> 	 // prefix.
+> 	 LET gn = h3!c
+4243c4262,4263
+<          addname(x, s_global, gn, 0)
+---
+>          //addname(x, s_global, gn, 0)
+>          addname(x, fk, gn, 0)     // Modified 28feb2023
+4248,4251c4268,4271
+<                 IF gdefsing DO
+<                 { writef("G%i3 = %s*n", gn, @h3!x)
+<                   //abort(1000)
+<                 }
+---
+>          IF gdefsing DO
+>          { writef("G%i3 = %s*n", gn, @h3!x)
+>            //abort(1000)
+>          }
+4285,4286c4305,4307
+<   //writef("addname: name cell at=%n %s k=%n a=%n path=%x8*n",
+<   //        dvece-3, @h3!name, k, a, path)
+---
+>   IF prtree2 DO
+>     sawritef("addname: name cell at=%n %s k=%n a=%n path=%x8*n",
+>             dvece-3, @h3!name, k, a, path)
+5271a5293,5294
+>   // Added 28 Feb 2023: If x is a function call f(args) return
+>   // TRUE if isflt(f) is TRUE, iereturn isflt(h2!x).
+5287a5311
+>     CASE s_fnap:             // Added 28 Feb 2023

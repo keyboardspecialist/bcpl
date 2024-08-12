@@ -1,0 +1,1353 @@
+Ass_dev M:4 DEF libhdr.h[780] Ass_dev=4
+Ass_dir M:2 DEF libhdr.h[778] Ass_dir=2
+Ass_link M:0 DEF libhdr.h[776] Ass_link=0
+Ass_name M:5 DEF libhdr.h[781] Ass_name=5
+Ass_task M:1 DEF libhdr.h[777] Ass_task=1
+Ass_type M:3 DEF libhdr.h[779] Ass_type=3
+B2Wsh M:2 DEF libhdr.h[26] B2Wsh=1+32/32
+B2Wsh M:2 MAN libhdr.h[248] bytesperword=1<<B2Wsh
+B2Wsh M:2 MAN libhdr.h[28] W2Bsh=B2Wsh
+CloseObj M:1 DEF libhdr.h[298] CloseObj=1
+Dcb_arg M:4 DEF libhdr.h[720] Dcb_arg=4
+Dcb_cvp M:16 DEF libhdr.h[734] Dcb_cvp=16
+Dcb_devid M:1 DEF libhdr.h[717] Dcb_devid=1
+Dcb_flag M:7 DEF libhdr.h[723] Dcb_flag=7
+Dcb_intson M:6 DEF libhdr.h[722] Dcb_intson=6
+Dcb_irq M:5 DEF libhdr.h[721] Dcb_irq=5
+Dcb_op M:3 DEF libhdr.h[719] Dcb_op=3
+Dcb_threadp M:14 DEF libhdr.h[733] Dcb_threadp=14
+Dcb_type M:0 DEF libhdr.h[716] Dcb_type=0
+Dcb_upb M:17 DEF libhdr.h[738] Dcb_upb=17
+Dcb_var0 M:8 DEF libhdr.h[727] Dcb_var0=8
+Dcb_var1 M:9 DEF libhdr.h[728] Dcb_var1=9
+Dcb_var2 M:10 DEF libhdr.h[729] Dcb_var2=10
+Dcb_var3 M:11 DEF libhdr.h[730] Dcb_var3=11
+Dcb_var4 M:12 DEF libhdr.h[731] Dcb_var4=12
+Dcb_wkq M:2 DEF libhdr.h[718] Dcb_wkq=2
+Devc_create M:1 DEF libhdr.h[748] Devc_create=1
+Devc_destroy M:2 DEF libhdr.h[749] Devc_destroy=2
+Devc_setintson M:5 DEF libhdr.h[752] Devc_setintson=5
+Devc_start M:3 DEF libhdr.h[750] Devc_start=3
+Devc_stop M:4 DEF libhdr.h[751] Devc_stop=4
+Devt_clk M:1 DEF libhdr.h[741] Devt_clk=1
+Devt_fileop M:4 DEF libhdr.h[744] Devt_fileop=4
+Devt_tcpdev M:5 DEF libhdr.h[745] Devt_tcpdev=5
+Devt_ttyin M:2 DEF libhdr.h[742] Devt_ttyin=2
+Devt_ttyout M:3 DEF libhdr.h[743] Devt_ttyout=3
+GB2312 M:-2 DEF libhdr.h[649] GB2312=-2
+InitObj M:0 DEF libhdr.h[297] InitObj=0
+ON64 M:0 DEF libhdr.h[29] ON64=32=64
+State_dead M:12 DEF libhdr.h[767] State_dead=12
+State_hold M:2 DEF libhdr.h[764] State_hold=2
+State_int M:8 DEF libhdr.h[766] State_int=8
+State_pkt M:1 DEF libhdr.h[763] State_pkt=1
+State_wait M:4 DEF libhdr.h[765] State_wait=4
+Sys_alsa M:72 DEF libhdr.h[495] Sys_alsa=72
+Sys_buttons M:56 DEF libhdr.h[475] Sys_buttons=56
+Sys_callc M:59 DEF libhdr.h[478] Sys_callc=59
+Sys_callnative M:53 DEF libhdr.h[472] Sys_callnative=53
+Sys_close M:16 DEF libhdr.h[438] Sys_close=16
+Sys_cputime M:30 DEF libhdr.h[451] Sys_cputime=30
+Sys_datstamp M:44 DEF libhdr.h[463] Sys_datstamp=44
+Sys_delay M:57 DEF libhdr.h[476] Sys_delay=57
+Sys_deletefile M:17 DEF libhdr.h[439] Sys_deletefile=17
+Sys_devcom M:43 DEF libhdr.h[462] Sys_devcom=43
+Sys_dumpmem M:52 DEF libhdr.h[471] Sys_dumpmem=52
+Sys_ext M:68 DEF libhdr.h[489] Sys_ext=68
+Sys_filemodtime M:31 DEF libhdr.h[452] Sys_filemodtime=31
+Sys_filesize M:46 DEF libhdr.h[465] Sys_filesize=46
+Sys_flt M:63 DEF libhdr.h[483] Sys_flt=63
+Sys_flt M:63 MAN com/fltcmpltest.b[484]
+    UNLESS sys(Sys_flt,fl_avail)=-1 DO ..
+Sys_flt M:63 MAN com/fltcmpltest.b[488]
+    ft(sys(Sys_flt,fl_mk,12345,-1), 1234.500)
+Sys_flt M:63 MAN com/fltcmpltest.b[492]
+    x#:=sys(Sys_flt,fl_unmk, 1234.500)
+Sys_flt M:63 MAN com/fltcmpltest.b[500]
+    x#:=sys(Sys_flt,fl_unmk,- 1234.500)
+Sys_flt M:63 MAN com/fltcmpltest.b[507] x#:=sys(Sys_flt,fl_float,123456)
+Sys_flt M:63 MAN com/fltcmpltest.b[508]
+    x#:=sys(Sys_flt,fl_fix, 12345.600)
+Sys_flt M:63 MAN com/fltcmpltest.b[509]
+    x#:=sys(Sys_flt,fl_abs, 12345.600)
+Sys_flt M:63 MAN com/fltcmpltest.b[510]
+    x#:=sys(Sys_flt,fl_abs,- 12345.600)
+Sys_flt M:63 MAN com/fltcmpltest.b[511]
+    x#:=sys(Sys_flt,fl_mul, 12.500, 43.500)
+Sys_flt M:63 MAN com/fltcmpltest.b[512]
+    x#:=sys(Sys_flt,fl_div, 12.500,...)
+Sys_flt M:63 MAN com/fltcmpltest.b[516]
+    x#:=sys(Sys_flt,fl_add, 12.500, 43.500)
+Sys_flt M:63 MAN com/fltcmpltest.b[517]
+    x#:=sys(Sys_flt,fl_sub, 12.500, 43.500)
+Sys_flt M:63 MAN com/fltcmpltest.b[518]
+    x#:=sys(Sys_flt,fl_pos,- 12345.600)
+Sys_flt M:63 MAN com/fltcmpltest.b[519]
+    x#:=sys(Sys_flt,fl_neg,- 12345.600)
+Sys_flt M:63 MAN com/fltcmpltest.b[526] t(sys(Sys_flt,fl_eq,x,y),x=y)
+Sys_flt M:63 MAN com/fltcmpltest.b[527] t(sys(Sys_flt,fl_ne,x,y),x~=y)
+Sys_flt M:63 MAN com/fltcmpltest.b[528] t(sys(Sys_flt,fl_ls,x,y),x<y)
+Sys_flt M:63 MAN com/fltcmpltest.b[529] t(sys(Sys_flt,fl_gr,x,y),x>y)
+Sys_flt M:63 MAN com/fltcmpltest.b[530] t(sys(Sys_flt,fl_le,x,y),x<=y)
+Sys_flt M:63 MAN com/fltcmpltest.b[531] t(sys(Sys_flt,fl_ge,x,y),x>=y)
+Sys_flt M:63 MAN com/fltcmpltest.b[536]
+    t(FIX (sys(Sys_flt,fl_acos, 0.500)#* 1000000.100),#x0FFA9E)
+Sys_flt M:63 MAN com/fltcmpltest.b[537]
+    t(FIX (sys(Sys_flt,fl_asin, 0.500)#* 1000000.000),523599)
+Sys_flt M:63 MAN com/fltcmpltest.b[538]
+    t(FIX (sys(Sys_flt,fl_atan, 0.500)#* 1000000.000),463648)
+Sys_flt M:63 MAN com/fltcmpltest.b[539]
+    t(FIX (sys(Sys_flt,fl_atan2,...)#* 1000000.000),896055)
+Sys_flt M:63 MAN com/fltcmpltest.b[540]
+    t(FIX (sys(Sys_flt,fl_cos, 0.500)#* 1000000.000),877583)
+Sys_flt M:63 MAN com/fltcmpltest.b[544]
+    t(FIX (sys(Sys_flt,fl_sin, 0.500)#* 1000000.000),479426)
+Sys_flt M:63 MAN com/fltcmpltest.b[545]
+    t(FIX (sys(Sys_flt,...)#* 1000000.000#+ 0.100),546303)
+Sys_flt M:63 MAN com/fltcmpltest.b[546]
+    t(FIX (sys(Sys_flt,fl_cosh, 0.500)#* 1000000.000),#x1134CA)
+Sys_flt M:63 MAN com/fltcmpltest.b[547]
+    t(FIX (sys(Sys_flt,fl_sinh, 0.500)#* 1000000.000),521095)
+Sys_flt M:63 MAN com/fltcmpltest.b[548]
+    t(FIX (sys(Sys_flt,fl_tanh, 0.500)#* 1000000.000),462117)
+Sys_flt M:63 MAN com/fltcmpltest.b[549]
+    t(FIX (sys(Sys_flt,fl_exp, 1.000)#* 1000000.000),#x297A4A)
+Sys_flt M:63 MAN com/fltcmpltest.b[551]
+    x#:=sys(Sys_flt,fl_frexp, 1023.000)
+Sys_flt M:63 MAN com/fltcmpltest.b[556] x#:=sys(Sys_flt,fl_ldexp,...,10)
+Sys_flt M:63 MAN com/fltcmpltest.b[559]
+    t(FIX (sys(Sys_flt,fl_log, 0.500)#* 1000000.000),-693147)
+Sys_flt M:63 MAN com/fltcmpltest.b[560]
+    t(FIX (sys(Sys_flt,fl_log10, 0.500)#* 1000000.000),-301030)
+Sys_flt M:63 MAN com/fltcmpltest.b[562]
+    x#:=sys(Sys_flt,fl_modf, 123.250)
+Sys_flt M:63 MAN com/fltcmpltest.b[567]
+    t(FIX (sys(Sys_flt,fl_pow,...)#* 1000000.000),#x159446)
+Sys_flt M:63 MAN com/fltcmpltest.b[568]
+    t(FIX (sys(Sys_flt,fl_sqrt, 2.000)#* 1000000.000),#x159446)
+Sys_flt M:63 MAN com/fltcmpltest.b[569]
+    t(FIX (sys(Sys_flt,fl_ceil, 2.500)#* 1000000.000),#x2DC6C0)
+Sys_flt M:63 MAN com/fltcmpltest.b[570]
+    t(FIX (sys(Sys_flt,fl_ceil,...)#* 1000000.000),-#x1E8480)
+Sys_flt M:63 MAN com/fltcmpltest.b[571]
+    t(FIX (sys(Sys_flt,fl_floor, 2.500)#* 1000000.000),#x1E8480)
+Sys_flt M:63 MAN com/fltcmpltest.b[572]
+    t(FIX (sys(Sys_flt,fl_floor,...)#* 1000000.000),-#x2DC6C0)
+Sys_flt M:63 MAN com/fltcmpltest.b[574]
+    t(FIX (sys(Sys_flt,fl_modf,...)#* 1000000.000),250000)
+Sys_flt M:63 MAN com/fltcmpltest.b[578]
+    t(sys(Sys_flt,fl_F2N,1000, 1.234),1234)
+Sys_flt M:63 MAN com/fltcmpltest.b[579]
+    t(sys(Sys_flt,fl_N2F,1000,1234), 1.234)
+Sys_freevec M:22 DEF libhdr.h[444] Sys_freevec=22
+Sys_getbuildno M:71 DEF libhdr.h[492] Sys_getbuildno=71
+Sys_getpid M:51 DEF libhdr.h[470] Sys_getpid=51
+Sys_getprefix M:33 DEF libhdr.h[454] Sys_getprefix=33
+Sys_getsysval M:48 DEF libhdr.h[467] Sys_getsysval=48
+Sys_gettrval M:62 DEF libhdr.h[482] Sys_gettrval=62
+Sys_getvec M:21 DEF libhdr.h[443] Sys_getvec=21
+Sys_gl M:67 DEF libhdr.h[488] Sys_gl=67
+Sys_globin M:24 DEF libhdr.h[446] Sys_globin=24
+Sys_graphics M:34 DEF libhdr.h[455] Sys_graphics=34
+Sys_inc M:55 DEF libhdr.h[474] Sys_inc=55
+Sys_incdcount M:65 DEF libhdr.h[485] Sys_incdcount=65
+Sys_interpret M:7 DEF libhdr.h[430] Sys_interpret=7
+Sys_intflag M:28 DEF libhdr.h[449] Sys_intflag=28
+Sys_joy M:69 DEF libhdr.h[490] Sys_joy=69
+Sys_loadseg M:23 DEF libhdr.h[445] Sys_loadseg=23
+Sys_lockirq M:41 DEF libhdr.h[460] Sys_lockirq=41
+Sys_memmovebytes M:74 DEF libhdr.h[499] Sys_memmovebytes=74
+Sys_memmovewords M:73 DEF libhdr.h[496] Sys_memmovewords=73
+Sys_muldiv M:26 DEF libhdr.h[448] Sys_muldiv=26
+Sys_openappend M:19 DEF libhdr.h[441] Sys_openappend=19
+Sys_openread M:14 DEF libhdr.h[436] Sys_openread=14
+Sys_openreadwrite M:47 DEF libhdr.h[466] Sys_openreadwrite=47
+Sys_openwrite M:15 DEF libhdr.h[437] Sys_openwrite=15
+Sys_platform M:54 DEF libhdr.h[473] Sys_platform=54
+Sys_pollsardch M:64 DEF libhdr.h[484] Sys_pollsardch=64
+Sys_putsysval M:49 DEF libhdr.h[468] Sys_putsysval=49
+Sys_quit M:0 DEF libhdr.h[423] Sys_quit=0
+Sys_read M:12 DEF libhdr.h[434] Sys_read=12
+Sys_renamefile M:18 DEF libhdr.h[440] Sys_renamefile=18
+Sys_rti M:1 DEF libhdr.h[424] Sys_rti=1
+Sys_sardch M:10 DEF libhdr.h[432] Sys_sardch=10
+Sys_saveregs M:2 DEF libhdr.h[425] Sys_saveregs=2
+Sys_sawrch M:11 DEF libhdr.h[433] Sys_sawrch=11
+Sys_sdl M:66 DEF libhdr.h[487] Sys_sdl=66
+Sys_seek M:38 DEF libhdr.h[457] Sys_seek=38
+Sys_setcount M:-1 DEF libhdr.h[422] Sys_setcount=-1
+Sys_setprefix M:32 DEF libhdr.h[453] Sys_setprefix=32
+Sys_setraster M:29 DEF libhdr.h[450] Sys_setraster=29
+Sys_setst M:3 DEF libhdr.h[426] Sys_setst=3
+Sys_settracing M:70 DEF libhdr.h[491] Sys_settracing=70
+Sys_settrcount M:61 DEF libhdr.h[481] Sys_settrcount=61
+Sys_shellcom M:50 DEF libhdr.h[469] Sys_shellcom=50
+Sys_sound M:58 DEF libhdr.h[477] Sys_sound=58
+Sys_tally M:6 DEF libhdr.h[429] Sys_tally=6
+Sys_tell M:39 DEF libhdr.h[458] Sys_tell=39
+Sys_tracing M:4 DEF libhdr.h[427] Sys_tracing=4
+Sys_trpush M:60 DEF libhdr.h[480] Sys_trpush=60
+Sys_unloadseg M:25 DEF libhdr.h[447] Sys_unloadseg=25
+Sys_unlockirq M:42 DEF libhdr.h[461] Sys_unlockirq=42
+Sys_waitirq M:40 DEF libhdr.h[459] Sys_waitirq=40
+Sys_watch M:5 DEF libhdr.h[428] Sys_watch=5
+Sys_write M:13 DEF libhdr.h[435] Sys_write=13
+Task_cli M:1 DEF libhdr.h[755] Task_cli=1
+Task_consolehandler M:3 DEF libhdr.h[757] Task_consolehandler=3
+Task_debug M:2 DEF libhdr.h[756] Task_debug=2
+Task_filehandler M:4 DEF libhdr.h[758] Task_filehandler=4
+Task_mbxhandler M:5 DEF libhdr.h[759] Task_mbxhandler=5
+Task_tcphandler M:6 DEF libhdr.h[760] Task_tcphandler=6
+UTF8 M:-1 DEF libhdr.h[648] UTF8=-1
+W2Bsh M:2 DEF libhdr.h[28] W2Bsh=B2Wsh
+a FS:13 LL com/fltcmpltest.b[175] a
+a FS:13 LL com/fltcmpltest.b[178] writef("@a=%n'x x=%8x*n",@a,a,x)
+a FS:13 LL com/fltcmpltest.b[235] ft(a#+b#+c, 33.000)
+a FS:13 LL com/fltcmpltest.b[258] ft(a, 15.000)
+a FS:13 LL com/fltcmpltest.b[265] ft(x#*a, 75.000)
+a FS:13 LL com/fltcmpltest.b[270] ft(x#*a#+a#*x, 150.000)
+a FS:13 LL com/fltcmpltest.b[274] ft( 100.000#/(a#-a#+ 2.000), 50.000)
+a FS:13 LL com/fltcmpltest.b[275] ft(a#/x, 3.000)
+a FS:13 LL com/fltcmpltest.b[276] ft(a#/(#-x),- 3.000)
+a FS:13 LL com/fltcmpltest.b[277] ft((#-a)#/x,- 3.000)
+a FS:13 LL com/fltcmpltest.b[278] ft((#-a)#/(-x), 3.000)
+a FS:13 LL com/fltcmpltest.b[279] ft((a#+a)#/a, 2.000)
+a FS:13 LL com/fltcmpltest.b[280] ft(a#*x#/x#*a, 1.000)
+a FS:13 LL com/fltcmpltest.b[280] ft(a#*x#/x*a, 1.000)
+a FS:13 LL com/fltcmpltest.b[281]
+    ft((a#+b)#*(x+y)#* 123.000#/ 6.000* 123.000, 26.000)
+a FS:13 LL com/fltcmpltest.b[359] IF a DO ..
+a FS:13 LL com/fltcmpltest.b[369] GOTO a
+a FS:13 LL com/fltcmpltest.b[376] t(a,11)
+a FS:13 LL com/fltcmpltest.b[389] x:=x+t(x,...)-15
+a FS:13 LLL com/fltcmpltest.b[178] writef("@a=%n'x x=%8x*n",@a,a,x)
+a FS:13 SL com/fltcmpltest.b[256] a#:= 15.000
+a FS:13 SL com/fltcmpltest.b[356] a#:=TRUE
+a FS:13 SL com/fltcmpltest.b[368] a#:=l1
+a FS:13 SL com/fltcmpltest.b[375] RESULTIS 11
+abort G:28 DEF libhdr.h[67] abort=28
+abort G:28 LG com/fltcmpltest.b[179] abort(23456)
+abort G:28 LG com/fltcmpltest.b[232] abort(12345)
+allones G:212 DEF com/fltcmpltest.b[25] allones=212
+allones G:212 LG com/fltcmpltest.b[183] allones:=allones<<1|1
+allones G:212 SG com/fltcmpltest.b[181] allones:=1
+allones G:212 SG com/fltcmpltest.b[183] allones:=allones<<1|1
+appendstream G:66 DEF libhdr.h[105] appendstream=66
+b FS:13 LL com/fltcmpltest.b[235] ft(a#+b#+c, 33.000)
+b FS:13 LL com/fltcmpltest.b[281]
+    ft((a#+b)#*(x+y)#* 123.000#/ 6.000* 123.000, 26.000)
+b FS:13 LL com/fltcmpltest.b[363] IF b DO ..
+b FS:13 LLL com/fltcmpltest.b[252] ft(!(@b+i0), 11.000)
+b FS:13 SL com/fltcmpltest.b[357] b#:=FALSE
+binrdch G:39 DEF libhdr.h[78] binrdch=39
+binwrch G:42 DEF libhdr.h[81] binwrch=42
+bitsperbyte M:8 DEF libhdr.h[249] bitsperbyte=8
+bitsperbyte M:8 MAN libhdr.h[250] bitsperword=bitsperbyte*bytesperword
+bitsperword G:210 DEF com/fltcmpltest.b[25] bitsperword=210
+bitsperword G:210 LG com/fltcmpltest.b[183] bitsperword:=bitsperword+1
+bitsperword G:210 LG com/fltcmpltest.b[184] on64:=bitsperword=64
+bitsperword G:210 LG com/fltcmpltest.b[190] wrd(bitsperword,0,FALSE)
+bitsperword G:210 SG com/fltcmpltest.b[181] bitsperword:=1
+bitsperword G:210 SG com/fltcmpltest.b[183] bitsperword:=bitsperword+1
+bitsperword M:32 DEF libhdr.h[250] bitsperword=bitsperbyte*bytesperword
+bitsperword M:32 MAN libhdr.h[252] minint=1<<bitsperword-1
+bld_CYGWIN M:43 DEF libhdr.h[538] bld_CYGWIN=43
+bld_MacOSX M:31 DEF libhdr.h[530] bld_MacOSX=31
+bld_MacOSXSDL M:32 DEF libhdr.h[531] bld_MacOSXSDL=32
+bld_MacOSXSDL2 M:33 DEF libhdr.h[532] bld_MacOSXSDL2=33
+bld_MacOSXSDL2GL M:35 DEF libhdr.h[534] bld_MacOSXSDL2GL=35
+bld_MacOSXSDLGL M:34 DEF libhdr.h[533] bld_MacOSXSDLGL=34
+bld_Raspi M:21 DEF libhdr.h[524] bld_Raspi=21
+bld_RaspiSDL M:22 DEF libhdr.h[525] bld_RaspiSDL=22
+bld_RaspiSDL2 M:23 DEF libhdr.h[526] bld_RaspiSDL2=23
+bld_RaspiSDL2GL M:25 DEF libhdr.h[528] bld_RaspiSDL2GL=25
+bld_RaspiSDLGL M:24 DEF libhdr.h[527] bld_RaspiSDLGL=24
+bld_VmsVax M:41 DEF libhdr.h[536] bld_VmsVax=41
+bld_Win32 M:42 DEF libhdr.h[537] bld_Win32=42
+bld_linux M:1 DEF libhdr.h[516] bld_linux=1
+bld_linuxGL M:4 DEF libhdr.h[519] bld_linuxGL=4
+bld_linuxSDL M:2 DEF libhdr.h[517] bld_linuxSDL=2
+bld_linuxSDL2 M:3 DEF libhdr.h[518] bld_linuxSDL2=3
+bld_linuxSDL2GL M:6 DEF libhdr.h[521] bld_linuxSDL2GL=6
+bld_linuxSDLGL M:5 DEF libhdr.h[520] bld_linuxSDLGL=5
+bld_linuxiSH M:7 DEF libhdr.h[522] bld_linuxiSH=7
+bld_unknown M:0 DEF libhdr.h[515] bld_unknown=0
+bldf_ALSAavail M:8 DEF libhdr.h[545] bldf_ALSAavail=1<<3
+bldf_GLavail M:32 DEF libhdr.h[547] bldf_GLavail=1<<5
+bldf_SDLavail M:16 DEF libhdr.h[546] bldf_SDLavail=1<<4
+bldf_callc M:2 DEF libhdr.h[543] bldf_callc=1<<1
+bldf_joystick M:4 DEF libhdr.h[544] bldf_joystick=1<<2
+bldf_sound M:1 DEF libhdr.h[542] bldf_sound=1
+bootregs M:11 DEF libhdr.h[503] bootregs=11
+bytesperword M:4 DEF libhdr.h[248] bytesperword=1<<B2Wsh
+bytesperword M:4 MAN libhdr.h[250] bitsperword=bitsperbyte*bytesperword
+bytesperword M:4 MAN libhdr.h[251] mcaddrinc=bytesperword
+bytesperword M:4 MAN libhdr.h[593]
+    scb_nameeend=scb_name+scb_maxnamelen/bytesperword
+bytesperword M:4 MAN libhdr.h[713]
+    tcb_upb=tcb_namebase+15/bytesperword+1
+c FS:13 LL com/fltcmpltest.b[235] ft(a#+b#+c, 33.000)
+callco G:19 DEF libhdr.h[58] callco=19
+callseg G:107 DEF libhdr.h[147] callseg=107
+capitalch G:96 DEF libhdr.h[136] capitalch=96
+changeco G:6 DEF libhdr.h[44] changeco=6
+changepri G:155 DEF libhdr.h[209] changepri=155
+cis G:12 DEF libhdr.h[51] cis=12
+clear_words G:115 DEF libhdr.h[155] clear_words=115
+cli_commanddir G:136 DEF libhdr.h[179] cli_commanddir=136
+cli_commandfile G:143 DEF libhdr.h[190] cli_commandfile=143
+cli_commandname G:138 DEF libhdr.h[185] cli_commandname=138
+cli_currentinput G:142 DEF libhdr.h[189] cli_currentinput=142
+cli_currentoutput G:146 DEF libhdr.h[196] cli_currentoutput=146
+cli_data G:135 DEF libhdr.h[178] cli_data=135
+cli_defaultstack G:147 DEF libhdr.h[197] cli_defaultstack=147
+cli_faillevel G:139 DEF libhdr.h[186] cli_faillevel=139
+cli_init G:133 DEF libhdr.h[176] cli_init=133
+cli_initialfaillevel M:10 DEF libhdr.h[657]
+    cli_initialfaillevel=return_hard
+cli_initialstack M:50000 DEF libhdr.h[656] cli_initialstack=50000
+cli_module G:149 DEF libhdr.h[199] cli_module=149
+cli_module_gn M:149 DEF libhdr.h[655] cli_module_gn=149
+cli_preloadlist G:145 DEF libhdr.h[195] cli_preloadlist=145
+cli_prompt G:140 DEF libhdr.h[187] cli_prompt=140
+cli_result2 G:134 DEF libhdr.h[177] cli_result2=134
+cli_returncode G:137 DEF libhdr.h[180] cli_returncode=137
+cli_standardinput G:141 DEF libhdr.h[188] cli_standardinput=141
+cli_standardoutput G:148 DEF libhdr.h[198] cli_standardoutput=148
+cli_status G:144 DEF libhdr.h[192] cli_status=144
+cli_tallyflag G:132 DEF libhdr.h[175] cli_tallyflag=132
+clibit_comcom M:4 DEF libhdr.h[662] clibit_comcom=4
+clibit_endcli M:256 DEF libhdr.h[668] clibit_endcli=256
+clibit_eofdel M:2 DEF libhdr.h[661] clibit_eofdel=2
+clibit_maincli M:8 DEF libhdr.h[663] clibit_maincli=8
+clibit_mbxcli M:64 DEF libhdr.h[666] clibit_mbxcli=64
+clibit_newcli M:16 DEF libhdr.h[664] clibit_newcli=16
+clibit_noprompt M:1 DEF libhdr.h[660] clibit_noprompt=1
+clibit_runcli M:32 DEF libhdr.h[665] clibit_runcli=32
+clibit_tcpcli M:128 DEF libhdr.h[667] clibit_tcpcli=128
+clihook G:4 DEF libhdr.h[42] clihook=4
+cliregs M:21 DEF libhdr.h[504] cliregs=21
+cmpdats G:184 DEF libhdr.h[236] cmpdats=184
+co_c M:5 DEF libhdr.h[295] co_c=
+co_fn M:3 DEF libhdr.h[293] co_fn=
+co_list M:2 DEF libhdr.h[292] co_list=
+co_parent M:1 DEF libhdr.h[291] co_parent=
+co_pptr M:0 DEF libhdr.h[290] co_pptr=0
+co_size M:4 DEF libhdr.h[294] co_size=
+codewrch G:126 DEF libhdr.h[166] codewrch=126
+colist G:8 DEF libhdr.h[46] colist=8
+compch G:97 DEF libhdr.h[137] compch=97
+compstring G:98 DEF libhdr.h[138] compstring=98
+consoletask G:171 DEF libhdr.h[222] consoletask=171
+copy_bytes G:116 DEF libhdr.h[156] copy_bytes=116
+copy_words G:114 DEF libhdr.h[154] copy_words=114
+copydir G:79 DEF libhdr.h[118] copydir=79
+copyobj G:75 DEF libhdr.h[114] copyobj=75
+copystring G:99 DEF libhdr.h[139] copystring=99
+cos G:13 DEF libhdr.h[52] cos=13
+cowait G:20 DEF libhdr.h[59] cowait=20
+createco G:17 DEF libhdr.h[56] createco=17
+createdev G:172 DEF libhdr.h[223] createdev=172
+createdir G:82 DEF libhdr.h[121] createdir=82
+createtask G:153 DEF libhdr.h[207] createtask=153
+currco G:7 DEF libhdr.h[45] currco=7
+current_language G:190 DEF libhdr.h[239] current_language=190
+currentdir G:14 DEF libhdr.h[53] currentdir=14
+dat_to_strings G:110 DEF libhdr.h[150] dat_to_strings=110
+datstamp G:109 DEF libhdr.h[149] datstamp=109
+datstring G:108 DEF libhdr.h[148] datstring=108
+deadcode M:#xDEADC0DE DEF libhdr.h[272] deadcode=-#x21523F22
+delay G:128 DEF libhdr.h[168] delay=128
+delayuntil G:129 DEF libhdr.h[169] delayuntil=129
+deleteco G:18 DEF libhdr.h[57] deleteco=18
+deletedev G:173 DEF libhdr.h[224] deletedev=173
+deletefile G:76 DEF libhdr.h[115] deletefile=76
+deleteself G:125 DEF libhdr.h[165] deleteself=125
+deletetask G:154 DEF libhdr.h[208] deletetask=154
+deplete G:43 DEF libhdr.h[82] deplete=43
+endread G:60 DEF libhdr.h[99] endread=60
+endstream G:62 DEF libhdr.h[101] endstream=62
+endstreamch M:-1 DEF libhdr.h[255] endstreamch=-1
+endtask G:162 DEF libhdr.h[216] endtask=162
+endwrite G:61 DEF libhdr.h[100] endwrite=61
+entryword M:57311 DEF libhdr.h[274] entryword=57311
+f FS:13 LL com/fltcmpltest.b[236] ft(f#+g#+h, 303.000)
+f FS:13 LL com/fltcmpltest.b[259] ft(f, 105.000)
+f FS:13 LL com/fltcmpltest.b[266]
+    ft( 1.000#*x#+ 2.000#*y#+ 3.000#*z#+f#* 4.000, 433.000)
+f FS:13 LL com/fltcmpltest.b[283] ft(#-f,- 105.000)
+f FS:13 LL com/fltcmpltest.b[291] t(f#= 105.000,TRUE)
+f FS:13 LL com/fltcmpltest.b[292] t(f#~= 105.000,FALSE)
+f FS:13 LL com/fltcmpltest.b[293] t(f#< 105.000,FALSE)
+f FS:13 LL com/fltcmpltest.b[294] t(f#>= 105.000,TRUE)
+f FS:13 LL com/fltcmpltest.b[295] t(f#> 105.000,FALSE)
+f FS:13 LL com/fltcmpltest.b[296] t(f#<= 105.000,TRUE)
+f FS:13 LL com/fltcmpltest.b[299] t(f#= 105.000,FALSE)
+f FS:13 LL com/fltcmpltest.b[300] t(f#~= 105.000,TRUE)
+f FS:13 LL com/fltcmpltest.b[301] t(f#< 105.000,TRUE)
+f FS:13 LL com/fltcmpltest.b[302] t(f#>= 105.000,FALSE)
+f FS:13 LL com/fltcmpltest.b[303] t(f#> 105.000,FALSE)
+f FS:13 LL com/fltcmpltest.b[304] t(f#<= 105.000,TRUE)
+f FS:13 LL com/fltcmpltest.b[309] t(f#= 0.000,TRUE)
+f FS:13 LL com/fltcmpltest.b[310] t(f#~= 0.000,FALSE)
+f FS:13 LL com/fltcmpltest.b[311] t(f#< 0.000,FALSE)
+f FS:13 LL com/fltcmpltest.b[312] t(f#>= 0.000,TRUE)
+f FS:13 LL com/fltcmpltest.b[313] t(f#> 0.000,FALSE)
+f FS:13 LL com/fltcmpltest.b[314] t(f#<= 0.000,TRUE)
+f FS:13 LL com/fltcmpltest.b[317] t(f#= 0.000,FALSE)
+f FS:13 LL com/fltcmpltest.b[318] t(f#~= 0.000,TRUE)
+f FS:13 LL com/fltcmpltest.b[322] t(f#< 0.000,FALSE)
+f FS:13 LL com/fltcmpltest.b[323] t(f#>= 0.000,TRUE)
+f FS:13 LL com/fltcmpltest.b[324] t(f#> 0.000,TRUE)
+f FS:13 LL com/fltcmpltest.b[325] t(f#<= 0.000,FALSE)
+f FS:13 LL com/fltcmpltest.b[352] t(#-f,-105)
+f FS:13 LL com/fltcmpltest.b[389] x:=x+t(x,...)-15
+f FS:13 LL com/fltcmpltest.b[402] x#:=x#+f
+f FS:13 LL com/fltcmpltest.b[408] t(f#= 105.000->1,2,1)
+f FS:13 LL com/fltcmpltest.b[409] t(f#~= 105.000->1,2,2)
+f FS:13 LL com/fltcmpltest.b[410] t(f#<105->1,2,2)
+f FS:13 LL com/fltcmpltest.b[411] t(f#>=105->1,2,1)
+f FS:13 LL com/fltcmpltest.b[412] t(f#>105->1,2,2)
+f FS:13 LL com/fltcmpltest.b[413] t(f#<=105->1,2,1)
+f FS:13 LL com/fltcmpltest.b[416] t(f#= 105.000->1,2,2)
+f FS:13 LL com/fltcmpltest.b[417] t(f#~= 105.000->1,2,1)
+f FS:13 LL com/fltcmpltest.b[418] t(f#<105->1,2,1)
+f FS:13 LL com/fltcmpltest.b[419] t(f#>=105->1,2,2)
+f FS:13 LL com/fltcmpltest.b[420] t(f#>105->1,2,2)
+f FS:13 LL com/fltcmpltest.b[421] t(f#<=105->1,2,1)
+f FS:13 LL com/fltcmpltest.b[424] t(f#= 0.000->1,2,1)
+f FS:13 LL com/fltcmpltest.b[425] t(f#~= 0.000->1,2,2)
+f FS:13 LL com/fltcmpltest.b[426] t(f#<0->1,2,2)
+f FS:13 LL com/fltcmpltest.b[427] t(f#>=0->1,2,1)
+f FS:13 LL com/fltcmpltest.b[428] t(f#>0->1,2,2)
+f FS:13 LL com/fltcmpltest.b[429] t(f#<=0->1,2,1)
+f FS:13 LL com/fltcmpltest.b[431] t(f#= 0.000->1,2,2)
+f FS:13 LL com/fltcmpltest.b[432] t(f#~= 0.000->1,2,1)
+f FS:13 LL com/fltcmpltest.b[433] t(f#<0->1,2,2)
+f FS:13 LL com/fltcmpltest.b[434] t(f#>=0->1,2,1)
+f FS:13 LL com/fltcmpltest.b[435] t(f#>0->1,2,1)
+f FS:13 LL com/fltcmpltest.b[436] t(f#<=0->1,2,2)
+f FS:13 LL com/fltcmpltest.b[441] ft( 2.000#+ 3.000#+f#+ 6.000, 116.000)
+f FS:13 LL com/fltcmpltest.b[442] ft(f#+ 2.000#+ 3.000#+ 6.000, 116.000)
+f FS:13 LL com/fltcmpltest.b[443] ft( 6.000#+ 3.000#+ 2.000#+f, 116.000)
+f FS:13 LL com/fltcmpltest.b[444] ft(f#- 104.000, 1.000)
+f FS:13 LL com/fltcmpltest.b[449] t(f#<f#+ 1.000->21,22,21)
+f FS:13 LL com/fltcmpltest.b[449] t(f#<f+ 1.000->21,22,21)
+f FS:13 LL com/fltcmpltest.b[453] t(f#>f#+ 1.000->31,32,32)
+f FS:13 LL com/fltcmpltest.b[453] t(f#>f+ 1.000->31,32,32)
+f FS:13 LL com/fltcmpltest.b[454] t(f#<= 105.000->41,42,41)
+f FS:13 LL com/fltcmpltest.b[455] t(f#>= 105.000->51,52,51)
+f FS:13 SL com/fltcmpltest.b[221] f#:= 100.000
+f FS:13 SL com/fltcmpltest.b[256] f#:= 105.000
+f FS:13 SL com/fltcmpltest.b[290] f#:= 105.000
+f FS:13 SL com/fltcmpltest.b[298] f#:= 104.000
+f FS:13 SL com/fltcmpltest.b[306] f#:= 0.000
+f FS:13 SL com/fltcmpltest.b[316] f#:= 1.000
+f FS:13 SL com/fltcmpltest.b[351] f#:= 105.000
+f FS:13 SL com/fltcmpltest.b[407] f#:= 105.000
+f FS:13 SL com/fltcmpltest.b[415] f#:= 104.000
+f FS:13 SL com/fltcmpltest.b[423] f#:= 0.000
+f FS:13 SL com/fltcmpltest.b[430] f#:= 1.000
+f FS:13 SL com/fltcmpltest.b[440] f#:= 105.000
+f G:200 DEF com/fltcmpltest.b[22] f=200
+f0 FM:0 DEF com/fltcmpltest.b[33] FLT f0= 0.000
+f1 FM:#x3F800000 DEF com/fltcmpltest.b[33] FLT f1= 1.000
+f2 FM:#x40000000 DEF com/fltcmpltest.b[33] FLT f2= 2.000
+failcount G:204 DEF com/fltcmpltest.b[23] failcount=204
+failcount G:204 LG com/fltcmpltest.b[134] failcount:=failcount+1
+failcount G:204 LG com/fltcmpltest.b[163] failcount:=failcount+1
+failcount G:204 LG com/fltcmpltest.b[371] failcount:=failcount+1
+failcount G:204 LG com/fltcmpltest.b[465] wrn(failcount)
+failcount G:204 SG com/fltcmpltest.b[134] failcount:=failcount+1
+failcount G:204 SG com/fltcmpltest.b[163] failcount:=failcount+1
+failcount G:204 SG com/fltcmpltest.b[222] failcount#:= 0.000
+failcount G:204 SG com/fltcmpltest.b[371] failcount:=failcount+1
+fault G:182 DEF libhdr.h[234] fault=182
+findappend G:130 DEF libhdr.h[170] findappend=130
+findarg G:104 DEF libhdr.h[144] findarg=104
+findinoutput G:50 DEF libhdr.h[89] findinoutput=50
+findinput G:48 DEF libhdr.h[87] findinput=48
+findoutput G:49 DEF libhdr.h[88] findoutput=49
+findstream G:52 DEF libhdr.h[91] findstream=52
+findupdate G:51 DEF libhdr.h[90] findupdate=51
+fl_32to64 M:46 DEF libhdr.h[642] fl_32to64=
+fl_64to32 M:45 DEF libhdr.h[639] fl_64to32=
+fl_F2N M:42 DEF libhdr.h[636] fl_F2N=
+fl_F2N M:42 MAN com/fltcmpltest.b[578]
+    t(sys(Sys_flt,fl_F2N,1000, 1.234),1234)
+fl_N2F M:41 DEF libhdr.h[635] fl_N2F=
+fl_N2F M:41 MAN com/fltcmpltest.b[579]
+    t(sys(Sys_flt,fl_N2F,1000,1234), 1.234)
+fl_abs M:5 DEF libhdr.h[606] fl_abs=
+fl_abs M:5 MAN com/fltcmpltest.b[509] x#:=sys(Sys_flt,fl_abs, 12345.600)
+fl_abs M:5 MAN com/fltcmpltest.b[510]
+    x#:=sys(Sys_flt,fl_abs,- 12345.600)
+fl_acos M:20 DEF libhdr.h[611] fl_acos=20
+fl_acos M:20 MAN com/fltcmpltest.b[536]
+    t(FIX (sys(Sys_flt,fl_acos, 0.500)#* 1000000.100),#x0FFA9E)
+fl_add M:9 DEF libhdr.h[608] fl_add=
+fl_add M:9 MAN com/fltcmpltest.b[516]
+    x#:=sys(Sys_flt,fl_add, 12.500, 43.500)
+fl_asin M:21 DEF libhdr.h[612] fl_asin=
+fl_asin M:21 MAN com/fltcmpltest.b[537]
+    t(FIX (sys(Sys_flt,fl_asin, 0.500)#* 1000000.000),523599)
+fl_atan M:22 DEF libhdr.h[613] fl_atan=
+fl_atan M:22 MAN com/fltcmpltest.b[538]
+    t(FIX (sys(Sys_flt,fl_atan, 0.500)#* 1000000.000),463648)
+fl_atan2 M:23 DEF libhdr.h[614] fl_atan2=
+fl_atan2 M:23 MAN com/fltcmpltest.b[539]
+    t(FIX (sys(Sys_flt,fl_atan2,...)#* 1000000.000),896055)
+fl_avail M:0 DEF libhdr.h[604] fl_avail=0
+fl_avail M:0 MAN com/fltcmpltest.b[484]
+    UNLESS sys(Sys_flt,fl_avail)=-1 DO ..
+fl_ceil M:38 DEF libhdr.h[629] fl_ceil=
+fl_ceil M:38 MAN com/fltcmpltest.b[569]
+    t(FIX (sys(Sys_flt,fl_ceil, 2.500)#* 1000000.000),#x2DC6C0)
+fl_ceil M:38 MAN com/fltcmpltest.b[570]
+    t(FIX (sys(Sys_flt,fl_ceil,...)#* 1000000.000),-#x1E8480)
+fl_cos M:24 DEF libhdr.h[615] fl_cos=
+fl_cos M:24 MAN com/fltcmpltest.b[540]
+    t(FIX (sys(Sys_flt,fl_cos, 0.500)#* 1000000.000),877583)
+fl_cosh M:27 DEF libhdr.h[618] fl_cosh=
+fl_cosh M:27 MAN com/fltcmpltest.b[546]
+    t(FIX (sys(Sys_flt,fl_cosh, 0.500)#* 1000000.000),#x1134CA)
+fl_div M:7 DEF libhdr.h[607] fl_div=
+fl_div M:7 MAN com/fltcmpltest.b[512]
+    x#:=sys(Sys_flt,fl_div, 12.500,...)
+fl_eq M:13 DEF libhdr.h[609] fl_eq=
+fl_eq M:13 MAN com/fltcmpltest.b[526] t(sys(Sys_flt,fl_eq,x,y),x=y)
+fl_exp M:30 DEF libhdr.h[621] fl_exp=
+fl_exp M:30 MAN com/fltcmpltest.b[549]
+    t(FIX (sys(Sys_flt,fl_exp, 1.000)#* 1000000.000),#x297A4A)
+fl_fix M:4 DEF libhdr.h[606] fl_fix=
+fl_fix M:4 MAN com/fltcmpltest.b[508] x#:=sys(Sys_flt,fl_fix, 12345.600)
+fl_float M:3 DEF libhdr.h[606] fl_float=
+fl_float M:3 MAN com/fltcmpltest.b[507] x#:=sys(Sys_flt,fl_float,123456)
+fl_floor M:39 DEF libhdr.h[630] fl_floor=
+fl_floor M:39 MAN com/fltcmpltest.b[571]
+    t(FIX (sys(Sys_flt,fl_floor, 2.500)#* 1000000.000),#x1E8480)
+fl_floor M:39 MAN com/fltcmpltest.b[572]
+    t(FIX (sys(Sys_flt,fl_floor,...)#* 1000000.000),-#x2DC6C0)
+fl_frexp M:31 DEF libhdr.h[622] fl_frexp=
+fl_frexp M:31 MAN com/fltcmpltest.b[551]
+    x#:=sys(Sys_flt,fl_frexp, 1023.000)
+fl_ge M:18 DEF libhdr.h[609] fl_ge=
+fl_ge M:18 MAN com/fltcmpltest.b[531] t(sys(Sys_flt,fl_ge,x,y),x>=y)
+fl_gr M:16 DEF libhdr.h[609] fl_gr=
+fl_gr M:16 MAN com/fltcmpltest.b[529] t(sys(Sys_flt,fl_gr,x,y),x>y)
+fl_ldexp M:32 DEF libhdr.h[623] fl_ldexp=
+fl_ldexp M:32 MAN com/fltcmpltest.b[556]
+    x#:=sys(Sys_flt,fl_ldexp,...,10)
+fl_le M:17 DEF libhdr.h[609] fl_le=
+fl_le M:17 MAN com/fltcmpltest.b[530] t(sys(Sys_flt,fl_le,x,y),x<=y)
+fl_log M:33 DEF libhdr.h[624] fl_log=
+fl_log M:33 MAN com/fltcmpltest.b[559]
+    t(FIX (sys(Sys_flt,fl_log, 0.500)#* 1000000.000),-693147)
+fl_log10 M:34 DEF libhdr.h[625] fl_log10=
+fl_log10 M:34 MAN com/fltcmpltest.b[560]
+    t(FIX (sys(Sys_flt,fl_log10, 0.500)#* 1000000.000),-301030)
+fl_ls M:15 DEF libhdr.h[609] fl_ls=
+fl_ls M:15 MAN com/fltcmpltest.b[528] t(sys(Sys_flt,fl_ls,x,y),x<y)
+fl_mk M:1 DEF libhdr.h[605] fl_mk=
+fl_mk M:1 MAN com/fltcmpltest.b[488]
+    ft(sys(Sys_flt,fl_mk,12345,-1), 1234.500)
+fl_mod M:8 DEF libhdr.h[607] fl_mod=
+fl_modf M:40 DEF libhdr.h[631] fl_modf=
+fl_modf M:40 MAN com/fltcmpltest.b[562]
+    x#:=sys(Sys_flt,fl_modf, 123.250)
+fl_modf M:40 MAN com/fltcmpltest.b[574]
+    t(FIX (sys(Sys_flt,fl_modf,...)#* 1000000.000),250000)
+fl_mul M:6 DEF libhdr.h[607] fl_mul=
+fl_mul M:6 MAN com/fltcmpltest.b[511]
+    x#:=sys(Sys_flt,fl_mul, 12.500, 43.500)
+fl_ne M:14 DEF libhdr.h[609] fl_ne=
+fl_ne M:14 MAN com/fltcmpltest.b[527] t(sys(Sys_flt,fl_ne,x,y),x~=y)
+fl_neg M:12 DEF libhdr.h[608] fl_neg=
+fl_neg M:12 MAN com/fltcmpltest.b[519]
+    x#:=sys(Sys_flt,fl_neg,- 12345.600)
+fl_pos M:11 DEF libhdr.h[608] fl_pos=
+fl_pos M:11 MAN com/fltcmpltest.b[518]
+    x#:=sys(Sys_flt,fl_pos,- 12345.600)
+fl_pow M:36 DEF libhdr.h[627] fl_pow=36
+fl_pow M:36 MAN com/fltcmpltest.b[567]
+    t(FIX (sys(Sys_flt,fl_pow,...)#* 1000000.000),#x159446)
+fl_radius2 M:43 DEF libhdr.h[637] fl_radius2=
+fl_radius3 M:44 DEF libhdr.h[638] fl_radius3=
+fl_sin M:25 DEF libhdr.h[616] fl_sin=
+fl_sin M:25 MAN com/fltcmpltest.b[544]
+    t(FIX (sys(Sys_flt,fl_sin, 0.500)#* 1000000.000),479426)
+fl_sinh M:28 DEF libhdr.h[619] fl_sinh=
+fl_sinh M:28 MAN com/fltcmpltest.b[547]
+    t(FIX (sys(Sys_flt,fl_sinh, 0.500)#* 1000000.000),521095)
+fl_sqrt M:37 DEF libhdr.h[628] fl_sqrt=
+fl_sqrt M:37 MAN com/fltcmpltest.b[568]
+    t(FIX (sys(Sys_flt,fl_sqrt, 2.000)#* 1000000.000),#x159446)
+fl_sub M:10 DEF libhdr.h[608] fl_sub=
+fl_sub M:10 MAN com/fltcmpltest.b[517]
+    x#:=sys(Sys_flt,fl_sub, 12.500, 43.500)
+fl_tan M:26 DEF libhdr.h[617] fl_tan=
+fl_tan M:26 MAN com/fltcmpltest.b[545]
+    t(FIX (sys(Sys_flt,...)#* 1000000.000#+ 0.100),546303)
+fl_tanh M:29 DEF libhdr.h[620] fl_tanh=
+fl_tanh M:29 MAN com/fltcmpltest.b[548]
+    t(FIX (sys(Sys_flt,fl_tanh, 0.500)#* 1000000.000),462117)
+fl_unmk M:2 DEF libhdr.h[605] fl_unmk=
+fl_unmk M:2 MAN com/fltcmpltest.b[492]
+    x#:=sys(Sys_flt,fl_unmk, 1234.500)
+fl_unmk M:2 MAN com/fltcmpltest.b[500]
+    x#:=sys(Sys_flt,fl_unmk,- 1234.500)
+flag_a M:1 DEF libhdr.h[769] flag_a=1<<0
+flag_b M:2 DEF libhdr.h[770] flag_b=1<<1
+flag_c M:4 DEF libhdr.h[771] flag_c=1<<2
+flag_d M:8 DEF libhdr.h[772] flag_d=1<<3
+flag_e M:16 DEF libhdr.h[773] flag_e=1<<4
+freeobj G:78 DEF libhdr.h[117] freeobj=78
+freevec G:27 DEF libhdr.h[66] freevec=27
+ft F:66 FN com/fltcmpltest.b[142] LET ft(FLT x,FLT y)=..
+ft F:66 LF com/fltcmpltest.b[235] ft(a#+b#+c, 33.000)
+ft F:66 LF com/fltcmpltest.b[236] ft(f#+g#+h, 303.000)
+ft F:66 LF com/fltcmpltest.b[237] ft(x#+y#+z, 3.000)
+ft F:66 LF com/fltcmpltest.b[239]
+    ft( 123.000#+ 321.000#- 400.000, 44.000)
+ft F:66 LF com/fltcmpltest.b[250] ft(!(@y+i0), 1.000)
+ft F:66 LF com/fltcmpltest.b[252] ft(!(@b+i0), 11.000)
+ft F:66 LF com/fltcmpltest.b[253] ft(!(@g+i0), 101.000)
+ft F:66 LF com/fltcmpltest.b[257] ft(x, 5.000)
+ft F:66 LF com/fltcmpltest.b[258] ft(a, 15.000)
+ft F:66 LF com/fltcmpltest.b[259] ft(f, 105.000)
+ft F:66 LF com/fltcmpltest.b[262] ft(v!1, 1234.000)
+ft F:66 LF com/fltcmpltest.b[263] ft(v!i2, 5678.000)
+ft F:66 LF com/fltcmpltest.b[265] ft(x#*a, 75.000)
+ft F:66 LF com/fltcmpltest.b[266]
+    ft( 1.000#*x#+ 2.000#*y#+ 3.000#*z#+f#* 4.000, 433.000)
+ft F:66 LF com/fltcmpltest.b[270] ft(x#*a#+a#*x, 150.000)
+ft F:66 LF com/fltcmpltest.b[274] ft( 100.000#/(a#-a#+ 2.000), 50.000)
+ft F:66 LF com/fltcmpltest.b[275] ft(a#/x, 3.000)
+ft F:66 LF com/fltcmpltest.b[276] ft(a#/(#-x),#- 3.000)
+ft F:66 LF com/fltcmpltest.b[277] ft((#-a)#/x,#- 3.000)
+ft F:66 LF com/fltcmpltest.b[278] ft((#-a)#/(#-x), 3.000)
+ft F:66 LF com/fltcmpltest.b[279] ft((a#+a)#/a, 2.000)
+ft F:66 LF com/fltcmpltest.b[280] ft(a#*x#/x#*a, 1.000)
+ft F:66 LF com/fltcmpltest.b[281]
+    ft((a#+b)#*(x#+y)#* 123.000#/ 6.000#* 123.000, 26.000)
+ft F:66 LF com/fltcmpltest.b[283] ft(#-f,#- 105.000)
+ft F:66 LF com/fltcmpltest.b[441] ft( 2.000#+ 3.000#+f#+ 6.000, 116.000)
+ft F:66 LF com/fltcmpltest.b[442] ft(f#+ 2.000#+ 3.000#+ 6.000, 116.000)
+ft F:66 LF com/fltcmpltest.b[443] ft( 6.000#+ 3.000#+ 2.000#+f, 116.000)
+ft F:66 LF com/fltcmpltest.b[444] ft(f#- 104.000, 1.000)
+ft F:66 LF com/fltcmpltest.b[473] ft(#-FLOAT 123456,FLOAT (-123456))
+ft F:66 LF com/fltcmpltest.b[475] ft(#ABS FLOAT (-1),FLOAT 1)
+ft F:66 LF com/fltcmpltest.b[476] ft(FLOAT 123456#*FLOAT 2,FLOAT 246912)
+ft F:66 LF com/fltcmpltest.b[480] ft(FLOAT 246912#/FLOAT 2,FLOAT 123456)
+ft F:66 LF com/fltcmpltest.b[481]
+    ft(FLOAT 12345#+FLOAT 54321,FLOAT 66666)
+ft F:66 LF com/fltcmpltest.b[482]
+    ft(FLOAT 12345#-FLOAT 1234,FLOAT 11111)
+ft F:66 LF com/fltcmpltest.b[488]
+    ft(sys(Sys_flt,fl_mk,12345,-1), 1234.500)
+ft F:66 LF com/fltcmpltest.b[507] ft(x,FLOAT 123456)
+ft F:66 LF com/fltcmpltest.b[509] ft(x,#ABS  12345.600)
+ft F:66 LF com/fltcmpltest.b[510] ft(x,#ABS #- 12345.600)
+ft F:66 LF com/fltcmpltest.b[511] ft(x, 12.500#* 43.500)
+ft F:66 LF com/fltcmpltest.b[512] ft(x, 12.500#/(#- 43.500))
+ft F:66 LF com/fltcmpltest.b[516] ft(x, 12.500#+ 43.500)
+ft F:66 LF com/fltcmpltest.b[517] ft(x, 12.500#- 43.500)
+ft F:66 LF com/fltcmpltest.b[518] ft(x,Op175)
+ft F:66 LF com/fltcmpltest.b[553] ft(x, 1023.000#/ 1024.000)
+ft F:66 LF com/fltcmpltest.b[557] ft(x, 1023.000)
+ft F:66 LF com/fltcmpltest.b[564] ft(x, 0.250)
+g FS:13 LL com/fltcmpltest.b[236] ft(f#+g#+h, 303.000)
+g FS:13 LLL com/fltcmpltest.b[253] ft(!(@g+i0), 101.000)
+g FS:13 SL com/fltcmpltest.b[221] g#:= 101.000
+g G:401 DEF com/fltcmpltest.b[22] g=401
+g_alsabase M:500 DEF libhdr.h[788] g_alsabase=500
+g_bdrawbase M:450 DEF libhdr.h[784] g_bdrawbase=450
+g_colist M:8 DEF libhdr.h[280] g_colist=8
+g_currco M:7 DEF libhdr.h[279] g_currco=7
+g_extbase M:950 DEF libhdr.h[789] g_extbase=950
+g_glbase M:450 DEF libhdr.h[786] g_glbase=450
+g_globsize M:0 DEF libhdr.h[277] g_globsize=0
+g_grbase M:450 DEF libhdr.h[783] g_grbase=450
+g_keyboard M:20 DEF libhdr.h[285] g_keyboard=20
+g_memsize M:14 DEF libhdr.h[284] g_memsize=14
+g_result2 M:10 DEF libhdr.h[282] g_result2=10
+g_rootnode M:9 DEF libhdr.h[281] g_rootnode=9
+g_screen M:21 DEF libhdr.h[286] g_screen=21
+g_sdlbase M:450 DEF libhdr.h[785] g_sdlbase=450
+g_sndbase M:450 DEF libhdr.h[787] g_sndbase=450
+g_sys M:3 DEF libhdr.h[278] g_sys=3
+get_record G:71 DEF libhdr.h[110] get_record=71
+get_text G:93 DEF libhdr.h[133] get_text=93
+get_textblib G:93 DEF libhdr.h[132] get_textblib=93
+getlogname G:118 DEF libhdr.h[158] getlogname=118
+getremipaddr G:54 DEF libhdr.h[93] getremipaddr=54
+getvec G:25 DEF libhdr.h[64] getvec=25
+getword G:32 DEF libhdr.h[71] getword=32
+glob0 G:0 DEF libhdr.h[37] glob0=0
+globin G:24 DEF libhdr.h[63] globin=24
+globsize G:0 DEF libhdr.h[38] globsize=0
+globword M:#x8F8F0000 DEF libhdr.h[270] globword=-#x70710000
+h G:602 DEF com/fltcmpltest.b[22] h=602
+h G:602 LG com/fltcmpltest.b[236] ft(f#+g#+h, 303.000)
+h G:602 SG com/fltcmpltest.b[221] h#:= 102.000
+hold G:158 DEF libhdr.h[212] hold=158
+i0 M:0 DEF com/fltcmpltest.b[32] i0=0
+i0 M:0 MAN com/fltcmpltest.b[250] ft(!(@y+i0), 1.000)
+i0 M:0 MAN com/fltcmpltest.b[252] ft(!(@b+i0), 11.000)
+i0 M:0 MAN com/fltcmpltest.b[253] ft(!(@g+i0), 101.000)
+i1 M:1 DEF com/fltcmpltest.b[32] i1=1
+i2 M:2 DEF com/fltcmpltest.b[32] i2=2
+i2 M:2 MAN com/fltcmpltest.b[263] ft(v!i2, 5678.000)
+i2 M:2 MAN com/fltcmpltest.b[331] t(oct1775<<i2+1,8168)
+i2 M:2 MAN com/fltcmpltest.b[332] t(oct1775>>i2+1,127)
+id_appendscb M:132 DEF libhdr.h[553] id_appendscb=132
+id_inoutscb M:131 DEF libhdr.h[552] id_inoutscb=131
+id_inscb M:129 DEF libhdr.h[550] id_inscb=129
+id_outscb M:130 DEF libhdr.h[551] id_outscb=130
+initco G:22 DEF libhdr.h[61] initco=22
+initio G:46 DEF libhdr.h[85] initio=46
+input G:58 DEF libhdr.h[97] input=58
+instrcount G:121 DEF libhdr.h[161] instrcount=121
+intflag G:119 DEF libhdr.h[159] intflag=119
+isrregs M:41 DEF libhdr.h[510] isrregs=41
+klibregs M:21 DEF libhdr.h[505] klibregs=21
+l1 F:80 LAB com/fltcmpltest.b[374] l1:a:=VALOF{..}
+l1 F:80 LF com/fltcmpltest.b[368] a#:=l1
+l2 F:87 LAB com/fltcmpltest.b[370] l2:wrs("GOTO ERROR*n")
+level G:15 DEF libhdr.h[54] level=15
+loadseg G:105 DEF libhdr.h[145] loadseg=105
+locatedir G:80 DEF libhdr.h[119] locatedir=80
+locateobj G:81 DEF libhdr.h[120] locateobj=81
+longjump G:16 DEF libhdr.h[55] longjump=16
+maxint M:#x7FFFFFFF DEF libhdr.h[253] maxint=minint-1
+mcaddrinc M:4 DEF libhdr.h[251] mcaddrinc=bytesperword
+memoryfree G:131 DEF libhdr.h[171] memoryfree=131
+minint M:#x80000000 DEF libhdr.h[252] minint=1<<bitsperword-1
+minint M:#x80000000 MAN libhdr.h[253] maxint=minint-1
+msb G:211 DEF com/fltcmpltest.b[25] msb=211
+msb G:211 LG com/fltcmpltest.b[182] UNTIL (msb<<1)=0 DO ..
+msb G:211 LG com/fltcmpltest.b[183] msb:=msb<<1
+msb G:211 SG com/fltcmpltest.b[181] msb:=1
+msb G:211 SG com/fltcmpltest.b[183] msb:=msb<<1
+muldiv G:5 DEF libhdr.h[43] muldiv=5
+newline G:84 DEF libhdr.h[123] newline=84
+newpage G:120 DEF libhdr.h[160] newpage=120
+nl F:16 LF com/fltcmpltest.b[137] nl()
+nl F:16 LF com/fltcmpltest.b[166] nl()
+nl F:16 LF com/fltcmpltest.b[462] nl()
+nl F:16 RT com/fltcmpltest.b[41] LET nl()BE..
+note G:63 DEF libhdr.h[102] note=63
+notinuse M:-1 DEF libhdr.h[671] notinuse=-1
+on64 G:213 DEF com/fltcmpltest.b[26] on64=213
+on64 G:213 LG com/fltcmpltest.b[122] wrd(x,on64->21,13,FALSE)
+on64 G:213 LG com/fltcmpltest.b[124] wrx(x,on64->16,8)
+on64 G:213 LG com/fltcmpltest.b[126] wrd(y,on64->21,13,FALSE)
+on64 G:213 LG com/fltcmpltest.b[128] wrx(y,on64->16,8)
+on64 G:213 SG com/fltcmpltest.b[184] on64:=bitsperword=64
+output G:59 DEF libhdr.h[98] output=59
+packstring G:30 DEF libhdr.h[69] packstring=30
+pathfindinput G:53 DEF libhdr.h[92] pathfindinput=53
+peercom G:179 DEF libhdr.h[228] peercom=179
+pkt_a1 M:5 DEF libhdr.h[680] pkt_a1=5
+pkt_a2 M:6 DEF libhdr.h[681] pkt_a2=6
+pkt_a3 M:7 DEF libhdr.h[682] pkt_a3=7
+pkt_a4 M:8 DEF libhdr.h[683] pkt_a4=8
+pkt_a5 M:9 DEF libhdr.h[684] pkt_a5=9
+pkt_a6 M:10 DEF libhdr.h[685] pkt_a6=10
+pkt_arg1 M:5 DEF libhdr.h[680] pkt_arg1=5
+pkt_arg2 M:6 DEF libhdr.h[681] pkt_arg2=6
+pkt_arg3 M:7 DEF libhdr.h[682] pkt_arg3=7
+pkt_arg4 M:8 DEF libhdr.h[683] pkt_arg4=8
+pkt_arg5 M:9 DEF libhdr.h[684] pkt_arg5=9
+pkt_arg6 M:10 DEF libhdr.h[685] pkt_arg6=10
+pkt_devid M:1 DEF libhdr.h[676] pkt_devid=1
+pkt_devtaskid M:1 DEF libhdr.h[676] pkt_devtaskid=1
+pkt_id M:1 DEF libhdr.h[676] pkt_id=1
+pkt_link M:0 DEF libhdr.h[675] pkt_link=0
+pkt_op M:2 DEF libhdr.h[677] pkt_op=2
+pkt_r1 M:3 DEF libhdr.h[678] pkt_r1=3
+pkt_r2 M:4 DEF libhdr.h[679] pkt_r2=4
+pkt_res1 M:3 DEF libhdr.h[678] pkt_res1=3
+pkt_res2 M:4 DEF libhdr.h[679] pkt_res2=4
+pkt_taskid M:1 DEF libhdr.h[676] pkt_taskid=1
+pkt_type M:2 DEF libhdr.h[677] pkt_type=2
+point G:64 DEF libhdr.h[103] point=64
+pollingch M:-3 DEF libhdr.h[257] pollingch=-3
+put_record G:72 DEF libhdr.h[111] put_record=72
+putword G:33 DEF libhdr.h[72] putword=33
+qpkt G:161 DEF libhdr.h[215] qpkt=161
+quiet G:207 DEF com/fltcmpltest.b[24] quiet=207
+quiet G:207 SG com/fltcmpltest.b[227] quiet:=FALSE
+randno G:34 DEF libhdr.h[73] randno=34
+randseed G:127 DEF libhdr.h[167] randseed=127
+rdargs G:102 DEF libhdr.h[142] rdargs=102
+rdargs2 G:26 DEF libhdr.h[65] rdargs2=26
+rdch G:38 DEF libhdr.h[77] rdch=38
+rditem G:103 DEF libhdr.h[143] rditem=103
+readflt G:74 DEF libhdr.h[113] readflt=74
+readn G:83 DEF libhdr.h[122] readn=83
+readwords G:44 DEF libhdr.h[83] readwords=44
+recordnote G:70 DEF libhdr.h[109] recordnote=70
+recordpoint G:69 DEF libhdr.h[108] recordpoint=69
+release G:159 DEF libhdr.h[213] release=159
+renamefile G:77 DEF libhdr.h[116] renamefile=77
+result2 G:10 DEF libhdr.h[48] result2=10
+result2 G:10 LG com/fltcmpltest.b[493] y#:=result2
+result2 G:10 LG com/fltcmpltest.b[501] y#:=result2
+result2 G:10 LG com/fltcmpltest.b[552] y#:=result2
+result2 G:10 LG com/fltcmpltest.b[563] y#:=result2
+resumeco G:21 DEF libhdr.h[60] resumeco=21
+return_hard M:10 DEF libhdr.h[652] return_hard=10
+return_hard M:10 MAN libhdr.h[657] cli_initialfaillevel=return_hard
+return_ok M:0 DEF libhdr.h[654] return_ok=0
+return_severe M:20 DEF libhdr.h[651] return_severe=20
+return_soft M:5 DEF libhdr.h[653] return_soft=5
+returnpkt G:169 DEF libhdr.h[220] returnpkt=169
+rewindstream G:65 DEF libhdr.h[104] rewindstream=65
+rootnode G:9 DEF libhdr.h[47] rootnode=9
+rootnodeaddr M:100 DEF libhdr.h[302] rootnodeaddr=100
+rtn_abortcode M:27 DEF libhdr.h[338] rtn_abortcode=
+rtn_adjclock M:33 DEF libhdr.h[356] rtn_adjclock=
+rtn_blib M:19 DEF libhdr.h[327] rtn_blib=
+rtn_blklist M:4 DEF libhdr.h[309] rtn_blklist=
+rtn_boot M:17 DEF libhdr.h[325] rtn_boot=
+rtn_boottrace M:39 DEF libhdr.h[371] rtn_boottrace=
+rtn_bptaddr M:9 DEF libhdr.h[316] rtn_bptaddr=
+rtn_bptinstr M:10 DEF libhdr.h[317] rtn_bptinstr=
+rtn_clkintson M:6 DEF libhdr.h[312] rtn_clkintson=
+rtn_clwkq M:12 DEF libhdr.h[320] rtn_clwkq=
+rtn_context M:28 DEF libhdr.h[339] rtn_context=
+rtn_crntask M:3 DEF libhdr.h[308] rtn_crntask=
+rtn_days M:40 DEF libhdr.h[374] rtn_days=
+rtn_dbgvars M:11 DEF libhdr.h[318] rtn_dbgvars=
+rtn_dcountv M:34 DEF libhdr.h[358] rtn_dcountv=
+rtn_devtab M:1 DEF libhdr.h[306] rtn_devtab=
+rtn_dumpflag M:25 DEF libhdr.h[335] rtn_dumpflag=
+rtn_envlist M:26 DEF libhdr.h[336] rtn_envlist=
+rtn_gvecsize M:63 DEF libhdr.h[408] rtn_gvecsize=
+rtn_hdrsvar M:37 DEF libhdr.h[367] rtn_hdrsvar=
+rtn_hostaddsize M:62 DEF libhdr.h[405] rtn_hostaddsize=
+rtn_icountmax M:48 DEF libhdr.h[388] rtn_icountmax=
+rtn_idletcb M:32 DEF libhdr.h[355] rtn_idletcb=
+rtn_info M:15 DEF libhdr.h[323] rtn_info=
+rtn_insadebug M:8 DEF libhdr.h[314] rtn_insadebug=
+rtn_intflag M:24 DEF libhdr.h[334] rtn_intflag=
+rtn_joyaxis0 M:55 DEF libhdr.h[397] rtn_joyaxis0=
+rtn_joyaxis1 M:56 DEF libhdr.h[398] rtn_joyaxis1=
+rtn_joyaxis2 M:57 DEF libhdr.h[399] rtn_joyaxis2=
+rtn_joyaxis3 M:58 DEF libhdr.h[400] rtn_joyaxis3=
+rtn_joyaxis4 M:59 DEF libhdr.h[401] rtn_joyaxis4=
+rtn_joyaxis5 M:60 DEF libhdr.h[402] rtn_joyaxis5=
+rtn_joyaxis6 M:61 DEF libhdr.h[403] rtn_joyaxis6=
+rtn_joyaxiscount M:52 DEF libhdr.h[394] rtn_joyaxiscount=
+rtn_joybuttoncount M:51 DEF libhdr.h[393] rtn_joybuttoncount=
+rtn_joybuttons M:54 DEF libhdr.h[396] rtn_joybuttons=
+rtn_joycurrbuttons M:53 DEF libhdr.h[395] rtn_joycurrbuttons=
+rtn_joystickfd M:49 DEF libhdr.h[391] rtn_joystickfd=
+rtn_joystickfd1 M:50 DEF libhdr.h[392] rtn_joystickfd1=
+rtn_keyboard M:20 DEF libhdr.h[328] rtn_keyboard=
+rtn_klib M:18 DEF libhdr.h[326] rtn_klib=
+rtn_lastch M:7 DEF libhdr.h[313] rtn_lastch=
+rtn_mc0 M:43 DEF libhdr.h[380] rtn_mc0=
+rtn_mc1 M:44 DEF libhdr.h[382] rtn_mc1=
+rtn_mc2 M:45 DEF libhdr.h[383] rtn_mc2=
+rtn_mc3 M:46 DEF libhdr.h[384] rtn_mc3=
+rtn_membase M:13 DEF libhdr.h[321] rtn_membase=
+rtn_memsize M:14 DEF libhdr.h[322] rtn_memsize=
+rtn_msecs M:41 DEF libhdr.h[375] rtn_msecs=
+rtn_pathvar M:36 DEF libhdr.h[365] rtn_pathvar=
+rtn_rootvar M:35 DEF libhdr.h[363] rtn_rootvar=
+rtn_screen M:21 DEF libhdr.h[329] rtn_screen=
+rtn_scriptsvar M:38 DEF libhdr.h[369] rtn_scriptsvar=
+rtn_sys M:16 DEF libhdr.h[324] rtn_sys=
+rtn_sysg M:30 DEF libhdr.h[348] rtn_sysg=
+rtn_sysp M:29 DEF libhdr.h[347] rtn_sysp=
+rtn_sysst M:31 DEF libhdr.h[349] rtn_sysst=
+rtn_system M:47 DEF libhdr.h[386] rtn_system=
+rtn_tallyv M:5 DEF libhdr.h[310] rtn_tallyv=
+rtn_tasktab M:0 DEF libhdr.h[305] rtn_tasktab=0
+rtn_tcblist M:2 DEF libhdr.h[307] rtn_tcblist=
+rtn_ttyinwkq M:64 DEF libhdr.h[416] rtn_ttyinwkq=
+rtn_ttyinwkqe M:65 DEF libhdr.h[417] rtn_ttyinwkqe=
+rtn_upb M:80 DEF libhdr.h[419] rtn_upb=80
+rtn_usecs M:42 DEF libhdr.h[376] rtn_usecs=
+rtn_vecstatsv M:22 DEF libhdr.h[331] rtn_vecstatsv=
+rtn_vecstatsvupb M:23 DEF libhdr.h[332] rtn_vecstatsvupb=
+sardch G:36 DEF libhdr.h[75] sardch=36
+saveregs M:31 DEF libhdr.h[506] saveregs=31
+sawrch G:37 DEF libhdr.h[76] sawrch=37
+sawritef G:95 DEF libhdr.h[135] sawritef=95
+scb_blength M:14 DEF libhdr.h[578] scb_blength=
+scb_block M:9 DEF libhdr.h[573] scb_block=
+scb_buf M:3 DEF libhdr.h[567] scb_buf=
+scb_bufend M:11 DEF libhdr.h[575] scb_bufend=
+scb_encoding M:20 DEF libhdr.h[589] scb_encoding=
+scb_end M:5 DEF libhdr.h[569] scb_end=
+scb_endfn M:8 DEF libhdr.h[572] scb_endfn=
+scb_fd M:16 DEF libhdr.h[580] scb_fd=
+scb_fd1 M:17 DEF libhdr.h[581] scb_fd1=
+scb_id M:0 DEF libhdr.h[564] scb_id=0
+scb_lblock M:12 DEF libhdr.h[576] scb_lblock=
+scb_ldata M:13 DEF libhdr.h[577] scb_ldata=
+scb_maxnamelen M:31 DEF libhdr.h[562] scb_maxnamelen=31
+scb_maxnamelen M:31 MAN libhdr.h[593]
+    scb_nameeend=scb_name+scb_maxnamelen/bytesperword
+scb_name M:21 DEF libhdr.h[591] scb_name=
+scb_name M:21 MAN libhdr.h[593]
+    scb_nameeend=scb_name+scb_maxnamelen/bytesperword
+scb_nameeend M:28 DEF libhdr.h[593]
+    scb_nameeend=scb_name+scb_maxnamelen/bytesperword
+scb_pos M:4 DEF libhdr.h[568] scb_pos=
+scb_rdfn M:6 DEF libhdr.h[570] scb_rdfn=
+scb_reclen M:15 DEF libhdr.h[579] scb_reclen=
+scb_size M:29 DEF libhdr.h[596] scb_size=
+scb_size M:29 MAN libhdr.h[597] scb_upb=scb_size-1
+scb_task M:2 DEF libhdr.h[566] scb_task=
+scb_timeout M:18 DEF libhdr.h[582] scb_timeout=
+scb_timeoutact M:19 DEF libhdr.h[585] scb_timeoutact=
+scb_type M:1 DEF libhdr.h[565] scb_type=
+scb_upb M:28 DEF libhdr.h[597] scb_upb=scb_size-1
+scb_wrfn M:7 DEF libhdr.h[571] scb_wrfn=
+scb_write M:10 DEF libhdr.h[574] scb_write=
+scbt_console M:-1 DEF libhdr.h[558] scbt_console=-1
+scbt_file M:1 DEF libhdr.h[556] scbt_file=1
+scbt_mbx M:-2 DEF libhdr.h[559] scbt_mbx=-2
+scbt_net M:2 DEF libhdr.h[555] scbt_net=2
+scbt_ram M:0 DEF libhdr.h[557] scbt_ram=0
+scbt_tcp M:-3 DEF libhdr.h[560] scbt_tcp=-3
+sectword M:64991 DEF libhdr.h[273] sectword=64991
+selectinput G:56 DEF libhdr.h[95] selectinput=56
+selectoutput G:57 DEF libhdr.h[96] selectoutput=57
+sendpkt G:165 DEF libhdr.h[218] sendpkt=165
+set_process_name G:175 DEF libhdr.h[226] set_process_name=175
+setbit G:112 DEF libhdr.h[152] setbit=112
+setbulk G:122 DEF libhdr.h[162] setbulk=122
+setflags G:156 DEF libhdr.h[210] setflags=156
+setlogname G:117 DEF libhdr.h[157] setlogname=117
+setrecordlength G:68 DEF libhdr.h[107] setrecordlength=68
+setseed G:35 DEF libhdr.h[74] setseed=35
+settimeout G:55 DEF libhdr.h[94] settimeout=55
+settimeoutact G:124 DEF libhdr.h[164] settimeoutact=124
+setvec G:181 DEF libhdr.h[233] setvec=181
+splitname G:47 DEF libhdr.h[86] splitname=47
+srchwk G:150 DEF libhdr.h[204] srchwk=150
+stackfree G:123 DEF libhdr.h[163] stackfree=123
+stackword M:#xABCD1234 DEF libhdr.h[271] stackword=-#x5432EDCC
+start G:1 DEF libhdr.h[39] start=1
+start G:1 FN com/fltcmpltest.b[173] LET start(parm)=..
+startco G:23 DEF libhdr.h[62] startco=23
+stepstream G:67 DEF libhdr.h[106] stepstream=67
+stop G:2 DEF libhdr.h[40] stop=2
+str2numb G:101 DEF libhdr.h[141] str2numb=101
+string_to_dat G:111 DEF libhdr.h[151] string_to_dat=111
+string_to_number G:100 DEF libhdr.h[140] string_to_number=100
+sxpushval G:183 DEF libhdr.h[235] sxpushval=183
+sys G:3 DEF libhdr.h[41] sys=3
+sys G:3 LG com/fltcmpltest.b[36] sys(11,ch)
+sys G:3 LG com/fltcmpltest.b[484] UNLESS sys(Sys_flt,fl_avail)=-1 DO ..
+sys G:3 LG com/fltcmpltest.b[488]
+    ft(sys(Sys_flt,fl_mk,12345,-1), 1234.500)
+sys G:3 LG com/fltcmpltest.b[492] x#:=sys(Sys_flt,fl_unmk, 1234.500)
+sys G:3 LG com/fltcmpltest.b[500] x#:=sys(Sys_flt,fl_unmk,#- 1234.500)
+sys G:3 LG com/fltcmpltest.b[507] x#:=sys(Sys_flt,fl_float,123456)
+sys G:3 LG com/fltcmpltest.b[508] x#:=sys(Sys_flt,fl_fix, 12345.600)
+sys G:3 LG com/fltcmpltest.b[509] x#:=sys(Sys_flt,fl_abs, 12345.600)
+sys G:3 LG com/fltcmpltest.b[510] x#:=sys(Sys_flt,fl_abs,#- 12345.600)
+sys G:3 LG com/fltcmpltest.b[511]
+    x#:=sys(Sys_flt,fl_mul, 12.500, 43.500)
+sys G:3 LG com/fltcmpltest.b[512] x#:=sys(Sys_flt,fl_div, 12.500,...)
+sys G:3 LG com/fltcmpltest.b[516]
+    x#:=sys(Sys_flt,fl_add, 12.500, 43.500)
+sys G:3 LG com/fltcmpltest.b[517]
+    x#:=sys(Sys_flt,fl_sub, 12.500, 43.500)
+sys G:3 LG com/fltcmpltest.b[518] x#:=sys(Sys_flt,fl_pos,#- 12345.600)
+sys G:3 LG com/fltcmpltest.b[519] x#:=sys(Sys_flt,fl_neg,#- 12345.600)
+sys G:3 LG com/fltcmpltest.b[526] t(sys(Sys_flt,fl_eq,x,y),x=y)
+sys G:3 LG com/fltcmpltest.b[527] t(sys(Sys_flt,fl_ne,x,y),x~=y)
+sys G:3 LG com/fltcmpltest.b[528] t(sys(Sys_flt,fl_ls,x,y),x<y)
+sys G:3 LG com/fltcmpltest.b[529] t(sys(Sys_flt,fl_gr,x,y),x>y)
+sys G:3 LG com/fltcmpltest.b[530] t(sys(Sys_flt,fl_le,x,y),x<=y)
+sys G:3 LG com/fltcmpltest.b[531] t(sys(Sys_flt,fl_ge,x,y),x>=y)
+sys G:3 LG com/fltcmpltest.b[536]
+    t(FIX (sys(Sys_flt,fl_acos, 0.500)#* 1000000.100),#x0FFA9E)
+sys G:3 LG com/fltcmpltest.b[537]
+    t(FIX (sys(Sys_flt,fl_asin, 0.500)#* 1000000.000),523599)
+sys G:3 LG com/fltcmpltest.b[538]
+    t(FIX (sys(Sys_flt,fl_atan, 0.500)#* 1000000.000),463648)
+sys G:3 LG com/fltcmpltest.b[539]
+    t(FIX (sys(Sys_flt,fl_atan2,...)#* 1000000.000),896055)
+sys G:3 LG com/fltcmpltest.b[540]
+    t(FIX (sys(Sys_flt,fl_cos, 0.500)#* 1000000.000),877583)
+sys G:3 LG com/fltcmpltest.b[544]
+    t(FIX (sys(Sys_flt,fl_sin, 0.500)#* 1000000.000),479426)
+sys G:3 LG com/fltcmpltest.b[545]
+    t(FIX (sys(Sys_flt,...)#* 1000000.000#+ 0.100),546303)
+sys G:3 LG com/fltcmpltest.b[546]
+    t(FIX (sys(Sys_flt,fl_cosh, 0.500)#* 1000000.000),#x1134CA)
+sys G:3 LG com/fltcmpltest.b[547]
+    t(FIX (sys(Sys_flt,fl_sinh, 0.500)#* 1000000.000),521095)
+sys G:3 LG com/fltcmpltest.b[548]
+    t(FIX (sys(Sys_flt,fl_tanh, 0.500)#* 1000000.000),462117)
+sys G:3 LG com/fltcmpltest.b[549]
+    t(FIX (sys(Sys_flt,fl_exp, 1.000)#* 1000000.000),#x297A4A)
+sys G:3 LG com/fltcmpltest.b[551] x#:=sys(Sys_flt,fl_frexp, 1023.000)
+sys G:3 LG com/fltcmpltest.b[556] x#:=sys(Sys_flt,fl_ldexp,...,10)
+sys G:3 LG com/fltcmpltest.b[559]
+    t(FIX (sys(Sys_flt,fl_log, 0.500)#* 1000000.000),-693147)
+sys G:3 LG com/fltcmpltest.b[560]
+    t(FIX (sys(Sys_flt,fl_log10, 0.500)#* 1000000.000),-301030)
+sys G:3 LG com/fltcmpltest.b[562] x#:=sys(Sys_flt,fl_modf, 123.250)
+sys G:3 LG com/fltcmpltest.b[567]
+    t(FIX (sys(Sys_flt,fl_pow,...)#* 1000000.000),#x159446)
+sys G:3 LG com/fltcmpltest.b[568]
+    t(FIX (sys(Sys_flt,fl_sqrt, 2.000)#* 1000000.000),#x159446)
+sys G:3 LG com/fltcmpltest.b[569]
+    t(FIX (sys(Sys_flt,fl_ceil, 2.500)#* 1000000.000),#x2DC6C0)
+sys G:3 LG com/fltcmpltest.b[570]
+    t(FIX (sys(Sys_flt,fl_ceil,...)#* 1000000.000),-#x1E8480)
+sys G:3 LG com/fltcmpltest.b[571]
+    t(FIX (sys(Sys_flt,fl_floor, 2.500)#* 1000000.000),#x1E8480)
+sys G:3 LG com/fltcmpltest.b[572]
+    t(FIX (sys(Sys_flt,fl_floor,...)#* 1000000.000),-#x2DC6C0)
+sys G:3 LG com/fltcmpltest.b[574]
+    t(FIX (sys(Sys_flt,fl_modf,...)#* 1000000.000),250000)
+sys G:3 LG com/fltcmpltest.b[578]
+    t(sys(Sys_flt,fl_F2N,1000, 1.234),1234)
+sys G:3 LG com/fltcmpltest.b[579]
+    t(sys(Sys_flt,fl_N2F,1000,1234), 1.234)
+sysabort G:29 DEF libhdr.h[68] sysabort=29
+t F:55 FN com/fltcmpltest.b[118] LET t(x,y)=..
+t F:55 LF com/fltcmpltest.b[171] t(a+b+c+d+e+f,g)
+t F:55 LF com/fltcmpltest.b[245] t(x#= 0.000,TRUE)
+t F:55 LF com/fltcmpltest.b[248] t(y#= 0.000,FALSE)
+t F:55 LF com/fltcmpltest.b[285] t(FIX  110.534,111)
+t F:55 LF com/fltcmpltest.b[286] t(FIX (#- 110.534),-111)
+t F:55 LF com/fltcmpltest.b[291] t(f#= 105.000,TRUE)
+t F:55 LF com/fltcmpltest.b[292] t(f#~= 105.000,FALSE)
+t F:55 LF com/fltcmpltest.b[293] t(f#< 105.000,FALSE)
+t F:55 LF com/fltcmpltest.b[294] t(f#>= 105.000,TRUE)
+t F:55 LF com/fltcmpltest.b[295] t(f#> 105.000,FALSE)
+t F:55 LF com/fltcmpltest.b[296] t(f#<= 105.000,TRUE)
+t F:55 LF com/fltcmpltest.b[299] t(f#= 105.000,FALSE)
+t F:55 LF com/fltcmpltest.b[300] t(f#~= 105.000,TRUE)
+t F:55 LF com/fltcmpltest.b[301] t(f#< 105.000,TRUE)
+t F:55 LF com/fltcmpltest.b[302] t(f#>= 105.000,FALSE)
+t F:55 LF com/fltcmpltest.b[303] t(f#> 105.000,FALSE)
+t F:55 LF com/fltcmpltest.b[304] t(f#<= 105.000,TRUE)
+t F:55 LF com/fltcmpltest.b[309] t(f#= 0.000,TRUE)
+t F:55 LF com/fltcmpltest.b[310] t(f#~= 0.000,FALSE)
+t F:55 LF com/fltcmpltest.b[311] t(f#< 0.000,FALSE)
+t F:55 LF com/fltcmpltest.b[312] t(f#>= 0.000,TRUE)
+t F:55 LF com/fltcmpltest.b[313] t(f#> 0.000,FALSE)
+t F:55 LF com/fltcmpltest.b[314] t(f#<= 0.000,TRUE)
+t F:55 LF com/fltcmpltest.b[317] t(f#= 0.000,FALSE)
+t F:55 LF com/fltcmpltest.b[318] t(f#~= 0.000,TRUE)
+t F:55 LF com/fltcmpltest.b[322] t(f#< 0.000,FALSE)
+t F:55 LF com/fltcmpltest.b[323] t(f#>= 0.000,TRUE)
+t F:55 LF com/fltcmpltest.b[324] t(f#> 0.000,TRUE)
+t F:55 LF com/fltcmpltest.b[325] t(f#<= 0.000,FALSE)
+t F:55 LF com/fltcmpltest.b[329] t(oct1775<<3,8168)
+t F:55 LF com/fltcmpltest.b[330] t(oct1775>>3,127)
+t F:55 LF com/fltcmpltest.b[331] t(oct1775<<i2+1,8168)
+t F:55 LF com/fltcmpltest.b[332] t(oct1775>>i2+1,127)
+t F:55 LF com/fltcmpltest.b[340] t(b1100&10,8)
+t F:55 LF com/fltcmpltest.b[341] t(b1100|10,14)
+t F:55 LF com/fltcmpltest.b[342] t((b1100 EQV 10)&31,25)
+t F:55 LF com/fltcmpltest.b[343] t(b1100 XOR 10,6)
+t F:55 LF com/fltcmpltest.b[345] t(~yes,no)
+t F:55 LF com/fltcmpltest.b[346] t(~no,yes)
+t F:55 LF com/fltcmpltest.b[347] t(~(b1100 EQV -b1010),b1100 XOR -b1010)
+t F:55 LF com/fltcmpltest.b[352] t(#-f,-105)
+t F:55 LF com/fltcmpltest.b[360] t(x,16)
+t F:55 LF com/fltcmpltest.b[364] t(x,16)
+t F:55 LF com/fltcmpltest.b[376] t(a,11)
+t F:55 LF com/fltcmpltest.b[384] t(v2!5,-5)
+t F:55 LF com/fltcmpltest.b[386] t(v1!1,-2)
+t F:55 LF com/fltcmpltest.b[389] x:=x+t(x,...)-15
+t F:55 LF com/fltcmpltest.b[390] t(x,15)
+t F:55 LF com/fltcmpltest.b[393] t(x,16)
+t F:55 LF com/fltcmpltest.b[395] t(x,15)
+t F:55 LF com/fltcmpltest.b[397] t(x,22)
+t F:55 LF com/fltcmpltest.b[399] t(x,0)
+t F:55 LF com/fltcmpltest.b[401] t(x,15)
+t F:55 LF com/fltcmpltest.b[403] t(x,120)
+t F:55 LF com/fltcmpltest.b[408] t(f#= 105.000->1,2,1)
+t F:55 LF com/fltcmpltest.b[409] t(f#~= 105.000->1,2,2)
+t F:55 LF com/fltcmpltest.b[410] t(f#< 105.000->1,2,2)
+t F:55 LF com/fltcmpltest.b[411] t(f#>= 105.000->1,2,1)
+t F:55 LF com/fltcmpltest.b[412] t(f#> 105.000->1,2,2)
+t F:55 LF com/fltcmpltest.b[413] t(f#<= 105.000->1,2,1)
+t F:55 LF com/fltcmpltest.b[416] t(f#= 105.000->1,2,2)
+t F:55 LF com/fltcmpltest.b[417] t(f#~= 105.000->1,2,1)
+t F:55 LF com/fltcmpltest.b[418] t(f#< 105.000->1,2,1)
+t F:55 LF com/fltcmpltest.b[419] t(f#>= 105.000->1,2,2)
+t F:55 LF com/fltcmpltest.b[420] t(f#> 105.000->1,2,2)
+t F:55 LF com/fltcmpltest.b[421] t(f#<= 105.000->1,2,1)
+t F:55 LF com/fltcmpltest.b[424] t(f#= 0.000->1,2,1)
+t F:55 LF com/fltcmpltest.b[425] t(f#~= 0.000->1,2,2)
+t F:55 LF com/fltcmpltest.b[426] t(f#< 0.000->1,2,2)
+t F:55 LF com/fltcmpltest.b[427] t(f#>= 0.000->1,2,1)
+t F:55 LF com/fltcmpltest.b[428] t(f#> 0.000->1,2,2)
+t F:55 LF com/fltcmpltest.b[429] t(f#<= 0.000->1,2,1)
+t F:55 LF com/fltcmpltest.b[431] t(f#= 0.000->1,2,2)
+t F:55 LF com/fltcmpltest.b[432] t(f#~= 0.000->1,2,1)
+t F:55 LF com/fltcmpltest.b[433] t(f#< 0.000->1,2,2)
+t F:55 LF com/fltcmpltest.b[434] t(f#>= 0.000->1,2,1)
+t F:55 LF com/fltcmpltest.b[435] t(f#> 0.000->1,2,1)
+t F:55 LF com/fltcmpltest.b[436] t(f#<= 0.000->1,2,2)
+t F:55 LF com/fltcmpltest.b[445] t(x#+ 2.000#=x#+ 2.000->99,98,99)
+t F:55 LF com/fltcmpltest.b[449] t(f#<f#+ 1.000->21,22,21)
+t F:55 LF com/fltcmpltest.b[453] t(f#>f#+ 1.000->31,32,32)
+t F:55 LF com/fltcmpltest.b[454] t(f#<= 105.000->41,42,41)
+t F:55 LF com/fltcmpltest.b[455] t(f#>= 105.000->51,52,51)
+t F:55 LF com/fltcmpltest.b[472]
+    t(FIX (#-FLOAT 123456),FIX FLOAT (-123456))
+t F:55 LF com/fltcmpltest.b[474]
+    t(FIX (#ABS FLOAT (-123456)),FIX FLOAT 123456)
+t F:55 LF com/fltcmpltest.b[497] t(x,12345)
+t F:55 LF com/fltcmpltest.b[498] t(y,-1)
+t F:55 LF com/fltcmpltest.b[502] t(x,-12345)
+t F:55 LF com/fltcmpltest.b[503] t(y,-1)
+t F:55 LF com/fltcmpltest.b[508] t(x,FIX  12345.600)
+t F:55 LF com/fltcmpltest.b[519] t(x,#-#- 12345.600)
+t F:55 LF com/fltcmpltest.b[526] t(sys(Sys_flt,fl_eq,x,y),x#=y)
+t F:55 LF com/fltcmpltest.b[527] t(sys(Sys_flt,fl_ne,x,y),x#~=y)
+t F:55 LF com/fltcmpltest.b[528] t(sys(Sys_flt,fl_ls,x,y),x#<y)
+t F:55 LF com/fltcmpltest.b[529] t(sys(Sys_flt,fl_gr,x,y),x#>y)
+t F:55 LF com/fltcmpltest.b[530] t(sys(Sys_flt,fl_le,x,y),x#<=y)
+t F:55 LF com/fltcmpltest.b[531] t(sys(Sys_flt,fl_ge,x,y),x#>=y)
+t F:55 LF com/fltcmpltest.b[536]
+    t(FIX (sys(Sys_flt,fl_acos, 0.500)#* 1000000.100),#x0FFA9E)
+t F:55 LF com/fltcmpltest.b[537]
+    t(FIX (sys(Sys_flt,fl_asin, 0.500)#* 1000000.000),523599)
+t F:55 LF com/fltcmpltest.b[538]
+    t(FIX (sys(Sys_flt,fl_atan, 0.500)#* 1000000.000),463648)
+t F:55 LF com/fltcmpltest.b[539]
+    t(FIX (sys(Sys_flt,fl_atan2,...)#* 1000000.000),896055)
+t F:55 LF com/fltcmpltest.b[540]
+    t(FIX (sys(Sys_flt,fl_cos, 0.500)#* 1000000.000),877583)
+t F:55 LF com/fltcmpltest.b[544]
+    t(FIX (sys(Sys_flt,fl_sin, 0.500)#* 1000000.000),479426)
+t F:55 LF com/fltcmpltest.b[545]
+    t(FIX (sys(Sys_flt,...)#* 1000000.000#+ 0.100),546303)
+t F:55 LF com/fltcmpltest.b[546]
+    t(FIX (sys(Sys_flt,fl_cosh, 0.500)#* 1000000.000),#x1134CA)
+t F:55 LF com/fltcmpltest.b[547]
+    t(FIX (sys(Sys_flt,fl_sinh, 0.500)#* 1000000.000),521095)
+t F:55 LF com/fltcmpltest.b[548]
+    t(FIX (sys(Sys_flt,fl_tanh, 0.500)#* 1000000.000),462117)
+t F:55 LF com/fltcmpltest.b[549]
+    t(FIX (sys(Sys_flt,fl_exp, 1.000)#* 1000000.000),#x297A4A)
+t F:55 LF com/fltcmpltest.b[554] t(y,10)
+t F:55 LF com/fltcmpltest.b[559]
+    t(FIX (sys(Sys_flt,fl_log, 0.500)#* 1000000.000),-693147)
+t F:55 LF com/fltcmpltest.b[560]
+    t(FIX (sys(Sys_flt,fl_log10, 0.500)#* 1000000.000),-301030)
+t F:55 LF com/fltcmpltest.b[565] t(y, 123.000)
+t F:55 LF com/fltcmpltest.b[567]
+    t(FIX (sys(Sys_flt,fl_pow,...)#* 1000000.000),#x159446)
+t F:55 LF com/fltcmpltest.b[568]
+    t(FIX (sys(Sys_flt,fl_sqrt, 2.000)#* 1000000.000),#x159446)
+t F:55 LF com/fltcmpltest.b[569]
+    t(FIX (sys(Sys_flt,fl_ceil, 2.500)#* 1000000.000),#x2DC6C0)
+t F:55 LF com/fltcmpltest.b[570]
+    t(FIX (sys(Sys_flt,fl_ceil,...)#* 1000000.000),-#x1E8480)
+t F:55 LF com/fltcmpltest.b[571]
+    t(FIX (sys(Sys_flt,fl_floor, 2.500)#* 1000000.000),#x1E8480)
+t F:55 LF com/fltcmpltest.b[572]
+    t(FIX (sys(Sys_flt,fl_floor,...)#* 1000000.000),-#x2DC6C0)
+t F:55 LF com/fltcmpltest.b[574]
+    t(FIX (sys(Sys_flt,fl_modf,...)#* 1000000.000),250000)
+t F:55 LF com/fltcmpltest.b[575] t( 100.250#MOD  25.000, 0.250)
+t F:55 LF com/fltcmpltest.b[578] t(sys(Sys_flt,fl_F2N,1000, 1.234),1234)
+t F:55 LF com/fltcmpltest.b[579] t(sys(Sys_flt,fl_N2F,1000,1234), 1.234)
+t G:208 DEF com/fltcmpltest.b[24] t=208
+t1 F:71 FN com/fltcmpltest.b[171] LET t1(a,b,c,d,e,f,g)=..
+t_bhunk M:3000 DEF libhdr.h[267] t_bhunk=3000
+t_bhunk64 M:4000 DEF libhdr.h[268] t_bhunk64=4000
+t_end M:1002 DEF libhdr.h[263] t_end=1002
+t_end64 M:2002 DEF libhdr.h[266] t_end64=2002
+t_hunk M:1000 DEF libhdr.h[261] t_hunk=1000
+t_hunk64 M:2000 DEF libhdr.h[264] t_hunk64=2000
+t_reloc M:1001 DEF libhdr.h[262] t_reloc=1001
+t_reloc64 M:2001 DEF libhdr.h[265] t_reloc64=2001
+taskid G:152 DEF libhdr.h[206] taskid=152
+taskwait G:160 DEF libhdr.h[214] taskwait=160
+tcb G:151 DEF libhdr.h[205] tcb=151
+tcb_a M:11 DEF libhdr.h[702] tcb_a=tcb_regs
+tcb_active M:10 DEF libhdr.h[699] tcb_active=10
+tcb_b M:12 DEF libhdr.h[703] tcb_b=12
+tcb_c M:13 DEF libhdr.h[704] tcb_c=13
+tcb_count M:18 DEF libhdr.h[709] tcb_count=18
+tcb_flags M:5 DEF libhdr.h[694] tcb_flags=5
+tcb_g M:15 DEF libhdr.h[706] tcb_g=15
+tcb_gbase M:8 DEF libhdr.h[697] tcb_gbase=8
+tcb_link M:0 DEF libhdr.h[689] tcb_link=0
+tcb_namebase M:19 DEF libhdr.h[711] tcb_namebase=19
+tcb_namebase M:19 MAN libhdr.h[713]
+    tcb_upb=tcb_namebase+15/bytesperword+1
+tcb_p M:14 DEF libhdr.h[705] tcb_p=14
+tcb_pc M:17 DEF libhdr.h[708] tcb_pc=17
+tcb_pri M:2 DEF libhdr.h[691] tcb_pri=2
+tcb_regs M:11 DEF libhdr.h[701] tcb_regs=11
+tcb_regs M:11 MAN libhdr.h[702] tcb_a=tcb_regs
+tcb_sbase M:9 DEF libhdr.h[698] tcb_sbase=9
+tcb_seglist M:7 DEF libhdr.h[696] tcb_seglist=7
+tcb_st M:16 DEF libhdr.h[707] tcb_st=16
+tcb_state M:4 DEF libhdr.h[693] tcb_state=4
+tcb_stsiz M:6 DEF libhdr.h[695] tcb_stsiz=6
+tcb_taskid M:1 DEF libhdr.h[690] tcb_taskid=1
+tcb_upb M:23 DEF libhdr.h[713] tcb_upb=tcb_namebase+15/bytesperword+1
+tcb_wkq M:3 DEF libhdr.h[692] tcb_wkq=3
+tempval G:11 DEF libhdr.h[49] tempval=11
+testbit G:113 DEF libhdr.h[153] testbit=113
+testcount G:206 DEF com/fltcmpltest.b[24] testcount=206
+testcount G:206 LG com/fltcmpltest.b[119] testcount:=testcount+1
+testcount G:206 LG com/fltcmpltest.b[143] testcount:=testcount+1
+testcount G:206 LG com/fltcmpltest.b[463] wrn(testcount)
+testcount G:206 SG com/fltcmpltest.b[119] testcount:=testcount+1
+testcount G:206 SG com/fltcmpltest.b[143] testcount:=testcount+1
+testcount G:206 SG com/fltcmpltest.b[222] testcount#:= 0.000
+tester F:73 LF com/fltcmpltest.b[202] tester( 0.000, 1.000, 2.000,v1,v2)
+tester F:73 RT com/fltcmpltest.b[212] LET tester(x,y,z,v1,v2)BE..
+testflags G:157 DEF libhdr.h[211] testflags=157
+testflt F:74 LF com/fltcmpltest.b[460] testflt()
+testflt F:74 RT com/fltcmpltest.b[469] LET testflt()BE..
+testno G:203 DEF com/fltcmpltest.b[23] testno=203
+testno G:203 LG com/fltcmpltest.b[120] wrd(testno,4,FALSE)
+testno G:203 LG com/fltcmpltest.b[138] testno:=testno+1
+testno G:203 LG com/fltcmpltest.b[144] wrd(testno,4,FALSE)
+testno G:203 LG com/fltcmpltest.b[167] testno:=testno+1
+testno G:203 SG com/fltcmpltest.b[138] testno:=testno+1
+testno G:203 SG com/fltcmpltest.b[167] testno:=testno+1
+testno G:203 SG com/fltcmpltest.b[222] testno#:= 0.000
+testno G:203 SG com/fltcmpltest.b[233] testno:=1
+testno G:203 SG com/fltcmpltest.b[241] testno:=5
+testno G:203 SG com/fltcmpltest.b[255] testno:=10
+testno G:203 SG com/fltcmpltest.b[268] testno:=17
+testno G:203 SG com/fltcmpltest.b[272] testno:=18
+testno G:203 SG com/fltcmpltest.b[288] testno:=30
+testno G:203 SG com/fltcmpltest.b[307] testno:=42
+testno G:203 SG com/fltcmpltest.b[320] testno:=50
+testno G:203 SG com/fltcmpltest.b[327] testno:=60
+testno G:203 SG com/fltcmpltest.b[338] testno:=70
+testno G:203 SG com/fltcmpltest.b[350] testno:=80
+testno G:203 SG com/fltcmpltest.b[354] testno:=96
+testno G:203 SG com/fltcmpltest.b[378] testno:=100
+testno G:203 SG com/fltcmpltest.b[406] testno:=130
+testno G:203 SG com/fltcmpltest.b[438] testno:=300
+testno G:203 SG com/fltcmpltest.b[447] testno:=305
+testno G:203 SG com/fltcmpltest.b[451] testno:=306
+testno G:203 SG com/fltcmpltest.b[457] testno:=400
+testno G:203 SG com/fltcmpltest.b[459] testno:=3000
+testno G:203 SG com/fltcmpltest.b[478] testno:=3005
+testno G:203 SG com/fltcmpltest.b[490] testno:=3010
+testno G:203 SG com/fltcmpltest.b[505] testno:=3014
+testno G:203 SG com/fltcmpltest.b[514] testno:=3020
+testno G:203 SG com/fltcmpltest.b[521] testno:=3030
+testno G:203 SG com/fltcmpltest.b[534] testno:=3200
+testno G:203 SG com/fltcmpltest.b[542] testno:=3205
+testno G:203 SG com/fltcmpltest.b[577] testno:=4000
+tg M:190 DEF libhdr.h[245] tg=190
+timeoutch M:-2 DEF libhdr.h[256] timeoutch=-2
+ug M:200 DEF libhdr.h[246] ug=200
+unhold G:159 DEF libhdr.h[213] unhold=159
+unloadseg G:106 DEF libhdr.h[146] unloadseg=106
+unpackstring G:31 DEF libhdr.h[70] unpackstring=31
+unrdch G:40 DEF libhdr.h[79] unrdch=40
+v G:205 DEF com/fltcmpltest.b[24] v=205
+v G:205 LG com/fltcmpltest.b[225] v!i#:= 1000.000#+FLOAT i
+v G:205 LG com/fltcmpltest.b[261] v!1#:= 1234.000
+v G:205 LG com/fltcmpltest.b[261] v!2#:= 5678.000
+v G:205 LG com/fltcmpltest.b[262] ft(v!1, 1234.000)
+v G:205 LG com/fltcmpltest.b[263] ft(v!i2, 5678.000)
+v G:205 SG com/fltcmpltest.b[223] v:=v1
+w FS:13 LL com/fltcmpltest.b[225] w!i#:= 10000.000#+FLOAT i
+w FS:13 SL com/fltcmpltest.b[223] w#:=v2
+wrc F:14 LF com/fltcmpltest.b[114] wrc((n&15)!(TABLE 48,49,50,51,...))
+wrc F:14 LF com/fltcmpltest.b[123] wrc(40)
+wrc F:14 LF com/fltcmpltest.b[127] wrc(40)
+wrc F:14 LF com/fltcmpltest.b[145] wrc(32)
+wrc F:14 LF com/fltcmpltest.b[147] wrc(32)
+wrc F:14 LF com/fltcmpltest.b[151] wrc(46)
+wrc F:14 LF com/fltcmpltest.b[153] wrc(32)
+wrc F:14 LF com/fltcmpltest.b[159] wrc(32)
+wrc F:14 LF com/fltcmpltest.b[161] wrc(46)
+wrc F:14 LF com/fltcmpltest.b[39] wrc(s%i)
+wrc F:14 LF com/fltcmpltest.b[41] wrc(10)
+wrc F:14 LF com/fltcmpltest.b[50] wrc(32)
+wrc F:14 LF com/fltcmpltest.b[51] wrc(45)
+wrc F:14 LF com/fltcmpltest.b[52] wrc(t!j+48)
+wrc F:14 LF com/fltcmpltest.b[59] wrc(n MOD 10+48)
+wrc F:14 LF com/fltcmpltest.b[73] wrc(32)
+wrc F:14 LF com/fltcmpltest.b[78] wrc(46)
+wrc F:14 RT com/fltcmpltest.b[36] LET wrc(ch)BE..
+wrch G:41 DEF libhdr.h[80] wrch=41
+wrd F:18 LF com/fltcmpltest.b[120] wrd(testno,4,FALSE)
+wrd F:18 LF com/fltcmpltest.b[122] wrd(x,on64->21,13,FALSE)
+wrd F:18 LF com/fltcmpltest.b[126] wrd(y,on64->21,13,FALSE)
+wrd F:18 LF com/fltcmpltest.b[144] wrd(testno,4,FALSE)
+wrd F:18 LF com/fltcmpltest.b[149] wrd(FIX x,8,FALSE)
+wrd F:18 LF com/fltcmpltest.b[150] wrd(FIX (#-x),7,TRUE)
+wrd F:18 LF com/fltcmpltest.b[190] wrd(bitsperword,0,FALSE)
+wrd F:18 LF com/fltcmpltest.b[55] wrd(n,0,n<0)
+wrd F:18 LF com/fltcmpltest.b[76] wrd(n,w-d-1)
+wrd F:18 RT com/fltcmpltest.b[45] LET wrd(n,d,neg)BE..
+wrd1 F:17 RT com/fltcmpltest.b[43] LET wrd1(n,d)BE..
+wrf F:21 RT com/fltcmpltest.b[62] LET wrf(FLT x,w,d)BE..
+writed G:85 DEF libhdr.h[124] writed=85
+writee G:180 DEF libhdr.h[232] writee=180
+writef G:94 DEF libhdr.h[134] writef=94
+writef G:94 LG com/fltcmpltest.b[178] writef("@a=%n'x x=%8x*n",@a,a,x)
+writeflt G:73 DEF libhdr.h[112] writeflt=73
+writehex G:87 DEF libhdr.h[126] writehex=87
+writen G:86 DEF libhdr.h[125] writen=86
+writeoct G:88 DEF libhdr.h[127] writeoct=88
+writes G:89 DEF libhdr.h[128] writes=89
+writet G:90 DEF libhdr.h[129] writet=90
+writeu G:91 DEF libhdr.h[130] writeu=91
+writewords G:45 DEF libhdr.h[84] writewords=45
+writez G:92 DEF libhdr.h[131] writez=92
+wrn F:19 LF com/fltcmpltest.b[152] wrn(FIX (x#* 10.000) MOD 10)
+wrn F:19 LF com/fltcmpltest.b[160] wrn(FIX y)
+wrn F:19 LF com/fltcmpltest.b[162] wrn(FIX (y#* 10.000) MOD 10)
+wrn F:19 LF com/fltcmpltest.b[463] wrn(testcount)
+wrn F:19 LF com/fltcmpltest.b[465] wrn(failcount)
+wrn F:19 RT com/fltcmpltest.b[55] LET wrn(n)BE..
+wrs F:15 LF com/fltcmpltest.b[121] wrs("         ")
+wrs F:15 LF com/fltcmpltest.b[125] wrs(")    ")
+wrs F:15 LF com/fltcmpltest.b[129] wrs(")")
+wrs F:15 LF com/fltcmpltest.b[131] wrs(" OK")
+wrs F:15 LF com/fltcmpltest.b[133] wrs(" FAILED")
+wrs F:15 LF com/fltcmpltest.b[156] wrs("OK")
+wrs F:15 LF com/fltcmpltest.b[157] wrs("FAILE'ould be ")
+wrs F:15 LF com/fltcmpltest.b[180] wrs("*nfltc'ng on a ")
+wrs F:15 LF com/fltcmpltest.b[186] wrs("little")
+wrs F:15 LF com/fltcmpltest.b[187] wrs("big")
+wrs F:15 LF com/fltcmpltest.b[188] wrs(" ende'machine*n")
+wrs F:15 LF com/fltcmpltest.b[189] wrs("The B'word is ")
+wrs F:15 LF com/fltcmpltest.b[191] wrs(" bits long*n*n*n")
+wrs F:15 LF com/fltcmpltest.b[370] wrs("GOTO ERROR*n")
+wrs F:15 LF com/fltcmpltest.b[464] wrs(" TEST'PLETED, ")
+wrs F:15 LF com/fltcmpltest.b[466] wrs(" FAILURE(S)*n")
+wrs F:15 LF com/fltcmpltest.b[485] wrs("sys(S'ailable*n")
+wrs F:15 LF com/fltcmpltest.b[74] wrs("-0")
+wrs F:15 RT com/fltcmpltest.b[38] LET wrs(s)BE..
+wrx F:22 LF com/fltcmpltest.b[113] wrx(n>>4,d-1)
+wrx F:22 LF com/fltcmpltest.b[124] wrx(x,on64->16,8)
+wrx F:22 LF com/fltcmpltest.b[128] wrx(y,on64->16,8)
+wrx F:22 LF com/fltcmpltest.b[146] wrx(x,8)
+wrx F:22 LF com/fltcmpltest.b[158] wrx(y,8)
+wrx F:22 LF com/fltcmpltest.b[43] wrx(n,8)
+wrx F:22 RT com/fltcmpltest.b[112] LET wrx(n,d)BE..
+wrz F:20 LF com/fltcmpltest.b[58] wrz(n/10,d-1)
+wrz F:20 LF com/fltcmpltest.b[79] wrz(frac,d)
+wrz F:20 RT com/fltcmpltest.b[57] LET wrz(n,d)BE..
+¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁ          4  ¸     1  ˇˇˇˇ    ﬁ¿≠ﬁ          º¶     ùë  ˇˇˇˇ    ﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ FS:11 DEF com/fltcmpltest.b[29]
+    b= 1
+¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁ          4  ¸     1  ˇˇˇˇ    ﬁ¿≠ﬁ          º¶     ùë  ˇˇˇˇ    ﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ FS:12 DEF com/fltcmpltest.b[29]
+    c= 1
+¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁ          4  ¸     1  ˇˇˇˇ    ﬁ¿≠ﬁ          º¶     ùë  ˇˇˇˇ    ﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ FS:13 DEF com/fltcmpltest.b[29]
+    w= 0
+¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁ          4  ¸     1  ˇˇˇˇ    ﬁ¿≠ﬁ         ‹ º¶     ùë  ˇˇˇˇ    ﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ﬁﬁ¿≠ FS:10 DEF com/fltcmpltest.b[29]
+    a= 1

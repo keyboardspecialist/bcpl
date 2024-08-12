@@ -1,0 +1,1187 @@
+A4 G:233 DEF com/raster2wav.b[85] A4=
+A4 G:233 LG com/raster2wav.b[276] FOR n=A4 TO C4 BY -1 DO..
+A4 G:233 LG com/raster2wav.b[282] FOR n=A4+1 TO C5 DO..
+A4 G:233 SG com/raster2wav.b[155] A4:=C4+notes_per_octave*9/12
+Ass_dev M:4 DEF libhdr.h[703] Ass_dev=4
+Ass_dir M:2 DEF libhdr.h[701] Ass_dir=2
+Ass_link M:0 DEF libhdr.h[699] Ass_link=0
+Ass_name M:5 DEF libhdr.h[704] Ass_name=5
+Ass_task M:1 DEF libhdr.h[700] Ass_task=1
+Ass_type M:3 DEF libhdr.h[702] Ass_type=3
+B2Wsh M:2 DEF libhdr.h[23] B2Wsh=1+32/32
+B2Wsh M:2 MAN libhdr.h[237] bytesperword=1<<B2Wsh
+C2 G:231 DEF com/raster2wav.b[83] C2=
+C2 G:231 LG com/raster2wav.b[154] C4:=C2+2*notes_per_octave
+C2 G:231 LG com/raster2wav.b[257] FOR n=C2 TO C7 DO..
+C2 G:231 LG com/raster2wav.b[264]
+    Radjv!n#:= 0.200#+ 0.600#*FLOAT...#/FLOAT(C7-C2)
+C2 G:231 LG com/raster2wav.b[303] FOR n=C2 TO C7 DO..
+C2 G:231 LG com/raster2wav.b[312] FOR n=C2 TO C7 DO..
+C2 G:231 LG com/raster2wav.b[318] FOR n=C2 TO C7 DO..
+C2 G:231 LG com/raster2wav.b[355] C2+(C7-C2)*a/maxaddress
+C2 G:231 LG com/raster2wav.b[356] C2+(C7-C2)*b/maxaddress
+C2 G:231 LG com/raster2wav.b[359] IF i<C2 DO ..
+C2 G:231 LG com/raster2wav.b[359] i:=C2
+C2 G:231 LG com/raster2wav.b[560] FOR n=C2 TO C7 DO..
+C2 G:231 LG com/raster2wav.b[565] FOR n=C2 TO C7 DO..
+C2 G:231 LG com/raster2wav.b[627] FOR note=C2 TO C7 DO..
+C2 G:231 SG com/raster2wav.b[153] C2:=1
+C4 G:232 DEF com/raster2wav.b[84] C4=
+C4 G:232 LG com/raster2wav.b[155] A4:=C4+notes_per_octave*9/12
+C4 G:232 LG com/raster2wav.b[156] C5:=C4+notes_per_octave
+C4 G:232 LG com/raster2wav.b[157] C7:=C4+3*notes_per_octave
+C4 G:232 LG com/raster2wav.b[276] FOR n=A4 TO C4 BY -1 DO..
+C4 G:232 LG com/raster2wav.b[289] FOR n=C4 TO C5-1 DO..
+C4 G:232 LG com/raster2wav.b[295] FOR n=C4+1 TO C5 DO..
+C4 G:232 SG com/raster2wav.b[154] C4:=C2+2*notes_per_octave
+C5 G:234 DEF com/raster2wav.b[86] C5=
+C5 G:234 LG com/raster2wav.b[282] FOR n=A4+1 TO C5 DO..
+C5 G:234 LG com/raster2wav.b[289] FOR n=C4 TO C5-1 DO..
+C5 G:234 LG com/raster2wav.b[295] FOR n=C4+1 TO C5 DO..
+C5 G:234 SG com/raster2wav.b[156] C5:=C4+notes_per_octave
+C7 G:235 DEF com/raster2wav.b[87] C7=
+C7 G:235 LG com/raster2wav.b[239] startposv:=getvec(C7)
+C7 G:235 LG com/raster2wav.b[240] endposv:=getvec(C7)
+C7 G:235 LG com/raster2wav.b[241] startvalv:=getvec(C7)
+C7 G:235 LG com/raster2wav.b[242] endvalv:=getvec(C7)
+C7 G:235 LG com/raster2wav.b[243] Ladjv:=getvec(C7)
+C7 G:235 LG com/raster2wav.b[244] Radjv:=getvec(C7)
+C7 G:235 LG com/raster2wav.b[245] notev:=getvec(C7)
+C7 G:235 LG com/raster2wav.b[246] freqv:=getvec(C7)
+C7 G:235 LG com/raster2wav.b[247] notep10v:=getvec(C7)
+C7 G:235 LG com/raster2wav.b[257] FOR n=C2 TO C7 DO..
+C7 G:235 LG com/raster2wav.b[264]
+    Radjv!n#:= 0.200#+ 0.600#*FLOAT...#/FLOAT(C7-C2)
+C7 G:235 LG com/raster2wav.b[303] FOR n=C2 TO C7 DO..
+C7 G:235 LG com/raster2wav.b[312] FOR n=C2 TO C7 DO..
+C7 G:235 LG com/raster2wav.b[318] FOR n=C2 TO C7 DO..
+C7 G:235 LG com/raster2wav.b[355] C2+(C7-C2)*a/maxaddress
+C7 G:235 LG com/raster2wav.b[356] C2+(C7-C2)*b/maxaddress
+C7 G:235 LG com/raster2wav.b[360] IF j>C7 DO ..
+C7 G:235 LG com/raster2wav.b[360] j:=C7
+C7 G:235 LG com/raster2wav.b[560] FOR n=C2 TO C7 DO..
+C7 G:235 LG com/raster2wav.b[565] FOR n=C2 TO C7 DO..
+C7 G:235 LG com/raster2wav.b[627] FOR note=C2 TO C7 DO..
+C7 G:235 SG com/raster2wav.b[157] C7:=C4+3*notes_per_octave
+CloseObj M:1 DEF libhdr.h[286] CloseObj=1
+Dcb_arg M:4 DEF libhdr.h[643] Dcb_arg=4
+Dcb_cvp M:16 DEF libhdr.h[657] Dcb_cvp=16
+Dcb_devid M:1 DEF libhdr.h[640] Dcb_devid=1
+Dcb_flag M:7 DEF libhdr.h[646] Dcb_flag=7
+Dcb_intson M:6 DEF libhdr.h[645] Dcb_intson=6
+Dcb_irq M:5 DEF libhdr.h[644] Dcb_irq=5
+Dcb_op M:3 DEF libhdr.h[642] Dcb_op=3
+Dcb_threadp M:14 DEF libhdr.h[656] Dcb_threadp=14
+Dcb_type M:0 DEF libhdr.h[639] Dcb_type=0
+Dcb_upb M:17 DEF libhdr.h[661] Dcb_upb=17
+Dcb_var0 M:8 DEF libhdr.h[650] Dcb_var0=8
+Dcb_var1 M:9 DEF libhdr.h[651] Dcb_var1=9
+Dcb_var2 M:10 DEF libhdr.h[652] Dcb_var2=10
+Dcb_var3 M:11 DEF libhdr.h[653] Dcb_var3=11
+Dcb_var4 M:12 DEF libhdr.h[654] Dcb_var4=12
+Dcb_wkq M:2 DEF libhdr.h[641] Dcb_wkq=2
+Devc_create M:1 DEF libhdr.h[671] Devc_create=1
+Devc_destroy M:2 DEF libhdr.h[672] Devc_destroy=2
+Devc_setintson M:5 DEF libhdr.h[675] Devc_setintson=5
+Devc_start M:3 DEF libhdr.h[673] Devc_start=3
+Devc_stop M:4 DEF libhdr.h[674] Devc_stop=4
+Devt_clk M:1 DEF libhdr.h[664] Devt_clk=1
+Devt_fileop M:4 DEF libhdr.h[667] Devt_fileop=4
+Devt_tcpdev M:5 DEF libhdr.h[668] Devt_tcpdev=5
+Devt_ttyin M:2 DEF libhdr.h[665] Devt_ttyin=2
+Devt_ttyout M:3 DEF libhdr.h[666] Devt_ttyout=3
+GB2312 M:-2 DEF libhdr.h[572] GB2312=-2
+InitObj M:0 DEF libhdr.h[285] InitObj=0
+Ladjv G:241 DEF com/raster2wav.b[110] Ladjv=
+Ladjv G:241 LG com/raster2wav.b[249]
+    UNLESS ...&endvalv&notev&Ladjv&Radjv&freqv&notep10v DO ..
+Ladjv G:241 LG com/raster2wav.b[265] Ladjv!n#:= 1.000#-Radjv!n
+Ladjv G:241 LG com/raster2wav.b[306] sawritef("/%6.3f",Ladjv!n)
+Ladjv G:241 LG com/raster2wav.b[341] IF Ladjv DO ..
+Ladjv G:241 LG com/raster2wav.b[341] freevec(Ladjv)
+Ladjv G:241 LG com/raster2wav.b[438] Lval#:=Lval#+val#*Ladjv!n
+Ladjv G:241 LG com/raster2wav.b[441]
+    sawritef("currp'R=%8.3f*n",currpos,n,val#*Ladjv!n,val*Radjv!n)
+Ladjv G:241 SG com/raster2wav.b[243] Ladjv:=getvec(C7)
+Lval FG:227 DEF com/raster2wav.b[78] FLT Lval=
+Lval FG:227 LG com/raster2wav.b[438] Lval#:=Lval#+val#*Ladjv!n
+Lval FG:227 LG com/raster2wav.b[443]
+    sawritef("currp'l=%8.3f*n",currpos,n,Lval,Rval)
+Lval FG:227 LG com/raster2wav.b[447] Lval#:=Lval#+val
+Lval FG:227 LG com/raster2wav.b[590] IF Lval#>maxsample_val DO ..
+Lval FG:227 LG com/raster2wav.b[590] maxsample_val#:=Lval
+Lval FG:227 LG com/raster2wav.b[591] IF Lval#<-maxsample_val DO ..
+Lval FG:227 LG com/raster2wav.b[591] maxsample_val#:=#-Lval
+Lval FG:227 LG com/raster2wav.b[592]
+    intLval:=FIX( 25000.000#*Lval#/maxsample_val)
+Lval FG:227 LG com/raster2wav.b[602] IF Lval#>maxsample_val DO ..
+Lval FG:227 LG com/raster2wav.b[602] maxsample_val#:=Lval
+Lval FG:227 LG com/raster2wav.b[603] IF Lval#<-maxsample_val DO ..
+Lval FG:227 LG com/raster2wav.b[603] maxsample_val#:=#-Lval
+Lval FG:227 LG com/raster2wav.b[607]
+    intLval:=FIX( 25000.000#*Lval#/maxsample_val)
+Lval FG:227 SG com/raster2wav.b[233] Lval#:= 0.000
+Lval FG:227 SG com/raster2wav.b[438] Lval#:=Lval#+val#*Ladjv!n
+Lval FG:227 SG com/raster2wav.b[447] Lval#:=Lval#+val
+Lval FG:227 SG com/raster2wav.b[626] Lval#:= 0.000
+ON64 M:0 DEF libhdr.h[25] ON64=32=64
+PIx2 FG:211 DEF com/raster2wav.b[55] FLT PIx2=
+PIx2 FG:211 LG com/raster2wav.b[581]  10.000#*PIx2#*FLOATd#/FLOATp10
+PIx2 FG:211 SG com/raster2wav.b[159] PIx2#:= 3.142#* 2.000
+Radjv G:242 DEF com/raster2wav.b[111] Radjv=
+Radjv G:242 LG com/raster2wav.b[249]
+    UNLESS ...&endvalv&notev&Ladjv&Radjv&freqv&notep10v DO ..
+Radjv G:242 LG com/raster2wav.b[264]
+    Radjv!n#:= 0.200#+ 0.600#*FLOAT...#/FLOAT(C7-C2)
+Radjv G:242 LG com/raster2wav.b[265] Ladjv!n#:= 1.000#-Radjv!n
+Radjv G:242 LG com/raster2wav.b[342] IF Radjv DO ..
+Radjv G:242 LG com/raster2wav.b[342] freevec(Radjv)
+Radjv G:242 LG com/raster2wav.b[439] Rval#:=Rval#+val#*Radjv!n
+Radjv G:242 LG com/raster2wav.b[441]
+    sawritef("currp'R=%8.3f*n",currpos,n,val#*Ladjv!n,val#*Radjv!n)
+Radjv G:242 SG com/raster2wav.b[244] Radjv:=getvec(C7)
+Rval FG:228 DEF com/raster2wav.b[79] FLT Rval=
+Rval FG:228 LG com/raster2wav.b[439] Rval#:=Rval#+val#*Radjv!n
+Rval FG:228 LG com/raster2wav.b[443]
+    sawritef("currp'l=%8.3f*n",currpos,n,Lval,Rval)
+Rval FG:228 LG com/raster2wav.b[604] IF Rval#>maxsample_val DO ..
+Rval FG:228 LG com/raster2wav.b[604] maxsample_val#:=Rval
+Rval FG:228 LG com/raster2wav.b[605] IF Rval#<-maxsample_val DO ..
+Rval FG:228 LG com/raster2wav.b[605] maxsample_val#:=#-Rval
+Rval FG:228 LG com/raster2wav.b[608]
+    intRval:=FIX( 25000.000#*Rval#/maxsample_val)
+Rval FG:228 SG com/raster2wav.b[233] Rval#:= 0.000
+Rval FG:228 SG com/raster2wav.b[439] Rval#:=Rval#+val#*Radjv!n
+Rval FG:228 SG com/raster2wav.b[626] Rval#:= 0.000
+State_dead M:12 DEF libhdr.h[690] State_dead=12
+State_hold M:2 DEF libhdr.h[687] State_hold=2
+State_int M:8 DEF libhdr.h[689] State_int=8
+State_pkt M:1 DEF libhdr.h[686] State_pkt=1
+State_wait M:4 DEF libhdr.h[688] State_wait=4
+Sys_buttons M:56 DEF libhdr.h[451] Sys_buttons=56
+Sys_callc M:59 DEF libhdr.h[454] Sys_callc=59
+Sys_callnative M:53 DEF libhdr.h[448] Sys_callnative=53
+Sys_close M:16 DEF libhdr.h[414] Sys_close=16
+Sys_cputime M:30 DEF libhdr.h[427] Sys_cputime=30
+Sys_datstamp M:44 DEF libhdr.h[439] Sys_datstamp=44
+Sys_delay M:57 DEF libhdr.h[452] Sys_delay=57
+Sys_deletefile M:17 DEF libhdr.h[415] Sys_deletefile=17
+Sys_devcom M:43 DEF libhdr.h[438] Sys_devcom=43
+Sys_dumpmem M:52 DEF libhdr.h[447] Sys_dumpmem=52
+Sys_ext M:68 DEF libhdr.h[465] Sys_ext=68
+Sys_filemodtime M:31 DEF libhdr.h[428] Sys_filemodtime=31
+Sys_filesize M:46 DEF libhdr.h[441] Sys_filesize=46
+Sys_flt M:63 DEF libhdr.h[459] Sys_flt=63
+Sys_flt M:63 MAN com/raster2wav.b[272]
+    sys(Sys_flt,fl_pow, 2.000,1/FLOATnotes_per_octave)
+Sys_flt M:63 MAN com/raster2wav.b[583] RESULTIS sys(Sys_flt,fl_sin,w)
+Sys_freevec M:22 DEF libhdr.h[420] Sys_freevec=22
+Sys_getpid M:51 DEF libhdr.h[446] Sys_getpid=51
+Sys_getprefix M:33 DEF libhdr.h[430] Sys_getprefix=33
+Sys_getsysval M:48 DEF libhdr.h[443] Sys_getsysval=48
+Sys_gettrval M:62 DEF libhdr.h[458] Sys_gettrval=62
+Sys_getvec M:21 DEF libhdr.h[419] Sys_getvec=21
+Sys_gl M:67 DEF libhdr.h[464] Sys_gl=67
+Sys_globin M:24 DEF libhdr.h[422] Sys_globin=24
+Sys_graphics M:34 DEF libhdr.h[431] Sys_graphics=34
+Sys_inc M:55 DEF libhdr.h[450] Sys_inc=55
+Sys_incdcount M:65 DEF libhdr.h[461] Sys_incdcount=65
+Sys_interpret M:7 DEF libhdr.h[406] Sys_interpret=7
+Sys_intflag M:28 DEF libhdr.h[425] Sys_intflag=28
+Sys_joy M:69 DEF libhdr.h[466] Sys_joy=69
+Sys_loadseg M:23 DEF libhdr.h[421] Sys_loadseg=23
+Sys_lockirq M:41 DEF libhdr.h[436] Sys_lockirq=41
+Sys_muldiv M:26 DEF libhdr.h[424] Sys_muldiv=26
+Sys_openappend M:19 DEF libhdr.h[417] Sys_openappend=19
+Sys_openread M:14 DEF libhdr.h[412] Sys_openread=14
+Sys_openreadwrite M:47 DEF libhdr.h[442] Sys_openreadwrite=47
+Sys_openwrite M:15 DEF libhdr.h[413] Sys_openwrite=15
+Sys_platform M:54 DEF libhdr.h[449] Sys_platform=54
+Sys_pollsardch M:64 DEF libhdr.h[460] Sys_pollsardch=64
+Sys_putsysval M:49 DEF libhdr.h[444] Sys_putsysval=49
+Sys_quit M:0 DEF libhdr.h[399] Sys_quit=0
+Sys_read M:12 DEF libhdr.h[410] Sys_read=12
+Sys_renamefile M:18 DEF libhdr.h[416] Sys_renamefile=18
+Sys_rti M:1 DEF libhdr.h[400] Sys_rti=1
+Sys_sardch M:10 DEF libhdr.h[408] Sys_sardch=10
+Sys_saveregs M:2 DEF libhdr.h[401] Sys_saveregs=2
+Sys_sawrch M:11 DEF libhdr.h[409] Sys_sawrch=11
+Sys_sdl M:66 DEF libhdr.h[463] Sys_sdl=66
+Sys_seek M:38 DEF libhdr.h[433] Sys_seek=38
+Sys_setcount M:-1 DEF libhdr.h[398] Sys_setcount=-1
+Sys_setprefix M:32 DEF libhdr.h[429] Sys_setprefix=32
+Sys_setraster M:29 DEF libhdr.h[426] Sys_setraster=29
+Sys_setst M:3 DEF libhdr.h[402] Sys_setst=3
+Sys_settrcount M:61 DEF libhdr.h[457] Sys_settrcount=61
+Sys_shellcom M:50 DEF libhdr.h[445] Sys_shellcom=50
+Sys_sound M:58 DEF libhdr.h[453] Sys_sound=58
+Sys_tally M:6 DEF libhdr.h[405] Sys_tally=6
+Sys_tell M:39 DEF libhdr.h[434] Sys_tell=39
+Sys_tracing M:4 DEF libhdr.h[403] Sys_tracing=4
+Sys_trpush M:60 DEF libhdr.h[456] Sys_trpush=60
+Sys_unloadseg M:25 DEF libhdr.h[423] Sys_unloadseg=25
+Sys_unlockirq M:42 DEF libhdr.h[437] Sys_unlockirq=42
+Sys_waitirq M:40 DEF libhdr.h[435] Sys_waitirq=40
+Sys_watch M:5 DEF libhdr.h[404] Sys_watch=5
+Sys_write M:13 DEF libhdr.h[411] Sys_write=13
+Task_cli M:1 DEF libhdr.h[678] Task_cli=1
+Task_consolehandler M:3 DEF libhdr.h[680] Task_consolehandler=3
+Task_debug M:2 DEF libhdr.h[679] Task_debug=2
+Task_filehandler M:4 DEF libhdr.h[681] Task_filehandler=4
+Task_mbxhandler M:5 DEF libhdr.h[682] Task_mbxhandler=5
+Task_tcphandler M:6 DEF libhdr.h[683] Task_tcphandler=6
+UTF8 M:-1 DEF libhdr.h[571] UTF8=-1
+abort G:28 DEF libhdr.h[61] abort=28
+abort G:28 LG com/raster2wav.b[253] abort(999)
+abort G:28 LG com/raster2wav.b[426] abort(1000)
+abort G:28 LG com/raster2wav.b[477] abort(1111)
+abort G:28 LG com/raster2wav.b[522] abort(1111)
+abort G:28 LG com/raster2wav.b[562] abort(2345)
+abort G:28 LG com/raster2wav.b[596] abort(1001)
+abort G:28 LG com/raster2wav.b[615] abort(1002)
+addnotesample F:3 LF com/raster2wav.b[627] addnotesample(note)
+addnotesample F:3 RT com/raster2wav.b[407] LET addnotesample(n)BE..
+appendstream G:66 DEF libhdr.h[99] appendstream=66
+binrdch G:39 DEF libhdr.h[72] binrdch=39
+binwrch G:42 DEF libhdr.h[75] binwrch=42
+bitsperbyte M:8 DEF libhdr.h[238] bitsperbyte=8
+bitsperbyte M:8 MAN libhdr.h[239] bitsperword=bitsperbyte*bytesperword
+bitsperword M:32 DEF libhdr.h[239] bitsperword=bitsperbyte*bytesperword
+bitsperword M:32 MAN libhdr.h[241] minint=1<<bitsperword-1
+bootregs M:11 DEF libhdr.h[469] bootregs=11
+bytes_per_sample G:209 DEF com/raster2wav.b[52] bytes_per_sample=
+bytes_per_sample G:209 LG com/raster2wav.b[176]
+    bytes_per_second:=sample_rate*bytes_per_sample
+bytes_per_sample G:209 LG com/raster2wav.b[177]
+    data_bytes:=samples*bytes_per_sample
+bytes_per_sample G:209 LG com/raster2wav.b[221]
+    riffhdr!8:=bits_per_sample<<16|bytes_per_sample
+bytes_per_sample G:209 SG com/raster2wav.b[175]
+    bytes_per_sample:=bits_per_sample/8*mode
+bytes_per_second G:219 DEF com/raster2wav.b[65] bytes_per_second=
+bytes_per_second G:219 LG com/raster2wav.b[220]
+    riffhdr!7:=bytes_per_second
+bytes_per_second G:219 SG com/raster2wav.b[176]
+    bytes_per_second:=sample_rate*bytes_per_sample
+bytesperword M:4 DEF libhdr.h[237] bytesperword=1<<B2Wsh
+bytesperword M:4 MAN libhdr.h[239] bitsperword=bitsperbyte*bytesperword
+bytesperword M:4 MAN libhdr.h[240] mcaddrinc=bytesperword
+bytesperword M:4 MAN libhdr.h[521]
+    scb_nameeend=scb_name+scb_maxnamelen/bytesperword
+bytesperword M:4 MAN libhdr.h[636]
+    tcb_upb=tcb_namebase+15/bytesperword+1
+callco G:19 DEF libhdr.h[52] callco=19
+callseg G:107 DEF libhdr.h[141] callseg=107
+capitalch G:96 DEF libhdr.h[130] capitalch=96
+ch G:223 DEF com/raster2wav.b[72] ch=
+ch G:223 LG com/raster2wav.b[456] WHILE 48<=ch&ch<=57 DO ..
+ch G:223 LG com/raster2wav.b[456] res:=10*res+ch-48
+ch G:223 LG com/raster2wav.b[469] IF ch=75 DO ..
+ch G:223 LG com/raster2wav.b[470] WHILE ch=32 DO ..
+ch G:223 LG com/raster2wav.b[471] IF ch=83 DO ..
+ch G:223 LG com/raster2wav.b[476] SWITCHON ch INTO..
+ch G:223 LG com/raster2wav.b[477] sawritef("Bad ch '%c'*n",ch)
+ch G:223 LG com/raster2wav.b[512] IF ch=75 DO ..
+ch G:223 LG com/raster2wav.b[513] WHILE ch=32 DO ..
+ch G:223 LG com/raster2wav.b[514] IF ch=83 DO ..
+ch G:223 LG com/raster2wav.b[519] SWITCHON ch INTO..
+ch G:223 LG com/raster2wav.b[521] sawritef("Bad ch '%c'*n",ch)
+ch G:223 SG com/raster2wav.b[456] ch:=rdch()
+ch G:223 SG com/raster2wav.b[468] ch:=rdch()
+ch G:223 SG com/raster2wav.b[469] ch:=rdch()
+ch G:223 SG com/raster2wav.b[470] ch:=rdch()
+ch G:223 SG com/raster2wav.b[471] ch:=rdch()
+ch G:223 SG com/raster2wav.b[481] ch:=rdch()
+ch G:223 SG com/raster2wav.b[487] ch:=rdch()
+ch G:223 SG com/raster2wav.b[492] ch:=rdch()
+ch G:223 SG com/raster2wav.b[499] ch:=rdch()
+ch G:223 SG com/raster2wav.b[511] ch:=rdch()
+ch G:223 SG com/raster2wav.b[512] ch:=rdch()
+ch G:223 SG com/raster2wav.b[513] ch:=rdch()
+ch G:223 SG com/raster2wav.b[514] ch:=rdch()
+ch G:223 SG com/raster2wav.b[526] ch:=rdch()
+ch G:223 SG com/raster2wav.b[532] ch:=rdch()
+ch G:223 SG com/raster2wav.b[540] ch:=rdch()
+ch G:223 SG com/raster2wav.b[551] ch:=rdch()
+changeco G:6 DEF libhdr.h[38] changeco=6
+changepri G:155 DEF libhdr.h[203] changepri=155
+cis G:12 DEF libhdr.h[45] cis=12
+clear_words G:115 DEF libhdr.h[149] clear_words=115
+cli_commanddir G:136 DEF libhdr.h[173] cli_commanddir=136
+cli_commandfile G:143 DEF libhdr.h[184] cli_commandfile=143
+cli_commandname G:138 DEF libhdr.h[179] cli_commandname=138
+cli_currentinput G:142 DEF libhdr.h[183] cli_currentinput=142
+cli_currentoutput G:146 DEF libhdr.h[190] cli_currentoutput=146
+cli_data G:135 DEF libhdr.h[172] cli_data=135
+cli_defaultstack G:147 DEF libhdr.h[191] cli_defaultstack=147
+cli_faillevel G:139 DEF libhdr.h[180] cli_faillevel=139
+cli_init G:133 DEF libhdr.h[170] cli_init=133
+cli_initialfaillevel M:10 DEF libhdr.h[580]
+    cli_initialfaillevel=return_hard
+cli_initialstack M:50000 DEF libhdr.h[579] cli_initialstack=50000
+cli_module G:149 DEF libhdr.h[193] cli_module=149
+cli_module_gn M:149 DEF libhdr.h[578] cli_module_gn=149
+cli_preloadlist G:145 DEF libhdr.h[189] cli_preloadlist=145
+cli_prompt G:140 DEF libhdr.h[181] cli_prompt=140
+cli_result2 G:134 DEF libhdr.h[171] cli_result2=134
+cli_returncode G:137 DEF libhdr.h[174] cli_returncode=137
+cli_standardinput G:141 DEF libhdr.h[182] cli_standardinput=141
+cli_standardoutput G:148 DEF libhdr.h[192] cli_standardoutput=148
+cli_status G:144 DEF libhdr.h[186] cli_status=144
+cli_tallyflag G:132 DEF libhdr.h[169] cli_tallyflag=132
+clibit_comcom M:4 DEF libhdr.h[585] clibit_comcom=4
+clibit_endcli M:256 DEF libhdr.h[591] clibit_endcli=256
+clibit_eofdel M:2 DEF libhdr.h[584] clibit_eofdel=2
+clibit_maincli M:8 DEF libhdr.h[586] clibit_maincli=8
+clibit_mbxcli M:64 DEF libhdr.h[589] clibit_mbxcli=64
+clibit_newcli M:16 DEF libhdr.h[587] clibit_newcli=16
+clibit_noprompt M:1 DEF libhdr.h[583] clibit_noprompt=1
+clibit_runcli M:32 DEF libhdr.h[588] clibit_runcli=32
+clibit_tcpcli M:128 DEF libhdr.h[590] clibit_tcpcli=128
+clihook G:4 DEF libhdr.h[36] clihook=4
+cliregs M:21 DEF libhdr.h[470] cliregs=21
+co_c M:5 DEF libhdr.h[283] co_c=
+co_fn M:3 DEF libhdr.h[281] co_fn=
+co_list M:2 DEF libhdr.h[280] co_list=
+co_parent M:1 DEF libhdr.h[279] co_parent=
+co_pptr M:0 DEF libhdr.h[278] co_pptr=0
+co_size M:4 DEF libhdr.h[282] co_size=
+codewrch G:126 DEF libhdr.h[160] codewrch=126
+colist G:8 DEF libhdr.h[40] colist=8
+compch G:97 DEF libhdr.h[131] compch=97
+compstring G:98 DEF libhdr.h[132] compstring=98
+consoletask G:171 DEF libhdr.h[216] consoletask=171
+copy_bytes G:116 DEF libhdr.h[150] copy_bytes=116
+copy_words G:114 DEF libhdr.h[148] copy_words=114
+copydir G:79 DEF libhdr.h[112] copydir=79
+copyobj G:75 DEF libhdr.h[108] copyobj=75
+copystring G:99 DEF libhdr.h[133] copystring=99
+cos G:13 DEF libhdr.h[46] cos=13
+cowait G:20 DEF libhdr.h[53] cowait=20
+createco G:17 DEF libhdr.h[50] createco=17
+createdev G:172 DEF libhdr.h[217] createdev=172
+createdir G:82 DEF libhdr.h[115] createdir=82
+createtask G:153 DEF libhdr.h[201] createtask=153
+currco G:7 DEF libhdr.h[39] currco=7
+current_language G:190 DEF libhdr.h[228] current_language=190
+currentdir G:14 DEF libhdr.h[47] currentdir=14
+currpos G:230 DEF com/raster2wav.b[81] currpos=
+currpos G:230 LG com/raster2wav.b[412] rawnoteval(n,currpos)
+currpos G:230 LG com/raster2wav.b[414] FLOATcurrpos
+currpos G:230 LG com/raster2wav.b[422]
+    sawritef("currp'l=%8.3f*n",currpos,n,val)
+currpos G:230 LG com/raster2wav.b[427] IF currpos#<endpos DO ..
+currpos G:230 LG com/raster2wav.b[441]
+    sawritef("currp'R=%8.3f*n",currpos,n,val*Ladjv!n,val*Radjv!n)
+currpos G:230 LG com/raster2wav.b[443]
+    sawritef("currp'l=%8.3f*n",currpos,n,Lval,Rval)
+currpos G:230 LG com/raster2wav.b[449]
+    sawritef("currp'l=%8.3f*n",currpos,n,val)
+currpos G:230 LG com/raster2wav.b[556] IF endpos>currpos DO ..
+currpos G:230 LG com/raster2wav.b[595]
+    sawritef("Mono 'rpos=%n*n",intLval,currpos)
+currpos G:230 LG com/raster2wav.b[613]
+    sawritef("Stere'rpos=%n*n",intLval,intRval,currpos)
+currpos G:230 LG com/raster2wav.b[622] UNTIL currpos>=endpos DO ..
+currpos G:230 LG com/raster2wav.b[625] currpos:=currpos+1
+currpos G:230 SG com/raster2wav.b[230] currpos:=0
+currpos G:230 SG com/raster2wav.b[625] currpos:=currpos+1
+dat_to_strings G:110 DEF libhdr.h[144] dat_to_strings=110
+data_bytes G:221 DEF com/raster2wav.b[67] data_bytes=
+data_bytes G:221 LG com/raster2wav.b[185]
+    sawritef("Data 'es = %n*n",data_bytes)
+data_bytes G:221 LG com/raster2wav.b[214] riffhdr!1:=data_bytes+36
+data_bytes G:221 LG com/raster2wav.b[223] riffhdr!10:=data_bytes
+data_bytes G:221 SG com/raster2wav.b[177]
+    data_bytes:=samples*bytes_per_sample
+datstamp G:109 DEF libhdr.h[143] datstamp=109
+datstring G:108 DEF libhdr.h[142] datstring=108
+deadcode M:#xDEADC0DE DEF libhdr.h[261] deadcode=-#x21523F22
+delay G:128 DEF libhdr.h[162] delay=128
+delayuntil G:129 DEF libhdr.h[163] delayuntil=129
+deleteco G:18 DEF libhdr.h[51] deleteco=18
+deletedev G:173 DEF libhdr.h[218] deletedev=173
+deletefile G:76 DEF libhdr.h[109] deletefile=76
+deleteself G:125 DEF libhdr.h[159] deleteself=125
+deletetask G:154 DEF libhdr.h[202] deletetask=154
+deplete G:43 DEF libhdr.h[76] deplete=43
+endposv G:238 DEF com/raster2wav.b[102] endposv=
+endposv G:238 LG com/raster2wav.b[249]
+    UNLESS ...&endvalv&notev&Ladjv&Radjv&freqv&notep10v DO ..
+endposv G:238 LG com/raster2wav.b[259] endposv!n:=0
+endposv G:238 LG com/raster2wav.b[338] IF endposv DO ..
+endposv G:238 LG com/raster2wav.b[338] freevec(endposv)
+endposv G:238 LG com/raster2wav.b[416] FLOATendposv!n
+endposv G:238 SG com/raster2wav.b[240] endposv:=getvec(C7)
+endread G:60 DEF libhdr.h[93] endread=60
+endstream G:62 DEF libhdr.h[95] endstream=62
+endstream G:62 LG com/raster2wav.b[203] endstream(fromfile)
+endstream G:62 LG com/raster2wav.b[332] endstream(fromfile)
+endstream G:62 LG com/raster2wav.b[333] endstream(tofile)
+endstreamch M:-1 DEF libhdr.h[244] endstreamch=-1
+endstreamch M:-1 MAN com/raster2wav.b[483] CASE endstreamch:.. 
+endstreamch M:-1 MAN com/raster2wav.b[528] CASE endstreamch:.. 
+endtask G:162 DEF libhdr.h[210] endtask=162
+endvalv G:240 DEF com/raster2wav.b[104] endvalv=
+endvalv G:240 LG com/raster2wav.b[249]
+    UNLESS ...&endvalv&notev&Ladjv&Radjv&freqv&notep10v DO ..
+endvalv G:240 LG com/raster2wav.b[261] endvalv!n#:= 0.000
+endvalv G:240 LG com/raster2wav.b[340] IF endvalv DO ..
+endvalv G:240 LG com/raster2wav.b[340] freevec(endvalv)
+endvalv G:240 LG com/raster2wav.b[418] endvalv!n
+endvalv G:240 SG com/raster2wav.b[242] endvalv:=getvec(C7)
+endwrite G:61 DEF libhdr.h[94] endwrite=61
+entryword M:57311 DEF libhdr.h[263] entryword=57311
+fault G:174 DEF libhdr.h[219] fault=174
+fcount G:216 DEF com/raster2wav.b[61] fcount=
+fcount G:216 LG com/raster2wav.b[552] fcount:=fcount+kval
+fcount G:216 LG com/raster2wav.b[554]
+    endpos:=muldiv(samples,fcount,maxfcount)
+fcount G:216 LG com/raster2wav.b[563] IF fcount MOD 1000000=0 DO ..
+fcount G:216 LG com/raster2wav.b[563] sawritef("*nfcount %i8 ",fcount)
+fcount G:216 SG com/raster2wav.b[228] fcount:=0
+fcount G:216 SG com/raster2wav.b[552] fcount:=fcount+kval
+fin F:11 LAB com/raster2wav.b[328] fin:selectoutput(sysout)
+fin F:11 LF com/raster2wav.b[164] GOTO fin
+fin F:11 LF com/raster2wav.b[192] GOTO fin
+fin F:11 LF com/raster2wav.b[208] GOTO fin
+fin F:11 LF com/raster2wav.b[254] GOTO fin
+findappend G:130 DEF libhdr.h[164] findappend=130
+findarg G:104 DEF libhdr.h[138] findarg=104
+findinoutput G:50 DEF libhdr.h[83] findinoutput=50
+findinput G:48 DEF libhdr.h[81] findinput=48
+findinput G:48 LG com/raster2wav.b[189]
+    fromfile:=findinput(fromfilename)
+findinput G:48 LG com/raster2wav.b[205]
+    fromfile:=findinput(fromfilename)
+findoutput G:49 DEF libhdr.h[82] findoutput=49
+findoutput G:49 LG com/raster2wav.b[161] tofile:=findoutput(tofilename)
+findstream G:52 DEF libhdr.h[85] findstream=52
+findupdate G:51 DEF libhdr.h[84] findupdate=51
+fl_64to32 M:45 DEF libhdr.h[567] fl_64to32=
+fl_F2N M:42 DEF libhdr.h[564] fl_F2N=
+fl_N2F M:41 DEF libhdr.h[563] fl_N2F=
+fl_abs M:5 DEF libhdr.h[534] fl_abs=
+fl_acos M:20 DEF libhdr.h[539] fl_acos=20
+fl_add M:9 DEF libhdr.h[536] fl_add=
+fl_asin M:21 DEF libhdr.h[540] fl_asin=
+fl_atan M:22 DEF libhdr.h[541] fl_atan=
+fl_atan2 M:23 DEF libhdr.h[542] fl_atan2=
+fl_avail M:0 DEF libhdr.h[532] fl_avail=0
+fl_ceil M:38 DEF libhdr.h[557] fl_ceil=
+fl_cos M:24 DEF libhdr.h[543] fl_cos=
+fl_cosh M:27 DEF libhdr.h[546] fl_cosh=
+fl_div M:7 DEF libhdr.h[535] fl_div=
+fl_eq M:13 DEF libhdr.h[537] fl_eq=
+fl_exp M:30 DEF libhdr.h[549] fl_exp=
+fl_fix M:4 DEF libhdr.h[534] fl_fix=
+fl_float M:3 DEF libhdr.h[534] fl_float=
+fl_floor M:39 DEF libhdr.h[558] fl_floor=
+fl_frexp M:31 DEF libhdr.h[550] fl_frexp=
+fl_ge M:18 DEF libhdr.h[537] fl_ge=
+fl_gr M:16 DEF libhdr.h[537] fl_gr=
+fl_ldexp M:32 DEF libhdr.h[551] fl_ldexp=
+fl_le M:17 DEF libhdr.h[537] fl_le=
+fl_log M:33 DEF libhdr.h[552] fl_log=
+fl_log10 M:34 DEF libhdr.h[553] fl_log10=
+fl_ls M:15 DEF libhdr.h[537] fl_ls=
+fl_mk M:1 DEF libhdr.h[533] fl_mk=
+fl_mod M:8 DEF libhdr.h[535] fl_mod=
+fl_modf M:40 DEF libhdr.h[559] fl_modf=
+fl_mul M:6 DEF libhdr.h[535] fl_mul=
+fl_ne M:14 DEF libhdr.h[537] fl_ne=
+fl_neg M:12 DEF libhdr.h[536] fl_neg=
+fl_pos M:11 DEF libhdr.h[536] fl_pos=
+fl_pow M:36 DEF libhdr.h[555] fl_pow=36
+fl_pow M:36 MAN com/raster2wav.b[272]
+    sys(Sys_flt,fl_pow, 2.000,1/FLOATnotes_per_octave)
+fl_radius2 M:43 DEF libhdr.h[565] fl_radius2=
+fl_radius3 M:44 DEF libhdr.h[566] fl_radius3=
+fl_sin M:25 DEF libhdr.h[544] fl_sin=
+fl_sin M:25 MAN com/raster2wav.b[583] RESULTIS sys(Sys_flt,fl_sin,w)
+fl_sinh M:28 DEF libhdr.h[547] fl_sinh=
+fl_sqrt M:37 DEF libhdr.h[556] fl_sqrt=
+fl_sub M:10 DEF libhdr.h[536] fl_sub=
+fl_tan M:26 DEF libhdr.h[545] fl_tan=
+fl_tanh M:29 DEF libhdr.h[548] fl_tanh=
+fl_unmk M:2 DEF libhdr.h[533] fl_unmk=
+flag_a M:1 DEF libhdr.h[692] flag_a=1<<0
+flag_b M:2 DEF libhdr.h[693] flag_b=1<<1
+flag_c M:4 DEF libhdr.h[694] flag_c=1<<2
+flag_d M:8 DEF libhdr.h[695] flag_d=1<<3
+flag_e M:16 DEF libhdr.h[696] flag_e=1<<4
+freeobj G:78 DEF libhdr.h[111] freeobj=78
+freevec G:27 DEF libhdr.h[60] freevec=27
+freevec G:27 LG com/raster2wav.b[337] freevec(startposv)
+freevec G:27 LG com/raster2wav.b[338] freevec(endposv)
+freevec G:27 LG com/raster2wav.b[339] freevec(startvalv)
+freevec G:27 LG com/raster2wav.b[340] freevec(endvalv)
+freevec G:27 LG com/raster2wav.b[341] freevec(Ladjv)
+freevec G:27 LG com/raster2wav.b[342] freevec(Radjv)
+freevec G:27 LG com/raster2wav.b[343] freevec(notev)
+freevec G:27 LG com/raster2wav.b[344] freevec(freqv)
+freevec G:27 LG com/raster2wav.b[345] freevec(notep10v)
+freqv G:244 DEF com/raster2wav.b[114] freqv=
+freqv G:244 LG com/raster2wav.b[249]
+    UNLESS ...&endvalv&notev&Ladjv&Radjv&freqv&notep10v DO ..
+freqv G:244 LG com/raster2wav.b[277] freqv!n#:=frq
+freqv G:244 LG com/raster2wav.b[284] freqv!n#:=frq
+freqv G:244 LG com/raster2wav.b[290] frq#:=freqv!n
+freqv G:244 LG com/raster2wav.b[291]
+    freqv!(n-2*notes_per_octave)#:=frq#/ 4.000
+freqv G:244 LG com/raster2wav.b[292]
+    freqv!(n-notes_per_octave)#:=frq#/ 2.000
+freqv G:244 LG com/raster2wav.b[296] frq#:=freqv!n
+freqv G:244 LG com/raster2wav.b[297]
+    freqv!(n+notes_per_octave)#:=frq#* 2.000
+freqv G:244 LG com/raster2wav.b[298]
+    freqv!(n+2*notes_per_octave)#:=frq#* 4.000
+freqv G:244 LG com/raster2wav.b[305] sawritef(" %9.3f",freqv!n)
+freqv G:244 LG com/raster2wav.b[313] freqv!n
+freqv G:244 LG com/raster2wav.b[344] IF freqv DO ..
+freqv G:244 LG com/raster2wav.b[344] freevec(freqv)
+freqv G:244 SG com/raster2wav.b[246] freqv:=getvec(C7)
+fromfile G:204 DEF com/raster2wav.b[47] fromfile=
+fromfile G:204 LG com/raster2wav.b[190] UNLESS fromfile DO ..
+fromfile G:204 LG com/raster2wav.b[195] selectinput(fromfile)
+fromfile G:204 LG com/raster2wav.b[203] endstream(fromfile)
+fromfile G:204 LG com/raster2wav.b[206] UNLESS fromfile DO ..
+fromfile G:204 LG com/raster2wav.b[211] selectinput(fromfile)
+fromfile G:204 LG com/raster2wav.b[332] IF fromfile DO ..
+fromfile G:204 LG com/raster2wav.b[332] endstream(fromfile)
+fromfile G:204 SG com/raster2wav.b[137] fromfile:=0
+fromfile G:204 SG com/raster2wav.b[189]
+    fromfile:=findinput(fromfilename)
+fromfile G:204 SG com/raster2wav.b[205]
+    fromfile:=findinput(fromfilename)
+fromfile G:204 SG com/raster2wav.b[332] fromfile:=0
+fromfilename G:203 DEF com/raster2wav.b[46] fromfilename=
+fromfilename G:203 LG com/raster2wav.b[179]
+    sawritef("Conve' to %s*n*n",fromfilename,tofilename)
+fromfilename G:203 LG com/raster2wav.b[189]
+    fromfile:=findinput(fromfilename)
+fromfilename G:203 LG com/raster2wav.b[191]
+    sawritef("Unabl'file %s*n",fromfilename)
+fromfilename G:203 LG com/raster2wav.b[205]
+    fromfile:=findinput(fromfilename)
+fromfilename G:203 LG com/raster2wav.b[207]
+    sawritef("Unabl'file %s*n",fromfilename)
+fromfilename G:203 SG com/raster2wav.b[136] fromfilename:="RASTER"
+fromfilename G:203 SG com/raster2wav.b[145] fromfilename:=argv!0
+fromfilename G:203 SG com/raster2wav.b[146] fromfilename:=argv!1
+fsample_rate FG:208 DEF com/raster2wav.b[51] FLT fsample_rate=
+fsample_rate FG:208 LG com/raster2wav.b[314]
+    notep10v!n:=FIX( 10.000#*fsample_rate#/frq)
+fsample_rate FG:208 SG com/raster2wav.b[170]
+    fsample_rate#:=FLOATsample_rate
+g_colist M:8 DEF libhdr.h[269] g_colist=8
+g_currco M:7 DEF libhdr.h[268] g_currco=7
+g_extbase M:950 DEF libhdr.h[710] g_extbase=950
+g_glbase M:450 DEF libhdr.h[709] g_glbase=450
+g_globsize M:0 DEF libhdr.h[266] g_globsize=0
+g_grfbase M:400 DEF libhdr.h[706] g_grfbase=400
+g_keyboard M:20 DEF libhdr.h[273] g_keyboard=20
+g_memsize M:14 DEF libhdr.h[272] g_memsize=14
+g_rootnode M:9 DEF libhdr.h[270] g_rootnode=9
+g_screen M:21 DEF libhdr.h[274] g_screen=21
+g_sdlbase M:450 DEF libhdr.h[708] g_sdlbase=450
+g_sndbase M:400 DEF libhdr.h[707] g_sndbase=400
+g_sys M:3 DEF libhdr.h[267] g_sys=3
+gensamples G:224 DEF com/raster2wav.b[74] gensamples=
+gensamples G:224 LG com/raster2wav.b[326] gensamples()
+gensamples G:224 RT com/raster2wav.b[506] LET gensamples()BE..
+get_record G:71 DEF libhdr.h[104] get_record=71
+get_text G:93 DEF libhdr.h[127] get_text=93
+get_textblib G:93 DEF libhdr.h[126] get_textblib=93
+getlogname G:118 DEF libhdr.h[152] getlogname=118
+getremipaddr G:54 DEF libhdr.h[87] getremipaddr=54
+getvec G:25 DEF libhdr.h[58] getvec=25
+getvec G:25 LG com/raster2wav.b[239] startposv:=getvec(C7)
+getvec G:25 LG com/raster2wav.b[240] endposv:=getvec(C7)
+getvec G:25 LG com/raster2wav.b[241] startvalv:=getvec(C7)
+getvec G:25 LG com/raster2wav.b[242] endvalv:=getvec(C7)
+getvec G:25 LG com/raster2wav.b[243] Ladjv:=getvec(C7)
+getvec G:25 LG com/raster2wav.b[244] Radjv:=getvec(C7)
+getvec G:25 LG com/raster2wav.b[245] notev:=getvec(C7)
+getvec G:25 LG com/raster2wav.b[246] freqv:=getvec(C7)
+getvec G:25 LG com/raster2wav.b[247] notep10v:=getvec(C7)
+getword G:32 DEF libhdr.h[65] getword=32
+globin G:24 DEF libhdr.h[57] globin=24
+globsize G:0 DEF libhdr.h[32] globsize=0
+globword M:#x8F8F0000 DEF libhdr.h[259] globword=-#x70710000
+hold G:158 DEF libhdr.h[206] hold=158
+id_appendscb M:132 DEF libhdr.h[481] id_appendscb=132
+id_inoutscb M:131 DEF libhdr.h[480] id_inoutscb=131
+id_inscb M:129 DEF libhdr.h[478] id_inscb=129
+id_outscb M:130 DEF libhdr.h[479] id_outscb=130
+initco G:22 DEF libhdr.h[55] initco=22
+initio G:46 DEF libhdr.h[79] initio=46
+input G:58 DEF libhdr.h[91] input=58
+input G:58 LG com/raster2wav.b[128] sysin:=input()
+instrcount G:121 DEF libhdr.h[155] instrcount=121
+intflag G:119 DEF libhdr.h[153] intflag=119
+isrregs M:41 DEF libhdr.h[476] isrregs=41
+klibregs M:21 DEF libhdr.h[471] klibregs=21
+kval G:212 DEF com/raster2wav.b[57] kval=
+kval G:212 LG com/raster2wav.b[199]
+    sawritef("kval='al = %n*n",kval,sval)
+kval G:212 LG com/raster2wav.b[500] maxfcount:=maxfcount+kval
+kval G:212 LG com/raster2wav.b[552] fcount:=fcount+kval
+kval G:212 SG com/raster2wav.b[469] kval:=rdn()
+kval G:212 SG com/raster2wav.b[512] kval:=rdn()
+level G:15 DEF libhdr.h[48] level=15
+loadseg G:105 DEF libhdr.h[139] loadseg=105
+locatedir G:80 DEF libhdr.h[113] locatedir=80
+locateobj G:81 DEF libhdr.h[114] locateobj=81
+longjump G:16 DEF libhdr.h[49] longjump=16
+mark G:225 DEF com/raster2wav.b[75] mark=
+mark G:225 LG com/raster2wav.b[542] mark(a,b)
+mark G:225 RT com/raster2wav.b[350] LET mark(a,b)BE..
+maxaddress G:214 DEF com/raster2wav.b[59] maxaddress=
+maxaddress G:214 LG com/raster2wav.b[200]
+    sawritef("maxad'   = %n*n",maxaddress)
+maxaddress G:214 LG com/raster2wav.b[355] C2+(C7-C2)*a/maxaddress
+maxaddress G:214 LG com/raster2wav.b[356] C2+(C7-C2)*b/maxaddress
+maxaddress G:214 LG com/raster2wav.b[494] IF a>maxaddress DO ..
+maxaddress G:214 SG com/raster2wav.b[473] maxaddress:=1000
+maxaddress G:214 SG com/raster2wav.b[494] maxaddress:=a
+maxfcount G:215 DEF com/raster2wav.b[60] maxfcount=
+maxfcount G:215 LG com/raster2wav.b[201]
+    sawritef("maxfc'   = %n*n",maxfcount)
+maxfcount G:215 LG com/raster2wav.b[500] maxfcount:=maxfcount+kval
+maxfcount G:215 LG com/raster2wav.b[554]
+    endpos:=muldiv(samples,fcount,maxfcount)
+maxfcount G:215 SG com/raster2wav.b[474] maxfcount:=0
+maxfcount G:215 SG com/raster2wav.b[500] maxfcount:=maxfcount+kval
+maxint M:#x7FFFFFFF DEF libhdr.h[242] maxint=minint-1
+maxsample_val FG:229 DEF com/raster2wav.b[80] FLT maxsample_val=
+maxsample_val FG:229 LG com/raster2wav.b[590]
+    IF Lval#>maxsample_val DO ..
+maxsample_val FG:229 LG com/raster2wav.b[591]
+    IF Lval#<#-maxsample_val DO ..
+maxsample_val FG:229 LG com/raster2wav.b[592]
+    intLval:=FIX( 25000.000#*Lval#/maxsample_val)
+maxsample_val FG:229 LG com/raster2wav.b[602]
+    IF Lval#>maxsample_val DO ..
+maxsample_val FG:229 LG com/raster2wav.b[603]
+    IF Lval#<#-maxsample_val DO ..
+maxsample_val FG:229 LG com/raster2wav.b[604]
+    IF Rval#>maxsample_val DO ..
+maxsample_val FG:229 LG com/raster2wav.b[605]
+    IF Rval#<#-maxsample_val DO ..
+maxsample_val FG:229 LG com/raster2wav.b[607]
+    intLval:=FIX( 25000.000#*Lval#/maxsample_val)
+maxsample_val FG:229 LG com/raster2wav.b[608]
+    intRval:=FIX( 25000.000#*Rval#/maxsample_val)
+maxsample_val FG:229 SG com/raster2wav.b[234] maxsample_val#:= 1.000
+maxsample_val FG:229 SG com/raster2wav.b[590] maxsample_val#:=Lval
+maxsample_val FG:229 SG com/raster2wav.b[591] maxsample_val#:=#-Lval
+maxsample_val FG:229 SG com/raster2wav.b[602] maxsample_val#:=Lval
+maxsample_val FG:229 SG com/raster2wav.b[603] maxsample_val#:=#-Lval
+maxsample_val FG:229 SG com/raster2wav.b[604] maxsample_val#:=Rval
+maxsample_val FG:229 SG com/raster2wav.b[605] maxsample_val#:=#-Rval
+mcaddrinc M:4 DEF libhdr.h[240] mcaddrinc=bytesperword
+memoryfree G:131 DEF libhdr.h[165] memoryfree=131
+minint M:#x80000000 DEF libhdr.h[241] minint=1<<bitsperword-1
+minint M:#x80000000 MAN libhdr.h[242] maxint=minint-1
+mode G:217 DEF com/raster2wav.b[63] mode=
+mode G:217 LG com/raster2wav.b[175]
+    bytes_per_sample:=bits_per_sample/8*mode
+mode G:217 LG com/raster2wav.b[183] TEST mode=1 THEN .. ELSE ..
+mode G:217 LG com/raster2wav.b[218] riffhdr!5:=mode<<16|1
+mode G:217 LG com/raster2wav.b[436] TEST mode=2 THEN .. ELSE ..
+mode G:217 LG com/raster2wav.b[587] TEST mode=1 THEN .. ELSE ..
+mode G:217 SG com/raster2wav.b[143] mode:=2
+mode G:217 SG com/raster2wav.b[150] mode:=2
+muldiv G:5 DEF libhdr.h[37] muldiv=5
+muldiv G:5 LG com/raster2wav.b[554]
+    endpos:=muldiv(samples,fcount,maxfcount)
+newline G:84 DEF libhdr.h[117] newline=84
+newpage G:120 DEF libhdr.h[154] newpage=120
+note G:63 DEF libhdr.h[96] note=63
+notep10v G:245 DEF com/raster2wav.b[117] notep10v=
+notep10v G:245 LG com/raster2wav.b[249]
+    UNLESS ...&endvalv&notev&Ladjv&Radjv&freqv&notep10v DO ..
+notep10v G:245 LG com/raster2wav.b[314]
+    notep10v!n:=FIX( 10.000#*fsample_rate#/frq)
+notep10v G:245 LG com/raster2wav.b[320] sawritef(" %6i",notep10v!n)
+notep10v G:245 LG com/raster2wav.b[345] IF notep10v DO ..
+notep10v G:245 LG com/raster2wav.b[345] freevec(notep10v)
+notep10v G:245 LG com/raster2wav.b[577] notep10v!note
+notep10v G:245 SG com/raster2wav.b[247] notep10v:=getvec(C7)
+notes_per_octave G:236 DEF com/raster2wav.b[89] notes_per_octave=
+notes_per_octave G:236 LG com/raster2wav.b[154]
+    C4:=C2+2*notes_per_octave
+notes_per_octave G:236 LG com/raster2wav.b[155]
+    A4:=C4+notes_per_octave*9/12
+notes_per_octave G:236 LG com/raster2wav.b[156] C5:=C4+notes_per_octave
+notes_per_octave G:236 LG com/raster2wav.b[157]
+    C7:=C4+3*notes_per_octave
+notes_per_octave G:236 LG com/raster2wav.b[272]
+    sys(Sys_flt,fl_pow, 2.000, 1.000#/FLOATnotes_per_octave)
+notes_per_octave G:236 LG com/raster2wav.b[291]
+    freqv!(n-2*notes_per_octave)#:=frq#/ 4.000
+notes_per_octave G:236 LG com/raster2wav.b[292]
+    freqv!(n-notes_per_octave)#:=frq#/ 2.000
+notes_per_octave G:236 LG com/raster2wav.b[297]
+    freqv!(n+notes_per_octave)#:=frq#* 2.000
+notes_per_octave G:236 LG com/raster2wav.b[298]
+    freqv!(n+2*notes_per_octave)#:=frq#* 4.000
+notes_per_octave G:236 SG com/raster2wav.b[140] notes_per_octave:=12
+notes_per_octave G:236 SG com/raster2wav.b[147]
+    notes_per_octave:=!argv!2
+notev G:243 DEF com/raster2wav.b[112] notev=
+notev G:243 LG com/raster2wav.b[249]
+    UNLESS ...&endvalv&notev&Ladjv&Radjv&freqv&notep10v DO ..
+notev G:243 LG com/raster2wav.b[267] notev!n:=FALSE
+notev G:243 LG com/raster2wav.b[343] IF notev DO ..
+notev G:243 LG com/raster2wav.b[343] freevec(notev)
+notev G:243 LG com/raster2wav.b[362] notev!n:=TRUE
+notev G:243 LG com/raster2wav.b[560] sawrch(notev!n->42,45)
+notev G:243 LG com/raster2wav.b[565] notev!n:=FALSE
+notev G:243 SG com/raster2wav.b[245] notev:=getvec(C7)
+notinuse M:-1 DEF libhdr.h[594] notinuse=-1
+output G:59 DEF libhdr.h[92] output=59
+output G:59 LG com/raster2wav.b[127] sysout:=output()
+packstring G:30 DEF libhdr.h[63] packstring=30
+pathfindinput G:53 DEF libhdr.h[86] pathfindinput=53
+peercom G:179 DEF libhdr.h[222] peercom=179
+pkt_a1 M:5 DEF libhdr.h[603] pkt_a1=5
+pkt_a2 M:6 DEF libhdr.h[604] pkt_a2=6
+pkt_a3 M:7 DEF libhdr.h[605] pkt_a3=7
+pkt_a4 M:8 DEF libhdr.h[606] pkt_a4=8
+pkt_a5 M:9 DEF libhdr.h[607] pkt_a5=9
+pkt_a6 M:10 DEF libhdr.h[608] pkt_a6=10
+pkt_arg1 M:5 DEF libhdr.h[603] pkt_arg1=5
+pkt_arg2 M:6 DEF libhdr.h[604] pkt_arg2=6
+pkt_arg3 M:7 DEF libhdr.h[605] pkt_arg3=7
+pkt_arg4 M:8 DEF libhdr.h[606] pkt_arg4=8
+pkt_arg5 M:9 DEF libhdr.h[607] pkt_arg5=9
+pkt_arg6 M:10 DEF libhdr.h[608] pkt_arg6=10
+pkt_devid M:1 DEF libhdr.h[599] pkt_devid=1
+pkt_devtaskid M:1 DEF libhdr.h[599] pkt_devtaskid=1
+pkt_id M:1 DEF libhdr.h[599] pkt_id=1
+pkt_link M:0 DEF libhdr.h[598] pkt_link=0
+pkt_op M:2 DEF libhdr.h[600] pkt_op=2
+pkt_r1 M:3 DEF libhdr.h[601] pkt_r1=3
+pkt_r2 M:4 DEF libhdr.h[602] pkt_r2=4
+pkt_res1 M:3 DEF libhdr.h[601] pkt_res1=3
+pkt_res2 M:4 DEF libhdr.h[602] pkt_res2=4
+pkt_taskid M:1 DEF libhdr.h[599] pkt_taskid=1
+pkt_type M:2 DEF libhdr.h[600] pkt_type=2
+point G:64 DEF libhdr.h[97] point=64
+pollingch M:-3 DEF libhdr.h[246] pollingch=-3
+put_record G:72 DEF libhdr.h[105] put_record=72
+putword G:33 DEF libhdr.h[66] putword=33
+qpkt G:161 DEF libhdr.h[209] qpkt=161
+randno G:34 DEF libhdr.h[67] randno=34
+randseed G:127 DEF libhdr.h[161] randseed=127
+rasterstats G:222 DEF com/raster2wav.b[69] rasterstats=
+rasterstats G:222 LG com/raster2wav.b[197] rasterstats()
+rasterstats G:222 RT com/raster2wav.b[460] LET rasterstats()BE..
+rawnoteval G:226 DEF com/raster2wav.b[76] rawnoteval=
+rawnoteval G:226 FN com/raster2wav.b[573] LET rawnoteval(note,pos)=..
+rawnoteval G:226 LG com/raster2wav.b[412] rawnoteval(n,currpos)
+rdargs G:102 DEF libhdr.h[136] rdargs=102
+rdargs G:102 LG com/raster2wav.b[130]
+    IF rdargs("from,'eo/S,t/S",argv,50)=0 DO ..
+rdargs2 G:26 DEF libhdr.h[59] rdargs2=26
+rdch G:38 DEF libhdr.h[71] rdch=38
+rdch G:38 LG com/raster2wav.b[456] ch:=rdch()
+rdch G:38 LG com/raster2wav.b[468] ch:=rdch()
+rdch G:38 LG com/raster2wav.b[469] ch:=rdch()
+rdch G:38 LG com/raster2wav.b[470] ch:=rdch()
+rdch G:38 LG com/raster2wav.b[471] ch:=rdch()
+rdch G:38 LG com/raster2wav.b[481] ch:=rdch()
+rdch G:38 LG com/raster2wav.b[487] ch:=rdch()
+rdch G:38 LG com/raster2wav.b[492] ch:=rdch()
+rdch G:38 LG com/raster2wav.b[499] ch:=rdch()
+rdch G:38 LG com/raster2wav.b[511] ch:=rdch()
+rdch G:38 LG com/raster2wav.b[512] ch:=rdch()
+rdch G:38 LG com/raster2wav.b[513] ch:=rdch()
+rdch G:38 LG com/raster2wav.b[514] ch:=rdch()
+rdch G:38 LG com/raster2wav.b[526] ch:=rdch()
+rdch G:38 LG com/raster2wav.b[532] ch:=rdch()
+rdch G:38 LG com/raster2wav.b[540] ch:=rdch()
+rdch G:38 LG com/raster2wav.b[551] ch:=rdch()
+rditem G:103 DEF libhdr.h[137] rditem=103
+rdn F:4 FN com/raster2wav.b[454] LET rdn()=..
+rdn F:4 LF com/raster2wav.b[469] kval:=rdn()
+rdn F:4 LF com/raster2wav.b[471] sval:=rdn()
+rdn F:4 LF com/raster2wav.b[488] a:=a+rdn()
+rdn F:4 LF com/raster2wav.b[493] a:=a+rdn()
+rdn F:4 LF com/raster2wav.b[512] kval:=rdn()
+rdn F:4 LF com/raster2wav.b[514] sval:=rdn()
+rdn F:4 LF com/raster2wav.b[533] b:=a+rdn()
+rdn F:4 LF com/raster2wav.b[541] b:=a+rdn()
+readflt G:74 DEF libhdr.h[107] readflt=74
+readn G:83 DEF libhdr.h[116] readn=83
+readwords G:44 DEF libhdr.h[77] readwords=44
+recordnote G:70 DEF libhdr.h[103] recordnote=70
+recordpoint G:69 DEF libhdr.h[102] recordpoint=69
+release G:159 DEF libhdr.h[207] release=159
+renamefile G:77 DEF libhdr.h[110] renamefile=77
+result2 G:10 DEF libhdr.h[42] result2=10
+resumeco G:21 DEF libhdr.h[54] resumeco=21
+return_hard M:10 DEF libhdr.h[575] return_hard=10
+return_hard M:10 MAN libhdr.h[580] cli_initialfaillevel=return_hard
+return_ok M:0 DEF libhdr.h[577] return_ok=0
+return_severe M:20 DEF libhdr.h[574] return_severe=20
+return_soft M:5 DEF libhdr.h[576] return_soft=5
+returnpkt G:169 DEF libhdr.h[214] returnpkt=169
+rewindstream G:65 DEF libhdr.h[98] rewindstream=65
+rootnode G:9 DEF libhdr.h[41] rootnode=9
+rootnodeaddr M:100 DEF libhdr.h[290] rootnodeaddr=100
+rtn_abortcode M:27 DEF libhdr.h[326] rtn_abortcode=
+rtn_adjclock M:33 DEF libhdr.h[344] rtn_adjclock=
+rtn_blib M:19 DEF libhdr.h[315] rtn_blib=
+rtn_blklist M:4 DEF libhdr.h[297] rtn_blklist=
+rtn_boot M:17 DEF libhdr.h[313] rtn_boot=
+rtn_boottrace M:39 DEF libhdr.h[359] rtn_boottrace=
+rtn_bptaddr M:9 DEF libhdr.h[304] rtn_bptaddr=
+rtn_bptinstr M:10 DEF libhdr.h[305] rtn_bptinstr=
+rtn_clkintson M:6 DEF libhdr.h[300] rtn_clkintson=
+rtn_clwkq M:12 DEF libhdr.h[308] rtn_clwkq=
+rtn_context M:28 DEF libhdr.h[327] rtn_context=
+rtn_crntask M:3 DEF libhdr.h[296] rtn_crntask=
+rtn_days M:40 DEF libhdr.h[362] rtn_days=
+rtn_dbgvars M:11 DEF libhdr.h[306] rtn_dbgvars=
+rtn_dcountv M:34 DEF libhdr.h[346] rtn_dcountv=
+rtn_devtab M:1 DEF libhdr.h[294] rtn_devtab=
+rtn_dumpflag M:25 DEF libhdr.h[323] rtn_dumpflag=
+rtn_envlist M:26 DEF libhdr.h[324] rtn_envlist=
+rtn_hdrsvar M:37 DEF libhdr.h[355] rtn_hdrsvar=
+rtn_hostaddsize M:62 DEF libhdr.h[392] rtn_hostaddsize=
+rtn_icount M:48 DEF libhdr.h[375] rtn_icount=
+rtn_idletcb M:32 DEF libhdr.h[343] rtn_idletcb=
+rtn_info M:15 DEF libhdr.h[311] rtn_info=
+rtn_insadebug M:8 DEF libhdr.h[302] rtn_insadebug=
+rtn_intflag M:24 DEF libhdr.h[322] rtn_intflag=
+rtn_joyaxis0 M:55 DEF libhdr.h[384] rtn_joyaxis0=
+rtn_joyaxis1 M:56 DEF libhdr.h[385] rtn_joyaxis1=
+rtn_joyaxis2 M:57 DEF libhdr.h[386] rtn_joyaxis2=
+rtn_joyaxis3 M:58 DEF libhdr.h[387] rtn_joyaxis3=
+rtn_joyaxis4 M:59 DEF libhdr.h[388] rtn_joyaxis4=
+rtn_joyaxis5 M:60 DEF libhdr.h[389] rtn_joyaxis5=
+rtn_joyaxis6 M:61 DEF libhdr.h[390] rtn_joyaxis6=
+rtn_joyaxiscount M:52 DEF libhdr.h[381] rtn_joyaxiscount=
+rtn_joybuttoncount M:51 DEF libhdr.h[380] rtn_joybuttoncount=
+rtn_joybuttons M:54 DEF libhdr.h[383] rtn_joybuttons=
+rtn_joycurrbuttons M:53 DEF libhdr.h[382] rtn_joycurrbuttons=
+rtn_joystickfd M:49 DEF libhdr.h[378] rtn_joystickfd=
+rtn_joystickfd1 M:50 DEF libhdr.h[379] rtn_joystickfd1=
+rtn_keyboard M:20 DEF libhdr.h[316] rtn_keyboard=
+rtn_klib M:18 DEF libhdr.h[314] rtn_klib=
+rtn_lastch M:7 DEF libhdr.h[301] rtn_lastch=
+rtn_mc0 M:43 DEF libhdr.h[367] rtn_mc0=
+rtn_mc1 M:44 DEF libhdr.h[369] rtn_mc1=
+rtn_mc2 M:45 DEF libhdr.h[370] rtn_mc2=
+rtn_mc3 M:46 DEF libhdr.h[371] rtn_mc3=
+rtn_membase M:13 DEF libhdr.h[309] rtn_membase=
+rtn_memsize M:14 DEF libhdr.h[310] rtn_memsize=
+rtn_mins M:41 DEF libhdr.h[364] rtn_mins=rtn_msecs
+rtn_msecs M:41 DEF libhdr.h[363] rtn_msecs=
+rtn_msecs M:41 MAN libhdr.h[364] rtn_mins=rtn_msecs
+rtn_pathvar M:36 DEF libhdr.h[353] rtn_pathvar=
+rtn_rootvar M:35 DEF libhdr.h[351] rtn_rootvar=
+rtn_screen M:21 DEF libhdr.h[317] rtn_screen=
+rtn_scriptsvar M:38 DEF libhdr.h[357] rtn_scriptsvar=
+rtn_sys M:16 DEF libhdr.h[312] rtn_sys=
+rtn_sysg M:30 DEF libhdr.h[336] rtn_sysg=
+rtn_sysp M:29 DEF libhdr.h[335] rtn_sysp=
+rtn_sysst M:31 DEF libhdr.h[337] rtn_sysst=
+rtn_system M:47 DEF libhdr.h[373] rtn_system=
+rtn_tallyv M:5 DEF libhdr.h[298] rtn_tallyv=
+rtn_tasktab M:0 DEF libhdr.h[293] rtn_tasktab=0
+rtn_tcblist M:2 DEF libhdr.h[295] rtn_tcblist=
+rtn_ticks M:42 DEF libhdr.h[365] rtn_ticks=
+rtn_upb M:80 DEF libhdr.h[395] rtn_upb=80
+rtn_vecstatsv M:22 DEF libhdr.h[319] rtn_vecstatsv=
+rtn_vecstatsvupb M:23 DEF libhdr.h[320] rtn_vecstatsvupb=
+sample_rate G:207 DEF com/raster2wav.b[50] sample_rate=
+sample_rate G:207 LG com/raster2wav.b[167]
+    sample_rate:=sample_rate>44000->44100,sample_rate>22000->22050,11025
+sample_rate G:207 LG com/raster2wav.b[170]
+    fsample_rate#:=FLOATsample_rate
+sample_rate G:207 LG com/raster2wav.b[172] samples:=sample_rate*secs&-16
+sample_rate G:207 LG com/raster2wav.b[176]
+    bytes_per_second:=sample_rate*bytes_per_sample
+sample_rate G:207 LG com/raster2wav.b[182]
+    sawritef("sampl'te = %n*n",sample_rate)
+sample_rate G:207 LG com/raster2wav.b[219] riffhdr!6:=sample_rate
+sample_rate G:207 SG com/raster2wav.b[142] sample_rate:=22050
+sample_rate G:207 SG com/raster2wav.b[149] sample_rate:=!argv!4
+sample_rate G:207 SG com/raster2wav.b[167]
+    sample_rate:=sample_rate>44000->44100,sample_rate>22000->22050,11025
+samples G:218 DEF com/raster2wav.b[64] samples=
+samples G:218 LG com/raster2wav.b[177]
+    data_bytes:=samples*bytes_per_sample
+samples G:218 LG com/raster2wav.b[187]
+    sawritef("Total'es: %n*n*n",samples)
+samples G:218 LG com/raster2wav.b[554]
+    endpos:=muldiv(samples,fcount,maxfcount)
+samples G:218 SG com/raster2wav.b[172] samples:=sample_rate*secs&-16
+sardch G:36 DEF libhdr.h[69] sardch=36
+saveregs M:31 DEF libhdr.h[472] saveregs=31
+sawrch G:37 DEF libhdr.h[70] sawrch=37
+sawrch G:37 LG com/raster2wav.b[308] sawrch(10)
+sawrch G:37 LG com/raster2wav.b[322] sawrch(10)
+sawrch G:37 LG com/raster2wav.b[560] sawrch(notev!n->42,45)
+sawrch G:37 LG com/raster2wav.b[561] sawrch(10)
+sawritef G:95 DEF libhdr.h[129] sawritef=95
+sawritef G:95 LG com/raster2wav.b[163]
+    sawritef("Unabl'file %s*n",tofilename)
+sawritef G:95 LG com/raster2wav.b[179]
+    sawritef("Conve' to %s*n*n",fromfilename,tofilename)
+sawritef G:95 LG com/raster2wav.b[182]
+    sawritef("sampl'te = %n*n",sample_rate)
+sawritef G:95 LG com/raster2wav.b[183]
+    sawritef("mono 'samples*n",bits_per_sample)
+sawritef G:95 LG com/raster2wav.b[184]
+    sawritef("stere' sample*n",bits_per_sample)
+sawritef G:95 LG com/raster2wav.b[185]
+    sawritef("Data 'es = %n*n",data_bytes)
+sawritef G:95 LG com/raster2wav.b[186] sawritef("Total'seconds*n",secs)
+sawritef G:95 LG com/raster2wav.b[187]
+    sawritef("Total'es: %n*n*n",samples)
+sawritef G:95 LG com/raster2wav.b[191]
+    sawritef("Unabl'file %s*n",fromfilename)
+sawritef G:95 LG com/raster2wav.b[199]
+    sawritef("kval='al = %n*n",kval,sval)
+sawritef G:95 LG com/raster2wav.b[200]
+    sawritef("maxad'   = %n*n",maxaddress)
+sawritef G:95 LG com/raster2wav.b[201]
+    sawritef("maxfc'   = %n*n",maxfcount)
+sawritef G:95 LG com/raster2wav.b[207]
+    sawritef("Unabl'file %s*n",fromfilename)
+sawritef G:95 LG com/raster2wav.b[252] sawritef("Syste' needed*n")
+sawritef G:95 LG com/raster2wav.b[302] sawritef("*nFreq' tables*n")
+sawritef G:95 LG com/raster2wav.b[304] sawritef("*n%i2:",n)
+sawritef G:95 LG com/raster2wav.b[305] sawritef(" %9.3f",freqv!n)
+sawritef G:95 LG com/raster2wav.b[306] sawritef("/%6.3f",Ladjv!n)
+sawritef G:95 LG com/raster2wav.b[317] sawritef("*nNote'v table*n")
+sawritef G:95 LG com/raster2wav.b[319] sawritef("*n%i2:",n)
+sawritef G:95 LG com/raster2wav.b[320] sawritef(" %6i",notep10v!n)
+sawritef G:95 LG com/raster2wav.b[334]
+    sawritef("File 'written*n",tofilename)
+sawritef G:95 LG com/raster2wav.b[357]
+    sawritef("mark:'2 j=%i2*n",a,b,i,j)
+sawritef G:95 LG com/raster2wav.b[422]
+    sawritef("currp'l=%8.3f*n",currpos,n,val)
+sawritef G:95 LG com/raster2wav.b[424]
+    sawritef("start's=%9.1f*n",startpos,endpos)
+sawritef G:95 LG com/raster2wav.b[425]
+    sawritef("start'l=%9.3f*n",startval,endval)
+sawritef G:95 LG com/raster2wav.b[441]
+    sawritef("currp'R=%8.3f*n",currpos,n,val#*Ladjv!n,val#*Radjv!n)
+sawritef G:95 LG com/raster2wav.b[443]
+    sawritef("currp'l=%8.3f*n",currpos,n,Lval,Rval)
+sawritef G:95 LG com/raster2wav.b[449]
+    sawritef("currp'l=%8.3f*n",currpos,n,val)
+sawritef G:95 LG com/raster2wav.b[477] sawritef("Bad ch '%c'*n",ch)
+sawritef G:95 LG com/raster2wav.b[521] sawritef("Bad ch '%c'*n",ch)
+sawritef G:95 LG com/raster2wav.b[563] sawritef("*nfcount %i8 ",fcount)
+sawritef G:95 LG com/raster2wav.b[595]
+    sawritef("Mono 'rpos=%n*n",intLval,currpos)
+sawritef G:95 LG com/raster2wav.b[613]
+    sawritef("Stere'rpos=%n*n",intLval,intRval,currpos)
+scb_blength M:14 DEF libhdr.h[506] scb_blength=
+scb_block M:9 DEF libhdr.h[501] scb_block=
+scb_buf M:3 DEF libhdr.h[495] scb_buf=
+scb_bufend M:11 DEF libhdr.h[503] scb_bufend=
+scb_encoding M:20 DEF libhdr.h[517] scb_encoding=
+scb_end M:5 DEF libhdr.h[497] scb_end=
+scb_endfn M:8 DEF libhdr.h[500] scb_endfn=
+scb_fd M:16 DEF libhdr.h[508] scb_fd=
+scb_fd1 M:17 DEF libhdr.h[509] scb_fd1=
+scb_id M:0 DEF libhdr.h[492] scb_id=0
+scb_lblock M:12 DEF libhdr.h[504] scb_lblock=
+scb_ldata M:13 DEF libhdr.h[505] scb_ldata=
+scb_maxnamelen M:31 DEF libhdr.h[490] scb_maxnamelen=31
+scb_maxnamelen M:31 MAN libhdr.h[521]
+    scb_nameeend=scb_name+scb_maxnamelen/bytesperword
+scb_name M:21 DEF libhdr.h[519] scb_name=
+scb_name M:21 MAN libhdr.h[521]
+    scb_nameeend=scb_name+scb_maxnamelen/bytesperword
+scb_nameeend M:28 DEF libhdr.h[521]
+    scb_nameeend=scb_name+scb_maxnamelen/bytesperword
+scb_pos M:4 DEF libhdr.h[496] scb_pos=
+scb_rdfn M:6 DEF libhdr.h[498] scb_rdfn=
+scb_reclen M:15 DEF libhdr.h[507] scb_reclen=
+scb_size M:29 DEF libhdr.h[524] scb_size=
+scb_size M:29 MAN libhdr.h[525] scb_upb=scb_size-1
+scb_task M:2 DEF libhdr.h[494] scb_task=
+scb_timeout M:18 DEF libhdr.h[510] scb_timeout=
+scb_timeoutact M:19 DEF libhdr.h[513] scb_timeoutact=
+scb_type M:1 DEF libhdr.h[493] scb_type=
+scb_upb M:28 DEF libhdr.h[525] scb_upb=scb_size-1
+scb_wrfn M:7 DEF libhdr.h[499] scb_wrfn=
+scb_write M:10 DEF libhdr.h[502] scb_write=
+scbt_console M:-1 DEF libhdr.h[486] scbt_console=-1
+scbt_file M:1 DEF libhdr.h[484] scbt_file=1
+scbt_mbx M:-2 DEF libhdr.h[487] scbt_mbx=-2
+scbt_net M:2 DEF libhdr.h[483] scbt_net=2
+scbt_ram M:0 DEF libhdr.h[485] scbt_ram=0
+scbt_tcp M:-3 DEF libhdr.h[488] scbt_tcp=-3
+secs G:220 DEF com/raster2wav.b[66] secs=
+secs G:220 LG com/raster2wav.b[172] samples:=sample_rate*secs&-16
+secs G:220 LG com/raster2wav.b[186] sawritef("Total'seconds*n",secs)
+secs G:220 SG com/raster2wav.b[141] secs:=10
+secs G:220 SG com/raster2wav.b[148] secs:=!argv!3
+sectword M:64991 DEF libhdr.h[262] sectword=64991
+selectinput G:56 DEF libhdr.h[89] selectinput=56
+selectinput G:56 LG com/raster2wav.b[195] selectinput(fromfile)
+selectinput G:56 LG com/raster2wav.b[211] selectinput(fromfile)
+selectinput G:56 LG com/raster2wav.b[330] selectinput(sysin)
+selectoutput G:57 DEF libhdr.h[90] selectoutput=57
+selectoutput G:57 LG com/raster2wav.b[225] selectoutput(tofile)
+selectoutput G:57 LG com/raster2wav.b[329] selectoutput(sysout)
+sendpkt G:165 DEF libhdr.h[212] sendpkt=165
+set_process_name G:175 DEF libhdr.h[220] set_process_name=175
+setbit G:112 DEF libhdr.h[146] setbit=112
+setbulk G:122 DEF libhdr.h[156] setbulk=122
+setflags G:156 DEF libhdr.h[204] setflags=156
+setlogname G:117 DEF libhdr.h[151] setlogname=117
+setrecordlength G:68 DEF libhdr.h[101] setrecordlength=68
+setseed G:35 DEF libhdr.h[68] setseed=35
+settimeout G:55 DEF libhdr.h[88] settimeout=55
+settimeoutact G:124 DEF libhdr.h[158] settimeoutact=124
+setvec G:181 DEF libhdr.h[225] setvec=181
+splitname G:47 DEF libhdr.h[80] splitname=47
+srchwk G:150 DEF libhdr.h[198] srchwk=150
+stackfree G:123 DEF libhdr.h[157] stackfree=123
+stackword M:#xABCD1234 DEF libhdr.h[260] stackword=-#x5432EDCC
+start G:1 DEF libhdr.h[33] start=1
+start G:1 FN com/raster2wav.b[121] LET start()=..
+startco G:23 DEF libhdr.h[56] startco=23
+startposv G:237 DEF com/raster2wav.b[101] startposv=
+startposv G:237 LG com/raster2wav.b[249]
+    UNLESS ...&endvalv&notev&Ladjv&Radjv&freqv&notep10v DO ..
+startposv G:237 LG com/raster2wav.b[258] startposv!n:=0
+startposv G:237 LG com/raster2wav.b[337] IF startposv DO ..
+startposv G:237 LG com/raster2wav.b[337] freevec(startposv)
+startposv G:237 LG com/raster2wav.b[415] FLOATstartposv!n
+startposv G:237 SG com/raster2wav.b[239] startposv:=getvec(C7)
+startvalv G:239 DEF com/raster2wav.b[103] startvalv=
+startvalv G:239 LG com/raster2wav.b[249]
+    UNLESS ...&endvalv&notev&Ladjv&Radjv&freqv&notep10v DO ..
+startvalv G:239 LG com/raster2wav.b[260] startvalv!n#:= 0.000
+startvalv G:239 LG com/raster2wav.b[339] IF startvalv DO ..
+startvalv G:239 LG com/raster2wav.b[339] freevec(startvalv)
+startvalv G:239 LG com/raster2wav.b[417] startvalv!n
+startvalv G:239 SG com/raster2wav.b[241] startvalv:=getvec(C7)
+stepstream G:67 DEF libhdr.h[100] stepstream=67
+stop G:2 DEF libhdr.h[34] stop=2
+str2numb G:101 DEF libhdr.h[135] str2numb=101
+string_to_dat G:111 DEF libhdr.h[145] string_to_dat=111
+string_to_number G:100 DEF libhdr.h[134] string_to_number=100
+sval G:213 DEF com/raster2wav.b[58] sval=
+sval G:213 LG com/raster2wav.b[199]
+    sawritef("kval='al = %n*n",kval,sval)
+sval G:213 SG com/raster2wav.b[471] sval:=rdn()
+sval G:213 SG com/raster2wav.b[514] sval:=rdn()
+sys G:3 DEF libhdr.h[35] sys=3
+sys G:3 LG com/raster2wav.b[272]
+    sys(Sys_flt,fl_pow, 2.000, 1.000#/FLOATnotes_per_octave)
+sys G:3 LG com/raster2wav.b[583] RESULTIS sys(Sys_flt,fl_sin,w)
+sysabort G:29 DEF libhdr.h[62] sysabort=29
+sysin G:201 DEF com/raster2wav.b[44] sysin=
+sysin G:201 LG com/raster2wav.b[330] selectinput(sysin)
+sysin G:201 SG com/raster2wav.b[128] sysin:=input()
+sysout G:200 DEF com/raster2wav.b[43] sysout=ug
+sysout G:200 LG com/raster2wav.b[329] selectoutput(sysout)
+sysout G:200 SG com/raster2wav.b[127] sysout:=output()
+t_bhunk M:3000 DEF libhdr.h[256] t_bhunk=3000
+t_bhunk64 M:4000 DEF libhdr.h[257] t_bhunk64=4000
+t_end M:1002 DEF libhdr.h[252] t_end=1002
+t_end64 M:2002 DEF libhdr.h[255] t_end64=2002
+t_hunk M:1000 DEF libhdr.h[250] t_hunk=1000
+t_hunk64 M:2000 DEF libhdr.h[253] t_hunk64=2000
+t_reloc M:1001 DEF libhdr.h[251] t_reloc=1001
+t_reloc64 M:2001 DEF libhdr.h[254] t_reloc64=2001
+taskid G:152 DEF libhdr.h[200] taskid=152
+taskwait G:160 DEF libhdr.h[208] taskwait=160
+tcb G:151 DEF libhdr.h[199] tcb=151
+tcb_a M:11 DEF libhdr.h[625] tcb_a=tcb_regs
+tcb_active M:10 DEF libhdr.h[622] tcb_active=10
+tcb_b M:12 DEF libhdr.h[626] tcb_b=12
+tcb_c M:13 DEF libhdr.h[627] tcb_c=13
+tcb_count M:18 DEF libhdr.h[632] tcb_count=18
+tcb_flags M:5 DEF libhdr.h[617] tcb_flags=5
+tcb_g M:15 DEF libhdr.h[629] tcb_g=15
+tcb_gbase M:8 DEF libhdr.h[620] tcb_gbase=8
+tcb_link M:0 DEF libhdr.h[612] tcb_link=0
+tcb_namebase M:19 DEF libhdr.h[634] tcb_namebase=19
+tcb_namebase M:19 MAN libhdr.h[636]
+    tcb_upb=tcb_namebase+15/bytesperword+1
+tcb_p M:14 DEF libhdr.h[628] tcb_p=14
+tcb_pc M:17 DEF libhdr.h[631] tcb_pc=17
+tcb_pri M:2 DEF libhdr.h[614] tcb_pri=2
+tcb_regs M:11 DEF libhdr.h[624] tcb_regs=11
+tcb_regs M:11 MAN libhdr.h[625] tcb_a=tcb_regs
+tcb_sbase M:9 DEF libhdr.h[621] tcb_sbase=9
+tcb_seglist M:7 DEF libhdr.h[619] tcb_seglist=7
+tcb_st M:16 DEF libhdr.h[630] tcb_st=16
+tcb_state M:4 DEF libhdr.h[616] tcb_state=4
+tcb_stsiz M:6 DEF libhdr.h[618] tcb_stsiz=6
+tcb_taskid M:1 DEF libhdr.h[613] tcb_taskid=1
+tcb_upb M:23 DEF libhdr.h[636] tcb_upb=tcb_namebase+15/bytesperword+1
+tcb_wkq M:3 DEF libhdr.h[615] tcb_wkq=3
+tempval G:11 DEF libhdr.h[43] tempval=11
+testbit G:113 DEF libhdr.h[147] testbit=113
+testflags G:157 DEF libhdr.h[205] testflags=157
+tg M:190 DEF libhdr.h[234] tg=190
+timeoutch M:-2 DEF libhdr.h[245] timeoutch=-2
+tofile G:206 DEF com/raster2wav.b[49] tofile=
+tofile G:206 LG com/raster2wav.b[162] UNLESS tofile DO ..
+tofile G:206 LG com/raster2wav.b[225] selectoutput(tofile)
+tofile G:206 LG com/raster2wav.b[333] IF tofile DO ..
+tofile G:206 LG com/raster2wav.b[333] endstream(tofile)
+tofile G:206 SG com/raster2wav.b[139] tofile:=0
+tofile G:206 SG com/raster2wav.b[161] tofile:=findoutput(tofilename)
+tofile G:206 SG com/raster2wav.b[335] tofile:=0
+tofilename G:205 DEF com/raster2wav.b[48] tofilename=
+tofilename G:205 LG com/raster2wav.b[161] tofile:=findoutput(tofilename)
+tofilename G:205 LG com/raster2wav.b[163]
+    sawritef("Unabl'file %s*n",tofilename)
+tofilename G:205 LG com/raster2wav.b[179]
+    sawritef("Conve' to %s*n*n",fromfilename,tofilename)
+tofilename G:205 LG com/raster2wav.b[334]
+    sawritef("File 'written*n",tofilename)
+tofilename G:205 SG com/raster2wav.b[138] tofilename:="RASTER.wav"
+tracing G:210 DEF com/raster2wav.b[53] tracing=
+tracing G:210 LG com/raster2wav.b[301] IF tracing DO ..
+tracing G:210 LG com/raster2wav.b[316] IF tracing DO ..
+tracing G:210 SG com/raster2wav.b[151] tracing:=argv!6
+ug M:200 DEF libhdr.h[235] ug=200
+ug M:200 MAN com/raster2wav.b[43] sysout=ug
+unhold G:159 DEF libhdr.h[207] unhold=159
+unloadseg G:106 DEF libhdr.h[140] unloadseg=106
+unpackstring G:31 DEF libhdr.h[64] unpackstring=31
+unrdch G:40 DEF libhdr.h[73] unrdch=40
+wavout G:202 DEF com/raster2wav.b[45] wavout=
+wrch G:41 DEF libhdr.h[74] wrch=41
+wrch G:41 LG com/raster2wav.b[226] wrch(riffhdr%i)
+wrch G:41 LG com/raster2wav.b[593] wrch(intLval)
+wrch G:41 LG com/raster2wav.b[593] wrch(intLval>>8)
+wrch G:41 LG com/raster2wav.b[610] wrch(intLval)
+wrch G:41 LG com/raster2wav.b[610] wrch(intLval>>8)
+wrch G:41 LG com/raster2wav.b[611] wrch(intRval)
+wrch G:41 LG com/raster2wav.b[611] wrch(intRval>>8)
+writed G:85 DEF libhdr.h[118] writed=85
+writee G:180 DEF libhdr.h[224] writee=180
+writef G:94 DEF libhdr.h[128] writef=94
+writeflt G:73 DEF libhdr.h[106] writeflt=73
+writehex G:87 DEF libhdr.h[120] writehex=87
+writen G:86 DEF libhdr.h[119] writen=86
+writeoct G:88 DEF libhdr.h[121] writeoct=88
+writes G:89 DEF libhdr.h[122] writes=89
+writes G:89 LG com/raster2wav.b[131] writes("Bad a'AST2WAV*n")
+writet G:90 DEF libhdr.h[123] writet=90
+writeu G:91 DEF libhdr.h[124] writeu=91
+writewords G:45 DEF libhdr.h[78] writewords=45
+writez G:92 DEF libhdr.h[125] writez=92
+wrsample F:8 LF com/raster2wav.b[629] wrsample()
+wrsample F:8 RT com/raster2wav.b[587] LET wrsample()BE..
+wrsamples F:9 LF com/raster2wav.b[557] wrsamples(endpos)
+wrsamples F:9 RT com/raster2wav.b[619] LET wrsamples(endpos)BE..

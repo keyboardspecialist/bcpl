@@ -1,0 +1,31 @@
+$NoName 05 01 BC     Section name
+
+:20000000   Start of code record, size 32 bytes
+00: 42   B
+01: 43   C
+02: 50   P
+03: 4C   L
+04: 2000   Section size = 32 bytes
+
+06: FF 15      RST #x38  SETLINK1
+08: 21 1200    LD HL L999        addr of "ABCD" = 18 rel to start of section
+11: CB 3C      SRL H
+13: CB 1D      RR L
+15: FF 1E      RST #x38  RETURN
+17: 00         NOP
+18: 0441       The string "ABCD"
+20: 4243
+22: 4400
+
+24: 0000  End of global initialisation data
+26: 0200  G1
+28: 0600  Entry byte address = 6 relative to start of the section
+32: 0200  Highest global referenced G1
+
+34        Checksum byte
+
+$02 0000 04 001C 0009 D5     Relocate 2 words at 28 and 6
+
+$NoName 05 01 BC  Section name
+
+:00 FFFF 01 01    End of section

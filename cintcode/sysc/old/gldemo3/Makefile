@@ -1,0 +1,29 @@
+
+CFLAGS+=-DSTANDALONE -D__STDC_CONSTANT_MACROS
+CFLAGS+=-D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC
+CFLAGS+=-DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
+CFLAGS+=-U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2
+CFLAGS+=-DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX
+CFLAGS+=-DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST
+CFLAGS+=-DUSE_VCHIQ_ARM -Wno-psabi
+
+LDFLAGS+=-L/opt/vc/lib/ -lbrcmGLESv2 -lbrcmEGL -lopenmaxil -lbcm_host
+LDFLAGS+=-lvcos -lvchiq_arm -lpthread -lrt -lm -L/opt/vc/src/hello_pi/libs/ilclient -L/opt/vc/src/hello_pi/libs/vgfont
+
+INCLUDES+=-I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont
+
+all:			     triangle.bin
+			     ./triangle.bin
+			     
+
+triangle.o: triangle.c
+	@rm -f $@ 
+	$(CC) $(CFLAGS) $(INCLUDES) -g -c triangle.c -o triangle.o -Wno-deprecated-declarations
+
+triangle.bin: triangle.o
+	$(CC) -o triangle.bin -Wl,--whole-archive triangle.o $(LDFLAGS) -Wl,--no-whole-archive -rdynamic
+
+clean:
+	rm -f triangle.o triangle.bin
+
+

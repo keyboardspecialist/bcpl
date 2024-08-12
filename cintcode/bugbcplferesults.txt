@@ -1,0 +1,39 @@
+# This files holds a summary of the results of applying bgify to com/bcplfe.b
+# with various seed values. The result of each test appears as a line starting
+# with the seed number followed by letters discribing what happened.
+# The letters have the following meanings
+
+# L    An error detected by the lexical analyser
+# S    An error detected by the syntax analyser
+# T    An error detected by the translation phase, usually name not declared
+# C    An error detected by the codegenerator
+# NF   No compile time errors but the resulting compiler failed to compile
+#      com/cmpltest.b without complaint
+# NS   No compile time errors and the resulting compiler compiled and ran
+#      com/cmpltest.b successfully
+# NSX  No compile time errors and the resulting compiler compiled and ran
+#      com/cmpltest.b successfully. But the resulting compiler contains a
+#      bug not detected by cmpltest.b
+
+1 NSX
+2 T
+3 S
+4 T
+5 T
+6 S
+7 T
+8 T
+9 T
+10 S
+11 NF
+12 T
+13 S
+14 S
+15 T
+16 T
+17 S
+18 T
+19 NSX
+20 T
+
+

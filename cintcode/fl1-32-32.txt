@@ -1,0 +1,133 @@
+lasttrngn=412   cgg=425
+   0:  DATAW #x00000000
+   4:  DATAW #x0000DFDF
+   8:  DATAW #x6174730B
+  12:  DATAW #x20207472
+  16:  DATAW #x20202020
+// Entry to:   start      
+  20: L12:
+  20:     LW  #xBFA00000
+  25:    SP3  
+  26:     LL  L10
+  28:    SP4  
+  29:    LLL  L13
+  31:    SP5  
+  32:    LP3  
+  33:   SP10  
+  34:    LLL  L19920
+  36:    K6G   94
+  38:   L1P5  
+  39:   SP10  
+  40:    LLL  L19919
+  42:    K6G   94
+  44:    LP5  
+  45:    RV3  
+  46:   SP10  
+  47:    LLL  L19918
+  49:    K6G   94
+  51:     L0  
+  52:   JEQ0  L14
+  54:    LP3  
+  55:   SP10  
+  56:    LLL  L19917
+  58:    K6G   94
+  60:      L   45
+  62:   SP10  
+  63:    LP3  
+  64:   SP11  
+  65:      L   63
+  67:    K6G    3
+  69:    SP3  
+  70:   SP10  
+  71:    LLL  L19916
+  73:    K6G   94
+  75:      J  L15
+  77: L14:
+fillref_d: a=52 p=77 instr=[30,24]
+  77:      L   46
+  79:   SP10  
+  80:    LP3  
+  81:   SP11  
+  82:      L   63
+  84:    K6G    3
+  86:    SP6  
+  87:     LG   10
+  89:    SP7  
+  90:    LP3  
+  91:   SP12  
+  92:   SP13  
+  93:    LLL  L19915
+  95:    K8G   94
+  97:    LP7  
+  98:   SP12  
+  99:    LP6  
+ 100:   SP13  
+ 101:    LLL  L19914
+ 103:    K8G   94
+ 105: L15:
+fillref_d: a=75 p=105 instr=[186,29]
+ 105:     L0  
+ 106:    RTN  
+ 108: L10:
+fillref_d: a=26 p=108 instr=[58,81]
+ 108:  DATAW #xBFA00000
+ 112: L11:
+ 112:  DATAW #x3FA00000
+ 116: L13:
+fillref_d: a=29 p=116 instr=[90,86]
+ 116:  DATAW #x00000007
+ 120:  DATAW #xBF800000
+ 124:  DATAW #xFFFFFFF9
+ 128:  DATAW #x3F8CCCCD
+ 132: L19920:
+fillref_d: a=34 p=132 instr=[90,97]
+ 132:  DATAW #x2020780D
+ 136:  DATAW #x25203D20
+ 140:  DATAW #x382E3231
+ 144:  DATAW #x00000A66
+ 148: L19919:
+fillref_d: a=40 p=148 instr=[90,107]
+ 148:  DATAW #x3121740D
+ 152:  DATAW #x25203D20
+ 156:  DATAW #x382E3231
+ 160:  DATAW #x00000A66
+ 164: L19918:
+fillref_d: a=47 p=164 instr=[90,116]
+ 164:  DATAW #x3321740D
+ 168:  DATAW #x25203D20
+ 172:  DATAW #x382E3231
+ 176:  DATAW #x00000A66
+ 180: L19917:
+fillref_d: a=56 p=180 instr=[90,123]
+ 180:  DATAW #x3D207809
+ 184:  DATAW #x36312520
+ 188:  DATAW #x00000A78
+ 192: L19916:
+fillref_d: a=71 p=192 instr=[90,120]
+ 192:  DATAW #x3D20781C
+ 196:  DATAW #x78382520
+ 200:  DATAW #x206E6920
+ 204:  DATAW #x676E6973
+ 208:  DATAW #x7020656C
+ 212:  DATAW #x69636572
+ 216:  DATAW #x6E6F6973
+ 220:  DATAW #x0000000A
+ 224: L19915:
+ 224:  DATAW #x20207812
+ 228:  DATAW #x3D202020
+ 232:  DATAW #x78382520
+ 236:  DATAW #x2E392520
+ 240:  DATAW #x000A6638
+ 244: L19914:
+ 244:  DATAW #x2C776D10
+ 248:  DATAW #x3D20776C
+ 252:  DATAW #x78382520
+ 256:  DATAW #x78382520
+ 260:  DATAW #x0000000A
+ 264:  DATAH L19915-$
+ 266:  DATAH L19914-$
+ 268:  DATAW #x00000000
+ 272:  DATAW #x00000001
+ 276:  DATAW #x00000014
+ 280:  DATAW #x0000005E
+Code size =   284 bytes of 32-bit little ender Cintcode

@@ -1,0 +1,24 @@
+//let rec f x y = x
+//def abc = 123
+//and rec f = 456
+//and rec fact n = n=0 -> 1 ! n * fact(n-1)
+//and x, y = $ 1, (2, 3, 4, 5), 6
+//in
+//( sys (1234.56, 22, 33, 44);
+//  111;
+//  x, y, z := z, x, y
+//);
+//123 %f 456
+//let x, y = 1, 2
+//in
+//let f () x (y, z) (a,b,c) = 123
+//in f 456
+//111;
+//222+333<=444;
+//1234.5678 + 8765.4321;
+
+let x = 111 in
+let a, b, c, d = (1,2,3,4)
+in
+123
+//sys(3, 123 + 4.5 - nil / dummy + jj)

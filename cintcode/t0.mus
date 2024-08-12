@@ -1,0 +1,4 @@
+\score "Opus 1" [
+  \conductor (   r1           ||  )
+  \part      (  {4c4  d\v80\l100  (e f e)\tup s4}\tup s2 f g ||  )
+]

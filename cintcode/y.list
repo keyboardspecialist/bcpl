@@ -1,0 +1,414 @@
+    REL
+    DEFB  #X42
+    DEFB  #X43
+    DEFB  #X50
+    DEFB  #X4C
+    DEFW  L1000
+;  Entry to "wrc"
+L10:
+    RST   #X38      
+    DEFB  #X15  ; M_SETLINK1
+    LD    E,L
+    LD    D,H
+    LD    HL,#X000B
+    EXX
+    LD    L,(IY-122)
+    LD    H,(IY-121)
+    RST   #X38      
+    DEFB  #X00  ; M_APPLY
+    DEFB  #X03
+    RST   #X38      
+    DEFB  #X1E  ; M_RETURN
+;  End of procedure
+    NOP
+;  Entry to "wrs"
+L11:
+    RST   #X38      
+    DEFB  #X15  ; M_SETLINK1
+    ADD   HL,HL
+    LD    L,(HL)
+    XOR   A
+    LD    H,A
+    LD    (IX-120),L
+    LD    (IX-119),H
+    LD    DE,#X0001
+    LD    (IX-122),E
+    LD    (IX-121),D
+    OR    A
+    SBC   HL,DE
+    JP    M,L17
+L16:
+    LD    E,(IX-122)
+    LD    D,(IX-121)
+    LD    L,(IX-124)
+    LD    H,(IX-123)
+    ADD   HL,HL
+    ADD   HL,DE
+    LD    L,(HL)
+    XOR   A
+    LD    H,A
+    RST   #X38      
+    DEFB  #X09  ; M_LOADIY
+    DEFB  #X48
+    EXX
+    POP   HL
+    RST   #X38      
+    DEFB  #X00  ; M_APPLY
+    DEFB  #X05
+L19:
+    LD    L,(IX-122)
+    LD    H,(IX-121)
+    INC   HL
+    LD    (IX-122),L
+    LD    (IX-121),H
+    LD    L,(IX-120)
+    LD    H,(IX-119)
+    LD    E,(IX-122)
+    LD    D,(IX-121)
+    OR    A
+    SBC   HL,DE
+    JP    P,L16
+L18:
+L17:
+    RST   #X38      
+    DEFB  #X1E  ; M_RETURN
+;  End of procedure
+    NOP
+;  Entry to "nl"
+L12:
+    RST   #X38      
+    DEFB  #X12  ; M_SETLINK0
+    LD    HL,#X000A
+    RST   #X38      
+    DEFB  #X09  ; M_LOADIY
+    DEFB  #X48
+    EXX
+    POP   HL
+    RST   #X38      
+    DEFB  #X00  ; M_APPLY
+    DEFB  #X02
+    RST   #X38      
+    DEFB  #X1E  ; M_RETURN
+;  End of procedure
+    NOP
+;  Entry to "wrd"
+L13:
+    RST   #X38      
+    DEFB  #X18  ; M_SETLINK2
+    LD    A,H
+    CPL
+    LD    H,A
+    LD    A,L
+    CPL
+    LD    L,A
+    INC   HL
+    LD    (IX-116),L
+    LD    (IX-115),H
+    LD    BC,#X0000
+    LD    (IX-118),C
+    LD    (IX-117),B
+    RST   #X38      
+    DEFB  #X24  ; M_LOADLVIX
+    DEFB  #X07
+    POP   HL
+    LD    (IX-120),L
+    LD    (IX-119),H
+    LD    L,(IX-124)
+    LD    H,(IX-123)
+    LD    A,H
+    OR    H
+    JP    P,L20
+    DEC   DE
+    LD    (IX-122),E
+    LD    (IX-121),D
+    LD    (IX-116),L
+    LD    (IX-115),H
+L20:
+L21:
+    LD    L,(IX-118)
+    LD    H,(IX-117)
+    LD    E,(IX-120)
+    LD    D,(IX-119)
+    ADD   HL,DE
+    LD    C,(IX-116)
+    LD    B,(IX-115)
+    PUSH  HL
+    PUSH  BC
+    LD    HL,#X000A
+    PUSH  HL
+    RST   #X38      
+    DEFB  #X30  ; M_REM
+    POP   HL
+    LD    A,H
+    CPL
+    LD    H,A
+    LD    A,L
+    CPL
+    LD    L,A
+    INC   HL
+    LD    E,L
+    LD    D,H
+    POP   HL
+    ADD   HL,HL
+    LD    (HL),E
+    INC   HL
+    LD    (HL),D
+    LD    L,(IX-118)
+    LD    H,(IX-117)
+    INC   HL
+    LD    (IX-118),L
+    LD    (IX-117),H
+    PUSH  BC
+    LD    DE,#X000A
+    PUSH  DE
+    RST   #X38      
+    DEFB  #X2D  ; M_DIVIDE
+    POP   HL
+    LD    (IX-116),L
+    LD    (IX-115),H
+L23:
+    LD    HL,#X0000
+    LD    E,(IX-116)
+    LD    D,(IX-115)
+    OR    A
+    SBC   HL,DE
+    JR    NZ,L21-$
+L22:
+    LD    L,(IX-122)
+    LD    H,(IX-121)
+    LD    (IX-50),L
+    LD    (IX-49),H
+    LD    E,(IX-118)
+    LD    D,(IX-117)
+    INC   DE
+    LD    (IX-52),E
+    LD    (IX-51),D
+    OR    A
+    SBC   HL,DE
+    JP    M,L25
+L24:
+    LD    HL,#X0020
+    RST   #X38      
+    DEFB  #X09  ; M_LOADIY
+    DEFB  #X48
+    EXX
+    POP   HL
+    RST   #X38      
+    DEFB  #X00  ; M_APPLY
+    DEFB  #X28
+L27:
+    LD    L,(IX-52)
+    LD    H,(IX-51)
+    INC   HL
+    LD    (IX-52),L
+    LD    (IX-51),H
+    LD    L,(IX-50)
+    LD    H,(IX-49)
+    LD    E,(IX-52)
+    LD    D,(IX-51)
+    OR    A
+    SBC   HL,DE
+    JP    P,L24
+L26:
+L25:
+    LD    L,(IX-124)
+    LD    H,(IX-123)
+    LD    A,H
+    OR    H
+    JP    P,L28
+    LD    HL,#X002D
+    RST   #X38      
+    DEFB  #X09  ; M_LOADIY
+    DEFB  #X48
+    EXX
+    POP   HL
+    RST   #X38      
+    DEFB  #X00  ; M_APPLY
+    DEFB  #X26
+L28:
+    LD    L,(IX-118)
+    LD    H,(IX-117)
+    DEC   HL
+    LD    (IX-52),L
+    LD    (IX-51),H
+    LD    A,H
+    OR    H
+    JP    M,L30
+L29:
+    LD    L,(IX-52)
+    LD    H,(IX-51)
+    LD    E,(IX-120)
+    LD    D,(IX-119)
+    ADD   HL,DE
+    ADD   HL,HL
+    LD    A,(HL)
+    INC   HL
+    LD    H,(HL)
+    LD    L,A
+    LD    BC,#X0030
+    ADD   HL,BC
+    RST   #X38      
+    DEFB  #X09  ; M_LOADIY
+    DEFB  #X48
+    EXX
+    POP   HL
+    RST   #X38      
+    DEFB  #X00  ; M_APPLY
+    DEFB  #X27
+L32:
+    LD    L,(IX-52)
+    LD    H,(IX-51)
+    DEC   HL
+    LD    (IX-52),L
+    LD    (IX-51),H
+    LD    A,H
+    OR    H
+    JP    P,L29
+L31:
+L30:
+    RST   #X38      
+    DEFB  #X1E  ; M_RETURN
+;  End of procedure
+;  Entry to "wrn"
+L14:
+    RST   #X38      
+    DEFB  #X15  ; M_SETLINK1
+    LD    DE,#X0000
+    RST   #X38      
+    DEFB  #X09  ; M_LOADIY
+    DEFB  #X4C
+    EXX
+    POP   HL
+    RST   #X38      
+    DEFB  #X00  ; M_APPLY
+    DEFB  #X03
+    RST   #X38      
+    DEFB  #X1E  ; M_RETURN
+;  End of procedure
+    NOP
+;  Entry to "wrx"
+L15:
+    RST   #X38      
+    DEFB  #X18  ; M_SETLINK2
+    LD    HL,#X0001
+    OR    A
+    SBC   HL,DE
+    JP    P,L33
+    DEC   DE
+    LD    L,(IX-124)
+    LD    H,(IX-123)
+    PUSH  DE
+    PUSH  HL
+    LD    DE,#X0004
+    PUSH  DE
+    RST   #X38      
+    DEFB  #X36  ; M_RSHIFT
+    POP   HL
+    POP   DE
+    RST   #X38      
+    DEFB  #X09  ; M_LOADIY
+    DEFB  #X4A
+    EXX
+    POP   HL
+    RST   #X38      
+    DEFB  #X00  ; M_APPLY
+    DEFB  #X04
+L33:
+    LD    L,(IX-124)
+    LD    H,(IX-123)
+    XOR   A
+    LD    H,A
+    LD    A,#X0F
+    AND   L
+    LD    L,A
+    LD    DE,L34
+    SRL   D
+    RR    E
+    ADD   HL,DE
+    ADD   HL,HL
+    LD    A,(HL)
+    INC   HL
+    LD    H,(HL)
+    LD    L,A
+    RST   #X38      
+    DEFB  #X09  ; M_LOADIY
+    DEFB  #X48
+    EXX
+    POP   HL
+    RST   #X38      
+    DEFB  #X00  ; M_APPLY
+    DEFB  #X04
+    RST   #X38      
+    DEFB  #X1E  ; M_RETURN
+;  End of procedure
+    NOP
+L34:
+    DEFW  #X0030
+    DEFW  #X0031
+    DEFW  #X0032
+    DEFW  #X0033
+    DEFW  #X0034
+    DEFW  #X0035
+    DEFW  #X0036
+    DEFW  #X0037
+    DEFW  #X0038
+    DEFW  #X0039
+    DEFW  #X0041
+    DEFW  #X0042
+    DEFW  #X0043
+    DEFW  #X0044
+    DEFW  #X0045
+    DEFW  #X0046
+;  Entry to "start"
+L35:
+    RST   #X38      
+    DEFB  #X15  ; M_SETLINK1
+    LD    DE,#X0002
+    LD    HL,#X000F
+    RST   #X38      
+    DEFB  #X09  ; M_LOADIY
+    DEFB  #X4A
+    EXX
+    POP   HL
+    RST   #X38      
+    DEFB  #X00  ; M_APPLY
+    DEFB  #X03
+    LD    HL,#X000C
+    LD    (IY-120),L
+    LD    (IY-119),H
+    RST   #X38      
+    DEFB  #X09  ; M_LOADIY
+    DEFB  #X4E
+    POP   HL
+    RST   #X38      
+    DEFB  #X00  ; M_APPLY
+    DEFB  #X03
+    LD    HL,#X0000
+    RST   #X38      
+    DEFB  #X1E  ; M_RETURN
+;  End of procedure
+    NOP
+    DEFW  #X0000
+    DEFW  #X0002
+    DEFW  L35
+    DEFW  #X0194
+    DEFW  L15
+    DEFW  #X019A
+    DEFW  L14
+    DEFW  #X0198
+    DEFW  L13
+    DEFW  #X019C
+    DEFW  L12
+    DEFW  #X0192
+    DEFW  L11
+    DEFW  #X0190
+    DEFW  L10
+    DEFW  #X019C
+L1000:  EQU  622
+    END
+    REL
+    DEFB  #X42
+    DEFB  #X43
+    DEFB  #X50
+    DEFB  #X4C
+    DEFW  L1000

@@ -1,0 +1,5 @@
+This directory holds BBC BCPL programs modified to be compiled using
+bbcbcpl32 and run using the modern 32 bit BCPL Cintcode system.  It
+uses the standard libhdr.h but also uses LIBHDR.h and SYSHDR.h. It
+uses BBCLIB.b to provide an interface with the BBC BCPL library
+functions.

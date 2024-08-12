@@ -1,0 +1,7 @@
+.k file/a,opt
+echo "bcpl com/<file>.b to cin/<file> <opt>"
+bcpl com/<file>.b to cin/<file> <opt>
+
+.k file/a,opt
+echo "bcpl sysb/<file>.b to cin/syscin/<file> <opt>"
+bcpl sysb/<file>.b to cin/syscin/<file> <opt>

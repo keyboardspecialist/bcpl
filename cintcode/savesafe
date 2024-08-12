@@ -1,0 +1,5 @@
+type cin/syscin/syslib to cin/syscin/safesyslib
+type cin/syscin/blib to cin/syscin/safeblib
+type cin/syscin/dlibsys to cin/syscin/safedlibsys
+type cin/syscin/clisys to cin/syscin/safeclisys
+type cin/syscin/bootsys to cin/syscin/safebootsys

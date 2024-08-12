@@ -1,0 +1,4 @@
+2388c2388
+<         UNLESS h1!n=s_name | h1!n=s_flt DO synerr("Bad function definition")
+---
+>         UNLESS h1!n=s_name DO synerr("Bad function definition")

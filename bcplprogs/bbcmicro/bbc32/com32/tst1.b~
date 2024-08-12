@@ -1,0 +1,15 @@
+get "libhdr"
+get "LIBHDR.h"
+get "SYSHDR.h"
+get "BBCLIB.b"
+
+.
+
+get "libhdr"
+get "LIBHDR.h"
+get "SYSHDR.h"
+
+let start() = VALOF
+$( WRITEF("Hello World!*n")
+   resultis 0
+$)

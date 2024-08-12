@@ -1,0 +1,2950 @@
+Ass_dev M:4 DEF libhdr.h[775] Ass_dev=4
+Ass_dir M:2 DEF libhdr.h[773] Ass_dir=2
+Ass_link M:0 DEF libhdr.h[771] Ass_link=0
+Ass_name M:5 DEF libhdr.h[776] Ass_name=5
+Ass_task M:1 DEF libhdr.h[772] Ass_task=1
+Ass_type M:3 DEF libhdr.h[774] Ass_type=3
+B2Wsh M:2 DEF libhdr.h[26] B2Wsh=1+32/32
+B2Wsh M:2 MAN libhdr.h[248] bytesperword=1<<B2Wsh
+B2Wsh M:2 MAN libhdr.h[28] W2Bsh=B2Wsh
+CloseObj M:1 DEF libhdr.h[298] CloseObj=1
+Dcb_arg M:4 DEF libhdr.h[715] Dcb_arg=4
+Dcb_cvp M:16 DEF libhdr.h[729] Dcb_cvp=16
+Dcb_devid M:1 DEF libhdr.h[712] Dcb_devid=1
+Dcb_flag M:7 DEF libhdr.h[718] Dcb_flag=7
+Dcb_intson M:6 DEF libhdr.h[717] Dcb_intson=6
+Dcb_irq M:5 DEF libhdr.h[716] Dcb_irq=5
+Dcb_op M:3 DEF libhdr.h[714] Dcb_op=3
+Dcb_threadp M:14 DEF libhdr.h[728] Dcb_threadp=14
+Dcb_type M:0 DEF libhdr.h[711] Dcb_type=0
+Dcb_upb M:17 DEF libhdr.h[733] Dcb_upb=17
+Dcb_var0 M:8 DEF libhdr.h[722] Dcb_var0=8
+Dcb_var1 M:9 DEF libhdr.h[723] Dcb_var1=9
+Dcb_var2 M:10 DEF libhdr.h[724] Dcb_var2=10
+Dcb_var3 M:11 DEF libhdr.h[725] Dcb_var3=11
+Dcb_var4 M:12 DEF libhdr.h[726] Dcb_var4=12
+Dcb_wkq M:2 DEF libhdr.h[713] Dcb_wkq=2
+Devc_create M:1 DEF libhdr.h[743] Devc_create=1
+Devc_destroy M:2 DEF libhdr.h[744] Devc_destroy=2
+Devc_setintson M:5 DEF libhdr.h[747] Devc_setintson=5
+Devc_start M:3 DEF libhdr.h[745] Devc_start=3
+Devc_stop M:4 DEF libhdr.h[746] Devc_stop=4
+Devt_clk M:1 DEF libhdr.h[736] Devt_clk=1
+Devt_fileop M:4 DEF libhdr.h[739] Devt_fileop=4
+Devt_tcpdev M:5 DEF libhdr.h[740] Devt_tcpdev=5
+Devt_ttyin M:2 DEF libhdr.h[737] Devt_ttyin=2
+Devt_ttyout M:3 DEF libhdr.h[738] Devt_ttyout=3
+GB2312 M:-2 DEF libhdr.h[644] GB2312=-2
+InitObj M:0 DEF libhdr.h[297] InitObj=0
+ON64 M:0 DEF libhdr.h[29] ON64=32=64
+One M:100000 DEF com/bucket.b[30] One=100000
+One M:100000 MAN com/bucket.b[152]
+    IF muldiv(dx,dx,One)+muldiv(dy,dy,One)>muldiv(d,d,One) DO ..
+One M:100000 MAN com/bucket.b[221] p1!0:=p1!0-muldiv(40000,c,One)
+One M:100000 MAN com/bucket.b[222] p1!1:=p1!1-muldiv(40000,s,One)
+One M:100000 MAN com/bucket.b[223] p2!0:=p2!0+muldiv(40000,c,One)
+One M:100000 MAN com/bucket.b[224] p2!1:=p2!1+muldiv(40000,s,One)
+One M:100000 MAN com/bucket.b[264] p1!0:=p1!0-muldiv(5000,c,One)
+One M:100000 MAN com/bucket.b[265] p1!1:=p1!1-muldiv(5000,s,One)
+One M:100000 MAN com/bucket.b[266] p2!0:=p2!0+muldiv(5000,c,One)
+One M:100000 MAN com/bucket.b[267] p2!1:=p2!1+muldiv(5000,s,One)
+One M:100000 MAN com/bucket.b[277] muldiv(dx,One,d)
+One M:100000 MAN com/bucket.b[278] muldiv(dy,One,d)
+One M:100000 MAN com/bucket.b[279] muldiv(c,c,One)+muldiv(s,s,One)
+One M:100000 MAN com/bucket.b[283] d:=(d+muldiv(a,...))/2
+One M:100000 MAN com/bucket.b[285] d:=(d+muldiv(a,...))/2
+One M:100000 MAN com/bucket.b[287] d:=(d+muldiv(a,...))/2
+One M:100000 MAN com/bucket.b[290] s:=muldiv(s,One,d)
+One M:100000 MAN com/bucket.b[291] c:=muldiv(c,One,d)
+One M:100000 MAN com/bucket.b[298] muldiv(dx,c,One)+muldiv(dy,s,One)
+One M:100000 MAN com/bucket.b[646] 2*endradius/One+1
+One M:100000 MAN com/bucket.b[647] (bucket_tyt-bucket_byb)/One+2
+One M:100000 MAN com/bucket.b[656]
+    drawfillcircle(endradius/One,endradius/One,endradius/One-1)
+One M:100000 MAN com/bucket.b[657]
+    drawfillcircle(endradius/One,height-endradius/One,endradius/One-1)
+One M:100000 MAN com/bucket.b[661]
+    drawfillrect(0,endradius/One,width,height-endradius/One)
+One M:100000 MAN com/bucket.b[667] (bucket_rxc-bucket_lxc)/One+1
+One M:100000 MAN com/bucket.b[668] 2*endradius/One+1
+One M:100000 MAN com/bucket.b[679] 2*ballradius/One+2
+One M:100000 MAN com/bucket.b[689]
+    drawfillcircle(ballradius/One,ballradius/One+1,ballradius/One)
+One M:100000 MAN com/bucket.b[696] 2*batradius/One+2
+One M:100000 MAN com/bucket.b[702]
+    drawfillcircle(batradius/One,batradius/One+1,batradius/One)
+One M:100000 MAN com/bucket.b[726]
+    blitsurf(@bucketwallsurf,@screen,bucket_lxl/One,bucket_tyt/One)
+One M:100000 MAN com/bucket.b[730]
+    blitsurf(@bucketwallsurf,@screen,bucket_rxl/One,bucket_tyt/One)
+One M:100000 MAN com/bucket.b[737]
+    blitsurf(@bucketbasesurf,@screen,bucket_lxc/One,bucket_byt/One-1)
+One M:100000 MAN com/bucket.b[741]
+    blitsurf(@batsurf,@screen,(batx-batradius)/One,(baty+batradius)/One)
+One M:100000 MAN com/bucket.b[746]
+    blitsurf(@ball1surf,@screen,(cgx1-ballradius)/One,(cgy1+ballradius)/One)
+One M:100000 MAN com/bucket.b[749]
+    blitsurf(@ball2surf,@screen,(cgx2-ballradius)/One,(cgy2+ballradius)/One)
+One M:100000 MAN com/bucket.b[752]
+    blitsurf(@ball3surf,@screen,(cgx3-ballradius)/One,(cgy3+ballradius)/One)
+One M:100000 MAN com/bucket.b[898] One
+One M:100000 MAN com/bucket.b[899] FOR dy=0 TO One BY One/100 DO..
+One M:100000 MAN com/bucket.b[901] c:=cosines(One,dy)
+One M:100000 MAN com/bucket.b[903] rsq:=muldiv(c,c,One)+muldiv(s,s,One)
+One M:100000 MAN com/bucket.b[904]
+    writef("dx=%9'q=%9.5d*n",One,dy,c,s,rsq)
+One M:100000 MAN com/bucket.b[909]
+    writef("Error' -%7.5d*n",e1-One,One-e2)
+One M:100000 MAN com/bucket.b[943] wall_rx:=(screenxsize-1)*One
+One M:100000 MAN com/bucket.b[946] ceiling_yb:=(screenysize-1)*One
+One M:100000 MAN com/bucket.b[948] screen_xc:=screenxsize*One/2
+OneK M:#x05F5E100 DEF com/bucket.b[32] OneK=#x05F5E100
+State_dead M:12 DEF libhdr.h[762] State_dead=12
+State_hold M:2 DEF libhdr.h[759] State_hold=2
+State_int M:8 DEF libhdr.h[761] State_int=8
+State_pkt M:1 DEF libhdr.h[758] State_pkt=1
+State_wait M:4 DEF libhdr.h[760] State_wait=4
+Sys_alsa M:72 DEF libhdr.h[495] Sys_alsa=72
+Sys_buttons M:56 DEF libhdr.h[475] Sys_buttons=56
+Sys_callc M:59 DEF libhdr.h[478] Sys_callc=59
+Sys_callnative M:53 DEF libhdr.h[472] Sys_callnative=53
+Sys_close M:16 DEF libhdr.h[438] Sys_close=16
+Sys_cputime M:30 DEF libhdr.h[451] Sys_cputime=30
+Sys_datstamp M:44 DEF libhdr.h[463] Sys_datstamp=44
+Sys_delay M:57 DEF libhdr.h[476] Sys_delay=57
+Sys_deletefile M:17 DEF libhdr.h[439] Sys_deletefile=17
+Sys_devcom M:43 DEF libhdr.h[462] Sys_devcom=43
+Sys_dumpmem M:52 DEF libhdr.h[471] Sys_dumpmem=52
+Sys_ext M:68 DEF libhdr.h[489] Sys_ext=68
+Sys_filemodtime M:31 DEF libhdr.h[452] Sys_filemodtime=31
+Sys_filesize M:46 DEF libhdr.h[465] Sys_filesize=46
+Sys_flt M:63 DEF libhdr.h[483] Sys_flt=63
+Sys_flt M:63 MAN sdl.b[66] sys(Sys_flt,fl_sqrt,x*x+y*y+z*z)
+Sys_flt M:63 MAN sdl.b[67]
+    TEST r#<sys(Sys_flt,fl_mk,1,-10) THEN .. ELSE ..
+Sys_flt M:63 MAN sdl.b[83]
+    RESULTIS sys(Sys_flt,fl_sqrt,dx*dx+dy*dy+dz*dz)
+Sys_flt M:63 MAN sdl.b[89] RESULTIS sys(Sys_flt,fl_sqrt,x*x+y*y+z*z)
+Sys_freevec M:22 DEF libhdr.h[444] Sys_freevec=22
+Sys_getbuildno M:71 DEF libhdr.h[492] Sys_getbuildno=71
+Sys_getpid M:51 DEF libhdr.h[470] Sys_getpid=51
+Sys_getprefix M:33 DEF libhdr.h[454] Sys_getprefix=33
+Sys_getsysval M:48 DEF libhdr.h[467] Sys_getsysval=48
+Sys_gettrval M:62 DEF libhdr.h[482] Sys_gettrval=62
+Sys_getvec M:21 DEF libhdr.h[443] Sys_getvec=21
+Sys_gl M:67 DEF libhdr.h[488] Sys_gl=67
+Sys_globin M:24 DEF libhdr.h[446] Sys_globin=24
+Sys_graphics M:34 DEF libhdr.h[455] Sys_graphics=34
+Sys_inc M:55 DEF libhdr.h[474] Sys_inc=55
+Sys_incdcount M:65 DEF libhdr.h[485] Sys_incdcount=65
+Sys_interpret M:7 DEF libhdr.h[430] Sys_interpret=7
+Sys_intflag M:28 DEF libhdr.h[449] Sys_intflag=28
+Sys_joy M:69 DEF libhdr.h[490] Sys_joy=69
+Sys_loadseg M:23 DEF libhdr.h[445] Sys_loadseg=23
+Sys_lockirq M:41 DEF libhdr.h[460] Sys_lockirq=41
+Sys_memmovebytes M:74 DEF libhdr.h[499] Sys_memmovebytes=74
+Sys_memmovewords M:73 DEF libhdr.h[496] Sys_memmovewords=73
+Sys_muldiv M:26 DEF libhdr.h[448] Sys_muldiv=26
+Sys_openappend M:19 DEF libhdr.h[441] Sys_openappend=19
+Sys_openread M:14 DEF libhdr.h[436] Sys_openread=14
+Sys_openreadwrite M:47 DEF libhdr.h[466] Sys_openreadwrite=47
+Sys_openwrite M:15 DEF libhdr.h[437] Sys_openwrite=15
+Sys_platform M:54 DEF libhdr.h[473] Sys_platform=54
+Sys_pollsardch M:64 DEF libhdr.h[484] Sys_pollsardch=64
+Sys_putsysval M:49 DEF libhdr.h[468] Sys_putsysval=49
+Sys_quit M:0 DEF libhdr.h[423] Sys_quit=0
+Sys_read M:12 DEF libhdr.h[434] Sys_read=12
+Sys_renamefile M:18 DEF libhdr.h[440] Sys_renamefile=18
+Sys_rti M:1 DEF libhdr.h[424] Sys_rti=1
+Sys_sardch M:10 DEF libhdr.h[432] Sys_sardch=10
+Sys_saveregs M:2 DEF libhdr.h[425] Sys_saveregs=2
+Sys_sawrch M:11 DEF libhdr.h[433] Sys_sawrch=11
+Sys_sdl M:66 DEF libhdr.h[487] Sys_sdl=66
+Sys_sdl M:66 MAN com/bucket.b[884] UNLESS sys(Sys_sdl,sdl_avail) DO ..
+Sys_sdl M:66 MAN sdl.b[167]
+    IF sys(Sys_sdl,sdl_init,sdl_init_everything) DO ..
+Sys_sdl M:66 MAN sdl.b[169] sys(Sys_sdl,sdl_geterror,mes)
+Sys_sdl M:66 MAN sdl.b[229]
+    ok:=sys(Sys_sdl,sdl_setvideomode,screenxsize,...)
+Sys_sdl M:66 MAN sdl.b[240] sys(Sys_sdl,sdl_geterror,mes)
+Sys_sdl M:66 MAN sdl.b[253]
+    sys(Sys_sdl,sdl_getsurfaceinfo,@screen,@flags)
+Sys_sdl M:66 MAN sdl.b[280] sys(Sys_sdl,sdl_maprgb,@format,r,g,b)
+Sys_sdl M:66 MAN sdl.b[282] sys(Sys_sdl,sdl_wm_setcaption,title,0)
+Sys_sdl M:66 MAN sdl.b[290] sys(Sys_sdl,sdl_quit)
+Sys_sdl M:66 MAN sdl.b[296] sys(Sys_sdl,sdl_setcolourkey,surfptr,col)
+Sys_sdl M:66 MAN sdl.b[300]
+    sys(Sys_sdl,sdl_mksurface,@format,w,h,surfptr)
+Sys_sdl M:66 MAN sdl.b[304] sys(Sys_sdl,sdl_freesurface,surfptr)
+Sys_sdl M:66 MAN sdl.b[314]
+    RESULTIS sys(Sys_sdl,sdl_pollevent,@eventtype)
+Sys_sdl M:66 MAN sdl.b[318] sys(Sys_sdl,sdl_delay,msecs)
+Sys_sdl M:66 MAN sdl.b[320] sys(Sys_sdl,sdl_getticks)
+Sys_sdl M:66 MAN sdl.b[323] sys(Sys_sdl,sdl_hidecursor)
+Sys_sdl M:66 MAN sdl.b[325] sys(Sys_sdl,sdl_showcursor)
+Sys_sdl M:66 MAN sdl.b[328] sys(Sys_sdl,sdl_flip,@screen)
+Sys_sdl M:66 MAN sdl.b[338]
+    sys(Sys_sdl,sdl_blitsurface,srcptr,0,dstptr,@dx)
+Sys_sdl M:66 MAN sdl.b[347]
+    sys(Sys_sdl,sdl_blitsurface,srcptr,0,dstptr,@dx)
+Sys_sdl M:66 MAN sdl.b[351] sys(Sys_sdl,sdl_fillsurf,@currsurf,col)
+Sys_sdl M:66 MAN sdl.b[3755]
+    sys(Sys_sdl,sdl_fillrect,@currsurf,xmin,currysize-ymax,...,...)
+Sys_sdl M:66 MAN sdl.b[399]
+    sys(Sys_sdl,sdl_fillrect,@currsurf,x,currysize-y,1,...)
+Sys_seek M:38 DEF libhdr.h[457] Sys_seek=38
+Sys_setcount M:-1 DEF libhdr.h[422] Sys_setcount=-1
+Sys_setprefix M:32 DEF libhdr.h[453] Sys_setprefix=32
+Sys_setraster M:29 DEF libhdr.h[450] Sys_setraster=29
+Sys_setst M:3 DEF libhdr.h[426] Sys_setst=3
+Sys_settracing M:70 DEF libhdr.h[491] Sys_settracing=70
+Sys_settrcount M:61 DEF libhdr.h[481] Sys_settrcount=61
+Sys_shellcom M:50 DEF libhdr.h[469] Sys_shellcom=50
+Sys_sound M:58 DEF libhdr.h[477] Sys_sound=58
+Sys_tally M:6 DEF libhdr.h[429] Sys_tally=6
+Sys_tell M:39 DEF libhdr.h[458] Sys_tell=39
+Sys_tracing M:4 DEF libhdr.h[427] Sys_tracing=4
+Sys_trpush M:60 DEF libhdr.h[480] Sys_trpush=60
+Sys_unloadseg M:25 DEF libhdr.h[447] Sys_unloadseg=25
+Sys_unlockirq M:42 DEF libhdr.h[461] Sys_unlockirq=42
+Sys_waitirq M:40 DEF libhdr.h[459] Sys_waitirq=40
+Sys_watch M:5 DEF libhdr.h[428] Sys_watch=5
+Sys_write M:13 DEF libhdr.h[435] Sys_write=13
+Task_cli M:1 DEF libhdr.h[750] Task_cli=1
+Task_consolehandler M:3 DEF libhdr.h[752] Task_consolehandler=3
+Task_debug M:2 DEF libhdr.h[751] Task_debug=2
+Task_filehandler M:4 DEF libhdr.h[753] Task_filehandler=4
+Task_mbxhandler M:5 DEF libhdr.h[754] Task_mbxhandler=5
+Task_tcphandler M:6 DEF libhdr.h[755] Task_tcphandler=6
+UTF8 M:-1 DEF libhdr.h[643] UTF8=-1
+W2Bsh M:2 DEF libhdr.h[28] W2Bsh=B2Wsh
+abatx G:290 DEF com/bucket.b[130] abatx=
+abatx G:290 LG com/bucket.b[624] batxdot:=batxdot+abatx/sps
+abatx G:290 LG com/bucket.b[858] abatx:=abatx+#x047868C0
+abatx G:290 LG com/bucket.b[860] abatx:=abatx-#x047868C0
+abatx G:290 LG com/bucket.b[868] abatx:=abatx-#x047868C0
+abatx G:290 LG com/bucket.b[870] abatx:=abatx+#x047868C0
+abatx G:290 SG com/bucket.b[572] abatx:=100000*(randno(2001)-1000)
+abatx G:290 SG com/bucket.b[596] abatx:=#x05F5E100
+abatx G:290 SG com/bucket.b[602] abatx:=#x01312D00
+abatx G:290 SG com/bucket.b[603] abatx:=-#x0BEBC200
+abatx G:290 SG com/bucket.b[610] abatx:=-#x05F5E100
+abatx G:290 SG com/bucket.b[616] abatx:=-#x01312D00
+abatx G:290 SG com/bucket.b[617] abatx:=#x0BEBC200
+abatx G:290 SG com/bucket.b[830] abatx:=0
+abatx G:290 SG com/bucket.b[858] abatx:=abatx+#x047868C0
+abatx G:290 SG com/bucket.b[860] abatx:=abatx-#x047868C0
+abatx G:290 SG com/bucket.b[868] abatx:=abatx-#x047868C0
+abatx G:290 SG com/bucket.b[870] abatx:=abatx+#x047868C0
+abatx G:290 SG com/bucket.b[990] abatx:=0
+abaty G:291 DEF com/bucket.b[130] abaty=
+abort G:28 DEF libhdr.h[67] abort=28
+abort G:28 LG com/bucket.b[565] abort(7288)
+abort G:28 LG sdl.b[359] abort(999)
+abort G:28 LG sdl.b[3684] abort(999)
+abort G:28 LG sdl.b[4141] abort(5556)
+abort G:28 LG sdl.b[4167] abort(999)
+abort G:28 LG sdl.b[4397] abort(998)
+activebat G:296 DEF com/bucket.b[135] activebat=
+activebat G:296 LG com/bucket.b[507] IF activebat DO ..
+activebat G:296 LG com/bucket.b[828] activebat:=~activebat
+activebat G:296 SG com/bucket.b[828] activebat:=~activebat
+activebat G:296 SG com/bucket.b[919] activebat:=FALSE
+ag M:5000000 DEF com/bucket.b[39] ag=#x4C4B40
+ag M:5000000 MAN com/bucket.b[466] ay1:=-ag
+ag M:5000000 MAN com/bucket.b[467] ay2:=-ag
+ag M:5000000 MAN com/bucket.b[468] ay3:=-ag
+alloc2dvecs F:60 LF sdl.b[261] alloc2dvecs()
+alloc2dvecs F:60 LF sdl.b[4158] alloc2dvecs()
+alloc2dvecs F:60 RT sdl.b[3677] LET alloc2dvecs()BE..
+alloc3dvecs F:75 LF sdl.b[275] alloc3dvecs()
+alloc3dvecs F:75 RT sdl.b[4157] LET alloc3dvecs()BE..
+appendstream G:66 DEF libhdr.h[105] appendstream=66
+ax1 G:272 DEF com/bucket.b[123] ax1=
+ax1 G:272 LG com/bucket.b[471] ax1:=ax1+randno(2001)-1001
+ax1 G:272 LG com/bucket.b[496] cgx1dot:=cgx1dot+ax1/sps
+ax1 G:272 SG com/bucket.b[466] ax1:=0
+ax1 G:272 SG com/bucket.b[471] ax1:=ax1+randno(2001)-1001
+ax1 G:272 SG com/bucket.b[981] ax1:=0
+ax2 G:278 DEF com/bucket.b[124] ax2=
+ax2 G:278 LG com/bucket.b[472] ax2:=ax2+randno(2001)-1001
+ax2 G:278 LG com/bucket.b[498] cgx2dot:=cgx2dot+ax2/sps
+ax2 G:278 SG com/bucket.b[467] ax2:=0
+ax2 G:278 SG com/bucket.b[472] ax2:=ax2+randno(2001)-1001
+ax2 G:278 SG com/bucket.b[982] ax2:=0
+ax3 G:284 DEF com/bucket.b[125] ax3=
+ax3 G:284 LG com/bucket.b[473] ax3:=ax3+randno(2001)-1001
+ax3 G:284 LG com/bucket.b[500] cgx3dot:=cgx3dot+ax3/sps
+ax3 G:284 SG com/bucket.b[468] ax3:=0
+ax3 G:284 SG com/bucket.b[473] ax3:=ax3+randno(2001)-1001
+ax3 G:284 SG com/bucket.b[983] ax3:=0
+ay1 G:273 DEF com/bucket.b[123] ay1=
+ay1 G:273 LG com/bucket.b[497] cgy1dot:=cgy1dot+ay1/sps
+ay1 G:273 SG com/bucket.b[466] ay1:=-ag
+ay1 G:273 SG com/bucket.b[481] ay1:=0
+ay1 G:273 SG com/bucket.b[486] ay1:=0
+ay1 G:273 SG com/bucket.b[981] ay1:=0
+ay2 G:279 DEF com/bucket.b[124] ay2=
+ay2 G:279 LG com/bucket.b[499] cgy2dot:=cgy2dot+ay2/sps
+ay2 G:279 SG com/bucket.b[467] ay2:=-ag
+ay2 G:279 SG com/bucket.b[481] ay2:=0
+ay2 G:279 SG com/bucket.b[491] ay2:=0
+ay2 G:279 SG com/bucket.b[982] ay2:=0
+ay3 G:285 DEF com/bucket.b[125] ay3=
+ay3 G:285 LG com/bucket.b[501] cgy3dot:=cgy3dot+ay3/sps
+ay3 G:285 SG com/bucket.b[468] ay3:=-ag
+ay3 G:285 SG com/bucket.b[486] ay3:=0
+ay3 G:285 SG com/bucket.b[491] ay3:=0
+ay3 G:285 SG com/bucket.b[983] ay3:=0
+backcolour G:230 DEF com/bucket.b[93] backcolour=
+backcolour G:230 LG com/bucket.b[650] fillsurf(backcolour)
+backcolour G:230 LG com/bucket.b[671] fillsurf(backcolour)
+backcolour G:230 LG com/bucket.b[700] fillsurf(backcolour)
+backcolour G:230 LG com/bucket.b[708] fillsurf(backcolour)
+backcolour G:230 SG com/bucket.b[934] backcolour:=maprgb(120,120,120)
+ball1colour G:233 DEF com/bucket.b[96] ball1colour=
+ball1colour G:233 LG com/bucket.b[716]
+    ball1surfok:=initballsurf(@ball1surf,ball1colour)
+ball1colour G:233 LG com/bucket.b[744] setcolour(ball1colour)
+ball1colour G:233 SG com/bucket.b[937] ball1colour:=maprgb(255,0,0)
+ball1surf G:218 DEF com/bucket.b[77] ball1surf=
+ball1surf G:218 LLG com/bucket.b[1024] freesurface(@ball1surf)
+ball1surf G:218 LLG com/bucket.b[716]
+    ball1surfok:=initballsurf(@ball1surf,ball1colour)
+ball1surf G:218 LLG com/bucket.b[746]
+    blitsurf(@ball1surf,@screen,(cgx1-ballradius)/One,(cgy1+ballradius)/One)
+ball1surf1 G:219 DEF com/bucket.b[78] ball1surf1=
+ball1surfok G:220 DEF com/bucket.b[79] ball1surfok=
+ball1surfok G:220 LG com/bucket.b[1024] IF ball1surfok DO ..
+ball1surfok G:220 LG com/bucket.b[715] UNLESS ball1surfok DO ..
+ball1surfok G:220 LG com/bucket.b[745] IF ball1surfok DO ..
+ball1surfok G:220 SG com/bucket.b[716]
+    ball1surfok:=initballsurf(@ball1surf,ball1colour)
+ball1surfok G:220 SG com/bucket.b[891] ball1surfok:=FALSE
+ball2colour G:234 DEF com/bucket.b[97] ball2colour=
+ball2colour G:234 LG com/bucket.b[718]
+    ball2surfok:=initballsurf(@ball2surf,ball2colour)
+ball2colour G:234 LG com/bucket.b[747] setcolour(ball2colour)
+ball2colour G:234 SG com/bucket.b[938] ball2colour:=maprgb(0,255,0)
+ball2surf G:221 DEF com/bucket.b[81] ball2surf=
+ball2surf G:221 LLG com/bucket.b[1025] freesurface(@ball2surf)
+ball2surf G:221 LLG com/bucket.b[718]
+    ball2surfok:=initballsurf(@ball2surf,ball2colour)
+ball2surf G:221 LLG com/bucket.b[749]
+    blitsurf(@ball2surf,@screen,(cgx2-ballradius)/One,(cgy2+ballradius)/One)
+ball2surf1 G:222 DEF com/bucket.b[82] ball2surf1=
+ball2surfok G:223 DEF com/bucket.b[83] ball2surfok=
+ball2surfok G:223 LG com/bucket.b[1025] IF ball2surfok DO ..
+ball2surfok G:223 LG com/bucket.b[717] UNLESS ball2surfok DO ..
+ball2surfok G:223 LG com/bucket.b[748] IF ball2surfok DO ..
+ball2surfok G:223 SG com/bucket.b[718]
+    ball2surfok:=initballsurf(@ball2surf,ball2colour)
+ball2surfok G:223 SG com/bucket.b[892] ball2surfok:=FALSE
+ball3colour G:235 DEF com/bucket.b[98] ball3colour=
+ball3colour G:235 LG com/bucket.b[720]
+    ball3surfok:=initballsurf(@ball3surf,ball3colour)
+ball3colour G:235 LG com/bucket.b[750] setcolour(ball3colour)
+ball3colour G:235 SG com/bucket.b[939] ball3colour:=maprgb(0,0,255)
+ball3surf G:224 DEF com/bucket.b[85] ball3surf=
+ball3surf G:224 LLG com/bucket.b[1026] freesurface(@ball3surf)
+ball3surf G:224 LLG com/bucket.b[720]
+    ball3surfok:=initballsurf(@ball3surf,ball3colour)
+ball3surf G:224 LLG com/bucket.b[752]
+    blitsurf(@ball3surf,@screen,(cgx3-ballradius)/One,(cgy3+ballradius)/One)
+ball3surf1 G:225 DEF com/bucket.b[86] ball3surf1=
+ball3surfok G:226 DEF com/bucket.b[87] ball3surfok=
+ball3surfok G:226 LG com/bucket.b[1026] IF ball3surfok DO ..
+ball3surfok G:226 LG com/bucket.b[719] UNLESS ball3surfok DO ..
+ball3surfok G:226 LG com/bucket.b[751] IF ball3surfok DO ..
+ball3surfok G:226 SG com/bucket.b[720]
+    ball3surfok:=initballsurf(@ball3surf,ball3colour)
+ball3surfok G:226 SG com/bucket.b[893] ball3surfok:=FALSE
+ballbounces F:15 LF com/bucket.b[475] ballbounces(@cgx1)
+ballbounces F:15 LF com/bucket.b[476] ballbounces(@cgx2)
+ballbounces F:15 LF com/bucket.b[477] ballbounces(@cgx3)
+ballbounces F:15 RT com/bucket.b[300] LET ballbounces(pv)BE..
+ballradius M:2500000 DEF com/bucket.b[35] ballradius=#x2625A0
+ballradius M:2500000 MAN com/bucket.b[313]
+    IF incontact(@ecx,pv,endradius+ballradius) DO ..
+ballradius M:2500000 MAN com/bucket.b[319]
+    IF incontact(@ecx,pv,endradius+ballradius) DO ..
+ballradius M:2500000 MAN com/bucket.b[378]
+    IF incontact(@ecx,pv,endradius+ballradius) DO ..
+ballradius M:2500000 MAN com/bucket.b[385]
+    IF incontact(@ecx,pv,endradius+ballradius) DO ..
+ballradius M:2500000 MAN com/bucket.b[397]
+    IF incontact(@batx,pv,batradius+ballradius) DO ..
+ballradius M:2500000 MAN com/bucket.b[480]
+    IF incontact(@cgx1,@cgx2,ballradius+ballradius) DO ..
+ballradius M:2500000 MAN com/bucket.b[485]
+    IF incontact(@cgx1,@cgx3,ballradius+ballradius) DO ..
+ballradius M:2500000 MAN com/bucket.b[490]
+    IF incontact(@cgx2,@cgx3,ballradius+ballradius) DO ..
+ballradius M:2500000 MAN com/bucket.b[679] 2*ballradius/One+2
+ballradius M:2500000 MAN com/bucket.b[689]
+    drawfillcircle(ballradius/One,ballradius/One+1,ballradius/One)
+ballradius M:2500000 MAN com/bucket.b[746]
+    blitsurf(@ball1surf,@screen,(cgx1-ballradius)/One,(cgy1+ballradius)/One)
+ballradius M:2500000 MAN com/bucket.b[749]
+    blitsurf(@ball2surf,@screen,(cgx2-ballradius)/One,(cgy2+ballradius)/One)
+ballradius M:2500000 MAN com/bucket.b[752]
+    blitsurf(@ball3surf,@screen,(cgx3-ballradius)/One,(cgy3+ballradius)/One)
+ballradius M:2500000 MAN com/bucket.b[790]
+    cgy1:=bucket_byt+ballradius+1000000
+ballradius M:2500000 MAN com/bucket.b[791]
+    cgy2:=bucket_byt+3*ballradius+#x1E8480
+ballradius M:2500000 MAN com/bucket.b[792]
+    cgy3:=bucket_byt+5*ballradius+#x2DC6C0
+ballradius M:2500000 MAN com/bucket.b[949]
+    bucket_tyt:=ceiling_yb-6*ballradius
+ballradius M:2500000 MAN com/bucket.b[953]
+    bucket_lxr:=screen_xc-ballradius*5/2
+ballradius M:2500000 MAN com/bucket.b[957]
+    bucket_rxl:=screen_xc+ballradius*5/2
+ballradius M:2500000 MAN com/bucket.b[961]
+    bucket_byt:=bucket_tyt-6*ballradius
+ballradius M:2500000 MAN com/bucket.b[965]
+    xlim_lwall:=wall_lx+ballradius
+ballradius M:2500000 MAN com/bucket.b[966]
+    xlim_rwall:=wall_rx-ballradius
+ballradius M:2500000 MAN com/bucket.b[967]
+    ylim_floor:=floor_yt+ballradius
+ballradius M:2500000 MAN com/bucket.b[968]
+    ylim_ceiling:=ceiling_yb-ballradius
+ballradius M:2500000 MAN com/bucket.b[969]
+    xlim_bucket_ll:=bucket_lxl-ballradius
+ballradius M:2500000 MAN com/bucket.b[970]
+    xlim_bucket_lc:=bucket_lxc-ballradius
+ballradius M:2500000 MAN com/bucket.b[971]
+    xlim_bucket_lr:=bucket_lxr+ballradius
+ballradius M:2500000 MAN com/bucket.b[972]
+    xlim_bucket_rl:=bucket_rxl-ballradius
+ballradius M:2500000 MAN com/bucket.b[973]
+    xlim_bucket_rc:=bucket_rxc-ballradius
+ballradius M:2500000 MAN com/bucket.b[974]
+    xlim_bucket_rr:=bucket_rxr+ballradius
+ballradius M:2500000 MAN com/bucket.b[975]
+    ylim_topt:=bucket_tyt+ballradius
+ballradius M:2500000 MAN com/bucket.b[976]
+    ylim_baseb:=bucket_byb-ballradius
+ballradius M:2500000 MAN com/bucket.b[977]
+    ylim_baset:=bucket_byt+ballradius
+ballradius M:2500000 MAN com/bucket.b[987]
+    ylim_bat:=floor_yt+batradius+ballradius
+batcolour G:236 DEF com/bucket.b[99] batcolour=
+batcolour G:236 LG com/bucket.b[701] setcolour(batcolour)
+batcolour G:236 SG com/bucket.b[940] batcolour:=maprgb(40,40,40)
+batradius M:1000000 DEF com/bucket.b[34] batradius=1000000
+batradius M:1000000 MAN com/bucket.b[397]
+    IF incontact(@batx,pv,batradius+ballradius) DO ..
+batradius M:1000000 MAN com/bucket.b[631]
+    IF batx+batradius>wall_rx DO ..
+batradius M:1000000 MAN com/bucket.b[632] batx:=wall_rx-batradius
+batradius M:1000000 MAN com/bucket.b[635] IF batx-batradius<0 DO ..
+batradius M:1000000 MAN com/bucket.b[636] batx:=batradius
+batradius M:1000000 MAN com/bucket.b[641] baty:=baty-(baty-batradius)/10
+batradius M:1000000 MAN com/bucket.b[696] 2*batradius/One+2
+batradius M:1000000 MAN com/bucket.b[702]
+    drawfillcircle(batradius/One,batradius/One+1,batradius/One)
+batradius M:1000000 MAN com/bucket.b[741]
+    blitsurf(@batsurf,@screen,(batx-batradius)/One,(baty+batradius)/One)
+batradius M:1000000 MAN com/bucket.b[986] baty:=floor_yt+batradius
+batradius M:1000000 MAN com/bucket.b[987]
+    ylim_bat:=floor_yt+batradius+ballradius
+batsurf G:227 DEF com/bucket.b[89] batsurf=
+batsurf G:227 LLG com/bucket.b[1027] freesurface(@batsurf)
+batsurf G:227 LLG com/bucket.b[722] batsurfok:=initbatsurf(@batsurf)
+batsurf G:227 LLG com/bucket.b[741]
+    blitsurf(@batsurf,@screen,(batx-batradius)/One,(baty+batradius)/One)
+batsurf1 G:228 DEF com/bucket.b[90] batsurf1=
+batsurfok G:229 DEF com/bucket.b[91] batsurfok=
+batsurfok G:229 LG com/bucket.b[1027] IF batsurfok DO ..
+batsurfok G:229 LG com/bucket.b[721] UNLESS batsurfok DO ..
+batsurfok G:229 LG com/bucket.b[740] IF batsurfok DO ..
+batsurfok G:229 SG com/bucket.b[722] batsurfok:=initbatsurf(@batsurf)
+batsurfok G:229 SG com/bucket.b[894] batsurfok:=FALSE
+batx G:286 DEF com/bucket.b[130] batx=
+batx G:286 LG com/bucket.b[509] writef("*nbatx't=%8.5d*n",batx,batxdot)
+batx G:286 LG com/bucket.b[562] rbs:=muldiv(targetx-batx,100000,t)
+batx G:286 LG com/bucket.b[563]
+    writef("targe's=%8.5d*n",targetx,batx,t,rbs)
+batx G:286 LG com/bucket.b[589] dist:=minx-batx
+batx G:286 LG com/bucket.b[629] batx:=batx+batxdot/sps
+batx G:286 LG com/bucket.b[631] IF batx+batradius>wall_rx DO ..
+batx G:286 LG com/bucket.b[635] IF batx-batradius<0 DO ..
+batx G:286 LG com/bucket.b[741]
+    blitsurf(@batsurf,@screen,(batx-batradius)/One,(baty+batradius)/One)
+batx G:286 LG com/bucket.b[784]
+    drawf(30,175,"Bat  't=%10.5d",batx,baty,batxdot)
+batx G:286 LLG com/bucket.b[397]
+    IF incontact(@batx,pv,batradius+ballradius) DO ..
+batx G:286 LLG com/bucket.b[399] cbounce(@batx,pv,5,1)
+batx G:286 SG com/bucket.b[629] batx:=batx+batxdot/sps
+batx G:286 SG com/bucket.b[632] batx:=wall_rx-batradius
+batx G:286 SG com/bucket.b[636] batx:=batradius
+batx G:286 SG com/bucket.b[985] batx:=screen_xc
+batxdot G:288 DEF com/bucket.b[130] batxdot=
+batxdot G:288 LG com/bucket.b[509]
+    writef("*nbatx't=%8.5d*n",batx,batxdot)
+batxdot G:288 LG com/bucket.b[601] TEST batxdot>=0 THEN .. ELSE ..
+batxdot G:288 LG com/bucket.b[615] TEST batxdot<=0 THEN .. ELSE ..
+batxdot G:288 LG com/bucket.b[624] batxdot:=batxdot+abatx/sps
+batxdot G:288 LG com/bucket.b[626] IF batxdot>#x03938700 DO ..
+batxdot G:288 LG com/bucket.b[627] IF batxdot<-#x03938700 DO ..
+batxdot G:288 LG com/bucket.b[629] batx:=batx+batxdot/sps
+batxdot G:288 LG com/bucket.b[633] batxdot:=-batxdot
+batxdot G:288 LG com/bucket.b[637] batxdot:=-batxdot
+batxdot G:288 LG com/bucket.b[784]
+    drawf(30,175,"Bat  't=%10.5d",batx,baty,batxdot)
+batxdot G:288 SG com/bucket.b[624] batxdot:=batxdot+abatx/sps
+batxdot G:288 SG com/bucket.b[626] batxdot:=#x01C9C380
+batxdot G:288 SG com/bucket.b[627] batxdot:=-#x01C9C380
+batxdot G:288 SG com/bucket.b[633] batxdot:=-batxdot
+batxdot G:288 SG com/bucket.b[637] batxdot:=-batxdot
+batxdot G:288 SG com/bucket.b[989] batxdot:=#xE4E1C0
+baty G:287 DEF com/bucket.b[130] baty=
+baty G:287 LG com/bucket.b[641] baty:=baty-(baty-batradius)/10
+baty G:287 LG com/bucket.b[741]
+    blitsurf(@batsurf,@screen,(batx-batradius)/One,(baty+batradius)/One)
+baty G:287 LG com/bucket.b[784]
+    drawf(30,175,"Bat  't=%10.5d",batx,baty,batxdot)
+baty G:287 SG com/bucket.b[641] baty:=baty-(baty-batradius)/10
+baty G:287 SG com/bucket.b[986] baty:=floor_yt+batradius
+batydot G:289 DEF com/bucket.b[130] batydot=
+batydot G:289 SG com/bucket.b[400] batydot:=0
+batydot G:289 SG com/bucket.b[989] batydot:=0
+binrdch G:39 DEF libhdr.h[78] binrdch=39
+binwrch G:42 DEF libhdr.h[81] binwrch=42
+bitsperbyte M:8 DEF libhdr.h[249] bitsperbyte=8
+bitsperbyte M:8 MAN libhdr.h[250] bitsperword=bitsperbyte*bytesperword
+bitsperword M:32 DEF libhdr.h[250] bitsperword=bitsperbyte*bytesperword
+bitsperword M:32 MAN libhdr.h[252] minint=1<<bitsperword-1
+bld_CYGWIN M:43 DEF libhdr.h[538] bld_CYGWIN=43
+bld_MacOSX M:31 DEF libhdr.h[530] bld_MacOSX=31
+bld_MacOSXSDL M:32 DEF libhdr.h[531] bld_MacOSXSDL=32
+bld_MacOSXSDL2 M:33 DEF libhdr.h[532] bld_MacOSXSDL2=33
+bld_MacOSXSDL2GL M:35 DEF libhdr.h[534] bld_MacOSXSDL2GL=35
+bld_MacOSXSDLGL M:34 DEF libhdr.h[533] bld_MacOSXSDLGL=34
+bld_Raspi M:21 DEF libhdr.h[524] bld_Raspi=21
+bld_RaspiSDL M:22 DEF libhdr.h[525] bld_RaspiSDL=22
+bld_RaspiSDL2 M:23 DEF libhdr.h[526] bld_RaspiSDL2=23
+bld_RaspiSDL2GL M:25 DEF libhdr.h[528] bld_RaspiSDL2GL=25
+bld_RaspiSDLGL M:24 DEF libhdr.h[527] bld_RaspiSDLGL=24
+bld_VmsVax M:41 DEF libhdr.h[536] bld_VmsVax=41
+bld_Win32 M:42 DEF libhdr.h[537] bld_Win32=42
+bld_linux M:1 DEF libhdr.h[516] bld_linux=1
+bld_linuxGL M:4 DEF libhdr.h[519] bld_linuxGL=4
+bld_linuxSDL M:2 DEF libhdr.h[517] bld_linuxSDL=2
+bld_linuxSDL2 M:3 DEF libhdr.h[518] bld_linuxSDL2=3
+bld_linuxSDL2GL M:6 DEF libhdr.h[521] bld_linuxSDL2GL=6
+bld_linuxSDLGL M:5 DEF libhdr.h[520] bld_linuxSDLGL=5
+bld_linuxiSH M:7 DEF libhdr.h[522] bld_linuxiSH=7
+bld_unknown M:0 DEF libhdr.h[515] bld_unknown=0
+bldf_ALSAavail M:8 DEF libhdr.h[545] bldf_ALSAavail=1<<3
+bldf_GLavail M:32 DEF libhdr.h[547] bldf_GLavail=1<<5
+bldf_SDLavail M:16 DEF libhdr.h[546] bldf_SDLavail=1<<4
+bldf_callc M:2 DEF libhdr.h[543] bldf_callc=1<<1
+bldf_joystick M:4 DEF libhdr.h[544] bldf_joystick=1<<2
+bldf_sound M:1 DEF libhdr.h[542] bldf_sound=1
+blitsurf G:527 DEF sdl.h[202] blitsurf=
+blitsurf G:527 LG com/bucket.b[726]
+    blitsurf(@bucketwallsurf,@screen,bucket_lxl/One,bucket_tyt/One)
+blitsurf G:527 LG com/bucket.b[730]
+    blitsurf(@bucketwallsurf,@screen,bucket_rxl/One,bucket_tyt/One)
+blitsurf G:527 LG com/bucket.b[737]
+    blitsurf(@bucketbasesurf,@screen,bucket_lxc/One,bucket_byt/One-1)
+blitsurf G:527 LG com/bucket.b[741]
+    blitsurf(@batsurf,@screen,(batx-batradius)/One,(baty+batradius)/One)
+blitsurf G:527 LG com/bucket.b[746]
+    blitsurf(@ball1surf,@screen,(cgx1-ballradius)/One,(cgy1+ballradius)/One)
+blitsurf G:527 LG com/bucket.b[749]
+    blitsurf(@ball2surf,@screen,(cgx2-ballradius)/One,(cgy2+ballradius)/One)
+blitsurf G:527 LG com/bucket.b[752]
+    blitsurf(@ball3surf,@screen,(cgx3-ballradius)/One,(cgy3+ballradius)/One)
+blitsurf G:527 RT sdl.b[330] LET blitsurf(srcptr,dstptr,x,y)BE..
+blitsurfrect G:528 DEF sdl.h[203] blitsurfrect=
+blitsurfrect G:528 RT sdl.b[342]
+    LET blitsurfrect(srcptr,srcrect,dstptr,x,y)BE..
+bootregs M:11 DEF libhdr.h[503] bootregs=11
+bucket_byb G:251 DEF com/bucket.b[111] bucket_byb=
+bucket_byb G:251 LG com/bucket.b[647] (bucket_tyt-bucket_byb)/One+2
+bucket_byb G:251 LG com/bucket.b[976] ylim_baseb:=bucket_byb-ballradius
+bucket_byb G:251 SG com/bucket.b[963]
+    bucket_byb:=bucket_byt-bucketthickness
+bucket_byc G:252 DEF com/bucket.b[111] bucket_byc=
+bucket_byc G:252 LG com/bucket.b[328] IF cy>=bucket_byc DO ..
+bucket_byc G:252 LG com/bucket.b[358] IF cy<bucket_byc DO ..
+bucket_byc G:252 LG com/bucket.b[365]
+    IF bucket_byc<=cy&cy<=ylim_baset DO ..
+bucket_byc G:252 LG com/bucket.b[376] IF cy<bucket_byc DO ..
+bucket_byc G:252 LG com/bucket.b[377] bucket_byc
+bucket_byc G:252 LG com/bucket.b[521]
+    IF currballno=1&(cgy1>bucket_byc|cgy1dot>0) DO ..
+bucket_byc G:252 LG com/bucket.b[522]
+    IF currballno=2&(cgy2>bucket_byc|cgy2dot>0) DO ..
+bucket_byc G:252 LG com/bucket.b[523]
+    IF currballno=3&(cgy3>bucket_byc|cgy3dot>0) DO ..
+bucket_byc G:252 LG com/bucket.b[526]
+    IF currballno<0&cgy1<bucket_byc&cgy1dot<=0 DO ..
+bucket_byc G:252 LG com/bucket.b[527]
+    IF currballno<0&cgy2<bucket_byc&cgy2dot<=0 DO ..
+bucket_byc G:252 LG com/bucket.b[528]
+    IF currballno<0&cgy3<bucket_byc&cgy3dot<=0 DO ..
+bucket_byc G:252 SG com/bucket.b[962] bucket_byc:=bucket_byt-endradius
+bucket_byt G:253 DEF com/bucket.b[111] bucket_byt=
+bucket_byt G:253 LG com/bucket.b[454]
+    IF ...&...&...&...&bucket_lxc<cgx3&cgx3<bucket_rxc&ABS cgy1dot<200000&ABS cgy2dot<200000&ABS cgy3dot<200000 DO ..
+bucket_byt G:253 LG com/bucket.b[737]
+    blitsurf(@bucketbasesurf,@screen,bucket_lxc/One,bucket_byt/One-1)
+bucket_byt G:253 LG com/bucket.b[790]
+    cgy1:=bucket_byt+ballradius+1000000
+bucket_byt G:253 LG com/bucket.b[791]
+    cgy2:=bucket_byt+3*ballradius+#x1E8480
+bucket_byt G:253 LG com/bucket.b[792]
+    cgy3:=bucket_byt+5*ballradius+#x2DC6C0
+bucket_byt G:253 LG com/bucket.b[962] bucket_byc:=bucket_byt-endradius
+bucket_byt G:253 LG com/bucket.b[963]
+    bucket_byb:=bucket_byt-bucketthickness
+bucket_byt G:253 LG com/bucket.b[977] ylim_baset:=bucket_byt+ballradius
+bucket_byt G:253 SG com/bucket.b[961]
+    bucket_byt:=bucket_tyt-6*ballradius
+bucket_lxc G:243 DEF com/bucket.b[108] bucket_lxc=
+bucket_lxc G:243 LG com/bucket.b[312] bucket_lxc
+bucket_lxc G:243 LG com/bucket.b[331] IF cx<=bucket_lxc DO ..
+bucket_lxc G:243 LG com/bucket.b[336]
+    IF bucket_lxc<cx&cx<=xlim_bucket_lr DO ..
+bucket_lxc G:243 LG com/bucket.b[356]
+    IF bucket_lxc<=cx&cx<=bucket_rxc DO ..
+bucket_lxc G:243 LG com/bucket.b[377] bucket_lxc
+bucket_lxc G:243 LG com/bucket.b[441]
+    IF ylim_baseb<cgy1&bucket_lxc<cgx1&cgx1<bucket_rxc DO ..
+bucket_lxc G:243 LG com/bucket.b[442]
+    IF ylim_baseb<cgy2&bucket_lxc<cgx2&cgx2<bucket_rxc DO ..
+bucket_lxc G:243 LG com/bucket.b[443]
+    IF ylim_baseb<cgy3&bucket_lxc<cgx3&cgx3<bucket_rxc DO ..
+bucket_lxc G:243 LG com/bucket.b[454]
+    IF ...&...&...&...&bucket_lxc<cgx3&cgx3<bucket_rxc&ABS cgy1dot<200000&ABS cgy2dot<200000&ABS cgy3dot<200000 DO ..
+bucket_lxc G:243 LG com/bucket.b[667] (bucket_rxc-bucket_lxc)/One+1
+bucket_lxc G:243 LG com/bucket.b[737]
+    blitsurf(@bucketbasesurf,@screen,bucket_lxc/One,bucket_byt/One-1)
+bucket_lxc G:243 LG com/bucket.b[835]
+    UNLESS ylim_baseb<cgy1&...&...&ylim_baseb<cgy2&bucket_lxc<cgx2&cgx2<bucket_rxc&ylim_baseb<cgy3&bucket_lxc<cgx3&cgx3<bucket_rxc DO ..
+bucket_lxc G:243 LG com/bucket.b[970]
+    xlim_bucket_lc:=bucket_lxc-ballradius
+bucket_lxc G:243 SG com/bucket.b[954] bucket_lxc:=bucket_lxr-endradius
+bucket_lxl G:242 DEF com/bucket.b[108] bucket_lxl=
+bucket_lxl G:242 LG com/bucket.b[726]
+    blitsurf(@bucketwallsurf,@screen,bucket_lxl/One,bucket_tyt/One)
+bucket_lxl G:242 LG com/bucket.b[969]
+    xlim_bucket_ll:=bucket_lxl-ballradius
+bucket_lxl G:242 SG com/bucket.b[955]
+    bucket_lxl:=bucket_lxr-bucketthickness
+bucket_lxr G:244 DEF com/bucket.b[108] bucket_lxr=
+bucket_lxr G:244 LG com/bucket.b[954] bucket_lxc:=bucket_lxr-endradius
+bucket_lxr G:244 LG com/bucket.b[955]
+    bucket_lxl:=bucket_lxr-bucketthickness
+bucket_lxr G:244 LG com/bucket.b[971]
+    xlim_bucket_lr:=bucket_lxr+ballradius
+bucket_lxr G:244 SG com/bucket.b[953]
+    bucket_lxr:=screen_xc-ballradius*5/2
+bucket_rxc G:246 DEF com/bucket.b[109] bucket_rxc=
+bucket_rxc G:246 LG com/bucket.b[318] ecx:=bucket_rxc
+bucket_rxc G:246 LG com/bucket.b[341]
+    IF xlim_bucket_rl<=cx&cx<bucket_rxc DO ..
+bucket_rxc G:246 LG com/bucket.b[346] IF bucket_rxc<cx DO ..
+bucket_rxc G:246 LG com/bucket.b[356]
+    IF bucket_lxc<=cx&cx<=bucket_rxc DO ..
+bucket_rxc G:246 LG com/bucket.b[384] ecx:=bucket_rxc
+bucket_rxc G:246 LG com/bucket.b[441]
+    IF ylim_baseb<cgy1&bucket_lxc<cgx1&cgx1<bucket_rxc DO ..
+bucket_rxc G:246 LG com/bucket.b[442]
+    IF ylim_baseb<cgy2&bucket_lxc<cgx2&cgx2<bucket_rxc DO ..
+bucket_rxc G:246 LG com/bucket.b[443]
+    IF ylim_baseb<cgy3&bucket_lxc<cgx3&cgx3<bucket_rxc DO ..
+bucket_rxc G:246 LG com/bucket.b[454]
+    IF ...&...&...&...&bucket_lxc<cgx3&cgx3<bucket_rxc&ABS cgy1dot<200000&ABS cgy2dot<200000&ABS cgy3dot<200000 DO ..
+bucket_rxc G:246 LG com/bucket.b[667] (bucket_rxc-bucket_lxc)/One+1
+bucket_rxc G:246 LG com/bucket.b[835]
+    UNLESS ylim_baseb<cgy1&...&...&ylim_baseb<cgy2&bucket_lxc<cgx2&cgx2<bucket_rxc&ylim_baseb<cgy3&bucket_lxc<cgx3&cgx3<bucket_rxc DO ..
+bucket_rxc G:246 LG com/bucket.b[973]
+    xlim_bucket_rc:=bucket_rxc-ballradius
+bucket_rxc G:246 SG com/bucket.b[958] bucket_rxc:=bucket_rxl+endradius
+bucket_rxl G:245 DEF com/bucket.b[109] bucket_rxl=
+bucket_rxl G:245 LG com/bucket.b[730]
+    blitsurf(@bucketwallsurf,@screen,bucket_rxl/One,bucket_tyt/One)
+bucket_rxl G:245 LG com/bucket.b[958] bucket_rxc:=bucket_rxl+endradius
+bucket_rxl G:245 LG com/bucket.b[959]
+    bucket_rxr:=bucket_rxl+bucketthickness
+bucket_rxl G:245 LG com/bucket.b[972]
+    xlim_bucket_rl:=bucket_rxl-ballradius
+bucket_rxl G:245 SG com/bucket.b[957]
+    bucket_rxl:=screen_xc+ballradius*5/2
+bucket_rxr G:247 DEF com/bucket.b[109] bucket_rxr=
+bucket_rxr G:247 LG com/bucket.b[974]
+    xlim_bucket_rr:=bucket_rxr+ballradius
+bucket_rxr G:247 SG com/bucket.b[959]
+    bucket_rxr:=bucket_rxl+bucketthickness
+bucket_tyb G:248 DEF com/bucket.b[110] bucket_tyb=
+bucket_tyb G:248 LG com/bucket.b[454]
+    IF ...&...&...&...&bucket_lxc<cgx3&cgx3<bucket_rxc&ABS cgy1dot<200000&ABS cgy2dot<200000&ABS cgy3dot<200000 DO ..
+bucket_tyb G:248 SG com/bucket.b[951]
+    bucket_tyb:=bucket_tyt-bucketthickness
+bucket_tyc G:249 DEF com/bucket.b[110] bucket_tyc=
+bucket_tyc G:249 LG com/bucket.b[311] IF cy>bucket_tyc DO ..
+bucket_tyc G:249 LG com/bucket.b[312] bucket_tyc
+bucket_tyc G:249 SG com/bucket.b[950] bucket_tyc:=bucket_tyt-endradius
+bucket_tyt G:250 DEF com/bucket.b[110] bucket_tyt=
+bucket_tyt G:250 LG com/bucket.b[647] (bucket_tyt-bucket_byb)/One+2
+bucket_tyt G:250 LG com/bucket.b[726]
+    blitsurf(@bucketwallsurf,@screen,bucket_lxl/One,bucket_tyt/One)
+bucket_tyt G:250 LG com/bucket.b[730]
+    blitsurf(@bucketwallsurf,@screen,bucket_rxl/One,bucket_tyt/One)
+bucket_tyt G:250 LG com/bucket.b[950] bucket_tyc:=bucket_tyt-endradius
+bucket_tyt G:250 LG com/bucket.b[951]
+    bucket_tyb:=bucket_tyt-bucketthickness
+bucket_tyt G:250 LG com/bucket.b[961]
+    bucket_byt:=bucket_tyt-6*ballradius
+bucket_tyt G:250 LG com/bucket.b[975] ylim_topt:=bucket_tyt+ballradius
+bucket_tyt G:250 SG com/bucket.b[949]
+    bucket_tyt:=ceiling_yb-6*ballradius
+bucketbasesurf G:215 DEF com/bucket.b[73] bucketbasesurf=
+bucketbasesurf G:215 LLG com/bucket.b[1023] freesurface(@bucketbasesurf)
+bucketbasesurf G:215 LLG com/bucket.b[714]
+    bucketbasesurfok:=initbucketbasesurf(@bucketbasesurf)
+bucketbasesurf G:215 LLG com/bucket.b[737]
+    blitsurf(@bucketbasesurf,@screen,bucket_lxc/One,bucket_byt/One-1)
+bucketbasesurf1 G:216 DEF com/bucket.b[74] bucketbasesurf1=
+bucketbasesurfok G:217 DEF com/bucket.b[75] bucketbasesurfok=
+bucketbasesurfok G:217 LG com/bucket.b[1023] IF bucketbasesurfok DO ..
+bucketbasesurfok G:217 LG com/bucket.b[713]
+    UNLESS bucketbasesurfok DO ..
+bucketbasesurfok G:217 LG com/bucket.b[733] IF bucketbasesurfok DO ..
+bucketbasesurfok G:217 SG com/bucket.b[714]
+    bucketbasesurfok:=initbucketbasesurf(@bucketbasesurf)
+bucketbasesurfok G:217 SG com/bucket.b[890] bucketbasesurfok:=FALSE
+bucketcolour G:231 DEF com/bucket.b[94] bucketcolour=
+bucketcolour G:231 LG com/bucket.b[655] setcolour(bucketcolour)
+bucketcolour G:231 LG com/bucket.b[660] setcolour(bucketcolour)
+bucketcolour G:231 LG com/bucket.b[672] setcolour(bucketcolour)
+bucketcolour G:231 SG com/bucket.b[935] bucketcolour:=maprgb(170,60,30)
+bucketendcolour G:232 DEF com/bucket.b[95] bucketendcolour=
+bucketendcolour G:232 LG com/bucket.b[654] setcolour(bucketendcolour)
+bucketendcolour G:232 SG com/bucket.b[936]
+    bucketendcolour:=maprgb(140,30,30)
+bucketthickness M:3000000 DEF com/bucket.b[37]
+    bucketthickness=2*endradius
+bucketthickness M:3000000 MAN com/bucket.b[951]
+    bucket_tyb:=bucket_tyt-bucketthickness
+bucketthickness M:3000000 MAN com/bucket.b[955]
+    bucket_lxl:=bucket_lxr-bucketthickness
+bucketthickness M:3000000 MAN com/bucket.b[959]
+    bucket_rxr:=bucket_rxl+bucketthickness
+bucketthickness M:3000000 MAN com/bucket.b[963]
+    bucket_byb:=bucket_byt-bucketthickness
+bucketwallsurf G:212 DEF com/bucket.b[69] bucketwallsurf=
+bucketwallsurf G:212 LLG com/bucket.b[1022] freesurface(@bucketwallsurf)
+bucketwallsurf G:212 LLG com/bucket.b[712]
+    bucketwallsurfok:=initbucketwallsurf(@bucketwallsurf)
+bucketwallsurf G:212 LLG com/bucket.b[726]
+    blitsurf(@bucketwallsurf,@screen,bucket_lxl/One,bucket_tyt/One)
+bucketwallsurf G:212 LLG com/bucket.b[730]
+    blitsurf(@bucketwallsurf,@screen,bucket_rxl/One,bucket_tyt/One)
+bucketwallsurf G:212 LLG com/bucket.b[820] freesurface(@bucketwallsurf)
+bucketwallsurf1 G:213 DEF com/bucket.b[70] bucketwallsurf1=
+bucketwallsurfok G:214 DEF com/bucket.b[71] bucketwallsurfok=
+bucketwallsurfok G:214 LG com/bucket.b[1022] IF bucketwallsurfok DO ..
+bucketwallsurfok G:214 LG com/bucket.b[711]
+    UNLESS bucketwallsurfok DO ..
+bucketwallsurfok G:214 LG com/bucket.b[725] IF bucketwallsurfok DO ..
+bucketwallsurfok G:214 LG com/bucket.b[729] IF bucketwallsurfok DO ..
+bucketwallsurfok G:214 LG com/bucket.b[819] IF bucketwallsurfok DO ..
+bucketwallsurfok G:214 SG com/bucket.b[712]
+    bucketwallsurfok:=initbucketwallsurf(@bucketwallsurf)
+bucketwallsurfok G:214 SG com/bucket.b[821] bucketwallsurfok:=FALSE
+bucketwallsurfok G:214 SG com/bucket.b[889] bucketwallsurfok:=FALSE
+bytesperword M:4 DEF libhdr.h[248] bytesperword=1<<B2Wsh
+bytesperword M:4 MAN libhdr.h[250] bitsperword=bitsperbyte*bytesperword
+bytesperword M:4 MAN libhdr.h[251] mcaddrinc=bytesperword
+bytesperword M:4 MAN libhdr.h[593]
+    scb_nameeend=scb_name+scb_maxnamelen/bytesperword
+bytesperword M:4 MAN libhdr.h[708]
+    tcb_upb=tcb_namebase+15/bytesperword+1
+bytesperword M:4 MAN sdl.b[147] LET mes=VEC 256/bytesperword
+bytesperword M:4 MAN sdl.b[215] LET mes=VEC 256/bytesperword
+bytesperword M:4 MAN sdl.b[3613] LET s=VEC 256/bytesperword
+callco G:19 DEF libhdr.h[58] callco=19
+callseg G:107 DEF libhdr.h[147] callseg=107
+capitalch G:96 DEF libhdr.h[136] capitalch=96
+capitalch G:96 LG com/bucket.b[808] SWITCHON capitalch(eventa2) INTO..
+capitalch G:96 LG com/bucket.b[864] SWITCHON capitalch(eventa2) INTO..
+cbounce F:11 LF com/bucket.b[314] cbounce(@ecx,pv,1,0)
+cbounce F:11 LF com/bucket.b[320] cbounce(@ecx,pv,1,0)
+cbounce F:11 LF com/bucket.b[380] cbounce(@ecx,pv,1,0)
+cbounce F:11 LF com/bucket.b[387] cbounce(@ecx,pv,1,0)
+cbounce F:11 LF com/bucket.b[399] cbounce(@batx,pv,5,1)
+cbounce F:11 LF com/bucket.b[482] cbounce(@cgx1,@cgx2,1,1)
+cbounce F:11 LF com/bucket.b[487] cbounce(@cgx1,@cgx3,1,1)
+cbounce F:11 LF com/bucket.b[492] cbounce(@cgx2,@cgx3,1,1)
+cbounce F:11 RT com/bucket.b[157] LET cbounce(p1,p2,m1,m2)BE..
+ceiling_yb G:240 DEF com/bucket.b[104] ceiling_yb=
+ceiling_yb G:240 LG com/bucket.b[949]
+    bucket_tyt:=ceiling_yb-6*ballradius
+ceiling_yb G:240 LG com/bucket.b[968]
+    ylim_ceiling:=ceiling_yb-ballradius
+ceiling_yb G:240 SG com/bucket.b[946] ceiling_yb:=(screenysize-1)*One
+cgx1 G:268 DEF com/bucket.b[123] cgx1=
+cgx1 G:268 LG com/bucket.b[441]
+    IF ylim_baseb<cgy1&bucket_lxc<cgx1&cgx1<bucket_rxc DO ..
+cgx1 G:268 LG com/bucket.b[454]
+    IF ...&...&...&...&bucket_lxc<cgx3&cgx3<bucket_rxc&ABS cgy1dot<200000&ABS cgy2dot<200000&ABS cgy3dot<200000 DO ..
+cgx1 G:268 LG com/bucket.b[503] cgx1:=cgx1+cgx1dot/sps
+cgx1 G:268 LG com/bucket.b[539] selx:=cgx1
+cgx1 G:268 LG com/bucket.b[579] minx:=cgx1
+cgx1 G:268 LG com/bucket.b[746]
+    blitsurf(@ball1surf,@screen,(cgx1-ballradius)/One,(cgy1+ballradius)/One)
+cgx1 G:268 LG com/bucket.b[778]
+    drawf(30,220,"Ball1't=%10.5d",cgx1,cgy1,cgx1dot,cgy1dot)
+cgx1 G:268 LG com/bucket.b[835]
+    UNLESS ylim_baseb<cgy1&...&...&ylim_baseb<cgy2&bucket_lxc<cgx2&cgx2<bucket_rxc&ylim_baseb<cgy3&bucket_lxc<cgx3&cgx3<bucket_rxc DO ..
+cgx1 G:268 LLG com/bucket.b[475] ballbounces(@cgx1)
+cgx1 G:268 LLG com/bucket.b[480]
+    IF incontact(@cgx1,@cgx2,ballradius+ballradius) DO ..
+cgx1 G:268 LLG com/bucket.b[482] cbounce(@cgx1,@cgx2,1,1)
+cgx1 G:268 LLG com/bucket.b[485]
+    IF incontact(@cgx1,@cgx3,ballradius+ballradius) DO ..
+cgx1 G:268 LLG com/bucket.b[487] cbounce(@cgx1,@cgx3,1,1)
+cgx1 G:268 SG com/bucket.b[503] cgx1:=cgx1+cgx1dot/sps
+cgx1 G:268 SG com/bucket.b[793] cgx1:=screen_xc
+cgx1dot G:270 DEF com/bucket.b[123] cgx1dot=
+cgx1dot G:270 LG com/bucket.b[496] cgx1dot:=cgx1dot+ax1/sps
+cgx1dot G:270 LG com/bucket.b[503] cgx1:=cgx1+cgx1dot/sps
+cgx1dot G:270 LG com/bucket.b[539] selxdot:=cgx1dot
+cgx1dot G:270 LG com/bucket.b[579] minxdot:=cgx1dot
+cgx1dot G:270 LG com/bucket.b[778]
+    drawf(30,220,"Ball1't=%10.5d",cgx1,cgy1,cgx1dot,cgy1dot)
+cgx1dot G:270 SG com/bucket.b[496] cgx1dot:=cgx1dot+ax1/sps
+cgx1dot G:270 SG com/bucket.b[794] cgx1dot:=0
+cgx2 G:274 DEF com/bucket.b[124] cgx2=
+cgx2 G:274 LG com/bucket.b[442]
+    IF ylim_baseb<cgy2&bucket_lxc<cgx2&cgx2<bucket_rxc DO ..
+cgx2 G:274 LG com/bucket.b[454]
+    IF ...&...&...&...&bucket_lxc<cgx3&cgx3<bucket_rxc&ABS cgy1dot<200000&ABS cgy2dot<200000&ABS cgy3dot<200000 DO ..
+cgx2 G:274 LG com/bucket.b[504] cgx2:=cgx2+cgx2dot/sps
+cgx2 G:274 LG com/bucket.b[541] selx:=cgx2
+cgx2 G:274 LG com/bucket.b[582] minx:=cgx2
+cgx2 G:274 LG com/bucket.b[749]
+    blitsurf(@ball2surf,@screen,(cgx2-ballradius)/One,(cgy2+ballradius)/One)
+cgx2 G:274 LG com/bucket.b[780]
+    drawf(30,205,"Ball2't=%10.5d",cgx2,cgy2,cgx2dot,cgy2dot)
+cgx2 G:274 LG com/bucket.b[835]
+    UNLESS ylim_baseb<cgy1&...&...&ylim_baseb<cgy2&bucket_lxc<cgx2&cgx2<bucket_rxc&ylim_baseb<cgy3&bucket_lxc<cgx3&cgx3<bucket_rxc DO ..
+cgx2 G:274 LLG com/bucket.b[476] ballbounces(@cgx2)
+cgx2 G:274 LLG com/bucket.b[480]
+    IF incontact(@cgx1,@cgx2,ballradius+ballradius) DO ..
+cgx2 G:274 LLG com/bucket.b[482] cbounce(@cgx1,@cgx2,1,1)
+cgx2 G:274 LLG com/bucket.b[490]
+    IF incontact(@cgx2,@cgx3,ballradius+ballradius) DO ..
+cgx2 G:274 LLG com/bucket.b[492] cbounce(@cgx2,@cgx3,1,1)
+cgx2 G:274 SG com/bucket.b[504] cgx2:=cgx2+cgx2dot/sps
+cgx2 G:274 SG com/bucket.b[793] cgx2:=screen_xc
+cgx2dot G:276 DEF com/bucket.b[124] cgx2dot=
+cgx2dot G:276 LG com/bucket.b[498] cgx2dot:=cgx2dot+ax2/sps
+cgx2dot G:276 LG com/bucket.b[504] cgx2:=cgx2+cgx2dot/sps
+cgx2dot G:276 LG com/bucket.b[541] selxdot:=cgx2dot
+cgx2dot G:276 LG com/bucket.b[582] minxdot:=cgx2dot
+cgx2dot G:276 LG com/bucket.b[780]
+    drawf(30,205,"Ball2't=%10.5d",cgx2,cgy2,cgx2dot,cgy2dot)
+cgx2dot G:276 SG com/bucket.b[498] cgx2dot:=cgx2dot+ax2/sps
+cgx2dot G:276 SG com/bucket.b[794] cgx2dot:=0
+cgx3 G:280 DEF com/bucket.b[125] cgx3=
+cgx3 G:280 LG com/bucket.b[443]
+    IF ylim_baseb<cgy3&bucket_lxc<cgx3&cgx3<bucket_rxc DO ..
+cgx3 G:280 LG com/bucket.b[454]
+    IF ...&...&...&...&bucket_lxc<cgx3&cgx3<bucket_rxc&ABS cgy1dot<200000&ABS cgy2dot<200000&ABS cgy3dot<200000 DO ..
+cgx3 G:280 LG com/bucket.b[505] cgx3:=cgx3+cgx3dot/sps
+cgx3 G:280 LG com/bucket.b[543] selx:=cgx3
+cgx3 G:280 LG com/bucket.b[584] minx:=cgx3
+cgx3 G:280 LG com/bucket.b[752]
+    blitsurf(@ball3surf,@screen,(cgx3-ballradius)/One,(cgy3+ballradius)/One)
+cgx3 G:280 LG com/bucket.b[782]
+    drawf(30,190,"Ball3't=%10.5d",cgx3,cgy3,cgx3dot,cgy3dot)
+cgx3 G:280 LG com/bucket.b[835]
+    UNLESS ylim_baseb<cgy1&...&...&ylim_baseb<cgy2&bucket_lxc<cgx2&cgx2<bucket_rxc&ylim_baseb<cgy3&bucket_lxc<cgx3&cgx3<bucket_rxc DO ..
+cgx3 G:280 LLG com/bucket.b[477] ballbounces(@cgx3)
+cgx3 G:280 LLG com/bucket.b[485]
+    IF incontact(@cgx1,@cgx3,ballradius+ballradius) DO ..
+cgx3 G:280 LLG com/bucket.b[487] cbounce(@cgx1,@cgx3,1,1)
+cgx3 G:280 LLG com/bucket.b[490]
+    IF incontact(@cgx2,@cgx3,ballradius+ballradius) DO ..
+cgx3 G:280 LLG com/bucket.b[492] cbounce(@cgx2,@cgx3,1,1)
+cgx3 G:280 SG com/bucket.b[505] cgx3:=cgx3+cgx3dot/sps
+cgx3 G:280 SG com/bucket.b[793] cgx3:=screen_xc
+cgx3dot G:282 DEF com/bucket.b[125] cgx3dot=
+cgx3dot G:282 LG com/bucket.b[500] cgx3dot:=cgx3dot+ax3/sps
+cgx3dot G:282 LG com/bucket.b[505] cgx3:=cgx3+cgx3dot/sps
+cgx3dot G:282 LG com/bucket.b[543] selxdot:=cgx3dot
+cgx3dot G:282 LG com/bucket.b[584] minxdot:=cgx3dot
+cgx3dot G:282 LG com/bucket.b[782]
+    drawf(30,190,"Ball3't=%10.5d",cgx3,cgy3,cgx3dot,cgy3dot)
+cgx3dot G:282 SG com/bucket.b[500] cgx3dot:=cgx3dot+ax3/sps
+cgx3dot G:282 SG com/bucket.b[794] cgx3dot:=0
+cgy1 G:269 DEF com/bucket.b[123] cgy1=
+cgy1 G:269 LG com/bucket.b[441]
+    IF ylim_baseb<cgy1&bucket_lxc<cgx1&cgx1<bucket_rxc DO ..
+cgy1 G:269 LG com/bucket.b[454]
+    IF ...&...&...&...&bucket_lxc<cgx3&cgx3<bucket_rxc&ABS cgy1dot<200000&ABS cgy2dot<200000&ABS cgy3dot<200000 DO ..
+cgy1 G:269 LG com/bucket.b[503] cgy1:=cgy1+cgy1dot/sps
+cgy1 G:269 LG com/bucket.b[521]
+    IF currballno=1&(cgy1>bucket_byc|cgy1dot>0) DO ..
+cgy1 G:269 LG com/bucket.b[526]
+    IF currballno<0&cgy1<bucket_byc&cgy1dot<=0 DO ..
+cgy1 G:269 LG com/bucket.b[539] sely:=cgy1
+cgy1 G:269 LG com/bucket.b[579] miny:=cgy1
+cgy1 G:269 LG com/bucket.b[746]
+    blitsurf(@ball1surf,@screen,(cgx1-ballradius)/One,(cgy1+ballradius)/One)
+cgy1 G:269 LG com/bucket.b[778]
+    drawf(30,220,"Ball1't=%10.5d",cgx1,cgy1,cgx1dot,cgy1dot)
+cgy1 G:269 LG com/bucket.b[835]
+    UNLESS ylim_baseb<cgy1&...&...&ylim_baseb<cgy2&bucket_lxc<cgx2&cgx2<bucket_rxc&ylim_baseb<cgy3&bucket_lxc<cgx3&cgx3<bucket_rxc DO ..
+cgy1 G:269 SG com/bucket.b[503] cgy1:=cgy1+cgy1dot/sps
+cgy1 G:269 SG com/bucket.b[790] cgy1:=bucket_byt+ballradius+1000000
+cgy1dot G:271 DEF com/bucket.b[123] cgy1dot=
+cgy1dot G:271 LG com/bucket.b[454]
+    IF ...&...&...&...&bucket_lxc<cgx3&cgx3<bucket_rxc&ABS cgy1dot<200000&ABS cgy2dot<200000&ABS cgy3dot<200000 DO ..
+cgy1dot G:271 LG com/bucket.b[497] cgy1dot:=cgy1dot+ay1/sps
+cgy1dot G:271 LG com/bucket.b[503] cgy1:=cgy1+cgy1dot/sps
+cgy1dot G:271 LG com/bucket.b[521]
+    IF currballno=1&(cgy1>bucket_byc|cgy1dot>0) DO ..
+cgy1dot G:271 LG com/bucket.b[526]
+    IF currballno<0&cgy1<bucket_byc&cgy1dot<=0 DO ..
+cgy1dot G:271 LG com/bucket.b[539] selydot:=cgy1dot
+cgy1dot G:271 LG com/bucket.b[579] minydot:=cgy1dot
+cgy1dot G:271 LG com/bucket.b[778]
+    drawf(30,220,"Ball1't=%10.5d",cgx1,cgy1,cgx1dot,cgy1dot)
+cgy1dot G:271 SG com/bucket.b[497] cgy1dot:=cgy1dot+ay1/sps
+cgy1dot G:271 SG com/bucket.b[795] cgy1dot:=0
+cgy2 G:275 DEF com/bucket.b[124] cgy2=
+cgy2 G:275 LG com/bucket.b[442]
+    IF ylim_baseb<cgy2&bucket_lxc<cgx2&cgx2<bucket_rxc DO ..
+cgy2 G:275 LG com/bucket.b[454]
+    IF ...&...&...&...&bucket_lxc<cgx3&cgx3<bucket_rxc&ABS cgy1dot<200000&ABS cgy2dot<200000&ABS cgy3dot<200000 DO ..
+cgy2 G:275 LG com/bucket.b[504] cgy2:=cgy2+cgy2dot/sps
+cgy2 G:275 LG com/bucket.b[522]
+    IF currballno=2&(cgy2>bucket_byc|cgy2dot>0) DO ..
+cgy2 G:275 LG com/bucket.b[527]
+    IF currballno<0&cgy2<bucket_byc&cgy2dot<=0 DO ..
+cgy2 G:275 LG com/bucket.b[541] sely:=cgy2
+cgy2 G:275 LG com/bucket.b[581] IF cgy2<miny DO ..
+cgy2 G:275 LG com/bucket.b[582] miny:=cgy2
+cgy2 G:275 LG com/bucket.b[749]
+    blitsurf(@ball2surf,@screen,(cgx2-ballradius)/One,(cgy2+ballradius)/One)
+cgy2 G:275 LG com/bucket.b[780]
+    drawf(30,205,"Ball2't=%10.5d",cgx2,cgy2,cgx2dot,cgy2dot)
+cgy2 G:275 LG com/bucket.b[835]
+    UNLESS ylim_baseb<cgy1&...&...&ylim_baseb<cgy2&bucket_lxc<cgx2&cgx2<bucket_rxc&ylim_baseb<cgy3&bucket_lxc<cgx3&cgx3<bucket_rxc DO ..
+cgy2 G:275 SG com/bucket.b[504] cgy2:=cgy2+cgy2dot/sps
+cgy2 G:275 SG com/bucket.b[791] cgy2:=bucket_byt+3*ballradius+#x1E8480
+cgy2dot G:277 DEF com/bucket.b[124] cgy2dot=
+cgy2dot G:277 LG com/bucket.b[454]
+    IF ...&...&...&...&bucket_lxc<cgx3&cgx3<bucket_rxc&ABS cgy1dot<200000&ABS cgy2dot<200000&ABS cgy3dot<200000 DO ..
+cgy2dot G:277 LG com/bucket.b[499] cgy2dot:=cgy2dot+ay2/sps
+cgy2dot G:277 LG com/bucket.b[504] cgy2:=cgy2+cgy2dot/sps
+cgy2dot G:277 LG com/bucket.b[522]
+    IF currballno=2&(cgy2>bucket_byc|cgy2dot>0) DO ..
+cgy2dot G:277 LG com/bucket.b[527]
+    IF currballno<0&cgy2<bucket_byc&cgy2dot<=0 DO ..
+cgy2dot G:277 LG com/bucket.b[541] selydot:=cgy2dot
+cgy2dot G:277 LG com/bucket.b[582] minydot:=cgy2dot
+cgy2dot G:277 LG com/bucket.b[780]
+    drawf(30,205,"Ball2't=%10.5d",cgx2,cgy2,cgx2dot,cgy2dot)
+cgy2dot G:277 SG com/bucket.b[499] cgy2dot:=cgy2dot+ay2/sps
+cgy2dot G:277 SG com/bucket.b[795] cgy2dot:=0
+cgy3 G:281 DEF com/bucket.b[125] cgy3=
+cgy3 G:281 LG com/bucket.b[443]
+    IF ylim_baseb<cgy3&bucket_lxc<cgx3&cgx3<bucket_rxc DO ..
+cgy3 G:281 LG com/bucket.b[454]
+    IF ...&...&...&...&bucket_lxc<cgx3&cgx3<bucket_rxc&ABS cgy1dot<200000&ABS cgy2dot<200000&ABS cgy3dot<200000 DO ..
+cgy3 G:281 LG com/bucket.b[505] cgy3:=cgy3+cgy3dot/sps
+cgy3 G:281 LG com/bucket.b[523]
+    IF currballno=3&(cgy3>bucket_byc|cgy3dot>0) DO ..
+cgy3 G:281 LG com/bucket.b[528]
+    IF currballno<0&cgy3<bucket_byc&cgy3dot<=0 DO ..
+cgy3 G:281 LG com/bucket.b[543] sely:=cgy3
+cgy3 G:281 LG com/bucket.b[583] IF cgy3<miny DO ..
+cgy3 G:281 LG com/bucket.b[584] miny:=cgy3
+cgy3 G:281 LG com/bucket.b[752]
+    blitsurf(@ball3surf,@screen,(cgx3-ballradius)/One,(cgy3+ballradius)/One)
+cgy3 G:281 LG com/bucket.b[782]
+    drawf(30,190,"Ball3't=%10.5d",cgx3,cgy3,cgx3dot,cgy3dot)
+cgy3 G:281 LG com/bucket.b[835]
+    UNLESS ylim_baseb<cgy1&...&...&ylim_baseb<cgy2&bucket_lxc<cgx2&cgx2<bucket_rxc&ylim_baseb<cgy3&bucket_lxc<cgx3&cgx3<bucket_rxc DO ..
+cgy3 G:281 SG com/bucket.b[505] cgy3:=cgy3+cgy3dot/sps
+cgy3 G:281 SG com/bucket.b[792] cgy3:=bucket_byt+5*ballradius+#x2DC6C0
+cgy3dot G:283 DEF com/bucket.b[125] cgy3dot=
+cgy3dot G:283 LG com/bucket.b[454]
+    IF ...&...&...&...&bucket_lxc<cgx3&cgx3<bucket_rxc&ABS cgy1dot<200000&ABS cgy2dot<200000&ABS cgy3dot<200000 DO ..
+cgy3dot G:283 LG com/bucket.b[501] cgy3dot:=cgy3dot+ay3/sps
+cgy3dot G:283 LG com/bucket.b[505] cgy3:=cgy3+cgy3dot/sps
+cgy3dot G:283 LG com/bucket.b[523]
+    IF currballno=3&(cgy3>bucket_byc|cgy3dot>0) DO ..
+cgy3dot G:283 LG com/bucket.b[528]
+    IF currballno<0&cgy3<bucket_byc&cgy3dot<=0 DO ..
+cgy3dot G:283 LG com/bucket.b[543] selydot:=cgy3dot
+cgy3dot G:283 LG com/bucket.b[584] minydot:=cgy3dot
+cgy3dot G:283 LG com/bucket.b[782]
+    drawf(30,190,"Ball3't=%10.5d",cgx3,cgy3,cgx3dot,cgy3dot)
+cgy3dot G:283 SG com/bucket.b[501] cgy3dot:=cgy3dot+ay3/sps
+cgy3dot G:283 SG com/bucket.b[795] cgy3dot:=0
+changeco G:6 DEF libhdr.h[44] changeco=6
+changepri G:155 DEF libhdr.h[209] changepri=155
+charHsep G:518 DEF sdl.h[182] charHsep=
+charHsep G:518 LG sdl.b[420] currx:=currx+fontW+charHsep
+charHsep G:518 SG sdl.b[404] charHsep:=3
+charHsep G:518 SG sdl.b[409] charHsep:=2
+charLmargin G:520 DEF sdl.h[184] charLmargin=
+charLmargin G:520 LG sdl.b[415] currx:=charLmargin
+charLmargin G:520 SG sdl.b[405] charLmargin:=10
+charLmargin G:520 SG sdl.b[410] charLmargin:=10
+charVsep G:519 DEF sdl.h[183] charVsep=
+charVsep G:519 LG sdl.b[416] curry:=curry-fontH-charVsep
+charVsep G:519 SG sdl.b[404] charVsep:=4
+charVsep G:519 SG sdl.b[409] charVsep:=3
+chklimits F:78 RT sdl.b[4426] LET chklimits()BE..
+cis G:12 DEF libhdr.h[51] cis=12
+clear_words G:115 DEF libhdr.h[155] clear_words=115
+cli_commanddir G:136 DEF libhdr.h[179] cli_commanddir=136
+cli_commandfile G:143 DEF libhdr.h[190] cli_commandfile=143
+cli_commandname G:138 DEF libhdr.h[185] cli_commandname=138
+cli_currentinput G:142 DEF libhdr.h[189] cli_currentinput=142
+cli_currentoutput G:146 DEF libhdr.h[196] cli_currentoutput=146
+cli_data G:135 DEF libhdr.h[178] cli_data=135
+cli_defaultstack G:147 DEF libhdr.h[197] cli_defaultstack=147
+cli_faillevel G:139 DEF libhdr.h[186] cli_faillevel=139
+cli_init G:133 DEF libhdr.h[176] cli_init=133
+cli_initialfaillevel M:10 DEF libhdr.h[652]
+    cli_initialfaillevel=return_hard
+cli_initialstack M:50000 DEF libhdr.h[651] cli_initialstack=50000
+cli_module G:149 DEF libhdr.h[199] cli_module=149
+cli_module_gn M:149 DEF libhdr.h[650] cli_module_gn=149
+cli_preloadlist G:145 DEF libhdr.h[195] cli_preloadlist=145
+cli_prompt G:140 DEF libhdr.h[187] cli_prompt=140
+cli_result2 G:134 DEF libhdr.h[177] cli_result2=134
+cli_returncode G:137 DEF libhdr.h[180] cli_returncode=137
+cli_standardinput G:141 DEF libhdr.h[188] cli_standardinput=141
+cli_standardoutput G:148 DEF libhdr.h[198] cli_standardoutput=148
+cli_status G:144 DEF libhdr.h[192] cli_status=144
+cli_tallyflag G:132 DEF libhdr.h[175] cli_tallyflag=132
+clibit_comcom M:4 DEF libhdr.h[657] clibit_comcom=4
+clibit_endcli M:256 DEF libhdr.h[663] clibit_endcli=256
+clibit_eofdel M:2 DEF libhdr.h[656] clibit_eofdel=2
+clibit_maincli M:8 DEF libhdr.h[658] clibit_maincli=8
+clibit_mbxcli M:64 DEF libhdr.h[661] clibit_mbxcli=64
+clibit_newcli M:16 DEF libhdr.h[659] clibit_newcli=16
+clibit_noprompt M:1 DEF libhdr.h[655] clibit_noprompt=1
+clibit_runcli M:32 DEF libhdr.h[660] clibit_runcli=32
+clibit_tcpcli M:128 DEF libhdr.h[662] clibit_tcpcli=128
+clihook G:4 DEF libhdr.h[42] clihook=4
+cliregs M:21 DEF libhdr.h[504] cliregs=21
+closesdl G:505 DEF sdl.h[159] closesdl=
+closesdl G:505 LG com/bucket.b[1029] closesdl()
+closesdl G:505 RT sdl.b[284] LET closesdl()BE..
+cmpdats G:184 DEF libhdr.h[236] cmpdats=184
+co_c M:5 DEF libhdr.h[295] co_c=
+co_fn M:3 DEF libhdr.h[293] co_fn=
+co_list M:2 DEF libhdr.h[292] co_list=
+co_parent M:1 DEF libhdr.h[291] co_parent=
+co_pptr M:0 DEF libhdr.h[290] co_pptr=0
+co_size M:4 DEF libhdr.h[294] co_size=
+codewrch G:126 DEF libhdr.h[166] codewrch=126
+colist G:8 DEF libhdr.h[46] colist=8
+compch G:97 DEF libhdr.h[137] compch=97
+compstring G:98 DEF libhdr.h[138] compstring=98
+consoletask G:171 DEF libhdr.h[222] consoletask=171
+copy_bytes G:116 DEF libhdr.h[156] copy_bytes=116
+copy_words G:114 DEF libhdr.h[154] copy_words=114
+copydir G:79 DEF libhdr.h[118] copydir=79
+copyobj G:75 DEF libhdr.h[114] copyobj=75
+copystring G:99 DEF libhdr.h[139] copystring=99
+cos G:13 DEF libhdr.h[52] cos=13
+cosines F:13 FN com/bucket.b[275] LET cosines(dx,dy)=..
+cosines F:13 LF com/bucket.b[168] cosines(p2!0-p1!0,p2!1-p1!1)
+cosines F:13 LF com/bucket.b[901] c:=cosines(One,dy)
+cowait G:20 DEF libhdr.h[59] cowait=20
+createco G:17 DEF libhdr.h[56] createco=17
+createdev G:172 DEF libhdr.h[223] createdev=172
+createdir G:82 DEF libhdr.h[121] createdir=82
+createtask G:153 DEF libhdr.h[207] createtask=153
+crossprod G:451 DEF sdl.h[67] crossprod=
+crossprod G:451 RT sdl.b[52] LET crossprod(v,w,r)BE..
+currballno G:297 DEF com/bucket.b[136] currballno=
+currballno G:297 LG com/bucket.b[519]
+    writef("1 cur'llno=%n*n",currballno)
+currballno G:297 LG com/bucket.b[521]
+    IF currballno=1&(cgy1>bucket_byc|cgy1dot>0) DO ..
+currballno G:297 LG com/bucket.b[522]
+    IF currballno=2&(cgy2>bucket_byc|cgy2dot>0) DO ..
+currballno G:297 LG com/bucket.b[523]
+    IF currballno=3&(cgy3>bucket_byc|cgy3dot>0) DO ..
+currballno G:297 LG com/bucket.b[524]
+    writef("2 cur'llno=%n*n",currballno)
+currballno G:297 LG com/bucket.b[526]
+    IF currballno<0&cgy1<bucket_byc&cgy1dot<=0 DO ..
+currballno G:297 LG com/bucket.b[527]
+    IF currballno<0&cgy2<bucket_byc&cgy2dot<=0 DO ..
+currballno G:297 LG com/bucket.b[528]
+    IF currballno<0&cgy3<bucket_byc&cgy3dot<=0 DO ..
+currballno G:297 LG com/bucket.b[529]
+    writef("3 cur'llno=%n*n",currballno)
+currballno G:297 LG com/bucket.b[532] IF currballno<0 DO ..
+currballno G:297 LG com/bucket.b[533] IF currballno>0 DO ..
+currballno G:297 LG com/bucket.b[538] IF currballno=1 DO ..
+currballno G:297 LG com/bucket.b[540] IF currballno=2 DO ..
+currballno G:297 LG com/bucket.b[542] IF currballno=3 DO ..
+currballno G:297 LG com/bucket.b[544]
+    writef("4 cur'llno=%n*n",currballno)
+currballno G:297 SG com/bucket.b[446] currballno:=-1
+currballno G:297 SG com/bucket.b[521] currballno:=-1
+currballno G:297 SG com/bucket.b[522] currballno:=-1
+currballno G:297 SG com/bucket.b[523] currballno:=-1
+currballno G:297 SG com/bucket.b[526] currballno:=1
+currballno G:297 SG com/bucket.b[527] currballno:=2
+currballno G:297 SG com/bucket.b[528] currballno:=3
+currballno G:297 SG com/bucket.b[829] currballno:=-1
+currballno G:297 SG com/bucket.b[920] currballno:=-1
+currco G:7 DEF libhdr.h[45] currco=7
+currcolour G:485 DEF sdl.h[123] currcolour=
+currcolour G:485 LG sdl.b[1688] currcolour
+currcolour G:485 LG sdl.b[3566] currcolour
+currcolour G:485 LG sdl.b[3755]
+    sys(Sys_sdl,sdl_fillrect,@currsurf,xmin,currysize-ymax,...,...)
+currcolour G:485 LG sdl.b[399]
+    sys(Sys_sdl,sdl_fillrect,@currsurf,x,currysize-y,1,...)
+currcolour G:485 SG sdl.b[293] currcolour:=col
+current_language G:190 DEF libhdr.h[239] current_language=190
+currentdir G:14 DEF libhdr.h[53] currentdir=14
+currsurf G:457 DEF sdl.h[74] currsurf=
+currsurf G:457 LLG sdl.b[351] sys(Sys_sdl,sdl_fillsurf,@currsurf,col)
+currsurf G:457 LLG sdl.b[3755]
+    sys(Sys_sdl,sdl_fillrect,@currsurf,xmin,currysize-ymax,...,...)
+currsurf G:457 LLG sdl.b[399]
+    sys(Sys_sdl,sdl_fillrect,@currsurf,x,currysize-y,1,...)
+currsurf G:457 SG sdl.b[307] currsurf:=surfptr!0
+currsurf1 G:458 DEF sdl.h[74] currsurf1=
+currsurf1 G:458 SG sdl.b[307] currsurf1:=surfptr!1
+currsz3d G:490 DEF sdl.h[135] currsz3d=
+currsz3d G:490 LG sdl.b[3987] currsz3d:=currsz3d+dsz
+currsz3d G:490 LG sdl.b[3991]
+    drawto3d(currx3d+dx,curry3d+dy,currsz3d+dsz)
+currsz3d G:490 LG sdl.b[4015] currsz3d
+currsz3d G:490 SG sdl.b[187] currsz3d:=0
+currsz3d G:490 SG sdl.b[3982] currsz3d:=sz
+currsz3d G:490 SG sdl.b[3987] currsz3d:=currsz3d+dsz
+currsz3d G:490 SG sdl.b[4032] currsz3d:=sz1
+currx G:486 DEF sdl.h[125] currx=
+currx G:486 LG sdl.b[1723] currx
+currx G:486 LG sdl.b[367] moveto(currx+dx,curry+dy)
+currx G:486 LG sdl.b[370] currx
+currx G:486 LG sdl.b[393] drawto(currx+dx,curry+dy)
+currx G:486 LG sdl.b[419]
+    write_ch_slice(currx,curry+fontH-1-line,ch,line)
+currx G:486 LG sdl.b[420] currx:=currx+fontW+charHsep
+currx G:486 LG sdl.b[425] currx
+currx G:486 SG sdl.b[1718] currx:=cx
+currx G:486 SG sdl.b[183] currx:=0
+currx G:486 SG sdl.b[3602] currx:=cx
+currx G:486 SG sdl.b[366] currx:=x
+currx G:486 SG sdl.b[3746] currx:=x0
+currx G:486 SG sdl.b[3758] currx:=x0
+currx G:486 SG sdl.b[3817] currx:=x0
+currx G:486 SG sdl.b[384] currx:=x
+currx G:486 SG sdl.b[3888] currx:=x0
+currx G:486 SG sdl.b[415] currx:=charLmargin
+currx G:486 SG sdl.b[420] currx:=currx+fontW+charHsep
+currx3d G:488 DEF sdl.h[132] currx3d=
+currx3d G:488 LG sdl.b[3985] currx3d:=currx3d+dx
+currx3d G:488 LG sdl.b[3991]
+    drawto3d(currx3d+dx,curry3d+dy,currsz3d+dsz)
+currx3d G:488 LG sdl.b[4015] currx3d
+currx3d G:488 SG sdl.b[187] currx3d:=0
+currx3d G:488 SG sdl.b[3982] currx3d:=x
+currx3d G:488 SG sdl.b[3985] currx3d:=currx3d+dx
+currx3d G:488 SG sdl.b[4032] currx3d:=x1
+currx3d G:488 SG sdl.b[4032] currx3d:=y1
+currxsize G:469 DEF sdl.h[90] currxsize=
+currxsize G:469 LG sdl.b[191] depthvupb:=currxsize*currysize-1
+currxsize G:469 LG sdl.b[398] IF 0<=x&x<currxsize&0<=y&y<currysize DO ..
+currxsize G:469 LG sdl.b[4001]
+    IF 0<=x&x<currxsize&0<=y&y<currysize DO ..
+currxsize G:469 LG sdl.b[4003] x+y*currxsize
+currxsize G:469 LG sdl.b[4364] leftxv!y:=currxsize
+currxsize G:469 LG sdl.b[4383] IF x1>=currxsize DO ..
+currxsize G:469 LG sdl.b[4384] sz1:=interpolate(currxsize-1,x0,x1,...)
+currxsize G:469 LG sdl.b[4385] x1:=currxsize-1
+currxsize G:469 LG sdl.b[4421] leftxv!y:=currxsize
+currxsize G:469 SG sdl.b[202] currxsize:=0
+currxsize G:469 SG sdl.b[308] currxsize:=xsize
+currxupb G:471 DEF sdl.h[93] currxupb=
+curry G:487 DEF sdl.h[126] curry=
+curry G:487 LG sdl.b[1723] curry
+curry G:487 LG sdl.b[367] moveto(currx+dx,curry+dy)
+curry G:487 LG sdl.b[370] curry
+curry G:487 LG sdl.b[393] drawto(currx+dx,curry+dy)
+curry G:487 LG sdl.b[416] curry:=curry-fontH-charVsep
+curry G:487 LG sdl.b[419]
+    write_ch_slice(currx,curry+fontH-1-line,ch,line)
+curry G:487 LG sdl.b[425] curry
+curry G:487 SG sdl.b[1718] curry:=cy
+curry G:487 SG sdl.b[183] curry:=0
+curry G:487 SG sdl.b[3602] curry:=cy
+curry G:487 SG sdl.b[366] curry:=y
+curry G:487 SG sdl.b[3746] curry:=y0
+curry G:487 SG sdl.b[3758] curry:=y0
+curry G:487 SG sdl.b[3817] curry:=y0
+curry G:487 SG sdl.b[384] curry:=y
+curry G:487 SG sdl.b[3888] curry:=y0
+curry G:487 SG sdl.b[416] curry:=curry-fontH-charVsep
+curry3d G:489 DEF sdl.h[133] curry3d=
+curry3d G:489 LG sdl.b[3986] curry3d:=curry3d+dy
+curry3d G:489 LG sdl.b[3991]
+    drawto3d(currx3d+dx,curry3d+dy,currsz3d+dsz)
+curry3d G:489 LG sdl.b[4015] curry3d
+curry3d G:489 SG sdl.b[187] curry3d:=0
+curry3d G:489 SG sdl.b[3982] curry3d:=y
+curry3d G:489 SG sdl.b[3986] curry3d:=curry3d+dy
+currysize G:470 DEF sdl.h[91] currysize=
+currysize G:470 LG sdl.b[191] depthvupb:=currxsize*currysize-1
+currysize G:470 LG sdl.b[309] curryupb:=currysize-1
+currysize G:470 LG sdl.b[333] currysize-y-1
+currysize G:470 LG sdl.b[346] currysize-y-1
+currysize G:470 LG sdl.b[3648] IF 0<=y&y<currysize DO ..
+currysize G:470 LG sdl.b[3688] leftxv!y:=currysize
+currysize G:470 LG sdl.b[3698] miny:=currysize
+currysize G:470 LG sdl.b[3722] leftxv!y:=currysize-1
+currysize G:470 LG sdl.b[3755]
+    sys(Sys_sdl,sdl_fillrect,@currsurf,xmin,currysize-ymax,...,...)
+currysize G:470 LG sdl.b[398] IF 0<=x&x<currxsize&0<=y&y<currysize DO ..
+currysize G:470 LG sdl.b[399]
+    sys(Sys_sdl,sdl_fillrect,@currsurf,x,currysize-y,1,...)
+currysize G:470 LG sdl.b[4001]
+    IF 0<=x&x<currxsize&0<=y&y<currysize DO ..
+currysize G:470 LG sdl.b[4171] leftzv!y:=currysize
+currysize G:470 LG sdl.b[4362] miny:=currysize
+currysize G:470 LG sdl.b[4364] FOR y=0 TO currysize-1 DO..
+currysize G:470 LG sdl.b[4429] FOR y=0 TO currysize-1 DO..
+currysize G:470 SG sdl.b[202] currysize:=0
+currysize G:470 SG sdl.b[308] currysize:=ysize
+curryupb G:472 DEF sdl.h[94] curryupb=
+curryupb G:472 LG sdl.b[3680] leftxv:=getvec(curryupb)
+curryupb G:472 LG sdl.b[3681] rightxv:=getvec(curryupb)
+curryupb G:472 LG sdl.b[3687] FOR y=0 TO curryupb DO..
+curryupb G:472 LG sdl.b[4067] IF y0>curryupb DO ..
+curryupb G:472 LG sdl.b[4070] x0:=interpolate(curryupb,y0,y1,...)
+curryupb G:472 LG sdl.b[4071] sz0:=interpolate(curryupb,y0,y1,...)
+curryupb G:472 LG sdl.b[4072] y0:=curryupb
+curryupb G:472 LG sdl.b[4085] IF y1>curryupb DO ..
+curryupb G:472 LG sdl.b[4088] x1:=interpolate(curryupb,y0,y1,...)
+curryupb G:472 LG sdl.b[4089] sz1:=interpolate(curryupb,y0,y1,...)
+curryupb G:472 LG sdl.b[4090] y1:=curryupb
+curryupb G:472 LG sdl.b[4161] leftzv:=getvec(curryupb)
+curryupb G:472 LG sdl.b[4162] rightzv:=getvec(curryupb)
+curryupb G:472 LG sdl.b[4170] FOR y=0 TO curryupb DO..
+curryupb G:472 SG sdl.b[309] curryupb:=currysize-1
+dat_to_strings G:110 DEF libhdr.h[150] dat_to_strings=110
+datstamp G:109 DEF libhdr.h[149] datstamp=109
+datstring G:108 DEF libhdr.h[148] datstring=108
+deadcode M:#xDEADC0DE DEF libhdr.h[272] deadcode=-#x21523F22
+debugging G:210 DEF com/bucket.b[56] debugging=
+debugging G:210 LG com/bucket.b[653] TEST debugging THEN .. ELSE ..
+debugging G:210 LG com/bucket.b[777] IF debugging DO ..
+debugging G:210 LG com/bucket.b[818] debugging:=~debugging
+debugging G:210 SG com/bucket.b[818] debugging:=~debugging
+debugging G:210 SG com/bucket.b[929] debugging:=FALSE
+delay G:128 DEF libhdr.h[168] delay=128
+delayuntil G:129 DEF libhdr.h[169] delayuntil=129
+deleteco G:18 DEF libhdr.h[57] deleteco=18
+deletedev G:173 DEF libhdr.h[224] deletedev=173
+deletefile G:76 DEF libhdr.h[115] deletefile=76
+deleteself G:125 DEF libhdr.h[165] deleteself=125
+deletetask G:154 DEF libhdr.h[208] deletetask=154
+deplete G:43 DEF libhdr.h[82] deplete=43
+depthv G:479 DEF sdl.h[112] depthv=
+depthv G:479 LG sdl.b[289] IF depthv DO ..
+depthv G:479 LG sdl.b[289] freevec(depthv)
+depthv G:479 LG sdl.b[352] IF depthv DO ..
+depthv G:479 LG sdl.b[352] depthv!p:=maxdepth
+depthv G:479 LG sdl.b[4004] IF sz<=depthv!p DO ..
+depthv G:479 LG sdl.b[4008] depthv!p:=sz
+depthv G:479 LG sdl.b[4165] UNLESS leftzv*rightzv*depthv DO ..
+depthv G:479 LG sdl.b[4173] depthv!i:=maxdepth
+depthv G:479 SG sdl.b[192] depthv:=0
+depthv G:479 SG sdl.b[226] depthv:=0
+depthv G:479 SG sdl.b[4163] depthv:=getvec(depthvupb)
+depthvupb G:480 DEF sdl.h[114] depthvupb=
+depthvupb G:480 LG sdl.b[352] FOR p=0 TO depthvupb DO..
+depthvupb G:480 LG sdl.b[4163] depthv:=getvec(depthvupb)
+depthvupb G:480 LG sdl.b[4173] FOR i=0 TO depthvupb DO..
+depthvupb G:480 SG sdl.b[191] depthvupb:=currxsize*currysize-1
+depthvupb G:480 SG sdl.b[227] depthvupb:=-1
+depthvupb G:480 SG sdl.b[274] depthvupb:=xsize*ysize-1
+displaytime G:207 DEF com/bucket.b[53] displaytime=
+displaytime G:207 LG com/bucket.b[761]
+    drawf(30,280,"Time %9.2d",displaytime/10)
+displaytime G:207 SG com/bucket.b[437] displaytime:=sdlmsecs()-starttime
+displaytime G:207 SG com/bucket.b[449] displaytime:=0
+displaytime G:207 SG com/bucket.b[800] displaytime:=-1
+displaytime G:207 SG com/bucket.b[843] displaytime:=-1
+displaytime G:207 SG com/bucket.b[854] displaytime:=-1
+displaytime G:207 SG com/bucket.b[927] displaytime:=-1
+displayusage G:209 DEF com/bucket.b[55] displayusage=
+displayusage G:209 LG com/bucket.b[774] IF displayusage DO ..
+displayusage G:209 LG com/bucket.b[825] displayusage:=~displayusage
+displayusage G:209 SG com/bucket.b[825] displayusage:=~displayusage
+displayusage G:209 SG com/bucket.b[930] displayusage:=FALSE
+distance G:453 DEF sdl.h[69] distance=
+distance G:453 FN sdl.b[79] LET distance(p,q)=..
+done G:200 DEF com/bucket.b[43] done=ug
+done G:200 LG com/bucket.b[994] UNTIL done DO ..
+done G:200 SG com/bucket.b[811] done:=TRUE
+done G:200 SG com/bucket.b[876] done:=TRUE
+done G:200 SG com/bucket.b[992] done:=FALSE
+drawby G:514 DEF sdl.h[174] drawby=
+drawby G:514 RT sdl.b[393] LET drawby(dx,dy)BE..
+drawby3d G:546 DEF sdl.h[243] drawby3d=
+drawby3d G:546 RT sdl.b[3990] LET drawby3d(dx,dy,dsz)BE..
+drawch G:515 DEF sdl.h[177] drawch=
+drawch G:515 LG sdl.b[3607] drawch(s%i)
+drawch G:515 RT sdl.b[414] LET drawch(ch)BE..
+drawcircle G:535 DEF sdl.h[218] drawcircle=
+drawcircle G:535 RT sdl.b[3891] LET drawcircle(x0,y0,radius)BE..
+drawellipse G:538 DEF sdl.h[222] drawellipse=
+drawf G:559 DEF sdl.h[285] drawf=
+drawf G:559 LG com/bucket.b[757] drawf(30,300,"Finis'll Done!")
+drawf G:559 LG com/bucket.b[761]
+    drawf(30,280,"Time %9.2d",displaytime/10)
+drawf G:559 LG com/bucket.b[764] drawf(30,150,"R  -- Reset")
+drawf G:559 LG com/bucket.b[765] drawf(30,135,"S  --'the game")
+drawf G:559 LG com/bucket.b[766] drawf(30,120,"P  --'Continue")
+drawf G:559 LG com/bucket.b[767] drawf(30,105,"H  --'ormation")
+drawf G:559 LG com/bucket.b[768] drawf(30,90,"B  --'m motion")
+drawf G:559 LG com/bucket.b[769] drawf(30,75,"D  --'ebugging")
+drawf G:559 LG com/bucket.b[770] drawf(30,60,"U  --'le usage")
+drawf G:559 LG com/bucket.b[771] drawf(30,45,"Left/' the bat")
+drawf G:559 LG com/bucket.b[775]
+    drawf(30,245,"CPU u'sps = %n",usage,sps)
+drawf G:559 LG com/bucket.b[778]
+    drawf(30,220,"Ball1't=%10.5d",cgx1,cgy1,cgx1dot,cgy1dot)
+drawf G:559 LG com/bucket.b[780]
+    drawf(30,205,"Ball2't=%10.5d",cgx2,cgy2,cgx2dot,cgy2dot)
+drawf G:559 LG com/bucket.b[782]
+    drawf(30,190,"Ball3't=%10.5d",cgx3,cgy3,cgx3dot,cgy3dot)
+drawf G:559 LG com/bucket.b[784]
+    drawf(30,175,"Bat  't=%10.5d",batx,baty,batxdot)
+drawf G:559 RT sdl.b[3610] LET drawf(x,y,form,a,b,c,d,...)BE..
+drawfillcircle G:539 DEF sdl.h[224] drawfillcircle=
+drawfillcircle G:539 LG com/bucket.b[656]
+    drawfillcircle(endradius/One,endradius/One,endradius/One-1)
+drawfillcircle G:539 LG com/bucket.b[657]
+    drawfillcircle(endradius/One,height-endradius/One,endradius/One-1)
+drawfillcircle G:539 LG com/bucket.b[689]
+    drawfillcircle(ballradius/One,ballradius/One+1,ballradius/One)
+drawfillcircle G:539 LG com/bucket.b[702]
+    drawfillcircle(batradius/One,batradius/One+1,batradius/One)
+drawfillcircle G:539 RT sdl.b[3927] LET drawfillcircle(x0,y0,radius)BE..
+drawfillellipse G:542 DEF sdl.h[227] drawfillellipse=
+drawfillrect G:540 DEF sdl.h[225] drawfillrect=
+drawfillrect G:540 LG com/bucket.b[661]
+    drawfillrect(0,endradius/One,width,height-endradius/One)
+drawfillrect G:540 LG com/bucket.b[673] drawfillrect(0,0,width,height)
+drawfillrect G:540 RT sdl.b[3749] LET drawfillrect(x0,y0,x1,y1)BE..
+drawfillrndrect G:541 DEF sdl.h[226] drawfillrndrect=
+drawfillrndrect G:541 RT sdl.b[3820]
+    LET drawfillrndrect(x0,y0,x1,y1,radius)BE..
+drawfstr G:560 DEF sdl.h[287] drawfstr=
+drawfstr G:560 LG sdl.b[3615] drawfstr%0:=0
+drawfstr G:560 LG sdl.b[3619] drawstr(x,y,drawfstr)
+drawfstr G:560 LG sdl.b[3623] drawfstr%0+1
+drawfstr G:560 LG sdl.b[3624] drawfstr%strlen:=ch
+drawfstr G:560 LG sdl.b[3625] drawfstr%0:=strlen
+drawfstr G:560 SG sdl.b[3614] drawfstr:=s
+drawpoint G:530 DEF sdl.h[207] drawpoint=
+drawpoint G:530 LG sdl.b[1704] drawpoint(x+0,y)
+drawpoint G:530 LG sdl.b[1705] drawpoint(x+1,y)
+drawpoint G:530 LG sdl.b[1706] drawpoint(x+2,y)
+drawpoint G:530 LG sdl.b[1707] drawpoint(x+3,y)
+drawpoint G:530 LG sdl.b[1708] drawpoint(x+4,y)
+drawpoint G:530 LG sdl.b[1709] drawpoint(x+5,y)
+drawpoint G:530 LG sdl.b[1710] drawpoint(x+6,y)
+drawpoint G:530 LG sdl.b[1711] drawpoint(x+7,y)
+drawpoint G:530 LG sdl.b[3588] drawpoint(x+0,y)
+drawpoint G:530 LG sdl.b[3589] drawpoint(x+1,y)
+drawpoint G:530 LG sdl.b[3590] drawpoint(x+2,y)
+drawpoint G:530 LG sdl.b[3591] drawpoint(x+3,y)
+drawpoint G:530 LG sdl.b[3592] drawpoint(x+4,y)
+drawpoint G:530 LG sdl.b[3593] drawpoint(x+5,y)
+drawpoint G:530 LG sdl.b[3594] drawpoint(x+6,y)
+drawpoint G:530 LG sdl.b[3595] drawpoint(x+7,y)
+drawpoint G:530 LG sdl.b[3596] drawpoint(x+8,y)
+drawpoint G:530 LG sdl.b[3597] drawpoint(x+9,y)
+drawpoint G:530 LG sdl.b[3598] drawpoint(x+10,y)
+drawpoint G:530 LG sdl.b[3599] drawpoint(x+11,y)
+drawpoint G:530 LG sdl.b[3739] drawpoint(x,ymin)
+drawpoint G:530 LG sdl.b[3740] drawpoint(x,ymax)
+drawpoint G:530 LG sdl.b[3743] drawpoint(xmin,y)
+drawpoint G:530 LG sdl.b[3744] drawpoint(xmax,y)
+drawpoint G:530 LG sdl.b[3774] drawpoint(x,ymin)
+drawpoint G:530 LG sdl.b[3775] drawpoint(x,ymax)
+drawpoint G:530 LG sdl.b[3778] drawpoint(xmin,y)
+drawpoint G:530 LG sdl.b[3779] drawpoint(xmax,y)
+drawpoint G:530 LG sdl.b[3790] drawpoint(xmax,ymin+r)
+drawpoint G:530 LG sdl.b[3791] drawpoint(xmin,ymin+r)
+drawpoint G:530 LG sdl.b[3792] drawpoint(xmax,ymax-r)
+drawpoint G:530 LG sdl.b[3793] drawpoint(xmin,ymax-r)
+drawpoint G:530 LG sdl.b[3807] drawpoint(xmax-r+x,ymax-r+y)
+drawpoint G:530 LG sdl.b[3808] drawpoint(xmin+r-x,ymax-r+y)
+drawpoint G:530 LG sdl.b[3809] drawpoint(xmax-r+x,ymin+r-y)
+drawpoint G:530 LG sdl.b[3810] drawpoint(xmin+r-x,ymin+r-y)
+drawpoint G:530 LG sdl.b[3811] drawpoint(xmax-r+y,ymax-r+x)
+drawpoint G:530 LG sdl.b[3812] drawpoint(xmin+r-y,ymax-r+x)
+drawpoint G:530 LG sdl.b[3813] drawpoint(xmax-r+y,ymin+r-x)
+drawpoint G:530 LG sdl.b[3814] drawpoint(xmin+r-y,ymin+r-x)
+drawpoint G:530 LG sdl.b[382] drawpoint(x,y)
+drawpoint G:530 LG sdl.b[3834] drawpoint(x,y)
+drawpoint G:530 LG sdl.b[3835] drawpoint(x,y)
+drawpoint G:530 LG sdl.b[3847] drawpoint(xmax,ymin+r)
+drawpoint G:530 LG sdl.b[3848] drawpoint(xmin,ymin+r)
+drawpoint G:530 LG sdl.b[3849] drawpoint(xmax,ymax-r)
+drawpoint G:530 LG sdl.b[3850] drawpoint(xmin,ymax-r)
+drawpoint G:530 LG sdl.b[3864] drawpoint(xmax-r+x,ymax-r+y)
+drawpoint G:530 LG sdl.b[3865] drawpoint(xmin+r-x,ymax-r+y)
+drawpoint G:530 LG sdl.b[3866] drawpoint(xmax-r+x,ymin+r-y)
+drawpoint G:530 LG sdl.b[3867] drawpoint(xmin+r-x,ymin+r-y)
+drawpoint G:530 LG sdl.b[3868] drawpoint(xmax-r+y,ymax-r+x)
+drawpoint G:530 LG sdl.b[3869] drawpoint(xmin+r-y,ymax-r+x)
+drawpoint G:530 LG sdl.b[3870] drawpoint(xmax-r+y,ymin+r-x)
+drawpoint G:530 LG sdl.b[3871] drawpoint(xmin+r-y,ymin+r-x)
+drawpoint G:530 LG sdl.b[3875] drawpoint(fx,ymax-r+x)
+drawpoint G:530 LG sdl.b[3876] drawpoint(fx,ymin+r-x)
+drawpoint G:530 LG sdl.b[3882] drawpoint(fx,ymax-r+y)
+drawpoint G:530 LG sdl.b[3883] drawpoint(fx,ymin+r-y)
+drawpoint G:530 LG sdl.b[3899] drawpoint(x0,y0+radius)
+drawpoint G:530 LG sdl.b[3900] drawpoint(x0,y0-radius)
+drawpoint G:530 LG sdl.b[3901] drawpoint(x0+radius,y0)
+drawpoint G:530 LG sdl.b[3902] drawpoint(x0-radius,y0)
+drawpoint G:530 LG sdl.b[3916] drawpoint(x0+x,y0+y)
+drawpoint G:530 LG sdl.b[3917] drawpoint(x0-x,y0+y)
+drawpoint G:530 LG sdl.b[3918] drawpoint(x0+x,y0-y)
+drawpoint G:530 LG sdl.b[3919] drawpoint(x0-x,y0-y)
+drawpoint G:530 LG sdl.b[3920] drawpoint(x0+y,y0+x)
+drawpoint G:530 LG sdl.b[3921] drawpoint(x0-y,y0+x)
+drawpoint G:530 LG sdl.b[3922] drawpoint(x0+y,y0-x)
+drawpoint G:530 LG sdl.b[3923] drawpoint(x0-y,y0-x)
+drawpoint G:530 LG sdl.b[3936] drawpoint(x0,y0+radius)
+drawpoint G:530 LG sdl.b[3937] drawpoint(x0,y0-radius)
+drawpoint G:530 LG sdl.b[3938] drawpoint(x,y0)
+drawpoint G:530 LG sdl.b[3952] drawpoint(x0+x,y0+y)
+drawpoint G:530 LG sdl.b[3953] drawpoint(x0-x,y0+y)
+drawpoint G:530 LG sdl.b[3954] drawpoint(x0+x,y0-y)
+drawpoint G:530 LG sdl.b[3955] drawpoint(x0-x,y0-y)
+drawpoint G:530 LG sdl.b[3956] drawpoint(x0+y,y0+x)
+drawpoint G:530 LG sdl.b[3957] drawpoint(x0-y,y0+x)
+drawpoint G:530 LG sdl.b[3958] drawpoint(x0+y,y0-x)
+drawpoint G:530 LG sdl.b[3959] drawpoint(x0-y,y0-x)
+drawpoint G:530 LG sdl.b[3962] drawpoint(fx,y0+x)
+drawpoint G:530 LG sdl.b[3963] drawpoint(fx,y0-x)
+drawpoint G:530 LG sdl.b[3969] drawpoint(fx,y0+y)
+drawpoint G:530 LG sdl.b[3970] drawpoint(fx,y0-y)
+drawpoint G:530 LG sdl.b[4009] drawpoint(x,y)
+drawpoint G:530 RT sdl.b[395] LET drawpoint(x,y)BE..
+drawpoint3d G:547 DEF sdl.h[249] drawpoint3d=
+drawpoint3d G:547 LG sdl.b[4038] drawpoint3d(x,y,sz)
+drawpoint3d G:547 LG sdl.b[4406] drawpoint3d(x0,y,sz)
+drawpoint3d G:547 LG sdl.b[4412] drawpoint3d(x,y,sz)
+drawpoint3d G:547 RT sdl.b[3993] LET drawpoint3d(x,y,sz)BE..
+drawquad G:533 DEF sdl.h[211] drawquad=
+drawquad G:533 RT sdl.b[3726] LET drawquad(x1,y1,x2,y2,x3,y3,x4,y4)BE..
+drawquad3d G:549 DEF sdl.h[258] drawquad3d=
+drawquad3d G:549 RT sdl.b[4178]
+    LET drawquad3d(x1,y1,z1,x2,y2,z2,x3,...)BE..
+drawrect G:536 DEF sdl.h[220] drawrect=
+drawrect G:536 RT sdl.b[3732] LET drawrect(x0,y0,x1,y1)BE..
+drawrndrect G:537 DEF sdl.h[221] drawrndrect=
+drawrndrect G:537 RT sdl.b[3761] LET drawrndrect(x0,y0,x1,y1,radius)BE..
+drawstr G:531 DEF sdl.h[208] drawstr=
+drawstr G:531 LG sdl.b[3619] drawstr(x,y,drawfstr)
+drawstr G:531 RT sdl.b[3605] LET drawstr(x,y,s)BE..
+drawto G:513 DEF sdl.h[172] drawto=
+drawto G:513 LG sdl.b[3720] drawto(rightxv!y,y)
+drawto G:513 LG sdl.b[393] drawto(currx+dx,curry+dy)
+drawto G:513 RT sdl.b[369] LET drawto(x1,y1)BE..
+drawto3d G:545 DEF sdl.h[240] drawto3d=
+drawto3d G:545 LG sdl.b[3991]
+    drawto3d(currx3d+dx,curry3d+dy,currsz3d+dsz)
+drawto3d G:545 RT sdl.b[4014] LET drawto3d(x1,y1,sz1)BE..
+drawtriangle G:532 DEF sdl.h[209] drawtriangle=
+drawtriangle G:532 LG sdl.b[3728] drawtriangle(x1,y1,x2,y2,x3,y3)
+drawtriangle G:532 LG sdl.b[3729] drawtriangle(x2,y2,x3,y3,x4,y4)
+drawtriangle G:532 RT sdl.b[3691]
+    LET drawtriangle(x1,y1,x2,y2,x3,y3)BE..
+drawtriangle3d G:548 DEF sdl.h[253] drawtriangle3d=
+drawtriangle3d G:548 LG sdl.b[4183]
+    drawtriangle3d(x1,y1,z1,x2,y2,z2,...)
+drawtriangle3d G:548 LG sdl.b[4184]
+    drawtriangle3d(x1,y1,z1,x3,y3,z3,...)
+drawtriangle3d G:548 LG sdl.b[4213]
+    drawtriangle3d(x1,y1,z1,x3,y3,z3,...)
+drawtriangle3d G:548 LG sdl.b[4214]
+    drawtriangle3d(x3,y3,z3,x1,y1,z1,...)
+drawtriangle3d G:548 LG sdl.b[4219]
+    drawtriangle3d(x2,y2,z2,x1,y1,z1,...)
+drawtriangle3d G:548 LG sdl.b[4220]
+    drawtriangle3d(x2,y2,z2,x3,y3,z3,...)
+drawtriangle3d G:548 LG sdl.b[4221]
+    drawtriangle3d(x3,y3,z3,x2,y2,z2,...)
+drawtriangle3d G:548 LG sdl.b[4254]
+    drawtriangle3d(x1,y1,z1,x3,y3,z3,...)
+drawtriangle3d G:548 LG sdl.b[4286]
+    drawtriangle3d(x1,y1,z1,x4,y4,z4,...)
+drawtriangle3d G:548 LG sdl.b[4287]
+    drawtriangle3d(x1,y1,z1,x2,y2,z2,...)
+drawtriangle3d G:548 LG sdl.b[4318]
+    drawtriangle3d(x1,y1,z1,x3,y3,z3,...)
+drawtriangle3d G:548 LG sdl.b[4347]
+    drawtriangle3d(x1,y1,z1,x2,y2,z2,...)
+drawtriangle3d G:548 LG sdl.b[4348]
+    drawtriangle3d(x2,y2,z2,x3,y3,z3,...)
+drawtriangle3d G:548 RT sdl.b[4187]
+    LET drawtriangle3d(x1,y1,z1,x2,y2,z2,x3,...)BE..
+drawwrch F:58 LF sdl.b[3616] wrch:=drawwrch
+drawwrch F:58 RT sdl.b[3622] LET drawwrch(ch)BE..
+endradius M:1500000 DEF com/bucket.b[36] endradius=#x16E360
+endradius M:1500000 MAN com/bucket.b[313]
+    IF incontact(@ecx,pv,endradius+ballradius) DO ..
+endradius M:1500000 MAN com/bucket.b[319]
+    IF incontact(@ecx,pv,endradius+ballradius) DO ..
+endradius M:1500000 MAN com/bucket.b[378]
+    IF incontact(@ecx,pv,endradius+ballradius) DO ..
+endradius M:1500000 MAN com/bucket.b[37] bucketthickness=2*endradius
+endradius M:1500000 MAN com/bucket.b[385]
+    IF incontact(@ecx,pv,endradius+ballradius) DO ..
+endradius M:1500000 MAN com/bucket.b[646] 2*endradius/One+1
+endradius M:1500000 MAN com/bucket.b[656]
+    drawfillcircle(endradius/One,endradius/One,endradius/One-1)
+endradius M:1500000 MAN com/bucket.b[657]
+    drawfillcircle(endradius/One,height-endradius/One,endradius/One-1)
+endradius M:1500000 MAN com/bucket.b[661]
+    drawfillrect(0,endradius/One,width,height-endradius/One)
+endradius M:1500000 MAN com/bucket.b[668] 2*endradius/One+1
+endradius M:1500000 MAN com/bucket.b[950]
+    bucket_tyc:=bucket_tyt-endradius
+endradius M:1500000 MAN com/bucket.b[954]
+    bucket_lxc:=bucket_lxr-endradius
+endradius M:1500000 MAN com/bucket.b[958]
+    bucket_rxc:=bucket_rxl+endradius
+endradius M:1500000 MAN com/bucket.b[962]
+    bucket_byc:=bucket_byt-endradius
+endread G:60 DEF libhdr.h[99] endread=60
+endstream G:62 DEF libhdr.h[101] endstream=62
+endstreamch M:-1 DEF libhdr.h[255] endstreamch=-1
+endtask G:162 DEF libhdr.h[216] endtask=162
+endwrite G:61 DEF libhdr.h[100] endwrite=61
+entryword M:57311 DEF libhdr.h[274] entryword=57311
+eventa1 G:495 DEF sdl.h[147] eventa1=
+eventa2 G:496 DEF sdl.h[148] eventa2=
+eventa2 G:496 LG com/bucket.b[808] SWITCHON capitalch(eventa2) INTO..
+eventa2 G:496 LG com/bucket.b[864] SWITCHON capitalch(eventa2) INTO..
+eventa3 G:497 DEF sdl.h[149] eventa3=
+eventa4 G:498 DEF sdl.h[150] eventa4=
+eventa5 G:499 DEF sdl.h[151] eventa5=
+eventtype G:494 DEF sdl.h[146] eventtype=
+eventtype G:494 LG com/bucket.b[803] SWITCHON eventtype INTO..
+eventtype G:494 LLG sdl.b[314]
+    RESULTIS sys(Sys_sdl,sdl_pollevent,@eventtype)
+fardepth G:484 DEF sdl.h[120] fardepth=
+fardepth G:484 LG sdl.b[4230] IF z3>fardepth|z1<neardepth DO ..
+fardepth G:484 LG sdl.b[4234] IF z1>fardepth DO ..
+fardepth G:484 LG sdl.b[4234] TEST z2>fardepth THEN .. ELSE ..
+fardepth G:484 LG sdl.b[4246] x1:=interpolate(fardepth,z3,z1,...)
+fardepth G:484 LG sdl.b[4247] y1:=interpolate(fardepth,z3,z1,...)
+fardepth G:484 LG sdl.b[4248] z1:=fardepth
+fardepth G:484 LG sdl.b[4249] x2:=interpolate(fardepth,z3,z2,...)
+fardepth G:484 LG sdl.b[4250] y2:=interpolate(fardepth,z3,z2,...)
+fardepth G:484 LG sdl.b[4251] z2:=fardepth
+fardepth G:484 LG sdl.b[4277] interpolate(fardepth,z2,z1,x2,x1)
+fardepth G:484 LG sdl.b[4278] interpolate(fardepth,z2,z1,y2,y1)
+fardepth G:484 LG sdl.b[4279] fardepth
+fardepth G:484 LG sdl.b[4280] x1:=interpolate(fardepth,z3,z1,...)
+fardepth G:484 LG sdl.b[4281] y1:=interpolate(fardepth,z3,z1,...)
+fardepth G:484 LG sdl.b[4282] z1:=fardepth
+fardepth G:484 LG sdl.b[4391]
+    writef("drawt'th = %n*n",neardepth,fardepth)
+fardepth G:484 SG sdl.b[4437] fardepth:=far
+fault G:182 DEF libhdr.h[234] fault=182
+fillsurf G:525 DEF sdl.h[192] fillsurf=
+fillsurf G:525 LG com/bucket.b[650] fillsurf(backcolour)
+fillsurf G:525 LG com/bucket.b[671] fillsurf(backcolour)
+fillsurf G:525 LG com/bucket.b[685] fillsurf(colkey)
+fillsurf G:525 LG com/bucket.b[700] fillsurf(backcolour)
+fillsurf G:525 LG com/bucket.b[708] fillsurf(backcolour)
+fillsurf G:525 RT sdl.b[350] LET fillsurf(col)BE..
+findappend G:130 DEF libhdr.h[170] findappend=130
+findarg G:104 DEF libhdr.h[144] findarg=104
+findinoutput G:50 DEF libhdr.h[89] findinoutput=50
+findinput G:48 DEF libhdr.h[87] findinput=48
+findoutput G:49 DEF libhdr.h[88] findoutput=49
+findstream G:52 DEF libhdr.h[91] findstream=52
+findupdate G:51 DEF libhdr.h[90] findupdate=51
+finished G:205 DEF com/bucket.b[50] finished=
+finished G:205 LG com/bucket.b[436] UNLESS finished DO ..
+finished G:205 LG com/bucket.b[453] UNLESS finished DO ..
+finished G:205 LG com/bucket.b[756] IF finished DO ..
+finished G:205 LG com/bucket.b[760] IF started|finished DO ..
+finished G:205 SG com/bucket.b[447] finished:=FALSE
+finished G:205 SG com/bucket.b[462] finished:=TRUE
+finished G:205 SG com/bucket.b[799] finished:=FALSE
+finished G:205 SG com/bucket.b[841] finished:=FALSE
+finished G:205 SG com/bucket.b[852] finished:=FALSE
+finished G:205 SG com/bucket.b[925] finished:=FALSE
+fl_64to32 M:45 DEF libhdr.h[639] fl_64to32=
+fl_F2N M:42 DEF libhdr.h[636] fl_F2N=
+fl_N2F M:41 DEF libhdr.h[635] fl_N2F=
+fl_abs M:5 DEF libhdr.h[606] fl_abs=
+fl_acos M:20 DEF libhdr.h[611] fl_acos=20
+fl_add M:9 DEF libhdr.h[608] fl_add=
+fl_asin M:21 DEF libhdr.h[612] fl_asin=
+fl_atan M:22 DEF libhdr.h[613] fl_atan=
+fl_atan2 M:23 DEF libhdr.h[614] fl_atan2=
+fl_avail M:0 DEF libhdr.h[604] fl_avail=0
+fl_ceil M:38 DEF libhdr.h[629] fl_ceil=
+fl_cos M:24 DEF libhdr.h[615] fl_cos=
+fl_cosh M:27 DEF libhdr.h[618] fl_cosh=
+fl_div M:7 DEF libhdr.h[607] fl_div=
+fl_eq M:13 DEF libhdr.h[609] fl_eq=
+fl_exp M:30 DEF libhdr.h[621] fl_exp=
+fl_fix M:4 DEF libhdr.h[606] fl_fix=
+fl_float M:3 DEF libhdr.h[606] fl_float=
+fl_floor M:39 DEF libhdr.h[630] fl_floor=
+fl_frexp M:31 DEF libhdr.h[622] fl_frexp=
+fl_ge M:18 DEF libhdr.h[609] fl_ge=
+fl_gr M:16 DEF libhdr.h[609] fl_gr=
+fl_ldexp M:32 DEF libhdr.h[623] fl_ldexp=
+fl_le M:17 DEF libhdr.h[609] fl_le=
+fl_log M:33 DEF libhdr.h[624] fl_log=
+fl_log10 M:34 DEF libhdr.h[625] fl_log10=
+fl_ls M:15 DEF libhdr.h[609] fl_ls=
+fl_mk M:1 DEF libhdr.h[605] fl_mk=
+fl_mk M:1 MAN sdl.b[67] TEST r#<sys(Sys_flt,fl_mk,1,-10) THEN .. ELSE ..
+fl_mod M:8 DEF libhdr.h[607] fl_mod=
+fl_modf M:40 DEF libhdr.h[631] fl_modf=
+fl_mul M:6 DEF libhdr.h[607] fl_mul=
+fl_ne M:14 DEF libhdr.h[609] fl_ne=
+fl_neg M:12 DEF libhdr.h[608] fl_neg=
+fl_pos M:11 DEF libhdr.h[608] fl_pos=
+fl_pow M:36 DEF libhdr.h[627] fl_pow=36
+fl_radius2 M:43 DEF libhdr.h[637] fl_radius2=
+fl_radius3 M:44 DEF libhdr.h[638] fl_radius3=
+fl_sin M:25 DEF libhdr.h[616] fl_sin=
+fl_sinh M:28 DEF libhdr.h[619] fl_sinh=
+fl_sqrt M:37 DEF libhdr.h[628] fl_sqrt=
+fl_sqrt M:37 MAN sdl.b[66] sys(Sys_flt,fl_sqrt,x*x+y*y+z*z)
+fl_sqrt M:37 MAN sdl.b[83]
+    RESULTIS sys(Sys_flt,fl_sqrt,dx*dx+dy*dy+dz*dz)
+fl_sqrt M:37 MAN sdl.b[89] RESULTIS sys(Sys_flt,fl_sqrt,x*x+y*y+z*z)
+fl_sub M:10 DEF libhdr.h[608] fl_sub=
+fl_tan M:26 DEF libhdr.h[617] fl_tan=
+fl_tanh M:29 DEF libhdr.h[620] fl_tanh=
+fl_unmk M:2 DEF libhdr.h[605] fl_unmk=
+flag_a M:1 DEF libhdr.h[764] flag_a=1<<0
+flag_b M:2 DEF libhdr.h[765] flag_b=1<<1
+flag_c M:4 DEF libhdr.h[766] flag_c=1<<2
+flag_d M:8 DEF libhdr.h[767] flag_d=1<<3
+flag_e M:16 DEF libhdr.h[768] flag_e=1<<4
+floor_yt G:239 DEF com/bucket.b[103] floor_yt=
+floor_yt G:239 LG com/bucket.b[967] ylim_floor:=floor_yt+ballradius
+floor_yt G:239 LG com/bucket.b[986] baty:=floor_yt+batradius
+floor_yt G:239 LG com/bucket.b[987]
+    ylim_bat:=floor_yt+batradius+ballradius
+floor_yt G:239 SG com/bucket.b[945] floor_yt:=0
+fontH G:517 DEF sdl.h[181] fontH=
+fontH G:517 LG sdl.b[416] curry:=curry-fontH-charVsep
+fontH G:517 LG sdl.b[418] FOR line=0 TO fontH-1 DO..
+fontH G:517 LG sdl.b[419]
+    write_ch_slice(currx,curry+fontH-1-line,ch,line)
+fontH G:517 SG sdl.b[403] fontH:=18
+fontH G:517 SG sdl.b[408] fontH:=12
+fontW G:516 DEF sdl.h[180] fontW=
+fontW G:516 LG sdl.b[420] currx:=currx+fontW+charHsep
+fontW G:516 SG sdl.b[403] fontW:=12
+fontW G:516 SG sdl.b[408] fontW:=8
+fonttab G:522 DEF sdl.h[187] fonttab=
+format G:459 DEF sdl.h[77] format=
+format G:459 LLG sdl.b[280] sys(Sys_sdl,sdl_maprgb,@format,r,g,b)
+format G:459 LLG sdl.b[300]
+    sys(Sys_sdl,sdl_mksurface,@format,w,h,surfptr)
+format G:459 SG sdl.b[255] format:=fmt
+format1 G:460 DEF sdl.h[78] format1=
+format1 G:460 SG sdl.b[255] format1:=fmt1
+freeobj G:78 DEF libhdr.h[117] freeobj=78
+freesurface G:509 DEF sdl.h[166] freesurface=
+freesurface G:509 LG com/bucket.b[1022] freesurface(@bucketwallsurf)
+freesurface G:509 LG com/bucket.b[1023] freesurface(@bucketbasesurf)
+freesurface G:509 LG com/bucket.b[1024] freesurface(@ball1surf)
+freesurface G:509 LG com/bucket.b[1025] freesurface(@ball2surf)
+freesurface G:509 LG com/bucket.b[1026] freesurface(@ball3surf)
+freesurface G:509 LG com/bucket.b[1027] freesurface(@batsurf)
+freesurface G:509 LG com/bucket.b[820] freesurface(@bucketwallsurf)
+freesurface G:509 RT sdl.b[304] LET freesurface(surfptr)BE..
+freevec G:27 DEF libhdr.h[66] freevec=27
+freevec G:27 LG sdl.b[285] freevec(leftxv)
+freevec G:27 LG sdl.b[286] freevec(rightxv)
+freevec G:27 LG sdl.b[287] freevec(leftzv)
+freevec G:27 LG sdl.b[288] freevec(rightzv)
+freevec G:27 LG sdl.b[289] freevec(depthv)
+fscreencentrex FG:467 DEF sdl.h[87] FLT fscreencentrex=
+fscreencentrey FG:468 DEF sdl.h[88] FLT fscreencentrey=
+fscreenxsize FG:465 DEF sdl.h[85] FLT fscreenxsize=
+fscreenxsize FG:465 SG sdl.b[221] fscreenxsize#:=FLOAT xsize
+fscreenysize FG:466 DEF sdl.h[86] FLT fscreenysize=
+fscreenysize FG:466 SG sdl.b[221] fscreenysize#:=FLOAT ysize
+g_alsabase M:500 DEF libhdr.h[783] g_alsabase=500
+g_bdrawbase M:450 DEF libhdr.h[779] g_bdrawbase=450
+g_colist M:8 DEF libhdr.h[280] g_colist=8
+g_currco M:7 DEF libhdr.h[279] g_currco=7
+g_extbase M:950 DEF libhdr.h[784] g_extbase=950
+g_glbase M:450 DEF libhdr.h[781] g_glbase=450
+g_globsize M:0 DEF libhdr.h[277] g_globsize=0
+g_grbase M:450 DEF libhdr.h[778] g_grbase=450
+g_keyboard M:20 DEF libhdr.h[285] g_keyboard=20
+g_memsize M:14 DEF libhdr.h[284] g_memsize=14
+g_result2 M:10 DEF libhdr.h[282] g_result2=10
+g_rootnode M:9 DEF libhdr.h[281] g_rootnode=9
+g_screen M:21 DEF libhdr.h[286] g_screen=21
+g_sdlbase M:450 DEF libhdr.h[780] g_sdlbase=450
+g_sdlbase M:450 MAN sdl.h[66] inprod=g_sdlbase
+g_sndbase M:450 DEF libhdr.h[782] g_sndbase=450
+g_sys M:3 DEF libhdr.h[278] g_sys=3
+get_record G:71 DEF libhdr.h[110] get_record=71
+get_text G:93 DEF libhdr.h[133] get_text=93
+get_textblib G:93 DEF libhdr.h[132] get_textblib=93
+getevent G:553 DEF sdl.h[276] getevent=
+getevent G:553 FN sdl.b[312] LET getevent()=..
+getevent G:553 LG com/bucket.b[803] WHILE getevent() DO ..
+getlogname G:118 DEF libhdr.h[158] getlogname=118
+getmousestate G:552 DEF sdl.h[275] getmousestate=
+getmousestate G:552 FN sdl.b[357] LET getmousestate()=..
+getremipaddr G:54 DEF libhdr.h[93] getremipaddr=54
+getvec G:25 DEF libhdr.h[64] getvec=25
+getvec G:25 LG sdl.b[3680] leftxv:=getvec(curryupb)
+getvec G:25 LG sdl.b[3681] rightxv:=getvec(curryupb)
+getvec G:25 LG sdl.b[4161] leftzv:=getvec(curryupb)
+getvec G:25 LG sdl.b[4162] rightzv:=getvec(curryupb)
+getvec G:25 LG sdl.b[4163] depthv:=getvec(depthvupb)
+getword G:32 DEF libhdr.h[71] getword=32
+glob0 G:0 DEF libhdr.h[37] glob0=0
+globin G:24 DEF libhdr.h[63] globin=24
+globsize G:0 DEF libhdr.h[38] globsize=0
+globword M:#x8F8F0000 DEF libhdr.h[270] globword=-#x70710000
+help G:201 DEF com/bucket.b[45] help=
+help G:201 LG com/bucket.b[763] IF help DO ..
+help G:201 LG com/bucket.b[815] help:=~help
+help G:201 SG com/bucket.b[815] help:=~help
+help G:201 SG com/bucket.b[917] help:=TRUE
+hidecursor G:556 DEF sdl.h[281] hidecursor=
+hidecursor G:556 FN sdl.b[323] LET hidecursor()=..
+hold G:158 DEF libhdr.h[212] hold=158
+id_appendscb M:132 DEF libhdr.h[553] id_appendscb=132
+id_inoutscb M:131 DEF libhdr.h[552] id_inoutscb=131
+id_inscb M:129 DEF libhdr.h[550] id_inscb=129
+id_outscb M:130 DEF libhdr.h[551] id_outscb=130
+incontact F:10 FN com/bucket.b[144] LET incontact(p1,p2,d)=..
+incontact F:10 LF com/bucket.b[313]
+    IF incontact(@ecx,pv,endradius+ballradius) DO ..
+incontact F:10 LF com/bucket.b[319]
+    IF incontact(@ecx,pv,endradius+ballradius) DO ..
+incontact F:10 LF com/bucket.b[378]
+    IF incontact(@ecx,pv,endradius+ballradius) DO ..
+incontact F:10 LF com/bucket.b[385]
+    IF incontact(@ecx,pv,endradius+ballradius) DO ..
+incontact F:10 LF com/bucket.b[397]
+    IF incontact(@batx,pv,batradius+ballradius) DO ..
+incontact F:10 LF com/bucket.b[480]
+    IF incontact(@cgx1,@cgx2,ballradius+ballradius) DO ..
+incontact F:10 LF com/bucket.b[485]
+    IF incontact(@cgx1,@cgx3,ballradius+ballradius) DO ..
+incontact F:10 LF com/bucket.b[490]
+    IF incontact(@cgx2,@cgx3,ballradius+ballradius) DO ..
+initballsurf F:58 FN com/bucket.b[677] LET initballsurf(surfptr,col)=..
+initballsurf F:58 LF com/bucket.b[716]
+    ball1surfok:=initballsurf(@ball1surf,ball1colour)
+initballsurf F:58 LF com/bucket.b[718]
+    ball2surfok:=initballsurf(@ball2surf,ball2colour)
+initballsurf F:58 LF com/bucket.b[720]
+    ball3surfok:=initballsurf(@ball3surf,ball3colour)
+initbatsurf F:59 FN com/bucket.b[694] LET initbatsurf(surfptr)=..
+initbatsurf F:59 LF com/bucket.b[722] batsurfok:=initbatsurf(@batsurf)
+initbucketbasesurf F:57 FN com/bucket.b[665]
+    LET initbucketbasesurf(surfptr,col)=..
+initbucketbasesurf F:57 LF com/bucket.b[714]
+    bucketbasesurfok:=initbucketbasesurf(@bucketbasesurf)
+initbucketwallsurf F:56 FN com/bucket.b[644]
+    LET initbucketwallsurf(surfptr)=..
+initbucketwallsurf F:56 LF com/bucket.b[712]
+    bucketwallsurfok:=initbucketwallsurf(@bucketwallsurf)
+initco G:22 DEF libhdr.h[61] initco=22
+initio G:46 DEF libhdr.h[85] initio=46
+initsdl G:500 DEF sdl.h[154] initsdl=
+initsdl G:500 FN sdl.b[145] LET initsdl()=..
+initsdl G:500 LG com/bucket.b[913] initsdl()
+inprod G:450 DEF sdl.h[66] inprod=g_sdlbase
+inprod G:450 FN com/bucket.b[298] LET inprod(dx,dy,c,s)=..
+inprod G:450 FN sdl.b[45] LET inprod(v,w)=..
+inprod G:450 LG com/bucket.b[177] inprod(xdot,ydot,c,s)
+inprod G:450 LG com/bucket.b[178] inprod(xdot,ydot,-s,c)
+inprod G:450 LG com/bucket.b[186] p2!2:=inprod(tdot,wdot,c,...)
+inprod G:450 LG com/bucket.b[187] p2!3:=inprod(tdot,wdot,s,c)
+inprod G:450 LG com/bucket.b[202] inprod(rx1dot,ry1dot,c,s)
+inprod G:450 LG com/bucket.b[203] inprod(rx1dot,ry1dot,-s,c)
+inprod G:450 LG com/bucket.b[211] rx1dot:=inprod(t1dot,w1dot,c,...)
+inprod G:450 LG com/bucket.b[212] ry1dot:=inprod(t1dot,w1dot,s,c)
+inprod G:450 LG com/bucket.b[240] inprod(rx1dot,ry1dot,c,s)
+inprod G:450 LG com/bucket.b[241] inprod(rx1dot,ry1dot,-s,c)
+inprod G:450 LG com/bucket.b[242] inprod(rx2dot,ry2dot,c,s)
+inprod G:450 LG com/bucket.b[243] inprod(rx2dot,ry2dot,-s,c)
+inprod G:450 LG com/bucket.b[252] rx1dot:=inprod(t1dot,w1dot,c,...)
+inprod G:450 LG com/bucket.b[253] ry1dot:=inprod(t1dot,w1dot,s,c)
+inprod G:450 LG com/bucket.b[254] rx2dot:=inprod(t2dot,w2dot,c,...)
+inprod G:450 LG com/bucket.b[255] ry2dot:=inprod(t2dot,w2dot,s,c)
+input G:58 DEF libhdr.h[97] input=58
+instrcount G:121 DEF libhdr.h[161] instrcount=121
+interpolate G:529 DEF sdl.h[205] interpolate=
+interpolate G:529 FN sdl.b[92] LET interpolate(p,p1,p2,q1,q2)=..
+interpolate G:529 LG sdl.b[118] RESULTIS interpolate(p,p2,p1,q2,q1)
+interpolate G:529 LG sdl.b[130] res:=interpolate(p,p1,midp,...)
+interpolate G:529 LG sdl.b[131] res:=interpolate(p-midp,midp,p2,...)
+interpolate G:529 LG sdl.b[141] interpolate(p,p1,p2,q1,q2)
+interpolate G:529 LG sdl.b[4061] x0:=interpolate(0,y0,y1,...)
+interpolate G:529 LG sdl.b[4062] sz0:=interpolate(0,y0,y1,...)
+interpolate G:529 LG sdl.b[4070] x0:=interpolate(curryupb,y0,y1,...)
+interpolate G:529 LG sdl.b[4071] sz0:=interpolate(curryupb,y0,y1,...)
+interpolate G:529 LG sdl.b[4079] x1:=interpolate(0,y0,y1,...)
+interpolate G:529 LG sdl.b[4080] sz1:=interpolate(0,y0,y1,...)
+interpolate G:529 LG sdl.b[4088] x1:=interpolate(curryupb,y0,y1,...)
+interpolate G:529 LG sdl.b[4089] sz1:=interpolate(curryupb,y0,y1,...)
+interpolate G:529 LG sdl.b[4124] leftzv!y:=interpolate(s,0,smax,...)
+interpolate G:529 LG sdl.b[4131] rightzv!y:=interpolate(s,0,smax,...)
+interpolate G:529 LG sdl.b[4246] x1:=interpolate(fardepth,z3,z1,...)
+interpolate G:529 LG sdl.b[4247] y1:=interpolate(fardepth,z3,z1,...)
+interpolate G:529 LG sdl.b[4249] x2:=interpolate(fardepth,z3,z2,...)
+interpolate G:529 LG sdl.b[4250] y2:=interpolate(fardepth,z3,z2,...)
+interpolate G:529 LG sdl.b[4277] interpolate(fardepth,z2,z1,x2,x1)
+interpolate G:529 LG sdl.b[4278] interpolate(fardepth,z2,z1,y2,y1)
+interpolate G:529 LG sdl.b[4280] x1:=interpolate(fardepth,z3,z1,...)
+interpolate G:529 LG sdl.b[4281] y1:=interpolate(fardepth,z3,z1,...)
+interpolate G:529 LG sdl.b[4310] x2:=interpolate(neardepth,z2,z1,...)
+interpolate G:529 LG sdl.b[4311] y2:=interpolate(neardepth,z2,z1,...)
+interpolate G:529 LG sdl.b[4313] x3:=interpolate(neardepth,z3,z1,...)
+interpolate G:529 LG sdl.b[4314] y3:=interpolate(neardepth,z3,z1,...)
+interpolate G:529 LG sdl.b[4339] interpolate(neardepth,z3,z2,x3,x2)
+interpolate G:529 LG sdl.b[4340] interpolate(neardepth,z3,z2,y3,y2)
+interpolate G:529 LG sdl.b[4342] x3:=interpolate(neardepth,z3,z1,...)
+interpolate G:529 LG sdl.b[4343] y3:=interpolate(neardepth,z3,z1,...)
+interpolate G:529 LG sdl.b[4380] sz0:=interpolate(0,x0,x1,...)
+interpolate G:529 LG sdl.b[4384] sz1:=interpolate(currxsize-1,x0,x1,...)
+interpolate G:529 LG sdl.b[4410] interpolate(x,x0,x1,sz0,sz1)
+interpolate1 F:16 FN sdl.b[98] LET interpolate1(p,p1,p2,q1,q2)=..
+interpolate1 F:16 LF sdl.b[93] interpolate1(p,p1,p2,q1,q2)
+intflag G:119 DEF libhdr.h[159] intflag=119
+isrregs M:41 DEF libhdr.h[510] isrregs=41
+joystick G:461 DEF sdl.h[80] joystick=
+joystick1 G:462 DEF sdl.h[80] joystick1=
+klibregs M:21 DEF libhdr.h[505] klibregs=21
+leftxv G:473 DEF sdl.h[96] leftxv=
+leftxv G:473 LG sdl.b[285] IF leftxv DO ..
+leftxv G:473 LG sdl.b[285] freevec(leftxv)
+leftxv G:473 LG sdl.b[3650] IF leftxv!y>x DO ..
+leftxv G:473 LG sdl.b[3651] leftxv!y:=x
+leftxv G:473 LG sdl.b[3682] UNLESS leftxv&rightxv DO ..
+leftxv G:473 LG sdl.b[3688] leftxv!y:=currysize
+leftxv G:473 LG sdl.b[3719] moveto(leftxv!y,y)
+leftxv G:473 LG sdl.b[3722] leftxv!y:=currysize-1
+leftxv G:473 LG sdl.b[4121] IF leftxv!y>=x DO ..
+leftxv G:473 LG sdl.b[4122] leftxv!y:=x
+leftxv G:473 LG sdl.b[4137]
+    writef("*nleft'maxy=%n*n",leftxv!y,leftzv!y,rightxv!y,rightzv!y,miny,maxy)
+leftxv G:473 LG sdl.b[4364] leftxv!y:=currxsize
+leftxv G:473 LG sdl.b[4374] leftxv!y
+leftxv G:473 LG sdl.b[4421] leftxv!y:=currxsize
+leftxv G:473 LG sdl.b[4429] IF leftxv!y<=rightxv!y DO ..
+leftxv G:473 LG sdl.b[4430]
+    writef("y=%i3'n %n:%n*n",y,leftxv!y,leftzv!y,rightxv!y,rightzv!y)
+leftxv G:473 SG sdl.b[199] leftxv:=0
+leftxv G:473 SG sdl.b[3680] leftxv:=getvec(curryupb)
+leftzv G:474 DEF sdl.h[98] leftzv=
+leftzv G:474 LG sdl.b[287] IF leftzv DO ..
+leftzv G:474 LG sdl.b[287] freevec(leftzv)
+leftzv G:474 LG sdl.b[4124] leftzv!y:=interpolate(s,0,smax,...)
+leftzv G:474 LG sdl.b[4136] IF leftzv!y=500 DO ..
+leftzv G:474 LG sdl.b[4137]
+    writef("*nleft'maxy=%n*n",leftxv!y,leftzv!y,rightxv!y,rightzv!y,miny,maxy)
+leftzv G:474 LG sdl.b[4165] UNLESS leftzv*rightzv*depthv DO ..
+leftzv G:474 LG sdl.b[4171] leftzv!y:=currysize
+leftzv G:474 LG sdl.b[4374] leftzv!y
+leftzv G:474 LG sdl.b[4422] leftzv!y:=0
+leftzv G:474 LG sdl.b[4430]
+    writef("y=%i3'n %n:%n*n",y,leftxv!y,leftzv!y,rightxv!y,rightzv!y)
+leftzv G:474 SG sdl.b[188] leftzv:=0
+leftzv G:474 SG sdl.b[4161] leftzv:=getvec(curryupb)
+level G:15 DEF libhdr.h[54] level=15
+loadseg G:105 DEF libhdr.h[145] loadseg=105
+locatedir G:80 DEF libhdr.h[119] locatedir=80
+locateobj G:81 DEF libhdr.h[120] locateobj=81
+longjump G:16 DEF libhdr.h[55] longjump=16
+maprgb G:503 DEF sdl.h[157] maprgb=
+maprgb G:503 FN sdl.b[280] LET maprgb(r,g,b)=..
+maprgb G:503 LG com/bucket.b[681] maprgb(64,64,64)
+maprgb G:503 LG com/bucket.b[754] setcolour(maprgb(255,255,255))
+maprgb G:503 LG com/bucket.b[934] backcolour:=maprgb(120,120,120)
+maprgb G:503 LG com/bucket.b[935] bucketcolour:=maprgb(170,60,30)
+maprgb G:503 LG com/bucket.b[936] bucketendcolour:=maprgb(140,30,30)
+maprgb G:503 LG com/bucket.b[937] ball1colour:=maprgb(255,0,0)
+maprgb G:503 LG com/bucket.b[938] ball2colour:=maprgb(0,255,0)
+maprgb G:503 LG com/bucket.b[939] ball3colour:=maprgb(0,0,255)
+maprgb G:503 LG com/bucket.b[940] batcolour:=maprgb(40,40,40)
+maxdepth G:481 DEF sdl.h[116] maxdepth=
+maxdepth G:481 LG sdl.b[352] depthv!p:=maxdepth
+maxdepth G:481 LG sdl.b[4173] depthv!i:=maxdepth
+maxdepth G:481 SG sdl.b[194] maxdepth:=#x3B9ACA00
+maxint M:#x7FFFFFFF DEF libhdr.h[253] maxint=minint-1
+maxy G:478 DEF sdl.h[109] maxy=
+maxy G:478 LG sdl.b[3653] IF maxy<y DO ..
+maxy G:478 LG sdl.b[3658] IF maxy<y DO ..
+maxy G:478 LG sdl.b[3715] FOR y=miny TO maxy DO..
+maxy G:478 LG sdl.b[4126] IF y>maxy DO ..
+maxy G:478 LG sdl.b[4133] IF y>maxy DO ..
+maxy G:478 LG sdl.b[4137]
+    writef("*nleft'maxy=%n*n",leftxv!y,leftzv!y,rightxv!y,rightzv!y,miny,maxy)
+maxy G:478 LG sdl.b[4372] FOR y=miny TO maxy DO..
+maxy G:478 LG sdl.b[4428] writef("chkli'maxy=%n*n",miny,maxy)
+maxy G:478 SG sdl.b[200] maxy:=-1
+maxy G:478 SG sdl.b[3653] maxy:=y
+maxy G:478 SG sdl.b[3658] maxy:=y
+maxy G:478 SG sdl.b[3698] maxy:=-1
+maxy G:478 SG sdl.b[4126] maxy:=y
+maxy G:478 SG sdl.b[4133] maxy:=y
+maxy G:478 SG sdl.b[4362] maxy:=-1
+mcaddrinc M:4 DEF libhdr.h[251] mcaddrinc=bytesperword
+memoryfree G:131 DEF libhdr.h[171] memoryfree=131
+mindepth G:482 DEF sdl.h[117] mindepth=
+mindepth G:482 SG sdl.b[195] mindepth:=-#x3B9ACA00
+minint M:#x80000000 DEF libhdr.h[252] minint=1<<bitsperword-1
+minint M:#x80000000 MAN libhdr.h[253] maxint=minint-1
+minx G:292 DEF com/bucket.b[132] minx=
+minx G:292 LG com/bucket.b[589] dist:=minx-batx
+minx G:292 SG com/bucket.b[574] minx:=0
+minx G:292 SG com/bucket.b[579] minx:=cgx1
+minx G:292 SG com/bucket.b[582] minx:=cgx2
+minx G:292 SG com/bucket.b[584] minx:=cgx3
+minx G:292 SG com/bucket.b[831] minx:=0
+minxdot G:294 DEF com/bucket.b[133] minxdot=
+minxdot G:294 SG com/bucket.b[579] minxdot:=cgx1dot
+minxdot G:294 SG com/bucket.b[582] minxdot:=cgx2dot
+minxdot G:294 SG com/bucket.b[584] minxdot:=cgx3dot
+minxdot G:294 SG com/bucket.b[831] minxdot:=0
+miny G:293 DEF com/bucket.b[132] miny=
+miny G:293 LG com/bucket.b[581] IF cgy2<miny DO ..
+miny G:293 LG com/bucket.b[583] IF cgy3<miny DO ..
+miny G:293 SG com/bucket.b[579] miny:=cgy1
+miny G:293 SG com/bucket.b[582] miny:=cgy2
+miny G:293 SG com/bucket.b[584] miny:=cgy3
+miny G:293 SG com/bucket.b[831] miny:=0
+miny G:477 DEF sdl.h[108] miny=
+miny G:477 LG sdl.b[3652] IF miny>y DO ..
+miny G:477 LG sdl.b[3657] IF miny>y DO ..
+miny G:477 LG sdl.b[3715] FOR y=miny TO maxy DO..
+miny G:477 LG sdl.b[4125] IF y<miny DO ..
+miny G:477 LG sdl.b[4132] IF y<miny DO ..
+miny G:477 LG sdl.b[4137]
+    writef("*nleft'maxy=%n*n",leftxv!y,leftzv!y,rightxv!y,rightzv!y,miny,maxy)
+miny G:477 LG sdl.b[4372] FOR y=miny TO maxy DO..
+miny G:477 LG sdl.b[4428] writef("chkli'maxy=%n*n",miny,maxy)
+miny G:477 SG sdl.b[200] miny:=0
+miny G:477 SG sdl.b[3652] miny:=y
+miny G:477 SG sdl.b[3657] miny:=y
+miny G:477 SG sdl.b[3698] miny:=currysize
+miny G:477 SG sdl.b[4125] miny:=y
+miny G:477 SG sdl.b[4132] miny:=y
+miny G:477 SG sdl.b[4362] miny:=currysize
+minydot G:295 DEF com/bucket.b[133] minydot=
+minydot G:295 SG com/bucket.b[579] minydot:=cgy1dot
+minydot G:295 SG com/bucket.b[582] minydot:=cgy2dot
+minydot G:295 SG com/bucket.b[584] minydot:=cgy3dot
+minydot G:295 SG com/bucket.b[831] minydot:=0
+mkscreen G:501 DEF sdl.h[155] mkscreen=
+mkscreen G:501 FN sdl.b[208] LET mkscreen(title,xsize,ysize)=..
+mkscreen G:501 LG com/bucket.b[914] mkscreen("Ball 'd Bucket",800,500)
+mkscreen G:501 LG sdl.b[271] UNLESS mkscreen(title,xsize,ysize) DO ..
+mkscreen3d G:502 DEF sdl.h[156] mkscreen3d=
+mkscreen3d G:502 FN sdl.b[266] LET mkscreen3d(title,xsize,ysize)=..
+mksurface G:508 DEF sdl.h[165] mksurface=
+mksurface G:508 FN sdl.b[298] LET mksurface(w,h,surfptr)=..
+mksurface G:508 LG com/bucket.b[648]
+    UNLESS mksurface(width,height,surfptr) DO ..
+mksurface G:508 LG com/bucket.b[669]
+    UNLESS mksurface(width,height,surfptr) DO ..
+mksurface G:508 LG com/bucket.b[682]
+    UNLESS mksurface(width,height,surfptr) DO ..
+mksurface G:508 LG com/bucket.b[698]
+    UNLESS mksurface(width,height,surfptr) DO ..
+mousebuttons G:493 DEF sdl.h[143] mousebuttons=
+mousex G:491 DEF sdl.h[140] mousex=
+mousey G:492 DEF sdl.h[141] mousey=
+moveby G:512 DEF sdl.h[171] moveby=
+moveby G:512 RT sdl.b[367] LET moveby(dx,dy)BE..
+moveby3d G:544 DEF sdl.h[238] moveby3d=
+moveby3d G:544 RT sdl.b[3984] LET moveby3d(dx,dy,dsz)BE..
+movesurf G:526 DEF sdl.h[196] movesurf=
+moveto G:511 DEF sdl.h[170] moveto=
+moveto G:511 LG sdl.b[3606] moveto(x,y)
+moveto G:511 LG sdl.b[367] moveto(currx+dx,curry+dy)
+moveto G:511 LG sdl.b[3719] moveto(leftxv!y,y)
+moveto G:511 RT sdl.b[366] LET moveto(x,y)BE..
+moveto3d G:543 DEF sdl.h[235] moveto3d=
+moveto3d G:543 RT sdl.b[3981] LET moveto3d(x,y,sz)BE..
+muldiv G:5 DEF libhdr.h[43] muldiv=5
+muldiv G:5 LG com/bucket.b[152]
+    IF muldiv(dx,dx,One)+muldiv(dy,dy,One)>muldiv(d,d,One) DO ..
+muldiv G:5 LG com/bucket.b[221] p1!0:=p1!0-muldiv(40000,c,One)
+muldiv G:5 LG com/bucket.b[222] p1!1:=p1!1-muldiv(40000,s,One)
+muldiv G:5 LG com/bucket.b[223] p2!0:=p2!0+muldiv(40000,c,One)
+muldiv G:5 LG com/bucket.b[224] p2!1:=p2!1+muldiv(40000,s,One)
+muldiv G:5 LG com/bucket.b[264] p1!0:=p1!0-muldiv(5000,c,One)
+muldiv G:5 LG com/bucket.b[265] p1!1:=p1!1-muldiv(5000,s,One)
+muldiv G:5 LG com/bucket.b[266] p2!0:=p2!0+muldiv(5000,c,One)
+muldiv G:5 LG com/bucket.b[267] p2!1:=p2!1+muldiv(5000,s,One)
+muldiv G:5 LG com/bucket.b[277] muldiv(dx,One,d)
+muldiv G:5 LG com/bucket.b[278] muldiv(dy,One,d)
+muldiv G:5 LG com/bucket.b[279] muldiv(c,c,One)+muldiv(s,s,One)
+muldiv G:5 LG com/bucket.b[283] d:=(d+muldiv(a,...))/2
+muldiv G:5 LG com/bucket.b[285] d:=(d+muldiv(a,...))/2
+muldiv G:5 LG com/bucket.b[287] d:=(d+muldiv(a,...))/2
+muldiv G:5 LG com/bucket.b[290] s:=muldiv(s,One,d)
+muldiv G:5 LG com/bucket.b[291] c:=muldiv(c,One,d)
+muldiv G:5 LG com/bucket.b[298] muldiv(dx,c,One)+muldiv(dy,s,One)
+muldiv G:5 LG com/bucket.b[549]
+    t:=muldiv(sely-ylim_floor,100000,-selydot)
+muldiv G:5 LG com/bucket.b[553] targetx:=selx+muldiv(selxdot,t,100000)
+muldiv G:5 LG com/bucket.b[562] rbs:=muldiv(targetx-batx,100000,t)
+muldiv G:5 LG com/bucket.b[903] rsq:=muldiv(c,c,One)+muldiv(s,s,One)
+muldiv G:5 LG sdl.b[112] RESULTIS q1+muldiv(q2-q1,p-p1,p2-p1)
+muldiv G:5 LG sdl.b[137] RESULTIS q1+muldiv(q2-q1,p-p1,p2-p1)
+neardepth G:483 DEF sdl.h[119] neardepth=
+neardepth G:483 LG sdl.b[4230] IF z3>fardepth|z1<neardepth DO ..
+neardepth G:483 LG sdl.b[4291] IF z3<neardepth DO ..
+neardepth G:483 LG sdl.b[4291] TEST z2<neardepth THEN .. ELSE ..
+neardepth G:483 LG sdl.b[4310] x2:=interpolate(neardepth,z2,z1,...)
+neardepth G:483 LG sdl.b[4311] y2:=interpolate(neardepth,z2,z1,...)
+neardepth G:483 LG sdl.b[4312] z2:=neardepth
+neardepth G:483 LG sdl.b[4313] x3:=interpolate(neardepth,z3,z1,...)
+neardepth G:483 LG sdl.b[4314] y3:=interpolate(neardepth,z3,z1,...)
+neardepth G:483 LG sdl.b[4315] z3:=neardepth
+neardepth G:483 LG sdl.b[4339] interpolate(neardepth,z3,z2,x3,x2)
+neardepth G:483 LG sdl.b[4340] interpolate(neardepth,z3,z2,y3,y2)
+neardepth G:483 LG sdl.b[4341] neardepth
+neardepth G:483 LG sdl.b[4342] x3:=interpolate(neardepth,z3,z1,...)
+neardepth G:483 LG sdl.b[4343] y3:=interpolate(neardepth,z3,z1,...)
+neardepth G:483 LG sdl.b[4344] z3:=neardepth
+neardepth G:483 LG sdl.b[4391]
+    writef("drawt'th = %n*n",neardepth,fardepth)
+neardepth G:483 SG sdl.b[4437] neardepth:=near
+newline G:84 DEF libhdr.h[123] newline=84
+newline G:84 LG sdl.b[4431] newline()
+newpage G:120 DEF libhdr.h[160] newpage=120
+note G:63 DEF libhdr.h[102] note=63
+notinuse M:-1 DEF libhdr.h[666] notinuse=-1
+output G:59 DEF libhdr.h[98] output=59
+packstring G:30 DEF libhdr.h[69] packstring=30
+pathfindinput G:53 DEF libhdr.h[92] pathfindinput=53
+peercom G:179 DEF libhdr.h[228] peercom=179
+pkt_a1 M:5 DEF libhdr.h[675] pkt_a1=5
+pkt_a2 M:6 DEF libhdr.h[676] pkt_a2=6
+pkt_a3 M:7 DEF libhdr.h[677] pkt_a3=7
+pkt_a4 M:8 DEF libhdr.h[678] pkt_a4=8
+pkt_a5 M:9 DEF libhdr.h[679] pkt_a5=9
+pkt_a6 M:10 DEF libhdr.h[680] pkt_a6=10
+pkt_arg1 M:5 DEF libhdr.h[675] pkt_arg1=5
+pkt_arg2 M:6 DEF libhdr.h[676] pkt_arg2=6
+pkt_arg3 M:7 DEF libhdr.h[677] pkt_arg3=7
+pkt_arg4 M:8 DEF libhdr.h[678] pkt_arg4=8
+pkt_arg5 M:9 DEF libhdr.h[679] pkt_arg5=9
+pkt_arg6 M:10 DEF libhdr.h[680] pkt_arg6=10
+pkt_devid M:1 DEF libhdr.h[671] pkt_devid=1
+pkt_devtaskid M:1 DEF libhdr.h[671] pkt_devtaskid=1
+pkt_id M:1 DEF libhdr.h[671] pkt_id=1
+pkt_link M:0 DEF libhdr.h[670] pkt_link=0
+pkt_op M:2 DEF libhdr.h[672] pkt_op=2
+pkt_r1 M:3 DEF libhdr.h[673] pkt_r1=3
+pkt_r2 M:4 DEF libhdr.h[674] pkt_r2=4
+pkt_res1 M:3 DEF libhdr.h[673] pkt_res1=3
+pkt_res2 M:4 DEF libhdr.h[674] pkt_res2=4
+pkt_taskid M:1 DEF libhdr.h[671] pkt_taskid=1
+pkt_type M:2 DEF libhdr.h[672] pkt_type=2
+plotscreen F:60 LF com/bucket.b[1003] plotscreen()
+plotscreen F:60 RT com/bucket.b[706] LET plotscreen()BE..
+point G:64 DEF libhdr.h[103] point=64
+pollingch M:-3 DEF libhdr.h[257] pollingch=-3
+processevents F:62 LF com/bucket.b[998] processevents()
+processevents F:62 RT com/bucket.b[803] LET processevents()BE..
+put_record G:72 DEF libhdr.h[111] put_record=72
+putword G:33 DEF libhdr.h[72] putword=33
+qpkt G:161 DEF libhdr.h[215] qpkt=161
+radius G:454 DEF sdl.h[70] radius=
+radius G:454 FN sdl.b[86] LET radius(v)=..
+randno G:34 DEF libhdr.h[73] randno=34
+randno G:34 LG com/bucket.b[471] ax1:=ax1+randno(2001)-1001
+randno G:34 LG com/bucket.b[472] ax2:=ax2+randno(2001)-1001
+randno G:34 LG com/bucket.b[473] ax3:=ax3+randno(2001)-1001
+randno G:34 LG com/bucket.b[569] TEST randno(1000)<100 THEN .. ELSE ..
+randno G:34 LG com/bucket.b[572] abatx:=100000*(randno(2001)-1000)
+randseed G:127 DEF libhdr.h[167] randseed=127
+rdargs G:102 DEF libhdr.h[142] rdargs=102
+rdargs2 G:26 DEF libhdr.h[65] rdargs2=26
+rdch G:38 DEF libhdr.h[77] rdch=38
+rditem G:103 DEF libhdr.h[143] rditem=103
+readflt G:74 DEF libhdr.h[113] readflt=74
+readn G:83 DEF libhdr.h[122] readn=83
+readwords G:44 DEF libhdr.h[83] readwords=44
+rebound F:12 FN com/bucket.b[273] LET rebound(vel)=..
+rebound F:12 LF com/bucket.b[184] tdot:=rebound(tdot)
+rebound F:12 LF com/bucket.b[208] t1dot:=rebound(t1dot)
+rebound F:12 LF com/bucket.b[248] t1dot:=rebound(t1dot)
+rebound F:12 LF com/bucket.b[249] t2dot:=rebound(t2dot)
+rebound F:12 LF com/bucket.b[334] pv!2:=rebound(vx)
+rebound F:12 LF com/bucket.b[339] pv!2:=rebound(vx)
+rebound F:12 LF com/bucket.b[344] pv!2:=rebound(vx)
+rebound F:12 LF com/bucket.b[349] pv!2:=rebound(vx)
+rebound F:12 LF com/bucket.b[361] pv!3:=rebound(vy)
+rebound F:12 LF com/bucket.b[368] pv!3:=rebound(vy)
+rebound F:12 LF com/bucket.b[406] pv!2:=rebound(vx)
+rebound F:12 LF com/bucket.b[412] pv!2:=rebound(vx)
+rebound F:12 LF com/bucket.b[418] pv!3:=rebound(vy)
+rebound F:12 LF com/bucket.b[427] pv!3:=rebound(vy)
+recordnote G:70 DEF libhdr.h[109] recordnote=70
+recordpoint G:69 DEF libhdr.h[108] recordpoint=69
+release G:159 DEF libhdr.h[213] release=159
+renamefile G:77 DEF libhdr.h[116] renamefile=77
+resetballs F:61 LF com/bucket.b[838] resetballs()
+resetballs F:61 LF com/bucket.b[851] resetballs()
+resetballs F:61 LF com/bucket.b[979] resetballs()
+resetballs F:61 RT com/bucket.b[789] LET resetballs()BE..
+resizescreen G:523 DEF sdl.h[189] resizescreen=
+result2 G:10 DEF libhdr.h[48] result2=10
+result2 G:10 LG com/bucket.b[169] result2
+result2 G:10 LG com/bucket.b[902] s:=result2
+result2 G:10 SG com/bucket.b[294] result2:=s
+resumeco G:21 DEF libhdr.h[60] resumeco=21
+return_hard M:10 DEF libhdr.h[647] return_hard=10
+return_hard M:10 MAN libhdr.h[652] cli_initialfaillevel=return_hard
+return_ok M:0 DEF libhdr.h[649] return_ok=0
+return_severe M:20 DEF libhdr.h[646] return_severe=20
+return_soft M:5 DEF libhdr.h[648] return_soft=5
+returnpkt G:169 DEF libhdr.h[220] returnpkt=169
+rewindstream G:65 DEF libhdr.h[104] rewindstream=65
+rightxv G:475 DEF sdl.h[102] rightxv=
+rightxv G:475 LG sdl.b[286] IF rightxv DO ..
+rightxv G:475 LG sdl.b[286] freevec(rightxv)
+rightxv G:475 LG sdl.b[3655] IF rightxv!y<x DO ..
+rightxv G:475 LG sdl.b[3656] rightxv!y:=x
+rightxv G:475 LG sdl.b[3682] UNLESS leftxv&rightxv DO ..
+rightxv G:475 LG sdl.b[3688] rightxv!y:=-1
+rightxv G:475 LG sdl.b[3720] drawto(rightxv!y,y)
+rightxv G:475 LG sdl.b[3722] rightxv!y:=0
+rightxv G:475 LG sdl.b[4128] IF rightxv!y<x DO ..
+rightxv G:475 LG sdl.b[4129] rightxv!y:=x
+rightxv G:475 LG sdl.b[4137]
+    writef("*nleft'maxy=%n*n",leftxv!y,leftzv!y,rightxv!y,rightzv!y,miny,maxy)
+rightxv G:475 LG sdl.b[4364] rightxv!y:=-1
+rightxv G:475 LG sdl.b[4375] rightxv!y
+rightxv G:475 LG sdl.b[4421] rightxv!y:=-1
+rightxv G:475 LG sdl.b[4429] IF leftxv!y<=rightxv!y DO ..
+rightxv G:475 LG sdl.b[4430]
+    writef("y=%i3'n %n:%n*n",y,leftxv!y,leftzv!y,rightxv!y,rightzv!y)
+rightxv G:475 SG sdl.b[199] rightxv:=0
+rightxv G:475 SG sdl.b[3681] rightxv:=getvec(curryupb)
+rightzv G:476 DEF sdl.h[104] rightzv=
+rightzv G:476 LG sdl.b[288] IF rightzv DO ..
+rightzv G:476 LG sdl.b[288] freevec(rightzv)
+rightzv G:476 LG sdl.b[4131] rightzv!y:=interpolate(s,0,smax,...)
+rightzv G:476 LG sdl.b[4137]
+    writef("*nleft'maxy=%n*n",leftxv!y,leftzv!y,rightxv!y,rightzv!y,miny,maxy)
+rightzv G:476 LG sdl.b[4165] UNLESS leftzv*rightzv*depthv DO ..
+rightzv G:476 LG sdl.b[4171] rightzv!y:=-1
+rightzv G:476 LG sdl.b[4375] rightzv!y
+rightzv G:476 LG sdl.b[4422] rightzv!y:=0
+rightzv G:476 LG sdl.b[4430]
+    writef("y=%i3'n %n:%n*n",y,leftxv!y,leftzv!y,rightxv!y,rightzv!y)
+rightzv G:476 SG sdl.b[188] rightzv:=0
+rightzv G:476 SG sdl.b[4162] rightzv:=getvec(curryupb)
+rootnode G:9 DEF libhdr.h[47] rootnode=9
+rootnodeaddr M:100 DEF libhdr.h[302] rootnodeaddr=100
+rtn_abortcode M:27 DEF libhdr.h[338] rtn_abortcode=
+rtn_adjclock M:33 DEF libhdr.h[356] rtn_adjclock=
+rtn_blib M:19 DEF libhdr.h[327] rtn_blib=
+rtn_blklist M:4 DEF libhdr.h[309] rtn_blklist=
+rtn_boot M:17 DEF libhdr.h[325] rtn_boot=
+rtn_boottrace M:39 DEF libhdr.h[371] rtn_boottrace=
+rtn_bptaddr M:9 DEF libhdr.h[316] rtn_bptaddr=
+rtn_bptinstr M:10 DEF libhdr.h[317] rtn_bptinstr=
+rtn_clkintson M:6 DEF libhdr.h[312] rtn_clkintson=
+rtn_clwkq M:12 DEF libhdr.h[320] rtn_clwkq=
+rtn_context M:28 DEF libhdr.h[339] rtn_context=
+rtn_crntask M:3 DEF libhdr.h[308] rtn_crntask=
+rtn_days M:40 DEF libhdr.h[374] rtn_days=
+rtn_dbgvars M:11 DEF libhdr.h[318] rtn_dbgvars=
+rtn_dcountv M:34 DEF libhdr.h[358] rtn_dcountv=
+rtn_devtab M:1 DEF libhdr.h[306] rtn_devtab=
+rtn_dumpflag M:25 DEF libhdr.h[335] rtn_dumpflag=
+rtn_envlist M:26 DEF libhdr.h[336] rtn_envlist=
+rtn_gvecsize M:63 DEF libhdr.h[408] rtn_gvecsize=
+rtn_hdrsvar M:37 DEF libhdr.h[367] rtn_hdrsvar=
+rtn_hostaddsize M:62 DEF libhdr.h[405] rtn_hostaddsize=
+rtn_icountmax M:48 DEF libhdr.h[388] rtn_icountmax=
+rtn_idletcb M:32 DEF libhdr.h[355] rtn_idletcb=
+rtn_info M:15 DEF libhdr.h[323] rtn_info=
+rtn_insadebug M:8 DEF libhdr.h[314] rtn_insadebug=
+rtn_intflag M:24 DEF libhdr.h[334] rtn_intflag=
+rtn_joyaxis0 M:55 DEF libhdr.h[397] rtn_joyaxis0=
+rtn_joyaxis1 M:56 DEF libhdr.h[398] rtn_joyaxis1=
+rtn_joyaxis2 M:57 DEF libhdr.h[399] rtn_joyaxis2=
+rtn_joyaxis3 M:58 DEF libhdr.h[400] rtn_joyaxis3=
+rtn_joyaxis4 M:59 DEF libhdr.h[401] rtn_joyaxis4=
+rtn_joyaxis5 M:60 DEF libhdr.h[402] rtn_joyaxis5=
+rtn_joyaxis6 M:61 DEF libhdr.h[403] rtn_joyaxis6=
+rtn_joyaxiscount M:52 DEF libhdr.h[394] rtn_joyaxiscount=
+rtn_joybuttoncount M:51 DEF libhdr.h[393] rtn_joybuttoncount=
+rtn_joybuttons M:54 DEF libhdr.h[396] rtn_joybuttons=
+rtn_joycurrbuttons M:53 DEF libhdr.h[395] rtn_joycurrbuttons=
+rtn_joystickfd M:49 DEF libhdr.h[391] rtn_joystickfd=
+rtn_joystickfd1 M:50 DEF libhdr.h[392] rtn_joystickfd1=
+rtn_keyboard M:20 DEF libhdr.h[328] rtn_keyboard=
+rtn_klib M:18 DEF libhdr.h[326] rtn_klib=
+rtn_lastch M:7 DEF libhdr.h[313] rtn_lastch=
+rtn_mc0 M:43 DEF libhdr.h[380] rtn_mc0=
+rtn_mc1 M:44 DEF libhdr.h[382] rtn_mc1=
+rtn_mc2 M:45 DEF libhdr.h[383] rtn_mc2=
+rtn_mc3 M:46 DEF libhdr.h[384] rtn_mc3=
+rtn_membase M:13 DEF libhdr.h[321] rtn_membase=
+rtn_memsize M:14 DEF libhdr.h[322] rtn_memsize=
+rtn_msecs M:41 DEF libhdr.h[375] rtn_msecs=
+rtn_pathvar M:36 DEF libhdr.h[365] rtn_pathvar=
+rtn_rootvar M:35 DEF libhdr.h[363] rtn_rootvar=
+rtn_screen M:21 DEF libhdr.h[329] rtn_screen=
+rtn_scriptsvar M:38 DEF libhdr.h[369] rtn_scriptsvar=
+rtn_sys M:16 DEF libhdr.h[324] rtn_sys=
+rtn_sysg M:30 DEF libhdr.h[348] rtn_sysg=
+rtn_sysp M:29 DEF libhdr.h[347] rtn_sysp=
+rtn_sysst M:31 DEF libhdr.h[349] rtn_sysst=
+rtn_system M:47 DEF libhdr.h[386] rtn_system=
+rtn_tallyv M:5 DEF libhdr.h[310] rtn_tallyv=
+rtn_tasktab M:0 DEF libhdr.h[305] rtn_tasktab=0
+rtn_tcblist M:2 DEF libhdr.h[307] rtn_tcblist=
+rtn_ttyinwkq M:64 DEF libhdr.h[416] rtn_ttyinwkq=
+rtn_ttyinwkqe M:65 DEF libhdr.h[417] rtn_ttyinwkqe=
+rtn_upb M:80 DEF libhdr.h[419] rtn_upb=80
+rtn_usecs M:42 DEF libhdr.h[376] rtn_usecs=
+rtn_vecstatsv M:22 DEF libhdr.h[331] rtn_vecstatsv=
+rtn_vecstatsvupb M:23 DEF libhdr.h[332] rtn_vecstatsvupb=
+sardch G:36 DEF libhdr.h[75] sardch=36
+saveregs M:31 DEF libhdr.h[506] saveregs=31
+sawrch G:37 DEF libhdr.h[76] sawrch=37
+sawritef G:95 DEF libhdr.h[135] sawritef=95
+sawritef G:95 LG sdl.b[148] sawritef("inits'entered*n")
+sawritef G:95 LG sdl.b[3683] sawritef("getve'failure*n")
+scb_blength M:14 DEF libhdr.h[578] scb_blength=
+scb_block M:9 DEF libhdr.h[573] scb_block=
+scb_buf M:3 DEF libhdr.h[567] scb_buf=
+scb_bufend M:11 DEF libhdr.h[575] scb_bufend=
+scb_encoding M:20 DEF libhdr.h[589] scb_encoding=
+scb_end M:5 DEF libhdr.h[569] scb_end=
+scb_endfn M:8 DEF libhdr.h[572] scb_endfn=
+scb_fd M:16 DEF libhdr.h[580] scb_fd=
+scb_fd1 M:17 DEF libhdr.h[581] scb_fd1=
+scb_id M:0 DEF libhdr.h[564] scb_id=0
+scb_lblock M:12 DEF libhdr.h[576] scb_lblock=
+scb_ldata M:13 DEF libhdr.h[577] scb_ldata=
+scb_maxnamelen M:31 DEF libhdr.h[562] scb_maxnamelen=31
+scb_maxnamelen M:31 MAN libhdr.h[593]
+    scb_nameeend=scb_name+scb_maxnamelen/bytesperword
+scb_name M:21 DEF libhdr.h[591] scb_name=
+scb_name M:21 MAN libhdr.h[593]
+    scb_nameeend=scb_name+scb_maxnamelen/bytesperword
+scb_nameeend M:28 DEF libhdr.h[593]
+    scb_nameeend=scb_name+scb_maxnamelen/bytesperword
+scb_pos M:4 DEF libhdr.h[568] scb_pos=
+scb_rdfn M:6 DEF libhdr.h[570] scb_rdfn=
+scb_reclen M:15 DEF libhdr.h[579] scb_reclen=
+scb_size M:29 DEF libhdr.h[596] scb_size=
+scb_size M:29 MAN libhdr.h[597] scb_upb=scb_size-1
+scb_task M:2 DEF libhdr.h[566] scb_task=
+scb_timeout M:18 DEF libhdr.h[582] scb_timeout=
+scb_timeoutact M:19 DEF libhdr.h[585] scb_timeoutact=
+scb_type M:1 DEF libhdr.h[565] scb_type=
+scb_upb M:28 DEF libhdr.h[597] scb_upb=scb_size-1
+scb_wrfn M:7 DEF libhdr.h[571] scb_wrfn=
+scb_write M:10 DEF libhdr.h[574] scb_write=
+scbt_console M:-1 DEF libhdr.h[558] scbt_console=-1
+scbt_file M:1 DEF libhdr.h[556] scbt_file=1
+scbt_mbx M:-2 DEF libhdr.h[559] scbt_mbx=-2
+scbt_net M:2 DEF libhdr.h[555] scbt_net=2
+scbt_ram M:0 DEF libhdr.h[557] scbt_ram=0
+scbt_tcp M:-3 DEF libhdr.h[560] scbt_tcp=-3
+screen G:455 DEF sdl.h[72] screen=
+screen G:455 LLG com/bucket.b[707]
+    selectsurface(@screen,screenxsize,screenysize)
+screen G:455 LLG com/bucket.b[726]
+    blitsurf(@bucketwallsurf,@screen,bucket_lxl/One,bucket_tyt/One)
+screen G:455 LLG com/bucket.b[730]
+    blitsurf(@bucketwallsurf,@screen,bucket_rxl/One,bucket_tyt/One)
+screen G:455 LLG com/bucket.b[737]
+    blitsurf(@bucketbasesurf,@screen,bucket_lxc/One,bucket_byt/One-1)
+screen G:455 LLG com/bucket.b[741]
+    blitsurf(@batsurf,@screen,(batx-batradius)/One,(baty+batradius)/One)
+screen G:455 LLG com/bucket.b[746]
+    blitsurf(@ball1surf,@screen,(cgx1-ballradius)/One,(cgy1+ballradius)/One)
+screen G:455 LLG com/bucket.b[749]
+    blitsurf(@ball2surf,@screen,(cgx2-ballradius)/One,(cgy2+ballradius)/One)
+screen G:455 LLG com/bucket.b[752]
+    blitsurf(@ball3surf,@screen,(cgx3-ballradius)/One,(cgy3+ballradius)/One)
+screen G:455 LLG sdl.b[229]
+    ok:=sys(Sys_sdl,sdl_setvideomode,screenxsize,...)
+screen G:455 LLG sdl.b[253]
+    sys(Sys_sdl,sdl_getsurfaceinfo,@screen,@flags)
+screen G:455 LLG sdl.b[259] selectsurface(@screen,xsize,ysize)
+screen G:455 LLG sdl.b[328] sys(Sys_sdl,sdl_flip,@screen)
+screen1 G:456 DEF sdl.h[72] screen1=
+screen_xc G:241 DEF com/bucket.b[106] screen_xc=
+screen_xc G:241 LG com/bucket.b[793] cgx1:=screen_xc
+screen_xc G:241 LG com/bucket.b[793] cgx2:=screen_xc
+screen_xc G:241 LG com/bucket.b[793] cgx3:=screen_xc
+screen_xc G:241 LG com/bucket.b[953]
+    bucket_lxr:=screen_xc-ballradius*5/2
+screen_xc G:241 LG com/bucket.b[957]
+    bucket_rxl:=screen_xc+ballradius*5/2
+screen_xc G:241 LG com/bucket.b[985] batx:=screen_xc
+screen_xc G:241 SG com/bucket.b[948] screen_xc:=screenxsize*One/2
+screenxsize G:463 DEF sdl.h[83] screenxsize=
+screenxsize G:463 LG com/bucket.b[707]
+    selectsurface(@screen,screenxsize,screenysize)
+screenxsize G:463 LG com/bucket.b[943] wall_rx:=(screenxsize-1)*One
+screenxsize G:463 LG com/bucket.b[948] screen_xc:=screenxsize*One/2
+screenxsize G:463 LG sdl.b[223] TEST screenxsize>300 THEN .. ELSE ..
+screenxsize G:463 LG sdl.b[229]
+    ok:=sys(Sys_sdl,sdl_setvideomode,screenxsize,...)
+screenxsize G:463 SG sdl.b[220] screenxsize:=xsize
+screenysize G:464 DEF sdl.h[84] screenysize=
+screenysize G:464 LG com/bucket.b[707]
+    selectsurface(@screen,screenxsize,screenysize)
+screenysize G:464 LG com/bucket.b[946] ceiling_yb:=(screenysize-1)*One
+screenysize G:464 LG sdl.b[229]
+    ok:=sys(Sys_sdl,sdl_setvideomode,screenxsize,...)
+screenysize G:464 SG sdl.b[220] screenysize:=ysize
+sdl_ANYFORMAT M:#x10000000 DEF sdl.h[397] sdl_ANYFORMAT=#x10000000
+sdl_DOUBLEBUF M:#x40000000 DEF sdl.h[399] sdl_DOUBLEBUF=#x40000000
+sdl_FULLSCREEN M:#x80000000 DEF sdl.h[400] sdl_FULLSCREEN=-#x80000000
+sdl_HWPALETTE M:#x20000000 DEF sdl.h[398] sdl_HWPALETTE=#x20000000
+sdl_HWSURFACE M:1 DEF sdl.h[395] sdl_HWSURFACE=1
+sdl_NOFRAME M:32 DEF sdl.h[404] sdl_NOFRAME=32
+sdl_OPENGL M:2 DEF sdl.h[401] sdl_OPENGL=2
+sdl_OPENGLBLIT M:10 DEF sdl.h[402] sdl_OPENGLBLIT=10
+sdl_RESIZABLE M:16 DEF sdl.h[403] sdl_RESIZABLE=16
+sdl_SWSURFACE M:0 DEF sdl.h[394] sdl_SWSURFACE=0
+sdl_SWSURFACE M:0 MAN sdl.b[229]
+    ok:=sys(Sys_sdl,sdl_setvideomode,screenxsize,...)
+sdl_avail M:0 DEF sdl.h[296] sdl_avail=0
+sdl_avail M:0 MAN com/bucket.b[884] UNLESS sys(Sys_sdl,sdl_avail) DO ..
+sdl_blitsurface M:11 DEF sdl.h[309] sdl_blitsurface=
+sdl_blitsurface M:11 MAN sdl.b[338]
+    sys(Sys_sdl,sdl_blitsurface,srcptr,0,dstptr,@dx)
+sdl_blitsurface M:11 MAN sdl.b[347]
+    sys(Sys_sdl,sdl_blitsurface,srcptr,0,dstptr,@dx)
+sdl_delay M:16 DEF sdl.h[314] sdl_delay=
+sdl_delay M:16 MAN sdl.b[318] sys(Sys_sdl,sdl_delay,msecs)
+sdl_displayformat M:18 DEF sdl.h[316] sdl_displayformat=
+sdl_drawcircle M:30 DEF sdl.h[331] sdl_drawcircle=
+sdl_drawellipse M:33 DEF sdl.h[334] sdl_drawellipse=
+sdl_drawfillcircle M:37 DEF sdl.h[338] sdl_drawfillcircle=
+sdl_drawfillellipse M:34 DEF sdl.h[335] sdl_drawfillellipse=
+sdl_drawfillrect M:38 DEF sdl.h[339] sdl_drawfillrect=
+sdl_drawfillround M:36 DEF sdl.h[337] sdl_drawfillround=
+sdl_drawhline M:28 DEF sdl.h[329] sdl_drawhline=
+sdl_drawline M:27 DEF sdl.h[328] sdl_drawline=
+sdl_drawpixel M:32 DEF sdl.h[333] sdl_drawpixel=
+sdl_drawrect M:31 DEF sdl.h[332] sdl_drawrect=
+sdl_drawround M:35 DEF sdl.h[336] sdl_drawround=
+sdl_drawvline M:29 DEF sdl.h[330] sdl_drawvline=
+sdl_enable M:1 DEF sdl.h[369] sdl_enable=1
+sdl_fillrect M:39 DEF sdl.h[341] sdl_fillrect=
+sdl_fillrect M:39 MAN sdl.b[3755]
+    sys(Sys_sdl,sdl_fillrect,@currsurf,xmin,currysize-ymax,...,...)
+sdl_fillrect M:39 MAN sdl.b[399]
+    sys(Sys_sdl,sdl_fillrect,@currsurf,x,currysize-y,1,...)
+sdl_fillsurf M:40 DEF sdl.h[342] sdl_fillsurf=
+sdl_fillsurf M:40 MAN sdl.b[351] sys(Sys_sdl,sdl_fillsurf,@currsurf,col)
+sdl_flip M:17 DEF sdl.h[315] sdl_flip=
+sdl_flip M:17 MAN sdl.b[328] sys(Sys_sdl,sdl_flip,@screen)
+sdl_freesurface M:13 DEF sdl.h[311] sdl_freesurface=
+sdl_freesurface M:13 MAN sdl.b[304] sys(Sys_sdl,sdl_freesurface,surfptr)
+sdl_freewav M:23 DEF sdl.h[323] sdl_freewav=
+sdl_geterror M:8 DEF sdl.h[306] sdl_geterror=
+sdl_geterror M:8 MAN sdl.b[169] sys(Sys_sdl,sdl_geterror,mes)
+sdl_geterror M:8 MAN sdl.b[240] sys(Sys_sdl,sdl_geterror,mes)
+sdl_getfmtinfo M:7 DEF sdl.h[303] sdl_getfmtinfo=
+sdl_getmousestate M:21 DEF sdl.h[321] sdl_getmousestate=
+sdl_getsurfaceinfo M:6 DEF sdl.h[302] sdl_getsurfaceinfo=
+sdl_getsurfaceinfo M:6 MAN sdl.b[253]
+    sys(Sys_sdl,sdl_getsurfaceinfo,@screen,@flags)
+sdl_getticks M:50 DEF sdl.h[355] sdl_getticks=
+sdl_getticks M:50 MAN sdl.b[320] sys(Sys_sdl,sdl_getticks)
+sdl_hidecursor M:52 DEF sdl.h[358] sdl_hidecursor=
+sdl_hidecursor M:52 MAN sdl.b[323] sys(Sys_sdl,sdl_hidecursor)
+sdl_ignore M:0 DEF sdl.h[368] sdl_ignore=0
+sdl_imgload M:15 DEF sdl.h[313] sdl_imgload=
+sdl_init M:1 DEF sdl.h[297] sdl_init=
+sdl_init M:1 MAN sdl.b[167]
+    IF sys(Sys_sdl,sdl_init,sdl_init_everything) DO ..
+sdl_init_everything M:65535 DEF sdl.h[392] sdl_init_everything=65535
+sdl_init_everything M:65535 MAN sdl.b[167]
+    IF sys(Sys_sdl,sdl_init,sdl_init_everything) DO ..
+sdl_joystickclose M:43 DEF sdl.h[347] sdl_joystickclose=
+sdl_joystickeventstate M:49 DEF sdl.h[354] sdl_joystickeventstate=
+sdl_joystickgetaxis M:56 DEF sdl.h[363] sdl_joystickgetaxis=
+sdl_joystickgetball M:57 DEF sdl.h[364] sdl_joystickgetball=
+sdl_joystickgetbutton M:55 DEF sdl.h[362] sdl_joystickgetbutton=
+sdl_joystickgethat M:58 DEF sdl.h[365] sdl_joystickgethat=
+sdl_joystickname M:44 DEF sdl.h[348] sdl_joystickname=
+sdl_joysticknumaxes M:45 DEF sdl.h[349] sdl_joysticknumaxes=
+sdl_joysticknumballs M:47 DEF sdl.h[351] sdl_joysticknumballs=
+sdl_joysticknumbuttons M:46 DEF sdl.h[350] sdl_joysticknumbuttons=
+sdl_joysticknumhats M:48 DEF sdl.h[352] sdl_joysticknumhats=
+sdl_joystickopen M:42 DEF sdl.h[346] sdl_joystickopen=
+sdl_loadbmp M:10 DEF sdl.h[308] sdl_loadbmp=
+sdl_loadwav M:22 DEF sdl.h[322] sdl_loadwav=
+sdl_locksurface M:4 DEF sdl.h[300] sdl_locksurface=
+sdl_maprgb M:26 DEF sdl.h[327] sdl_maprgb=
+sdl_maprgb M:26 MAN sdl.b[280] sys(Sys_sdl,sdl_maprgb,@format,r,g,b)
+sdl_mksurface M:53 DEF sdl.h[359] sdl_mksurface=
+sdl_mksurface M:53 MAN sdl.b[300]
+    sys(Sys_sdl,sdl_mksurface,@format,w,h,surfptr)
+sdl_numjoysticks M:41 DEF sdl.h[345] sdl_numjoysticks=
+sdl_pollevent M:20 DEF sdl.h[319] sdl_pollevent=
+sdl_pollevent M:20 MAN sdl.b[314]
+    RESULTIS sys(Sys_sdl,sdl_pollevent,@eventtype)
+sdl_quit M:3 DEF sdl.h[299] sdl_quit=
+sdl_quit M:3 MAN sdl.b[290] sys(Sys_sdl,sdl_quit)
+sdl_setalpha M:14 DEF sdl.h[312] sdl_setalpha=
+sdl_setcolourkey M:12 DEF sdl.h[310] sdl_setcolourkey=
+sdl_setcolourkey M:54 DEF sdl.h[360] sdl_setcolourkey=
+sdl_setcolourkey M:54 MAN sdl.b[296]
+    sys(Sys_sdl,sdl_setcolourkey,surfptr,col)
+sdl_setvideomode M:2 DEF sdl.h[298] sdl_setvideomode=
+sdl_setvideomode M:2 MAN sdl.b[229]
+    ok:=sys(Sys_sdl,sdl_setvideomode,screenxsize,...)
+sdl_showcursor M:51 DEF sdl.h[357] sdl_showcursor=
+sdl_showcursor M:51 MAN sdl.b[325] sys(Sys_sdl,sdl_showcursor)
+sdl_unlocksurface M:5 DEF sdl.h[301] sdl_unlocksurface=
+sdl_updaterect M:9 DEF sdl.h[307] sdl_updaterect=
+sdl_videoinfo M:25 DEF sdl.h[326] sdl_videoinfo=
+sdl_waitevent M:19 DEF sdl.h[317] sdl_waitevent=
+sdl_wm_setcaption M:24 DEF sdl.h[325] sdl_wm_setcaption=
+sdl_wm_setcaption M:24 MAN sdl.b[282]
+    sys(Sys_sdl,sdl_wm_setcaption,title,0)
+sdldelay G:554 DEF sdl.h[278] sdldelay=
+sdldelay G:554 LG com/bucket.b[1015] sdldelay(t0+stepmsecs-t1)
+sdldelay G:554 LG com/bucket.b[1020] sdldelay(500)
+sdldelay G:554 RT sdl.b[317] LET sdldelay(msecs)BE..
+sdle_active M:1 DEF sdl.h[371] sdle_active=1
+sdle_arrowdown M:274 DEF sdl.h[388] sdle_arrowdown=274
+sdle_arrowleft M:276 DEF sdl.h[390] sdle_arrowleft=276
+sdle_arrowleft M:276 MAN com/bucket.b[859] CASE sdle_arrowleft:.. 
+sdle_arrowleft M:276 MAN com/bucket.b[869] CASE sdle_arrowleft:.. 
+sdle_arrowright M:275 DEF sdl.h[389] sdle_arrowright=275
+sdle_arrowright M:275 MAN com/bucket.b[857] CASE sdle_arrowright:.. 
+sdle_arrowright M:275 MAN com/bucket.b[867] CASE sdle_arrowright:.. 
+sdle_arrowup M:273 DEF sdl.h[387] sdle_arrowup=273
+sdle_joyaxismotion M:7 DEF sdl.h[377] sdle_joyaxismotion=7
+sdle_joyballmotion M:8 DEF sdl.h[378] sdle_joyballmotion=8
+sdle_joybuttondown M:10 DEF sdl.h[380] sdle_joybuttondown=10
+sdle_joybuttonup M:11 DEF sdl.h[381] sdle_joybuttonup=11
+sdle_joyhatmotion M:9 DEF sdl.h[379] sdle_joyhatmotion=9
+sdle_keydown M:2 DEF sdl.h[372] sdle_keydown=2
+sdle_keydown M:2 MAN com/bucket.b[807] CASE sdle_keydown:.. 
+sdle_keyup M:3 DEF sdl.h[373] sdle_keyup=3
+sdle_keyup M:3 MAN com/bucket.b[863] CASE sdle_keyup:.. 
+sdle_mousebuttondown M:5 DEF sdl.h[375] sdle_mousebuttondown=5
+sdle_mousebuttonup M:6 DEF sdl.h[376] sdle_mousebuttonup=6
+sdle_mousemotion M:4 DEF sdl.h[374] sdle_mousemotion=4
+sdle_quit M:12 DEF sdl.h[382] sdle_quit=12
+sdle_quit M:12 MAN com/bucket.b[874] CASE sdle_quit:.. 
+sdle_syswmevent M:13 DEF sdl.h[383] sdle_syswmevent=13
+sdle_userevent M:15 DEF sdl.h[385] sdle_userevent=15
+sdle_videoresize M:14 DEF sdl.h[384] sdle_videoresize=14
+sdlmsecs G:555 DEF sdl.h[279] sdlmsecs=
+sdlmsecs G:555 FN sdl.b[320] LET sdlmsecs()=..
+sdlmsecs G:555 LG com/bucket.b[1012] t1:=sdlmsecs()
+sdlmsecs G:555 LG com/bucket.b[437] displaytime:=sdlmsecs()-starttime
+sdlmsecs G:555 LG com/bucket.b[448] starttime:=sdlmsecs()
+sdlmsecs G:555 LG com/bucket.b[995] sdlmsecs()
+sectword M:64991 DEF libhdr.h[273] sectword=64991
+selectfont G:524 DEF sdl.h[190] selectfont=
+selectfont G:524 LG sdl.b[152] selectfont(12)
+selectfont G:524 LG sdl.b[223] selectfont(18)
+selectfont G:524 LG sdl.b[224] selectfont(12)
+selectfont G:524 RT sdl.b[402] LET selectfont(h)BE..
+selectinput G:56 DEF libhdr.h[95] selectinput=56
+selectoutput G:57 DEF libhdr.h[96] selectoutput=57
+selectsurface G:510 DEF sdl.h[167] selectsurface=
+selectsurface G:510 LG com/bucket.b[649]
+    selectsurface(surfptr,width,height)
+selectsurface G:510 LG com/bucket.b[670]
+    selectsurface(surfptr,width,height)
+selectsurface G:510 LG com/bucket.b[684]
+    selectsurface(surfptr,width,height)
+selectsurface G:510 LG com/bucket.b[699]
+    selectsurface(surfptr,width,height)
+selectsurface G:510 LG com/bucket.b[707]
+    selectsurface(@screen,screenxsize,screenysize)
+selectsurface G:510 LG sdl.b[259] selectsurface(@screen,xsize,ysize)
+selectsurface G:510 RT sdl.b[306]
+    LET selectsurface(surfptr,xsize,ysize)BE..
+selx G:298 DEF com/bucket.b[137] selx=
+selx G:298 LG com/bucket.b[545]
+    writef("selx='t=%8.5d*n",selx,sely,selxdot,selydot)
+selx G:298 LG com/bucket.b[553] targetx:=selx+muldiv(selxdot,t,100000)
+selx G:298 SG com/bucket.b[539] selx:=cgx1
+selx G:298 SG com/bucket.b[541] selx:=cgx2
+selx G:298 SG com/bucket.b[543] selx:=cgx3
+selxdot G:300 DEF com/bucket.b[138] selxdot=
+selxdot G:300 LG com/bucket.b[545]
+    writef("selx='t=%8.5d*n",selx,sely,selxdot,selydot)
+selxdot G:300 LG com/bucket.b[553]
+    targetx:=selx+muldiv(selxdot,t,100000)
+selxdot G:300 SG com/bucket.b[539] selxdot:=cgx1dot
+selxdot G:300 SG com/bucket.b[541] selxdot:=cgx2dot
+selxdot G:300 SG com/bucket.b[543] selxdot:=cgx3dot
+sely G:299 DEF com/bucket.b[137] sely=
+sely G:299 LG com/bucket.b[545]
+    writef("selx='t=%8.5d*n",selx,sely,selxdot,selydot)
+sely G:299 LG com/bucket.b[549]
+    t:=muldiv(sely-ylim_floor,100000,-selydot)
+sely G:299 SG com/bucket.b[539] sely:=cgy1
+sely G:299 SG com/bucket.b[541] sely:=cgy2
+sely G:299 SG com/bucket.b[543] sely:=cgy3
+selydot G:301 DEF com/bucket.b[138] selydot=
+selydot G:301 LG com/bucket.b[545]
+    writef("selx='t=%8.5d*n",selx,sely,selxdot,selydot)
+selydot G:301 LG com/bucket.b[547] IF selydot>-100000 DO ..
+selydot G:301 LG com/bucket.b[548] writef("selydot=%8.5d*n",selydot)
+selydot G:301 LG com/bucket.b[549]
+    t:=muldiv(sely-ylim_floor,100000,-selydot)
+selydot G:301 SG com/bucket.b[539] selydot:=cgy1dot
+selydot G:301 SG com/bucket.b[541] selydot:=cgy2dot
+selydot G:301 SG com/bucket.b[543] selydot:=cgy3dot
+selydot G:301 SG com/bucket.b[547] selydot:=-100000
+sendpkt G:165 DEF libhdr.h[218] sendpkt=165
+set_process_name G:175 DEF libhdr.h[226] set_process_name=175
+setbit G:112 DEF libhdr.h[152] setbit=112
+setbulk G:122 DEF libhdr.h[162] setbulk=122
+setcaption G:504 DEF sdl.h[158] setcaption=
+setcaption G:504 LG sdl.b[258] setcaption(title)
+setcaption G:504 RT sdl.b[282] LET setcaption(title)BE..
+setcolour G:506 DEF sdl.h[161] setcolour=
+setcolour G:506 LG com/bucket.b[654] setcolour(bucketendcolour)
+setcolour G:506 LG com/bucket.b[655] setcolour(bucketcolour)
+setcolour G:506 LG com/bucket.b[660] setcolour(bucketcolour)
+setcolour G:506 LG com/bucket.b[672] setcolour(bucketcolour)
+setcolour G:506 LG com/bucket.b[688] setcolour(col)
+setcolour G:506 LG com/bucket.b[701] setcolour(batcolour)
+setcolour G:506 LG com/bucket.b[744] setcolour(ball1colour)
+setcolour G:506 LG com/bucket.b[747] setcolour(ball2colour)
+setcolour G:506 LG com/bucket.b[750] setcolour(ball3colour)
+setcolour G:506 LG com/bucket.b[754] setcolour(maprgb(255,255,255))
+setcolour G:506 RT sdl.b[293] LET setcolour(col)BE..
+setcolourkey G:507 DEF sdl.h[162] setcolourkey=
+setcolourkey G:507 LG com/bucket.b[686] setcolourkey(surfptr,colkey)
+setcolourkey G:507 RT sdl.b[295] LET setcolourkey(surfptr,col)BE..
+setdepthlimits G:551 DEF sdl.h[269] setdepthlimits=
+setdepthlimits G:551 LG sdl.b[149] setdepthlimits(1,#x3B9ACA00)
+setdepthlimits G:551 LG sdl.b[190] setdepthlimits(1,#x3B9ACA00)
+setdepthlimits G:551 LG sdl.b[4175] setdepthlimits(1,#x3B9ACA00)
+setdepthlimits G:551 RT sdl.b[4434] LET setdepthlimits(near,far)BE..
+setflags G:156 DEF libhdr.h[210] setflags=156
+setlims G:534 DEF sdl.h[215] setlims=
+setlims G:534 LG sdl.b[3711] setlims(x1,y1,x2,y2)
+setlims G:534 LG sdl.b[3712] setlims(x2,y2,x3,y3)
+setlims G:534 LG sdl.b[3713] setlims(x3,y3,x1,y1)
+setlims G:534 RT sdl.b[3628] LET setlims(x0,y0,x1,y1)BE..
+setlims3d G:550 DEF sdl.h[265] setlims3d=
+setlims3d G:550 LG sdl.b[4366] setlims3d(x1,y1,z1,x2,y2,z2)
+setlims3d G:550 LG sdl.b[4367] setlims3d(x2,y2,z2,x3,y3,z3)
+setlims3d G:550 LG sdl.b[4368] setlims3d(x3,y3,z3,x1,y1,z1)
+setlims3d G:550 RT sdl.b[4048] LET setlims3d(x0,y0,sz0,x1,y1,sz1)BE..
+setlogname G:117 DEF libhdr.h[157] setlogname=117
+setrecordlength G:68 DEF libhdr.h[107] setrecordlength=68
+setseed G:35 DEF libhdr.h[74] setseed=35
+settimeout G:55 DEF libhdr.h[94] settimeout=55
+settimeoutact G:124 DEF libhdr.h[164] settimeoutact=124
+setvec G:181 DEF libhdr.h[233] setvec=181
+showcursor G:557 DEF sdl.h[282] showcursor=
+showcursor G:557 FN sdl.b[325] LET showcursor()=..
+splitname G:47 DEF libhdr.h[86] splitname=47
+sps G:211 DEF com/bucket.b[58] sps=
+sps G:211 LG com/bucket.b[1007] sps:=sps-1
+sps G:211 LG com/bucket.b[1008] sps:=sps+1
+sps G:211 LG com/bucket.b[1009] stepmsecs:=1000/sps
+sps G:211 LG com/bucket.b[496] cgx1dot:=cgx1dot+ax1/sps
+sps G:211 LG com/bucket.b[497] cgy1dot:=cgy1dot+ay1/sps
+sps G:211 LG com/bucket.b[498] cgx2dot:=cgx2dot+ax2/sps
+sps G:211 LG com/bucket.b[499] cgy2dot:=cgy2dot+ay2/sps
+sps G:211 LG com/bucket.b[500] cgx3dot:=cgx3dot+ax3/sps
+sps G:211 LG com/bucket.b[501] cgy3dot:=cgy3dot+ay3/sps
+sps G:211 LG com/bucket.b[503] cgx1:=cgx1+cgx1dot/sps
+sps G:211 LG com/bucket.b[503] cgy1:=cgy1+cgy1dot/sps
+sps G:211 LG com/bucket.b[504] cgx2:=cgx2+cgx2dot/sps
+sps G:211 LG com/bucket.b[504] cgy2:=cgy2+cgy2dot/sps
+sps G:211 LG com/bucket.b[505] cgx3:=cgx3+cgx3dot/sps
+sps G:211 LG com/bucket.b[505] cgy3:=cgy3+cgy3dot/sps
+sps G:211 LG com/bucket.b[624] batxdot:=batxdot+abatx/sps
+sps G:211 LG com/bucket.b[629] batx:=batx+batxdot/sps
+sps G:211 LG com/bucket.b[775] drawf(30,245,"CPU u'sps = %n",usage,sps)
+sps G:211 LG com/bucket.b[932] stepmsecs:=1000/sps
+sps G:211 SG com/bucket.b[1007] sps:=sps-1
+sps G:211 SG com/bucket.b[1008] sps:=sps+1
+sps G:211 SG com/bucket.b[931] sps:=40
+srchwk G:150 DEF libhdr.h[204] srchwk=150
+stackfree G:123 DEF libhdr.h[163] stackfree=123
+stackword M:#xABCD1234 DEF libhdr.h[271] stackword=-#x5432EDCC
+standardize G:452 DEF sdl.h[68] standardize=
+standardize G:452 RT sdl.b[62] LET standardize(v)BE..
+start G:1 DEF libhdr.h[39] start=1
+start G:1 FN com/bucket.b[880] LET start()=..
+startco G:23 DEF libhdr.h[62] startco=23
+started G:204 DEF com/bucket.b[48] started=
+started G:204 LG com/bucket.b[436] IF started DO ..
+started G:204 LG com/bucket.b[453] IF started DO ..
+started G:204 LG com/bucket.b[760] IF started|finished DO ..
+started G:204 SG com/bucket.b[445] started:=TRUE
+started G:204 SG com/bucket.b[798] started:=FALSE
+started G:204 SG com/bucket.b[840] started:=FALSE
+started G:204 SG com/bucket.b[924] started:=FALSE
+starting G:203 DEF com/bucket.b[47] starting=
+starting G:203 LG com/bucket.b[354] UNLESS starting DO ..
+starting G:203 LG com/bucket.b[440] WHILE starting DO ..
+starting G:203 LG com/bucket.b[733] UNLESS starting DO ..
+starting G:203 SG com/bucket.b[444] starting:=FALSE
+starting G:203 SG com/bucket.b[797] starting:=FALSE
+starting G:203 SG com/bucket.b[839] starting:=TRUE
+starting G:203 SG com/bucket.b[853] starting:=FALSE
+starting G:203 SG com/bucket.b[923] starting:=TRUE
+starttime G:206 DEF com/bucket.b[52] starttime=
+starttime G:206 LG com/bucket.b[437] displaytime:=sdlmsecs()-starttime
+starttime G:206 SG com/bucket.b[448] starttime:=sdlmsecs()
+starttime G:206 SG com/bucket.b[842] starttime:=-1
+starttime G:206 SG com/bucket.b[926] starttime:=-1
+step F:55 LF com/bucket.b[1000] step()
+step F:55 RT com/bucket.b[435] LET step()BE..
+stepping G:202 DEF com/bucket.b[46] stepping=
+stepping G:202 LG com/bucket.b[1000] IF stepping DO ..
+stepping G:202 LG com/bucket.b[847] stepping:=~stepping
+stepping G:202 SG com/bucket.b[847] stepping:=~stepping
+stepping G:202 SG com/bucket.b[922] stepping:=TRUE
+stepstream G:67 DEF libhdr.h[106] stepstream=67
+stop G:2 DEF libhdr.h[40] stop=2
+str2numb G:101 DEF libhdr.h[141] str2numb=101
+string_to_dat G:111 DEF libhdr.h[151] string_to_dat=111
+string_to_number G:100 DEF libhdr.h[140] string_to_number=100
+sxpushval G:183 DEF libhdr.h[235] sxpushval=183
+sys G:3 DEF libhdr.h[41] sys=3
+sys G:3 LG com/bucket.b[884] UNLESS sys(Sys_sdl,sdl_avail) DO ..
+sys G:3 LG sdl.b[167] IF sys(Sys_sdl,sdl_init,sdl_init_everything) DO ..
+sys G:3 LG sdl.b[169] sys(Sys_sdl,sdl_geterror,mes)
+sys G:3 LG sdl.b[229] ok:=sys(Sys_sdl,sdl_setvideomode,screenxsize,...)
+sys G:3 LG sdl.b[240] sys(Sys_sdl,sdl_geterror,mes)
+sys G:3 LG sdl.b[253] sys(Sys_sdl,sdl_getsurfaceinfo,@screen,@flags)
+sys G:3 LG sdl.b[280] sys(Sys_sdl,sdl_maprgb,@format,r,g,b)
+sys G:3 LG sdl.b[282] sys(Sys_sdl,sdl_wm_setcaption,title,0)
+sys G:3 LG sdl.b[290] sys(Sys_sdl,sdl_quit)
+sys G:3 LG sdl.b[296] sys(Sys_sdl,sdl_setcolourkey,surfptr,col)
+sys G:3 LG sdl.b[300] sys(Sys_sdl,sdl_mksurface,@format,w,h,surfptr)
+sys G:3 LG sdl.b[304] sys(Sys_sdl,sdl_freesurface,surfptr)
+sys G:3 LG sdl.b[314] RESULTIS sys(Sys_sdl,sdl_pollevent,@eventtype)
+sys G:3 LG sdl.b[318] sys(Sys_sdl,sdl_delay,msecs)
+sys G:3 LG sdl.b[320] sys(Sys_sdl,sdl_getticks)
+sys G:3 LG sdl.b[323] sys(Sys_sdl,sdl_hidecursor)
+sys G:3 LG sdl.b[325] sys(Sys_sdl,sdl_showcursor)
+sys G:3 LG sdl.b[328] sys(Sys_sdl,sdl_flip,@screen)
+sys G:3 LG sdl.b[338] sys(Sys_sdl,sdl_blitsurface,srcptr,0,dstptr,@dx)
+sys G:3 LG sdl.b[347] sys(Sys_sdl,sdl_blitsurface,srcptr,0,dstptr,@dx)
+sys G:3 LG sdl.b[351] sys(Sys_sdl,sdl_fillsurf,@currsurf,col)
+sys G:3 LG sdl.b[3755]
+    sys(Sys_sdl,sdl_fillrect,@currsurf,xmin,currysize-ymax,...,...)
+sys G:3 LG sdl.b[399]
+    sys(Sys_sdl,sdl_fillrect,@currsurf,x,currysize-y,1,...)
+sys G:3 LG sdl.b[66] sys(Sys_flt,fl_sqrt,x#*x#+y#*y#+z#*z)
+sys G:3 LG sdl.b[67] TEST r#<sys(Sys_flt,fl_mk,1,-10) THEN .. ELSE ..
+sys G:3 LG sdl.b[83]
+    RESULTIS sys(Sys_flt,fl_sqrt,dx#*dx#+dy#*dy#+dz#*dz)
+sys G:3 LG sdl.b[89] RESULTIS sys(Sys_flt,fl_sqrt,x#*x#+y#*y#+z#*z)
+sysabort G:29 DEF libhdr.h[68] sysabort=29
+t_bhunk M:3000 DEF libhdr.h[267] t_bhunk=3000
+t_bhunk64 M:4000 DEF libhdr.h[268] t_bhunk64=4000
+t_end M:1002 DEF libhdr.h[263] t_end=1002
+t_end64 M:2002 DEF libhdr.h[266] t_end64=2002
+t_hunk M:1000 DEF libhdr.h[261] t_hunk=1000
+t_hunk64 M:2000 DEF libhdr.h[264] t_hunk64=2000
+t_reloc M:1001 DEF libhdr.h[262] t_reloc=1001
+t_reloc64 M:2001 DEF libhdr.h[265] t_reloc64=2001
+targetx G:302 DEF com/bucket.b[140] targetx=
+targetx G:302 LG com/bucket.b[554] writef("targetx=%8.5d*n",targetx)
+targetx G:302 LG com/bucket.b[555]
+    UNTIL xlim_lwall<=targetx&targetx<=xlim_rwall DO ..
+targetx G:302 LG com/bucket.b[556]
+    TEST xlim_lwall>targetx THEN .. ELSE ..
+targetx G:302 LG com/bucket.b[557]
+    targetx:=xlim_lwall-targetx-xlim_lwall
+targetx G:302 LG com/bucket.b[558]
+    targetx:=xlim_rwall-targetx-xlim_rwall
+targetx G:302 LG com/bucket.b[559]
+    writef("xlim_'s=%8.5d*n",xlim_lwall,xlim_rwall,targetx)
+targetx G:302 LG com/bucket.b[562] rbs:=muldiv(targetx-batx,100000,t)
+targetx G:302 LG com/bucket.b[563]
+    writef("targe's=%8.5d*n",targetx,batx,t,rbs)
+targetx G:302 SG com/bucket.b[553]
+    targetx:=selx+muldiv(selxdot,t,100000)
+targetx G:302 SG com/bucket.b[557]
+    targetx:=xlim_lwall-targetx-xlim_lwall
+targetx G:302 SG com/bucket.b[558]
+    targetx:=xlim_rwall-targetx-xlim_rwall
+taskid G:152 DEF libhdr.h[206] taskid=152
+taskwait G:160 DEF libhdr.h[214] taskwait=160
+tcb G:151 DEF libhdr.h[205] tcb=151
+tcb_a M:11 DEF libhdr.h[697] tcb_a=tcb_regs
+tcb_active M:10 DEF libhdr.h[694] tcb_active=10
+tcb_b M:12 DEF libhdr.h[698] tcb_b=12
+tcb_c M:13 DEF libhdr.h[699] tcb_c=13
+tcb_count M:18 DEF libhdr.h[704] tcb_count=18
+tcb_flags M:5 DEF libhdr.h[689] tcb_flags=5
+tcb_g M:15 DEF libhdr.h[701] tcb_g=15
+tcb_gbase M:8 DEF libhdr.h[692] tcb_gbase=8
+tcb_link M:0 DEF libhdr.h[684] tcb_link=0
+tcb_namebase M:19 DEF libhdr.h[706] tcb_namebase=19
+tcb_namebase M:19 MAN libhdr.h[708]
+    tcb_upb=tcb_namebase+15/bytesperword+1
+tcb_p M:14 DEF libhdr.h[700] tcb_p=14
+tcb_pc M:17 DEF libhdr.h[703] tcb_pc=17
+tcb_pri M:2 DEF libhdr.h[686] tcb_pri=2
+tcb_regs M:11 DEF libhdr.h[696] tcb_regs=11
+tcb_regs M:11 MAN libhdr.h[697] tcb_a=tcb_regs
+tcb_sbase M:9 DEF libhdr.h[693] tcb_sbase=9
+tcb_seglist M:7 DEF libhdr.h[691] tcb_seglist=7
+tcb_st M:16 DEF libhdr.h[702] tcb_st=16
+tcb_state M:4 DEF libhdr.h[688] tcb_state=4
+tcb_stsiz M:6 DEF libhdr.h[690] tcb_stsiz=6
+tcb_taskid M:1 DEF libhdr.h[685] tcb_taskid=1
+tcb_upb M:23 DEF libhdr.h[708] tcb_upb=tcb_namebase+15/bytesperword+1
+tcb_wkq M:3 DEF libhdr.h[687] tcb_wkq=3
+tempval G:11 DEF libhdr.h[49] tempval=11
+testbit G:113 DEF libhdr.h[153] testbit=113
+testflags G:157 DEF libhdr.h[211] testflags=157
+tg M:190 DEF libhdr.h[245] tg=190
+timeoutch M:-2 DEF libhdr.h[256] timeoutch=-2
+tstinterpolate F:17 LF sdl.b[155] tstinterpolate(150,100,200,2000,3000)
+tstinterpolate F:17 LF sdl.b[156]
+    tstinterpolate(-150,-100,-200,2000,3000)
+tstinterpolate F:17 LF sdl.b[157]
+    tstinterpolate(150,100,200,-2000,-3000)
+tstinterpolate F:17 LF sdl.b[158]
+    tstinterpolate(-150,-100,-200,-2000,-3000)
+tstinterpolate F:17 LF sdl.b[160]
+    tstinterpolate(#x59682F00,#x3B9ACA00,#x77359400,2000,3000)
+tstinterpolate F:17 LF sdl.b[161]
+    tstinterpolate(-#x59682F00,-#x3B9ACA00,-#x77359400,2000,3000)
+tstinterpolate F:17 LF sdl.b[162]
+    tstinterpolate(#x59682F00,#x3B9ACA00,#x77359400,-2000,-3000)
+tstinterpolate F:17 LF sdl.b[163]
+    tstinterpolate(-#x59682F00,-#x3B9ACA00,-#x77359400,-2000,-3000)
+tstinterpolate F:17 RT sdl.b[140] LET tstinterpolate(p,p1,p2,q1,q2)BE..
+ug M:200 DEF libhdr.h[246] ug=200
+ug M:200 MAN com/bucket.b[43] done=ug
+unhold G:159 DEF libhdr.h[213] unhold=159
+unloadseg G:106 DEF libhdr.h[146] unloadseg=106
+unpackstring G:31 DEF libhdr.h[70] unpackstring=31
+unrdch G:40 DEF libhdr.h[79] unrdch=40
+updatescreen G:558 DEF sdl.h[283] updatescreen=
+updatescreen G:558 LG com/bucket.b[1004] updatescreen()
+updatescreen G:558 RT sdl.b[327] LET updatescreen()BE..
+usage G:208 DEF com/bucket.b[54] usage=
+usage G:208 LG com/bucket.b[1005] UNLESS 80<usage&usage<95 DO ..
+usage G:208 LG com/bucket.b[1006] TEST usage>90 THEN .. ELSE ..
+usage G:208 LG com/bucket.b[775]
+    drawf(30,245,"CPU u'sps = %n",usage,sps)
+usage G:208 SG com/bucket.b[1002] usage:=100*comptime/(stepmsecs|1)
+usage G:208 SG com/bucket.b[928] usage:=0
+wall_lx G:237 DEF com/bucket.b[101] wall_lx=
+wall_lx G:237 LG com/bucket.b[965] xlim_lwall:=wall_lx+ballradius
+wall_lx G:237 SG com/bucket.b[942] wall_lx:=0
+wall_rx G:238 DEF com/bucket.b[102] wall_rx=
+wall_rx G:238 LG com/bucket.b[631] IF batx+batradius>wall_rx DO ..
+wall_rx G:238 LG com/bucket.b[632] batx:=wall_rx-batradius
+wall_rx G:238 LG com/bucket.b[966] xlim_rwall:=wall_rx-ballradius
+wall_rx G:238 SG com/bucket.b[943] wall_rx:=(screenxsize-1)*One
+wrch G:41 DEF libhdr.h[80] wrch=41
+wrch G:41 LG sdl.b[3612] wrch
+wrch G:41 SG sdl.b[3616] wrch:=drawwrch
+wrch G:41 SG sdl.b[3618] wrch:=oldwrch
+write_ch_slice G:521 DEF sdl.h[186] write_ch_slice=
+write_ch_slice G:521 LG sdl.b[419]
+    write_ch_slice(currx,curry+fontH-1-line,ch,line)
+write_ch_slice G:521 SG sdl.b[406] write_ch_slice:=write_ch_slice18
+write_ch_slice G:521 SG sdl.b[411] write_ch_slice:=write_ch_slice12
+write_ch_slice12 F:54 LF sdl.b[411] write_ch_slice:=write_ch_slice12
+write_ch_slice12 F:54 RT sdl.b[423]
+    LET write_ch_slice12(x,y,ch,line)BE..
+write_ch_slice18 F:55 LF sdl.b[406] write_ch_slice:=write_ch_slice18
+write_ch_slice18 F:55 RT sdl.b[1721]
+    LET write_ch_slice18(x,y,ch,line)BE..
+writed G:85 DEF libhdr.h[124] writed=85
+writee G:180 DEF libhdr.h[232] writee=180
+writef G:94 DEF libhdr.h[134] writef=94
+writef G:94 LG com/bucket.b[1019] writef("*nQuitting*n")
+writef G:94 LG com/bucket.b[509] writef("*nbatx't=%8.5d*n",batx,batxdot)
+writef G:94 LG com/bucket.b[519] writef("1 cur'llno=%n*n",currballno)
+writef G:94 LG com/bucket.b[524] writef("2 cur'llno=%n*n",currballno)
+writef G:94 LG com/bucket.b[529] writef("3 cur'llno=%n*n",currballno)
+writef G:94 LG com/bucket.b[532] writef("No ba'elected*n")
+writef G:94 LG com/bucket.b[544] writef("4 cur'llno=%n*n",currballno)
+writef G:94 LG com/bucket.b[545]
+    writef("selx='t=%8.5d*n",selx,sely,selxdot,selydot)
+writef G:94 LG com/bucket.b[548] writef("selydot=%8.5d*n",selydot)
+writef G:94 LG com/bucket.b[550] writef("t=%8.5d*n",t)
+writef G:94 LG com/bucket.b[552] writef("t=%8.5d*n",t)
+writef G:94 LG com/bucket.b[554] writef("targetx=%8.5d*n",targetx)
+writef G:94 LG com/bucket.b[559]
+    writef("xlim_'s=%8.5d*n",xlim_lwall,xlim_rwall,targetx)
+writef G:94 LG com/bucket.b[563]
+    writef("targe's=%8.5d*n",targetx,batx,t,rbs)
+writef G:94 LG com/bucket.b[875] writef("QUIT*n")
+writef G:94 LG com/bucket.b[885] writef("*nThe 'ailable*n")
+writef G:94 LG com/bucket.b[904]
+    writef("dx=%9'q=%9.5d*n",One,dy,c,s,rsq)
+writef G:94 LG com/bucket.b[909] writef("Error' -%7.5d*n",e1-One,One-e2)
+writef G:94 LG sdl.b[142] writef("inter') => %n*n",p,p1,p2,q1,q2,res)
+writef G:94 LG sdl.b[170] writef("Unabl'SDL: %s*n",mes)
+writef G:94 LG sdl.b[241] writef("Unabl'ode: %s*n",mes)
+writef G:94 LG sdl.b[358] writef("*ngetm'ailable*n")
+writef G:94 LG sdl.b[3617] writef(form,a,b,c,d,e,...)
+writef G:94 LG sdl.b[4137]
+    writef("*nleft'maxy=%n*n",leftxv!y,leftzv!y,rightxv!y,rightzv!y,miny,maxy)
+writef G:94 LG sdl.b[4166] writef("getve'failure*n")
+writef G:94 LG sdl.b[4391] writef("drawt'th = %n*n",neardepth,fardepth)
+writef G:94 LG sdl.b[4393] writef("drawt'pth=%8i*n",x1,y1,z1)
+writef G:94 LG sdl.b[4394] writef("drawt'pth=%8i*n",x2,y2,z2)
+writef G:94 LG sdl.b[4395] writef("drawt'pth=%8i*n",x3,y3,z3)
+writef G:94 LG sdl.b[4396] writef("y=%n 'o %n:%n*n",y,x0,sz0,x1,sz1)
+writef G:94 LG sdl.b[4428] writef("chkli'maxy=%n*n",miny,maxy)
+writef G:94 LG sdl.b[4430]
+    writef("y=%i3'n %n:%n*n",y,leftxv!y,leftzv!y,rightxv!y,rightzv!y)
+writeflt G:73 DEF libhdr.h[112] writeflt=73
+writehex G:87 DEF libhdr.h[126] writehex=87
+writen G:86 DEF libhdr.h[125] writen=86
+writeoct G:88 DEF libhdr.h[127] writeoct=88
+writes G:89 DEF libhdr.h[128] writes=89
+writet G:90 DEF libhdr.h[129] writet=90
+writeu G:91 DEF libhdr.h[130] writeu=91
+writewords G:45 DEF libhdr.h[84] writewords=45
+writez G:92 DEF libhdr.h[131] writez=92
+xlim_bucket_lc G:259 DEF com/bucket.b[116] xlim_bucket_lc=
+xlim_bucket_lc G:259 SG com/bucket.b[970]
+    xlim_bucket_lc:=bucket_lxc-ballradius
+xlim_bucket_ll G:258 DEF com/bucket.b[116] xlim_bucket_ll=
+xlim_bucket_ll G:258 LG com/bucket.b[305]
+    TEST xlim_bucket_ll<=cx&cx<=xlim_bucket_rr&ylim_baseb<=cy&cy<=ylim_topt THEN .. ELSE ..
+xlim_bucket_ll G:258 LG com/bucket.b[333] pv!0:=xlim_bucket_ll
+xlim_bucket_ll G:258 SG com/bucket.b[969]
+    xlim_bucket_ll:=bucket_lxl-ballradius
+xlim_bucket_lr G:260 DEF com/bucket.b[116] xlim_bucket_lr=
+xlim_bucket_lr G:260 LG com/bucket.b[336]
+    IF bucket_lxc<cx&cx<=xlim_bucket_lr DO ..
+xlim_bucket_lr G:260 LG com/bucket.b[338] pv!0:=xlim_bucket_lr
+xlim_bucket_lr G:260 SG com/bucket.b[971]
+    xlim_bucket_lr:=bucket_lxr+ballradius
+xlim_bucket_rc G:262 DEF com/bucket.b[117] xlim_bucket_rc=
+xlim_bucket_rc G:262 SG com/bucket.b[973]
+    xlim_bucket_rc:=bucket_rxc-ballradius
+xlim_bucket_rl G:261 DEF com/bucket.b[117] xlim_bucket_rl=
+xlim_bucket_rl G:261 LG com/bucket.b[341]
+    IF xlim_bucket_rl<=cx&cx<bucket_rxc DO ..
+xlim_bucket_rl G:261 LG com/bucket.b[343] pv!0:=xlim_bucket_rl
+xlim_bucket_rl G:261 SG com/bucket.b[972]
+    xlim_bucket_rl:=bucket_rxl-ballradius
+xlim_bucket_rr G:263 DEF com/bucket.b[117] xlim_bucket_rr=
+xlim_bucket_rr G:263 LG com/bucket.b[305]
+    TEST xlim_bucket_ll<=cx&cx<=xlim_bucket_rr&ylim_baseb<=cy&cy<=ylim_topt THEN .. ELSE ..
+xlim_bucket_rr G:263 LG com/bucket.b[348] pv!0:=xlim_bucket_rr
+xlim_bucket_rr G:263 SG com/bucket.b[974]
+    xlim_bucket_rr:=bucket_rxr+ballradius
+xlim_lwall G:254 DEF com/bucket.b[114] xlim_lwall=
+xlim_lwall G:254 LG com/bucket.b[404] IF cx<=xlim_lwall DO ..
+xlim_lwall G:254 LG com/bucket.b[405] pv!0:=xlim_lwall
+xlim_lwall G:254 LG com/bucket.b[555]
+    UNTIL xlim_lwall<=targetx&targetx<=xlim_rwall DO ..
+xlim_lwall G:254 LG com/bucket.b[556]
+    TEST xlim_lwall>targetx THEN .. ELSE ..
+xlim_lwall G:254 LG com/bucket.b[557]
+    targetx:=xlim_lwall-targetx-xlim_lwall
+xlim_lwall G:254 LG com/bucket.b[559]
+    writef("xlim_'s=%8.5d*n",xlim_lwall,xlim_rwall,targetx)
+xlim_lwall G:254 SG com/bucket.b[965] xlim_lwall:=wall_lx+ballradius
+xlim_rwall G:255 DEF com/bucket.b[114] xlim_rwall=
+xlim_rwall G:255 LG com/bucket.b[410] IF cx>=xlim_rwall DO ..
+xlim_rwall G:255 LG com/bucket.b[411] pv!0:=xlim_rwall
+xlim_rwall G:255 LG com/bucket.b[555]
+    UNTIL xlim_lwall<=targetx&targetx<=xlim_rwall DO ..
+xlim_rwall G:255 LG com/bucket.b[558]
+    targetx:=xlim_rwall-targetx-xlim_rwall
+xlim_rwall G:255 LG com/bucket.b[559]
+    writef("xlim_'s=%8.5d*n",xlim_lwall,xlim_rwall,targetx)
+xlim_rwall G:255 SG com/bucket.b[966] xlim_rwall:=wall_rx-ballradius
+ylim_baseb G:265 DEF com/bucket.b[119] ylim_baseb=
+ylim_baseb G:265 LG com/bucket.b[305]
+    TEST xlim_bucket_ll<=cx&cx<=xlim_bucket_rr&ylim_baseb<=cy&cy<=ylim_topt THEN .. ELSE ..
+ylim_baseb G:265 LG com/bucket.b[360] pv!1:=ylim_baseb
+ylim_baseb G:265 LG com/bucket.b[441]
+    IF ylim_baseb<cgy1&bucket_lxc<cgx1&cgx1<bucket_rxc DO ..
+ylim_baseb G:265 LG com/bucket.b[442]
+    IF ylim_baseb<cgy2&bucket_lxc<cgx2&cgx2<bucket_rxc DO ..
+ylim_baseb G:265 LG com/bucket.b[443]
+    IF ylim_baseb<cgy3&bucket_lxc<cgx3&cgx3<bucket_rxc DO ..
+ylim_baseb G:265 LG com/bucket.b[835]
+    UNLESS ylim_baseb<cgy1&...&...&ylim_baseb<cgy2&bucket_lxc<cgx2&cgx2<bucket_rxc&ylim_baseb<cgy3&bucket_lxc<cgx3&cgx3<bucket_rxc DO ..
+ylim_baseb G:265 SG com/bucket.b[976] ylim_baseb:=bucket_byb-ballradius
+ylim_baset G:266 DEF com/bucket.b[119] ylim_baset=
+ylim_baset G:266 LG com/bucket.b[365]
+    IF bucket_byc<=cy&cy<=ylim_baset DO ..
+ylim_baset G:266 LG com/bucket.b[367] pv!1:=ylim_baset
+ylim_baset G:266 SG com/bucket.b[977] ylim_baset:=bucket_byt+ballradius
+ylim_bat G:267 DEF com/bucket.b[120] ylim_bat=
+ylim_bat G:267 SG com/bucket.b[987]
+    ylim_bat:=floor_yt+batradius+ballradius
+ylim_ceiling G:257 DEF com/bucket.b[115] ylim_ceiling=
+ylim_ceiling G:257 LG com/bucket.b[416] IF cy>=ylim_ceiling DO ..
+ylim_ceiling G:257 LG com/bucket.b[417] pv!1:=ylim_ceiling
+ylim_ceiling G:257 SG com/bucket.b[968]
+    ylim_ceiling:=ceiling_yb-ballradius
+ylim_floor G:256 DEF com/bucket.b[115] ylim_floor=
+ylim_floor G:256 LG com/bucket.b[424] IF cy<=ylim_floor DO ..
+ylim_floor G:256 LG com/bucket.b[425] pv!1:=ylim_floor
+ylim_floor G:256 LG com/bucket.b[549]
+    t:=muldiv(sely-ylim_floor,100000,-selydot)
+ylim_floor G:256 SG com/bucket.b[967] ylim_floor:=floor_yt+ballradius
+ylim_topt G:264 DEF com/bucket.b[118] ylim_topt=
+ylim_topt G:264 LG com/bucket.b[305]
+    TEST xlim_bucket_ll<=cx&cx<=xlim_bucket_rr&ylim_baseb<=cy&cy<=ylim_topt THEN .. ELSE ..
+ylim_topt G:264 SG com/bucket.b[975] ylim_topt:=bucket_tyt+ballradius

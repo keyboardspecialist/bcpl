@@ -1,0 +1,88 @@
+lasttrngn=412   cgg=425
+   0:  DATAW #x0000000000000000
+   8:  DATAW #x000000000000DFDF
+  16:  DATAW #x202074726174730B
+  24:  DATAW #x0000000020202020
+// Entry to:   start      
+  32: L12:
+  32:      L   15
+  34:    SP3  
+  35:     LH  43707
+  38:    SP4  
+  39:     LW  #xAABBCCDD
+  44:    SP5  
+  45:    LP3  
+  46:    AP4  
+  47:      J  L13
+  49: L15:
+  49:     L0  
+  50:    RTN  
+  51: L16:
+  51:    LLL  L19920
+  53:    SP3  
+  54:     L1  
+  55:    RTN  
+  56: L17:
+  56:     LH  43981
+  59:    SP3  
+  60:     L2  
+  61:    RTN  
+  62: L18:
+  62:     L3  
+  63:    SP3  
+  64:    RTN  
+  65: L19:
+  65:     L4  
+  66:    SP3  
+  67:    RTN  
+  68: L20:
+  68:     L5  
+  69:    SP3  
+  70:    RTN  
+  71: L21:
+  71:     L6  
+  72:    SP3  
+  73:    RTN  
+  74: L22:
+  74:     L7  
+  75:    SP3  
+  76:    RTN  
+  77: L23:
+  77:     L8  
+  78:    SP3  
+  79:    RTN  
+  80: L24:
+  80:     L9  
+  81:    SP3  
+  82:    RTN  
+  83: L13:
+fillref_d: a=47 p=83 instr=[186,35]
+  83:    SWL  
+  84:  DATAH 10
+  86:  DATAH L15-$
+  88:  DATAH L15-$
+  90:  DATAH L16-$
+  92:  DATAH L17-$
+  94:  DATAH L18-$
+  96:  DATAH L19-$
+  98:  DATAH L20-$
+ 100:  DATAH L21-$
+ 102:  DATAH L22-$
+ 104:  DATAH L23-$
+ 106:  DATAH L24-$
+ 108: L14:
+ 108:     L0  
+ 109:    RTN  
+ 112: L10:
+ 112:  DATAW #xFFFFFFFFAABBCCDD
+ 120: L11:
+ 120:  DATAW #x0000000000000000
+ 128: L19920:
+fillref_d: a=51 p=128 instr=[90,76]
+ 128:  DATAW #x4746454443424108
+ 136:  DATAW #x0000000000000048
+ 144:  DATAW #x0000000000000000
+ 152:  DATAW #x0000000000000001
+ 160:  DATAW #x0000000000000020
+ 168:  DATAW #x0000000000000001
+Code size =   176 bytes of 64-bit little ender Cintcode

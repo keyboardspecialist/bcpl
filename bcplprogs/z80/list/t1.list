@@ -1,0 +1,374 @@
+calling initcodes
+calling parse
+       1                          REL
+       2                     ; This contains most of the Z80 instructions in alphabetical order
+       3                     ; with a few extra instructions to set suitable data values.
+       4                     ; z80emu initialises the memory with random values and sets most
+       5                     ; registers to zero except for
+       6                     ; BC = #x1CBA
+       7                     ; DE = #xE73D
+       8                     ; HL = #xA100
+       9                     ; IX = #xA100
+      10                     ; IY = #xE100
+      11                     ; SP = #x7100
+      12                     ; PC = #x0000
+  
+      14 0000  8E                 ADC A,(HL)
+      15 0001  DD 8E 0D           ADC A,(IX+13)
+      16 0004  FD 8E F9           ADC A,(IY-7)
+      17 0007  CE 0A              ADC A,10
+      18 0009  8C                 ADC A,H
+      19 000A  ED 4A              ADC HL,BC
+      20 000C  ED 5A              ADC HL,DE
+      21 000E  ED 6A              ADC HL,HL
+      22 0010  ED 7A              ADC HL,SP
+       
+      24 0012  86                 ADD A,(HL)
+      25 0013  DD 86 05           ADD A,(IX+5)
+      26 0016  FD 86 FF           ADD A,(IY-1)
+      27 0019  C6 14              ADD A,20
+      28 001B  80                 ADD A,B
+      29 001C  09                 ADD HL,BC
+      30 001D  19                 ADD HL,DE
+      31 001E  29                 ADD HL,HL
+      32 001F  39                 ADD HL,SP
+      33 0020  DD 09              ADD IX,BC
+      34 0022  DD 19              ADD IX,DE
+      35 0024  DD 29              ADD IX,IX
+      36 0026  DD 39              ADD IX,SP
+      37 0028  FD 09              ADD IY,BC
+      38 002A  FD 19              ADD IY,DE
+      39 002C  FD 29              ADD IY,IY
+      40 002E  FD 39              ADD IY,SP
+  
+      42 0030  A6                 AND (HL)
+      43 0031  DD A6 0E           AND (IX+14)
+      44 0034  FD A6 F9           AND (IY-7)
+      45 0037  E6 1F              AND #x1F
+      46 0039  A2                 AND D
+       
+      48 003A  CB 6E              BIT 5,(HL)
+      49 003C  DD CB F6 5E        BIT 3,(IX-10)
+      50 0040  FD CB 0C 66        BIT 4,(IY+12)
+      51 0044  CB 50              BIT 2,B
+  
+      53 0046  3E C9              LD A,#xC9          ; Store RET in #x7654
+      54 0048  32 54 76           LD (#x7654),A
+      55 004B  CD 54 76           CALL #x7654
+      56 004E  DC 54 76           CALL C,#x7654
+      57 0051  FC 54 76           CALL M,#x7654
+      58 0054  D4 54 76           CALL NC,#x7654
+      59 0057  C4 54 76           CALL NZ,#x7654
+      60 005A  F4 54 76           CALL P,#x7654
+      61 005D  EC 54 76           CALL PE,#x7654
+      62 0060  E4 54 76           CALL PO,#x7654
+      63 0063  CC 54 76           CALL Z,#x7654
+       
+      65 0066  3F                 CCF
+      66 0067  BE                 CP (HL)
+      67 0068  DD BE 05           CP (IX+5)
+      68 006B  FD BE F5           CP (IY-11)
+      69 006E  FE 0A              CP 10
+      70 0070  BF                 CP A
+      71 0071  ED A9              CPD
+      72 0073  ED B9              CPDR
+      73 0075  ED A1              CPI
+      74 0077  ED B1              CPIR
+      75 0079  2F                 CPL
+      76 007A  27                 DAA
+  
+      78 007B  35                 DEC (HL)
+      79 007C  DD 35 1F           DEC (IX+31)
+      80 007F  FD 35 F9           DEC (IY-7)
+      81 0082  3D                 DEC A
+      82 0083  05                 DEC B
+      83 0084  0B                 DEC BC
+      84 0085  0D                 DEC C
+      85 0086  15                 DEC D
+      86 0087  1B                 DEC DE
+      87 0088  1D                 DEC E
+      88 0089  25                 DEC H
+      89 008A  2B                 DEC HL
+      90 008B  DD 2B              DEC IX
+      91 008D  FD 2B              DEC IY
+      92 008F  2D                 DEC L
+      93 0090  3B                 DEC SP
+  
+      95 0091  10 FC              DJNZ -2
+      96 0093  FB                 EI
+      97 0094  E3                 EX (SP),HL
+      98 0095  DD E3              EX (SP),IX
+      99 0097  FD E3              EX (SP),IY
+     100 0099  08                 EX AF,AF'
+     101 009A  EB                 EX DE,HL
+     102 009B  D9                 EXX
+     103 009C  76                 HALT
+     104 009D  ED 46              IM 0
+     105 009F  ED 56              IM 1
+     106 00A1  ED 5E              IM 2
+       
+     108 00A3  ED 78              IN A,(C)
+     109 00A5  DB 05              IN A,(5)
+     110 00A7  ED 40              IN B,(C)
+     111 00A9  ED 48              IN C,(C)
+     112 00AB  ED 50              IN D,(C)
+     113 00AD  ED 58              IN E,(C)
+     114 00AF  ED 60              IN H,(C)
+     115 00B1  ED 68              IN L,(C)
+     116                          ;IN F,(C)
+       
+     118 00B3  34                 INC (HL)
+     119 00B4  DD 34 07           INC (IX+7)
+     120 00B7  FD 34 E1           INC (IY-#x1F)
+     121 00BA  3C                 INC A
+     122 00BB  04                 INC B
+     123 00BC  03                 INC BC
+     124 00BD  0C                 INC C
+     125 00BE  14                 INC D
+     126 00BF  13                 INC DE
+     127 00C0  1C                 INC E
+     128 00C1  24                 INC H
+     129 00C2  23                 INC HL
+     130 00C3  DD 23              INC IX
+     131 00C5  FD 23              INC IY
+     132 00C7  2C                 INC L
+     133 00C8  33                 INC SP
+       
+     135 00C9  ED AA              IND
+     136 00CB  ED BA              INDR
+     137 00CD  ED A2              INI
+     138 00CF  ED B2              INIR
+  
+     140 00D1  C3 00 30           JP #x3000
+     141 00D4  E9                 JP (HL)
+     142 00D5  DD E9              JP (IX)
+     143 00D7  FD E9              JP (IY)
+     144 00D9  DA 00 30           JP C,#x3000
+     145 00DC  FA 00 30           JP M,#x3000
+     146 00DF  D2 00 30           JP NC,#x3000
+     147 00E2  C2 00 30           JP NZ,#x3000
+     148 00E5  F2 00 30           JP P,#x3000
+     149 00E8  EA 00 30           JP PE,#x3000
+     150 00EB  E2 00 30           JP PO,#x3000
+     151 00EE  CA 00 30           JP Z,#x3000
+  
+     153 00F1  18 F9              JR -5
+     154 00F3  38 05              JR C,7
+     155 00F5  30 07              JR NC,9
+     156 00F7  20 F3              JR NZ,-11
+     157 00F9  28 FC              JR Z,-2
+       
+     159 00FB  02                 LD (BC),A
+     160 00FC  12                 LD (DE),A
+     161 00FD  36 17              LD (HL),23
+     162 00FF  72                 LD (HL),D
+     163 0100  DD 36 0B 7B        LD (IX+11),123
+     164 0104  DD 73 04           LD (IX+4),E
+     165 0107  FD 36 F3 FF        LD (IY-13),255
+     166 010B  FD 73 FC           LD (IY-4),E
+     167 010E  32 00 20           LD (#x2000),A
+     168 0111  ED 43 00 20        LD (#x2000),BC
+     169 0115  ED 53 00 20        LD (#x2000),DE
+     170 0119  22 00 20           LD (#x2000),HL
+     171 011C  DD 22 00 20        LD (#x2000),IX
+     172 0120  FD 22 00 20        LD (#x2000),IY
+     173 0124  ED 73 00 20        LD (#x2000),SP
+  
+     175 0128  0A                 LD A,(BC)
+     176 0129  1A                 LD A,(DE)
+     177 012A  7E                 LD A,(HL)
+     178 012B  DD 7E 0A           LD A,(IX+10)
+     179 012E  FD 7E F9           LD A,(IY-7)
+     180 0131  3A 00 20           LD A,(#X2000)
+     181 0134  3E 64              LD A,100
+     182 0136  7A                 LD A,D
+     183 0137  ED 57              LD A,I
+     184 0139  ED 5F              LD A,R
+       
+     186 013B  46                 LD B,(HL)
+     187 013C  DD 46 0C           LD B,(IX+12)
+     188 013F  FD 46 FB           LD B,(IY-5)
+     189 0142  06 14              LD B,20
+     190 0144  43                 LD B,E
+     191 0145  ED 4B 00 20        LD BC,(#X2000)
+     192 0149  01 00 20           LD BC,#X2000
+  
+     194 014C  4E                 LD C,(HL)
+     195 014D  DD 4E 0C           LD C,(IX+12)
+     196 0150  FD 4E FB           LD C,(IY-5)
+     197 0153  0E 14              LD C,20
+     198 0155  4A                 LD C,D
+  
+     200 0156  56                 LD D,(HL)
+     201 0157  DD 56 0C           LD D,(IX+12)
+     202 015A  FD 56 FB           LD D,(IY-5)
+     203 015D  16 14              LD D,20
+     204 015F  53                 LD D,E
+     205 0160  ED 5B 00 20        LD DE,(#X2000)
+     206 0164  11 00 20           LD DE,#X2000
+  
+     208 0167  5E                 LD E,(HL)
+     209 0168  DD 5E 0C           LD E,(IX+12)
+     210 016B  FD 5E FB           LD E,(IY-5)
+     211 016E  1E 14              LD E,20
+     212 0170  5A                 LD E,D
+  
+     214 0171  66                 LD H,(HL)
+     215 0172  DD 66 0C           LD H,(IX+12)
+     216 0175  FD 66 FB           LD H,(IY-5)
+     217 0178  26 14              LD H,20
+     218 017A  63                 LD H,E
+     219 017B  2A 00 20           LD HL,(#X2000)
+     220 017E  21 00 20           LD HL,#X2000
+  
+     222 0181  ED 47              LD I,A
+  
+     224 0183  DD 2A 00 20        LD IX,(#X2000)
+     225 0187  DD 21 00 20        LD IX,#X2000
+     226 018B  FD 2A 00 20        LD IY,(#X2000)
+     227 018F  FD 21 00 20        LD IY,#X2000
+  
+     229 0193  6E                 LD L,(HL)
+     230 0194  DD 6E 0C           LD L,(IX+12)
+     231 0197  FD 6E FB           LD L,(IY-5)
+     232 019A  2E 14              LD L,20
+     233 019C  6A                 LD L,D
+  
+     235 019D  ED 47              LD I,A
+  
+     237 019F  ED 7B 00 20        LD SP,(#x2000)
+     238 01A3  DD F9              LD SP,IX
+     239 01A5  FD F9              LD SP,IY
+     240 01A7  31 00 20           LD SP,#x2000
+  
+     242 01AA  ED A8              LDD
+     243 01AC  ED B8              LDDR
+     244 01AE  ED A0              LDI
+     245 01B0  ED B0              LDIR
+  
+     247 01B2  ED 44              NEG
+     248 01B4  00                 NOP
+       
+     250 01B5  B6                 OR (HL)
+     251 01B6  DD B6 01           OR (IX+1)
+     252 01B9  FD B6 F1           OR (IY-15)
+     253 01BC  F6 0A              OR 10
+     254 01BE  B2                 OR D
+     255 01BF  ED BB              OTDR
+     256 01C1  ED B3              OTIR
+     257 01C3  ED 79              OUT (C),A
+     258 01C5  ED 41              OUT (C),B
+     259 01C7  ED 49              OUT (C),C
+     260 01C9  ED 51              OUT (C),D
+     261 01CB  ED 59              OUT (C),E
+     262 01CD  ED 61              OUT (C),H
+     263 01CF  ED 69              OUT (C),L
+     264 01D1  D3 14              OUT (20),A
+     265 01D3  ED AB              OUTD
+     266 01D5  ED A3              OUTI
+     267 01D7  F1                 POP AF
+     268 01D8  C1                 POP BC
+     269 01D9  D1                 POP DE
+     270 01DA  DD E1              POP IX
+     271 01DC  FD E1              POP IY
+     272 01DE  F5                 PUSH AF
+     273 01DF  C5                 PUSH BC
+     274 01E0  D5                 PUSH DE
+     275 01E1  E5                 PUSH HL
+     276 01E2  DD E5              PUSH IX
+     277 01E4  FD E5              PUSH IY
+     278 01E6  CB 96              RES 2,(HL)
+     279 01E8  DD CB 05 9E        RES 3,(IX+5)
+     280 01EC  FD CB F9 A6        RES 4,(IY-7)
+     281 01F0  CB AA              RES 5,D
+     282 01F2  C9                 RET
+     283 01F3  D8                 RET C
+     284 01F4  F8                 RET M
+     285 01F5  D0                 RET NC
+     286 01F6  C0                 RET NZ
+     287 01F7  E8                 RET PE
+     288 01F8  E0                 RET PO
+     289 01F9  C8                 RET Z
+     290 01FA  ED 4D              RETI
+     291 01FC  ED 45              RETN
+       
+     293 01FE  CB 16              RL (HL)
+     294 0200  DD CB 08 16        RL (IX+8)
+     295 0204  FD CB F5 16        RL (IY-11)
+     296 0208  CB 13              RL E
+     297 020A  17                 RLA
+     298 020B  CB 06              RLC (HL)
+     299 020D  DD CB FB 06        RLC (IX-5)
+     300 0211  FD CB F8 06        RLC (IY-8)
+     301 0215  CB 00              RLC B
+     302 0217  07                 RLCA
+     303 0218  ED 6F              RLD
+       
+     305 021A  CB 1E              RR (HL)
+     306 021C  DD CB 08 1E        RR (IX+8)
+     307 0220  FD CB F5 1E        RR (IY-11)
+     308 0224  CB 1B              RR E
+       
+     310 0226  1F                 RRA
+  
+     312 0227  CB 0E              RRC (HL)
+     313 0229  DD CB 08 0E        RRC (IX+8)
+     314 022D  FD CB F5 0E        RRC (IY-11)
+     315 0231  CB 0B              RRC E
+     316 0233  0F                 RRCA
+     317 0234  ED 67              RRD
+     318 0236  C7                 RST 0
+     319 0237  CF                 RST #x8
+     320 0238  D7                 RST #x10
+     321 0239  DF                 RST #x18
+     322 023A  E7                 RST #x20
+     323 023B  EF                 RST #x28
+     324 023C  F7                 RST #x30
+     325 023D  FF                 RST #x38
+  
+     327 023E  9E                 SBC A,(HL)
+     328 023F  DD 9E 08           SBC A,(IX+8)
+     329 0242  FD 9E F5           SBC A,(IY-11)
+     330 0245  DE 17              SBC A,23
+     331 0247  9C                 SBC A,H
+     332 0248  ED 42              SBC HL,BC
+     333 024A  ED 52              SBC HL,DE
+     334 024C  ED 62              SBC HL,HL
+     335 024E  ED 72              SBC HL,SP
+  
+     337 0250  37                 SCF
+       
+     339 0251  CB D6              SET 2,(HL)
+     340 0253  DD CB 03 DE        SET 3,(IX+3)
+     341 0257  DD CB FB F6        SET 6,(IX-5)
+     342 025B  CB FA              SET 7,D
+  
+     344 025D  CB 26              SLA (HL)
+     345 025F  DD CB 08 26        SLA (IX+8)
+     346 0263  FD CB F5 26        SLA (IY-11)
+     347 0267  CB 23              SLA E
+  
+     349 0269  CB 2E              SRA (HL)
+     350 026B  DD CB FB 2E        SRA (IX-5)
+     351 026F  FD CB F8 2E        SRA (IY-8)
+     352 0273  CB 28              SRA B
+       
+     354 0275  CB 3E              SRL (HL)
+     355 0277  DD CB FB 3E        SRL (IX-5)
+     356 027B  FD CB F8 3E        SRL (IY-8)
+     357 027F  CB 38              SRL B
+       
+     359 0281  96                 SUB (HL)
+     360 0282  DD 96 08           SUB (IX+8)
+     361 0285  FD 96 F5           SUB (IY-11)
+     362 0288  D6 17              SUB 23
+     363 028A  94                 SUB H
+       
+     365 028B  AE                 XOR (HL)
+     366 028C  DD AE 08           XOR (IX+8)
+     367 028F  FD AE F5           XOR (IY-11)
+     368 0292  EE 17              XOR 23
+     369 0294  AC                 XOR H
+       
+  
+     372                          END

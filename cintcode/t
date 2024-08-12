@@ -1,0 +1,7 @@
+.k opt
+#c bc bcpl
+echo "c b z <opt>"
+c b z <opt>
+#z
+
+
