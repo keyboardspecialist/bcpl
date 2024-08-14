@@ -102,7 +102,7 @@ Removed S2 compiler option.
 Cured bug concerning the closing of gostream when equal to stdout.
 */
 
-SECTION "BCPLCGCIN"
+SECTION "BCPLCGWASM"
 
 // If ON64 is FALSE, we are running an a 32-bit system
 // If ON64 is TRUE,  we are running an a 64-bit system
@@ -351,10 +351,99 @@ MANIFEST {
 	w_version = #x01000000
 }
 
-// WebAssembly opcodes
+// WebAssembly instruction opcodes
+//https://webassembly.github.io/spec/core/binary/instructions.html#
+//sticking to 32bit for now
 MANIFEST {
+  //block instructions
+  i_block = #x02
+  i_loop = #x03
+  i_br = #x0c
+  i_br_if = #x0d
+  i_end = #x0b
+  i_call = #x10
+  //local/global var instructions
+  i_getl = #x20
+  i_setl = #x21
+  i_teel = #x22 //??
+  i_getg = #x23 
+  i_setg = #x24
+  //mem instructions
+  i_i32l = #x28
+  i_f32l = #x2a
+  i_i32l8s = #x2c //store 8bit signed
+  i_i32l8u = #x2d //unsigned
+  i_i32s = #x36
+  i_f32s = #x38
+  i_i32s8 = #x3a
 
+  //numeric literal
+  i_i32 = #x41
+  i_f32 = #x43
+
+  //numeric
+  i_i32eqz = #x45
+  i_i32eq = #x46
+  i_i32ne = #x47
+  i_i32lts = #x48
+  i_i32ltu = #x49
+  i_i32gts = #x4a
+  i_i32gtu = #x4b
+  i_i32les = #x4c
+  i_i32leu = #x4d
+  i_i32ges = #x4e
+  i_i32geu = #x4f
+
+  i_f32eq = #x5b
+  i_f32ne = #x5c
+  i_f32lt = #x5d
+  i_f32gt = #x5e
+  i_f32le = #x5f
+  i_f32ge = #x60
+
+  i_i32add = #x6a
+  i_i32sub = #x6b
+  i_i32mul = #x6c
+  i_i32divs = #x6d
+  i_i32divu = #x6e
+  i_i32rems = #x6f
+  i_i32remu = #x70
+  i_i32and = #x71
+  i_i32or = #x72
+  i_i32xor = #x73
+  i_i32shl = #x74
+  i_i32shrs = #x75
+  i_i32shru = #x76
+  i_i32rotl = #x77 //maybe no use?
+  i_i32rotr = #x78
+
+  i_f32abs = #x8b
+  i_f32neg = #x8c
+  i_f32ceil = #x8d
+  i_f32floor = #x8e
+  i_f32trunc = #x8f
+  i_f32nearest = #x90 //floor or ceil
+  i_f32sqrt = #x91
+  i_f32add = #x92
+  i_f32sub = #x93
+  i_f32mul = #x94
+  i_f32div = #x95
+  i_f32min = #x96
+  i_f32max = #x97
+  i_f32cpysign = #x98
+
+  //casting
+  i_i32truncf32s = #xa8
+  i_i32truncf32u = #xa9
+  i_f32convi32s = #xb2
+  i_f32convi32u = #xb3
+  i_i32reintrpf32 = #xbc
+  i_f32reintrpi32 = #xbe
+
+  i_i32ext8s = #xc0
+  i_i32ext16s = #xc1
 }
+
 // CINTCODE op codes.
 MANIFEST {
 f_k0   =   0
@@ -467,6 +556,22 @@ f_selld= 254  // Added 20/07/10
 f_selst= 255  // Added 20/07/10
 }
 
+//For WebAssembly:
+//1) Init Section vectors
+//2) Translate OCODE ops to WASM (figure out blocks)
+//3) Global vs local
+//4) Module exports and how this translates to global vector
+
+/*
+  The global vector ties modules together in allowing accessing symbols stored there.
+  Module exports should get us there. 
+
+  Global and local vars
+  ---
+  OCODE has a global vector (G) and a local stackframe (P).
+
+  
+*/
 LET codegenerate(workspace, workspacesize) BE
 { //writef("%n-bit BCPL generating %n-bit %s ender Cintcode*n",
   //         (ON64->64,32), (t64->64,32), (bigender->"big","little"))
