@@ -366,7 +366,7 @@ MANIFEST {
   i_getl = #x20
   i_setl = #x21
   i_teel = #x22 //??
-  i_getg = #x23 
+  i_getg = #x23
   i_setg = #x24
   //mem instructions
   i_i32l = #x28
@@ -564,14 +564,43 @@ f_selst= 255  // Added 20/07/10
 
 /*
   The global vector ties modules together in allowing accessing symbols stored there.
-  Module exports should get us there. 
+  Module exports should get us there.
 
   Global and local vars
   ---
   OCODE has a global vector (G) and a local stackframe (P).
 
-  
+
 */
+
+LET wasm.init() BE
+{
+	//setup sections
+
+	//write magic
+
+}
+
+//write out leb128 vals directly into the code output so we dont have to worry about length
+AND unsignedLEB128(n) BE
+{ LET b = n&#x7f
+  n >>:= 7
+  UNLESS n = 0 DO b |:= #x80
+  stv%stvp := b
+  stvp +:= 1
+} REPEATUNTIL n=0
+
+AND signedLEB128(n) BE
+{ LET v = n&#x7f
+  AND s = n&#x40
+  n >>:= 7
+  IF (s = 0 & n ~= 0) | (n = -1 & s ~= 0) DO v |:= #x80
+  stv%stvp := v
+  stvp +:= 1
+  v &:= #x80
+  IF v = 0 RETURN
+} REPEAT
+
 LET codegenerate(workspace, workspacesize) BE
 { //writef("%n-bit BCPL generating %n-bit %s ender Cintcode*n",
   //         (ON64->64,32), (t64->64,32), (bigender->"big","little"))
