@@ -615,10 +615,7 @@ AND wasm.output() BE
 }
 
 LET codegenerate(workspace, workspacesize) BE
-{ //writef("%n-bit BCPL generating %n-bit %s ender Cintcode*n",
-  //         (ON64->64,32), (t64->64,32), (bigender->"big","little"))
-
-  IF workspacesize<2000 DO { cgerror("Too little workspace")
+{ IF workspacesize<2000 DO { cgerror("Too little workspace")
                              errcount := errcount+1
                              longjump(fin_p, fin_l)
                            }
@@ -628,8 +625,8 @@ LET codegenerate(workspace, workspacesize) BE
   op := rdn()
 
   cgsects(workspace, workspacesize)
-  writef("Code size = %i5 bytes of %n-bit %s ender Cintcode*n",
-         progsize, (t64->64,32), (bigender->"big","little"))
+  writef("Code size = %i5 bytes of %n-bit WebAssembly*n",
+         progsize, (t64->64,32))
 }
 
 
@@ -663,7 +660,8 @@ AND cgsects(workvec, vecsize) BE UNTIL op=0 DO
   initstack(3)
   initdatalists()
 
-  codew(0, 0)  // For size of module.
+	//WebAssembly does not need this
+ // codew(0, 0)  // For size of module.
   IF op=s_section DO
   { MANIFEST { upb=11 } // Max length of entry name
     LET n = rdn()
@@ -682,7 +680,7 @@ AND cgsects(workvec, vecsize) BE UNTIL op=0 DO
   }
 
   wasm.init()
-
+  op:=0
 
   //scan()
   //op := rdn()
