@@ -1,0 +1,4 @@
+.k file/a,arg
+echo "bcplw com/<file>.b to wasm/<file> t32 <arg>"
+bcplw com/<file>.b to wasm/<file> t32 <arg>
+

@@ -578,11 +578,14 @@ LET wasm.init() BE
 	//setup sections
 
 	//write magic
+	FOR i = 3 TO 0 BY -1 DO { stv%stvp := (w_magic>>8*i)&#xff; stvp +:= 1 }
+	FOR i = 3 TO 0 BY -1 DO { stv%stvp := (w_version>>8*i)&#xff; stvp +:= 1 }
 
+	wasm.output()
 }
 
 //write out leb128 vals directly into the code output so we dont have to worry about length
-AND unsignedLEB128(n) BE
+AND wasm.unsignedLEB128(n) BE
 { LET b = n&#x7f
   n >>:= 7
   UNLESS n = 0 DO b |:= #x80
@@ -590,7 +593,7 @@ AND unsignedLEB128(n) BE
   stvp +:= 1
 } REPEATUNTIL n=0
 
-AND signedLEB128(n) BE
+AND wasm.signedLEB128(n) BE
 { LET v = n&#x7f
   AND s = n&#x40
   n >>:= 7
@@ -600,6 +603,16 @@ AND signedLEB128(n) BE
   v &:= #x80
   IF v = 0 RETURN
 } REPEAT
+
+AND wasm.output() BE
+{ LET outstream = output()
+
+//   UNTIL reflist=0 DO { cgerror("Label L%n unset", h3!reflist)
+//                        reflist := !reflist
+  selectoutput(gostream)
+  FOR i = 0 TO stvp-1 DO binwrch(stv%i)
+  selectoutput(outstream)
+}
 
 LET codegenerate(workspace, workspacesize) BE
 { //writef("%n-bit BCPL generating %n-bit %s ender Cintcode*n",
@@ -668,10 +681,13 @@ AND cgsects(workvec, vecsize) BE UNTIL op=0 DO
     op := rdn()
   }
 
-  scan()
-  op := rdn()
-  putw(0, stvp/wordbytelen)  // Plant the word size of the module.
-  outputsection()
+  wasm.init()
+
+
+  //scan()
+  //op := rdn()
+  //putw(0, stvp/wordbytelen)  // Plant the word size of the module.
+  //outputsection()
   progsize := progsize + stvp
 //  IF t64 DO
 //  { sawritef("progsize=%n*n", progsize)
