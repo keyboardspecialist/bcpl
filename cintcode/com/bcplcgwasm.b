@@ -563,8 +563,10 @@ f_selst= 255  // Added 20/07/10
 //4) Module exports and how this translates to global vector
 
 /*
-  The global vector ties modules together in allowing accessing symbols stored there.
-  Module exports should get us there.
+  Dealing with multiple sections might be tricky as WebAssembly executes a single module as an atomic unit.
+  This may mean more structural changes to compilation. 
+
+  For now we will just support single section compilation.
 
   Global and local vars
   ---
@@ -573,42 +575,112 @@ f_selst= 255  // Added 20/07/10
 
 */
 
+MANIFEST
+{ sectsz = 0
+  sid = 1
+  sdata = 2
+  cnt = 3
+  sectupb = 4
+}
+
+STATIC
+{ //section vectors
+  s.stype
+  s.simport
+  s.sfunc
+ // s.stable //future
+  s.sexport
+  s.scode 
+}
+
 LET wasm.init() BE
 {
 	//setup sections
+  LET sinit(sz, id) = VALOF
+  { LET n = getvec(sectupb)
+    n!sectsz := sz
+    n!cnt := 0
+    n!sid := id
+    n!sdata := getvec(sz)
+    RESULTIS n
+  }
+
+  //these will end up copied in stv. maybe can come up with a scheme to write directly
+  //dont want to juggle a bunch of boundaries though
+  s.stype := sinit(100 * bytesperword, s_type)
+  s.simport := sinit(100 * bytesperword, s_import)
+  s.sfunc := sinit(100 * bytesperword, s_function)
+  s.sexport := sinit(100 * bytesperword, s_export)
+  s.scode := sinit(1000 * bytesperword, s_code)
 
 	//write magic
 	FOR i = 3 TO 0 BY -1 DO { stv%stvp := (w_magic>>8*i)&#xff; stvp +:= 1 }
 	FOR i = 3 TO 0 BY -1 DO { stv%stvp := (w_version>>8*i)&#xff; stvp +:= 1 }
-
-	wasm.output()
 }
 
-//write out leb128 vals directly into the code output so we dont have to worry about length
-AND wasm.unsignedLEB128(n) BE
+AND wasm.deinit() BE
+{
+  freevec(s.stype!sdata)
+  freevec(s.simport!sdata)
+  freevec(s.sfunc!sdata)
+  freevec(s.sexport!sdata)
+  freevec(s.scode!sdata)
+
+  freevec(s.stype)
+  freevec(s.simport)
+  freevec(s.sfunc)
+  freevec(s.sexport)
+  freevec(s.scode)
+}
+
+AND wasm.insvec(s, v) BE
+{ LET n = s!cnt
+  IF n = s!sectsz DO
+  { LET nv = ?
+    s!sectsz +:= FIX (s!sectsz #* 0.75) + 1
+    nv := getvec(s!sectsz)
+    FOR i = 0 TO n-1 DO nv%i := s!sdata%i
+    freevec(s!sdata)
+    s!sdata := nv
+  }
+  s!sdata%n := v
+  s!cnt +:= 1
+}
+
+AND wasm.insvecn(s, v, n) BE FOR i = 0 TO n-1 DO wasm.insvec(s, v%i)
+
+AND wasm.codeb(b) BE wasm.insvec(s.scode, b)
+
+AND wasm.wruLEB128(n, v, i) BE
 { LET b = n&#x7f
   n >>:= 7
   UNLESS n = 0 DO b |:= #x80
-  stv%stvp := b
-  stvp +:= 1
+  v%(!i) := b
+  !i +:= 1
 } REPEATUNTIL n=0
 
-AND wasm.signedLEB128(n) BE
-{ LET v = n&#x7f
+AND wasm.wrsLEB128(n, v, i) BE
+{ LET b = n&#x7f
   AND s = n&#x40
   n >>:= 7
-  IF (s = 0 & n ~= 0) | (n = -1 & s ~= 0) DO v |:= #x80
-  stv%stvp := v
-  stvp +:= 1
-  v &:= #x80
-  IF v = 0 RETURN
+  IF (s = 0 & n ~= 0) | (n = -1 & s ~= 0) DO b |:= #x80
+  v%(!i) := b
+  !i +:= 1
+  b &:= #x80
+  IF b = 0 RETURN
 } REPEAT
+
+AND wasm.wruLEB128stv(n) BE wasm.wruLEB128(n, stv, @stvp)
+
+// unsignedLEB128 length + data stream
+AND wasm.wrvec(v, l) BE
+{ wasm.wruLEB128stv(l)
+  FOR i = 0 TO l-1 DO { stv%stvp := v%i; stvp +:= 1 }
+}
 
 AND wasm.output() BE
 { LET outstream = output()
 
-//   UNTIL reflist=0 DO { cgerror("Label L%n unset", h3!reflist)
-//                        reflist := !reflist
   selectoutput(gostream)
   FOR i = 0 TO stvp-1 DO binwrch(stv%i)
   selectoutput(outstream)
@@ -1717,7 +1789,7 @@ AND cgglobal(n) BE
   //}
 }
 
-
+// generate preamble for function
 AND cgentry(l, n) BE
 { MANIFEST { upb=11 } // Max length of entry name
   LET v = VEC upb/bytesperword
