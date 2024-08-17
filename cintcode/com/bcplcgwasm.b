@@ -614,7 +614,7 @@ MANIFEST
 
 	//fninfo
 	fnidx = 0 //wasm index
-	fnln = 1 //ocode label index
+	fnlab = 1 //ocode label
 	fnname = 2
 	fnparms = 3 // %0 = cnt, %1-n = types
 	fnret = 4 //%0 = cnt, %1-n = types. wasm supports multiple return vals, but BCPL only supports 1
@@ -634,6 +634,7 @@ STATIC
 	//state data while translating
 	s.fninfo //we need to track func info before building our type and export sections
 	s.fncur //current function index that we are decoding. used to track when we need to complete the func type
+  s.fncnt //number of funcs we've decoded
 }
 
 LET wasm.init() BE
@@ -656,6 +657,10 @@ LET wasm.init() BE
   s.sexport := sinit(100 * bytesperword, s_export)
   s.scode := sinit(1000 * bytesperword, s_code)
 
+  s.fninfo := getvec(10 * bytesperword)
+  s.fncur := 0
+  s.fncnt := 0
+
 	//write magic
 	FOR i = 3 TO 0 BY -1 DO { stv%stvp := (w_magic>>8*i)&#xff; stvp +:= 1 }
 	FOR i = 3 TO 0 BY -1 DO { stv%stvp := (w_version>>8*i)&#xff; stvp +:= 1 }
@@ -674,6 +679,13 @@ AND wasm.deinit() BE
   freevec(s.sfunc)
   freevec(s.sexport)
   freevec(s.scode)
+
+  FOR i = 0 TO s.fncnt-1 DO 
+  { LET fni = s.fninfo!i
+    freevec(fni!fnname)
+    IF fni!fnparms DO freevec(fni!fnparms)
+    freevec(fni)
+  }
 }
 
 AND wasm.insvec(s, v) BE
@@ -722,10 +734,10 @@ AND wasm.wrvec(v, l) BE
   FOR i = 0 TO l-1 DO { stv%stvp := v%i; stvp +:= 1 }
 }
 
-AND wasm.newfninfo() BE
+AND wasm.newfninfo() = VALOF
 { LET nfn = getvec(fnupb)
 	nfn!fnidx := -1
-	nfn!fnln := -1
+	nfn!fnlab := -1
 	nfn!fnname := 0
 	nfn!fnparms := 0
 	nfn!fnret := 0
@@ -754,6 +766,18 @@ LET codegenerate(workspace, workspacesize) BE
   cgsects(workspace, workspacesize)
   writef("Code size = %i5 bytes of %n-bit WebAssembly*n",
          progsize, (t64->64,32))
+}
+
+AND wasm.dumpfninfo() BE
+{
+  FOR i = 0 TO s.fncnt-1 DO
+  {
+    writef("Function %i3: %s*n", i, s.fninfo!i!fnname)
+    writef("  Label: %i3*n", s.fninfo!i!fnlab)
+    writef("  Wasm Index: %i3*n", s.fninfo!i!fnidx)
+    writef("  Params: %i3*n", s.fninfo!i!fnparms)
+    writef("  Export: %s*n", (s.fninfo!i!fnexport -> "true", "false") )
+  }
 }
 
 
@@ -819,6 +843,7 @@ AND cgsects(workvec, vecsize) BE UNTIL op=0 DO
 //    abort(4001)
 //  }
 
+  wasm.dumpfninfo()
   wasm.deinit()
 }
 
@@ -923,16 +948,41 @@ AND wasm.scan() BE
                 }
   SWITCHON op INTO
   { DEFAULT:      //cgerror("OP=%t5 PND=%t5 ", op, opname(op))
-                  writef("Bad OCODE op %n %s *n", op, opname(op))
+                  writef("No Impl OCODE op %n %s *n", op, opname(op))
                   ENDCASE
 
-    CASE s_entry:
+    CASE s_entry: writef("FOUND FUNC*n")
                { LET l = rdl()
                  LET n = rdn()
-                 wasm.cgentry(l, n)
-                 procdepth := procdepth + 1 //will need to solve inner fn problem
+                 procdepth := procdepth + 1 
+                 s.fncur := s.fncnt //this will probably always track cnt - 1
+                 s.fncnt +:= 1
+                 wasm.cgentry(l, n)             
                  ENDCASE
                }
+
+    CASE s_rtrn: cgpendingop()
+               //  genf(f_rtn)
+                 incode := FALSE
+                 ENDCASE
+
+    CASE s_fnrn: cgpendingop()
+               //  loada(arg1) //wasm has no registers. the return val is just the top of the stack.
+               //  genf(f_rtn)
+                 stack(ssp-1)
+                 incode := FALSE
+                 ENDCASE
+
+    CASE s_endproc:
+                 cgstatics()
+                 procdepth := procdepth - 1
+                 ENDCASE
+
+    CASE s_lp:   rdn(); ENDCASE//loadt(k_loc,   rdn());   ENDCASE
+    CASE s_lg:   rdn(); ENDCASE//loadt(k_glob,  rdgn());  ENDCASE
+    CASE s_ll:   rdn(); ENDCASE//loadt(k_lab,   rdl());   ENDCASE
+    CASE s_lf:   rdn(); ENDCASE//loadt(k_fnlab, rdl());   ENDCASE
+    CASE s_ln:   rdn(); ENDCASE//loadt(k_numb,  rdn());   ENDCASE
 
     //end of stream
     CASE 0:   RETURN
@@ -1870,22 +1920,30 @@ AND cgglobal(n) BE
 }
 
 
-//Here is where we setup our sections for functions
-//We add an entry into the func section
-//Add its signature to the type section
-//If it isn't an inner function, add it to the exports section
-//we may need to map the label index to the wasm index, L10 -> 0, L11 -> 1, etc
+
+//init a new fn info entry
+//will have to build the rest of the info as we go elsewhere
+//s_stack -> parms, s_fnrn -> return value
 AND wasm.cgentry(l, n) BE
-{ //read fn name
-	LET v = VEC 255
-  v%0 := n
-  FOR i = 1 TO n DO v%i := rdn()
+{ LET fni = wasm.newfninfo()
+
+  //read name
+  fni!fnname := getvec(255)
+  fni!fnname%0 := n
+  FOR i = 1 TO n DO fni!fnname%i := rdn()
+
+  fni!fnlab := l
+  fni!fnidx := s.fncur
+  fni!fnexport := procdepth = 1 -> TRUE, FALSE
+
+  s.fninfo!s.fncur := fni
 
   //we need to figure out our signature
   //BCPL being typeless, we can only infer at this point based on the stack offset
   //return will have to be determined by the return instruction
 	/*			fn is a routine with no return value
 					fn2 is a function with return.
+          fn3 is a routine with 1 param
 					Seems like a bug that duplicate return instructions are generated
 
 					ENTRY L10 2  'f' 'n'
@@ -1912,10 +1970,6 @@ AND wasm.cgentry(l, n) BE
 					STORE
 					GLOBAL 0
 */
-
-// SAVE N-3 = param count. We can't know if they are float or fix.
-	{
-		s.stype!sdata
 
 }
 AND cgentry(l, n) BE
