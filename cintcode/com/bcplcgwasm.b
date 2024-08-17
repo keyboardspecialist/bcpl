@@ -581,14 +581,14 @@ f_selst= 255  // Added 20/07/10
 
 /*
   Dealing with multiple sections might be tricky as WebAssembly executes a single module as an atomic unit.
-  This may mean more structural changes to compilation. 
+  This may mean more structural changes to compilation.
 
   For now we will just support single section compilation.
 
   Global and local vars
   ---
   OCODE has a global vector (G) and a local stackframe (P).
-  
+
 
   All data goes into the workvec.
 
@@ -611,6 +611,15 @@ MANIFEST
   sdata = 2
   cnt = 3
   sectupb = 4
+
+	//fninfo
+	fnidx = 0 //wasm index
+	fnln = 1 //ocode label index
+	fnname = 2
+	fnparms = 3 // %0 = cnt, %1-n = types
+	fnret = 4 //%0 = cnt, %1-n = types. wasm supports multiple return vals, but BCPL only supports 1
+	fnexport = 5 //should be exported, only top level funcs should be. This might be suitable for hiding inner funcs, we will see
+	fnupb = 6
 }
 
 STATIC
@@ -620,7 +629,11 @@ STATIC
   s.sfunc
  // s.stable //future
   s.sexport
-  s.scode 
+  s.scode
+
+	//state data while translating
+	s.fninfo //we need to track func info before building our type and export sections
+	s.fncur //current function index that we are decoding. used to track when we need to complete the func type
 }
 
 LET wasm.init() BE
@@ -707,6 +720,17 @@ AND wasm.wrsLEB128stv(n) BE wasm.wrsLEB128(n, stv, @stvp)
 AND wasm.wrvec(v, l) BE
 { wasm.wruLEB128stv(l)
   FOR i = 0 TO l-1 DO { stv%stvp := v%i; stvp +:= 1 }
+}
+
+AND wasm.newfninfo() BE
+{ LET nfn = getvec(fnupb)
+	nfn!fnidx := -1
+	nfn!fnln := -1
+	nfn!fnname := 0
+	nfn!fnparms := 0
+	nfn!fnret := 0
+	nfn!fnexport := FALSE
+	RESULTIS nfn
 }
 
 AND wasm.output() BE
@@ -901,8 +925,8 @@ AND wasm.scan() BE
   { DEFAULT:      //cgerror("OP=%t5 PND=%t5 ", op, opname(op))
                   writef("Bad OCODE op %n %s *n", op, opname(op))
                   ENDCASE
-    
-    CASE s_entry: 
+
+    CASE s_entry:
                { LET l = rdl()
                  LET n = rdn()
                  wasm.cgentry(l, n)
@@ -1852,13 +1876,46 @@ AND cgglobal(n) BE
 //If it isn't an inner function, add it to the exports section
 //we may need to map the label index to the wasm index, L10 -> 0, L11 -> 1, etc
 AND wasm.cgentry(l, n) BE
-{ LET v = VEC 255
+{ //read fn name
+	LET v = VEC 255
   v%0 := n
   FOR i = 1 TO n DO v%i := rdn()
 
-  //we need to figrue out our signature
+  //we need to figure out our signature
   //BCPL being typeless, we can only infer at this point based on the stack offset
-  //
+  //return will have to be determined by the return instruction
+	/*			fn is a routine with no return value
+					fn2 is a function with return.
+					Seems like a bug that duplicate return instructions are generated
+
+					ENTRY L10 2  'f' 'n'
+					SAVE 3
+					RTRN
+					RTRN
+					ENDPROC
+					ENTRY L11 3  'f' 'n' '2'
+					SAVE 3
+					LN 0
+					FNRN
+					LN 0
+					FNRN
+					ENDPROC
+					ENTRY L12 3  'f' 'n' '3'
+					SAVE 4
+					RTRN
+					RTRN
+					ENDPROC
+					STACK 3
+					STORE
+					GLOBAL 0
+					STACK 3
+					STORE
+					GLOBAL 0
+*/
+
+// SAVE N-3 = param count. We can't know if they are float or fix.
+	{
+		s.stype!sdata
 
 }
 AND cgentry(l, n) BE
