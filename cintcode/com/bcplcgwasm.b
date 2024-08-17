@@ -240,6 +240,20 @@ wrcode
 wrfcode
 sopname
 
+// Global wasm procedures
+wasm.init
+wasm.deinit
+wasm.insvec
+wasm.insvecn
+wasm.codeb
+wasm.wruLEB128
+wasm.wrsLEB128
+wasm.wruLEB128stv
+wasm.wrsLEB128stv
+wasm.wrvec
+wasm.output
+wasm.scan
+wasm.cgentry
 // Global variables.
 arg1
 arg2
@@ -292,6 +306,9 @@ blkupb            // =3 if bytesperword=4 and t64=TRUE
                   // =2 otherwise.
 }
 
+
+//for wasm we dont need all of these. Most are in relation to the Cintcode interpreter
+//optimizing instructions for accessing common locations in the stack
 MANIFEST
 {
 // Value descriptors.
@@ -571,7 +588,20 @@ f_selst= 255  // Added 20/07/10
   Global and local vars
   ---
   OCODE has a global vector (G) and a local stackframe (P).
+  
 
+  All data goes into the workvec.
+
+  tempv is temp data
+  tempt is temp data
+  stv is the section vector
+  stvp is the section vector pointer
+  arg1 is the first argument on the stack
+  arg2 is the second argument on the stack
+
+
+  Functions will be replaced by their equivalent prepended with wasm.
+  eg, cgadd will be wasm.cgadd
 
 */
 
@@ -671,6 +701,7 @@ AND wasm.wrsLEB128(n, v, i) BE
 } REPEAT
 
 AND wasm.wruLEB128stv(n) BE wasm.wruLEB128(n, stv, @stvp)
+AND wasm.wrsLEB128stv(n) BE wasm.wrsLEB128(n, stv, @stvp)
 
 // unsignedLEB128 length + data stream
 AND wasm.wrvec(v, l) BE
@@ -752,8 +783,8 @@ AND cgsects(workvec, vecsize) BE UNTIL op=0 DO
   }
 
   wasm.init()
-  op:=0
 
+  wasm.scan()
   //scan()
   //op := rdn()
   //putw(0, stvp/wordbytelen)  // Plant the word size of the module.
@@ -763,6 +794,8 @@ AND cgsects(workvec, vecsize) BE UNTIL op=0 DO
 //  { sawritef("progsize=%n*n", progsize)
 //    abort(4001)
 //  }
+
+  wasm.deinit()
 }
 
 AND rdname(n, v) BE
@@ -859,6 +892,29 @@ AND store(s1, s2) BE FOR p = tempv TO arg1 BY 3 DO
                        IF s>s2 RETURN
                        IF s>=s1 DO storet(p)
                      }
+
+AND wasm.scan() BE
+{ IF debug>1 DO { writef("OP=%t5 PND=%t5 ", opname(op), opname(pendingop))
+                  dboutput()
+                }
+  SWITCHON op INTO
+  { DEFAULT:      //cgerror("OP=%t5 PND=%t5 ", op, opname(op))
+                  writef("Bad OCODE op %n %s *n", op, opname(op))
+                  ENDCASE
+    
+    CASE s_entry: 
+               { LET l = rdl()
+                 LET n = rdn()
+                 wasm.cgentry(l, n)
+                 procdepth := procdepth + 1 //will need to solve inner fn problem
+                 ENDCASE
+               }
+
+    //end of stream
+    CASE 0:   RETURN
+  }
+  op := rdn()
+} REPEAT
 
 AND scan() BE
 { IF debug>1 DO { writef("OP=%t5 PND=%t5 ", opname(op), opname(pendingop))
@@ -1015,7 +1071,7 @@ AND scan() BE
                { LET l = rdl()
                  LET n = rdn()
                  cgentry(l, n)
-                 procdepth := procdepth + 1
+                 procdepth := procdepth + 1 //will need to solve inner fn problem
                  ENDCASE
                }
 
@@ -1789,7 +1845,22 @@ AND cgglobal(n) BE
   //}
 }
 
-// generate preamble for function
+
+//Here is where we setup our sections for functions
+//We add an entry into the func section
+//Add its signature to the type section
+//If it isn't an inner function, add it to the exports section
+//we may need to map the label index to the wasm index, L10 -> 0, L11 -> 1, etc
+AND wasm.cgentry(l, n) BE
+{ LET v = VEC 255
+  v%0 := n
+  FOR i = 1 TO n DO v%i := rdn()
+
+  //we need to figrue out our signature
+  //BCPL being typeless, we can only infer at this point based on the stack offset
+  //
+
+}
 AND cgentry(l, n) BE
 { MANIFEST { upb=11 } // Max length of entry name
   LET v = VEC upb/bytesperword
