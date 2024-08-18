@@ -750,14 +750,17 @@ AND wasm.newfninfo() = VALOF
 
 AND wasm.wrtypes() BE
 {	//write function types
-  LET sz, p = ?, ?
-  AND offs = ?
+	LET sz, p = ?, ?
+	AND offs = ?
+	
 	stv%stvp := s_type; stvp +:= 2
-  offs := stvp MOD bytesperword - 1
-  p := stv + stvp/bytesperword //track offset to write final size
-  sz := stvp //start tracking section size
-  stv%stvp := s.fncnt; stvp +:= 1
-  
+	
+	offs := stvp MOD bytesperword - 1
+	p := stv + stvp/bytesperword //track offset to write final size
+	sz := stvp //start tracking section size
+	
+	stv%stvp := s.fncnt; stvp +:= 1
+	
 	FOR i = 0 TO s.fncnt-1 DO
 	{ LET fni = s.fninfo!i
 		stv%stvp := t_func; stvp +:= 1
@@ -767,36 +770,39 @@ AND wasm.wrtypes() BE
 		TEST fni!fnret THEN { wasm.wruLEB128stv(1); stv%stvp := t_i32; stvp +:= 1 }
 		ELSE wasm.wruLEB128stv(0)
 	}
- sz := stvp - sz
- p%offs := sz
+	sz := stvp - sz
+	p%offs := sz
 }
 
 AND wasm.wrfuncs() BE
-{ LET sz, p = stvp, ?
-  AND offs = ?
-  stv%stvp := s_function; stvp +:= 1
-  offs := stvp MOD bytesperword
-  p := stv + stvp/bytesperword//stv%stvp := 0; stvp +:= 1 //fake size
-  stvp := stvp + 1
-  stv%stvp := s.fncnt; stvp +:= 1
+	{ LET sz, p = ?, ?
+	AND offs = ?
+	stv%stvp := s_function; stvp +:= 2
 
-  FOR i = 0 TO s.fncnt-1 DO
-  { LET fni = s.fninfo!i
-    stv%stvp := fni!fnidx; stvp +:= 1
-  }
-  sz := stvp - sz - 2
-  p%0:= sz; stvp +:= 1
+	//we have to calc the word boundary and then byte offset into it
+	offs := stvp MOD bytesperword - 1
+	p := stv + stvp/bytesperword
+	sz := stvp
+
+	stv%stvp := s.fncnt; stvp +:= 1
+
+	FOR i = 0 TO s.fncnt-1 DO
+	{ LET fni = s.fninfo!i
+		stv%stvp := fni!fnidx; stvp +:= 1
+	}
+	sz := stvp - sz
+	p%offs := sz
 }
 
 AND wasm.wrcode() BE
 {
-  stv%stvp := s_code; stvp +:= 1
-  stv%stvp := 4; stvp +:= 1 //fake size
-  stv%stvp := s.fncnt; stvp +:= 1 
-  stv%stvp := 0; stvp +:= 1 //fn size
-  stv%stvp := 0; stvp +:= 1 //no locals
-  stv%stvp := #x0b; stvp +:= 1 //end
-  stv%stvp := 2; stvp +:= 1 //fn size
+	stv%stvp := s_code; stvp +:= 1
+	stv%stvp := 4; stvp +:= 1 //fake size
+	stv%stvp := s.fncnt; stvp +:= 1 
+	stv%stvp := 2; stvp +:= 1 //fn size
+	stv%stvp := 0; stvp +:= 1 //no locals
+	stv%stvp := #x0b; stvp +:= 1 //end
+	stv%stvp := 2//; stvp +:= 1 //fn size
 }
 
 AND wasm.output() BE
@@ -804,8 +810,8 @@ AND wasm.output() BE
 writef("*nOutputting WebAssembly*n")
   selectoutput(gostream)
   wasm.wrtypes()
-  //wasm.wrfuncs()
-  //wasm.wrcode()
+  wasm.wrfuncs()
+  wasm.wrcode()
   FOR i = 0 TO stvp-1 DO binwrch(stv%i)
   selectoutput(outstream)
 }
