@@ -680,10 +680,10 @@ AND wasm.deinit() BE
   freevec(s.sexport)
   freevec(s.scode)
 
-  FOR i = 0 TO s.fncnt-1 DO 
+  FOR i = 0 TO s.fncnt-1 DO
   { LET fni = s.fninfo!i
     freevec(fni!fnname)
-    IF fni!fnparms DO freevec(fni!fnparms)
+    //IF fni!fnparms DO freevec(fni!fnparms)
     freevec(fni)
   }
 }
@@ -745,6 +745,25 @@ AND wasm.newfninfo() = VALOF
 	RESULTIS nfn
 }
 
+AND wasm.wrtypes() BE
+{	//write function types
+	stv%stvp := s_type
+	FOR i = 0 TO s.fncnt-1 DO
+	{ LET fni = s.fninfo!i
+		stv%stvp := t_func; stvp +:= 1
+		wasm.wruLEB128stv(fni!fnparms)
+		FOR j = 0 TO fni!fnparms-1 DO stv%stvp := t_i32
+
+		IF fni!fnret DO { wasm.wruLEB128stv(1); stv%stvp := t_i32; stvp +:= 1 }
+		ELSE wasm.wruLEB128stv(0)
+	}
+}
+
+AND wasm.wrfuncs() BE
+{
+
+}
+
 AND wasm.output() BE
 { LET outstream = output()
 
@@ -776,6 +795,7 @@ AND wasm.dumpfninfo() BE
     writef("  Label: %i3*n", s.fninfo!i!fnlab)
     writef("  Wasm Index: %i3*n", s.fninfo!i!fnidx)
     writef("  Params: %i3*n", s.fninfo!i!fnparms)
+		writef(" Return: %i3*n", s.fninfo!i!fnret)
     writef("  Export: %s*n", (s.fninfo!i!fnexport -> "true", "false") )
   }
 }
@@ -942,52 +962,65 @@ AND store(s1, s2) BE FOR p = tempv TO arg1 BY 3 DO
                        IF s>=s1 DO storet(p)
                      }
 
+AND noimpl(op) BE writef("No implementation: %i5 %s*n", op, opname(op))
+
 AND wasm.scan() BE
 { IF debug>1 DO { writef("OP=%t5 PND=%t5 ", opname(op), opname(pendingop))
                   dboutput()
                 }
   SWITCHON op INTO
-  { DEFAULT:      //cgerror("OP=%t5 PND=%t5 ", op, opname(op))
-                  writef("No Impl OCODE op %n %s *n", op, opname(op))
-                  ENDCASE
+	{ DEFAULT:      //cgerror("OP=%t5 PND=%t5 ", op, opname(op))
+									noimpl(op)
+									ENDCASE
 
-    CASE s_entry: writef("FOUND FUNC*n")
-               { LET l = rdl()
-                 LET n = rdn()
-                 procdepth := procdepth + 1 
-                 s.fncur := s.fncnt //this will probably always track cnt - 1
-                 s.fncnt +:= 1
-                 wasm.cgentry(l, n)             
-                 ENDCASE
-               }
+		CASE s_entry:
+								{ LET l = rdl()
+									LET n = rdn()
+									procdepth := procdepth + 1
+									wasm.cgentry(l, n)
+									ENDCASE
+								}
 
-    CASE s_rtrn: cgpendingop()
-               //  genf(f_rtn)
-                 incode := FALSE
-                 ENDCASE
+		CASE s_save:
+								{	LET n = rdn()
+									initstack(n)
+									writef("decoded SAVE %i5*n", n)
+									s.fncur!fnparms := n - 3
+									ENDCASE
+								}
 
-    CASE s_fnrn: cgpendingop()
-               //  loada(arg1) //wasm has no registers. the return val is just the top of the stack.
-               //  genf(f_rtn)
-                 stack(ssp-1)
-                 incode := FALSE
-                 ENDCASE
+//rtrn and fnrn are basically the same in wasm except for setting the return type
+//the return value is just the top of the stack
+    CASE s_rtrn:	cgpendingop()
+									gen(i_end)
+									s.fncur!fnret := 0
+									incode := FALSE
+									ENDCASE
+
+    CASE s_fnrn:	cgpendingop()
+								//  loada(arg1) //wasm has no registers. the return val is just the top of the stack.
+								//  gen(f_rtn)
+									gen(i_end)
+									s.fncur!fnret := TRUE
+									stack(ssp-1)
+									incode := FALSE
+									ENDCASE
 
     CASE s_endproc:
                  cgstatics()
                  procdepth := procdepth - 1
                  ENDCASE
 
-    CASE s_lp:   rdn(); ENDCASE//loadt(k_loc,   rdn());   ENDCASE
-    CASE s_lg:   rdn(); ENDCASE//loadt(k_glob,  rdgn());  ENDCASE
-    CASE s_ll:   rdn(); ENDCASE//loadt(k_lab,   rdl());   ENDCASE
-    CASE s_lf:   rdn(); ENDCASE//loadt(k_fnlab, rdl());   ENDCASE
-    CASE s_ln:   rdn(); ENDCASE//loadt(k_numb,  rdn());   ENDCASE
+		CASE s_lp:   rdn(); noimpl(op); ENDCASE//loadt(k_loc,   rdn());   ENDCASE
+		CASE s_lg:   rdn(); noimpl(op); ENDCASE//loadt(k_glob,  rdgn());  ENDCASE
+		CASE s_ll:   rdn(); noimpl(op); ENDCASE//loadt(k_lab,   rdl());   ENDCASE
+		CASE s_lf:   rdn(); noimpl(op); ENDCASE//loadt(k_fnlab, rdl());   ENDCASE
+		CASE s_ln:   rdn(); noimpl(op); ENDCASE//loadt(k_numb,  rdn());   ENDCASE
 
-    //end of stream
-    CASE 0:   RETURN
-  }
-  op := rdn()
+		//end of stream
+		CASE 0:   RETURN
+	}
+	op := rdn()
 } REPEAT
 
 AND scan() BE
@@ -1933,10 +1966,13 @@ AND wasm.cgentry(l, n) BE
   FOR i = 1 TO n DO fni!fnname%i := rdn()
 
   fni!fnlab := l
-  fni!fnidx := s.fncur
+  fni!fnidx := s.fncnt
   fni!fnexport := procdepth = 1 -> TRUE, FALSE
 
-  s.fninfo!s.fncur := fni
+  s.fninfo!s.fncnt := fni
+	s.fncnt := s.fncnt + 1
+
+	s.fncur := fni
 
   //we need to figure out our signature
   //BCPL being typeless, we can only infer at this point based on the stack offset
