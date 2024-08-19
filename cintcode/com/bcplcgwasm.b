@@ -254,6 +254,7 @@ wasm.wrvec
 wasm.output
 wasm.scan
 wasm.cgentry
+wasm.gen
 wasm.wrtypes
 wasm.wrfuncs
 wasm.wrcode
@@ -603,6 +604,7 @@ f_selst= 255  // Added 20/07/10
   arg2 is the second argument on the stack
 
 
+
   Functions will be replaced by their equivalent prepended with wasm.
   eg, cgadd will be wasm.cgadd
 
@@ -620,9 +622,12 @@ MANIFEST
 	fnlab = 1 //ocode label
 	fnname = 2
 	fnparms = 3 // %0 = cnt, %1-n = types
-	fnret = 4 //%0 = cnt, %1-n = types. wasm supports multiple return vals, but BCPL only supports 1
-	fnexport = 5 //should be exported, only top level funcs should be. This might be suitable for hiding inner funcs, we will see
-	fnupb = 6
+	fnlocals = 4
+	fnret = 5 //%0 = cnt, %1-n = types. wasm supports multiple return vals, but BCPL only supports 1
+	fnexport = 6 //should be exported, only top level funcs should be. This might be suitable for hiding inner funcs, we will see
+	fncode = 7
+	fnclen = 8
+	fnupb = 9
 }
 
 STATIC
@@ -636,33 +641,15 @@ STATIC
 
 	//state data while translating
 	s.fninfo //we need to track func info before building our type and export sections
-	s.fncur //current function index that we are decoding. used to track when we need to complete the func type
+	s.fncur //pointer stack of funcs. tracks where code should go as we decode nested funcs
+	s.fnidx //current func index
   s.fncnt //number of funcs we've decoded
 }
 
 LET wasm.init() BE
-{
-	//setup sections
-  LET sinit(sz, id) = VALOF
-  { LET n = getvec(sectupb)
-    n!sectsz := sz
-    n!cnt := 0
-    n!sid := id
-    n!sdata := getvec(sz)
-    RESULTIS n
-  }
-
-  //these will end up copied in stv. maybe can come up with a scheme to write directly
-  //dont want to juggle a bunch of boundaries though
-  s.stype := sinit(100 * bytesperword, s_type)
-  s.simport := sinit(100 * bytesperword, s_import)
-  s.sfunc := sinit(100 * bytesperword, s_function)
-  s.sexport := sinit(100 * bytesperword, s_export)
-  s.scode := sinit(1000 * bytesperword, s_code)
-
-  s.fninfo := getvec(10 * bytesperword)
-  s.fncur := 0
-  s.fncnt := 0
+{	s.fninfo := getvec(10 * bytesperword)
+	s.fncur := getvec(32) //max 32 nested funcs. for now? Thats a lot of nesting
+	s.fncnt := 0
 
 	//write magic
 	FOR i = 3 TO 0 BY -1 DO { stv%stvp := (w_magic>>8*i)&#xff; stvp +:= 1 }
@@ -670,25 +657,14 @@ LET wasm.init() BE
 }
 
 AND wasm.deinit() BE
-{
-  freevec(s.stype!sdata)
-  freevec(s.simport!sdata)
-  freevec(s.sfunc!sdata)
-  freevec(s.sexport!sdata)
-  freevec(s.scode!sdata)
-
-  freevec(s.stype)
-  freevec(s.simport)
-  freevec(s.sfunc)
-  freevec(s.sexport)
-  freevec(s.scode)
-
-  FOR i = 0 TO s.fncnt-1 DO
-  { LET fni = s.fninfo!i
-    freevec(fni!fnname)
-    //IF fni!fnparms DO freevec(fni!fnparms)
-    freevec(fni)
-  }
+{	FOR i = 0 TO s.fncnt-1 DO
+	{ LET fni = s.fninfo!i
+		freevec(fni!fnname)
+		freevec(fni!fncode)
+		//IF fni!fnparms DO freevec(fni!fnparms)
+		freevec(fni)
+	}
+	freevec(s.fncur)
 }
 
 AND wasm.insvec(s, v) BE
@@ -743,8 +719,11 @@ AND wasm.newfninfo() = VALOF
 	nfn!fnlab := -1
 	nfn!fnname := 0
 	nfn!fnparms := 0
+	nfn!fnlocals := 0
 	nfn!fnret := 0
 	nfn!fnexport := FALSE
+	nfn!fncode := getvec(4000)
+	nfn!fnclen := 0
 	RESULTIS nfn
 }
 
@@ -775,7 +754,7 @@ AND wasm.wrtypes() BE
 }
 
 AND wasm.wrfuncs() BE
-	{ LET sz, p = ?, ?
+{ LET sz, p = ?, ?
 	AND offs = ?
 	stv%stvp := s_function; stvp +:= 2
 
@@ -795,14 +774,28 @@ AND wasm.wrfuncs() BE
 }
 
 AND wasm.wrcode() BE
-{
-	stv%stvp := s_code; stvp +:= 1
-	stv%stvp := 4; stvp +:= 1 //fake size
-	stv%stvp := s.fncnt; stvp +:= 1 
-	stv%stvp := 2; stvp +:= 1 //fn size
-	stv%stvp := 0; stvp +:= 1 //no locals
-	stv%stvp := #x0b; stvp +:= 1 //end
-	stv%stvp := 2//; stvp +:= 1 //fn size
+{	LET sz, p = ?, ?
+	AND offs = ?
+	stv%stvp := s_code; stvp +:= 2
+
+	//we have to calc the word boundary and then byte offset into it
+	offs := stvp MOD bytesperword - 1
+	p := stv + stvp/bytesperword
+	sz := stvp
+
+	stv%stvp := s.fncnt; stvp +:= 1
+
+	FOR i = 0 TO s.fncnt-1 DO
+	{ LET fni = s.fninfo!i
+		stv%stvp := fni!fnclen + 3; stvp +:= 1 //add 3 for the locals below
+		stv%stvp := 1; stvp +:= 1 //decl count. just pretend its 1 big one since we're "typeless"
+		stv%stvp := fni!fnlocals; stvp +:= 1
+		stv%stvp := t_i32; stvp +:= 1 //local type
+		FOR j = 0 TO fni!fnclen-1 DO
+		{ stv%stvp := fni!fncode!j; stvp +:= 1 }
+	}
+	sz := stvp - sz
+	p%offs := sz
 }
 
 AND wasm.output() BE
@@ -841,6 +834,11 @@ AND wasm.dumpfninfo() BE
     writef("  Params: %i3*n", s.fninfo!i!fnparms)
 		writef(" Return: %i3*n", s.fninfo!i!fnret)
     writef("  Export: %s*n", (s.fninfo!i!fnexport -> "true", "false") )
+		writef("  Code Length: %i3*n", s.fninfo!i!fnclen)
+		FOR j = 0 TO s.fninfo!i!fnclen-1 DO
+		{
+			writef("    %i3: %i3*n", j, s.fninfo!i!fncode!j)
+		}
   }
 }
 
@@ -1015,6 +1013,7 @@ AND wasm.scan() BE
 		CASE s_entry:
 								{ LET l = rdl()
 									LET n = rdn()
+									s.fnidx := procdepth //depth - 1 for index
 									procdepth := procdepth + 1
 									wasm.cgentry(l, n)
 									ENDCASE
@@ -1023,26 +1022,62 @@ AND wasm.scan() BE
 		CASE s_save:
 								{	LET n = rdn()
 									initstack(n)
-									writef("decoded SAVE %i5*n", n)
-									s.fncur!fnparms := n - 3
+									writef("decoded SAVE %i5, %i5*n", n, s.fnidx)
+									s.fncur!s.fnidx!fnparms := n - 3
 									ENDCASE
 								}
+		//STORE is generated at the end of local LET decls
+		//It's generated after each one. Semantically LET ..AND... AND is meaningless in
+		//a local context, but in that case only a single STORE is generated at the end.
+		//This is our chance to figure out how many locals exist in this block
+		/*
+		LET a, b, c = 1, 2, ?
+		LET d, e, f = 3, 4, ?
+		LN 1
+		LN 2
+		QUERY
+		STORE
+		LN 3
+		LN 4
+		QUERY
+		STORE
+
+		LET a, b, c = 1, 2, ?
+		AND d, e, f = 3, 4, ?
+		LN 1
+		LN 2
+		QUERY
+		LN 3
+		LN 4
+		QUERY
+		STORE
+		*/
+		//Before store() resolves stack items, we can see which ones are our locals. Anything not in the form [9, x, x]
+		CASE s_store:
+			cgpendingop()
+			//FOR i = tempv TO arg1 BY 3 DO writef("s_store STACK %i5 %i5 %i5*n", h1!i, h2!i, h3!i);
+			FOR i = tempv TO arg1 BY 3 DO UNLESS h1!i = k_loc DO s.fncur!s.fnidx!fnlocals +:= 1
+			store(0, ssp-1)
+		ENDCASE
+
+		CASE s_query:loadt(k_loc, ssp);              ENDCASE
+
 
 //rtrn and fnrn are basically the same in wasm except for setting the return type
 //the return value is just the top of the stack
     CASE s_rtrn:	cgpendingop()
-									gen(i_end)
-									s.fncur!fnret := 0
+									wasm.gen(i_end)
+									s.fncur!s.fnidx!fnret := 0
 									incode := FALSE
+									FOR i = tempv TO tempv+ssp BY 3 DO writef("s_rtrn STACK %i5 %i5 %i5*n", h1!i, h2!i, h3!i)
 									ENDCASE
 
     CASE s_fnrn:	cgpendingop()
-								//  loada(arg1) //wasm has no registers. the return val is just the top of the stack.
-								//  gen(f_rtn)
-									gen(i_end)
-									s.fncur!fnret := TRUE
+									wasm.gen(i_end)
+									s.fncur!s.fnidx!fnret := TRUE
 									stack(ssp-1)
 									incode := FALSE
+									FOR i = tempv TO ssp BY 3 DO writef("s_fnrn STACK %i5 %i5 %i5*n", h1!i, h2!i, h3!i)
 									ENDCASE
 
     CASE s_endproc:
@@ -1050,11 +1085,20 @@ AND wasm.scan() BE
                  procdepth := procdepth - 1
                  ENDCASE
 
-		CASE s_lp:   rdn(); noimpl(op); ENDCASE//loadt(k_loc,   rdn());   ENDCASE
-		CASE s_lg:   rdn(); noimpl(op); ENDCASE//loadt(k_glob,  rdgn());  ENDCASE
-		CASE s_ll:   rdn(); noimpl(op); ENDCASE//loadt(k_lab,   rdl());   ENDCASE
-		CASE s_lf:   rdn(); noimpl(op); ENDCASE//loadt(k_fnlab, rdl());   ENDCASE
-		CASE s_ln:   rdn(); noimpl(op); ENDCASE//loadt(k_numb,  rdn());   ENDCASE
+		CASE s_lp:		loadt(k_loc,   rdn());   ENDCASE
+		CASE s_lg:		loadt(k_glob,  rdgn());  ENDCASE
+		CASE s_ll:		loadt(k_lab,   rdl());   ENDCASE
+		CASE s_lf:		loadt(k_fnlab, rdl());   ENDCASE
+		CASE s_ln:		loadt(k_numb,  rdn());		ENDCASE
+
+		CASE s_lstr:	cgstring(rdn());         ENDCASE
+
+    CASE s_true:	loadt(k_numb, -1);       ENDCASE
+    CASE s_false:	loadt(k_numb,  0);       ENDCASE
+
+    CASE s_llp:		loadt(k_lvloc,  rdn());  ENDCASE
+    CASE s_llg:		loadt(k_lvglob, rdgn()); ENDCASE
+    CASE s_lll:		loadt(k_lvlab,  rdl());  ENDCASE
 
 		//end of stream
 		CASE 0:   RETURN
@@ -1681,7 +1725,7 @@ AND storet(x) BE
 { LET s = h3!x
   IF h1!x=k_loc & h2!x=s RETURN
   loada(x)
-  gensp(s)
+ // gensp(s)
   forgetvar(k_loc, s)
   addinfo_a(k_loc, s)
   h1!x, h2!x := k_loc, s
@@ -2011,7 +2055,9 @@ AND wasm.cgentry(l, n) BE
   s.fninfo!s.fncnt := fni
 	s.fncnt := s.fncnt + 1
 
-	s.fncur := fni
+	s.fncur!s.fnidx := fni
+
+	incode := TRUE
 
   //we need to figure out our signature
   //BCPL being typeless, we can only infer at this point based on the stack offset
@@ -2583,6 +2629,13 @@ AND initdatalists() BE
   freelist := 0
 }
 
+LET wasm.gen(f) BE IF incode DO
+{	LET fnp = s.fncur!s.fnidx
+	fnp!fncode%(fnp!fnclen) := f
+	fnp!fnclen := fnp!fnclen + 1
+	IF debug DO wrcode(f, "")
+}
+
 LET geng(f, n) BE TEST n<256
                   THEN genb(f, n)
                   ELSE TEST n<512
@@ -2591,8 +2644,8 @@ LET geng(f, n) BE TEST n<256
 
 LET gen(f) BE IF incode DO
 { chkrefs(1)
-  IF debug DO wrcode(f, "")
-  codeb(f)
+	IF debug DO wrcode(f, "")
+	codeb(f)
 }
 
 LET genb(f, a) BE IF incode DO
@@ -2717,8 +2770,8 @@ AND checkspace() BE IF stvp/4>dp-stv DO
 }
 
 AND codeb(byte) BE
-{ stv%stvp := byte
-  stvp := stvp + 1
+{ //stv%stvp := byte
+  //stvp := stvp + 1
   checkspace()
 }
 
