@@ -259,6 +259,7 @@ wasm.genb
 wasm.loadt
 wasm.store
 wasm.storet
+wasm.storein
 wasm.wrtypes
 wasm.wrfuncs
 wasm.wrcode
@@ -1047,7 +1048,8 @@ AND wasm.scan() BE
 			wasm.store(0, ssp-1)
 		ENDCASE
 
-		CASE s_query: wasm.loadt(k_loc, ssp);              ENDCASE
+		//maybe we ignore this OP outside of counting locals since it means uninitialized
+		CASE s_query: wasm.loadt(k_loc, /*ssp*/0);              ENDCASE
 
 
 //rtrn and fnrn are basically the same in wasm except for setting the return type
@@ -1087,6 +1089,10 @@ AND wasm.scan() BE
     CASE s_llp:		wasm.loadt(k_lvloc,  rdn());		ENDCASE
     CASE s_llg:		wasm.loadt(k_lvglob, rdgn());	ENDCASE
     CASE s_lll:		wasm.loadt(k_lvlab,  rdl());		ENDCASE
+
+		CASE s_sp:   wasm.storein(k_loc,  rdn());  ENDCASE
+		CASE s_sg:   wasm.storein(k_glob, rdgn()); ENDCASE
+		CASE s_sl:   wasm.storein(k_lab,  rdl());  ENDCASE
 
 		//end of stream
 		CASE 0:   RETURN
@@ -1714,7 +1720,7 @@ AND storet(x) BE
   IF h1!x=k_loc & h2!x=s RETURN
   loada(x)
  // gensp(s)
- writef("storet %i5 %i5 %i5*n", h1!x, h2!x, h3!x)
+ //writef("storet %i5 %i5 %i5*n", h1!x, h2!x, h3!x)
   forgetvar(k_loc, s)
   addinfo_a(k_loc, s)
   h1!x, h2!x := k_loc, s
@@ -1724,9 +1730,11 @@ AND wasm.storet(x) BE
 {
 	LET s = h3!x
 	IF h1!x=k_loc & h2!x=s RETURN
-	h1!x, h2!x := k_loc, s
 	writef("storet %i5 %i5 %i5*n", h1!x, h2!x, h3!x)
-	wasm.genb(i_i32, h2!x)
+	wasm.genb(i_setl, h2!x)
+	h1!x, h2!x := k_loc, s
+	
+	
 }
 
 
@@ -1769,7 +1777,7 @@ AND wasm.loadt(k, n) BE
   h1!arg1,h2!arg1,h3!arg1 := k,n,ssp
   ssp := ssp + 1
   IF maxssp<ssp DO maxssp := ssp
-
+	writef("wasm.loadt %i5 %i5 %i5*n", h1!arg1, h2!arg1, h3!arg1)
 	wasm.genb(i_i32, n)
 }
 
@@ -1884,6 +1892,18 @@ AND storein(k, n) BE
   forgetvar(k, n)
   addinfo_a(k, n)
   stack(ssp-1)
+}
+
+AND wasm.storein(k, n) BE
+{	cgpendingop()
+writef("wasm.storein %i5 %i5*n", k, n)
+	SWITCHON k INTO
+	{	DEFAULT: cgerror("in storein %n", k)
+		CASE k_loc: wasm.genb(i_setl, n); ENDCASE
+		CASE k_glob: wasm.genb(i_setg, n); ENDCASE
+		CASE k_lab: wasm.genb(i_i32, n); ENDCASE
+	}
+
 }
 
 LET cgrv() BE
@@ -2652,10 +2672,10 @@ LET wasm.gen(f) BE IF incode DO
 AND wasm.genb(f, b) BE
 {	wasm.gen(f)
 	wasm.gen(b)
-	writef("wasm.genb %x2 %x2 *n", f, b)
-	FOR i = 0 TO s.fncur!s.fnidx!fnclen-1 DO
-		writef("%x2 ", s.fncur!s.fnidx!fncode%i)
-		wrch('*n')
+	 writef("wasm.genb %x2 %x2 *n", f, b)
+	// FOR i = 0 TO s.fncur!s.fnidx!fnclen-1 DO
+	// 	writef("%x2 ", s.fncur!s.fnidx!fncode%i)
+	// 	wrch('*n')
 }
 
 LET geng(f, n) BE TEST n<256
