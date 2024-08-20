@@ -726,63 +726,43 @@ AND wasm.newfninfo() = VALOF
 	nfn!fnclen := 0
 	RESULTIS nfn
 }
-
+//need to use wruLEB128 for length vals
 AND wasm.wrtypes() BE
 {	//write function types
-	LET sz, p = ?, ?
-	AND offs = ?
-	
-	stv%stvp := s_type; stvp +:= 2
-	
-	offs := stvp MOD bytesperword - 1
-	p := stv + stvp/bytesperword //track offset to write final size
-	sz := stvp //start tracking section size
-	
+	LET sz = 0
+	stv%stvp := s_type; stvp +:= 1
+	FOR i = 0 TO s.fncnt-1 DO sz +:= s.fninfo!i!fnparms + 4
+	wasm.wruLEB128stv(sz)
 	stv%stvp := s.fncnt; stvp +:= 1
 	
 	FOR i = 0 TO s.fncnt-1 DO
 	{ LET fni = s.fninfo!i
 		stv%stvp := t_func; stvp +:= 1
 		wasm.wruLEB128stv(fni!fnparms)
-		FOR j = 0 TO fni!fnparms-1 DO stv%stvp := t_i32
+		FOR j = 0 TO fni!fnparms-1 DO {stv%stvp := t_i32; stvp +:= 1}
 
 		TEST fni!fnret THEN { wasm.wruLEB128stv(1); stv%stvp := t_i32; stvp +:= 1 }
 		ELSE wasm.wruLEB128stv(0)
 	}
-	sz := stvp - sz
-	p%offs := sz
 }
 
 AND wasm.wrfuncs() BE
-{ LET sz, p = ?, ?
-	AND offs = ?
-	stv%stvp := s_function; stvp +:= 2
-
-	//we have to calc the word boundary and then byte offset into it
-	offs := stvp MOD bytesperword - 1
-	p := stv + stvp/bytesperword
-	sz := stvp
-
+{ LET sz = 1
+	stv%stvp := s_function; stvp +:= 1
+	wasm.wruLEB128stv(1 + s.fncnt)
 	stv%stvp := s.fncnt; stvp +:= 1
 
 	FOR i = 0 TO s.fncnt-1 DO
 	{ LET fni = s.fninfo!i
 		stv%stvp := fni!fnidx; stvp +:= 1
 	}
-	sz := stvp - sz
-	p%offs := sz
 }
 
 AND wasm.wrcode() BE
-{	LET sz, p = ?, ?
-	AND offs = ?
-	stv%stvp := s_code; stvp +:= 2
-
-	//we have to calc the word boundary and then byte offset into it
-	offs := stvp MOD bytesperword - 1
-	p := stv + stvp/bytesperword
-	sz := stvp
-
+{	LET sz = 1
+	stv%stvp := s_code; stvp +:= 1
+	FOR i = 0 TO s.fncnt-1 DO sz +:= s.fninfo!i!fnclen + 4
+	wasm.wruLEB128stv(sz) 
 	stv%stvp := s.fncnt; stvp +:= 1
 
 	FOR i = 0 TO s.fncnt-1 DO
@@ -794,8 +774,6 @@ AND wasm.wrcode() BE
 		FOR j = 0 TO fni!fnclen-1 DO
 		{ stv%stvp := fni!fncode!j; stvp +:= 1 }
 	}
-	sz := stvp - sz
-	p%offs := sz
 }
 
 AND wasm.output() BE
