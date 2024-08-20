@@ -739,7 +739,7 @@ AND wasm.wrtypes() BE
 	FOR i = 0 TO s.fncnt-1 DO sz +:= s.fninfo!i!fnparms + 4
 	wasm.wruLEB128stv(sz)
 	stv%stvp := s.fncnt; stvp +:= 1
-	
+
 	FOR i = 0 TO s.fncnt-1 DO
 	{ LET fni = s.fninfo!i
 		stv%stvp := t_func; stvp +:= 1
@@ -767,7 +767,7 @@ AND wasm.wrcode() BE
 {	LET sz = 1
 	stv%stvp := s_code; stvp +:= 1
 	FOR i = 0 TO s.fncnt-1 DO sz +:= s.fninfo!i!fnclen + 4
-	wasm.wruLEB128stv(sz) 
+	wasm.wruLEB128stv(sz)
 	stv%stvp := s.fncnt; stvp +:= 1
 
 	FOR i = 0 TO s.fncnt-1 DO
@@ -883,7 +883,7 @@ wasm.dumpfninfo()
   wasm.output()
   progsize := progsize + stvp
 
-  
+
   wasm.deinit()
 }
 
@@ -1090,7 +1090,14 @@ AND wasm.scan() BE
     CASE s_llg:		wasm.loadt(k_lvglob, rdgn());	ENDCASE
     CASE s_lll:		wasm.loadt(k_lvlab,  rdl());		ENDCASE
 
-		CASE s_sp:   wasm.storein(k_loc,  rdn());  ENDCASE
+		CASE s_sp:
+		{	LET n = rdn()
+			//adjust for wasm stack. BCPL buffers 3 words before args and locals
+			//base stack is 3 + <params>
+			n := n - 3 - s.fncur!s.fnidx!fnparms
+			wasm.storein(k_loc, n);
+			ENDCASE
+		}
 		CASE s_sg:   wasm.storein(k_glob, rdgn()); ENDCASE
 		CASE s_sl:   wasm.storein(k_lab,  rdl());  ENDCASE
 
@@ -1196,7 +1203,14 @@ AND scan() BE
     CASE s_llg:  loadt(k_lvglob, rdgn()); ENDCASE
     CASE s_lll:  loadt(k_lvlab,  rdl());  ENDCASE
 
-    CASE s_sp:   storein(k_loc,  rdn());  ENDCASE
+    CASE s_sp:
+		{	LET n = rdn()
+			//adjust for wasm stack. BCPL buffers 3 words before args and locals
+			//base stack is 3 + <params>
+			n := n - 3 - s.fncur!s.fnidx!fnparms
+			storein(k_loc, n);
+			ENDCASE
+		}
     CASE s_sg:   storein(k_glob, rdgn()); ENDCASE
     CASE s_sl:   storein(k_lab,  rdl());  ENDCASE
 
@@ -1728,13 +1742,12 @@ AND storet(x) BE
 
 AND wasm.storet(x) BE
 {
-	LET s = h3!x
+	LET s, l = h3!x, ?
 	IF h1!x=k_loc & h2!x=s RETURN
 	writef("storet %i5 %i5 %i5*n", h1!x, h2!x, h3!x)
-	wasm.genb(i_setl, h2!x)
+	l := s - 3 - s.fncur!s.fnidx!fnparms //maybe we track this offset instead of calcing it
+	wasm.genb(i_setl, l)
 	h1!x, h2!x := k_loc, s
-	
-	
 }
 
 
@@ -1894,6 +1907,7 @@ AND storein(k, n) BE
   stack(ssp-1)
 }
 
+//
 AND wasm.storein(k, n) BE
 {	cgpendingop()
 writef("wasm.storein %i5 %i5*n", k, n)
@@ -1903,7 +1917,7 @@ writef("wasm.storein %i5 %i5*n", k, n)
 		CASE k_glob: wasm.genb(i_setg, n); ENDCASE
 		CASE k_lab: wasm.genb(i_i32, n); ENDCASE
 	}
-
+	stack(ssp-1)
 }
 
 LET cgrv() BE
