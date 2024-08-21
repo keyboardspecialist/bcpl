@@ -254,8 +254,11 @@ wasm.wrvec
 wasm.output
 wasm.scan
 wasm.cgentry
+wasm.cgpendingop
 wasm.gen
 wasm.genb
+wasm.genk
+wasm.genik
 wasm.loadt
 wasm.store
 wasm.storet
@@ -701,11 +704,13 @@ AND wasm.wruLEB128(n, v, i) BE
 AND wasm.wrsLEB128(n, v, i) BE
 { LET b = n&#x7f
   AND s = n&#x40
+  LET neg = n < 0
   n >>:= 7
-  IF (s = 0 & n ~= 0) | (n = -1 & s ~= 0) DO b |:= #x80
+  IF neg DO n |:= -(1 << (bitsperword - 8))
+  UNLESS s = 0 & n = 0 | (n = -1 & s ~= 0) DO b |:= #x80
   v%(!i) := b
   !i +:= 1
-  b &:= #x80
+  b := b&#x80
   IF b = 0 RETURN
 } REPEAT
 
@@ -815,6 +820,7 @@ AND wasm.dumpfninfo() BE
     writef("  Label: %i3*n", s.fninfo!i!fnlab)
     writef("  Wasm Index: %i3*n", s.fninfo!i!fnidx)
     writef("  Params: %i3*n", s.fninfo!i!fnparms)
+		writef("  Locals: %i3*n", s.fninfo!i!fnlocals)
 		writef(" Return: %i3*n", s.fninfo!i!fnret)
     writef("  Export: %s*n", (s.fninfo!i!fnexport -> "true", "false") )
 		writef("  Code Length: %i3*n", s.fninfo!i!fnclen)
@@ -1043,13 +1049,14 @@ AND wasm.scan() BE
 		//Before store() resolves stack items, we can see which ones are our locals. Anything not in the form [9, x, x]
 		CASE s_store:
 			cgpendingop()
-			//FOR i = tempv TO arg1 BY 3 DO writef("s_store STACK %i5 %i5 %i5*n", h1!i, h2!i, h3!i);
+		//	FOR i = tempv TO arg1 BY 3 DO writef("s_store STACK %i5 %i5 %i5*n", h1!i, h2!i, h3!i);
 			FOR i = tempv TO arg1 BY 3 DO UNLESS h1!i = k_loc DO s.fncur!s.fnidx!fnlocals +:= 1
 			wasm.store(0, ssp-1)
 		ENDCASE
 
-		//maybe we ignore this OP outside of counting locals since it means uninitialized
-		CASE s_query: wasm.loadt(k_loc, /*ssp*/0);              ENDCASE
+		//This starts as a k_loc, so count it here, not above
+		//Does not generate an instruction, just makes space on the stack
+		CASE s_query: wasm.loadt(k_loc, ssp); s.fncur!s.fnidx!fnlocals +:= 1; ENDCASE
 
 
 //rtrn and fnrn are basically the same in wasm except for setting the return type
@@ -1076,19 +1083,19 @@ AND wasm.scan() BE
                  ENDCASE
 
 		CASE s_lp:		wasm.loadt(k_loc,   rdn());		ENDCASE
-		CASE s_lg:		wasm.loadt(k_glob,  rdgn());		ENDCASE
+		CASE s_lg:		wasm.loadt(k_glob,  rdgn());	ENDCASE
 		CASE s_ll:		wasm.loadt(k_lab,   rdl());		ENDCASE
 		CASE s_lf:		wasm.loadt(k_fnlab, rdl());		ENDCASE
 		CASE s_ln:		wasm.loadt(k_numb,  rdn());		ENDCASE
 
-		CASE s_lstr:	cgstring(rdn());					ENDCASE
+		CASE s_lstr:	cgstring(rdn());							ENDCASE
 
     CASE s_true:	wasm.loadt(k_numb, -1);				ENDCASE
     CASE s_false:	wasm.loadt(k_numb,  0);				ENDCASE
 
-    CASE s_llp:		wasm.loadt(k_lvloc,  rdn());		ENDCASE
+    CASE s_llp:		wasm.loadt(k_lvloc,  rdn());	ENDCASE
     CASE s_llg:		wasm.loadt(k_lvglob, rdgn());	ENDCASE
-    CASE s_lll:		wasm.loadt(k_lvlab,  rdl());		ENDCASE
+    CASE s_lll:		wasm.loadt(k_lvlab,  rdl());	ENDCASE
 
 		CASE s_sp:
 		{	LET n = rdn()
@@ -1101,6 +1108,23 @@ AND wasm.scan() BE
 		CASE s_sg:   wasm.storein(k_glob, rdgn()); ENDCASE
 		CASE s_sl:   wasm.storein(k_lab,  rdl());  ENDCASE
 
+
+    CASE s_float: CASE s_fix: CASE s_fneg: CASE s_fabs:
+    CASE s_not:CASE s_neg:CASE s_abs:
+    CASE s_fmul: CASE s_fdiv:CASE s_fmod:
+    CASE s_fadd:CASE s_fsub:
+    CASE s_feq: CASE s_fne:
+    CASE s_fls:CASE s_fgr:CASE s_fle:CASE s_fge:
+
+    CASE s_mul:CASE s_div:CASE s_mod:
+    CASE s_add:CASE s_sub:
+    CASE s_eq: CASE s_ne:
+    CASE s_ls:CASE s_gr:CASE s_le:CASE s_ge:
+    CASE s_lshift:CASE s_rshift:
+    CASE s_logand:CASE s_logor:CASE s_eqv:CASE s_xor:
+                 wasm.cgpendingop()
+                 pendingop := op
+                 ENDCASE
 		//end of stream
 		CASE 0:   RETURN
 	}
@@ -1434,6 +1458,10 @@ AND scan() BE
   op := rdn()
 } REPEAT
 
+LET wasm.cgpendingop() BE
+{
+
+}
 
 // Compiles code to deal with any pending op.
 LET cgpendingop() BE
@@ -1740,14 +1768,51 @@ AND storet(x) BE
   h1!x, h2!x := k_loc, s
 }
 
+AND wasm.cgloadk(n) BE
+{	wasm.gen(i_i32)
+	wasm.genk(n)
+}
+
+AND wasm.cgload(x) BE
+{	LET k, n = h1!x, h2!x
+
+	SWITCHON k INTO
+	{	DEFAULT: cgerror("in wasm.genload %n", k)
+
+		CASE k_numb:
+							cgloadk(n)
+							RETURN
+
+		CASE k_loc:  genlp(n);        ENDCASE
+		CASE k_glob: geng(f_lg, n);   ENDCASE
+		CASE k_lab:  genr(f_ll, n);   ENDCASE
+		CASE k_fnlab:genr(f_lf, n);   ENDCASE
+
+		CASE k_lvloc:TEST 0<=n<=255
+									THEN genb(f_llp, n)
+									ELSE TEST 0<=n<=#xFFFF
+											THEN genh(f_llph, n)
+											ELSE genw(f_llpw, n)
+									ENDCASE
+
+		CASE k_lvglob:geng(f_llg, n); ENDCASE
+		CASE k_lvlab: genr(f_lll, n); ENDCASE
+	}
+}
+
 AND wasm.storet(x) BE
 {
 	LET s, l = h3!x, ?
 	IF h1!x=k_loc & h2!x=s RETURN
-	writef("storet %i5 %i5 %i5*n", h1!x, h2!x, h3!x)
+	//loada(x)
+	wasm.genik(i_i32, h2!x)
+//	writef("storet %i5 %i5 %i5*n", h1!x, h2!x, h3!x)
 	l := s - 3 - s.fncur!s.fnidx!fnparms //maybe we track this offset instead of calcing it
-	wasm.genb(i_setl, l)
+	wasm.genik(i_setl, l)
+	forgetvar(k_loc, s)
+	addinfo_a(k_loc, s)
 	h1!x, h2!x := k_loc, s
+//	writef("storetw %i5 %i5 %i5*n", h1!x, h2!x, h3!x)
 }
 
 
@@ -1790,8 +1855,8 @@ AND wasm.loadt(k, n) BE
   h1!arg1,h2!arg1,h3!arg1 := k,n,ssp
   ssp := ssp + 1
   IF maxssp<ssp DO maxssp := ssp
-	writef("wasm.loadt %i5 %i5 %i5*n", h1!arg1, h2!arg1, h3!arg1)
-	wasm.genb(i_i32, n)
+	//writef("wasm.loadt %i5 %i5 %i5*n", h1!arg1, h2!arg1, h3!arg1)
+	//wasm.genb(i_i32, n)
 }
 
 
@@ -1913,9 +1978,9 @@ AND wasm.storein(k, n) BE
 writef("wasm.storein %i5 %i5*n", k, n)
 	SWITCHON k INTO
 	{	DEFAULT: cgerror("in storein %n", k)
-		CASE k_loc: wasm.genb(i_setl, n); ENDCASE
-		CASE k_glob: wasm.genb(i_setg, n); ENDCASE
-		CASE k_lab: wasm.genb(i_i32, n); ENDCASE
+		CASE k_loc: wasm.genik(i_setl, n); ENDCASE
+		CASE k_glob: wasm.genik(i_setg, n); ENDCASE
+		CASE k_lab: wasm.genik(i_i32, n); ENDCASE
 	}
 	stack(ssp-1)
 }
@@ -2658,7 +2723,10 @@ AND getblk(a, b, c) = VALOF
   RESULTIS p
 }
 
-AND freeblk(p) BE { !p := freelist; freelist := p }
+AND freeblk(p) BE 
+{ writef("freeblk %n, !p %n, freelist %n *n", p, !p, freelist)
+
+	!p := freelist; freelist := p }
 
 AND freeblks(p) BE UNLESS p=0 DO
 { // Put all the blks on list p into freelist.
@@ -2676,20 +2744,26 @@ AND initdatalists() BE
   freelist := 0
 }
 
-LET wasm.gen(f) BE IF incode DO
+LET wasm.code(f) BE
 {	LET fnp = s.fncur!s.fnidx
 	fnp!fncode%(fnp!fnclen) := f&#xff
 	fnp!fnclen := fnp!fnclen + 1
 	IF debug DO wrcode(f, "")
 }
 
-AND wasm.genb(f, b) BE
-{	wasm.gen(f)
-	wasm.gen(b)
-	 writef("wasm.genb %x2 %x2 *n", f, b)
-	// FOR i = 0 TO s.fncur!s.fnidx!fnclen-1 DO
-	// 	writef("%x2 ", s.fncur!s.fnidx!fncode%i)
-	// 	wrch('*n')
+LET wasm.gen(f) BE IF incode DO wasm.code(f)
+
+AND wasm.genb(f, b) BE IF incode DO
+{	wasm.code(f)
+	wasm.code(b)
+}
+
+AND wasm.genik(i, n) BE IF incode DO { wasm.gen(i); wasm.genk(n) }
+
+AND wasm.genk(n) BE IF incode DO
+{	TEST n < 0 
+	THEN wasm.wrsLEB128(n, s.fncur!s.fnidx!fncode, @(s.fncur!s.fnidx!fnclen))
+	ELSE wasm.wruLEB128(n, s.fncur!s.fnidx!fncode, @(s.fncur!s.fnidx!fnclen))
 }
 
 LET geng(f, n) BE TEST n<256
