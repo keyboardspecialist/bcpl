@@ -835,7 +835,7 @@ AND wasm.dumpfninfo() BE
 AND cgsects(workvec, vecsize) BE UNTIL op=0 DO
 { LET p = workvec
   tempv := p
-  p := p+90
+  p := p+92
   tempt := p
   casek := p
   p := p+400
@@ -947,7 +947,7 @@ AND cgerror(mes, a, b, c) BE
 
 // Initialize the simulated stack (SS).
 LET initstack(n) BE
-{ arg2, arg1, ssp := tempv, tempv+3, n
+{ arg2, arg1, ssp := tempv, tempv+4, n
   pendingop := s_none
   h1!arg2, h2!arg2, h3!arg2 := k_loc, ssp-2, ssp-2
   h1!arg1, h2!arg1, h3!arg1 := k_loc, ssp-1, ssp-1
@@ -988,7 +988,7 @@ AND store(s1, s2) BE FOR p = tempv TO arg1 BY 3 DO
                        IF s>=s1 DO storet(p)
                      }
 
-AND wasm.store(s1, s2) BE FOR p = tempv TO arg1 BY 3 DO
+AND wasm.store(s1, s2) BE FOR p = tempv TO arg1 BY 4 DO
                      { LET s = h3!p
                        IF s>s2 RETURN
                        IF s>=s1 DO wasm.storet(p)
@@ -1048,9 +1048,9 @@ AND wasm.scan() BE
 		*/
 		//Before store() resolves stack items, we can see which ones are our locals. Anything not in the form [9, x, x]
 		CASE s_store:
-			cgpendingop()
-		//	FOR i = tempv TO arg1 BY 3 DO writef("s_store STACK %i5 %i5 %i5*n", h1!i, h2!i, h3!i);
-			FOR i = tempv TO arg1 BY 3 DO UNLESS h1!i = k_loc DO s.fncur!s.fnidx!fnlocals +:= 1
+			wasm.cgpendingop()
+		//	FOR i = tempv TO arg1 BY 4 DO writef("s_store STACK %i5 %i5 %i5*n", h1!i, h2!i, h3!i);
+			FOR i = tempv TO arg1 BY 4 DO UNLESS h1!i = k_loc DO s.fncur!s.fnidx!fnlocals +:= 1
 			wasm.store(0, ssp-1)
 		ENDCASE
 
@@ -1061,17 +1061,17 @@ AND wasm.scan() BE
 
 //rtrn and fnrn are basically the same in wasm except for setting the return type
 //the return value is just the top of the stack
-    CASE s_rtrn:	cgpendingop()
+    CASE s_rtrn:	wasm.cgpendingop()
 									s.fncur!s.fnidx!fnret := 0
 									incode := FALSE
-									//FOR i = tempv TO tempv+ssp BY 3 DO writef("s_rtrn STACK %i5 %i5 %i5*n", h1!i, h2!i, h3!i)
+									//FOR i = tempv TO tempv+ssp BY 4 DO writef("s_rtrn STACK %i5 %i5 %i5*n", h1!i, h2!i, h3!i)
 									ENDCASE
 
-    CASE s_fnrn:	cgpendingop()
+    CASE s_fnrn:	wasm.cgpendingop()
 									s.fncur!s.fnidx!fnret := TRUE
 									stack(ssp-1)
 									incode := FALSE
-									//FOR i = tempv TO ssp BY 3 DO writef("s_fnrn STACK %i5 %i5 %i5*n", h1!i, h2!i, h3!i)
+									//FOR i = tempv TO ssp BY 4 DO writef("s_fnrn STACK %i5 %i5 %i5*n", h1!i, h2!i, h3!i)
 									ENDCASE
 
     CASE s_endproc:
@@ -1774,19 +1774,19 @@ AND wasm.cgloadk(n) BE
 }
 
 AND wasm.cgload(x) BE
-{	LET k, n = h1!x, h2!x
+{	LET k, n, wn = h1!x, h2!x, h4!x
 
 	SWITCHON k INTO
 	{	DEFAULT: cgerror("in wasm.genload %n", k)
 
 		CASE k_numb:
-							cgloadk(n)
+							wasm.cgloadk(n)
 							RETURN
 
-		CASE k_loc:  genlp(n);        ENDCASE
-		CASE k_glob: geng(f_lg, n);   ENDCASE
-		CASE k_lab:  genr(f_ll, n);   ENDCASE
-		CASE k_fnlab:genr(f_lf, n);   ENDCASE
+		CASE k_loc:  wasm.genb(i_getl, wn);		ENDCASE
+		CASE k_glob: wasm.genb(i_getg, n);		ENDCASE
+		CASE k_lab:  genr(f_ll, n);		ENDCASE
+		CASE k_fnlab:genr(f_lf, n);		ENDCASE
 
 		CASE k_lvloc:TEST 0<=n<=255
 									THEN genb(f_llp, n)
@@ -1802,13 +1802,13 @@ AND wasm.cgload(x) BE
 
 AND wasm.storet(x) BE
 {
-	LET s, l = h3!x, ?
+	LET s = h3!x
 	IF h1!x=k_loc & h2!x=s RETURN
-	//loada(x)
-	wasm.genik(i_i32, h2!x)
+
+	wasm.genik(i_i32, h2!x) //temporary, need
 //	writef("storet %i5 %i5 %i5*n", h1!x, h2!x, h3!x)
-	l := s - 3 - s.fncur!s.fnidx!fnparms //maybe we track this offset instead of calcing it
-	wasm.genik(i_setl, l)
+	h4!x := s - 3 - s.fncur!s.fnidx!fnparms;
+	wasm.genik(i_setl, h4!x)
 	forgetvar(k_loc, s)
 	addinfo_a(k_loc, s)
 	h1!x, h2!x := k_loc, s
@@ -1846,17 +1846,16 @@ AND loadt(k, n) BE
 }
 
 AND wasm.loadt(k, n) BE
-{ cgpendingop()
-  TEST arg1+3=tempt
-  THEN { storet(tempv)  // SS stack overflow.
+{ wasm.cgpendingop()
+  TEST arg1+4=tempt
+  THEN { wasm.storet(tempv)  // SS stack overflow.
          FOR t = tempv TO arg2+2 DO t!0 := t!3
        }
-  ELSE arg2, arg1 := arg2+3, arg1+3
-  h1!arg1,h2!arg1,h3!arg1 := k,n,ssp
+  ELSE arg2, arg1 := arg2+4, arg1+4
+  h1!arg1,h2!arg1,h3!arg1, h4!arg1 := k,n,ssp, n - 3 - s.fncur!s.fnidx!fnparms
   ssp := ssp + 1
   IF maxssp<ssp DO maxssp := ssp
 	//writef("wasm.loadt %i5 %i5 %i5*n", h1!arg1, h2!arg1, h3!arg1)
-	//wasm.genb(i_i32, n)
 }
 
 
