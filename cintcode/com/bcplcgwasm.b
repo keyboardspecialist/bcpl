@@ -255,13 +255,14 @@ wasm.output
 wasm.scan
 wasm.cgentry
 wasm.cgpendingop
-wasm.cgadd
+wasm.cgbinop
 wasm.cgloadk
 wasm.cgload
 wasm.gen
 wasm.genb
 wasm.genk
 wasm.genik
+wasm.lose1
 wasm.loadt
 wasm.store
 wasm.storet
@@ -333,6 +334,7 @@ k_a=6; k_b=7; k_c=8
 k_loc=9; k_glob=10; k_lab=11;
 k_loc0=12; k_loc1=13; k_loc2=14; k_loc3=15; k_loc4=16
 k_glob0=17; k_glob1=18; k_glob2=19
+k_opresult=20 //mark that we have a result on the stack and dont need an extra load
 
 swapped=TRUE; notswapped=FALSE
 
@@ -1567,7 +1569,7 @@ case_eq:					wasm.cgload(arg2)
                   }
                   h2!arg1 := -h2!arg1
 
-		CASE s_add:	wasm.cgadd()	RETURN
+		CASE s_add:	f := i_i32add;		ENDCASE
 
 		CASE s_fmod:	wasm.cgload(arg2)
 									wasm.cgload(arg1)
@@ -1600,6 +1602,7 @@ case_eq:					wasm.cgload(arg2)
 	//impl rest of ops
 	// need to check that arg1 and 2 are different, so we dont double load
 	// can generalize wasm.cgadd
+	wasm.cgbinop(f)
 
 }
 
@@ -2013,6 +2016,18 @@ AND lose1(k, n) BE
   pendingop := s_none
 }
 
+AND wasm.lose1(k, n) BE
+{ ssp := ssp - 1
+  TEST arg2=tempv
+  THEN { h1!arg2,h2!arg2 := k_loc,ssp-2
+         h3!arg2 := ssp-2
+       }
+  ELSE { arg1 := arg2
+         arg2 := arg2-4
+       }
+  h1!arg1, h2!arg1, h3!arg1 := k,n,ssp-1
+}
+
 AND swapargs() BE
 { LET k, n = h1!arg1, h2!arg1
   h1!arg1, h2!arg1 := h1!arg2, h2!arg2
@@ -2124,30 +2139,28 @@ writef("wasm.storein %i5 %i5*n", k, n)
 	stack(ssp-1)
 }
 
-//add <arg1> + <arg2>
+// <arg1> <op> <arg2>
 //result stays on the stack
-AND wasm.cgadd() BE
-{		SWITCHON h1!arg2 INTO
-	{	DEFAULT: cgerror("in cgadd %n", h1!arg2)
+AND wasm.cgbinop(op) BE
+{	SWITCHON h1!arg2 INTO
+	{	DEFAULT: cgerror("in wasm.cgbinop %n", h1!arg2)
+		CASE k_opresult: ENDCASE
 		CASE k_numb: wasm.cgloadk(h2!arg2); ENDCASE
 		CASE k_loc:  wasm.genik(i_getl, h4!arg2); ENDCASE
 		CASE k_glob: wasm.genik(i_getg, h2!arg2); ENDCASE
-		CASE k_lab:  wasm.genik(i_i32, h2!arg2); ENDCASE
 	}
 
-//we dont have any accumulator, so just make sure we arent trying to load the same address twice
-	UNLESS ((h1!arg1 = k_loc & h1!arg2 = k_loc) | 
-	(h1!arg1 = k_glob & h1!arg2 = k_glob)) & 
-	h2!arg1 = h2!arg2 
-	DO SWITCHON h1!arg1 INTO
-	{	DEFAULT: cgerror("in cgadd %n", h1!arg1)
+	SWITCHON h1!arg1 INTO
+	{	DEFAULT: cgerror("in wasm.cgbinop %n", h1!arg1)
+		CASE k_opresult: ENDCASE
 		CASE k_numb: wasm.cgloadk(h2!arg1); ENDCASE
 		CASE k_loc:  wasm.genik(i_getl, h4!arg1); ENDCASE
 		CASE k_glob: wasm.genik(i_getg, h2!arg1); ENDCASE
-		CASE k_lab:  wasm.genik(i_i32, h2!arg1); ENDCASE
 	}
 
-	wasm.gen(i_i32add)
+	wasm.gen(op)
+	//mark that we have a binop result on the stack
+	wasm.lose1(k_opresult, 0)
 }
 
 LET cgrv() BE
