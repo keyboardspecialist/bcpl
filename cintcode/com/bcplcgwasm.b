@@ -397,7 +397,7 @@ MANIFEST {
   //local/global var instructions
   i_getl = #x20
   i_setl = #x21
-  i_teel = #x22 //??
+  i_teel = #x22 //loads value and keeps it on the stack
   i_getg = #x23
   i_setg = #x24
   //mem instructions
@@ -463,6 +463,17 @@ MANIFEST {
   i_f32min = #x96
   i_f32max = #x97
   i_f32cpysign = #x98
+
+//abs impl
+  // local.get $x
+  // local.get $x
+  // i32.const 31
+  // i32.shr_s
+  // i32.xor
+  // local.get $x
+  // i32.const 31
+  // i32.shr_s
+  // i32.sub
 
   //casting
   i_i32truncf32s = #xa8
@@ -1108,6 +1119,7 @@ AND wasm.scan() BE
 
 		CASE s_sp:
 		{	LET n = rdn()
+		writef("SP %i5*n", n)
 			//adjust for wasm stack. BCPL buffers 3 words before args and locals
 			//base stack is 3 + <params>
 			n := n - 3 - s.fncur!s.fnidx!fnparms
@@ -1478,6 +1490,104 @@ LET wasm.cgpendingop() BE
 
 		CASE s_add:	wasm.cgadd()	RETURN
 
+		CASE s_float: wasm.cgload(arg1) //float cast
+									wasm.gen(i_f32convi32s) //signed for now? how to handle unsigned? do we need to?
+                  RETURN
+
+    CASE s_fix:   wasm.cgload(arg1)	//fix cast
+                  wasm.gen(i_i32truncf32s)
+                  RETURN
+
+    CASE s_fabs:  wasm.cgload(arg1)
+                  wasm.gen(i_f32abs)
+                  RETURN
+
+    CASE s_abs:		//wasm doesnt provide an i32.abs, for some reason
+									wasm.cgload(arg1)
+									wasm.cgload(arg1)
+									wasm.genb(i_i32, bitsperword-1)
+									wasm.gen(i_i32shrs)
+									wasm.gen(i_i32xor)
+									wasm.cgload(arg1)
+									wasm.genb(i_i32, bitsperword-1)
+									wasm.gen(i_i32shrs)
+									wasm.gen(i_i32sub)
+                  RETURN
+
+    CASE s_fneg:  wasm.cgload(arg1)
+                  wasm.gen(i_f32neg)
+                  RETURN
+
+    CASE s_neg:		wasm.genb(i_i32, 0)
+									wasm.cgload(arg1)
+									wasm.gen(i_i32sub)
+                  RETURN
+
+    CASE s_not:   wasm.cgload(arg1)
+                  gen(f_not)
+                  forget_a()
+                  RETURN
+
+    CASE s_feq:   flop := fl_eq; GOTO case_feq
+    CASE s_fne:   flop := fl_ne; GOTO case_feq
+    CASE s_fls:   flop := fl_ls; GOTO case_feq
+    CASE s_fgr:   flop := fl_gr; GOTO case_feq
+    CASE s_fle:   flop := fl_le; GOTO case_feq
+    CASE s_fge:   flop := fl_ge; GOTO case_feq
+case_feq:         loadba(arg2, arg1)
+                  genflt(flop)
+                  lose1(k_a, 0)
+                  forget_a()
+                  forget_b()
+                  RETURN
+
+    CASE s_eq: CASE s_ne:
+    CASE s_ls: CASE s_gr:
+    CASE s_le: CASE s_ge:
+                  f := prepj(jmpfn(pndop))
+                  chkrefs(4)
+                  genb(f, 2)    // Jump to    ---
+                  gen(f_fhop)   //               |
+                  gen(f_lm1)    // this point  <-
+                  lose1(k_a, 0)
+                  forget_a()
+                  forget_b()
+                  RETURN
+
+    CASE s_sub:   UNLESS k_numb=h1!arg1 DO
+                  { f, sym := f_sub, FALSE
+                    ENDCASE
+                  }
+                  h2!arg1 := -h2!arg1
+
+    CASE s_fmul:  f := fl_mul;  GOTO case_fmul
+    CASE s_fadd:  f := fl_add;  GOTO case_fmul
+
+case_fmul:        loadboth(arg2, arg1)
+                  genflt(f)
+                  forget_a()
+                  lose1(k_a, 0)
+                  RETURN
+
+    CASE s_fdiv:  f := fl_div; GOTO case_fdiv
+    CASE s_fmod:  f := fl_mod; GOTO case_fdiv
+    CASE s_fsub:  f := fl_sub; GOTO case_fdiv
+
+case_fdiv:        loadba(arg2, arg1)
+                  genflt(f)
+                  forget_a()
+                  lose1(k_a, 0)
+                  RETURN
+
+    CASE s_mul:   f      := f_mul;         ENDCASE
+    CASE s_div:   f, sym := f_div,  FALSE; ENDCASE
+    CASE s_mod:   f, sym := f_rem,  FALSE; ENDCASE
+    CASE s_lshift:f, sym := f_lsh,  FALSE; ENDCASE
+    CASE s_rshift:f, sym := f_rsh,  FALSE; ENDCASE
+    CASE s_logand:f      := f_and;         ENDCASE
+    CASE s_logor: f      := f_or;          ENDCASE
+    CASE s_eqv:
+    CASE s_xor:   f      := f_xor;         ENDCASE
 	}
 }
 
@@ -1824,7 +1934,7 @@ AND wasm.storet(x) BE
 	IF h1!x=k_loc & h2!x=s RETURN
 
 	wasm.genik(i_i32, h2!x) //temporary, need to call wasm.cgload(x)
-//	writef("storet %i5 %i5 %i5*n", h1!x, h2!x, h3!x)
+	writef("storet %i5 %i5 %i5*n", h1!x, h2!x, h3!x)
 	h4!x := s - 3 - s.fncur!s.fnidx!fnparms;
 	wasm.genik(i_setl, h4!x)
 	forgetvar(k_loc, s)
@@ -2005,21 +2115,26 @@ writef("wasm.storein %i5 %i5*n", k, n)
 //add <arg1> + <arg2>
 //result stays on the stack
 AND wasm.cgadd() BE
-{	SWITCHON h1!arg1 INTO
-	{	DEFAULT: cgerror("in cgadd %n", h1!arg1)
-		CASE k_numb: wasm.cgloadk(h2!arg1); ENDCASE
-		CASE k_loc:  wasm.genik(i_getl, h4!arg1); ENDCASE
-		CASE k_glob: wasm.genik(i_getg, h2!arg1); ENDCASE
-		CASE k_lab:  wasm.genik(i_i32, h2!arg1); ENDCASE
-	}
-	SWITCHON h1!arg2 INTO
+{		SWITCHON h1!arg2 INTO
 	{	DEFAULT: cgerror("in cgadd %n", h1!arg2)
 		CASE k_numb: wasm.cgloadk(h2!arg2); ENDCASE
 		CASE k_loc:  wasm.genik(i_getl, h4!arg2); ENDCASE
 		CASE k_glob: wasm.genik(i_getg, h2!arg2); ENDCASE
 		CASE k_lab:  wasm.genik(i_i32, h2!arg2); ENDCASE
 	}
-	writef("adding... *n")
+
+//we dont have any accumulator, so just make sure we arent trying to load the same address twice
+	UNLESS 
+	((h1!arg1 = k_loc & h1!arg2 = k_loc) 
+	| (h1!arg1 = k_glob & h1!arg2 = k_glob)) 
+	& h2!arg1 = h2!arg2 DO SWITCHON h1!arg1 INTO
+	{	DEFAULT: cgerror("in cgadd %n", h1!arg1)
+		CASE k_numb: wasm.cgloadk(h2!arg1); ENDCASE
+		CASE k_loc:  wasm.genik(i_getl, h4!arg1); ENDCASE
+		CASE k_glob: wasm.genik(i_getg, h2!arg1); ENDCASE
+		CASE k_lab:  wasm.genik(i_i32, h2!arg1); ENDCASE
+	}
+
 	wasm.gen(i_i32add)
 }
 
