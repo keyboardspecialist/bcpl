@@ -464,7 +464,7 @@ MANIFEST {
   i_f32max = #x97
   i_f32cpysign = #x98
 
-//abs impl
+//i32.abs impl
   // local.get $x
   // local.get $x
   // i32.const 31
@@ -474,6 +474,18 @@ MANIFEST {
   // i32.const 31
   // i32.shr_s
   // i32.sub
+
+//f32.mod impl
+  // local.get $x
+  // local.get $y
+  // local.get $x
+  // local.get $y
+  // f32.div
+  // f32.floor
+  // f32.mul
+  // f32.sub
+  // local.get $x
+  // f32.copysign
 
   //casting
   i_i32truncf32s = #xa8
@@ -1481,14 +1493,13 @@ AND scan() BE
 
 LET wasm.cgpendingop() BE
 {	LET pndop = pendingop
+	LET f, flop = 0, 0
 	pendingop := s_none
 
 	SWITCHON pndop INTO
 	{	DEFAULT:			cgerror("Bad pendingop %s *n", opname(pndop))
 
 		CASE s_none:	RETURN
-
-		CASE s_add:	wasm.cgadd()	RETURN
 
 		CASE s_float: wasm.cgload(arg1) //float cast
 									wasm.gen(i_f32convi32s) //signed for now? how to handle unsigned? do we need to?
@@ -1524,34 +1535,30 @@ LET wasm.cgpendingop() BE
                   RETURN
 
     CASE s_not:   wasm.cgload(arg1)
-                  gen(f_not)
-                  forget_a()
+                  wasm.genb(i_i32, -1)
+									wasm.gen(i_i32xor)
                   RETURN
 
-    CASE s_feq:   flop := fl_eq; GOTO case_feq
-    CASE s_fne:   flop := fl_ne; GOTO case_feq
-    CASE s_fls:   flop := fl_ls; GOTO case_feq
-    CASE s_fgr:   flop := fl_gr; GOTO case_feq
-    CASE s_fle:   flop := fl_le; GOTO case_feq
-    CASE s_fge:   flop := fl_ge; GOTO case_feq
-case_feq:         loadba(arg2, arg1)
-                  genflt(flop)
-                  lose1(k_a, 0)
-                  forget_a()
-                  forget_b()
+    CASE s_feq:   flop := i_f32eq; GOTO case_feq
+    CASE s_fne:   flop := i_f32ne; GOTO case_feq
+    CASE s_fls:   flop := i_f32lt; GOTO case_feq
+    CASE s_fgr:   flop := i_f32gt; GOTO case_feq
+    CASE s_fle:   flop := i_f32le; GOTO case_feq
+    CASE s_fge:   flop := i_f32ge; GOTO case_feq
+case_feq:					wasm.cgload(arg2)
+									wasm.cgload(arg1)
+									wasm.gen(flop)	
                   RETURN
 
-    CASE s_eq: CASE s_ne:
-    CASE s_ls: CASE s_gr:
-    CASE s_le: CASE s_ge:
-                  f := prepj(jmpfn(pndop))
-                  chkrefs(4)
-                  genb(f, 2)    // Jump to    ---
-                  gen(f_fhop)   //               |
-                  gen(f_lm1)    // this point  <-
-                  lose1(k_a, 0)
-                  forget_a()
-                  forget_b()
+    CASE s_eq:	 flop := i_i32eq; GOTO case_eq
+		CASE s_ne:	 flop := i_i32ne; GOTO case_eq
+    CASE s_ls:	 flop := i_i32lts; GOTO case_eq
+		CASE s_gr:	 flop := i_i32gts; GOTO case_eq
+    CASE s_le:	 flop := i_i32les; GOTO case_eq
+		 CASE s_ge:	 flop := i_i32ges; GOTO case_eq
+case_eq:					wasm.cgload(arg2)
+									wasm.cgload(arg1)
+									wasm.gen(flop)
                   RETURN
 
     CASE s_sub:   UNLESS k_numb=h1!arg1 DO
@@ -1560,25 +1567,25 @@ case_feq:         loadba(arg2, arg1)
                   }
                   h2!arg1 := -h2!arg1
 
-    CASE s_fmul:  f := fl_mul;  GOTO case_fmul
-    CASE s_fadd:  f := fl_add;  GOTO case_fmul
+		CASE s_add:	wasm.cgadd()	RETURN
 
-case_fmul:        loadboth(arg2, arg1)
-                  genflt(f)
-                  forget_a()
-                  lose1(k_a, 0)
-                  RETURN
-
-    CASE s_fdiv:  f := fl_div; GOTO case_fdiv
-    CASE s_fmod:  f := fl_mod; GOTO case_fdiv
-    CASE s_fsub:  f := fl_sub; GOTO case_fdiv
-
-case_fdiv:        loadba(arg2, arg1)
-                  genflt(f)
-                  forget_a()
-                  lose1(k_a, 0)
-                  RETURN
-
+		CASE s_fmod:	wasm.cgload(arg2)
+									wasm.cgload(arg1)
+									wasm.cgload(arg2)
+									wasm.cgload(arg1)
+									wasm.gen(i_f32div)
+									wasm.gen(i_f32floor)
+									wasm.gen(i_f32mul)
+									wasm.gen(i_f32sub)
+									wasm.cgload(arg2)
+									wasm.gen(i_f32cpysign)
+									RETURN
+		
+    CASE s_fmul:  f := i_f32mul;		ENDCASE
+    CASE s_fadd:  f := i_f32add;		ENDCASE
+    CASE s_fdiv:  f := i_f32div;			ENDCASE
+    
+    CASE s_fsub:  f := fl_sub;			ENDCASE
     CASE s_mul:   f      := f_mul;         ENDCASE
     CASE s_div:   f, sym := f_div,  FALSE; ENDCASE
     CASE s_mod:   f, sym := f_rem,  FALSE; ENDCASE
