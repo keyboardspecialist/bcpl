@@ -1562,7 +1562,7 @@ case_eq:					wasm.cgload(arg2)
                   RETURN
 
     CASE s_sub:   UNLESS k_numb=h1!arg1 DO
-                  { f, sym := f_sub, FALSE
+                  { f := f_sub
                     ENDCASE
                   }
                   h2!arg1 := -h2!arg1
@@ -1581,21 +1581,26 @@ case_eq:					wasm.cgload(arg2)
 									wasm.gen(i_f32cpysign)
 									RETURN
 		
-    CASE s_fmul:  f := i_f32mul;		ENDCASE
-    CASE s_fadd:  f := i_f32add;		ENDCASE
-    CASE s_fdiv:  f := i_f32div;			ENDCASE
-    
-    CASE s_fsub:  f := fl_sub;			ENDCASE
-    CASE s_mul:   f      := f_mul;         ENDCASE
-    CASE s_div:   f, sym := f_div,  FALSE; ENDCASE
-    CASE s_mod:   f, sym := f_rem,  FALSE; ENDCASE
-    CASE s_lshift:f, sym := f_lsh,  FALSE; ENDCASE
-    CASE s_rshift:f, sym := f_rsh,  FALSE; ENDCASE
-    CASE s_logand:f      := f_and;         ENDCASE
-    CASE s_logor: f      := f_or;          ENDCASE
+    CASE s_fmul:	f := i_f32mul;		ENDCASE
+    CASE s_fadd:	f := i_f32add;		ENDCASE
+    CASE s_fdiv:	f := i_f32div;		ENDCASE
+    CASE s_fsub:	f := i_f32sub;		ENDCASE
+
+    CASE s_mul:		f := i_i32mul;		ENDCASE
+    CASE s_div:		f := i_i32divs;		ENDCASE
+    CASE s_mod:		f := i_i32rems;		ENDCASE
+    CASE s_lshift:f := i_i32shl;		ENDCASE
+    CASE s_rshift:f := i_i32shrs;		ENDCASE //might have to make this logical
+    CASE s_logand:f := i_i32and;		ENDCASE
+    CASE s_logor: f := i_i32or;			ENDCASE
     CASE s_eqv:
-    CASE s_xor:   f      := f_xor;         ENDCASE
+    CASE s_xor:   f := i_i32xor;		ENDCASE
 	}
+
+	//impl rest of ops
+	// need to check that arg1 and 2 are different, so we dont double load
+	// can generalize wasm.cgadd
+
 }
 
 // Compiles code to deal with any pending op.
@@ -2131,10 +2136,10 @@ AND wasm.cgadd() BE
 	}
 
 //we dont have any accumulator, so just make sure we arent trying to load the same address twice
-	UNLESS 
-	((h1!arg1 = k_loc & h1!arg2 = k_loc) 
-	| (h1!arg1 = k_glob & h1!arg2 = k_glob)) 
-	& h2!arg1 = h2!arg2 DO SWITCHON h1!arg1 INTO
+	UNLESS ((h1!arg1 = k_loc & h1!arg2 = k_loc) | 
+	(h1!arg1 = k_glob & h1!arg2 = k_glob)) & 
+	h2!arg1 = h2!arg2 
+	DO SWITCHON h1!arg1 INTO
 	{	DEFAULT: cgerror("in cgadd %n", h1!arg1)
 		CASE k_numb: wasm.cgloadk(h2!arg1); ENDCASE
 		CASE k_loc:  wasm.genik(i_getl, h4!arg1); ENDCASE
