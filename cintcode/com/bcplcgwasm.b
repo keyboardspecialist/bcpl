@@ -1505,7 +1505,7 @@ LET wasm.cgpendingop() BE
 
 		CASE s_float: wasm.cgload(arg1) //float cast
 									wasm.gen(i_f32convi32s) //signed for now? how to handle unsigned? do we need to?
-                  RETURN
+									RETURN
 
     CASE s_fix:   wasm.cgload(arg1)	//fix cast
                   wasm.gen(i_i32truncf32s)
@@ -1525,6 +1525,7 @@ LET wasm.cgpendingop() BE
 									wasm.genb(i_i32, bitsperword-1)
 									wasm.gen(i_i32shrs)
 									wasm.gen(i_i32sub)
+									wasm.lose1(k_opresult, 0)
                   RETURN
 
     CASE s_fneg:  wasm.cgload(arg1)
@@ -1534,11 +1535,13 @@ LET wasm.cgpendingop() BE
     CASE s_neg:		wasm.genb(i_i32, 0)
 									wasm.cgload(arg1)
 									wasm.gen(i_i32sub)
+									wasm.lose1(k_opresult, 0)
                   RETURN
 
     CASE s_not:   wasm.cgload(arg1)
                   wasm.genb(i_i32, -1)
 									wasm.gen(i_i32xor)
+									wasm.lose1(k_opresult, 0)
                   RETURN
 
     CASE s_feq:   flop := i_f32eq; GOTO case_feq
@@ -1549,7 +1552,8 @@ LET wasm.cgpendingop() BE
     CASE s_fge:   flop := i_f32ge; GOTO case_feq
 case_feq:					wasm.cgload(arg2)
 									wasm.cgload(arg1)
-									wasm.gen(flop)	
+									wasm.gen(flop)
+									wasm.lose1(k_opresult, 0)
                   RETURN
 
     CASE s_eq:	 flop := i_i32eq; GOTO case_eq
@@ -1561,6 +1565,7 @@ case_feq:					wasm.cgload(arg2)
 case_eq:					wasm.cgload(arg2)
 									wasm.cgload(arg1)
 									wasm.gen(flop)
+									wasm.lose1(k_opresult, 0)
                   RETURN
 
     CASE s_sub:   UNLESS k_numb=h1!arg1 DO
@@ -1581,6 +1586,7 @@ case_eq:					wasm.cgload(arg2)
 									wasm.gen(i_f32sub)
 									wasm.cgload(arg2)
 									wasm.gen(i_f32cpysign)
+									wasm.lose1(k_opresult, 0)
 									RETURN
 		
     CASE s_fmul:	f := i_f32mul;		ENDCASE
