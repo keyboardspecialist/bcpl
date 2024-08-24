@@ -255,6 +255,9 @@ wasm.output
 wasm.scan
 wasm.cgentry
 wasm.cgpendingop
+wasm.cgadd
+wasm.cgloadk
+wasm.cgload
 wasm.gen
 wasm.genb
 wasm.genk
@@ -597,6 +600,12 @@ f_selst= 255  // Added 20/07/10
 
   For now we will just support single section compilation.
 
+	notes on globals, global vector, statics, etc
+
+	Each webassembly module has a global vector that holds all the global variables. This is where all globals and statics
+	for the module will go. True BCPL globals will also be added to the export section. This will make them visible to other modules.
+	The classic BCPL idea of global slots may change. As we reference them by name, we no longer worry about slot numbers or clashing.
+
   Global and local vars
   ---
   OCODE has a global vector (G) and a local stackframe (P).
@@ -821,7 +830,7 @@ AND wasm.dumpfninfo() BE
     writef("  Wasm Index: %i3*n", s.fninfo!i!fnidx)
     writef("  Params: %i3*n", s.fninfo!i!fnparms)
 		writef("  Locals: %i3*n", s.fninfo!i!fnlocals)
-		writef(" Return: %i3*n", s.fninfo!i!fnret)
+		writef("  Return: %i3*n", s.fninfo!i!fnret)
     writef("  Export: %s*n", (s.fninfo!i!fnexport -> "true", "false") )
 		writef("  Code Length: %i3*n", s.fninfo!i!fnclen)
 		FOR j = 0 TO s.fninfo!i!fnclen-1 DO
@@ -1459,8 +1468,17 @@ AND scan() BE
 } REPEAT
 
 LET wasm.cgpendingop() BE
-{
+{	LET pndop = pendingop
+	pendingop := s_none
 
+	SWITCHON pndop INTO
+	{	DEFAULT:			cgerror("Bad pendingop %s *n", opname(pndop))
+
+		CASE s_none:	RETURN
+
+		CASE s_add:	wasm.cgadd()	RETURN
+
+	}
 }
 
 // Compiles code to deal with any pending op.
@@ -1805,7 +1823,7 @@ AND wasm.storet(x) BE
 	LET s = h3!x
 	IF h1!x=k_loc & h2!x=s RETURN
 
-	wasm.genik(i_i32, h2!x) //temporary, need
+	wasm.genik(i_i32, h2!x) //temporary, need to call wasm.cgload(x)
 //	writef("storet %i5 %i5 %i5*n", h1!x, h2!x, h3!x)
 	h4!x := s - 3 - s.fncur!s.fnidx!fnparms;
 	wasm.genik(i_setl, h4!x)
@@ -1973,7 +1991,7 @@ AND storein(k, n) BE
 
 //
 AND wasm.storein(k, n) BE
-{	cgpendingop()
+{	wasm.cgpendingop()
 writef("wasm.storein %i5 %i5*n", k, n)
 	SWITCHON k INTO
 	{	DEFAULT: cgerror("in storein %n", k)
@@ -1982,6 +2000,27 @@ writef("wasm.storein %i5 %i5*n", k, n)
 		CASE k_lab: wasm.genik(i_i32, n); ENDCASE
 	}
 	stack(ssp-1)
+}
+
+//add <arg1> + <arg2>
+//result stays on the stack
+AND wasm.cgadd() BE
+{	SWITCHON h1!arg1 INTO
+	{	DEFAULT: cgerror("in cgadd %n", h1!arg1)
+		CASE k_numb: wasm.cgloadk(h2!arg1); ENDCASE
+		CASE k_loc:  wasm.genik(i_getl, h4!arg1); ENDCASE
+		CASE k_glob: wasm.genik(i_getg, h2!arg1); ENDCASE
+		CASE k_lab:  wasm.genik(i_i32, h2!arg1); ENDCASE
+	}
+	SWITCHON h1!arg2 INTO
+	{	DEFAULT: cgerror("in cgadd %n", h1!arg2)
+		CASE k_numb: wasm.cgloadk(h2!arg2); ENDCASE
+		CASE k_loc:  wasm.genik(i_getl, h4!arg2); ENDCASE
+		CASE k_glob: wasm.genik(i_getg, h2!arg2); ENDCASE
+		CASE k_lab:  wasm.genik(i_i32, h2!arg2); ENDCASE
+	}
+	writef("adding... *n")
+	wasm.gen(i_i32add)
 }
 
 LET cgrv() BE
