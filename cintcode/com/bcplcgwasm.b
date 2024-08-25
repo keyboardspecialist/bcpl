@@ -263,6 +263,7 @@ wasm.genb
 wasm.genk
 wasm.genik
 wasm.lose1
+wasm.placeres
 wasm.loadt
 wasm.store
 wasm.storet
@@ -273,6 +274,8 @@ wasm.wrcode
 // Global variables.
 arg1
 arg2
+
+oprescnt //count of how many op results are on the stack so we can back off and find true arg1/arg2
 
 ssp
 
@@ -858,9 +861,26 @@ AND wasm.dumpfninfo() BE
 		writef("  Return: %i3*n", s.fninfo!i!fnret)
     writef("  Export: %s*n", (s.fninfo!i!fnexport -> "true", "false") )
 		writef("  Code Length: %i3*n", s.fninfo!i!fnclen)
-		FOR j = 0 TO s.fninfo!i!fnclen-1 DO
-		{
-			writef("    %i3: %x2*n", j, s.fninfo!i!fncode%j)
+		{	LET d = 0
+			FOR j = 0 TO s.fninfo!i!fnclen-1 DO
+			{	LET show = FALSE
+				SWITCHON s.fninfo!i!fncode%j INTO
+				{ CASE i_i32: CASE i_getl: 
+						d +:= 1; show := TRUE; ENDCASE
+					CASE i_setl: d -:= 1; show := TRUE; ENDCASE
+					CASE i_i32sub: CASE i_i32divs: 
+					CASE i_i32mul:  CASE i_i32and:
+					CASE i_i32or: CASE i_i32xor: CASE i_i32shl:
+					CASE i_i32shrs: CASE i_i32shru: CASE i_i32rotl:
+					
+					CASE i_i32rotr: CASE i_i32add: d -:= 1; show := TRUE; ENDCASE
+
+					writef("%i5 %i5 *n", s.fninfo!i!fncode%j, d)
+					writef("    %i3: %x2*n", j, s.fninfo!i!fncode%j)
+				}
+				TEST show THEN writef("	%i5: %x2 %i5 *n", j, s.fninfo!i!fncode%j, d)
+				ELSE writef("	%i5: %x2 *n", j, s.fninfo!i!fncode%j)
+			}
 		}
   }
 }
@@ -985,6 +1005,7 @@ LET initstack(n) BE
   pendingop := s_none
   h1!arg2, h2!arg2, h3!arg2 := k_loc, ssp-2, ssp-2
   h1!arg1, h2!arg1, h3!arg1 := k_loc, ssp-1, ssp-1
+	oprescnt := 0
   IF maxssp<ssp DO maxssp := ssp
 }
 
@@ -1143,10 +1164,9 @@ AND wasm.scan() BE
 		CASE s_sg:   wasm.storein(k_glob, rdgn()); ENDCASE
 		CASE s_sl:   wasm.storein(k_lab,  rdl());  ENDCASE
 
-
     CASE s_float: CASE s_fix: CASE s_fneg: CASE s_fabs:
-    CASE s_not:CASE s_neg:CASE s_abs:
-    CASE s_fmul: CASE s_fdiv:CASE s_fmod:
+    CASE s_not:		CASE s_neg:	CASE s_abs:
+    CASE s_fmul: CASE s_fdiv:	CASE s_fmod:
     CASE s_fadd:CASE s_fsub:
     CASE s_feq: CASE s_fne:
     CASE s_fls:CASE s_fgr:CASE s_fle:CASE s_fge:
@@ -1498,50 +1518,56 @@ LET wasm.cgpendingop() BE
 	LET f, flop = 0, 0
 	pendingop := s_none
 
+	FOR i=tempv TO arg1 BY 4 DO writef("cgpendingop %s STACK %i5 %i5 %i5 %i5 *n", opname(pndop), h1!i, h2!i, h3!i, h4!i)
+
 	SWITCHON pndop INTO
 	{	DEFAULT:			cgerror("Bad pendingop %s *n", opname(pndop))
 
 		CASE s_none:	RETURN
 
-		CASE s_float: wasm.cgload(arg1) //float cast
+		CASE s_float: wasm.cgload(arg1, FALSE) //float cast
 									wasm.gen(i_f32convi32s) //signed for now? how to handle unsigned? do we need to?
+									wasm.placeres()
 									RETURN
 
-    CASE s_fix:   wasm.cgload(arg1)	//fix cast
+    CASE s_fix:   wasm.cgload(arg1, FALSE)	//fix cast
                   wasm.gen(i_i32truncf32s)
+									wasm.placeres()
                   RETURN
 
-    CASE s_fabs:  wasm.cgload(arg1)
+    CASE s_fabs:  wasm.cgload(arg1, FALSE)
                   wasm.gen(i_f32abs)
+									wasm.placeres()
                   RETURN
 
     CASE s_abs:		//wasm doesnt provide an i32.abs, for some reason
-									wasm.cgload(arg1)
-									wasm.cgload(arg1)
+									wasm.cgload(arg1, TRUE)
+									wasm.cgload(arg1, TRUE)
 									wasm.genb(i_i32, bitsperword-1)
 									wasm.gen(i_i32shrs)
 									wasm.gen(i_i32xor)
-									wasm.cgload(arg1)
+									wasm.cgload(arg1, TRUE)
 									wasm.genb(i_i32, bitsperword-1)
 									wasm.gen(i_i32shrs)
 									wasm.gen(i_i32sub)
-									wasm.lose1(k_opresult, 0)
+									wasm.placeres() //unary ops dont need to lose a stack item
                   RETURN
 
-    CASE s_fneg:  wasm.cgload(arg1)
+    CASE s_fneg:  wasm.cgload(arg1,FALSE)
                   wasm.gen(i_f32neg)
+									wasm.placeres()
                   RETURN
 
     CASE s_neg:		wasm.genb(i_i32, 0)
-									wasm.cgload(arg1)
+									wasm.cgload(arg1, FALSE)
 									wasm.gen(i_i32sub)
-									wasm.lose1(k_opresult, 0)
+									wasm.placeres()
                   RETURN
 
-    CASE s_not:   wasm.cgload(arg1)
+    CASE s_not:   wasm.cgload(arg1, FALSE)
                   wasm.genb(i_i32, -1)
 									wasm.gen(i_i32xor)
-									wasm.lose1(k_opresult, 0)
+									wasm.placeres()
                   RETURN
 
     CASE s_feq:   flop := i_f32eq; GOTO case_feq
@@ -1550,8 +1576,8 @@ LET wasm.cgpendingop() BE
     CASE s_fgr:   flop := i_f32gt; GOTO case_feq
     CASE s_fle:   flop := i_f32le; GOTO case_feq
     CASE s_fge:   flop := i_f32ge; GOTO case_feq
-case_feq:					wasm.cgload(arg2)
-									wasm.cgload(arg1)
+case_feq:					wasm.cgload(arg2, FALSE)
+									wasm.cgload(arg1, FALSE)
 									wasm.gen(flop)
 									wasm.lose1(k_opresult, 0)
                   RETURN
@@ -1562,9 +1588,10 @@ case_feq:					wasm.cgload(arg2)
 		CASE s_gr:	 flop := i_i32gts; GOTO case_eq
     CASE s_le:	 flop := i_i32les; GOTO case_eq
 		 CASE s_ge:	 flop := i_i32ges; GOTO case_eq
-case_eq:					wasm.cgload(arg2)
-									wasm.cgload(arg1)
+case_eq:					wasm.cgload(arg2, FALSE)
+									wasm.cgload(arg1, FALSE)
 									wasm.gen(flop)
+									////
 									wasm.lose1(k_opresult, 0)
                   RETURN
 
@@ -1576,16 +1603,17 @@ case_eq:					wasm.cgload(arg2)
 
 		CASE s_add:	f := i_i32add;		ENDCASE
 
-		CASE s_fmod:	wasm.cgload(arg2)
-									wasm.cgload(arg1)
-									wasm.cgload(arg2)
-									wasm.cgload(arg1)
+		CASE s_fmod:	wasm.cgload(arg2, TRUE)
+									wasm.cgload(arg1, TRUE)
+									wasm.cgload(arg2, TRUE)
+									wasm.cgload(arg1, TRUE)
 									wasm.gen(i_f32div)
 									wasm.gen(i_f32floor)
 									wasm.gen(i_f32mul)
 									wasm.gen(i_f32sub)
-									wasm.cgload(arg2)
+									wasm.cgload(arg2, TRUE)
 									wasm.gen(i_f32cpysign)
+									////
 									wasm.lose1(k_opresult, 0)
 									RETURN
 		
@@ -1610,6 +1638,14 @@ case_eq:					wasm.cgload(arg2)
 	// can generalize wasm.cgadd
 	wasm.cgbinop(f)
 
+}
+
+//swap the location type but preserve info
+AND wasm.placeres() BE IF h1!arg1 = k_loc | h1!arg1 = k_glob DO
+{ h2!arg1 := h1!arg1
+	h1!arg1 := k_opresult
+	oprescnt +:= 1
+	writef("placeres %i5 %i5 %i5*n", h1!arg1, h2!arg1, h3!arg1)
 }
 
 // Compiles code to deal with any pending op.
@@ -1922,11 +1958,22 @@ AND wasm.cgloadk(n) BE
 	wasm.genk(n)
 }
 
-AND wasm.cgload(x) BE
+AND wasm.cgload(x, useres) BE
 {	LET k, n, wn = h1!x, h2!x, h4!x
+
+	IF useres & h1!x = k_opresult DO
+	{	h1!x := h2!x
+		h2!x := h4!x + s.fncur!s.fnidx!fnparms + 3
+		
+		writef("wasm.cgload useres swap %i5 %i5 %i5 *n", h1!x, h2!x, h3!x)
+	}
 
 	SWITCHON k INTO
 	{	DEFAULT: cgerror("in wasm.genload %n", k)
+
+		//In cases where we are continuing binop parsing, we want to ignore this
+		//for ops where there's no intrinsic (k_abs), we have to do some stack math
+		CASE k_opresult: ENDCASE
 
 		CASE k_numb:
 							wasm.cgloadk(n)
@@ -2031,7 +2078,15 @@ AND wasm.lose1(k, n) BE
   ELSE { arg1 := arg2
          arg2 := arg2-4
        }
-  h1!arg1, h2!arg1, h3!arg1 := k,n,ssp-1
+
+	TEST k = k_opresult & h1!arg1 ~= k_opresult
+	THEN	{	h2!arg1 := h1!arg1
+					h1!arg1 := k
+					h3!arg1 := ssp-1
+					writef("wasm.lose1 k_opresult %i5 %i5 %i5 *n", h1!arg1, h2!arg1, h3!arg1)
+				}
+	ELSE h1!arg1, h2!arg1, h3!arg1 := k,n,ssp-1
+	pendingop := s_none
 }
 
 AND swapargs() BE
@@ -2164,6 +2219,12 @@ AND wasm.cgbinop(op) BE
 		CASE k_glob: wasm.genik(i_getg, h2!arg1); ENDCASE
 	}
 
+	writef("wasm.cgbinop %n %n %n %n*n", h1!arg1, h2!arg1, h1!arg2, h2!arg2)
+	{
+		LET i = 0
+		FOR i = tempv TO arg1 BY 4 DO writef(" %i5", h1!i)
+		writef("*n")
+	}
 	wasm.gen(op)
 	//mark that we have a binop result on the stack
 	wasm.lose1(k_opresult, 0)
