@@ -275,8 +275,6 @@ wasm.wrcode
 arg1
 arg2
 
-oprescnt //count of how many op results are on the stack so we can back off and find true arg1/arg2
-
 ssp
 
 tempt
@@ -778,7 +776,11 @@ AND wasm.wrtypes() BE
 {	//write function types
 	LET sz = 0
 	stv%stvp := s_type; stvp +:= 1
-	FOR i = 0 TO s.fncnt-1 DO sz +:= s.fninfo!i!fnparms + 4
+	FOR i = 0 TO s.fncnt-1 DO 
+	{	sz +:= s.fninfo!i!fnparms + 4
+		sz +:= s.fninfo!i!fnret -> 1, 0
+	}
+
 	wasm.wruLEB128stv(sz)
 	stv%stvp := s.fncnt; stvp +:= 1
 
@@ -788,7 +790,7 @@ AND wasm.wrtypes() BE
 		wasm.wruLEB128stv(fni!fnparms)
 		FOR j = 0 TO fni!fnparms-1 DO {stv%stvp := t_i32; stvp +:= 1}
 
-		TEST fni!fnret THEN { wasm.wruLEB128stv(1); stv%stvp := t_i32; stvp +:= 1 }
+		TEST fni!fnret = TRUE THEN { wasm.wruLEB128stv(1); stv%stvp := t_i32; stvp +:= 1 }
 		ELSE wasm.wruLEB128stv(0)
 	}
 }
@@ -1005,7 +1007,6 @@ LET initstack(n) BE
   pendingop := s_none
   h1!arg2, h2!arg2, h3!arg2 := k_loc, ssp-2, ssp-2
   h1!arg1, h2!arg1, h3!arg1 := k_loc, ssp-1, ssp-1
-	oprescnt := 0
   IF maxssp<ssp DO maxssp := ssp
 }
 
@@ -1124,6 +1125,7 @@ AND wasm.scan() BE
 
     CASE s_fnrn:	wasm.cgpendingop()
 									s.fncur!s.fnidx!fnret := TRUE
+									wasm.cgload(arg1, TRUE)
 									stack(ssp-1)
 									incode := FALSE
 									//FOR i = tempv TO ssp BY 4 DO writef("s_fnrn STACK %i5 %i5 %i5*n", h1!i, h2!i, h3!i)
@@ -1518,7 +1520,7 @@ LET wasm.cgpendingop() BE
 	LET f, flop = 0, 0
 	pendingop := s_none
 
-	FOR i=tempv TO arg1 BY 4 DO writef("cgpendingop %s STACK %i5 %i5 %i5 %i5 *n", opname(pndop), h1!i, h2!i, h3!i, h4!i)
+	//FOR i=tempv TO arg1 BY 4 DO writef("cgpendingop %s STACK %i5 %i5 %i5 %i5 *n", opname(pndop), h1!i, h2!i, h3!i, h4!i)
 
 	SWITCHON pndop INTO
 	{	DEFAULT:			cgerror("Bad pendingop %s *n", opname(pndop))
@@ -1644,7 +1646,6 @@ case_eq:					wasm.cgload(arg2, FALSE)
 AND wasm.placeres() BE IF h1!arg1 = k_loc | h1!arg1 = k_glob DO
 { h2!arg1 := h1!arg1
 	h1!arg1 := k_opresult
-	oprescnt +:= 1
 	writef("placeres %i5 %i5 %i5*n", h1!arg1, h2!arg1, h3!arg1)
 }
 
@@ -1964,7 +1965,7 @@ AND wasm.cgload(x, useres) BE
 	IF useres & h1!x = k_opresult DO
 	{	h1!x := h2!x
 		h2!x := h4!x + s.fncur!s.fnidx!fnparms + 3
-		
+
 		writef("wasm.cgload useres swap %i5 %i5 %i5 *n", h1!x, h2!x, h3!x)
 	}
 
@@ -2204,7 +2205,7 @@ writef("wasm.storein %i5 %i5*n", k, n)
 //result stays on the stack
 AND wasm.cgbinop(op) BE
 {	SWITCHON h1!arg2 INTO
-	{	DEFAULT: cgerror("in wasm.cgbinop %n", h1!arg2)
+	{	DEFAULT: cgerror("in wasm.cgbinop arg2  %n", h1!arg2)
 		CASE k_opresult: ENDCASE
 		CASE k_numb: wasm.cgloadk(h2!arg2); ENDCASE
 		CASE k_loc:  wasm.genik(i_getl, h4!arg2); ENDCASE
@@ -2212,7 +2213,7 @@ AND wasm.cgbinop(op) BE
 	}
 
 	SWITCHON h1!arg1 INTO
-	{	DEFAULT: cgerror("in wasm.cgbinop %n", h1!arg1)
+	{	DEFAULT: cgerror("in wasm.cgbinop arg1 %n", h1!arg1)
 		CASE k_opresult: ENDCASE
 		CASE k_numb: wasm.cgloadk(h2!arg1); ENDCASE
 		CASE k_loc:  wasm.genik(i_getl, h4!arg1); ENDCASE
