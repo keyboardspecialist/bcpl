@@ -256,6 +256,7 @@ wasm.scan
 wasm.cgentry
 wasm.cgpendingop
 wasm.cgbinop
+wasm.cgstind
 wasm.cgloadk
 wasm.cgload
 wasm.gen
@@ -1154,9 +1155,14 @@ AND wasm.scan() BE
     CASE s_llg:		wasm.loadt(k_lvglob, rdgn());	ENDCASE
     CASE s_lll:		wasm.loadt(k_lvlab,  rdl());	ENDCASE
 
+		//WebAssembly has no concept of pointers or address-of for locals
+		//They will need to be shadowed in the global memory buffer
+		//The question is: Do we shadow all locals as a matter of fact or
+		//do we only apply it to locals which have been explicitly referenced indirectly?
+		CASE s_stind: wasm.cgstind(); ENDCASE
+
 		CASE s_sp:
 		{	LET n = rdn()
-		writef("SP %i5*n", n)
 			//adjust for wasm stack. BCPL buffers 3 words before args and locals
 			//base stack is 3 + <params>
 			n := n - 3 - s.fncur!s.fnidx!fnparms
@@ -1965,8 +1971,7 @@ AND wasm.cgload(x, useres) BE
 	IF useres & h1!x = k_opresult DO
 	{	h1!x := h2!x
 		h2!x := h4!x + s.fncur!s.fnidx!fnparms + 3
-
-		writef("wasm.cgload useres swap %i5 %i5 %i5 *n", h1!x, h2!x, h3!x)
+		//writef("wasm.cgload useres swap %i5 %i5 %i5 *n", h1!x, h2!x, h3!x)
 	}
 
 	SWITCHON k INTO
@@ -2002,14 +2007,14 @@ AND wasm.storet(x) BE
 	LET s = h3!x
 	IF h1!x=k_loc & h2!x=s RETURN
 
-	wasm.genik(i_i32, h2!x) //temporary, need to call wasm.cgload(x)
+	wasm.cgload(x, FALSE)
 	writef("storet %i5 %i5 %i5*n", h1!x, h2!x, h3!x)
 	h4!x := s - 3 - s.fncur!s.fnidx!fnparms;
 	wasm.genik(i_setl, h4!x)
 	forgetvar(k_loc, s)
 	addinfo_a(k_loc, s)
 	h1!x, h2!x := k_loc, s
-//	writef("storetw %i5 %i5 %i5*n", h1!x, h2!x, h3!x)
+	writef("storetw %i5 %i5 %i5*n", h1!x, h2!x, h3!x)
 }
 
 
@@ -2052,7 +2057,6 @@ AND wasm.loadt(k, n) BE
   h1!arg1,h2!arg1,h3!arg1, h4!arg1 := k,n,ssp, n - 3 - s.fncur!s.fnidx!fnparms
   ssp := ssp + 1
   IF maxssp<ssp DO maxssp := ssp
-	//writef("wasm.loadt %i5 %i5 %i5*n", h1!arg1, h2!arg1, h3!arg1)
 }
 
 
@@ -2094,6 +2098,22 @@ AND swapargs() BE
 { LET k, n = h1!arg1, h2!arg1
   h1!arg1, h2!arg1 := h1!arg2, h2!arg2
   h1!arg2, h2!arg2 := k, n
+}
+
+AND wasm.cgstind() BE
+{	LET t = VALOF
+	{	IF pendingop = s_add DO
+		{	IF k_numb = h1!arg2 DO swapargs()
+			IF k_numb = h1!arg1 DO
+			{	LET n = h2!arg1
+		
+
+			}
+
+		}
+
+	}
+
 }
 
 AND cgstind() BE
@@ -2192,6 +2212,7 @@ AND storein(k, n) BE
 AND wasm.storein(k, n) BE
 {	wasm.cgpendingop()
 writef("wasm.storein %i5 %i5*n", k, n)
+	wasm.cgload(arg1)
 	SWITCHON k INTO
 	{	DEFAULT: cgerror("in storein %n", k)
 		CASE k_loc: wasm.genik(i_setl, n); ENDCASE
